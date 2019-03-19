@@ -179,7 +179,7 @@ namespace DataStructuresLearningSoftware {
 			// l6
 			// 
 			this->l6->AutoSize = true;
-			this->l6->Location = System::Drawing::Point(366, 184);
+			this->l6->Location = System::Drawing::Point(366, 175);
 			this->l6->Name = L"l6";
 			this->l6->Size = System::Drawing::Size(35, 13);
 			this->l6->TabIndex = 5;
@@ -479,6 +479,7 @@ namespace DataStructuresLearningSoftware {
 			brr[i]=arr[i];
 		  }
 
+		  /*
 		  for(int i=1;i<=cnt;i++){
 			  for(int j=i+1;j<=cnt;j++){
 				  if(brr[j]<brr[i]){
@@ -487,17 +488,34 @@ namespace DataStructuresLearningSoftware {
 				  }
 			  }
 		  }
+		  */
+
+		  int i, j; 
+		  for (i = 1; i <=cnt; i++){       
+			for (j = 1; j <= cnt-i; j++){  
+				if (brr[j] > brr[j+1]){ 
+					std::swap(brr[j], brr[j+1]);
+					vpp.push_back(std::make_pair(j,j+1));
+				}
+			}
+		  }
 	  }
 
 private: System::Void btnVisualize_Click(System::Object^  sender, System::EventArgs^  e) {
-			cntt++;
-			if(cntt>1){
-				MessageBox::Show("Array Already Sorted");
+			if(cnt==0){
+				MessageBox::Show("Please Enter Some Input");
 			}else{
-				BubbleSort();
-				tcnt=-2;
-				timer1->Enabled=true;
-			}	
+				cntt++;
+				if(cntt>1){
+					MessageBox::Show("Array Already Sorted");
+				}else{
+					BubbleSort();
+					tcnt=-2;
+					timer1->Enabled=true;
+				}	
+
+			}
+			
 
 		 }
 
