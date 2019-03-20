@@ -2,7 +2,7 @@
 
 #include "stdafx.h"
 #include "MainPage.h"
-
+#include "Queue_Home.h"
 using namespace DataStructuresLearningSoftware;
 
 [STAThreadAttribute]
@@ -13,6 +13,6 @@ int main(array<System::String ^> ^args)
 	Application::SetCompatibleTextRenderingDefault(false); 
 
 	// Create the main window and run it
-	Application::Run(gcnew MainPage());
+	Application::Run(gcnew Queue_Home);
 	return 0;
 }
