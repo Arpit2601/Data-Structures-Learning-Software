@@ -125,6 +125,7 @@ namespace DataStructuresLearningSoftware {
 			this->arrayAnimationPanel->Name = L"arrayAnimationPanel";
 			this->arrayAnimationPanel->Size = System::Drawing::Size(1001, 365);
 			this->arrayAnimationPanel->TabIndex = 5;
+			this->arrayAnimationPanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &UI_Circular_Queue_Animation::arrayAnimationPanel_Paint);
 			// 
 			// llAnimationPanel
 			// 
@@ -620,5 +621,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void llbtn_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 
 			 }
-	};
+	private: System::Void arrayAnimationPanel_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+			 }
+};
 }

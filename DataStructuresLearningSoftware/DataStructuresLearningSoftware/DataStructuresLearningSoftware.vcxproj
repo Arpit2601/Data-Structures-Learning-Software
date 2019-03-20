@@ -88,6 +88,7 @@
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="DataStructuresLearningSoftware.cpp" />
+    <ClCompile Include="DiscussionForum.cpp" />
     <ClCompile Include="Queue_Home.cpp" />
     <ClCompile Include="Stack_Animations.cpp" />
     <ClCompile Include="Stack_Applications.cpp" />
@@ -114,6 +115,9 @@
     <ClCompile Include="UI_Queue_Quiz.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DiscussionForum.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="MainPage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -184,6 +188,9 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DiscussionForum.resx">
+      <DependentUpon>DiscussionForum.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resX">
       <DependentUpon>MainPage.h</DependentUpon>
       <SubType>Designer</SubType>

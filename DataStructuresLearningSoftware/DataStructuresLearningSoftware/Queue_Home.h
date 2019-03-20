@@ -10,6 +10,7 @@
 #include "UI_Queue_Quiz.h"
 #include "UI_Circular_Queue_Animation.h"
 #include "UI_Linear_Queue_Animation.h"
+#include "DiscussionForum.h"
 
 namespace DataStructuresLearningSoftware {
 
@@ -69,6 +70,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Button^  cqarrbtn;
 	private: System::Windows::Forms::Button^  ciranimbtn;
 	private: System::Windows::Forms::Button^  linanimbtn;
+	private: System::Windows::Forms::Button^  discussbtn;
 
 
 
@@ -100,8 +102,10 @@ namespace DataStructuresLearningSoftware {
 			this->linbtn = (gcnew System::Windows::Forms::Button());
 			this->introbtn = (gcnew System::Windows::Forms::Button());
 			this->headerpanel = (gcnew System::Windows::Forms::Panel());
+			this->discussbtn = (gcnew System::Windows::Forms::Button());
 			this->outputpanel = (gcnew System::Windows::Forms::Panel());
 			this->sidetabpanel->SuspendLayout();
+			this->headerpanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// sidetabpanel
@@ -119,7 +123,7 @@ namespace DataStructuresLearningSoftware {
 			this->sidetabpanel->Controls->Add(this->introbtn);
 			this->sidetabpanel->Location = System::Drawing::Point(0, 0);
 			this->sidetabpanel->Name = L"sidetabpanel";
-			this->sidetabpanel->Size = System::Drawing::Size(175, 681);
+			this->sidetabpanel->Size = System::Drawing::Size(175, 718);
 			this->sidetabpanel->TabIndex = 0;
 			// 
 			// ciranimbtn
@@ -234,16 +238,27 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// headerpanel
 			// 
+			this->headerpanel->Controls->Add(this->discussbtn);
 			this->headerpanel->Location = System::Drawing::Point(175, 0);
 			this->headerpanel->Name = L"headerpanel";
-			this->headerpanel->Size = System::Drawing::Size(1088, 50);
+			this->headerpanel->Size = System::Drawing::Size(1104, 50);
 			this->headerpanel->TabIndex = 1;
+			// 
+			// discussbtn
+			// 
+			this->discussbtn->Location = System::Drawing::Point(45, 12);
+			this->discussbtn->Name = L"discussbtn";
+			this->discussbtn->Size = System::Drawing::Size(105, 23);
+			this->discussbtn->TabIndex = 0;
+			this->discussbtn->Text = L"Discussion ";
+			this->discussbtn->UseVisualStyleBackColor = true;
+			this->discussbtn->Click += gcnew System::EventHandler(this, &Queue_Home::discussbtn_Click);
 			// 
 			// outputpanel
 			// 
 			this->outputpanel->Location = System::Drawing::Point(175, 50);
 			this->outputpanel->Name = L"outputpanel";
-			this->outputpanel->Size = System::Drawing::Size(1088, 631);
+			this->outputpanel->Size = System::Drawing::Size(1104, 668);
 			this->outputpanel->TabIndex = 2;
 			this->outputpanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Queue_Home::outputpanel_Paint);
 			// 
@@ -261,6 +276,7 @@ namespace DataStructuresLearningSoftware {
 			this->Text = L"Queue_Home";
 			this->Load += gcnew System::EventHandler(this, &Queue_Home::Queue_Home_Load);
 			this->sidetabpanel->ResumeLayout(false);
+			this->headerpanel->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -319,6 +335,10 @@ private: System::Void textBox1_TextChanged(System::Object^  sender, System::Even
 		 }
 private: System::Void richTextBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 		       
+		 }
+private: System::Void discussbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+			 outputpanel->Controls->Clear();
+			 outputpanel->Controls->Add(gcnew DiscussionForum);
 		 }
 };
 }
