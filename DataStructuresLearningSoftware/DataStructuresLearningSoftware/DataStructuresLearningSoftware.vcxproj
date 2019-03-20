@@ -88,6 +88,7 @@
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="DataStructuresLearningSoftware.cpp" />
+    <ClCompile Include="Queue_Home.cpp" />
     <ClCompile Include="Stack_Animations.cpp" />
     <ClCompile Include="Stack_Applications.cpp" />
     <ClCompile Include="Stack_Implementation_Array.cpp" />
@@ -100,9 +101,23 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="UI_Circular_Queue.cpp" />
+    <ClCompile Include="UI_Circular_Queue_Animation.cpp" />
+    <ClCompile Include="UI_Circular_Queue_Array.cpp" />
+    <ClCompile Include="UI_Circular_Queue_LL.cpp" />
+    <ClCompile Include="UI_Linear_Queue.cpp" />
+    <ClCompile Include="UI_Linear_Queue_Animation.cpp" />
+    <ClCompile Include="UI_Linear_Queue_Array.cpp" />
+    <ClCompile Include="UI_Linear_Queue_LL.cpp" />
+    <ClCompile Include="UI_Queue_App.cpp" />
+    <ClCompile Include="UI_Queue_Introduction.cpp" />
+    <ClCompile Include="UI_Queue_Quiz.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainPage.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Queue_Home.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="resource.h" />
@@ -131,6 +146,39 @@
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="UI_Circular_Queue.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="UI_Circular_Queue_Animation.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="UI_Circular_Queue_Array.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="UI_Circular_Queue_LL.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="UI_Linear_Queue.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="UI_Linear_Queue_Animation.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="UI_Linear_Queue_Array.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="UI_Linear_Queue_LL.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="UI_Queue_App.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="UI_Queue_Introduction.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="UI_Queue_Quiz.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
@@ -139,6 +187,42 @@
     <EmbeddedResource Include="MainPage.resX">
       <DependentUpon>MainPage.h</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Queue_Home.resx">
+      <DependentUpon>Queue_Home.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Circular_Queue.resx">
+      <DependentUpon>UI_Circular_Queue.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Circular_Queue_Animation.resx">
+      <DependentUpon>UI_Circular_Queue_Animation.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Circular_Queue_Array.resx">
+      <DependentUpon>UI_Circular_Queue_Array.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Circular_Queue_LL.resx">
+      <DependentUpon>UI_Circular_Queue_LL.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Linear_Queue.resx">
+      <DependentUpon>UI_Linear_Queue.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Linear_Queue_Animation.resx">
+      <DependentUpon>UI_Linear_Queue_Animation.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Linear_Queue_Array.resx">
+      <DependentUpon>UI_Linear_Queue_Array.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Linear_Queue_LL.resx">
+      <DependentUpon>UI_Linear_Queue_LL.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Queue_App.resx">
+      <DependentUpon>UI_Queue_App.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Queue_Introduction.resx">
+      <DependentUpon>UI_Queue_Introduction.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Queue_Quiz.resx">
+      <DependentUpon>UI_Queue_Quiz.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stack_Animations.resx">
       <DependentUpon>Stack_Animations.h</DependentUpon>

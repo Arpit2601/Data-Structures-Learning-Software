@@ -2,6 +2,7 @@
 
 #include "stdafx.h"
 #include "MainPage.h"
+#include "Queue_Home.h"
 #include "Stack_Main.h"
 
 using namespace DataStructuresLearningSoftware;
@@ -14,6 +15,6 @@ int main(array<System::String ^> ^args)
 	Application::SetCompatibleTextRenderingDefault(false); 
 
 	// Create the main window and run it
-	Application::Run(gcnew Stack_Main());
+	Application::Run(gcnew Queue_Home());
 	return 0;
 }
