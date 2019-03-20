@@ -1,0 +1,10 @@
+Login Homepage(19/03/19)
+
+Tasks: LoginPage, HomePage
+
+Tasks Done:
+
+Siddharth Agarwal(HEAD): LoginPage (Almost Complete, DB connectivity left)
+Sachin Giri: Was assigned Homepage (Couldn't do as of 19/3/19)
+Sayal Kumar Hajare: Suggested some design features for Homepage
+Ajinkya: 
