@@ -88,6 +88,14 @@
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="DataStructuresLearningSoftware.cpp" />
+    <ClCompile Include="Stack_Animations.cpp" />
+    <ClCompile Include="Stack_Applications.cpp" />
+    <ClCompile Include="Stack_Implementation_Array.cpp" />
+    <ClCompile Include="Stack_Implementation_LinkedList.cpp" />
+    <ClCompile Include="Stack_Introduction.cpp" />
+    <ClCompile Include="Stack_Main.cpp" />
+    <ClCompile Include="Stack_Resources.cpp" />
+    <ClCompile Include="Stack_Test.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -98,6 +106,30 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Stack_Animations.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="Stack_Applications.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="Stack_Implementation_Array.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="Stack_Implementation_LinkedList.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="Stack_Introduction.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="Stack_Main.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Stack_Resources.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="Stack_Test.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +139,30 @@
     <EmbeddedResource Include="MainPage.resX">
       <DependentUpon>MainPage.h</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stack_Animations.resx">
+      <DependentUpon>Stack_Animations.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stack_Applications.resx">
+      <DependentUpon>Stack_Applications.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stack_Implementation_Array.resx">
+      <DependentUpon>Stack_Implementation_Array.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stack_Implementation_LinkedList.resx">
+      <DependentUpon>Stack_Implementation_LinkedList.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stack_Introduction.resx">
+      <DependentUpon>Stack_Introduction.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stack_Main.resx">
+      <DependentUpon>Stack_Main.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stack_Resources.resx">
+      <DependentUpon>Stack_Resources.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stack_Test.resx">
+      <DependentUpon>Stack_Test.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
