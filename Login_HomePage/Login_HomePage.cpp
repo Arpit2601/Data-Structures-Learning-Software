@@ -2,6 +2,7 @@
 
 #include "stdafx.h"
 #include "LoginForm.h"
+#include "Homepage.h"
 
 using namespace Login_HomePage;
 
