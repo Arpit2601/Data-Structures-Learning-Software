@@ -64,34 +64,40 @@ namespace DataStructuresLearningSoftware {
 			// Heading
 			// 
 			this->Heading->AutoSize = true;
-			this->Heading->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->Heading->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->Heading->Location = System::Drawing::Point(325, 22);
 			this->Heading->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->Heading->Name = L"Heading";
-			this->Heading->Size = System::Drawing::Size(367, 29);
+			this->Heading->Size = System::Drawing::Size(445, 31);
 			this->Heading->TabIndex = 2;
 			this->Heading->Text = L"Implementation Using Linked List";
 			this->Heading->Click += gcnew System::EventHandler(this, &Stack_Implementation_LinkedList::Heading_Click);
 			// 
 			// richTextBox1
 			// 
-			this->richTextBox1->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->richTextBox1->BackColor = System::Drawing::Color::White;
 			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->richTextBox1->Location = System::Drawing::Point(42, 254);
+			this->richTextBox1->Cursor = System::Windows::Forms::Cursors::Default;
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
+			this->richTextBox1->Location = System::Drawing::Point(43, 263);
 			this->richTextBox1->Margin = System::Windows::Forms::Padding(4);
 			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(1000, 360);
+			this->richTextBox1->ReadOnly = true;
+			this->richTextBox1->Size = System::Drawing::Size(1001, 403);
 			this->richTextBox1->TabIndex = 3;
 			this->richTextBox1->Text = resources->GetString(L"richTextBox1.Text");
 			// 
 			// richTextBox2
 			// 
-			this->richTextBox2->BackColor = System::Drawing::Color::White;
+			this->richTextBox2->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->richTextBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->richTextBox2->Location = System::Drawing::Point(42, 66);
+			this->richTextBox2->Cursor = System::Windows::Forms::Cursors::Default;
+			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->richTextBox2->Location = System::Drawing::Point(43, 66);
 			this->richTextBox2->Margin = System::Windows::Forms::Padding(4);
 			this->richTextBox2->Name = L"richTextBox2";
+			this->richTextBox2->ReadOnly = true;
 			this->richTextBox2->Size = System::Drawing::Size(1000, 139);
 			this->richTextBox2->TabIndex = 4;
 			this->richTextBox2->Text = resources->GetString(L"richTextBox2.Text");
@@ -99,26 +105,26 @@ namespace DataStructuresLearningSoftware {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(391, 225);
+			this->label1->Location = System::Drawing::Point(39, 225);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(223, 25);
+			this->label1->Size = System::Drawing::Size(614, 24);
 			this->label1->TabIndex = 5;
-			this->label1->Text = L"Code for implementation";
+			this->label1->Text = L"Following is the code for stack implementation using linked lists:-";
 			// 
 			// Stack_Implementation_LinkedList
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::White;
+			this->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->richTextBox2);
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->Heading);
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Stack_Implementation_LinkedList";
-			this->Size = System::Drawing::Size(1088, 631);
+			this->Size = System::Drawing::Size(1105, 670);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

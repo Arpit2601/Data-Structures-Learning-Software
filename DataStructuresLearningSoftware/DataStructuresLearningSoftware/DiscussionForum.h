@@ -53,7 +53,13 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Panel^  message_detail;
 
 	private: System::Windows::Forms::Button^  filterbtn;
-	private: System::Windows::Forms::CheckedListBox^  checkedListBox1;
+	private: System::Windows::Forms::CheckBox^  stackcheck;
+	private: System::Windows::Forms::CheckBox^  queuecheck;
+	private: System::Windows::Forms::CheckBox^  sortcheck;
+	private: System::Windows::Forms::CheckBox^  searchcheck;
+	private: System::Windows::Forms::CheckBox^  llcheck;
+	private: System::Windows::Forms::CheckBox^  arrycheck;
+
 
 
 
@@ -71,7 +77,12 @@ namespace DataStructuresLearningSoftware {
 		void InitializeComponent(void)
 		{
 			this->toppanel = (gcnew System::Windows::Forms::Panel());
-			this->checkedListBox1 = (gcnew System::Windows::Forms::CheckedListBox());
+			this->stackcheck = (gcnew System::Windows::Forms::CheckBox());
+			this->queuecheck = (gcnew System::Windows::Forms::CheckBox());
+			this->sortcheck = (gcnew System::Windows::Forms::CheckBox());
+			this->searchcheck = (gcnew System::Windows::Forms::CheckBox());
+			this->llcheck = (gcnew System::Windows::Forms::CheckBox());
+			this->arrycheck = (gcnew System::Windows::Forms::CheckBox());
 			this->filterbtn = (gcnew System::Windows::Forms::Button());
 			this->msgpanel = (gcnew System::Windows::Forms::Panel());
 			this->message_detail = (gcnew System::Windows::Forms::Panel());
@@ -85,26 +96,78 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// toppanel
 			// 
-			this->toppanel->Controls->Add(this->checkedListBox1);
+			this->toppanel->Controls->Add(this->stackcheck);
+			this->toppanel->Controls->Add(this->queuecheck);
+			this->toppanel->Controls->Add(this->sortcheck);
+			this->toppanel->Controls->Add(this->searchcheck);
+			this->toppanel->Controls->Add(this->llcheck);
+			this->toppanel->Controls->Add(this->arrycheck);
 			this->toppanel->Controls->Add(this->filterbtn);
 			this->toppanel->Location = System::Drawing::Point(0, 0);
 			this->toppanel->Name = L"toppanel";
 			this->toppanel->Size = System::Drawing::Size(1104, 31);
 			this->toppanel->TabIndex = 0;
 			// 
-			// checkedListBox1
+			// stackcheck
 			// 
-			this->checkedListBox1->CheckOnClick = true;
-			this->checkedListBox1->FormattingEnabled = true;
-			this->checkedListBox1->Items->AddRange(gcnew cli::array< System::Object^  >(6) {L"Arrays", L"Linked List", L"Searching", 
-				L"Sorting", L"Stack", L"Queue"});
-			this->checkedListBox1->Location = System::Drawing::Point(26, 0);
-			this->checkedListBox1->MaximumSize = System::Drawing::Size(933, 30);
-			this->checkedListBox1->MinimumSize = System::Drawing::Size(933, 30);
-			this->checkedListBox1->MultiColumn = true;
-			this->checkedListBox1->Name = L"checkedListBox1";
-			this->checkedListBox1->Size = System::Drawing::Size(933, 21);
-			this->checkedListBox1->TabIndex = 2;
+			this->stackcheck->AutoSize = true;
+			this->stackcheck->Location = System::Drawing::Point(701, 3);
+			this->stackcheck->Name = L"stackcheck";
+			this->stackcheck->Size = System::Drawing::Size(65, 21);
+			this->stackcheck->TabIndex = 7;
+			this->stackcheck->Text = L"Stack";
+			this->stackcheck->UseVisualStyleBackColor = true;
+			// 
+			// queuecheck
+			// 
+			this->queuecheck->AutoSize = true;
+			this->queuecheck->Location = System::Drawing::Point(605, 5);
+			this->queuecheck->Name = L"queuecheck";
+			this->queuecheck->Size = System::Drawing::Size(73, 21);
+			this->queuecheck->TabIndex = 6;
+			this->queuecheck->Text = L"Queue";
+			this->queuecheck->UseVisualStyleBackColor = true;
+			// 
+			// sortcheck
+			// 
+			this->sortcheck->AutoSize = true;
+			this->sortcheck->Location = System::Drawing::Point(462, 5);
+			this->sortcheck->Name = L"sortcheck";
+			this->sortcheck->Size = System::Drawing::Size(75, 21);
+			this->sortcheck->TabIndex = 5;
+			this->sortcheck->Text = L"Sorting";
+			this->sortcheck->UseVisualStyleBackColor = true;
+			// 
+			// searchcheck
+			// 
+			this->searchcheck->AutoSize = true;
+			this->searchcheck->Location = System::Drawing::Point(305, 3);
+			this->searchcheck->Name = L"searchcheck";
+			this->searchcheck->Size = System::Drawing::Size(94, 21);
+			this->searchcheck->TabIndex = 4;
+			this->searchcheck->Text = L"Searching";
+			this->searchcheck->UseVisualStyleBackColor = true;
+			// 
+			// llcheck
+			// 
+			this->llcheck->AutoSize = true;
+			this->llcheck->Location = System::Drawing::Point(150, 5);
+			this->llcheck->Name = L"llcheck";
+			this->llcheck->Size = System::Drawing::Size(98, 21);
+			this->llcheck->TabIndex = 3;
+			this->llcheck->Text = L"Linked List";
+			this->llcheck->UseVisualStyleBackColor = true;
+			// 
+			// arrycheck
+			// 
+			this->arrycheck->AutoSize = true;
+			this->arrycheck->Location = System::Drawing::Point(26, 5);
+			this->arrycheck->Name = L"arrycheck";
+			this->arrycheck->Size = System::Drawing::Size(64, 21);
+			this->arrycheck->TabIndex = 2;
+			this->arrycheck->Text = L"Array";
+			this->arrycheck->UseVisualStyleBackColor = true;
+			this->arrycheck->CheckedChanged += gcnew System::EventHandler(this, &DiscussionForum::arrycheck_CheckedChanged);
 			// 
 			// filterbtn
 			// 
@@ -128,7 +191,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->message_detail->AutoScroll = true;
 			this->message_detail->BackColor = System::Drawing::SystemColors::Control;
-			this->message_detail->Location = System::Drawing::Point(0, 30);
+			this->message_detail->Location = System::Drawing::Point(0, 0);
 			this->message_detail->Name = L"message_detail";
 			this->message_detail->Size = System::Drawing::Size(1104, 557);
 			this->message_detail->TabIndex = 2;
@@ -186,51 +249,66 @@ namespace DataStructuresLearningSoftware {
 			this->Size = System::Drawing::Size(1104, 668);
 			this->Load += gcnew System::EventHandler(this, &DiscussionForum::DiscussionForum_Load);
 			this->toppanel->ResumeLayout(false);
+			this->toppanel->PerformLayout();
 			this->replypanel->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-		public:
-			int startx;
-			int starty;
-			int messagewidth;
-			int widthheight;
-			int usernamewidth;
-			int datewidth;
-			int tagwidth;
-			int typewidth;
-			int reportwidth;
-			int messagebodywidth;
-			String ^ reply_message;
-			int message_id;
-			// on load function
-	private: System::Void DiscussionForum_Load(System::Object^  sender, System::EventArgs^  e) {
-				 toppanel->Controls->Add(checkedListBox1);
-				 checkedListBox1->CheckOnClick = true;
-				 msgpanel->Controls->Clear();
-				 reply_message="message";
-				 msgpanel->Visible=true;
-				 message_detail->Visible=false;
-				 startx=10;
-				 starty=msgpanel->Location.Y;
-				 messagewidth=(msgpanel->Size.Width)*(0.45);
-				 tagwidth=(msgpanel->Size.Width)*(0.1)-15;
-				 usernamewidth=(msgpanel->Size.Width)*(0.15);
-				 datewidth =(msgpanel->Size.Width)*(0.10);
-				 typewidth = (msgpanel->Size.Width)*(0.1);
-				 reportwidth = (msgpanel->Size.Width)*(0.1);  
-				// to be done later select a field on load 
-				 tagcombo->Text = "Array";
-				 String ^ module_name = "Array";
-				 try{
-					 OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
-					 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
-					 DB_Connection->Open();
-					 String ^ readString = "SELECT * FROM Messages WHERE FieldTag= '"+ module_name + "'  ORDER BY [Date&Time] DESC;";
-					 OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
-					 OleDbDataReader ^ reader = cmd->ExecuteReader();
-					 while(reader->Read())
+	public:
+		int startx;
+		int starty;
+		int messagewidth;
+		int widthheight;
+		int usernamewidth;
+		int datewidth;
+		int tagwidth;
+		int typewidth;
+		int reportwidth;
+		int messagebodywidth;
+		String ^ reply_message;
+		int message_id;
+		System::Collections::Generic::List<System::String ^> filters;
+		// on load function
+
+		void loadbase()
+		{
+			msgpanel->Controls->Clear();
+			reply_message="message";
+			msgpanel->Visible=true;
+			message_detail->Visible=false;
+			startx=10;
+			starty=msgpanel->Location.Y;
+			messagewidth=(msgpanel->Size.Width)*(0.45);
+			tagwidth=(msgpanel->Size.Width)*(0.1)-15;
+			usernamewidth=(msgpanel->Size.Width)*(0.15);
+			datewidth =(msgpanel->Size.Width)*(0.10);
+			typewidth = (msgpanel->Size.Width)*(0.1);
+			reportwidth = (msgpanel->Size.Width)*(0.1); 
+			replybtn->Enabled=true;
+			bool flag = false;
+			// to be done later select a field on load 
+			tagcombo->Text = "Array";
+			String ^ module_name = "Array";
+			try{
+				OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
+				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+				DB_Connection->Open();
+				String ^ readString = "SELECT * FROM Messages ORDER BY [Date&Time] DESC;";
+				OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+				OleDbDataReader ^ reader = cmd->ExecuteReader();
+				while(reader->Read())
+				{
+					flag = false;
+					for(int i = 0; i<filters.Count;i++)
+					{
+						if(reader->GetString(3) == filters[i])
+						{
+							flag = true;
+						}
+
+					}
+					if(flag == true)
 					{
 						RichTextBox ^ message_text = gcnew RichTextBox();
 						Label ^ tag_text = gcnew Label();
@@ -238,21 +316,21 @@ namespace DataStructuresLearningSoftware {
 						Label ^ date_text = gcnew Label();
 						Label ^ type_text = gcnew Label();
 						PictureBox ^ tag_pic = gcnew PictureBox();
-						
+
 
 						tag_pic->Size = Drawing::Size(15,15);
 						tag_text->Size = Drawing::Size(tagwidth,15);
 						username_text->Size = Drawing::Size(usernamewidth,15);
 						date_text->Size = Drawing::Size(datewidth,15);
 						type_text->Size = Drawing::Size(typewidth,15);
-						
+
 
 						username_text->Location = Drawing::Point(startx,starty-15);
 						type_text->Location = Drawing::Point(startx+usernamewidth,starty-15);
 						date_text->Location = Drawing::Point(startx+usernamewidth+typewidth,starty-15);
 						tag_pic->Location = Drawing::Point(startx+usernamewidth+typewidth+datewidth,starty-15);
 						tag_text->Location = Drawing::Point(startx+usernamewidth+typewidth+datewidth+15,starty-15);
-						
+
 
 						username_text->Text = "User: " + reader->GetString(5);
 						type_text->Text = reader->GetString(6);
@@ -260,7 +338,7 @@ namespace DataStructuresLearningSoftware {
 						tag_text->Text = " " + reader->GetString(3);
 						tag_pic->ImageLocation = IO::Path::GetDirectoryName(Application::StartupPath)+"\\media\\tag.png";
 						tag_pic->SizeMode = PictureBoxSizeMode::StretchImage;
-						
+
 
 
 						msgpanel->Controls->Add(username_text);
@@ -268,7 +346,7 @@ namespace DataStructuresLearningSoftware {
 						msgpanel->Controls->Add(date_text);
 						msgpanel->Controls->Add(tag_text);
 						msgpanel->Controls->Add(tag_pic);
-						
+
 
 
 
@@ -283,80 +361,84 @@ namespace DataStructuresLearningSoftware {
 						message_text->Cursor= System::Windows::Forms::Cursors::Hand;
 						startx+=(msgpanel->Size.Width)*(0.5);
 						if(startx>2*messagewidth){startx=10;starty+=175;}
-
-						
 					}
-				
-				 }
+				}
+			}
+			catch(Exception ^ ex)
+			{
+				MessageBox::Show(ex->Message);
+			}
+		}
 
-				 catch(Exception ^ ex)
-				 {
-					 MessageBox::Show(ex->Message);
-				 }
-				
+
+
+
+	private: System::Void DiscussionForum_Load(System::Object^  sender, System::EventArgs^  e) {
+				 arrycheck->Checked=true;
+				 filterbtn->PerformClick();		
 
 			 }
-		public: System::Void message_text_click(System::Object^  sender, System::EventArgs^  e) {
-						
-						RichTextBox	^ txt = gcnew RichTextBox;
-						txt = static_cast<RichTextBox ^>(sender); 
-						 message_id = static_cast<int>(txt->Tag);
-						 refresh_messagebody(message_id);
-						 
-					}
-				public: System::Void message_text_hover(System::Object^  sender, System::EventArgs^  e) {
-							
-							
-							
-						}
-	
-						// function for posting messages and replies
-private: System::Void replybtn_Click(System::Object^  sender, System::EventArgs^  e) {
-			 
-			 // function for posting message and replies on clicking post button
-			 if(reply_message=="message")
-			 {
-				 DialogResult result = MessageBox::Show("You sure want to post ?", "Post", 
-					 MessageBoxButtons::YesNoCancel, MessageBoxIcon::Question);
-				 if(result==DialogResult::Yes)
+	public: System::Void message_text_click(System::Object^  sender, System::EventArgs^  e) {
+
+				RichTextBox	^ txt = gcnew RichTextBox;
+				txt = static_cast<RichTextBox ^>(sender); 
+				message_id = static_cast<int>(txt->Tag);
+				refresh_messagebody(message_id);
+
+			}
+	public: System::Void message_text_hover(System::Object^  sender, System::EventArgs^  e) {
+
+
+
+			}
+
+			// function for posting messages and replies
+	private: System::Void replybtn_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 // function for posting message and replies on clicking post button
+				 if(reply_message=="message")
 				 {
-
-					 try{
-						 OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
-						 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
-
-						 // username and designation and to be later on taken from main page
-						 String ^ messagetext = replytxt->Text;
-						 String ^  date = System::DateTime::Now.ToString();
-						 String ^ tag = tagcombo->Text;
-						 String ^ closed = "NO";
-						 String ^ username = "SD";
-						 String ^ designation = "as";
-						 String ^ reportedabuse = "NO";
-
-
-
-						 String ^ insertString = "insert into Messages([Message],[Date&Time],[FieldTag],[Closed],[Username],[Designation],[ReportedAbuse]) VALUES('" +messagetext+ "','" + date + "' , '" +tag+ "', '" +closed+ "', '" +username+ "', '" +designation+ "', '" +reportedabuse+ "' );";
-
-						 DB_Connection->Open();
-
-						 OleDbCommand ^ cmd = gcnew OleDbCommand(insertString, DB_Connection);
-						 cmd->ExecuteNonQuery();
-						 DB_Connection->Close();
-						 MessageBox::Show("Your message has been recorded.");
-						 replytxt->Text = "";
-					 }
-
-					 catch(Exception ^ ex)
+					 DialogResult result = MessageBox::Show("You sure want to post ?", "Post", 
+						 MessageBoxButtons::YesNoCancel, MessageBoxIcon::Question);
+					 if(result==DialogResult::Yes)
 					 {
-						 MessageBox::Show(ex->Message);
+
+						 try{
+							 OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
+							 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+
+							 // username and designation and to be later on taken from main page
+							 String ^ messagetext = replytxt->Text;
+							 String ^  date = System::DateTime::Now.ToString();
+							 String ^ tag = tagcombo->Text;
+							 String ^ closed = "NO";
+							 String ^ username = "SD";
+							 String ^ designation = "as";
+							 String ^ reportedabuse = "NO";
+
+
+
+							 String ^ insertString = "insert into Messages([Message],[Date&Time],[FieldTag],[Closed],[Username],[Designation],[ReportedAbuse]) VALUES('" +messagetext+ "','" + date + "' , '" +tag+ "', '" +closed+ "', '" +username+ "', '" +designation+ "', '" +reportedabuse+ "' );";
+
+							 DB_Connection->Open();
+
+							 OleDbCommand ^ cmd = gcnew OleDbCommand(insertString, DB_Connection);
+							 cmd->ExecuteNonQuery();
+							 DB_Connection->Close();
+							 MessageBox::Show("Your message has been recorded.");
+							 replytxt->Text = "";
+						 }
+
+						 catch(Exception ^ ex)
+						 {
+							 MessageBox::Show(ex->Message);
+						 }
+						 DiscussionForum_Load(sender,e);
 					 }
-					 DiscussionForum_Load(sender,e);
 				 }
-			 }
 				 else if(reply_message=="reply")
 				 {
-					 
+
 					 DialogResult result = MessageBox::Show("You sure want to reply ?", "Post", 
 						 MessageBoxButtons::YesNoCancel, MessageBoxIcon::Question);
 					 if(result==DialogResult::Yes)
@@ -370,7 +452,7 @@ private: System::Void replybtn_Click(System::Object^  sender, System::EventArgs^
 							 String ^ replytext = replytxt->Text;
 							 String ^  date = System::DateTime::Now.ToString();
 							 int message_id_for_reply = message_id;
-							
+
 							 String ^ closed = "NO";
 							 String ^ username = "SD";
 							 String ^ designation = "as";
@@ -401,206 +483,372 @@ private: System::Void replybtn_Click(System::Object^  sender, System::EventArgs^
 
 			 }
 
-		 // function for refreshing message detail page after clicking on post
-public: Void refresh_messagebody(int message_id)
-		{
-			message_detail->Controls->Clear();
-			reply_message="reply";
-			msgpanel->Visible=false;
-			message_detail->Visible=true;
-			try{
-				OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
-				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
-				DB_Connection->Open();
-				String ^ readString = "SELECT * FROM Messages WHERE MessageID=" + message_id ;
-				OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
-				OleDbDataReader ^ reader = cmd->ExecuteReader();
-				reader->Read();
+			 // function for refreshing message detail page after clicking on post
+	public: Void refresh_messagebody(int message_id)
+			{
+				message_detail->Controls->Clear();
+				reply_message="reply";
+				msgpanel->Visible=false;
+				message_detail->Visible=true;
+				try{
+					OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
+					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+					DB_Connection->Open();
+					String ^ readString = "SELECT * FROM Messages WHERE MessageID=" + message_id ;
+					OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+					OleDbDataReader ^ reader = cmd->ExecuteReader();
+					reader->Read();
 
-				tagcombo->Visible=false;
 
-				messagebodywidth = message_detail->Size.Width;
-				startx = message_detail->Location.X;
-				starty = message_detail->Location.Y;
-				String ^ messagebody= reader->GetString(1);
 
-				Label ^ messagetext = gcnew Label();
-				Label ^ usernametext = gcnew Label();
-				Label ^ datetext = gcnew Label();
-				Label ^ typetext = gcnew Label();
-				Button ^ reportabuse = gcnew Button();
-				Label ^ replylabel = gcnew Label();
+					tagcombo->Visible=false;
 
-				
-				
-				usernametext->Text = reader->GetString(5);
-				datetext->Text = reader->GetDateTime(2).ToString();
-				typetext->Text = reader->GetString(6);
-				reportabuse->Text="Report Abuse";
-				replylabel->Text = "Replies:";
-				
-				
-				usernametext->Size = Drawing::Size(messagebodywidth*0.3,25);
-				datetext->Size = Drawing::Size(messagebodywidth*0.1,25);
-				typetext->Size =  Drawing::Size(messagebodywidth*0.2,25);
-				reportabuse->Size =  Drawing::Size(messagebodywidth*0.3,25);
-				messagetext->MaximumSize = Drawing::Size(messagebodywidth*0.9,0);
-				messagetext->AutoSize=true;
-				messagetext->Text = messagebody;
-				messagetext->Size = Drawing::Size(messagetext->PreferredWidth,messagetext->PreferredHeight);
-				replylabel->Size = Drawing::Size(80,40);
+					messagebodywidth = message_detail->Size.Width;
+					startx = message_detail->Location.X;
+					starty = message_detail->Location.Y;
+					String ^ messagebody= reader->GetString(1);
 
-				messagetext->Location = Drawing::Point(startx,starty+25);
-				usernametext->Location = Drawing::Point(startx,starty);
-				datetext->Location = Drawing::Point(startx+messagebodywidth*0.3,starty);
-				typetext->Location = Drawing::Point(startx+messagebodywidth*0.4,starty);
-				reportabuse->Location = Drawing::Point(startx+messagebodywidth*0.6,starty);
-				replylabel->Location = Drawing::Point(startx,starty+messagetext->Height+60);
-				
-				replylabel->Font = gcnew System::Drawing::Font("Times New Roman", 15,FontStyle::Bold);
-
-				reportabuse->Cursor= System::Windows::Forms::Cursors::Hand;
-				reportabuse->Tag = "M" + reader->GetValue(0);
-				reportabuse->Click  += gcnew EventHandler(this, &DiscussionForum::reportabuse_Click);
-
-				message_detail->Controls->Add(messagetext);
-				message_detail->Controls->Add(usernametext);
-				message_detail->Controls->Add(datetext);
-				message_detail->Controls->Add(typetext);
-				message_detail->Controls->Add(reportabuse);
-				message_detail->Controls->Add(replylabel);
-
-				// showing all the replies
-				String ^ readStringreply = "SELECT * FROM Replies WHERE MessageID=" + message_id ;
-				cmd = gcnew OleDbCommand(readStringreply, DB_Connection);
-				OleDbDataReader ^ readerreply = cmd->ExecuteReader();
-				int replystartx=startx;
-				int replystarty=starty+messagetext->Height+60+50;
-				int replybodywidth=messagebodywidth*0.7;
-				while (readerreply->Read())
-				{
-					Label ^ reply = gcnew Label();
+					Label ^ messagetext = gcnew Label();
 					Label ^ usernametext = gcnew Label();
 					Label ^ datetext = gcnew Label();
 					Label ^ typetext = gcnew Label();
 					Button ^ reportabuse = gcnew Button();
+					Button ^ closethread = gcnew Button();
+					Button ^ deletethread = gcnew Button();
+					Label ^ replylabel = gcnew Label();
 
-					usernametext->Text = readerreply->GetString(2);
-					datetext->Text = readerreply->GetDateTime(4).ToString();
-					typetext->Text = readerreply->GetString(5);
+
+
+					usernametext->Text = reader->GetString(5);
+					datetext->Text = reader->GetDateTime(2).ToString();
+					typetext->Text = reader->GetString(6);
+					closethread->Text= "Close Thread";
+					deletethread->Text= "Delete Thread";
 					reportabuse->Text="Report Abuse";
-					
-					usernametext->Size = Drawing::Size(replybodywidth*0.3,25);
-					datetext->Size = Drawing::Size(replybodywidth*0.1,25);
-					typetext->Size =  Drawing::Size(replybodywidth*0.2,25);
-					reportabuse->Size =  Drawing::Size(replybodywidth*0.3,25);
-					reply->MaximumSize = Drawing::Size(replybodywidth*0.9,0);
-					reply->AutoSize=true;
-					reply->Text = readerreply->GetString(3);
-					reply->Size = Drawing::Size(reply->PreferredWidth,reply->PreferredHeight);
-					
-					reply->Location = Drawing::Point(replystartx,replystarty+25);
-					usernametext->Location = Drawing::Point(replystartx,replystarty);
-					datetext->Location = Drawing::Point(replystartx+replybodywidth*0.3,replystarty);
-					typetext->Location = Drawing::Point(replystartx+replybodywidth*0.4,replystarty);
-					reportabuse->Location = Drawing::Point(replystartx+replybodywidth*0.6,replystarty);
-					
-					reportabuse->Click  += gcnew EventHandler(this, &DiscussionForum::reportabuse_Click);
-					reportabuse->Tag = "R" + readerreply->GetValue(0);
-					reportabuse->Cursor= System::Windows::Forms::Cursors::Hand;
+					replylabel->Text = "Replies:";
 
-					message_detail->Controls->Add(reply);
+
+					usernametext->Size = Drawing::Size(messagebodywidth*0.3,25);
+					datetext->Size = Drawing::Size(messagebodywidth*0.1,25);
+					typetext->Size =  Drawing::Size(messagebodywidth*0.1,25);
+					reportabuse->Size =  Drawing::Size(messagebodywidth*0.15,25);
+					closethread->Size =  Drawing::Size(messagebodywidth*0.15,25);
+					deletethread->Size =  Drawing::Size(messagebodywidth*0.15,25);
+					messagetext->MaximumSize = Drawing::Size(messagebodywidth*0.9,0);
+					messagetext->AutoSize=true;
+					messagetext->Text = messagebody;
+					messagetext->Size = Drawing::Size(messagetext->PreferredWidth,messagetext->PreferredHeight);
+					replylabel->Size = Drawing::Size(80,40);
+
+					messagetext->Location = Drawing::Point(startx,starty+30);
+					usernametext->Location = Drawing::Point(startx,starty);
+					datetext->Location = Drawing::Point(startx+messagebodywidth*0.3,starty);
+					typetext->Location = Drawing::Point(startx+messagebodywidth*0.4,starty);
+					reportabuse->Location = Drawing::Point(startx+messagebodywidth*0.5,starty);
+					closethread->Location = Drawing::Point(startx+messagebodywidth*0.66,starty);
+					deletethread->Location = Drawing::Point(startx+messagebodywidth*0.82,starty);
+					replylabel->Location = Drawing::Point(startx,starty+messagetext->Height+60);
+
+					replylabel->Font = gcnew System::Drawing::Font("Times New Roman", 15,FontStyle::Bold);
+					reportabuse->Cursor= System::Windows::Forms::Cursors::Hand;
+					reportabuse->Tag = "M" + reader->GetValue(0);
+					reportabuse->Click  += gcnew EventHandler(this, &DiscussionForum::reportabuse_Click);
+
+					closethread->Cursor= System::Windows::Forms::Cursors::Hand;
+					closethread->Tag = "M" + reader->GetValue(0);
+					closethread->Click  += gcnew EventHandler(this, &DiscussionForum::closethread_Click);
+
+					deletethread->Cursor= System::Windows::Forms::Cursors::Hand;
+					deletethread->Tag = "M" + reader->GetValue(0);
+					deletethread->Click  += gcnew EventHandler(this, &DiscussionForum::deletethread_Click);
+
+					message_detail->Controls->Add(messagetext);
 					message_detail->Controls->Add(usernametext);
 					message_detail->Controls->Add(datetext);
 					message_detail->Controls->Add(typetext);
 					message_detail->Controls->Add(reportabuse);
-					replystarty += reply->Height + 40;
-	
+					message_detail->Controls->Add(closethread);
+					message_detail->Controls->Add(deletethread);
+					message_detail->Controls->Add(replylabel);
+
+					if(reader->GetString(4)=="YES")
+					{
+						replybtn->Enabled=false;
+						closethread->Enabled=false;
+					}
+					// showing all the replies
+					String ^ readStringreply = "SELECT * FROM Replies WHERE MessageID=" + message_id ;
+					cmd = gcnew OleDbCommand(readStringreply, DB_Connection);
+					OleDbDataReader ^ readerreply = cmd->ExecuteReader();
+					int replystartx=startx;
+					int replystarty=starty+messagetext->Height+60+50;
+					int replybodywidth=messagebodywidth*0.7;
+					while (readerreply->Read())
+					{
+						Label ^ reply = gcnew Label();
+						Label ^ usernametext = gcnew Label();
+						Label ^ datetext = gcnew Label();
+						Label ^ typetext = gcnew Label();
+						Button ^ reportabuse = gcnew Button();
+						Button ^ deletereply = gcnew Button();
+
+						usernametext->Text = readerreply->GetString(2);
+						datetext->Text = readerreply->GetDateTime(4).ToString();
+						typetext->Text = readerreply->GetString(5);
+						reportabuse->Text="Report Abuse";
+						deletereply->Text="Delete Reply";
+
+						usernametext->Size = Drawing::Size(replybodywidth*0.3,25);
+						datetext->Size = Drawing::Size(replybodywidth*0.1,25);
+						typetext->Size =  Drawing::Size(replybodywidth*0.1,25);
+						reportabuse->Size =  Drawing::Size(replybodywidth*0.2,25);
+						deletereply->Size =  Drawing::Size(replybodywidth*0.2,25);
+						reply->MaximumSize = Drawing::Size(replybodywidth*0.9,0);
+						reply->AutoSize=true;
+						reply->Text = readerreply->GetString(3);
+						reply->Size = Drawing::Size(reply->PreferredWidth,reply->PreferredHeight);
+
+						reply->Location = Drawing::Point(replystartx,replystarty+25);
+						usernametext->Location = Drawing::Point(replystartx,replystarty);
+						datetext->Location = Drawing::Point(replystartx+replybodywidth*0.3,replystarty);
+						typetext->Location = Drawing::Point(replystartx+replybodywidth*0.4,replystarty);
+						reportabuse->Location = Drawing::Point(replystartx+replybodywidth*0.5,replystarty);
+						deletereply->Location = Drawing::Point(replystartx+replybodywidth*0.7,replystarty);
+
+						reportabuse->Click  += gcnew EventHandler(this, &DiscussionForum::reportabuse_Click);
+						reportabuse->Tag = "R" + readerreply->GetValue(0);
+						reportabuse->Cursor= System::Windows::Forms::Cursors::Hand;
+
+						deletereply->Click  += gcnew EventHandler(this, &DiscussionForum::deletethread_Click);
+						deletereply->Tag = "R" + readerreply->GetValue(0);
+						deletereply->Cursor= System::Windows::Forms::Cursors::Hand;
+
+						message_detail->Controls->Add(reply);
+						message_detail->Controls->Add(usernametext);
+						message_detail->Controls->Add(datetext);
+						message_detail->Controls->Add(typetext);
+						message_detail->Controls->Add(reportabuse);
+						message_detail->Controls->Add(deletereply);
+						replystarty += reply->Height + 40;
+
+					}
+
+
+				}
+				catch(Exception ^ ex)
+				{
+					MessageBox::Show(ex->Message);
 				}
 
 			}
-			catch(Exception ^ ex)
-			{
-				MessageBox::Show(ex->Message);
+
+	public: System::Void reportabuse_Click(System::Object^  sender, System::EventArgs^  e) {
+				Button	^ reportbtn = gcnew Button;
+				reportbtn = static_cast<Button ^>(sender); 
+				String ^ reply_message_id = static_cast<String ^>(reportbtn->Tag);
+
+				if(reply_message_id[0]=='M')
+				{
+
+					reply_message_id = reply_message_id->Remove(0,1);
+					OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
+					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+					DB_Connection->Open();
+					OleDbCommand ^ cmd;
+					String ^ readString;
+					DialogResult result = MessageBox::Show("You sure want report abuse ?", "Post", 
+						MessageBoxButtons::YesNo, MessageBoxIcon::Question);
+					if(result==DialogResult::Yes)
+					{
+						try
+						{
+							readString = "update Messages set ReportedAbuse= '" + "YES" + "' where MessageID=" + reply_message_id  ; 
+							cmd = gcnew OleDbCommand(readString, DB_Connection);
+							cmd->ExecuteNonQuery();
+							MessageBox::Show("Reported Abuse");
+						}
+						catch(Exception ^ ex)
+						{
+							MessageBox::Show(ex->Message);
+						}
+
+					}
+
+				}
+
+				else if(reply_message_id[0]=='R')
+				{
+
+					reply_message_id = reply_message_id->Remove(0,1);
+					OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
+					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+					DB_Connection->Open();
+					OleDbCommand ^ cmd;
+					String ^ readString;
+					DialogResult result = MessageBox::Show("You sure want report abuse ?", "Post", 
+						MessageBoxButtons::YesNo, MessageBoxIcon::Question);
+					if(result==DialogResult::Yes)
+					{
+						try
+						{
+							readString = "update Replies set ReportedAbuse= '" + "YES" + "' where ReplyID=" + reply_message_id  ; 
+							cmd = gcnew OleDbCommand(readString, DB_Connection);
+							cmd->ExecuteNonQuery();
+							MessageBox::Show("Reported Abuse");
+						}
+						catch(Exception ^ ex)
+						{
+							MessageBox::Show(ex->Message);
+						}
+
+					}
+
+				}
+
+
 			}
-			
-		}
-		
-public: System::Void reportabuse_Click(System::Object^  sender, System::EventArgs^  e) {
-			Button	^ reportbtn = gcnew Button;
-			reportbtn = static_cast<Button ^>(sender); 
-			String ^ reply_message_id = static_cast<String ^>(reportbtn->Tag);
-			if(reply_message_id[0]=='M')
-			{
-				
-				reply_message_id = reply_message_id->Remove(0,1);
+
+	public: System::Void deletethread_Click(System::Object^  sender, System::EventArgs^  e) {
+				Button	^ deletebtn = gcnew Button;
+				deletebtn = static_cast<Button ^>(sender); 
+				String ^ reply_message_id = static_cast<String ^>(deletebtn->Tag);
+				if(reply_message_id[0]=='M')
+				{
+
+					reply_message_id = reply_message_id->Remove(0,1);
+					OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
+					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+					DB_Connection->Open();
+					OleDbCommand ^ cmd;
+					String ^ readString;
+					DialogResult result = MessageBox::Show("You sure want Delete this Thread ?", "Post", 
+						MessageBoxButtons::YesNo, MessageBoxIcon::Question);
+					if(result==DialogResult::Yes)
+					{
+						try
+						{
+							readString = "DELETE FROM Messages WHERE MessageID=" + reply_message_id  ; 
+							cmd = gcnew OleDbCommand(readString, DB_Connection);
+							cmd->ExecuteNonQuery();
+							readString = "DELETE FROM Replies where MessageID=" + reply_message_id  ; 
+							cmd = gcnew OleDbCommand(readString, DB_Connection);
+							cmd->ExecuteNonQuery(); 
+							MessageBox::Show("Thread Deleted");
+						}
+						catch(Exception ^ ex)
+						{
+							MessageBox::Show(ex->Message);
+						}
+						loadbase();
+					}
+
+				}
+
+				else if(reply_message_id[0]=='R')
+				{
+
+					reply_message_id = reply_message_id->Remove(0,1);
+					OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
+					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+					DB_Connection->Open();
+					OleDbCommand ^ cmd;
+					String ^ readString;
+					DialogResult result = MessageBox::Show("You sure want Delete this reply ?", "Post", 
+						MessageBoxButtons::YesNo, MessageBoxIcon::Question);
+					if(result==DialogResult::Yes)
+					{
+						try
+						{
+							readString = "DELETE FROM Replies where ReplyID=" + reply_message_id  ; 
+							cmd = gcnew OleDbCommand(readString, DB_Connection);
+							cmd->ExecuteNonQuery();
+							MessageBox::Show("Reply Deleted");
+						}
+						catch(Exception ^ ex)
+						{
+							MessageBox::Show(ex->Message);
+						}
+
+					}
+					refresh_messagebody(message_id);
+
+				}
+
+			}
+
+
+
+
+	public: System::Void closethread_Click(System::Object^  sender, System::EventArgs^  e) {
+				Button	^ closebtn = gcnew Button;
+				closebtn = static_cast<Button ^>(sender); 
+				String ^ reply_message_id = static_cast<String ^>(closebtn->Tag);
 				OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
+				reply_message_id = reply_message_id->Remove(0,1);
 				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
 				DB_Connection->Open();
-				String ^ readString = "SELECT * FROM Messages WHERE MessageID=" + reply_message_id ;
-				OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
-				OleDbDataReader ^ reader = cmd->ExecuteReader();
-				reader->Read();
-				DialogResult result = MessageBox::Show("You sure want report abuse ?", "Post", 
+				OleDbCommand ^ cmd;
+				String ^ readString;
+				DialogResult result = MessageBox::Show("You sure want close this thread ?", "Post", 
 					MessageBoxButtons::YesNo, MessageBoxIcon::Question);
 				if(result==DialogResult::Yes)
 				{
 					try
 					{
-						readString = "update Messages set ReportedAbuse= '" + "YES" + "' where MessageID=" + reply_message_id  ; 
+						readString = "update Messages set Closed= '" + "YES" + "' where MessageID=" + reply_message_id  ; 
 						cmd = gcnew OleDbCommand(readString, DB_Connection);
 						cmd->ExecuteNonQuery();
-						MessageBox::Show("Reported Abuse");
+						MessageBox::Show("Closed Thread");
 					}
 					catch(Exception ^ ex)
 					{
 						MessageBox::Show(ex->Message);
 					}
-					 
 				}
-				
+				refresh_messagebody(message_id);
 			}
 
-			else if(reply_message_id[0]=='R')
-			{
-				
-				reply_message_id = reply_message_id->Remove(0,1);
-				OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
-				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
-				DB_Connection->Open();
-				String ^ readString = "SELECT * FROM Replies WHERE ReplyID=" + reply_message_id ;
-				OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
-				OleDbDataReader ^ reader = cmd->ExecuteReader();
-				reader->Read();
-				DialogResult result = MessageBox::Show("You sure want report abuse ?", "Post", 
-					MessageBoxButtons::YesNo, MessageBoxIcon::Question);
-				if(result==DialogResult::Yes)
-				{
-					try
-					{
-						readString = "update Replies set ReportedAbuse= '" + "YES" + "' where ReplyID=" + reply_message_id  ; 
-						cmd = gcnew OleDbCommand(readString, DB_Connection);
-						cmd->ExecuteNonQuery();
-						MessageBox::Show("Reported Abuse");
-					}
-					catch(Exception ^ ex)
-					{
-						MessageBox::Show(ex->Message);
-					}
+	private: System::Void filterbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+				 filters.Clear();
 
-				}
-
-			}
-			
-		}
-
-		 
-private: System::Void filterbtn_Click(System::Object^  sender, System::EventArgs^  e) {
-			 int i=0;
-			 for (i=0;i<checkedListBox1->CheckedItems->Count;i++)
-			 {
-				 checkedListBox1->CheckedItems[i]->ToString();
+				 if(arrycheck->Checked==true)
+				 {
+					 filters.Add("Array");
+				 }
+				 if(llcheck->Checked==true)
+				 {
+					 filters.Add("Linked List");
+				 }
+				 if(sortcheck->Checked==true)
+				 {
+					 filters.Add("Sorting");
+				 }
+				 if(searchcheck->Checked==true)
+				 {
+					 filters.Add("Searching");
+				 }
+				 if(queuecheck->Checked==true)
+				 {
+					 filters.Add("Queue");
+				 }
+				 if(stackcheck->Checked==true)
+				 {
+					 filters.Add("Stack");
+				 }
+				 if(filters.Count==0)
+				 {
+					 filters.Add("Array");
+					 filters.Add("Linked List");
+					 filters.Add("Sorting");
+					 filters.Add("Searching");
+					 filters.Add("Queue");
+					 filters.Add("Stack");
+				 }
+				 loadbase();
 			 }
-		 }
-};
+	private: System::Void checkedListBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+			 }
+	private: System::Void arrycheck_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+			 }
+	};
 }

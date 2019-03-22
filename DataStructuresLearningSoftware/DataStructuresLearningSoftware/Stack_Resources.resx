@@ -117,4 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Video Lectures: https://www.youtube.com/watch?v=F1F2imiOJfk
+Tutorial: https://www.tutorialspoint.com/data_structures_algorithms/stack_algorithm.htm
+
+Extra resources of stacks:-
+	1. Stack in C++ STL: 
+	    https://www.geeksforgeeks.org/stack-in-cpp-stl/
+
+	2. Implement two stacks in an array: 
+	    https://www.geeksforgeeks.org/implement-two-stacks-in-an-array/
+
+	3. Stack Class in Java: 
+	    https://www.geeksforgeeks.org/stack-class-in-java/
+
+Standard Problems on Stacks:-
+	1.  Expression Evaluation:
+	     https://www.geeksforgeeks.org/expression-evaluation/
+	
+	2. Infix to Postfix Conversion using Stack
+	    https://www.geeksforgeeks.org/stack-set-2-infix-to-postfix/
+
+	3. Check for balanced parentheses: 
+	     https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/</value>
+  </data>
 </root>

@@ -59,21 +59,27 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// richTextBox1
 			// 
-			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->richTextBox1->Location = System::Drawing::Point(20, 42);
+			this->richTextBox1->BackColor = System::Drawing::Color::White;
+			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->richTextBox1->Cursor = System::Windows::Forms::Cursors::Default;
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
+			this->richTextBox1->Location = System::Drawing::Point(52, 68);
+			this->richTextBox1->Margin = System::Windows::Forms::Padding(4);
 			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(1065, 589);
+			this->richTextBox1->ReadOnly = true;
+			this->richTextBox1->Size = System::Drawing::Size(985, 585);
 			this->richTextBox1->TabIndex = 0;
 			this->richTextBox1->Text = resources->GetString(L"richTextBox1.Text");
+			this->richTextBox1->TextChanged += gcnew System::EventHandler(this, &Stack_Implementation_Array::richTextBox1_TextChanged);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(148, 7);
+			this->label1->Location = System::Drawing::Point(123, 18);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(764, 32);
+			this->label1->Size = System::Drawing::Size(790, 31);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Following is the code for stack implementation using arrays ";
 			// 
@@ -81,15 +87,18 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::White;
+			this->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->richTextBox1);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"Stack_Implementation_Array";
-			this->Size = System::Drawing::Size(1088, 631);
+			this->Size = System::Drawing::Size(1105, 670);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+	private: System::Void richTextBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+			 }
 	};
 }

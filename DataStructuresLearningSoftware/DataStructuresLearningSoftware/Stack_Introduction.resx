@@ -118,13 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>Stack is a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).
+    <value>A Stack is an abstract data type or collection where in Push,the addition of data elements to the collection, and Pop, the removal of data elements from the collection, are the major operations performed on the collection. The Push and Pop operations are performed only at one end of the Stack which is referred to as the 'top of the stack'. 
 
-Mainly the following three basic operations are performed in the stack:
-	• Push: Adds an item in the stack. If the stack is full, then it is said to be an Overflow 	condition.
-	• Pop: Removes an item from the stack. The items are popped in the reversed order in 	which they are pushed. If the stack is empty, then it is said to be an Underflow condition.
-	• Peek or Top: Returns top element  of stack.
-	• isEmpty: Returns true if stack is empty, else false</value>
+In other words,a Stack can be simply defined as Last In First Out (LIFO) data structure,i.e.,the last element added at the top of the stack(In) should be the first element to be removed(Out) from the stack. Basic terms that are used in stacks are as follows:
+
+• PUSH
+  A function by which a new entity can be added to the top of the stack.
+
+• POP  
+  A function by which an entity will be removed from the top of the stack.
+
+• PEEK OR TOP
+  A function which returns the top of the stack with out removing it.
+
+• OVERFLOW STATE 
+  A stack may be implemented to have a bounded capacity. If the stack is 
+ full and does not contain enough space to accept an entity to be pushed,
+ the stack is then considered to be in an overflow state.
+
+• UNDERFLOW STATE 
+  The pop function removes an item from the top of the stack. A pop either reveals previously concealed items or results in an      empty stack, but, if the stack is empty, it goes into underflow state, which means no items are present in stack to be removed.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -117,4 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Following are the most useful applications of stack:
+
+• EXPRESSION EVALUATION
+  	 Using stack you can evaluate an expression represented by a String, which is a combination of well-matched parentheses, symbols and numbers
+
+•  EXPRESSION CONVERSION
+    	Using stack you can convert an expression from one form to another. There are three common forms of expressions,	which are the following:
+  
+        	 i. Infix: (X + Y) Operators are written in-between their operands. This is the usual way we write expressions. 
+
+        	 ii. Prefix: (X Y +) Operators are written after their operands. The order of evaluation of operators is always left-to-right.
+        
+        	 iii. Postfix: (+ X Y) Operators are written before their operands.
+ 
+•  BACKTRACKING
+   	Stack is used in the implementation of backtracking(recursive) algorihms like game playing, finding paths, exhaustive 	searching etc.
+
+•  MEMORY MANAGEMENT
+    	System stacks used in processors are used to store data for special purposes, like calling another function, returning    	a value from  function etc.</value>
+  </data>
 </root>

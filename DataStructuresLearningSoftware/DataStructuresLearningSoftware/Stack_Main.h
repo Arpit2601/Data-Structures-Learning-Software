@@ -6,6 +6,7 @@
 #include "Stack_Introduction.h"
 #include "Stack_Resources.h"
 #include "Stack_Test.h"
+#include "DiscussionForum.h"
 
 namespace DataStructuresLearningSoftware {
 
@@ -54,6 +55,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Button^  button5;
 	private: System::Windows::Forms::Button^  button6;
 	private: System::Windows::Forms::Button^  button7;
+	private: System::Windows::Forms::Button^  button8;
 
 	private:
 		/// <summary>
@@ -69,34 +71,52 @@ namespace DataStructuresLearningSoftware {
 		void InitializeComponent(void)
 		{
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::LightSeaGreen;
+			this->panel1->Controls->Add(this->button3);
 			this->panel1->Controls->Add(this->button7);
 			this->panel1->Controls->Add(this->button6);
 			this->panel1->Controls->Add(this->button5);
 			this->panel1->Controls->Add(this->button4);
-			this->panel1->Controls->Add(this->button3);
 			this->panel1->Controls->Add(this->button2);
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Controls->Add(this->panel2);
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Margin = System::Windows::Forms::Padding(4);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(175, 717);
+			this->panel1->Size = System::Drawing::Size(175, 720);
 			this->panel1->TabIndex = 0;
+			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::Color::LightSeaGreen;
+			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button3->FlatAppearance->BorderSize = 0;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->ForeColor = System::Drawing::Color::Black;
+			this->button3->Location = System::Drawing::Point(0, 80);
+			this->button3->Margin = System::Windows::Forms::Padding(4);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(175, 50);
+			this->button3->TabIndex = 3;
+			this->button3->Text = L"Implementation Using \n Linked List";
+			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &Stack_Main::button3_Click);
 			// 
 			// button7
 			// 
@@ -105,8 +125,8 @@ namespace DataStructuresLearningSoftware {
 			this->button7->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button7->FlatAppearance->BorderSize = 0;
 			this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button7->ForeColor = System::Drawing::Color::White;
-			this->button7->Location = System::Drawing::Point(0, 180);
+			this->button7->ForeColor = System::Drawing::Color::Black;
+			this->button7->Location = System::Drawing::Point(0, 220);
 			this->button7->Margin = System::Windows::Forms::Padding(4);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(175, 30);
@@ -122,8 +142,8 @@ namespace DataStructuresLearningSoftware {
 			this->button6->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button6->FlatAppearance->BorderSize = 0;
 			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button6->ForeColor = System::Drawing::Color::White;
-			this->button6->Location = System::Drawing::Point(0, 150);
+			this->button6->ForeColor = System::Drawing::Color::Black;
+			this->button6->Location = System::Drawing::Point(0, 190);
 			this->button6->Margin = System::Windows::Forms::Padding(4);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(175, 30);
@@ -139,8 +159,8 @@ namespace DataStructuresLearningSoftware {
 			this->button5->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button5->FlatAppearance->BorderSize = 0;
 			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button5->ForeColor = System::Drawing::Color::White;
-			this->button5->Location = System::Drawing::Point(0, 120);
+			this->button5->ForeColor = System::Drawing::Color::Black;
+			this->button5->Location = System::Drawing::Point(0, 160);
 			this->button5->Margin = System::Windows::Forms::Padding(4);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(175, 30);
@@ -156,8 +176,8 @@ namespace DataStructuresLearningSoftware {
 			this->button4->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button4->FlatAppearance->BorderSize = 0;
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->ForeColor = System::Drawing::Color::White;
-			this->button4->Location = System::Drawing::Point(0, 90);
+			this->button4->ForeColor = System::Drawing::Color::Black;
+			this->button4->Location = System::Drawing::Point(0, 130);
 			this->button4->Margin = System::Windows::Forms::Padding(4);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(175, 30);
@@ -166,23 +186,6 @@ namespace DataStructuresLearningSoftware {
 			this->button4->UseVisualStyleBackColor = false;
 			this->button4->Click += gcnew System::EventHandler(this, &Stack_Main::button4_Click);
 			// 
-			// button3
-			// 
-			this->button3->BackColor = System::Drawing::Color::LightSeaGreen;
-			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button3->FlatAppearance->BorderSize = 0;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->ForeColor = System::Drawing::Color::White;
-			this->button3->Location = System::Drawing::Point(0, 60);
-			this->button3->Margin = System::Windows::Forms::Padding(4);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(175, 30);
-			this->button3->TabIndex = 3;
-			this->button3->Text = L"Implementation Using \n Linked List";
-			this->button3->UseVisualStyleBackColor = false;
-			this->button3->Click += gcnew System::EventHandler(this, &Stack_Main::button3_Click);
-			// 
 			// button2
 			// 
 			this->button2->BackColor = System::Drawing::Color::LightSeaGreen;
@@ -190,24 +193,24 @@ namespace DataStructuresLearningSoftware {
 			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button2->FlatAppearance->BorderSize = 0;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->ForeColor = System::Drawing::Color::White;
+			this->button2->ForeColor = System::Drawing::Color::Black;
 			this->button2->Location = System::Drawing::Point(0, 30);
 			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(175, 30);
+			this->button2->Size = System::Drawing::Size(175, 50);
 			this->button2->TabIndex = 2;
-			this->button2->Text = L"Implementation Using \n               Arrays";
+			this->button2->Text = L"Implementation Using  Arrays";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &Stack_Main::button2_Click);
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::Color::LightSeaGreen;
+			this->button1->BackColor = System::Drawing::Color::PaleTurquoise;
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->FlatAppearance->BorderSize = 0;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->ForeColor = System::Drawing::Color::White;
+			this->button1->ForeColor = System::Drawing::Color::Black;
 			this->button1->Location = System::Drawing::Point(0, 0);
 			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
@@ -222,7 +225,7 @@ namespace DataStructuresLearningSoftware {
 			this->panel2->Location = System::Drawing::Point(175, 0);
 			this->panel2->Margin = System::Windows::Forms::Padding(4);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(1088, 50);
+			this->panel2->Size = System::Drawing::Size(1102, 50);
 			this->panel2->TabIndex = 0;
 			// 
 			// panel3
@@ -230,14 +233,31 @@ namespace DataStructuresLearningSoftware {
 			this->panel3->Location = System::Drawing::Point(175, 50);
 			this->panel3->Margin = System::Windows::Forms::Padding(4);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(1104, 667);
+			this->panel3->Size = System::Drawing::Size(1102, 670);
 			this->panel3->TabIndex = 1;
+			// 
+			// button8
+			// 
+			this->button8->BackColor = System::Drawing::Color::White;
+			this->button8->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button8->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button8->ForeColor = System::Drawing::Color::Black;
+			this->button8->Location = System::Drawing::Point(1010, 12);
+			this->button8->Name = L"button8";
+			this->button8->Size = System::Drawing::Size(200, 30);
+			this->button8->TabIndex = 2;
+			this->button8->Text = L"Discussion Forum";
+			this->button8->UseVisualStyleBackColor = false;
+			this->button8->Click += gcnew System::EventHandler(this, &Stack_Main::button8_Click);
 			// 
 			// Stack_Main
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1280, 720);
+			this->Controls->Add(this->button8);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -253,34 +273,94 @@ namespace DataStructuresLearningSoftware {
 		}
 #pragma endregion
 	private: System::Void Stack_Main_Load(System::Object^  sender, System::EventArgs^  e) {
+				 button1->BackColor = Color::PaleTurquoise;
+				 button2->BackColor = Color::LightSeaGreen;
+				 button3->BackColor = Color::LightSeaGreen;
+				 button4->BackColor = Color::LightSeaGreen;
+				 button5->BackColor = Color::LightSeaGreen;
+				 button6->BackColor = Color::LightSeaGreen;
+				 button7->BackColor = Color::LightSeaGreen;
 				 panel3->Controls->Add(gcnew Stack_Introduction);
 			 }
-private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-			 panel3->Controls->Clear();
-			 panel3->Controls->Add(gcnew Stack_Introduction);
-		 }
-private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-			 panel3->Controls->Clear();
-			 panel3->Controls->Add(gcnew Stack_Implementation_Array);
-		 }
-private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
-			 panel3->Controls->Clear();
-			 panel3->Controls->Add(gcnew Stack_Implementation_LinkedList);	 
-		 }
-private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
-			 panel3->Controls->Clear();
-			 panel3->Controls->Add(gcnew Stack_Applications);
-		 }
-private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
-			 panel3->Controls->Clear();
-			 panel3->Controls->Add(gcnew Stack_Animations);
-		 }
-private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
-			 panel3->Controls->Clear();
-			 panel3->Controls->Add(gcnew Stack_Resources);
-		 }
-private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
-			 panel3->Controls->Add(gcnew Stack_Test);
-		 }
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+				 button1->BackColor = Color::PaleTurquoise;
+				 button2->BackColor = Color::LightSeaGreen;
+				 button3->BackColor = Color::LightSeaGreen;
+				 button4->BackColor = Color::LightSeaGreen;
+				 button5->BackColor = Color::LightSeaGreen;
+				 button6->BackColor = Color::LightSeaGreen;
+				 button7->BackColor = Color::LightSeaGreen;
+				 panel3->Controls->Clear();
+				 panel3->Controls->Add(gcnew Stack_Introduction);
+			 }
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+				 button1->BackColor = Color::LightSeaGreen;
+				 button2->BackColor = Color::PaleTurquoise;
+				 button3->BackColor = Color::LightSeaGreen;
+				 button4->BackColor = Color::LightSeaGreen;
+				 button5->BackColor = Color::LightSeaGreen;
+				 button6->BackColor = Color::LightSeaGreen;
+				 button7->BackColor = Color::LightSeaGreen;
+				 panel3->Controls->Clear();
+				 panel3->Controls->Add(gcnew Stack_Implementation_Array);
+			 }
+	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+				 button1->BackColor = Color::LightSeaGreen;
+				 button2->BackColor = Color::LightSeaGreen;
+				 button3->BackColor = Color::PaleTurquoise;
+				 button4->BackColor = Color::LightSeaGreen;
+				 button5->BackColor = Color::LightSeaGreen;
+				 button6->BackColor = Color::LightSeaGreen;
+				 button7->BackColor = Color::LightSeaGreen;
+				 panel3->Controls->Clear();
+				 panel3->Controls->Add(gcnew Stack_Implementation_LinkedList);	 
+			 }
+	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
+				 button1->BackColor = Color::LightSeaGreen;
+				 button2->BackColor = Color::LightSeaGreen;
+				 button3->BackColor = Color::LightSeaGreen;
+				 button4->BackColor = Color::PaleTurquoise;
+				 button5->BackColor = Color::LightSeaGreen;
+				 button6->BackColor = Color::LightSeaGreen;
+				 button7->BackColor = Color::LightSeaGreen;
+				 panel3->Controls->Clear();
+				 panel3->Controls->Add(gcnew Stack_Applications);
+			 }
+	private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+				 button1->BackColor = Color::LightSeaGreen;
+				 button2->BackColor = Color::LightSeaGreen;
+				 button3->BackColor = Color::LightSeaGreen;
+				 button4->BackColor = Color::LightSeaGreen;
+				 button5->BackColor = Color::PaleTurquoise;
+				 button6->BackColor = Color::LightSeaGreen;
+				 button7->BackColor = Color::LightSeaGreen;
+				 panel3->Controls->Clear();
+				 panel3->Controls->Add(gcnew Stack_Animations);
+			 }
+	private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
+				 button1->BackColor = Color::LightSeaGreen;
+				 button2->BackColor = Color::LightSeaGreen;
+				 button3->BackColor = Color::LightSeaGreen;
+				 button4->BackColor = Color::LightSeaGreen;
+				 button5->BackColor = Color::LightSeaGreen;
+				 button6->BackColor = Color::PaleTurquoise;
+				 button7->BackColor = Color::LightSeaGreen;
+				 panel3->Controls->Clear();
+				 panel3->Controls->Add(gcnew Stack_Resources);
+			 }
+	private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
+				 button1->BackColor = Color::LightSeaGreen;
+				 button2->BackColor = Color::LightSeaGreen;
+				 button3->BackColor = Color::LightSeaGreen;
+				 button4->BackColor = Color::LightSeaGreen;
+				 button5->BackColor = Color::LightSeaGreen;
+				 button6->BackColor = Color::LightSeaGreen;
+				 button7->BackColor = Color::PaleTurquoise;
+				 panel3->Controls->Add(gcnew Stack_Test);
+			 }
+	private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
+				 panel3->Controls->Clear();
+				 panel3->Controls->Add(gcnew DiscussionForum);
+			 }
 };
 }
