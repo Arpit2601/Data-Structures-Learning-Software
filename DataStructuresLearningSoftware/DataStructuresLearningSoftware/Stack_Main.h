@@ -95,7 +95,7 @@ namespace DataStructuresLearningSoftware {
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Margin = System::Windows::Forms::Padding(4);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(175, 681);
+			this->panel1->Size = System::Drawing::Size(175, 717);
 			this->panel1->TabIndex = 0;
 			// 
 			// button7
@@ -230,7 +230,7 @@ namespace DataStructuresLearningSoftware {
 			this->panel3->Location = System::Drawing::Point(175, 50);
 			this->panel3->Margin = System::Windows::Forms::Padding(4);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(1088, 631);
+			this->panel3->Size = System::Drawing::Size(1104, 667);
 			this->panel3->TabIndex = 1;
 			// 
 			// Stack_Main
