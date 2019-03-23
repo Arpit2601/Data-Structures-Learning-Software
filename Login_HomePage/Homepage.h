@@ -1,5 +1,11 @@
 #pragma once
 
+#include<string.h>
+#include <string>
+#include <iostream> 
+#include <ctime> 
+#include <cstdlib>
+
 namespace Login_HomePage {
 
 	using namespace System;
@@ -8,6 +14,15 @@ namespace Login_HomePage {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Data::OleDb;
+	using namespace System::IO;
+	using namespace System::Net::Mail;
+	using namespace System::Security::Cryptography;
+	using namespace System::Text;
+
+
+	 
+
 
 	/// <summary>
 	/// Summary for Homepage
@@ -15,12 +30,212 @@ namespace Login_HomePage {
 	public ref class Homepage : public System::Windows::Forms::Form
 	{
 	public:
+	//Public global variables
+	String ^username;
+	String ^first_name;
+	String ^last_name;
+	String ^ userid;
+	String ^password;
+	String ^email;
+	String ^contact;
+	String ^isapproved;
+	String ^designation;
+	String ^ array_progress;
+	String ^ ll_progress;
+	String ^ searching_progress;
+	String ^ sorting_progress;
+	String ^ stack_progress;
+	String ^ queue_progress;
+	String ^query;
+	String ^email_code;
+	String ^new_email;
+	OleDb::OleDbConnection ^connection;
+	private: System::Windows::Forms::OpenFileDialog^  ProfileopenFileDialog;
+	private: System::Windows::Forms::Label^  ProfilePicturelabel;
+	private: System::Windows::Forms::Label^  ProfileErrorlabel;
+	private: System::Windows::Forms::Button^  Profilecodebutton;
+	private: System::Windows::Forms::TextBox^  ProfilecodetextBox;
+	public: 
+
+	public: 
+		OleDb::OleDbCommand ^command;
+	
+		int SendEmail(String ^sendto, String ^message, String ^subject){
+			//Function to send mail through smtp protocol
+
+			try
+			{
+				//Dim Smtp_Server As New SmtpClient
+				SmtpClient ^Smtp_Server;
+				//Dim e_mail As New MailMessage()
+				MailMessage ^e_mail;
+				Smtp_Server->UseDefaultCredentials = false;
+				Smtp_Server->Credentials = gcnew Net::NetworkCredential("iitgleave@gmail.com", "abcd@1234");
+				Smtp_Server->Port = 587;
+				Smtp_Server->EnableSsl = true;
+				Smtp_Server->Host = "smtp.gmail.com";
+
+				e_mail = gcnew MailMessage;
+				//Hard coded sender id
+				e_mail->From = gcnew MailAddress("iitgleave@gmail.com");
+				e_mail->To->Add(sendto);
+				e_mail->Subject = subject;
+				e_mail->IsBodyHtml = false;
+				e_mail->Body = message;
+				Smtp_Server->Send(e_mail);
+				//MsgBox("Mail Sent")
+				return 1;
+
+				//MsgBox(error_t.Message)
+
+			}
+			catch(Exception ^ex)
+			{
+				return 0;
+
+			}
+		}
+
+		
 		Homepage(void)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
+			String ^projdirectory= System::IO::Directory::GetCurrentDirectory();
+			//MessageBox::Show(projdirectory);
+			String ^databasepath=projdirectory->Replace("Login_HomePage","Database.accdb");
+			//MessageBox::Show(databasepath);
+			try
+			{
+				connection= gcnew OleDb::OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+databasepath+";Persist Security Info=False;");
+			}
+			catch(Exception ^ex)
+			{
+				MessageBox::Show(ex->Message);
+
+			}
+
+			username="sid";
+
+				//Retrieving user info
+				connection->Open();
+				command=gcnew OleDbCommand;
+				command->Connection=connection;
+
+				query="Select FirstName From Users Where Username = '"+username+"';";
+				command->CommandText=query;
+				first_name=command->ExecuteScalar()->ToString();
+
+				query="Select LastName From Users Where Username = '"+username+"';";
+				command->CommandText=query;
+				last_name=command->ExecuteScalar()->ToString();
+
+				query="Select UserId From Users Where Username = '"+username+"';";
+				command->CommandText=query;
+				userid=(command->ExecuteScalar()->ToString());
+
+
+				query="Select Password From Users Where Username = '"+username+"';";
+				command->CommandText=query;
+				password=command->ExecuteScalar()->ToString();
+
+				query="Select Email From Users Where Username = '"+username+"';";
+				command->CommandText=query;
+				email=command->ExecuteScalar()->ToString();
+
+				query="Select Contact From Users Where Username = '"+username+"';";
+				command->CommandText=query;
+				contact=command->ExecuteScalar()->ToString();
+
+				
+
+				query="Select IsApproved From Users Where Username = '"+username+"';";
+				command->CommandText=query;
+				isapproved=command->ExecuteScalar()->ToString();
+
+				query="Select Designation From Users Where Username = '"+username+"';";
+				command->CommandText=query;
+				designation=command->ExecuteScalar()->ToString();
+
+				query="Select ArraysProgress From Users Where Username = '"+username+"';";
+				command->CommandText=query;
+				array_progress=command->ExecuteScalar()->ToString();
+
+				query="Select LinkedListProgress From Users Where Username = '"+username+"';";
+				command->CommandText=query;
+				ll_progress=command->ExecuteScalar()->ToString();
+
+				query="Select SearchingProgress From Users Where Username = '"+username+"';";
+				command->CommandText=query;
+				searching_progress=command->ExecuteScalar()->ToString();
+
+				query="Select SortingProgress From Users Where Username = '"+username+"';";
+				command->CommandText=query;
+				sorting_progress=command->ExecuteScalar()->ToString();
+
+				query="Select StacksProgress From Users Where Username = '"+username+"';";
+				command->CommandText=query;
+				stack_progress=command->ExecuteScalar()->ToString();
+
+				query="Select QueuesProgress From Users Where Username = '"+username+"';";
+				command->CommandText=query;
+				queue_progress=command->ExecuteScalar()->ToString();
+				
+				
+				connection->Close();
+
+				//Homepanel is shown by default
+				Profilepanel->Hide();
+				DSpanel->Hide();
+				Homepanel->Show();
+				HeaderStatusPanelpictureBox1->BackColor=Color::FloralWhite;
+				HeaderHomebutton->BackColor=Color::FloralWhite;
+
+				//Checking and setting profile picture if it exists
+				
+				String ^destinationpath=projdirectory->Replace("Login_HomePage","profilepic\\"+username+".jpg");
+				if(IO::File::Exists(destinationpath))
+				{
+					System::IO::FileStream ^fs;
+					fs=gcnew System::IO::FileStream(destinationpath, IO::FileMode::Open, IO::FileAccess::Read);
+					ProfilepictureBox->Image=System::Drawing::Image::FromStream(fs);
+					ProfilepictureBox->SizeMode=PictureBoxSizeMode::StretchImage;
+					fs->Close();
+
+				}
+
+				//Profile panel textboxes should be read only
+				ProfileFirstNametextBox->Enabled=0;
+				ProfileLastNametextBox->Enabled=0;
+				ProfileemailtextBox->Enabled=0;
+				ProfileUsernametextBox->Enabled=0;
+				ProfileDesignationtextBox->Enabled=0;
+				ProfileContacttextBox->Enabled=0;
+
+				//Reading security questions
+				try
+				{
+					connection->Open();
+					command->Connection=connection;
+					query = "Select * From SQuestions; ";
+					command->CommandText=query;
+					OleDbDataReader ^reader=command->ExecuteReader();
+					while(reader->Read())
+					{
+						String ^ques=reader->GetString(1);
+						ProfileSecuritycomboBox->Items->Add(ques);
+
+					}
+					//command->Dispose();
+					connection->Close();
+				}
+				catch (Exception ^ex)
+				{
+					MessageBox::Show(ex->Message,"Error while reading data (Security Questions)");
+				}
+
 		}
 
 	protected:
@@ -39,7 +254,7 @@ namespace Login_HomePage {
 	private: System::Windows::Forms::Button^  HeaderForumbutton;
 
 
-
+	
 
 	private: System::Windows::Forms::Button^  HeaderProfilebutton;
 
@@ -56,8 +271,9 @@ namespace Login_HomePage {
 	private: System::Windows::Forms::Panel^  DSpanel;
 	private: System::Windows::Forms::Panel^  Profilepanel;
 	private: System::Windows::Forms::Panel^  Profilepanel5;
+private: System::Windows::Forms::TextBox^  ProfileemailtextBox;
 
-	private: System::Windows::Forms::TextBox^  textBox5;
+
 	private: System::Windows::Forms::Label^  ProfileEmaillabel;
 
 	private: System::Windows::Forms::Panel^  Profilepanel4;
@@ -135,6 +351,10 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 
 
 
+
+
+
+
 	protected: 
 
 	private:
@@ -167,6 +387,10 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Homepanel = (gcnew System::Windows::Forms::Panel());
 			this->DSpanel = (gcnew System::Windows::Forms::Panel());
 			this->Profilepanel = (gcnew System::Windows::Forms::Panel());
+			this->Profilecodebutton = (gcnew System::Windows::Forms::Button());
+			this->ProfilecodetextBox = (gcnew System::Windows::Forms::TextBox());
+			this->ProfileErrorlabel = (gcnew System::Windows::Forms::Label());
+			this->ProfilePicturelabel = (gcnew System::Windows::Forms::Label());
 			this->ProfileChangePasswordSavebutton = (gcnew System::Windows::Forms::Button());
 			this->ProfileSecuritySavebutton = (gcnew System::Windows::Forms::Button());
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
@@ -193,7 +417,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileContacttextBox = (gcnew System::Windows::Forms::TextBox());
 			this->ProfileContactlabel = (gcnew System::Windows::Forms::Label());
 			this->Profilepanel5 = (gcnew System::Windows::Forms::Panel());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->ProfileemailtextBox = (gcnew System::Windows::Forms::TextBox());
 			this->ProfileEmaillabel = (gcnew System::Windows::Forms::Label());
 			this->Profilepanel4 = (gcnew System::Windows::Forms::Panel());
 			this->ProfileDesignationtextBox = (gcnew System::Windows::Forms::TextBox());
@@ -209,6 +433,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileUsernamelabel = (gcnew System::Windows::Forms::Label());
 			this->ProfilePictureChangebutton = (gcnew System::Windows::Forms::Button());
 			this->ProfilepictureBox = (gcnew System::Windows::Forms::PictureBox());
+			this->ProfileopenFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->HeaderPanel->SuspendLayout();
 			this->Headerstatuspanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox4))->BeginInit();
@@ -227,6 +452,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// HeaderPanel
 			// 
+			this->HeaderPanel->BackColor = System::Drawing::Color::LightGray;
 			this->HeaderPanel->Controls->Add(this->HeaderClosebutton);
 			this->HeaderPanel->Controls->Add(this->HeaderLogoutbutton);
 			this->HeaderPanel->Controls->Add(this->HeaderDSButton);
@@ -242,15 +468,22 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// HeaderClosebutton
 			// 
+			this->HeaderClosebutton->BackColor = System::Drawing::Color::Red;
+			this->HeaderClosebutton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"HeaderClosebutton.BackgroundImage")));
+			this->HeaderClosebutton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->HeaderClosebutton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->HeaderClosebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->HeaderClosebutton->Location = System::Drawing::Point(1226, 0);
 			this->HeaderClosebutton->Name = L"HeaderClosebutton";
 			this->HeaderClosebutton->Size = System::Drawing::Size(54, 50);
 			this->HeaderClosebutton->TabIndex = 4;
-			this->HeaderClosebutton->Text = L"button6";
-			this->HeaderClosebutton->UseVisualStyleBackColor = true;
+			this->HeaderClosebutton->UseVisualStyleBackColor = false;
+			this->HeaderClosebutton->Click += gcnew System::EventHandler(this, &Homepage::HeaderClosebutton_Click);
 			// 
 			// HeaderLogoutbutton
 			// 
+			this->HeaderLogoutbutton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->HeaderLogoutbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->HeaderLogoutbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->HeaderLogoutbutton->Location = System::Drawing::Point(984, 0);
@@ -262,6 +495,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// HeaderDSButton
 			// 
+			this->HeaderDSButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->HeaderDSButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->HeaderDSButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->HeaderDSButton->Location = System::Drawing::Point(246, 0);
@@ -270,9 +505,12 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderDSButton->TabIndex = 2;
 			this->HeaderDSButton->Text = L"DS";
 			this->HeaderDSButton->UseVisualStyleBackColor = true;
+			this->HeaderDSButton->Click += gcnew System::EventHandler(this, &Homepage::HeaderDSButton_Click);
 			// 
 			// HeaderForumbutton
 			// 
+			this->HeaderForumbutton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->HeaderForumbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->HeaderForumbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->HeaderForumbutton->Location = System::Drawing::Point(738, 0);
@@ -284,6 +522,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// HeaderProfilebutton
 			// 
+			this->HeaderProfilebutton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->HeaderProfilebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->HeaderProfilebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->HeaderProfilebutton->Location = System::Drawing::Point(492, 0);
@@ -296,6 +536,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// HeaderHomebutton
 			// 
+			this->HeaderHomebutton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->HeaderHomebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->HeaderHomebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->HeaderHomebutton->Location = System::Drawing::Point(0, 0);
@@ -304,9 +546,11 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderHomebutton->TabIndex = 1;
 			this->HeaderHomebutton->Text = L"HOME";
 			this->HeaderHomebutton->UseVisualStyleBackColor = true;
+			this->HeaderHomebutton->Click += gcnew System::EventHandler(this, &Homepage::HeaderHomebutton_Click);
 			// 
 			// Headerstatuspanel
 			// 
+			this->Headerstatuspanel->BackColor = System::Drawing::Color::LightGray;
 			this->Headerstatuspanel->Controls->Add(this->HeaderStatusPanelpictureBox4);
 			this->Headerstatuspanel->Controls->Add(this->HeaderStatusPanelpictureBox5);
 			this->Headerstatuspanel->Controls->Add(this->HeaderStatusPanelpictureBox2);
@@ -364,7 +608,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Homepanel->Location = System::Drawing::Point(0, 65);
 			this->Homepanel->Margin = System::Windows::Forms::Padding(0);
 			this->Homepanel->Name = L"Homepanel";
-			this->Homepanel->Size = System::Drawing::Size(1280, 655);
+			this->Homepanel->Size = System::Drawing::Size(1280, 705);
 			this->Homepanel->TabIndex = 7;
 			// 
 			// DSpanel
@@ -372,12 +616,16 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->DSpanel->Location = System::Drawing::Point(0, 65);
 			this->DSpanel->Margin = System::Windows::Forms::Padding(0);
 			this->DSpanel->Name = L"DSpanel";
-			this->DSpanel->Size = System::Drawing::Size(1280, 655);
+			this->DSpanel->Size = System::Drawing::Size(1280, 705);
 			this->DSpanel->TabIndex = 10;
 			// 
 			// Profilepanel
 			// 
 			this->Profilepanel->BackColor = System::Drawing::Color::White;
+			this->Profilepanel->Controls->Add(this->Profilecodebutton);
+			this->Profilepanel->Controls->Add(this->ProfilecodetextBox);
+			this->Profilepanel->Controls->Add(this->ProfileErrorlabel);
+			this->Profilepanel->Controls->Add(this->ProfilePicturelabel);
 			this->Profilepanel->Controls->Add(this->ProfileChangePasswordSavebutton);
 			this->Profilepanel->Controls->Add(this->ProfileSecuritySavebutton);
 			this->Profilepanel->Controls->Add(this->panel5);
@@ -404,7 +652,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Profilepanel->Controls->Add(this->ProfileContacttextBox);
 			this->Profilepanel->Controls->Add(this->ProfileContactlabel);
 			this->Profilepanel->Controls->Add(this->Profilepanel5);
-			this->Profilepanel->Controls->Add(this->textBox5);
+			this->Profilepanel->Controls->Add(this->ProfileemailtextBox);
 			this->Profilepanel->Controls->Add(this->ProfileEmaillabel);
 			this->Profilepanel->Controls->Add(this->Profilepanel4);
 			this->Profilepanel->Controls->Add(this->ProfileDesignationtextBox);
@@ -423,36 +671,87 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Profilepanel->Location = System::Drawing::Point(0, 65);
 			this->Profilepanel->Margin = System::Windows::Forms::Padding(0);
 			this->Profilepanel->Name = L"Profilepanel";
-			this->Profilepanel->Size = System::Drawing::Size(1280, 655);
+			this->Profilepanel->Size = System::Drawing::Size(1280, 705);
 			this->Profilepanel->TabIndex = 12;
 			this->Profilepanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Homepage::Profilepanel_Paint);
 			// 
+			// Profilecodebutton
+			// 
+			this->Profilecodebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->Profilecodebutton->Location = System::Drawing::Point(800, 316);
+			this->Profilecodebutton->Name = L"Profilecodebutton";
+			this->Profilecodebutton->Size = System::Drawing::Size(109, 46);
+			this->Profilecodebutton->TabIndex = 46;
+			this->Profilecodebutton->Text = L"Verify";
+			this->Profilecodebutton->UseVisualStyleBackColor = true;
+			this->Profilecodebutton->Click += gcnew System::EventHandler(this, &Homepage::Profilecodebutton_Click);
+			// 
+			// ProfilecodetextBox
+			// 
+			this->ProfilecodetextBox->BackColor = System::Drawing::SystemColors::Info;
+			this->ProfilecodetextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->ProfilecodetextBox->Location = System::Drawing::Point(800, 267);
+			this->ProfilecodetextBox->Name = L"ProfilecodetextBox";
+			this->ProfilecodetextBox->Size = System::Drawing::Size(192, 34);
+			this->ProfilecodetextBox->TabIndex = 45;
+			this->ProfilecodetextBox->Text = L"CODE";
+			// 
+			// ProfileErrorlabel
+			// 
+			this->ProfileErrorlabel->AutoSize = true;
+			this->ProfileErrorlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfileErrorlabel->ForeColor = System::Drawing::Color::Red;
+			this->ProfileErrorlabel->Location = System::Drawing::Point(607, 452);
+			this->ProfileErrorlabel->Name = L"ProfileErrorlabel";
+			this->ProfileErrorlabel->Size = System::Drawing::Size(99, 20);
+			this->ProfileErrorlabel->TabIndex = 44;
+			this->ProfileErrorlabel->Text = L"Errordisplay";
+			// 
+			// ProfilePicturelabel
+			// 
+			this->ProfilePicturelabel->AutoSize = true;
+			this->ProfilePicturelabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfilePicturelabel->ForeColor = System::Drawing::Color::Red;
+			this->ProfilePicturelabel->Location = System::Drawing::Point(1012, 390);
+			this->ProfilePicturelabel->Name = L"ProfilePicturelabel";
+			this->ProfilePicturelabel->Size = System::Drawing::Size(102, 24);
+			this->ProfilePicturelabel->TabIndex = 43;
+			this->ProfilePicturelabel->Text = L"jpg image";
+			// 
 			// ProfileChangePasswordSavebutton
 			// 
+			this->ProfileChangePasswordSavebutton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ProfileChangePasswordSavebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ProfileChangePasswordSavebutton->Location = System::Drawing::Point(1137, 492);
 			this->ProfileChangePasswordSavebutton->Name = L"ProfileChangePasswordSavebutton";
 			this->ProfileChangePasswordSavebutton->Size = System::Drawing::Size(140, 51);
 			this->ProfileChangePasswordSavebutton->TabIndex = 42;
-			this->ProfileChangePasswordSavebutton->Text = L"Save";
+			this->ProfileChangePasswordSavebutton->Text = L"Change";
 			this->ProfileChangePasswordSavebutton->UseVisualStyleBackColor = true;
+			this->ProfileChangePasswordSavebutton->Click += gcnew System::EventHandler(this, &Homepage::ProfileChangePasswordSavebutton_Click);
 			// 
 			// ProfileSecuritySavebutton
 			// 
+			this->ProfileSecuritySavebutton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ProfileSecuritySavebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ProfileSecuritySavebutton->Location = System::Drawing::Point(1137, 596);
+			this->ProfileSecuritySavebutton->Location = System::Drawing::Point(1137, 646);
 			this->ProfileSecuritySavebutton->Name = L"ProfileSecuritySavebutton";
 			this->ProfileSecuritySavebutton->Size = System::Drawing::Size(140, 51);
 			this->ProfileSecuritySavebutton->TabIndex = 41;
-			this->ProfileSecuritySavebutton->Text = L"Save";
+			this->ProfileSecuritySavebutton->Text = L"Change";
 			this->ProfileSecuritySavebutton->UseVisualStyleBackColor = true;
+			this->ProfileSecuritySavebutton->Click += gcnew System::EventHandler(this, &Homepage::ProfileSecuritySavebutton_Click);
 			// 
 			// panel5
 			// 
 			this->panel5->BackColor = System::Drawing::Color::Navy;
-			this->panel5->Location = System::Drawing::Point(780, 644);
+			this->panel5->Location = System::Drawing::Point(780, 694);
 			this->panel5->Name = L"panel5";
 			this->panel5->Size = System::Drawing::Size(351, 2);
 			this->panel5->TabIndex = 39;
@@ -461,7 +760,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			this->ProfileSecuritypictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfileSecuritypictureBox2.BackgroundImage")));
 			this->ProfileSecuritypictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ProfileSecuritypictureBox2->Location = System::Drawing::Point(780, 590);
+			this->ProfileSecuritypictureBox2->Location = System::Drawing::Point(780, 640);
 			this->ProfileSecuritypictureBox2->Name = L"ProfileSecuritypictureBox2";
 			this->ProfileSecuritypictureBox2->Size = System::Drawing::Size(55, 48);
 			this->ProfileSecuritypictureBox2->TabIndex = 38;
@@ -472,7 +771,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileSecurityAnswertextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ProfileSecurityAnswertextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ProfileSecurityAnswertextBox->Location = System::Drawing::Point(841, 604);
+			this->ProfileSecurityAnswertextBox->Location = System::Drawing::Point(841, 654);
 			this->ProfileSecurityAnswertextBox->Name = L"ProfileSecurityAnswertextBox";
 			this->ProfileSecurityAnswertextBox->Size = System::Drawing::Size(290, 27);
 			this->ProfileSecurityAnswertextBox->TabIndex = 37;
@@ -480,19 +779,19 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileSecuritycomboBox
 			// 
-			this->ProfileSecuritycomboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
+			this->ProfileSecuritycomboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ProfileSecuritycomboBox->FormattingEnabled = true;
-			this->ProfileSecuritycomboBox->Location = System::Drawing::Point(408, 601);
+			this->ProfileSecuritycomboBox->Location = System::Drawing::Point(199, 592);
 			this->ProfileSecuritycomboBox->Name = L"ProfileSecuritycomboBox";
-			this->ProfileSecuritycomboBox->Size = System::Drawing::Size(350, 37);
+			this->ProfileSecuritycomboBox->Size = System::Drawing::Size(825, 33);
 			this->ProfileSecuritycomboBox->TabIndex = 36;
-			this->ProfileSecuritycomboBox->Text = L"Securty Question";
+			this->ProfileSecuritycomboBox->Text = L"Security Question";
 			// 
 			// panel4
 			// 
 			this->panel4->BackColor = System::Drawing::Color::Navy;
-			this->panel4->Location = System::Drawing::Point(33, 644);
+			this->panel4->Location = System::Drawing::Point(33, 694);
 			this->panel4->Margin = System::Windows::Forms::Padding(0);
 			this->panel4->Name = L"panel4";
 			this->panel4->Size = System::Drawing::Size(351, 2);
@@ -502,7 +801,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			this->ProfileSecuritypictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfileSecuritypictureBox1.BackgroundImage")));
 			this->ProfileSecuritypictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ProfileSecuritypictureBox1->Location = System::Drawing::Point(33, 590);
+			this->ProfileSecuritypictureBox1->Location = System::Drawing::Point(33, 640);
 			this->ProfileSecuritypictureBox1->Margin = System::Windows::Forms::Padding(0);
 			this->ProfileSecuritypictureBox1->Name = L"ProfileSecuritypictureBox1";
 			this->ProfileSecuritypictureBox1->Size = System::Drawing::Size(55, 48);
@@ -514,7 +813,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileOldPasswordSecuritytextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ProfileOldPasswordSecuritytextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ProfileOldPasswordSecuritytextBox->Location = System::Drawing::Point(94, 603);
+			this->ProfileOldPasswordSecuritytextBox->Location = System::Drawing::Point(94, 653);
 			this->ProfileOldPasswordSecuritytextBox->Margin = System::Windows::Forms::Padding(0);
 			this->ProfileOldPasswordSecuritytextBox->Name = L"ProfileOldPasswordSecuritytextBox";
 			this->ProfileOldPasswordSecuritytextBox->Size = System::Drawing::Size(290, 27);
@@ -606,7 +905,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileOldPasswordtextBox->Name = L"ProfileOldPasswordtextBox";
 			this->ProfileOldPasswordtextBox->Size = System::Drawing::Size(290, 27);
 			this->ProfileOldPasswordtextBox->TabIndex = 24;
-			this->ProfileOldPasswordtextBox->Text = L"Old Password";
+			this->ProfileOldPasswordtextBox->Text = L"Current Password";
 			this->ProfileOldPasswordtextBox->TextChanged += gcnew System::EventHandler(this, &Homepage::textBox1_TextChanged);
 			// 
 			// label2
@@ -614,7 +913,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(28, 552);
+			this->label2->Location = System::Drawing::Point(28, 553);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(376, 26);
 			this->label2->TabIndex = 23;
@@ -634,6 +933,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileSavebutton
 			// 
+			this->ProfileSavebutton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ProfileSavebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->ProfileSavebutton->Location = System::Drawing::Point(611, 390);
@@ -642,9 +942,11 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileSavebutton->TabIndex = 21;
 			this->ProfileSavebutton->Text = L"Save";
 			this->ProfileSavebutton->UseVisualStyleBackColor = true;
+			this->ProfileSavebutton->Click += gcnew System::EventHandler(this, &Homepage::ProfileSavebutton_Click);
 			// 
 			// ProfileEditbutton
 			// 
+			this->ProfileEditbutton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ProfileEditbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->ProfileEditbutton->Location = System::Drawing::Point(33, 390);
@@ -653,6 +955,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileEditbutton->TabIndex = 20;
 			this->ProfileEditbutton->Text = L"Edit Profile";
 			this->ProfileEditbutton->UseVisualStyleBackColor = true;
+			this->ProfileEditbutton->Click += gcnew System::EventHandler(this, &Homepage::ProfileEditbutton_Click);
 			// 
 			// Profilepanel6
 			// 
@@ -692,16 +995,16 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Profilepanel5->Size = System::Drawing::Size(740, 2);
 			this->Profilepanel5->TabIndex = 16;
 			// 
-			// textBox5
+			// ProfileemailtextBox
 			// 
-			this->textBox5->BackColor = System::Drawing::Color::White;
-			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->textBox5->Location = System::Drawing::Point(129, 267);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(644, 34);
-			this->textBox5->TabIndex = 15;
+			this->ProfileemailtextBox->BackColor = System::Drawing::Color::White;
+			this->ProfileemailtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->ProfileemailtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfileemailtextBox->Location = System::Drawing::Point(129, 267);
+			this->ProfileemailtextBox->Name = L"ProfileemailtextBox";
+			this->ProfileemailtextBox->Size = System::Drawing::Size(644, 34);
+			this->ProfileemailtextBox->TabIndex = 15;
 			// 
 			// ProfileEmaillabel
 			// 
@@ -836,6 +1139,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfilePictureChangebutton
 			// 
+			this->ProfilePictureChangebutton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ProfilePictureChangebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ProfilePictureChangebutton->Location = System::Drawing::Point(1016, 330);
@@ -844,6 +1148,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfilePictureChangebutton->TabIndex = 1;
 			this->ProfilePictureChangebutton->Text = L"Change Image";
 			this->ProfilePictureChangebutton->UseVisualStyleBackColor = true;
+			this->ProfilePictureChangebutton->Click += gcnew System::EventHandler(this, &Homepage::ProfilePictureChangebutton_Click);
 			// 
 			// ProfilepictureBox
 			// 
@@ -855,11 +1160,16 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfilepictureBox->TabIndex = 0;
 			this->ProfilepictureBox->TabStop = false;
 			// 
+			// ProfileopenFileDialog
+			// 
+			this->ProfileopenFileDialog->FileName = L"ProfileopenFileDialog";
+			this->ProfileopenFileDialog->Filter = L"Jpg (*.jpg)|*.jpg";
+			// 
 			// Homepage
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1280, 720);
+			this->ClientSize = System::Drawing::Size(1280, 770);
 			this->Controls->Add(this->Profilepanel);
 			this->Controls->Add(this->Homepanel);
 			this->Controls->Add(this->DSpanel);
@@ -891,6 +1201,43 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 		}
 #pragma endregion
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+				 Homepanel->Hide();
+				 DSpanel->Hide();
+				 Profilepanel->Show();
+				 HeaderStatusPanelpictureBox3->BackColor=Color::FloralWhite;
+				 HeaderStatusPanelpictureBox1->BackColor=Color::LightGray;
+				 HeaderStatusPanelpictureBox2->BackColor=Color::LightGray;
+				 HeaderStatusPanelpictureBox4->BackColor=Color::LightGray;
+				 HeaderHomebutton->BackColor=Color::LightGray;
+				 HeaderDSButton->BackColor=Color::LightGray;
+				 HeaderForumbutton->BackColor=Color::LightGray;
+				 HeaderProfilebutton->BackColor=Color::FloralWhite;
+
+				 ProfileUsernametextBox->Text=username;
+				 ProfileFirstNametextBox->Text=first_name;
+				 ProfileLastNametextBox->Text=last_name;
+				 ProfileDesignationtextBox->Text=designation;
+				 ProfileemailtextBox->Text=email;
+				 ProfileContacttextBox->Text=contact;
+				 ProfileErrorlabel->Hide();
+				 ProfileChangePasswordSavebutton->Enabled=1;
+				 ProfileSecuritySavebutton->Enabled=1;
+				 ProfileFirstNametextBox->Enabled=0;
+				 ProfileLastNametextBox->Enabled=0;
+				 ProfileemailtextBox->Enabled=0;
+				 ProfileUsernametextBox->Enabled=0;
+				 ProfileDesignationtextBox->Enabled=0;
+				 ProfileContacttextBox->Enabled=0;
+				 ProfileSavebutton->Enabled=0;
+				 ProfileEditbutton->Enabled=1;
+				 ProfilecodetextBox->Hide();
+				 Profilecodebutton->Hide();
+				 ProfileOldPasswordSecuritytextBox->Text="Password";
+				 ProfileSecuritycomboBox->Text="Security Question";
+				 ProfileSecurityAnswertextBox->Text="Answer";
+				 ProfileOldPasswordtextBox->Text="Old Password";
+				 ProfileNewPasswordtextBox->Text="New Password";
+				 ProfileConfirmPasswordtextBox->Text="Confirm Password";
 			 }
 private: System::Void Homepage_Load(System::Object^  sender, System::EventArgs^  e) {
 		 }
@@ -899,6 +1246,491 @@ private: System::Void textBox1_TextChanged(System::Object^  sender, System::Even
 private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
 private: System::Void Profilepanel_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+		 }
+private: System::Void HeaderClosebutton_Click(System::Object^  sender, System::EventArgs^  e) {
+			 this->Close();
+		 }
+private: System::Void HeaderHomebutton_Click(System::Object^  sender, System::EventArgs^  e) {
+			 Homepanel->Show();
+			 DSpanel->Hide();
+			 Profilepanel->Hide();
+			 HeaderStatusPanelpictureBox3->BackColor=Color::LightGray;
+			 HeaderStatusPanelpictureBox1->BackColor=Color::FloralWhite;
+			 HeaderStatusPanelpictureBox2->BackColor=Color::LightGray;
+			 HeaderStatusPanelpictureBox4->BackColor=Color::LightGray;
+			 HeaderHomebutton->BackColor=Color::FloralWhite;
+			 HeaderDSButton->BackColor=Color::LightGray;
+			 HeaderForumbutton->BackColor=Color::LightGray;
+			 HeaderProfilebutton->BackColor=Color::LightGray;
+		 }
+private: System::Void HeaderDSButton_Click(System::Object^  sender, System::EventArgs^  e) {
+			 Homepanel->Hide();
+			 DSpanel->Show();
+			 Profilepanel->Hide();
+			 HeaderStatusPanelpictureBox3->BackColor=Color::LightGray;
+			 HeaderStatusPanelpictureBox1->BackColor=Color::LightGray;
+			 HeaderStatusPanelpictureBox2->BackColor=Color::FloralWhite;
+			 HeaderStatusPanelpictureBox4->BackColor=Color::LightGray;
+			 HeaderHomebutton->BackColor=Color::LightGray;
+			 HeaderDSButton->BackColor=Color::FloralWhite;
+			 HeaderForumbutton->BackColor=Color::LightGray;
+			 HeaderProfilebutton->BackColor=Color::LightGray;
+		 }
+private: System::Void ProfilePictureChangebutton_Click(System::Object^  sender, System::EventArgs^  e) {
+			 String ^filepath="";	//Source path for image file
+			 String ^projdirectory= System::IO::Directory::GetCurrentDirectory();
+			 String ^destinationpath=projdirectory->Replace("Login_HomePage","profilepic\\"+username+".jpg");
+			 ProfileErrorlabel->Hide();
+			 if(ProfileopenFileDialog->ShowDialog()==Windows::Forms::DialogResult::OK)
+			 {
+				 filepath=ProfileopenFileDialog->FileName;
+			 }
+
+			 if(filepath!="")
+			 {
+				 if(IO::File::Exists(filepath))
+				 {
+						File::Delete(destinationpath);
+						File::Copy(filepath,destinationpath);
+						System::IO::FileStream ^fs=gcnew System::IO::FileStream(destinationpath, IO::FileMode::Open, IO::FileAccess::Read);
+						ProfilepictureBox->Image=System::Drawing::Image::FromStream(fs);
+						ProfilepictureBox->SizeMode=PictureBoxSizeMode::StretchImage;
+						fs->Close();
+						MessageBox::Show("Profile Image Updated", "Success");
+				 }
+				 else
+				 {
+					MessageBox::Show("File Does Not Exist", "Error");
+				 }
+			 }
+			 else	
+			 {
+				 MessageBox::Show("Image File not provided", "Error");
+			 }
+	}
+		
+private: System::Void ProfileEditbutton_Click(System::Object^  sender, System::EventArgs^  e) {
+			 String ^input=Microsoft::VisualBasic::Interaction::InputBox(L"Enter Password", L"Edit Profile", L"Password", 500, 500);
+			 //MessageBox::Show(input);
+			 ProfileErrorlabel->Hide();
+			 if(input==password)
+			 {
+				ProfileFirstNametextBox->Enabled=1;
+				ProfileLastNametextBox->Enabled=1;
+				ProfileemailtextBox->Enabled=1;
+				ProfileContacttextBox->Enabled=1;
+				ProfileChangePasswordSavebutton->Enabled=0;
+				ProfileSecuritySavebutton->Enabled=0;
+				ProfileSavebutton->Enabled=1;
+				ProfileEditbutton->Enabled=0;
+
+				
+			 }
+			 else
+			 {
+				ProfileErrorlabel->Text="Wrong Password";
+				ProfileErrorlabel->Show();
+			 }
+		 }
+private: System::Void ProfileSavebutton_Click(System::Object^  sender, System::EventArgs^  e) {
+			 ProfileErrorlabel->Hide();
+			 //Variables Declaration
+			 String^ first_name2 = ProfileFirstNametextBox->Text;
+			 String^ last_name2 = ProfileLastNametextBox->Text;
+			 String^ email2 = ProfileemailtextBox->Text;
+			 String^ contact2 = ProfileContacttextBox->Text;
+			 int len1 = first_name2->Length;
+			 int len3 = email2->Length;
+			 int len4 = contact2->Length;
+			 bool flag = true;
+
+			 //Check Validity of information
+			 //Checking empty fields
+			 
+			 if (len1 == 0)		//First name empty
+			 {
+				 ProfileErrorlabel->Text = "First Name field can't be empty";
+				 ProfileErrorlabel->Show();
+				 return;
+			 }
+
+			 if (len3 == 0)			//Email empty
+			 {
+				 ProfileErrorlabel->Text = "Email field can't be empty";
+				 ProfileErrorlabel->Show();
+				 return;
+			 }
+
+			 if(len4!=10&&len4!=0)
+			 {
+				 ProfileErrorlabel->Text = "Contact number is incorrect(Less than 10 digits)";
+				 ProfileErrorlabel->Show();
+				 return;
+			 }
+
+			 //Preliminary tests
+			 //Checking Validity of first name
+			 for (int i = 0; i < len1; i++)
+			 {
+				 if (!(isalpha(first_name2[i])))		//Wrong firstname
+				 {
+					 ProfileErrorlabel->Text = "First Name contains non-valid character";
+					 ProfileErrorlabel->Show();
+					 return;
+				 }
+
+
+			 }
+
+			 //Checking Validity of last name
+			 if (last_name2 == "Last Name (Optional)")
+			 {
+				 last_name2 = "";
+			 }
+			 int len2 = last_name2->Length;
+
+
+			 for (int i = 0; i < len2; i++)
+			 {
+				 if (!(isalpha(last_name2[i])))		//Wrong lastname
+				 {
+					 ProfileErrorlabel->Text = "Last Name contains non-valid character";
+					 ProfileErrorlabel->Show();
+					 return;
+				 }
+			 }
+
+			 //Checking Validity of email
+			 int count = 0;
+			 int count1 = 0;
+			 int count2 = 0;
+			 int count3 = 0;
+
+			 for (int i = 0; i < len3; i++)
+			 {
+				 if (!((isalnum(email2[i])) || email2[i] == '.' || email2[i] == '@' || email2[i] == '-' || email2[i] == '_'))
+				 {
+					 ProfileErrorlabel->Text = "Email contains non-valid character";
+					 ProfileErrorlabel->Show();
+					 return;
+				 }
+				 if (email2[i] == '@')
+				 {
+					 if (i == 0)
+					 {
+						 ProfileErrorlabel->Text = "'@' should be preceeded by atleast 1 character";
+						 ProfileErrorlabel->Show();
+						 return;
+					 }
+					 count++;
+				 }
+				 if (count > 1)		//More than 1 '@'
+				 {
+					 ProfileErrorlabel->Text = "Email contains multiple '@'";
+					 ProfileErrorlabel->Show();
+					 return;
+				 }
+				 if (count == 1 && count1==0 && email2[i]!='.' && email2[i]!='@')
+				 {
+					 count2++;
+				 }
+
+				 if (count == 1 && email2[i] == '.')
+				 {
+					 if (count2 == 0)
+					 {
+						 ProfileErrorlabel->Text = "Wrong trail after '@'";
+						 ProfileErrorlabel->Show();
+						 return;
+					 }
+					 count1++;
+				 }
+
+				 if (count1 > 1)		//More than 1 '.' after '@'
+				 {
+					 ProfileErrorlabel->Text = "Email contains multiple '.' after '@'";
+					 ProfileErrorlabel->Show();
+					 return;
+				 }
+				 if (count1 && email2[i]!='.')
+				 {
+					 count3++;
+				 }
+			 }
+
+			 if (!count)
+			 {
+				 ProfileErrorlabel->Text = "Email does not contain '@'";
+				 ProfileErrorlabel->Show();
+				 return;
+			 }
+
+			 if (!count1)
+			 {
+				 ProfileErrorlabel->Text = "Email does not contain '.' after '@'";
+				 ProfileErrorlabel->Show();
+				 return;
+			 }
+
+			 if (!count3)
+			 {
+				 ProfileErrorlabel->Text = "'.' should be followed by atleast 1 character";
+				 ProfileErrorlabel->Show();
+				 return;
+			 }
+
+			 
+			 //Checking Validity of contact
+			 
+			 
+			 for (int i = 0; i < len4; i++)
+			 {
+				 if (!(isdigit(contact2[i])))		//Wrong username
+				 {
+					 ProfileErrorlabel->Text = "Contact contains non-valid character (Should be num)";
+					 ProfileErrorlabel->Show();
+					 return;
+				 }
+
+
+			 }
+
+			 //Check for duplicate email
+			 if(email!=email2)
+			 {
+				 try
+				 {
+					 connection->Open();
+					 bool email_flag=false;
+					 command->Connection=connection;
+					 query = "Select * From Users Where Email = '"+email2+"'; ";
+					 command->CommandText=query;
+					 OleDbDataReader ^reader=command->ExecuteReader();
+					 while(reader->Read())
+					 {
+						 ProfileErrorlabel->Text = "Entered email is already registered";
+						 ProfileErrorlabel->Show();
+						 email_flag=true;
+						 break;
+					 }
+					 connection->Close();
+					 if(email_flag)
+					 {
+						 return;
+					 }
+				 }
+				 catch(Exception ^ex)
+				 {
+
+					MessageBox::Show(ex->Message,"Error in Duplicate Email checking");
+				 }
+				 
+			}
+			 
+
+
+			try
+			{
+				connection->Open();
+				command->Connection=connection;
+				query="Update Users Set [FirstName]= '"+first_name2+"', [LastName]= '"+last_name2+"', [Contact]= '"+contact2+"' where UserName= '"+username+"';";
+				command->CommandText=query;
+				command->ExecuteNonQuery();
+				//command->Dispose();
+				connection->Close();
+			}
+			catch (Exception ^ ex)
+			{
+				MessageBox::Show(ex->Message,"Error while writing data");
+			}
+			first_name=first_name2;
+			last_name=last_name2;
+			contact=contact2;
+			
+			 
+			 
+			 if(email!=email2)
+			 {
+				 //Proceeding to email verification if success
+				 
+
+				 //Send a code to email and verify
+				 String ^code;
+				
+					 srand((unsigned)time(0)); 
+					 int random_integer; 
+					 int lowest=1000, highest=9999; 
+					 int range=(highest-lowest)+1; 
+					 random_integer = lowest+int(range*rand()/(RAND_MAX + 1.0));
+					 code=""+random_integer+"";
+
+				 int num=0;	
+				 num+=SendEmail(email2,code, "Email verification Code for DS Learning S/W");
+				 if(!num)
+				 {
+					MessageBox::Show("Service unavailable: Change Email not currently available, other fields are updated","Email Verification");
+				 Profilecodebutton->Hide();
+				 ProfilecodetextBox->Hide();
+				 //Reload profile
+				 System::Object ^sender;
+				 System::EventArgs ^e;
+				 this->button3_Click(sender,e);
+				 }
+				 else
+				 {
+					 MessageBox::Show("Fields other than Email Updated","Success");
+					 email_code=code;
+					 new_email=email2;
+					 ProfilecodetextBox->Show();
+					 ProfilecodetextBox->Text="CODE";
+					 Profilecodebutton->Show();
+				 }
+
+				 
+
+			 }
+			 
+			 
+			 
+
+		 }
+
+	
+
+		 
+private: System::Void Profilecodebutton_Click(System::Object^  sender, System::EventArgs^  e) {
+			
+			 String ^email2=new_email;
+			 String ^code=ProfilecodetextBox->Text;
+			 if(code==email_code)
+			 {
+				 try
+				 {
+					 connection->Open();
+					 command->Connection=connection;
+					 query="Update Users Set [Email]= '"+email2+"' where UserName= '"+username+"';";
+					 command->CommandText=query;
+					 command->ExecuteNonQuery();
+					 //command->Dispose();
+					 connection->Close();
+				 }
+				 catch (Exception ^ex)
+				 {
+					 MessageBox::Show(ex->Message,"Error while writing data (Email)");
+				 }
+
+				 MessageBox::Show("Email Updated","Success");
+				 email=email2;
+				 ProfilecodetextBox->Hide();
+				 ProfilecodetextBox->Text="CODE";
+				 Profilecodebutton->Hide();
+				 //Reload profile
+				 System::Object ^sender;
+				 System::EventArgs ^e;
+				this->button3_Click(sender,e);
+
+			 }
+			 else
+			 {
+				 MessageBox::Show("Incorrect Security Code","Email Verification");
+
+			 }
+			 }
+				 
+				
+		
+private: System::Void ProfileChangePasswordSavebutton_Click(System::Object^  sender, System::EventArgs^  e) {
+			 String ^npass=ProfileNewPasswordtextBox->Text;
+			 String ^cpass=ProfileConfirmPasswordtextBox->Text;
+			 String ^opass=ProfileOldPasswordtextBox->Text;
+			 if(opass!=password)
+			 {
+				MessageBox::Show("Current Password is incorrent","Change Password");
+				return;
+			 }
+			 if(npass!=cpass)
+			 {
+				 MessageBox::Show("New Password and Confirm Password Don't match","Change Password");
+				 return;
+			 }
+			 if(npass->Length<3)
+			 {
+
+				 MessageBox::Show("Password must be atleast 3 characters long","Change Password");
+				 return;
+			 }
+			 for(int i=0;i<npass->Length;i++)
+			 {
+
+				 if(!(isalnum(npass[i])))
+				 {
+					 MessageBox::Show("New Password contains an invalid character (should be alnum)","Change Password");
+					 return;
+				 }
+			 }
+
+			 password=npass;
+			 try
+			 {
+				 connection->Open();
+				 command->Connection=connection;
+				 query="Update Users Set [Password]= '"+password+"' where UserName= '"+username+"';";
+				 command->CommandText=query;
+				 command->ExecuteNonQuery();
+				 //command->Dispose();
+				 connection->Close();
+			 }
+			 catch (Exception ^ex)
+			 {
+				 MessageBox::Show(ex->Message,"Error while writing data (Password)");
+			 }
+
+			 MessageBox::Show("Updated Successfully","Change Password");
+			 ProfileOldPasswordtextBox->Text="Old Password";
+			 ProfileNewPasswordtextBox->Text="New Password";
+			ProfileConfirmPasswordtextBox->Text="Confirm Password";
+			 
+		 }
+private: System::Void ProfileSecuritySavebutton_Click(System::Object^  sender, System::EventArgs^  e) {
+			 String ^pass=ProfileOldPasswordSecuritytextBox->Text;
+			 if(pass!=password)
+			 {
+				 MessageBox::Show("Current Password is incorrent","Change Security Answer");
+				 return;
+			 }
+			 String ^ans=ProfileSecurityAnswertextBox->Text;
+			 if(ans->Length==0)
+			 {
+				 MessageBox::Show("Answer field is empty","Change Security Answer");
+				 return;
+			 }
+			 String ^ques=ProfileSecuritycomboBox->Text;
+			 if(ques=="Security Question")
+			 {
+
+				 MessageBox::Show("Please select one security question","Change Security Answer");
+				 return;
+			 }
+			 try
+			 {
+				 connection->Open();
+				 command->Connection=connection;
+				 query="Update Users Set [SecurityAnswer]= '"+ans+"', [SecurityQuestion]= '"+ques+"' where UserName= '"+username+"';";
+				 command->CommandText=query;
+				 command->ExecuteNonQuery();
+				 //command->Dispose();
+				 connection->Close();
+			 }
+			 catch (Exception ^ex)
+			 {
+				 MessageBox::Show(ex->Message,"Error while writing data (Password)");
+			 }
+
+			 MessageBox::Show("Updated Successfully","Change Security Answer");
+			ProfileOldPasswordSecuritytextBox->Text="Password";
+			ProfileSecuritycomboBox->Text="Security Question";
+			ProfileSecurityAnswertextBox->Text="Answer";
+
 		 }
 };
 }

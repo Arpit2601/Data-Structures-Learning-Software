@@ -2,6 +2,9 @@
 #include<string.h>
 #include <string>
 #include "Homepage.h"
+#include <iostream> 
+#include <ctime> 
+#include <cstdlib>
 
 
 
@@ -1332,8 +1335,8 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->Registerpanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)), 
 				static_cast<System::Int32>(static_cast<System::Byte>(110)));
-			this->Registerpanel->Controls->Add(this->RegisterVerificationpanel);
 			this->Registerpanel->Controls->Add(this->RegisterDetailspanel);
+			this->Registerpanel->Controls->Add(this->RegisterVerificationpanel);
 			this->Registerpanel->Controls->Add(this->RegisterHomebutton);
 			this->Registerpanel->Controls->Add(this->RegisterHomepictureBox);
 			this->Registerpanel->Controls->Add(this->ReigsterHeaderpictureBox);
@@ -1758,8 +1761,8 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1048, 763);
-			this->Controls->Add(this->loginpanel);
 			this->Controls->Add(this->Registerpanel);
+			this->Controls->Add(this->loginpanel);
 			this->Controls->Add(this->ForgotPasswordpanel);
 			this->Controls->Add(this->headerpanel);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;

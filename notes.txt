@@ -3,3 +3,5 @@ Empty textboxes access handling
 compare new pass with old pass
 
 admin for security questions
+
+checkbox in password change in profile
