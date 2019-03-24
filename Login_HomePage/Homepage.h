@@ -55,6 +55,7 @@ namespace Login_HomePage {
 	private: System::Windows::Forms::Label^  ProfileErrorlabel;
 	private: System::Windows::Forms::Button^  Profilecodebutton;
 	private: System::Windows::Forms::TextBox^  ProfilecodetextBox;
+	private: System::Windows::Forms::Label^  HomeTitlelabel;
 	public: 
 
 	public: 
@@ -190,8 +191,8 @@ namespace Login_HomePage {
 				Profilepanel->Hide();
 				DSpanel->Hide();
 				Homepanel->Show();
-				HeaderStatusPanelpictureBox1->BackColor=Color::FloralWhite;
-				HeaderHomebutton->BackColor=Color::FloralWhite;
+				HeaderStatusPanelpictureBox1->BackColor=Color::Red;
+				HeaderHomebutton->BackColor=Color::Gray;
 
 				//Checking and setting profile picture if it exists
 				
@@ -385,6 +386,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderStatusPanelpictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->HeaderStatusPanelpictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->Homepanel = (gcnew System::Windows::Forms::Panel());
+			this->HomeTitlelabel = (gcnew System::Windows::Forms::Label());
 			this->DSpanel = (gcnew System::Windows::Forms::Panel());
 			this->Profilepanel = (gcnew System::Windows::Forms::Panel());
 			this->Profilecodebutton = (gcnew System::Windows::Forms::Button());
@@ -441,6 +443,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox1))->BeginInit();
+			this->Homepanel->SuspendLayout();
 			this->Profilepanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileSecuritypictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileSecuritypictureBox1))->BeginInit();
@@ -452,7 +455,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// HeaderPanel
 			// 
-			this->HeaderPanel->BackColor = System::Drawing::Color::LightGray;
+			this->HeaderPanel->BackColor = System::Drawing::Color::Black;
 			this->HeaderPanel->Controls->Add(this->HeaderClosebutton);
 			this->HeaderPanel->Controls->Add(this->HeaderLogoutbutton);
 			this->HeaderPanel->Controls->Add(this->HeaderDSButton);
@@ -460,6 +463,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderPanel->Controls->Add(this->HeaderProfilebutton);
 			this->HeaderPanel->Controls->Add(this->HeaderHomebutton);
 			this->HeaderPanel->Dock = System::Windows::Forms::DockStyle::Top;
+			this->HeaderPanel->ForeColor = System::Drawing::Color::White;
 			this->HeaderPanel->Location = System::Drawing::Point(0, 0);
 			this->HeaderPanel->Margin = System::Windows::Forms::Padding(0);
 			this->HeaderPanel->Name = L"HeaderPanel";
@@ -492,6 +496,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderLogoutbutton->TabIndex = 2;
 			this->HeaderLogoutbutton->Text = L"LOGOUT";
 			this->HeaderLogoutbutton->UseVisualStyleBackColor = true;
+			this->HeaderLogoutbutton->Click += gcnew System::EventHandler(this, &Homepage::HeaderLogoutbutton_Click);
 			// 
 			// HeaderDSButton
 			// 
@@ -522,6 +527,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// HeaderProfilebutton
 			// 
+			this->HeaderProfilebutton->BackColor = System::Drawing::Color::Black;
 			this->HeaderProfilebutton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->HeaderProfilebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->HeaderProfilebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
@@ -531,7 +537,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderProfilebutton->Size = System::Drawing::Size(240, 50);
 			this->HeaderProfilebutton->TabIndex = 3;
 			this->HeaderProfilebutton->Text = L"PROFILE";
-			this->HeaderProfilebutton->UseVisualStyleBackColor = true;
+			this->HeaderProfilebutton->UseVisualStyleBackColor = false;
 			this->HeaderProfilebutton->Click += gcnew System::EventHandler(this, &Homepage::button3_Click);
 			// 
 			// HeaderHomebutton
@@ -550,7 +556,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// Headerstatuspanel
 			// 
-			this->Headerstatuspanel->BackColor = System::Drawing::Color::LightGray;
+			this->Headerstatuspanel->BackColor = System::Drawing::Color::Black;
 			this->Headerstatuspanel->Controls->Add(this->HeaderStatusPanelpictureBox4);
 			this->Headerstatuspanel->Controls->Add(this->HeaderStatusPanelpictureBox5);
 			this->Headerstatuspanel->Controls->Add(this->HeaderStatusPanelpictureBox2);
@@ -588,6 +594,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// HeaderStatusPanelpictureBox3
 			// 
+			this->HeaderStatusPanelpictureBox3->BackColor = System::Drawing::Color::Black;
 			this->HeaderStatusPanelpictureBox3->Location = System::Drawing::Point(492, 0);
 			this->HeaderStatusPanelpictureBox3->Name = L"HeaderStatusPanelpictureBox3";
 			this->HeaderStatusPanelpictureBox3->Size = System::Drawing::Size(240, 15);
@@ -604,12 +611,26 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// Homepanel
 			// 
+			this->Homepanel->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->Homepanel->Controls->Add(this->HomeTitlelabel);
 			this->Homepanel->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->Homepanel->Location = System::Drawing::Point(0, 65);
 			this->Homepanel->Margin = System::Windows::Forms::Padding(0);
 			this->Homepanel->Name = L"Homepanel";
 			this->Homepanel->Size = System::Drawing::Size(1280, 705);
 			this->Homepanel->TabIndex = 7;
+			// 
+			// HomeTitlelabel
+			// 
+			this->HomeTitlelabel->AutoSize = true;
+			this->HomeTitlelabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 28.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->HomeTitlelabel->ForeColor = System::Drawing::Color::Navy;
+			this->HomeTitlelabel->Location = System::Drawing::Point(16, 19);
+			this->HomeTitlelabel->Name = L"HomeTitlelabel";
+			this->HomeTitlelabel->Size = System::Drawing::Size(795, 55);
+			this->HomeTitlelabel->TabIndex = 0;
+			this->HomeTitlelabel->Text = L"Data Structures Learning Software";
 			// 
 			// DSpanel
 			// 
@@ -621,7 +642,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// Profilepanel
 			// 
-			this->Profilepanel->BackColor = System::Drawing::Color::White;
+			this->Profilepanel->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->Profilepanel->Controls->Add(this->Profilecodebutton);
 			this->Profilepanel->Controls->Add(this->ProfilecodetextBox);
 			this->Profilepanel->Controls->Add(this->ProfileErrorlabel);
@@ -677,19 +698,22 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// Profilecodebutton
 			// 
-			this->Profilecodebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->Profilecodebutton->BackColor = System::Drawing::Color::Navy;
+			this->Profilecodebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
+			this->Profilecodebutton->ForeColor = System::Drawing::Color::White;
 			this->Profilecodebutton->Location = System::Drawing::Point(800, 316);
 			this->Profilecodebutton->Name = L"Profilecodebutton";
 			this->Profilecodebutton->Size = System::Drawing::Size(109, 46);
 			this->Profilecodebutton->TabIndex = 46;
 			this->Profilecodebutton->Text = L"Verify";
-			this->Profilecodebutton->UseVisualStyleBackColor = true;
+			this->Profilecodebutton->UseVisualStyleBackColor = false;
 			this->Profilecodebutton->Click += gcnew System::EventHandler(this, &Homepage::Profilecodebutton_Click);
 			// 
 			// ProfilecodetextBox
 			// 
-			this->ProfilecodetextBox->BackColor = System::Drawing::SystemColors::Info;
+			this->ProfilecodetextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(128)));
 			this->ProfilecodetextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->ProfilecodetextBox->Location = System::Drawing::Point(800, 267);
@@ -724,28 +748,32 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileChangePasswordSavebutton
 			// 
+			this->ProfileChangePasswordSavebutton->BackColor = System::Drawing::Color::Navy;
 			this->ProfileChangePasswordSavebutton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ProfileChangePasswordSavebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfileChangePasswordSavebutton->ForeColor = System::Drawing::Color::White;
 			this->ProfileChangePasswordSavebutton->Location = System::Drawing::Point(1137, 492);
 			this->ProfileChangePasswordSavebutton->Name = L"ProfileChangePasswordSavebutton";
 			this->ProfileChangePasswordSavebutton->Size = System::Drawing::Size(140, 51);
 			this->ProfileChangePasswordSavebutton->TabIndex = 42;
 			this->ProfileChangePasswordSavebutton->Text = L"Change";
-			this->ProfileChangePasswordSavebutton->UseVisualStyleBackColor = true;
+			this->ProfileChangePasswordSavebutton->UseVisualStyleBackColor = false;
 			this->ProfileChangePasswordSavebutton->Click += gcnew System::EventHandler(this, &Homepage::ProfileChangePasswordSavebutton_Click);
 			// 
 			// ProfileSecuritySavebutton
 			// 
+			this->ProfileSecuritySavebutton->BackColor = System::Drawing::Color::Navy;
 			this->ProfileSecuritySavebutton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ProfileSecuritySavebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfileSecuritySavebutton->ForeColor = System::Drawing::Color::White;
 			this->ProfileSecuritySavebutton->Location = System::Drawing::Point(1137, 646);
 			this->ProfileSecuritySavebutton->Name = L"ProfileSecuritySavebutton";
 			this->ProfileSecuritySavebutton->Size = System::Drawing::Size(140, 51);
 			this->ProfileSecuritySavebutton->TabIndex = 41;
 			this->ProfileSecuritySavebutton->Text = L"Change";
-			this->ProfileSecuritySavebutton->UseVisualStyleBackColor = true;
+			this->ProfileSecuritySavebutton->UseVisualStyleBackColor = false;
 			this->ProfileSecuritySavebutton->Click += gcnew System::EventHandler(this, &Homepage::ProfileSecuritySavebutton_Click);
 			// 
 			// panel5
@@ -768,6 +796,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileSecurityAnswertextBox
 			// 
+			this->ProfileSecurityAnswertextBox->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->ProfileSecurityAnswertextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ProfileSecurityAnswertextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -779,6 +808,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileSecuritycomboBox
 			// 
+			this->ProfileSecuritycomboBox->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->ProfileSecuritycomboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ProfileSecuritycomboBox->FormattingEnabled = true;
@@ -810,6 +840,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileOldPasswordSecuritytextBox
 			// 
+			this->ProfileOldPasswordSecuritytextBox->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->ProfileOldPasswordSecuritytextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ProfileOldPasswordSecuritytextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -840,6 +871,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileConfirmPasswordtextBox
 			// 
+			this->ProfileConfirmPasswordtextBox->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->ProfileConfirmPasswordtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ProfileConfirmPasswordtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -869,6 +901,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileNewPasswordtextBox
 			// 
+			this->ProfileNewPasswordtextBox->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->ProfileNewPasswordtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ProfileNewPasswordtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -898,6 +931,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileOldPasswordtextBox
 			// 
+			this->ProfileOldPasswordtextBox->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->ProfileOldPasswordtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ProfileOldPasswordtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -933,28 +967,32 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileSavebutton
 			// 
+			this->ProfileSavebutton->BackColor = System::Drawing::Color::Navy;
 			this->ProfileSavebutton->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->ProfileSavebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->ProfileSavebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
+			this->ProfileSavebutton->ForeColor = System::Drawing::Color::White;
 			this->ProfileSavebutton->Location = System::Drawing::Point(611, 390);
 			this->ProfileSavebutton->Name = L"ProfileSavebutton";
 			this->ProfileSavebutton->Size = System::Drawing::Size(162, 51);
 			this->ProfileSavebutton->TabIndex = 21;
 			this->ProfileSavebutton->Text = L"Save";
-			this->ProfileSavebutton->UseVisualStyleBackColor = true;
+			this->ProfileSavebutton->UseVisualStyleBackColor = false;
 			this->ProfileSavebutton->Click += gcnew System::EventHandler(this, &Homepage::ProfileSavebutton_Click);
 			// 
 			// ProfileEditbutton
 			// 
+			this->ProfileEditbutton->BackColor = System::Drawing::Color::Navy;
 			this->ProfileEditbutton->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->ProfileEditbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->ProfileEditbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
+			this->ProfileEditbutton->ForeColor = System::Drawing::Color::White;
 			this->ProfileEditbutton->Location = System::Drawing::Point(33, 390);
 			this->ProfileEditbutton->Name = L"ProfileEditbutton";
 			this->ProfileEditbutton->Size = System::Drawing::Size(162, 51);
 			this->ProfileEditbutton->TabIndex = 20;
 			this->ProfileEditbutton->Text = L"Edit Profile";
-			this->ProfileEditbutton->UseVisualStyleBackColor = true;
+			this->ProfileEditbutton->UseVisualStyleBackColor = false;
 			this->ProfileEditbutton->Click += gcnew System::EventHandler(this, &Homepage::ProfileEditbutton_Click);
 			// 
 			// Profilepanel6
@@ -967,7 +1005,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileContacttextBox
 			// 
-			this->ProfileContacttextBox->BackColor = System::Drawing::Color::White;
+			this->ProfileContacttextBox->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->ProfileContacttextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ProfileContacttextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -997,7 +1035,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileemailtextBox
 			// 
-			this->ProfileemailtextBox->BackColor = System::Drawing::Color::White;
+			this->ProfileemailtextBox->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->ProfileemailtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ProfileemailtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -1027,7 +1065,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileDesignationtextBox
 			// 
-			this->ProfileDesignationtextBox->BackColor = System::Drawing::Color::White;
+			this->ProfileDesignationtextBox->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->ProfileDesignationtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ProfileDesignationtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -1057,7 +1095,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileLastNametextBox
 			// 
-			this->ProfileLastNametextBox->BackColor = System::Drawing::Color::White;
+			this->ProfileLastNametextBox->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->ProfileLastNametextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ProfileLastNametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -1087,7 +1125,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileFirstNametextBox
 			// 
-			this->ProfileFirstNametextBox->BackColor = System::Drawing::Color::White;
+			this->ProfileFirstNametextBox->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->ProfileFirstNametextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ProfileFirstNametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -1117,7 +1155,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileUsernametextBox
 			// 
-			this->ProfileUsernametextBox->BackColor = System::Drawing::Color::White;
+			this->ProfileUsernametextBox->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->ProfileUsernametextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ProfileUsernametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -1139,15 +1177,17 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfilePictureChangebutton
 			// 
+			this->ProfilePictureChangebutton->BackColor = System::Drawing::Color::Navy;
 			this->ProfilePictureChangebutton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ProfilePictureChangebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfilePictureChangebutton->ForeColor = System::Drawing::Color::White;
 			this->ProfilePictureChangebutton->Location = System::Drawing::Point(1016, 330);
 			this->ProfilePictureChangebutton->Name = L"ProfilePictureChangebutton";
 			this->ProfilePictureChangebutton->Size = System::Drawing::Size(178, 51);
 			this->ProfilePictureChangebutton->TabIndex = 1;
 			this->ProfilePictureChangebutton->Text = L"Change Image";
-			this->ProfilePictureChangebutton->UseVisualStyleBackColor = true;
+			this->ProfilePictureChangebutton->UseVisualStyleBackColor = false;
 			this->ProfilePictureChangebutton->Click += gcnew System::EventHandler(this, &Homepage::ProfilePictureChangebutton_Click);
 			// 
 			// ProfilepictureBox
@@ -1188,6 +1228,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox1))->EndInit();
+			this->Homepanel->ResumeLayout(false);
+			this->Homepanel->PerformLayout();
 			this->Profilepanel->ResumeLayout(false);
 			this->Profilepanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileSecuritypictureBox2))->EndInit();
@@ -1204,14 +1246,14 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 				 Homepanel->Hide();
 				 DSpanel->Hide();
 				 Profilepanel->Show();
-				 HeaderStatusPanelpictureBox3->BackColor=Color::FloralWhite;
-				 HeaderStatusPanelpictureBox1->BackColor=Color::LightGray;
-				 HeaderStatusPanelpictureBox2->BackColor=Color::LightGray;
-				 HeaderStatusPanelpictureBox4->BackColor=Color::LightGray;
-				 HeaderHomebutton->BackColor=Color::LightGray;
-				 HeaderDSButton->BackColor=Color::LightGray;
-				 HeaderForumbutton->BackColor=Color::LightGray;
-				 HeaderProfilebutton->BackColor=Color::FloralWhite;
+				 HeaderStatusPanelpictureBox3->BackColor=Color::Red;
+				 HeaderStatusPanelpictureBox1->BackColor=Color::Black;
+				 HeaderStatusPanelpictureBox2->BackColor=Color::Black;
+				 HeaderStatusPanelpictureBox4->BackColor=Color::Black;
+				 HeaderHomebutton->BackColor=Color::Black;
+				 HeaderDSButton->BackColor=Color::Black;
+				 HeaderForumbutton->BackColor=Color::Black;
+				 HeaderProfilebutton->BackColor=Color::Gray;
 
 				 ProfileUsernametextBox->Text=username;
 				 ProfileFirstNametextBox->Text=first_name;
@@ -1254,27 +1296,27 @@ private: System::Void HeaderHomebutton_Click(System::Object^  sender, System::Ev
 			 Homepanel->Show();
 			 DSpanel->Hide();
 			 Profilepanel->Hide();
-			 HeaderStatusPanelpictureBox3->BackColor=Color::LightGray;
-			 HeaderStatusPanelpictureBox1->BackColor=Color::FloralWhite;
-			 HeaderStatusPanelpictureBox2->BackColor=Color::LightGray;
-			 HeaderStatusPanelpictureBox4->BackColor=Color::LightGray;
-			 HeaderHomebutton->BackColor=Color::FloralWhite;
-			 HeaderDSButton->BackColor=Color::LightGray;
-			 HeaderForumbutton->BackColor=Color::LightGray;
-			 HeaderProfilebutton->BackColor=Color::LightGray;
+			 HeaderStatusPanelpictureBox3->BackColor=Color::Black;
+			 HeaderStatusPanelpictureBox1->BackColor=Color::Red;
+			 HeaderStatusPanelpictureBox2->BackColor=Color::Black;
+			 HeaderStatusPanelpictureBox4->BackColor=Color::Black;
+			 HeaderHomebutton->BackColor=Color::Gray;
+			 HeaderDSButton->BackColor=Color::Black;
+			 HeaderForumbutton->BackColor=Color::Black;
+			 HeaderProfilebutton->BackColor=Color::Black;
 		 }
 private: System::Void HeaderDSButton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Homepanel->Hide();
 			 DSpanel->Show();
 			 Profilepanel->Hide();
-			 HeaderStatusPanelpictureBox3->BackColor=Color::LightGray;
-			 HeaderStatusPanelpictureBox1->BackColor=Color::LightGray;
-			 HeaderStatusPanelpictureBox2->BackColor=Color::FloralWhite;
-			 HeaderStatusPanelpictureBox4->BackColor=Color::LightGray;
-			 HeaderHomebutton->BackColor=Color::LightGray;
-			 HeaderDSButton->BackColor=Color::FloralWhite;
-			 HeaderForumbutton->BackColor=Color::LightGray;
-			 HeaderProfilebutton->BackColor=Color::LightGray;
+			 HeaderStatusPanelpictureBox3->BackColor=Color::Black;
+			 HeaderStatusPanelpictureBox1->BackColor=Color::Black;
+			 HeaderStatusPanelpictureBox2->BackColor=Color::Red;
+			 HeaderStatusPanelpictureBox4->BackColor=Color::Black;
+			 HeaderHomebutton->BackColor=Color::Black;
+			 HeaderDSButton->BackColor=Color::Gray;
+			 HeaderForumbutton->BackColor=Color::Black;
+			 HeaderProfilebutton->BackColor=Color::Black;
 		 }
 private: System::Void ProfilePictureChangebutton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 String ^filepath="";	//Source path for image file
@@ -1731,6 +1773,9 @@ private: System::Void ProfileSecuritySavebutton_Click(System::Object^  sender, S
 			ProfileSecuritycomboBox->Text="Security Question";
 			ProfileSecurityAnswertextBox->Text="Answer";
 
+		 }
+private: System::Void HeaderLogoutbutton_Click(System::Object^  sender, System::EventArgs^  e) {
+			 this->Close();
 		 }
 };
 }

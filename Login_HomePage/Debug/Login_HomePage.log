@@ -1,4 +1,4 @@
-﻿Build started 22-Mar-19 7:30:02 PM.
+﻿Build started 24-Mar-19 1:53:25 PM.
      1>Project "C:\Users\Siddharth\Desktop\Data-Structures-Learning-Software\Login_HomePage\Login_HomePage.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Login_HomePage.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -8,13 +8,13 @@
          All outputs are up-to-date.
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\Login_HomePage.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.VisualBasic.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\VBPowerPacks\v10.0\Microsoft.VisualBasic.PowerPacks.Vs.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt Homepage.cpp LoginForm.cpp Login_HomePage.cpp /clr:nostdlib 
          Homepage.cpp
-     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\Homepage.h(92): warning C4101: 'ex' : unreferenced local variable
+     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\Homepage.h(93): warning C4101: 'ex' : unreferenced local variable
          LoginForm.cpp
-     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\Homepage.h(92): warning C4101: 'ex' : unreferenced local variable
+     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\Homepage.h(93): warning C4101: 'ex' : unreferenced local variable
      1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\LoginForm.h(2378): warning C4101: 'question' : unreferenced local variable
      1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\LoginForm.h(2379): warning C4101: 'answer' : unreferenced local variable
          Login_HomePage.cpp
-     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\Homepage.h(92): warning C4101: 'ex' : unreferenced local variable
+     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\Homepage.h(93): warning C4101: 'ex' : unreferenced local variable
      1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\LoginForm.h(2378): warning C4101: 'question' : unreferenced local variable
      1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\LoginForm.h(2379): warning C4101: 'answer' : unreferenced local variable
          Generating Code...
@@ -42,4 +42,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.16
+Time Elapsed 00:00:03.55
