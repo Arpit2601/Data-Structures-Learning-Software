@@ -56,6 +56,23 @@ namespace Login_HomePage {
 	private: System::Windows::Forms::Button^  Profilecodebutton;
 	private: System::Windows::Forms::TextBox^  ProfilecodetextBox;
 	private: System::Windows::Forms::Label^  HomeTitlelabel;
+	private: System::Windows::Forms::ProgressBar^  queueprogressBar;
+
+	private: System::Windows::Forms::ProgressBar^  stackprogressBar;
+
+	private: System::Windows::Forms::ProgressBar^  sortingprogressBar;
+
+	private: System::Windows::Forms::ProgressBar^  searchingprogressBar;
+
+	private: System::Windows::Forms::ProgressBar^  llprogressBar;
+
+	private: System::Windows::Forms::ProgressBar^  ArrayprogressBar;
+	private: System::Windows::Forms::Label^  queueprogresslabel;
+	private: System::Windows::Forms::Label^  stackprogresslabel;
+	private: System::Windows::Forms::Label^  sortingprigresslabel;
+	private: System::Windows::Forms::Label^  searchingprogresslabel;
+	private: System::Windows::Forms::Label^  llprogresslabel;
+	private: System::Windows::Forms::Label^  Arrayprogresslabel;
 	public: 
 
 	public: 
@@ -121,6 +138,8 @@ namespace Login_HomePage {
 			username="sid";
 
 				//Retrieving user info
+			try
+			{
 				connection->Open();
 				command=gcnew OleDbCommand;
 				command->Connection=connection;
@@ -150,7 +169,7 @@ namespace Login_HomePage {
 				command->CommandText=query;
 				contact=command->ExecuteScalar()->ToString();
 
-				
+
 
 				query="Select IsApproved From Users Where Username = '"+username+"';";
 				command->CommandText=query;
@@ -183,9 +202,24 @@ namespace Login_HomePage {
 				query="Select QueuesProgress From Users Where Username = '"+username+"';";
 				command->CommandText=query;
 				queue_progress=command->ExecuteScalar()->ToString();
-				
-				
+
+
 				connection->Close();
+			}
+			catch (Exception ^ex)
+			{	
+				MessageBox::Show(ex->Message,"Error while reading data on LOAD");
+			}
+			
+				
+
+				//progress bars
+				ArrayprogressBar->Value=Convert::ToInt32(array_progress);
+				llprogressBar->Value=Convert::ToInt32(ll_progress);
+				searchingprogressBar->Value=Convert::ToInt32(searching_progress);
+				sortingprogressBar->Value=Convert::ToInt32(sorting_progress);
+				stackprogressBar->Value=Convert::ToInt32(stack_progress);
+				queueprogressBar->Value=Convert::ToInt32(queue_progress);
 
 				//Homepanel is shown by default
 				Profilepanel->Hide();
@@ -436,6 +470,18 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfilePictureChangebutton = (gcnew System::Windows::Forms::Button());
 			this->ProfilepictureBox = (gcnew System::Windows::Forms::PictureBox());
 			this->ProfileopenFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
+			this->ArrayprogressBar = (gcnew System::Windows::Forms::ProgressBar());
+			this->llprogressBar = (gcnew System::Windows::Forms::ProgressBar());
+			this->searchingprogressBar = (gcnew System::Windows::Forms::ProgressBar());
+			this->sortingprogressBar = (gcnew System::Windows::Forms::ProgressBar());
+			this->stackprogressBar = (gcnew System::Windows::Forms::ProgressBar());
+			this->queueprogressBar = (gcnew System::Windows::Forms::ProgressBar());
+			this->Arrayprogresslabel = (gcnew System::Windows::Forms::Label());
+			this->llprogresslabel = (gcnew System::Windows::Forms::Label());
+			this->searchingprogresslabel = (gcnew System::Windows::Forms::Label());
+			this->sortingprigresslabel = (gcnew System::Windows::Forms::Label());
+			this->stackprogresslabel = (gcnew System::Windows::Forms::Label());
+			this->queueprogresslabel = (gcnew System::Windows::Forms::Label());
 			this->HeaderPanel->SuspendLayout();
 			this->Headerstatuspanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox4))->BeginInit();
@@ -612,6 +658,18 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// Homepanel
 			// 
 			this->Homepanel->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->Homepanel->Controls->Add(this->queueprogresslabel);
+			this->Homepanel->Controls->Add(this->stackprogresslabel);
+			this->Homepanel->Controls->Add(this->sortingprigresslabel);
+			this->Homepanel->Controls->Add(this->searchingprogresslabel);
+			this->Homepanel->Controls->Add(this->llprogresslabel);
+			this->Homepanel->Controls->Add(this->Arrayprogresslabel);
+			this->Homepanel->Controls->Add(this->queueprogressBar);
+			this->Homepanel->Controls->Add(this->stackprogressBar);
+			this->Homepanel->Controls->Add(this->sortingprogressBar);
+			this->Homepanel->Controls->Add(this->searchingprogressBar);
+			this->Homepanel->Controls->Add(this->llprogressBar);
+			this->Homepanel->Controls->Add(this->ArrayprogressBar);
 			this->Homepanel->Controls->Add(this->HomeTitlelabel);
 			this->Homepanel->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->Homepanel->Location = System::Drawing::Point(0, 65);
@@ -1205,13 +1263,140 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileopenFileDialog->FileName = L"ProfileopenFileDialog";
 			this->ProfileopenFileDialog->Filter = L"Jpg (*.jpg)|*.jpg";
 			// 
+			// ArrayprogressBar
+			// 
+			this->ArrayprogressBar->ForeColor = System::Drawing::Color::Blue;
+			this->ArrayprogressBar->Location = System::Drawing::Point(88, 162);
+			this->ArrayprogressBar->Maximum = 5;
+			this->ArrayprogressBar->Name = L"ArrayprogressBar";
+			this->ArrayprogressBar->Size = System::Drawing::Size(1085, 35);
+			this->ArrayprogressBar->TabIndex = 1;
+			this->ArrayprogressBar->Value = 1;
+			// 
+			// llprogressBar
+			// 
+			this->llprogressBar->ForeColor = System::Drawing::Color::Blue;
+			this->llprogressBar->Location = System::Drawing::Point(88, 263);
+			this->llprogressBar->Maximum = 5;
+			this->llprogressBar->Name = L"llprogressBar";
+			this->llprogressBar->Size = System::Drawing::Size(1085, 35);
+			this->llprogressBar->TabIndex = 2;
+			this->llprogressBar->Value = 1;
+			// 
+			// searchingprogressBar
+			// 
+			this->searchingprogressBar->ForeColor = System::Drawing::Color::Blue;
+			this->searchingprogressBar->Location = System::Drawing::Point(88, 365);
+			this->searchingprogressBar->Maximum = 5;
+			this->searchingprogressBar->Name = L"searchingprogressBar";
+			this->searchingprogressBar->Size = System::Drawing::Size(1085, 35);
+			this->searchingprogressBar->TabIndex = 3;
+			this->searchingprogressBar->Value = 1;
+			this->searchingprogressBar->Click += gcnew System::EventHandler(this, &Homepage::progressBar2_Click);
+			// 
+			// sortingprogressBar
+			// 
+			this->sortingprogressBar->ForeColor = System::Drawing::Color::Blue;
+			this->sortingprogressBar->Location = System::Drawing::Point(88, 458);
+			this->sortingprogressBar->Maximum = 5;
+			this->sortingprogressBar->Name = L"sortingprogressBar";
+			this->sortingprogressBar->Size = System::Drawing::Size(1085, 35);
+			this->sortingprogressBar->TabIndex = 4;
+			this->sortingprogressBar->Value = 1;
+			// 
+			// stackprogressBar
+			// 
+			this->stackprogressBar->ForeColor = System::Drawing::Color::Blue;
+			this->stackprogressBar->Location = System::Drawing::Point(88, 553);
+			this->stackprogressBar->Maximum = 5;
+			this->stackprogressBar->Name = L"stackprogressBar";
+			this->stackprogressBar->Size = System::Drawing::Size(1085, 35);
+			this->stackprogressBar->TabIndex = 5;
+			this->stackprogressBar->Value = 1;
+			// 
+			// queueprogressBar
+			// 
+			this->queueprogressBar->ForeColor = System::Drawing::Color::Blue;
+			this->queueprogressBar->Location = System::Drawing::Point(88, 646);
+			this->queueprogressBar->Maximum = 5;
+			this->queueprogressBar->Name = L"queueprogressBar";
+			this->queueprogressBar->Size = System::Drawing::Size(1085, 35);
+			this->queueprogressBar->TabIndex = 6;
+			this->queueprogressBar->Value = 1;
+			// 
+			// Arrayprogresslabel
+			// 
+			this->Arrayprogresslabel->AutoSize = true;
+			this->Arrayprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->Arrayprogresslabel->Location = System::Drawing::Point(82, 115);
+			this->Arrayprogresslabel->Name = L"Arrayprogresslabel";
+			this->Arrayprogresslabel->Size = System::Drawing::Size(229, 36);
+			this->Arrayprogresslabel->TabIndex = 7;
+			this->Arrayprogresslabel->Text = L"Array Progress";
+			// 
+			// llprogresslabel
+			// 
+			this->llprogresslabel->AutoSize = true;
+			this->llprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->llprogresslabel->Location = System::Drawing::Point(82, 216);
+			this->llprogresslabel->Name = L"llprogresslabel";
+			this->llprogresslabel->Size = System::Drawing::Size(307, 36);
+			this->llprogresslabel->TabIndex = 8;
+			this->llprogresslabel->Text = L"Linked List Progress";
+			// 
+			// searchingprogresslabel
+			// 
+			this->searchingprogresslabel->AutoSize = true;
+			this->searchingprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->searchingprogresslabel->Location = System::Drawing::Point(82, 322);
+			this->searchingprogresslabel->Name = L"searchingprogresslabel";
+			this->searchingprogresslabel->Size = System::Drawing::Size(296, 36);
+			this->searchingprogresslabel->TabIndex = 9;
+			this->searchingprogresslabel->Text = L"Searching Progress";
+			// 
+			// sortingprigresslabel
+			// 
+			this->sortingprigresslabel->AutoSize = true;
+			this->sortingprigresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->sortingprigresslabel->Location = System::Drawing::Point(82, 419);
+			this->sortingprigresslabel->Name = L"sortingprigresslabel";
+			this->sortingprigresslabel->Size = System::Drawing::Size(255, 36);
+			this->sortingprigresslabel->TabIndex = 10;
+			this->sortingprigresslabel->Text = L"Sorting Progress";
+			// 
+			// stackprogresslabel
+			// 
+			this->stackprogresslabel->AutoSize = true;
+			this->stackprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->stackprogresslabel->Location = System::Drawing::Point(82, 507);
+			this->stackprogresslabel->Name = L"stackprogresslabel";
+			this->stackprogresslabel->Size = System::Drawing::Size(231, 36);
+			this->stackprogresslabel->TabIndex = 11;
+			this->stackprogresslabel->Text = L"Stack Progress";
+			// 
+			// queueprogresslabel
+			// 
+			this->queueprogresslabel->AutoSize = true;
+			this->queueprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->queueprogresslabel->Location = System::Drawing::Point(82, 604);
+			this->queueprogresslabel->Name = L"queueprogresslabel";
+			this->queueprogresslabel->Size = System::Drawing::Size(245, 36);
+			this->queueprogresslabel->TabIndex = 12;
+			this->queueprogresslabel->Text = L"Queue Progress";
+			// 
 			// Homepage
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1280, 770);
-			this->Controls->Add(this->Profilepanel);
 			this->Controls->Add(this->Homepanel);
+			this->Controls->Add(this->Profilepanel);
 			this->Controls->Add(this->DSpanel);
 			this->Controls->Add(this->Headerstatuspanel);
 			this->Controls->Add(this->HeaderPanel);
@@ -1304,6 +1489,52 @@ private: System::Void HeaderHomebutton_Click(System::Object^  sender, System::Ev
 			 HeaderDSButton->BackColor=Color::Black;
 			 HeaderForumbutton->BackColor=Color::Black;
 			 HeaderProfilebutton->BackColor=Color::Black;
+
+			 //retrieving progress info
+			 try
+			 {
+				 connection->Open();
+				 command->Connection=connection;
+
+				 query="Select ArraysProgress From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 array_progress=command->ExecuteScalar()->ToString();
+
+				 query="Select LinkedListProgress From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 ll_progress=command->ExecuteScalar()->ToString();
+
+				 query="Select SearchingProgress From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 searching_progress=command->ExecuteScalar()->ToString();
+
+				 query="Select SortingProgress From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 sorting_progress=command->ExecuteScalar()->ToString();
+
+				 query="Select StacksProgress From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 stack_progress=command->ExecuteScalar()->ToString();
+
+				 query="Select QueuesProgress From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 queue_progress=command->ExecuteScalar()->ToString();
+
+
+				 connection->Close();
+			 }
+			 catch (Exception ^ex)
+			 {
+			 	MessageBox::Show(ex->Message,"Error While reading data for Progress");
+			 }
+
+			 ArrayprogressBar->Value=Convert::ToInt32(array_progress);
+			 llprogressBar->Value=Convert::ToInt32(ll_progress);
+			 searchingprogressBar->Value=Convert::ToInt32(searching_progress);
+			 sortingprogressBar->Value=Convert::ToInt32(sorting_progress);
+			 stackprogressBar->Value=Convert::ToInt32(stack_progress);
+			 queueprogressBar->Value=Convert::ToInt32(queue_progress);
+			 
 		 }
 private: System::Void HeaderDSButton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Homepanel->Hide();
@@ -1776,6 +2007,8 @@ private: System::Void ProfileSecuritySavebutton_Click(System::Object^  sender, S
 		 }
 private: System::Void HeaderLogoutbutton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 this->Close();
+		 }
+private: System::Void progressBar2_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
 };
 }
