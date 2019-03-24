@@ -6,6 +6,7 @@
 #include <ctime> 
 #include <cstdlib>
 
+
 namespace Login_HomePage {
 
 	using namespace System;
@@ -49,6 +50,7 @@ namespace Login_HomePage {
 	String ^query;
 	String ^email_code;
 	String ^new_email;
+	
 	OleDb::OleDbConnection ^connection;
 	private: System::Windows::Forms::OpenFileDialog^  ProfileopenFileDialog;
 	private: System::Windows::Forms::Label^  ProfilePicturelabel;
@@ -73,6 +75,18 @@ namespace Login_HomePage {
 	private: System::Windows::Forms::Label^  searchingprogresslabel;
 	private: System::Windows::Forms::Label^  llprogresslabel;
 	private: System::Windows::Forms::Label^  Arrayprogresslabel;
+
+
+
+	private: System::Windows::Forms::PictureBox^  HeaderStatusPanelpictureBox5;
+	private: System::Windows::Forms::Panel^  panel2;
+	private: System::Windows::Forms::Panel^  panel1;
+	private: System::Windows::Forms::Panel^  panel3;
+	private: System::Windows::Forms::Panel^  panel7;
+	private: System::Windows::Forms::Panel^  panel6;
+	public: System::Windows::Forms::TextBox^  vartextBox;
+	private: 
+
 	public: 
 
 	public: 
@@ -88,14 +102,14 @@ namespace Login_HomePage {
 				//Dim e_mail As New MailMessage()
 				MailMessage ^e_mail;
 				Smtp_Server->UseDefaultCredentials = false;
-				Smtp_Server->Credentials = gcnew Net::NetworkCredential("iitgleave@gmail.com", "abcd@1234");
+				Smtp_Server->Credentials = gcnew Net::NetworkCredential("dslearningapp@gmail.com", "data4321");
 				Smtp_Server->Port = 587;
 				Smtp_Server->EnableSsl = true;
 				Smtp_Server->Host = "smtp.gmail.com";
 
 				e_mail = gcnew MailMessage;
 				//Hard coded sender id
-				e_mail->From = gcnew MailAddress("iitgleave@gmail.com");
+				e_mail->From = gcnew MailAddress("dslearningapp@gmail.com");
 				e_mail->To->Add(sendto);
 				e_mail->Subject = subject;
 				e_mail->IsBodyHtml = false;
@@ -121,6 +135,8 @@ namespace Login_HomePage {
 			//
 			//TODO: Add the constructor code here
 			//
+			//MessageBox::Show("inside homepage "+username);
+			username=vartextBox->Text;
 			String ^projdirectory= System::IO::Directory::GetCurrentDirectory();
 			//MessageBox::Show(projdirectory);
 			String ^databasepath=projdirectory->Replace("Login_HomePage","Database.accdb");
@@ -131,145 +147,15 @@ namespace Login_HomePage {
 			}
 			catch(Exception ^ex)
 			{
-				MessageBox::Show(ex->Message);
+				MessageBox::Show(ex->Message,"Error while connecting to DB from Home Page");
 
 			}
 
-			username="sid";
+			//username="sid";
 
 				//Retrieving user info
-			try
-			{
-				connection->Open();
-				command=gcnew OleDbCommand;
-				command->Connection=connection;
-
-				query="Select FirstName From Users Where Username = '"+username+"';";
-				command->CommandText=query;
-				first_name=command->ExecuteScalar()->ToString();
-
-				query="Select LastName From Users Where Username = '"+username+"';";
-				command->CommandText=query;
-				last_name=command->ExecuteScalar()->ToString();
-
-				query="Select UserId From Users Where Username = '"+username+"';";
-				command->CommandText=query;
-				userid=(command->ExecuteScalar()->ToString());
-
-
-				query="Select Password From Users Where Username = '"+username+"';";
-				command->CommandText=query;
-				password=command->ExecuteScalar()->ToString();
-
-				query="Select Email From Users Where Username = '"+username+"';";
-				command->CommandText=query;
-				email=command->ExecuteScalar()->ToString();
-
-				query="Select Contact From Users Where Username = '"+username+"';";
-				command->CommandText=query;
-				contact=command->ExecuteScalar()->ToString();
-
-
-
-				query="Select IsApproved From Users Where Username = '"+username+"';";
-				command->CommandText=query;
-				isapproved=command->ExecuteScalar()->ToString();
-
-				query="Select Designation From Users Where Username = '"+username+"';";
-				command->CommandText=query;
-				designation=command->ExecuteScalar()->ToString();
-
-				query="Select ArraysProgress From Users Where Username = '"+username+"';";
-				command->CommandText=query;
-				array_progress=command->ExecuteScalar()->ToString();
-
-				query="Select LinkedListProgress From Users Where Username = '"+username+"';";
-				command->CommandText=query;
-				ll_progress=command->ExecuteScalar()->ToString();
-
-				query="Select SearchingProgress From Users Where Username = '"+username+"';";
-				command->CommandText=query;
-				searching_progress=command->ExecuteScalar()->ToString();
-
-				query="Select SortingProgress From Users Where Username = '"+username+"';";
-				command->CommandText=query;
-				sorting_progress=command->ExecuteScalar()->ToString();
-
-				query="Select StacksProgress From Users Where Username = '"+username+"';";
-				command->CommandText=query;
-				stack_progress=command->ExecuteScalar()->ToString();
-
-				query="Select QueuesProgress From Users Where Username = '"+username+"';";
-				command->CommandText=query;
-				queue_progress=command->ExecuteScalar()->ToString();
-
-
-				connection->Close();
-			}
-			catch (Exception ^ex)
-			{	
-				MessageBox::Show(ex->Message,"Error while reading data on LOAD");
-			}
 			
 				
-
-				//progress bars
-				ArrayprogressBar->Value=Convert::ToInt32(array_progress);
-				llprogressBar->Value=Convert::ToInt32(ll_progress);
-				searchingprogressBar->Value=Convert::ToInt32(searching_progress);
-				sortingprogressBar->Value=Convert::ToInt32(sorting_progress);
-				stackprogressBar->Value=Convert::ToInt32(stack_progress);
-				queueprogressBar->Value=Convert::ToInt32(queue_progress);
-
-				//Homepanel is shown by default
-				Profilepanel->Hide();
-				DSpanel->Hide();
-				Homepanel->Show();
-				HeaderStatusPanelpictureBox1->BackColor=Color::Red;
-				HeaderHomebutton->BackColor=Color::Gray;
-
-				//Checking and setting profile picture if it exists
-				
-				String ^destinationpath=projdirectory->Replace("Login_HomePage","profilepic\\"+username+".jpg");
-				if(IO::File::Exists(destinationpath))
-				{
-					System::IO::FileStream ^fs;
-					fs=gcnew System::IO::FileStream(destinationpath, IO::FileMode::Open, IO::FileAccess::Read);
-					ProfilepictureBox->Image=System::Drawing::Image::FromStream(fs);
-					ProfilepictureBox->SizeMode=PictureBoxSizeMode::StretchImage;
-					fs->Close();
-
-				}
-
-				//Profile panel textboxes should be read only
-				ProfileFirstNametextBox->Enabled=0;
-				ProfileLastNametextBox->Enabled=0;
-				ProfileemailtextBox->Enabled=0;
-				ProfileUsernametextBox->Enabled=0;
-				ProfileDesignationtextBox->Enabled=0;
-				ProfileContacttextBox->Enabled=0;
-
-				//Reading security questions
-				try
-				{
-					connection->Open();
-					command->Connection=connection;
-					query = "Select * From SQuestions; ";
-					command->CommandText=query;
-					OleDbDataReader ^reader=command->ExecuteReader();
-					while(reader->Read())
-					{
-						String ^ques=reader->GetString(1);
-						ProfileSecuritycomboBox->Items->Add(ques);
-
-					}
-					//command->Dispose();
-					connection->Close();
-				}
-				catch (Exception ^ex)
-				{
-					MessageBox::Show(ex->Message,"Error while reading data (Security Questions)");
-				}
 
 		}
 
@@ -298,11 +184,13 @@ namespace Login_HomePage {
 	private: System::Windows::Forms::Button^  HeaderClosebutton;
 	private: System::Windows::Forms::Panel^  Headerstatuspanel;
 	private: System::Windows::Forms::PictureBox^  HeaderStatusPanelpictureBox4;
-	private: System::Windows::Forms::PictureBox^  HeaderStatusPanelpictureBox5;
+
 	private: System::Windows::Forms::PictureBox^  HeaderStatusPanelpictureBox2;
 	private: System::Windows::Forms::PictureBox^  HeaderStatusPanelpictureBox3;
 	private: System::Windows::Forms::PictureBox^  HeaderStatusPanelpictureBox1;
-	private: System::Windows::Forms::Panel^  Homepanel;
+public: System::Windows::Forms::Panel^  Homepanel;
+private: 
+
 	private: System::Windows::Forms::Panel^  DSpanel;
 	private: System::Windows::Forms::Panel^  Profilepanel;
 	private: System::Windows::Forms::Panel^  Profilepanel5;
@@ -420,9 +308,46 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderStatusPanelpictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->HeaderStatusPanelpictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->Homepanel = (gcnew System::Windows::Forms::Panel());
+			this->vartextBox = (gcnew System::Windows::Forms::TextBox());
+			this->panel7 = (gcnew System::Windows::Forms::Panel());
+			this->panel6 = (gcnew System::Windows::Forms::Panel());
+			this->queueprogresslabel = (gcnew System::Windows::Forms::Label());
+			this->stackprogresslabel = (gcnew System::Windows::Forms::Label());
+			this->sortingprigresslabel = (gcnew System::Windows::Forms::Label());
+			this->searchingprogresslabel = (gcnew System::Windows::Forms::Label());
+			this->llprogresslabel = (gcnew System::Windows::Forms::Label());
+			this->Arrayprogresslabel = (gcnew System::Windows::Forms::Label());
+			this->queueprogressBar = (gcnew System::Windows::Forms::ProgressBar());
+			this->stackprogressBar = (gcnew System::Windows::Forms::ProgressBar());
+			this->sortingprogressBar = (gcnew System::Windows::Forms::ProgressBar());
+			this->searchingprogressBar = (gcnew System::Windows::Forms::ProgressBar());
+			this->llprogressBar = (gcnew System::Windows::Forms::ProgressBar());
+			this->ArrayprogressBar = (gcnew System::Windows::Forms::ProgressBar());
 			this->HomeTitlelabel = (gcnew System::Windows::Forms::Label());
 			this->DSpanel = (gcnew System::Windows::Forms::Panel());
 			this->Profilepanel = (gcnew System::Windows::Forms::Panel());
+			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->ProfilepictureBox = (gcnew System::Windows::Forms::PictureBox());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->Profilepanel6 = (gcnew System::Windows::Forms::Panel());
+			this->ProfileContacttextBox = (gcnew System::Windows::Forms::TextBox());
+			this->ProfileContactlabel = (gcnew System::Windows::Forms::Label());
+			this->Profilepanel5 = (gcnew System::Windows::Forms::Panel());
+			this->ProfileemailtextBox = (gcnew System::Windows::Forms::TextBox());
+			this->ProfileEmaillabel = (gcnew System::Windows::Forms::Label());
+			this->Profilepanel4 = (gcnew System::Windows::Forms::Panel());
+			this->ProfileDesignationtextBox = (gcnew System::Windows::Forms::TextBox());
+			this->ProfileDesignationlabel = (gcnew System::Windows::Forms::Label());
+			this->Profilepanel3 = (gcnew System::Windows::Forms::Panel());
+			this->ProfileLastNametextBox = (gcnew System::Windows::Forms::TextBox());
+			this->ProfileLastLabellabel = (gcnew System::Windows::Forms::Label());
+			this->Profilepanel2 = (gcnew System::Windows::Forms::Panel());
+			this->ProfileFirstNametextBox = (gcnew System::Windows::Forms::TextBox());
+			this->ProfileFirstNamelabel = (gcnew System::Windows::Forms::Label());
+			this->Profilepanel1 = (gcnew System::Windows::Forms::Panel());
+			this->ProfileUsernametextBox = (gcnew System::Windows::Forms::TextBox());
+			this->ProfileUsernamelabel = (gcnew System::Windows::Forms::Label());
 			this->Profilecodebutton = (gcnew System::Windows::Forms::Button());
 			this->ProfilecodetextBox = (gcnew System::Windows::Forms::TextBox());
 			this->ProfileErrorlabel = (gcnew System::Windows::Forms::Label());
@@ -449,39 +374,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->ProfileSavebutton = (gcnew System::Windows::Forms::Button());
 			this->ProfileEditbutton = (gcnew System::Windows::Forms::Button());
-			this->Profilepanel6 = (gcnew System::Windows::Forms::Panel());
-			this->ProfileContacttextBox = (gcnew System::Windows::Forms::TextBox());
-			this->ProfileContactlabel = (gcnew System::Windows::Forms::Label());
-			this->Profilepanel5 = (gcnew System::Windows::Forms::Panel());
-			this->ProfileemailtextBox = (gcnew System::Windows::Forms::TextBox());
-			this->ProfileEmaillabel = (gcnew System::Windows::Forms::Label());
-			this->Profilepanel4 = (gcnew System::Windows::Forms::Panel());
-			this->ProfileDesignationtextBox = (gcnew System::Windows::Forms::TextBox());
-			this->ProfileDesignationlabel = (gcnew System::Windows::Forms::Label());
-			this->Profilepanel3 = (gcnew System::Windows::Forms::Panel());
-			this->ProfileLastNametextBox = (gcnew System::Windows::Forms::TextBox());
-			this->ProfileLastLabellabel = (gcnew System::Windows::Forms::Label());
-			this->Profilepanel2 = (gcnew System::Windows::Forms::Panel());
-			this->ProfileFirstNametextBox = (gcnew System::Windows::Forms::TextBox());
-			this->ProfileFirstNamelabel = (gcnew System::Windows::Forms::Label());
-			this->Profilepanel1 = (gcnew System::Windows::Forms::Panel());
-			this->ProfileUsernametextBox = (gcnew System::Windows::Forms::TextBox());
-			this->ProfileUsernamelabel = (gcnew System::Windows::Forms::Label());
 			this->ProfilePictureChangebutton = (gcnew System::Windows::Forms::Button());
-			this->ProfilepictureBox = (gcnew System::Windows::Forms::PictureBox());
 			this->ProfileopenFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
-			this->ArrayprogressBar = (gcnew System::Windows::Forms::ProgressBar());
-			this->llprogressBar = (gcnew System::Windows::Forms::ProgressBar());
-			this->searchingprogressBar = (gcnew System::Windows::Forms::ProgressBar());
-			this->sortingprogressBar = (gcnew System::Windows::Forms::ProgressBar());
-			this->stackprogressBar = (gcnew System::Windows::Forms::ProgressBar());
-			this->queueprogressBar = (gcnew System::Windows::Forms::ProgressBar());
-			this->Arrayprogresslabel = (gcnew System::Windows::Forms::Label());
-			this->llprogresslabel = (gcnew System::Windows::Forms::Label());
-			this->searchingprogresslabel = (gcnew System::Windows::Forms::Label());
-			this->sortingprigresslabel = (gcnew System::Windows::Forms::Label());
-			this->stackprogresslabel = (gcnew System::Windows::Forms::Label());
-			this->queueprogresslabel = (gcnew System::Windows::Forms::Label());
 			this->HeaderPanel->SuspendLayout();
 			this->Headerstatuspanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox4))->BeginInit();
@@ -490,13 +384,18 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox1))->BeginInit();
 			this->Homepanel->SuspendLayout();
+			this->panel7->SuspendLayout();
+			this->panel6->SuspendLayout();
 			this->Profilepanel->SuspendLayout();
+			this->panel3->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfilepictureBox))->BeginInit();
+			this->panel2->SuspendLayout();
+			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileSecuritypictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileSecuritypictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfilepictureBox))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// HeaderPanel
@@ -518,7 +417,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// HeaderClosebutton
 			// 
-			this->HeaderClosebutton->BackColor = System::Drawing::Color::Red;
+			this->HeaderClosebutton->BackColor = System::Drawing::Color::White;
 			this->HeaderClosebutton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"HeaderClosebutton.BackgroundImage")));
 			this->HeaderClosebutton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->HeaderClosebutton->Cursor = System::Windows::Forms::Cursors::Hand;
@@ -529,6 +428,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderClosebutton->TabIndex = 4;
 			this->HeaderClosebutton->UseVisualStyleBackColor = false;
 			this->HeaderClosebutton->Click += gcnew System::EventHandler(this, &Homepage::HeaderClosebutton_Click);
+			this->HeaderClosebutton->MouseEnter += gcnew System::EventHandler(this, &Homepage::HeaderClosebutton_MouseEnter);
+			this->HeaderClosebutton->MouseLeave += gcnew System::EventHandler(this, &Homepage::HeaderClosebutton_MouseLeave);
 			// 
 			// HeaderLogoutbutton
 			// 
@@ -538,7 +439,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 				static_cast<System::Byte>(0)));
 			this->HeaderLogoutbutton->Location = System::Drawing::Point(984, 0);
 			this->HeaderLogoutbutton->Name = L"HeaderLogoutbutton";
-			this->HeaderLogoutbutton->Size = System::Drawing::Size(189, 50);
+			this->HeaderLogoutbutton->Size = System::Drawing::Size(192, 50);
 			this->HeaderLogoutbutton->TabIndex = 2;
 			this->HeaderLogoutbutton->Text = L"LOGOUT";
 			this->HeaderLogoutbutton->UseVisualStyleBackColor = true;
@@ -658,18 +559,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// Homepanel
 			// 
 			this->Homepanel->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->Homepanel->Controls->Add(this->queueprogresslabel);
-			this->Homepanel->Controls->Add(this->stackprogresslabel);
-			this->Homepanel->Controls->Add(this->sortingprigresslabel);
-			this->Homepanel->Controls->Add(this->searchingprogresslabel);
-			this->Homepanel->Controls->Add(this->llprogresslabel);
-			this->Homepanel->Controls->Add(this->Arrayprogresslabel);
-			this->Homepanel->Controls->Add(this->queueprogressBar);
-			this->Homepanel->Controls->Add(this->stackprogressBar);
-			this->Homepanel->Controls->Add(this->sortingprogressBar);
-			this->Homepanel->Controls->Add(this->searchingprogressBar);
-			this->Homepanel->Controls->Add(this->llprogressBar);
-			this->Homepanel->Controls->Add(this->ArrayprogressBar);
+			this->Homepanel->Controls->Add(this->vartextBox);
+			this->Homepanel->Controls->Add(this->panel7);
 			this->Homepanel->Controls->Add(this->HomeTitlelabel);
 			this->Homepanel->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->Homepanel->Location = System::Drawing::Point(0, 65);
@@ -677,6 +568,166 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Homepanel->Name = L"Homepanel";
 			this->Homepanel->Size = System::Drawing::Size(1280, 705);
 			this->Homepanel->TabIndex = 7;
+			// 
+			// vartextBox
+			// 
+			this->vartextBox->Location = System::Drawing::Point(989, 36);
+			this->vartextBox->Name = L"vartextBox";
+			this->vartextBox->Size = System::Drawing::Size(206, 22);
+			this->vartextBox->TabIndex = 15;
+			this->vartextBox->Visible = false;
+			this->vartextBox->TextChanged += gcnew System::EventHandler(this, &Homepage::vartextBox_TextChanged);
+			// 
+			// panel7
+			// 
+			this->panel7->BackColor = System::Drawing::Color::Navy;
+			this->panel7->Controls->Add(this->panel6);
+			this->panel7->Location = System::Drawing::Point(71, 81);
+			this->panel7->Margin = System::Windows::Forms::Padding(0);
+			this->panel7->Name = L"panel7";
+			this->panel7->Size = System::Drawing::Size(1126, 607);
+			this->panel7->TabIndex = 14;
+			// 
+			// panel6
+			// 
+			this->panel6->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->panel6->Controls->Add(this->queueprogresslabel);
+			this->panel6->Controls->Add(this->stackprogresslabel);
+			this->panel6->Controls->Add(this->sortingprigresslabel);
+			this->panel6->Controls->Add(this->searchingprogresslabel);
+			this->panel6->Controls->Add(this->llprogresslabel);
+			this->panel6->Controls->Add(this->Arrayprogresslabel);
+			this->panel6->Controls->Add(this->queueprogressBar);
+			this->panel6->Controls->Add(this->stackprogressBar);
+			this->panel6->Controls->Add(this->sortingprogressBar);
+			this->panel6->Controls->Add(this->searchingprogressBar);
+			this->panel6->Controls->Add(this->llprogressBar);
+			this->panel6->Controls->Add(this->ArrayprogressBar);
+			this->panel6->Location = System::Drawing::Point(9, 9);
+			this->panel6->Name = L"panel6";
+			this->panel6->Size = System::Drawing::Size(1109, 586);
+			this->panel6->TabIndex = 13;
+			// 
+			// queueprogresslabel
+			// 
+			this->queueprogresslabel->AutoSize = true;
+			this->queueprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->queueprogresslabel->Location = System::Drawing::Point(3, 495);
+			this->queueprogresslabel->Name = L"queueprogresslabel";
+			this->queueprogresslabel->Size = System::Drawing::Size(245, 36);
+			this->queueprogresslabel->TabIndex = 12;
+			this->queueprogresslabel->Text = L"Queue Progress";
+			// 
+			// stackprogresslabel
+			// 
+			this->stackprogresslabel->AutoSize = true;
+			this->stackprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->stackprogresslabel->Location = System::Drawing::Point(3, 398);
+			this->stackprogresslabel->Name = L"stackprogresslabel";
+			this->stackprogresslabel->Size = System::Drawing::Size(231, 36);
+			this->stackprogresslabel->TabIndex = 11;
+			this->stackprogresslabel->Text = L"Stack Progress";
+			// 
+			// sortingprigresslabel
+			// 
+			this->sortingprigresslabel->AutoSize = true;
+			this->sortingprigresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->sortingprigresslabel->Location = System::Drawing::Point(3, 310);
+			this->sortingprigresslabel->Name = L"sortingprigresslabel";
+			this->sortingprigresslabel->Size = System::Drawing::Size(255, 36);
+			this->sortingprigresslabel->TabIndex = 10;
+			this->sortingprigresslabel->Text = L"Sorting Progress";
+			// 
+			// searchingprogresslabel
+			// 
+			this->searchingprogresslabel->AutoSize = true;
+			this->searchingprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->searchingprogresslabel->Location = System::Drawing::Point(3, 213);
+			this->searchingprogresslabel->Name = L"searchingprogresslabel";
+			this->searchingprogresslabel->Size = System::Drawing::Size(296, 36);
+			this->searchingprogresslabel->TabIndex = 9;
+			this->searchingprogresslabel->Text = L"Searching Progress";
+			// 
+			// llprogresslabel
+			// 
+			this->llprogresslabel->AutoSize = true;
+			this->llprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->llprogresslabel->Location = System::Drawing::Point(3, 107);
+			this->llprogresslabel->Name = L"llprogresslabel";
+			this->llprogresslabel->Size = System::Drawing::Size(307, 36);
+			this->llprogresslabel->TabIndex = 8;
+			this->llprogresslabel->Text = L"Linked List Progress";
+			// 
+			// Arrayprogresslabel
+			// 
+			this->Arrayprogresslabel->AutoSize = true;
+			this->Arrayprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->Arrayprogresslabel->Location = System::Drawing::Point(3, 6);
+			this->Arrayprogresslabel->Name = L"Arrayprogresslabel";
+			this->Arrayprogresslabel->Size = System::Drawing::Size(229, 36);
+			this->Arrayprogresslabel->TabIndex = 7;
+			this->Arrayprogresslabel->Text = L"Array Progress";
+			// 
+			// queueprogressBar
+			// 
+			this->queueprogressBar->ForeColor = System::Drawing::Color::Blue;
+			this->queueprogressBar->Location = System::Drawing::Point(9, 537);
+			this->queueprogressBar->Maximum = 5;
+			this->queueprogressBar->Name = L"queueprogressBar";
+			this->queueprogressBar->Size = System::Drawing::Size(1085, 35);
+			this->queueprogressBar->TabIndex = 6;
+			// 
+			// stackprogressBar
+			// 
+			this->stackprogressBar->ForeColor = System::Drawing::Color::Blue;
+			this->stackprogressBar->Location = System::Drawing::Point(9, 444);
+			this->stackprogressBar->Maximum = 5;
+			this->stackprogressBar->Name = L"stackprogressBar";
+			this->stackprogressBar->Size = System::Drawing::Size(1085, 35);
+			this->stackprogressBar->TabIndex = 5;
+			// 
+			// sortingprogressBar
+			// 
+			this->sortingprogressBar->ForeColor = System::Drawing::Color::Blue;
+			this->sortingprogressBar->Location = System::Drawing::Point(9, 349);
+			this->sortingprogressBar->Maximum = 5;
+			this->sortingprogressBar->Name = L"sortingprogressBar";
+			this->sortingprogressBar->Size = System::Drawing::Size(1085, 35);
+			this->sortingprogressBar->TabIndex = 4;
+			// 
+			// searchingprogressBar
+			// 
+			this->searchingprogressBar->ForeColor = System::Drawing::Color::Blue;
+			this->searchingprogressBar->Location = System::Drawing::Point(9, 256);
+			this->searchingprogressBar->Maximum = 5;
+			this->searchingprogressBar->Name = L"searchingprogressBar";
+			this->searchingprogressBar->Size = System::Drawing::Size(1085, 35);
+			this->searchingprogressBar->TabIndex = 3;
+			this->searchingprogressBar->Click += gcnew System::EventHandler(this, &Homepage::progressBar2_Click);
+			// 
+			// llprogressBar
+			// 
+			this->llprogressBar->ForeColor = System::Drawing::Color::Blue;
+			this->llprogressBar->Location = System::Drawing::Point(9, 154);
+			this->llprogressBar->Maximum = 5;
+			this->llprogressBar->Name = L"llprogressBar";
+			this->llprogressBar->Size = System::Drawing::Size(1085, 35);
+			this->llprogressBar->TabIndex = 2;
+			// 
+			// ArrayprogressBar
+			// 
+			this->ArrayprogressBar->ForeColor = System::Drawing::Color::Blue;
+			this->ArrayprogressBar->Location = System::Drawing::Point(9, 53);
+			this->ArrayprogressBar->Maximum = 5;
+			this->ArrayprogressBar->Name = L"ArrayprogressBar";
+			this->ArrayprogressBar->Size = System::Drawing::Size(1085, 35);
+			this->ArrayprogressBar->TabIndex = 1;
 			// 
 			// HomeTitlelabel
 			// 
@@ -701,6 +752,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// Profilepanel
 			// 
 			this->Profilepanel->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->Profilepanel->Controls->Add(this->panel3);
+			this->Profilepanel->Controls->Add(this->panel2);
 			this->Profilepanel->Controls->Add(this->Profilecodebutton);
 			this->Profilepanel->Controls->Add(this->ProfilecodetextBox);
 			this->Profilepanel->Controls->Add(this->ProfileErrorlabel);
@@ -727,32 +780,249 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Profilepanel->Controls->Add(this->label1);
 			this->Profilepanel->Controls->Add(this->ProfileSavebutton);
 			this->Profilepanel->Controls->Add(this->ProfileEditbutton);
-			this->Profilepanel->Controls->Add(this->Profilepanel6);
-			this->Profilepanel->Controls->Add(this->ProfileContacttextBox);
-			this->Profilepanel->Controls->Add(this->ProfileContactlabel);
-			this->Profilepanel->Controls->Add(this->Profilepanel5);
-			this->Profilepanel->Controls->Add(this->ProfileemailtextBox);
-			this->Profilepanel->Controls->Add(this->ProfileEmaillabel);
-			this->Profilepanel->Controls->Add(this->Profilepanel4);
-			this->Profilepanel->Controls->Add(this->ProfileDesignationtextBox);
-			this->Profilepanel->Controls->Add(this->ProfileDesignationlabel);
-			this->Profilepanel->Controls->Add(this->Profilepanel3);
-			this->Profilepanel->Controls->Add(this->ProfileLastNametextBox);
-			this->Profilepanel->Controls->Add(this->ProfileLastLabellabel);
-			this->Profilepanel->Controls->Add(this->Profilepanel2);
-			this->Profilepanel->Controls->Add(this->ProfileFirstNametextBox);
-			this->Profilepanel->Controls->Add(this->ProfileFirstNamelabel);
-			this->Profilepanel->Controls->Add(this->Profilepanel1);
-			this->Profilepanel->Controls->Add(this->ProfileUsernametextBox);
-			this->Profilepanel->Controls->Add(this->ProfileUsernamelabel);
 			this->Profilepanel->Controls->Add(this->ProfilePictureChangebutton);
-			this->Profilepanel->Controls->Add(this->ProfilepictureBox);
 			this->Profilepanel->Location = System::Drawing::Point(0, 65);
 			this->Profilepanel->Margin = System::Windows::Forms::Padding(0);
 			this->Profilepanel->Name = L"Profilepanel";
 			this->Profilepanel->Size = System::Drawing::Size(1280, 705);
 			this->Profilepanel->TabIndex = 12;
 			this->Profilepanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Homepage::Profilepanel_Paint);
+			// 
+			// panel3
+			// 
+			this->panel3->BackColor = System::Drawing::Color::White;
+			this->panel3->Controls->Add(this->ProfilepictureBox);
+			this->panel3->Location = System::Drawing::Point(989, 19);
+			this->panel3->Margin = System::Windows::Forms::Padding(0);
+			this->panel3->Name = L"panel3";
+			this->panel3->Size = System::Drawing::Size(278, 297);
+			this->panel3->TabIndex = 49;
+			// 
+			// ProfilepictureBox
+			// 
+			this->ProfilepictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfilepictureBox.BackgroundImage")));
+			this->ProfilepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ProfilepictureBox->Location = System::Drawing::Point(9, 6);
+			this->ProfilepictureBox->Name = L"ProfilepictureBox";
+			this->ProfilepictureBox->Size = System::Drawing::Size(260, 284);
+			this->ProfilepictureBox->TabIndex = 0;
+			this->ProfilepictureBox->TabStop = false;
+			// 
+			// panel2
+			// 
+			this->panel2->BackColor = System::Drawing::Color::Navy;
+			this->panel2->Controls->Add(this->panel1);
+			this->panel2->Location = System::Drawing::Point(26, 9);
+			this->panel2->Margin = System::Windows::Forms::Padding(0);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(765, 378);
+			this->panel2->TabIndex = 48;
+			// 
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->panel1->Controls->Add(this->Profilepanel6);
+			this->panel1->Controls->Add(this->ProfileContacttextBox);
+			this->panel1->Controls->Add(this->ProfileContactlabel);
+			this->panel1->Controls->Add(this->Profilepanel5);
+			this->panel1->Controls->Add(this->ProfileemailtextBox);
+			this->panel1->Controls->Add(this->ProfileEmaillabel);
+			this->panel1->Controls->Add(this->Profilepanel4);
+			this->panel1->Controls->Add(this->ProfileDesignationtextBox);
+			this->panel1->Controls->Add(this->ProfileDesignationlabel);
+			this->panel1->Controls->Add(this->Profilepanel3);
+			this->panel1->Controls->Add(this->ProfileLastNametextBox);
+			this->panel1->Controls->Add(this->ProfileLastLabellabel);
+			this->panel1->Controls->Add(this->Profilepanel2);
+			this->panel1->Controls->Add(this->ProfileFirstNametextBox);
+			this->panel1->Controls->Add(this->ProfileFirstNamelabel);
+			this->panel1->Controls->Add(this->Profilepanel1);
+			this->panel1->Controls->Add(this->ProfileUsernametextBox);
+			this->panel1->Controls->Add(this->ProfileUsernamelabel);
+			this->panel1->Location = System::Drawing::Point(7, 8);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(753, 364);
+			this->panel1->TabIndex = 47;
+			// 
+			// Profilepanel6
+			// 
+			this->Profilepanel6->BackColor = System::Drawing::Color::Navy;
+			this->Profilepanel6->Location = System::Drawing::Point(6, 351);
+			this->Profilepanel6->Name = L"Profilepanel6";
+			this->Profilepanel6->Size = System::Drawing::Size(740, 2);
+			this->Profilepanel6->TabIndex = 19;
+			// 
+			// ProfileContacttextBox
+			// 
+			this->ProfileContacttextBox->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->ProfileContacttextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->ProfileContacttextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfileContacttextBox->Location = System::Drawing::Point(121, 314);
+			this->ProfileContacttextBox->Name = L"ProfileContacttextBox";
+			this->ProfileContacttextBox->Size = System::Drawing::Size(625, 34);
+			this->ProfileContacttextBox->TabIndex = 18;
+			// 
+			// ProfileContactlabel
+			// 
+			this->ProfileContactlabel->AutoSize = true;
+			this->ProfileContactlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfileContactlabel->Location = System::Drawing::Point(0, 312);
+			this->ProfileContactlabel->Name = L"ProfileContactlabel";
+			this->ProfileContactlabel->Size = System::Drawing::Size(125, 36);
+			this->ProfileContactlabel->TabIndex = 17;
+			this->ProfileContactlabel->Text = L"Contact:";
+			// 
+			// Profilepanel5
+			// 
+			this->Profilepanel5->BackColor = System::Drawing::Color::Navy;
+			this->Profilepanel5->Location = System::Drawing::Point(6, 290);
+			this->Profilepanel5->Name = L"Profilepanel5";
+			this->Profilepanel5->Size = System::Drawing::Size(740, 2);
+			this->Profilepanel5->TabIndex = 16;
+			// 
+			// ProfileemailtextBox
+			// 
+			this->ProfileemailtextBox->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->ProfileemailtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->ProfileemailtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfileemailtextBox->Location = System::Drawing::Point(102, 253);
+			this->ProfileemailtextBox->Name = L"ProfileemailtextBox";
+			this->ProfileemailtextBox->Size = System::Drawing::Size(644, 34);
+			this->ProfileemailtextBox->TabIndex = 15;
+			// 
+			// ProfileEmaillabel
+			// 
+			this->ProfileEmaillabel->AutoSize = true;
+			this->ProfileEmaillabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->ProfileEmaillabel->Location = System::Drawing::Point(0, 251);
+			this->ProfileEmaillabel->Name = L"ProfileEmaillabel";
+			this->ProfileEmaillabel->Size = System::Drawing::Size(96, 36);
+			this->ProfileEmaillabel->TabIndex = 14;
+			this->ProfileEmaillabel->Text = L"Email:";
+			// 
+			// Profilepanel4
+			// 
+			this->Profilepanel4->BackColor = System::Drawing::Color::Navy;
+			this->Profilepanel4->Location = System::Drawing::Point(6, 225);
+			this->Profilepanel4->Name = L"Profilepanel4";
+			this->Profilepanel4->Size = System::Drawing::Size(740, 2);
+			this->Profilepanel4->TabIndex = 13;
+			// 
+			// ProfileDesignationtextBox
+			// 
+			this->ProfileDesignationtextBox->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->ProfileDesignationtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->ProfileDesignationtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfileDesignationtextBox->Location = System::Drawing::Point(187, 188);
+			this->ProfileDesignationtextBox->Name = L"ProfileDesignationtextBox";
+			this->ProfileDesignationtextBox->Size = System::Drawing::Size(559, 34);
+			this->ProfileDesignationtextBox->TabIndex = 12;
+			// 
+			// ProfileDesignationlabel
+			// 
+			this->ProfileDesignationlabel->AutoSize = true;
+			this->ProfileDesignationlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfileDesignationlabel->Location = System::Drawing::Point(0, 186);
+			this->ProfileDesignationlabel->Name = L"ProfileDesignationlabel";
+			this->ProfileDesignationlabel->Size = System::Drawing::Size(181, 36);
+			this->ProfileDesignationlabel->TabIndex = 11;
+			this->ProfileDesignationlabel->Text = L"Designation:";
+			// 
+			// Profilepanel3
+			// 
+			this->Profilepanel3->BackColor = System::Drawing::Color::Navy;
+			this->Profilepanel3->Location = System::Drawing::Point(6, 164);
+			this->Profilepanel3->Name = L"Profilepanel3";
+			this->Profilepanel3->Size = System::Drawing::Size(740, 2);
+			this->Profilepanel3->TabIndex = 10;
+			// 
+			// ProfileLastNametextBox
+			// 
+			this->ProfileLastNametextBox->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->ProfileLastNametextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->ProfileLastNametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfileLastNametextBox->Location = System::Drawing::Point(172, 127);
+			this->ProfileLastNametextBox->Name = L"ProfileLastNametextBox";
+			this->ProfileLastNametextBox->Size = System::Drawing::Size(574, 34);
+			this->ProfileLastNametextBox->TabIndex = 9;
+			// 
+			// ProfileLastLabellabel
+			// 
+			this->ProfileLastLabellabel->AutoSize = true;
+			this->ProfileLastLabellabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfileLastLabellabel->Location = System::Drawing::Point(0, 125);
+			this->ProfileLastLabellabel->Name = L"ProfileLastLabellabel";
+			this->ProfileLastLabellabel->Size = System::Drawing::Size(164, 36);
+			this->ProfileLastLabellabel->TabIndex = 8;
+			this->ProfileLastLabellabel->Text = L"Last Name:";
+			// 
+			// Profilepanel2
+			// 
+			this->Profilepanel2->BackColor = System::Drawing::Color::Navy;
+			this->Profilepanel2->Location = System::Drawing::Point(6, 104);
+			this->Profilepanel2->Name = L"Profilepanel2";
+			this->Profilepanel2->Size = System::Drawing::Size(740, 2);
+			this->Profilepanel2->TabIndex = 7;
+			// 
+			// ProfileFirstNametextBox
+			// 
+			this->ProfileFirstNametextBox->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->ProfileFirstNametextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->ProfileFirstNametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfileFirstNametextBox->Location = System::Drawing::Point(172, 67);
+			this->ProfileFirstNametextBox->Name = L"ProfileFirstNametextBox";
+			this->ProfileFirstNametextBox->Size = System::Drawing::Size(574, 34);
+			this->ProfileFirstNametextBox->TabIndex = 6;
+			// 
+			// ProfileFirstNamelabel
+			// 
+			this->ProfileFirstNamelabel->AutoSize = true;
+			this->ProfileFirstNamelabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfileFirstNamelabel->Location = System::Drawing::Point(0, 65);
+			this->ProfileFirstNamelabel->Name = L"ProfileFirstNamelabel";
+			this->ProfileFirstNamelabel->Size = System::Drawing::Size(166, 36);
+			this->ProfileFirstNamelabel->TabIndex = 5;
+			this->ProfileFirstNamelabel->Text = L"First Name:";
+			// 
+			// Profilepanel1
+			// 
+			this->Profilepanel1->BackColor = System::Drawing::Color::Navy;
+			this->Profilepanel1->Location = System::Drawing::Point(6, 39);
+			this->Profilepanel1->Name = L"Profilepanel1";
+			this->Profilepanel1->Size = System::Drawing::Size(740, 2);
+			this->Profilepanel1->TabIndex = 4;
+			// 
+			// ProfileUsernametextBox
+			// 
+			this->ProfileUsernametextBox->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->ProfileUsernametextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->ProfileUsernametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfileUsernametextBox->Location = System::Drawing::Point(172, 2);
+			this->ProfileUsernametextBox->Name = L"ProfileUsernametextBox";
+			this->ProfileUsernametextBox->Size = System::Drawing::Size(574, 34);
+			this->ProfileUsernametextBox->TabIndex = 3;
+			// 
+			// ProfileUsernamelabel
+			// 
+			this->ProfileUsernamelabel->AutoSize = true;
+			this->ProfileUsernamelabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ProfileUsernamelabel->Location = System::Drawing::Point(0, 0);
+			this->ProfileUsernamelabel->Name = L"ProfileUsernamelabel";
+			this->ProfileUsernamelabel->Size = System::Drawing::Size(158, 36);
+			this->ProfileUsernamelabel->TabIndex = 2;
+			this->ProfileUsernamelabel->Text = L"Username:";
 			// 
 			// Profilecodebutton
 			// 
@@ -776,7 +1046,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 				static_cast<System::Byte>(0)));
 			this->ProfilecodetextBox->Location = System::Drawing::Point(800, 267);
 			this->ProfilecodetextBox->Name = L"ProfilecodetextBox";
-			this->ProfilecodetextBox->Size = System::Drawing::Size(192, 34);
+			this->ProfilecodetextBox->Size = System::Drawing::Size(161, 34);
 			this->ProfilecodetextBox->TabIndex = 45;
 			this->ProfilecodetextBox->Text = L"CODE";
 			// 
@@ -798,7 +1068,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfilePicturelabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ProfilePicturelabel->ForeColor = System::Drawing::Color::Red;
-			this->ProfilePicturelabel->Location = System::Drawing::Point(1012, 390);
+			this->ProfilePicturelabel->Location = System::Drawing::Point(994, 388);
 			this->ProfilePicturelabel->Name = L"ProfilePicturelabel";
 			this->ProfilePicturelabel->Size = System::Drawing::Size(102, 24);
 			this->ProfilePicturelabel->TabIndex = 43;
@@ -1053,186 +1323,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileEditbutton->UseVisualStyleBackColor = false;
 			this->ProfileEditbutton->Click += gcnew System::EventHandler(this, &Homepage::ProfileEditbutton_Click);
 			// 
-			// Profilepanel6
-			// 
-			this->Profilepanel6->BackColor = System::Drawing::Color::Navy;
-			this->Profilepanel6->Location = System::Drawing::Point(33, 365);
-			this->Profilepanel6->Name = L"Profilepanel6";
-			this->Profilepanel6->Size = System::Drawing::Size(740, 2);
-			this->Profilepanel6->TabIndex = 19;
-			// 
-			// ProfileContacttextBox
-			// 
-			this->ProfileContacttextBox->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->ProfileContacttextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->ProfileContacttextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ProfileContacttextBox->Location = System::Drawing::Point(148, 328);
-			this->ProfileContacttextBox->Name = L"ProfileContacttextBox";
-			this->ProfileContacttextBox->Size = System::Drawing::Size(625, 34);
-			this->ProfileContacttextBox->TabIndex = 18;
-			// 
-			// ProfileContactlabel
-			// 
-			this->ProfileContactlabel->AutoSize = true;
-			this->ProfileContactlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ProfileContactlabel->Location = System::Drawing::Point(27, 326);
-			this->ProfileContactlabel->Name = L"ProfileContactlabel";
-			this->ProfileContactlabel->Size = System::Drawing::Size(125, 36);
-			this->ProfileContactlabel->TabIndex = 17;
-			this->ProfileContactlabel->Text = L"Contact:";
-			// 
-			// Profilepanel5
-			// 
-			this->Profilepanel5->BackColor = System::Drawing::Color::Navy;
-			this->Profilepanel5->Location = System::Drawing::Point(33, 304);
-			this->Profilepanel5->Name = L"Profilepanel5";
-			this->Profilepanel5->Size = System::Drawing::Size(740, 2);
-			this->Profilepanel5->TabIndex = 16;
-			// 
-			// ProfileemailtextBox
-			// 
-			this->ProfileemailtextBox->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->ProfileemailtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->ProfileemailtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ProfileemailtextBox->Location = System::Drawing::Point(129, 267);
-			this->ProfileemailtextBox->Name = L"ProfileemailtextBox";
-			this->ProfileemailtextBox->Size = System::Drawing::Size(644, 34);
-			this->ProfileemailtextBox->TabIndex = 15;
-			// 
-			// ProfileEmaillabel
-			// 
-			this->ProfileEmaillabel->AutoSize = true;
-			this->ProfileEmaillabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->ProfileEmaillabel->Location = System::Drawing::Point(27, 265);
-			this->ProfileEmaillabel->Name = L"ProfileEmaillabel";
-			this->ProfileEmaillabel->Size = System::Drawing::Size(96, 36);
-			this->ProfileEmaillabel->TabIndex = 14;
-			this->ProfileEmaillabel->Text = L"Email:";
-			// 
-			// Profilepanel4
-			// 
-			this->Profilepanel4->BackColor = System::Drawing::Color::Navy;
-			this->Profilepanel4->Location = System::Drawing::Point(33, 239);
-			this->Profilepanel4->Name = L"Profilepanel4";
-			this->Profilepanel4->Size = System::Drawing::Size(740, 2);
-			this->Profilepanel4->TabIndex = 13;
-			// 
-			// ProfileDesignationtextBox
-			// 
-			this->ProfileDesignationtextBox->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->ProfileDesignationtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->ProfileDesignationtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ProfileDesignationtextBox->Location = System::Drawing::Point(214, 202);
-			this->ProfileDesignationtextBox->Name = L"ProfileDesignationtextBox";
-			this->ProfileDesignationtextBox->Size = System::Drawing::Size(559, 34);
-			this->ProfileDesignationtextBox->TabIndex = 12;
-			// 
-			// ProfileDesignationlabel
-			// 
-			this->ProfileDesignationlabel->AutoSize = true;
-			this->ProfileDesignationlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ProfileDesignationlabel->Location = System::Drawing::Point(27, 200);
-			this->ProfileDesignationlabel->Name = L"ProfileDesignationlabel";
-			this->ProfileDesignationlabel->Size = System::Drawing::Size(181, 36);
-			this->ProfileDesignationlabel->TabIndex = 11;
-			this->ProfileDesignationlabel->Text = L"Designation:";
-			// 
-			// Profilepanel3
-			// 
-			this->Profilepanel3->BackColor = System::Drawing::Color::Navy;
-			this->Profilepanel3->Location = System::Drawing::Point(33, 178);
-			this->Profilepanel3->Name = L"Profilepanel3";
-			this->Profilepanel3->Size = System::Drawing::Size(740, 2);
-			this->Profilepanel3->TabIndex = 10;
-			// 
-			// ProfileLastNametextBox
-			// 
-			this->ProfileLastNametextBox->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->ProfileLastNametextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->ProfileLastNametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ProfileLastNametextBox->Location = System::Drawing::Point(199, 141);
-			this->ProfileLastNametextBox->Name = L"ProfileLastNametextBox";
-			this->ProfileLastNametextBox->Size = System::Drawing::Size(574, 34);
-			this->ProfileLastNametextBox->TabIndex = 9;
-			// 
-			// ProfileLastLabellabel
-			// 
-			this->ProfileLastLabellabel->AutoSize = true;
-			this->ProfileLastLabellabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ProfileLastLabellabel->Location = System::Drawing::Point(27, 139);
-			this->ProfileLastLabellabel->Name = L"ProfileLastLabellabel";
-			this->ProfileLastLabellabel->Size = System::Drawing::Size(164, 36);
-			this->ProfileLastLabellabel->TabIndex = 8;
-			this->ProfileLastLabellabel->Text = L"Last Name:";
-			// 
-			// Profilepanel2
-			// 
-			this->Profilepanel2->BackColor = System::Drawing::Color::Navy;
-			this->Profilepanel2->Location = System::Drawing::Point(33, 118);
-			this->Profilepanel2->Name = L"Profilepanel2";
-			this->Profilepanel2->Size = System::Drawing::Size(740, 2);
-			this->Profilepanel2->TabIndex = 7;
-			// 
-			// ProfileFirstNametextBox
-			// 
-			this->ProfileFirstNametextBox->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->ProfileFirstNametextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->ProfileFirstNametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ProfileFirstNametextBox->Location = System::Drawing::Point(199, 81);
-			this->ProfileFirstNametextBox->Name = L"ProfileFirstNametextBox";
-			this->ProfileFirstNametextBox->Size = System::Drawing::Size(574, 34);
-			this->ProfileFirstNametextBox->TabIndex = 6;
-			// 
-			// ProfileFirstNamelabel
-			// 
-			this->ProfileFirstNamelabel->AutoSize = true;
-			this->ProfileFirstNamelabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ProfileFirstNamelabel->Location = System::Drawing::Point(27, 79);
-			this->ProfileFirstNamelabel->Name = L"ProfileFirstNamelabel";
-			this->ProfileFirstNamelabel->Size = System::Drawing::Size(166, 36);
-			this->ProfileFirstNamelabel->TabIndex = 5;
-			this->ProfileFirstNamelabel->Text = L"First Name:";
-			// 
-			// Profilepanel1
-			// 
-			this->Profilepanel1->BackColor = System::Drawing::Color::Navy;
-			this->Profilepanel1->Location = System::Drawing::Point(33, 53);
-			this->Profilepanel1->Name = L"Profilepanel1";
-			this->Profilepanel1->Size = System::Drawing::Size(740, 2);
-			this->Profilepanel1->TabIndex = 4;
-			// 
-			// ProfileUsernametextBox
-			// 
-			this->ProfileUsernametextBox->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->ProfileUsernametextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->ProfileUsernametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ProfileUsernametextBox->Location = System::Drawing::Point(199, 16);
-			this->ProfileUsernametextBox->Name = L"ProfileUsernametextBox";
-			this->ProfileUsernametextBox->Size = System::Drawing::Size(574, 34);
-			this->ProfileUsernametextBox->TabIndex = 3;
-			// 
-			// ProfileUsernamelabel
-			// 
-			this->ProfileUsernamelabel->AutoSize = true;
-			this->ProfileUsernamelabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ProfileUsernamelabel->Location = System::Drawing::Point(27, 14);
-			this->ProfileUsernamelabel->Name = L"ProfileUsernamelabel";
-			this->ProfileUsernamelabel->Size = System::Drawing::Size(158, 36);
-			this->ProfileUsernamelabel->TabIndex = 2;
-			this->ProfileUsernamelabel->Text = L"Username:";
-			// 
 			// ProfilePictureChangebutton
 			// 
 			this->ProfilePictureChangebutton->BackColor = System::Drawing::Color::Navy;
@@ -1240,7 +1330,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfilePictureChangebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ProfilePictureChangebutton->ForeColor = System::Drawing::Color::White;
-			this->ProfilePictureChangebutton->Location = System::Drawing::Point(1016, 330);
+			this->ProfilePictureChangebutton->Location = System::Drawing::Point(998, 328);
 			this->ProfilePictureChangebutton->Name = L"ProfilePictureChangebutton";
 			this->ProfilePictureChangebutton->Size = System::Drawing::Size(178, 51);
 			this->ProfilePictureChangebutton->TabIndex = 1;
@@ -1248,147 +1338,10 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfilePictureChangebutton->UseVisualStyleBackColor = false;
 			this->ProfilePictureChangebutton->Click += gcnew System::EventHandler(this, &Homepage::ProfilePictureChangebutton_Click);
 			// 
-			// ProfilepictureBox
-			// 
-			this->ProfilepictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfilepictureBox.BackgroundImage")));
-			this->ProfilepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ProfilepictureBox->Location = System::Drawing::Point(1016, 15);
-			this->ProfilepictureBox->Name = L"ProfilepictureBox";
-			this->ProfilepictureBox->Size = System::Drawing::Size(242, 300);
-			this->ProfilepictureBox->TabIndex = 0;
-			this->ProfilepictureBox->TabStop = false;
-			// 
 			// ProfileopenFileDialog
 			// 
 			this->ProfileopenFileDialog->FileName = L"ProfileopenFileDialog";
 			this->ProfileopenFileDialog->Filter = L"Jpg (*.jpg)|*.jpg";
-			// 
-			// ArrayprogressBar
-			// 
-			this->ArrayprogressBar->ForeColor = System::Drawing::Color::Blue;
-			this->ArrayprogressBar->Location = System::Drawing::Point(88, 162);
-			this->ArrayprogressBar->Maximum = 5;
-			this->ArrayprogressBar->Name = L"ArrayprogressBar";
-			this->ArrayprogressBar->Size = System::Drawing::Size(1085, 35);
-			this->ArrayprogressBar->TabIndex = 1;
-			this->ArrayprogressBar->Value = 1;
-			// 
-			// llprogressBar
-			// 
-			this->llprogressBar->ForeColor = System::Drawing::Color::Blue;
-			this->llprogressBar->Location = System::Drawing::Point(88, 263);
-			this->llprogressBar->Maximum = 5;
-			this->llprogressBar->Name = L"llprogressBar";
-			this->llprogressBar->Size = System::Drawing::Size(1085, 35);
-			this->llprogressBar->TabIndex = 2;
-			this->llprogressBar->Value = 1;
-			// 
-			// searchingprogressBar
-			// 
-			this->searchingprogressBar->ForeColor = System::Drawing::Color::Blue;
-			this->searchingprogressBar->Location = System::Drawing::Point(88, 365);
-			this->searchingprogressBar->Maximum = 5;
-			this->searchingprogressBar->Name = L"searchingprogressBar";
-			this->searchingprogressBar->Size = System::Drawing::Size(1085, 35);
-			this->searchingprogressBar->TabIndex = 3;
-			this->searchingprogressBar->Value = 1;
-			this->searchingprogressBar->Click += gcnew System::EventHandler(this, &Homepage::progressBar2_Click);
-			// 
-			// sortingprogressBar
-			// 
-			this->sortingprogressBar->ForeColor = System::Drawing::Color::Blue;
-			this->sortingprogressBar->Location = System::Drawing::Point(88, 458);
-			this->sortingprogressBar->Maximum = 5;
-			this->sortingprogressBar->Name = L"sortingprogressBar";
-			this->sortingprogressBar->Size = System::Drawing::Size(1085, 35);
-			this->sortingprogressBar->TabIndex = 4;
-			this->sortingprogressBar->Value = 1;
-			// 
-			// stackprogressBar
-			// 
-			this->stackprogressBar->ForeColor = System::Drawing::Color::Blue;
-			this->stackprogressBar->Location = System::Drawing::Point(88, 553);
-			this->stackprogressBar->Maximum = 5;
-			this->stackprogressBar->Name = L"stackprogressBar";
-			this->stackprogressBar->Size = System::Drawing::Size(1085, 35);
-			this->stackprogressBar->TabIndex = 5;
-			this->stackprogressBar->Value = 1;
-			// 
-			// queueprogressBar
-			// 
-			this->queueprogressBar->ForeColor = System::Drawing::Color::Blue;
-			this->queueprogressBar->Location = System::Drawing::Point(88, 646);
-			this->queueprogressBar->Maximum = 5;
-			this->queueprogressBar->Name = L"queueprogressBar";
-			this->queueprogressBar->Size = System::Drawing::Size(1085, 35);
-			this->queueprogressBar->TabIndex = 6;
-			this->queueprogressBar->Value = 1;
-			// 
-			// Arrayprogresslabel
-			// 
-			this->Arrayprogresslabel->AutoSize = true;
-			this->Arrayprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->Arrayprogresslabel->Location = System::Drawing::Point(82, 115);
-			this->Arrayprogresslabel->Name = L"Arrayprogresslabel";
-			this->Arrayprogresslabel->Size = System::Drawing::Size(229, 36);
-			this->Arrayprogresslabel->TabIndex = 7;
-			this->Arrayprogresslabel->Text = L"Array Progress";
-			// 
-			// llprogresslabel
-			// 
-			this->llprogresslabel->AutoSize = true;
-			this->llprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->llprogresslabel->Location = System::Drawing::Point(82, 216);
-			this->llprogresslabel->Name = L"llprogresslabel";
-			this->llprogresslabel->Size = System::Drawing::Size(307, 36);
-			this->llprogresslabel->TabIndex = 8;
-			this->llprogresslabel->Text = L"Linked List Progress";
-			// 
-			// searchingprogresslabel
-			// 
-			this->searchingprogresslabel->AutoSize = true;
-			this->searchingprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->searchingprogresslabel->Location = System::Drawing::Point(82, 322);
-			this->searchingprogresslabel->Name = L"searchingprogresslabel";
-			this->searchingprogresslabel->Size = System::Drawing::Size(296, 36);
-			this->searchingprogresslabel->TabIndex = 9;
-			this->searchingprogresslabel->Text = L"Searching Progress";
-			// 
-			// sortingprigresslabel
-			// 
-			this->sortingprigresslabel->AutoSize = true;
-			this->sortingprigresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->sortingprigresslabel->Location = System::Drawing::Point(82, 419);
-			this->sortingprigresslabel->Name = L"sortingprigresslabel";
-			this->sortingprigresslabel->Size = System::Drawing::Size(255, 36);
-			this->sortingprigresslabel->TabIndex = 10;
-			this->sortingprigresslabel->Text = L"Sorting Progress";
-			// 
-			// stackprogresslabel
-			// 
-			this->stackprogresslabel->AutoSize = true;
-			this->stackprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->stackprogresslabel->Location = System::Drawing::Point(82, 507);
-			this->stackprogresslabel->Name = L"stackprogresslabel";
-			this->stackprogresslabel->Size = System::Drawing::Size(231, 36);
-			this->stackprogresslabel->TabIndex = 11;
-			this->stackprogresslabel->Text = L"Stack Progress";
-			// 
-			// queueprogresslabel
-			// 
-			this->queueprogresslabel->AutoSize = true;
-			this->queueprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->queueprogresslabel->Location = System::Drawing::Point(82, 604);
-			this->queueprogresslabel->Name = L"queueprogresslabel";
-			this->queueprogresslabel->Size = System::Drawing::Size(245, 36);
-			this->queueprogresslabel->TabIndex = 12;
-			this->queueprogresslabel->Text = L"Queue Progress";
 			// 
 			// Homepage
 			// 
@@ -1415,14 +1368,21 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox1))->EndInit();
 			this->Homepanel->ResumeLayout(false);
 			this->Homepanel->PerformLayout();
+			this->panel7->ResumeLayout(false);
+			this->panel6->ResumeLayout(false);
+			this->panel6->PerformLayout();
 			this->Profilepanel->ResumeLayout(false);
 			this->Profilepanel->PerformLayout();
+			this->panel3->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfilepictureBox))->EndInit();
+			this->panel2->ResumeLayout(false);
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileSecuritypictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileSecuritypictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfilepictureBox))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -1475,7 +1435,8 @@ private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  
 private: System::Void Profilepanel_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 		 }
 private: System::Void HeaderClosebutton_Click(System::Object^  sender, System::EventArgs^  e) {
-			 this->Close();
+			 exit(0);
+
 		 }
 private: System::Void HeaderHomebutton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Homepanel->Show();
@@ -2007,8 +1968,155 @@ private: System::Void ProfileSecuritySavebutton_Click(System::Object^  sender, S
 		 }
 private: System::Void HeaderLogoutbutton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 this->Close();
+			 
+			 
+
 		 }
 private: System::Void progressBar2_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void HeaderClosebutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+			 HeaderClosebutton->BackColor=Color::Red;
+		 }
+private: System::Void HeaderClosebutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+			 HeaderClosebutton->BackColor=Color::White;
+		 }
+private: System::Void vartextBox_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+			 MessageBox::Show("var textbox changed");
+			 username=vartextBox->Text;
+			 String ^projdirectory= System::IO::Directory::GetCurrentDirectory();
+			 try
+			 {
+				 connection->Open();
+				 command=gcnew OleDbCommand;
+				 command->Connection=connection;
+
+				 query="Select FirstName From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 first_name=command->ExecuteScalar()->ToString();
+
+				 query="Select LastName From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 last_name=command->ExecuteScalar()->ToString();
+
+				 query="Select UserId From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 userid=(command->ExecuteScalar()->ToString());
+
+
+				 query="Select Password From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 password=command->ExecuteScalar()->ToString();
+
+				 query="Select Email From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 email=command->ExecuteScalar()->ToString();
+
+				 query="Select Contact From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 contact=command->ExecuteScalar()->ToString();
+
+
+
+				 query="Select IsApproved From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 isapproved=command->ExecuteScalar()->ToString();
+
+				 query="Select Designation From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 designation=command->ExecuteScalar()->ToString();
+
+				 query="Select ArraysProgress From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 array_progress=command->ExecuteScalar()->ToString();
+
+				 query="Select LinkedListProgress From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 ll_progress=command->ExecuteScalar()->ToString();
+
+				 query="Select SearchingProgress From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 searching_progress=command->ExecuteScalar()->ToString();
+
+				 query="Select SortingProgress From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 sorting_progress=command->ExecuteScalar()->ToString();
+
+				 query="Select StacksProgress From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 stack_progress=command->ExecuteScalar()->ToString();
+
+				 query="Select QueuesProgress From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 queue_progress=command->ExecuteScalar()->ToString();
+
+
+				 connection->Close();
+			 }
+			 catch (Exception ^ex)
+			 {	
+				 MessageBox::Show(ex->Message,"Error while reading data on LOAD");
+			 }
+
+
+
+			 //progress bars
+			 ArrayprogressBar->Value=Convert::ToInt32(array_progress);
+			 llprogressBar->Value=Convert::ToInt32(ll_progress);
+			 searchingprogressBar->Value=Convert::ToInt32(searching_progress);
+			 sortingprogressBar->Value=Convert::ToInt32(sorting_progress);
+			 stackprogressBar->Value=Convert::ToInt32(stack_progress);
+			 queueprogressBar->Value=Convert::ToInt32(queue_progress);
+
+			 //Homepanel is shown by default
+			 Profilepanel->Hide();
+			 DSpanel->Hide();
+			 Homepanel->Show();
+			 HeaderStatusPanelpictureBox1->BackColor=Color::Red;
+			 HeaderHomebutton->BackColor=Color::Gray;
+
+			 //Checking and setting profile picture if it exists
+
+			 String ^destinationpath=projdirectory->Replace("Login_HomePage","profilepic\\"+username+".jpg");
+			 if(IO::File::Exists(destinationpath))
+			 {
+				 System::IO::FileStream ^fs;
+				 fs=gcnew System::IO::FileStream(destinationpath, IO::FileMode::Open, IO::FileAccess::Read);
+				 ProfilepictureBox->Image=System::Drawing::Image::FromStream(fs);
+				 ProfilepictureBox->SizeMode=PictureBoxSizeMode::StretchImage;
+				 fs->Close();
+
+			 }
+
+			 //Profile panel textboxes should be read only
+			 ProfileFirstNametextBox->Enabled=0;
+			 ProfileLastNametextBox->Enabled=0;
+			 ProfileemailtextBox->Enabled=0;
+			 ProfileUsernametextBox->Enabled=0;
+			 ProfileDesignationtextBox->Enabled=0;
+			 ProfileContacttextBox->Enabled=0;
+
+			 //Reading security questions
+			 try
+			 {
+				 connection->Open();
+				 command->Connection=connection;
+				 query = "Select * From SQuestions; ";
+				 command->CommandText=query;
+				 OleDbDataReader ^reader=command->ExecuteReader();
+				 while(reader->Read())
+				 {
+					 String ^ques=reader->GetString(1);
+					 ProfileSecuritycomboBox->Items->Add(ques);
+
+				 }
+				 //command->Dispose();
+				 connection->Close();
+			 }
+			 catch (Exception ^ex)
+			 {
+				 MessageBox::Show(ex->Message,"Error while reading data (Security Questions)");
+			 }
+
 		 }
 };
 }

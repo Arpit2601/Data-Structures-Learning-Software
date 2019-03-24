@@ -1,26 +1,30 @@
-﻿Build started 24-Mar-19 2:18:38 PM.
+﻿Build started 24-Mar-19 8:54:41 PM.
      1>Project "C:\Users\Siddharth\Desktop\Data-Structures-Learning-Software\Login_HomePage\Login_HomePage.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Creating "Debug\Login_HomePage.unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "Debug\Login_HomePage.unsuccessfulbuild".
        GenerateTargetFrameworkMonikerAttribute:
        Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
        ClCompile:
          All outputs are up-to-date.
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\Login_HomePage.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.VisualBasic.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\VBPowerPacks\v10.0\Microsoft.VisualBasic.PowerPacks.Vs.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt Homepage.cpp LoginForm.cpp Login_HomePage.cpp /clr:nostdlib 
-         Homepage.cpp
-     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\Homepage.h(110): warning C4101: 'ex' : unreferenced local variable
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\Login_HomePage.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.VisualBasic.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\VBPowerPacks\v10.0\Microsoft.VisualBasic.PowerPacks.Vs.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt LoginForm.cpp Login_HomePage.cpp /clr:nostdlib 
          LoginForm.cpp
-     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\Homepage.h(110): warning C4101: 'ex' : unreferenced local variable
-     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\LoginForm.h(2378): warning C4101: 'question' : unreferenced local variable
-     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\LoginForm.h(2379): warning C4101: 'answer' : unreferenced local variable
+     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\Homepage.h(124): warning C4101: 'ex' : unreferenced local variable
+     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\LoginForm.h(86): warning C4101: 'ex' : unreferenced local variable
+     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\LoginForm.h(2725): warning C4101: 'question' : unreferenced local variable
+     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\LoginForm.h(2726): warning C4101: 'answer' : unreferenced local variable
          Login_HomePage.cpp
-     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\Homepage.h(110): warning C4101: 'ex' : unreferenced local variable
-     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\LoginForm.h(2378): warning C4101: 'question' : unreferenced local variable
-     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\LoginForm.h(2379): warning C4101: 'answer' : unreferenced local variable
+     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\Homepage.h(124): warning C4101: 'ex' : unreferenced local variable
+     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\LoginForm.h(86): warning C4101: 'ex' : unreferenced local variable
+     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\LoginForm.h(2725): warning C4101: 'question' : unreferenced local variable
+     1>c:\users\siddharth\desktop\data-structures-learning-software\login_homepage\LoginForm.h(2726): warning C4101: 'answer' : unreferenced local variable
          Generating Code...
-         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /analyze- /errorReport:prompt "C:\Users\Siddharth\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.0.AssemblyAttributes.cpp
        CoreResGen:
-         No resources are out of date with respect to their source files. Skipping resource generation.
+         "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\NETFX 4.0 Tools\resgen.exe" /useSourcePath /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.VisualBasic.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\VBPowerPacks\v10.0\Microsoft.VisualBasic.PowerPacks.Vs.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /compile Form1.resX,Debug\Login_HomePage.Form1.resources Homepage.resx,Debug\Login_HomePage.Homepage.resources LoginForm.resx,Debug\Login_HomePage.LoginForm.resources
+         Processing resource file "Form1.resX" into "Debug\Login_HomePage.Form1.resources".
+         Processing resource file "Homepage.resx" into "Debug\Login_HomePage.Homepage.resources".
+         Processing resource file "LoginForm.resx" into "Debug\Login_HomePage.LoginForm.resources".
        ResourceCompile:
          All outputs are up-to-date.
        Link:
@@ -41,4 +45,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.62
+Time Elapsed 00:00:03.08
