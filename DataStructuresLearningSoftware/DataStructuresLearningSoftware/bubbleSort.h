@@ -292,6 +292,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p15
 			// 
+			this->p15->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p15.Image")));
 			this->p15->Location = System::Drawing::Point(961, 43);
 			this->p15->Name = L"p15";
 			this->p15->Size = System::Drawing::Size(31, 38);
@@ -301,6 +302,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p14
 			// 
+			this->p14->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p14.Image")));
 			this->p14->Location = System::Drawing::Point(894, 43);
 			this->p14->Name = L"p14";
 			this->p14->Size = System::Drawing::Size(31, 38);
@@ -310,6 +312,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p13
 			// 
+			this->p13->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p13.Image")));
 			this->p13->Location = System::Drawing::Point(827, 43);
 			this->p13->Name = L"p13";
 			this->p13->Size = System::Drawing::Size(31, 38);
@@ -319,6 +322,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p12
 			// 
+			this->p12->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p12.Image")));
 			this->p12->Location = System::Drawing::Point(760, 43);
 			this->p12->Name = L"p12";
 			this->p12->Size = System::Drawing::Size(31, 38);
@@ -328,6 +332,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p11
 			// 
+			this->p11->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p11.Image")));
 			this->p11->Location = System::Drawing::Point(693, 43);
 			this->p11->Name = L"p11";
 			this->p11->Size = System::Drawing::Size(31, 38);
@@ -337,6 +342,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p10
 			// 
+			this->p10->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p10.Image")));
 			this->p10->Location = System::Drawing::Point(626, 43);
 			this->p10->Name = L"p10";
 			this->p10->Size = System::Drawing::Size(31, 38);
@@ -346,6 +352,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p9
 			// 
+			this->p9->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p9.Image")));
 			this->p9->Location = System::Drawing::Point(559, 43);
 			this->p9->Name = L"p9";
 			this->p9->Size = System::Drawing::Size(31, 38);
@@ -355,6 +362,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p8
 			// 
+			this->p8->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p8.Image")));
 			this->p8->Location = System::Drawing::Point(492, 43);
 			this->p8->Name = L"p8";
 			this->p8->Size = System::Drawing::Size(31, 38);
@@ -364,6 +372,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p7
 			// 
+			this->p7->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p7.Image")));
 			this->p7->Location = System::Drawing::Point(425, 43);
 			this->p7->Name = L"p7";
 			this->p7->Size = System::Drawing::Size(31, 38);
@@ -373,6 +382,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p6
 			// 
+			this->p6->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p6.Image")));
 			this->p6->Location = System::Drawing::Point(358, 43);
 			this->p6->Name = L"p6";
 			this->p6->Size = System::Drawing::Size(31, 38);
@@ -382,6 +392,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p5
 			// 
+			this->p5->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p5.Image")));
 			this->p5->Location = System::Drawing::Point(291, 43);
 			this->p5->Name = L"p5";
 			this->p5->Size = System::Drawing::Size(31, 38);
@@ -391,6 +402,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p4
 			// 
+			this->p4->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p4.Image")));
 			this->p4->Location = System::Drawing::Point(224, 43);
 			this->p4->Name = L"p4";
 			this->p4->Size = System::Drawing::Size(31, 38);
@@ -400,6 +412,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p3
 			// 
+			this->p3->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p3.Image")));
 			this->p3->Location = System::Drawing::Point(157, 43);
 			this->p3->Name = L"p3";
 			this->p3->Size = System::Drawing::Size(31, 38);
@@ -409,6 +422,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p2
 			// 
+			this->p2->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p2.Image")));
 			this->p2->Location = System::Drawing::Point(90, 43);
 			this->p2->Name = L"p2";
 			this->p2->Size = System::Drawing::Size(31, 38);
@@ -418,6 +432,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p1
 			// 
+			this->p1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p1.Image")));
 			this->p1->Location = System::Drawing::Point(23, 43);
 			this->p1->Name = L"p1";
 			this->p1->Size = System::Drawing::Size(31, 38);
