@@ -71,8 +71,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// moduleQuiz
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->Controls->Add(this->mainPanel);
 			this->Name = L"moduleQuiz";
 			this->Size = System::Drawing::Size(1030, 450);

@@ -1112,8 +1112,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// bubbleSort
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::OldLace;
 			this->Controls->Add(this->label36);
 			this->Controls->Add(this->label35);

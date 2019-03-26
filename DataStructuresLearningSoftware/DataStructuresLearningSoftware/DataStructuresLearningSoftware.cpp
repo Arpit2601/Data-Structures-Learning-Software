@@ -6,7 +6,11 @@
 #include "Stack_Main.h"
 #include "Searching.h"
 #include "Sorting.h"
-#include "A_and_LL.h"
+#include "A_and_LL.h"	// Start with Form1
+#include "LoginForm.h"
+#include "Homepage.h"
+#using <system.windows.forms.dll>
+#using <Microsoft.VisualBasic.dll>
 
 using namespace DataStructuresLearningSoftware;
 
@@ -18,6 +22,6 @@ int main(array<System::String ^> ^args)
 	Application::SetCompatibleTextRenderingDefault(false); 
 
 	// Create the main window and run it
-	Application::Run(gcnew Searching());
+	Application::Run(gcnew LoginForm());
 	return 0;
 }

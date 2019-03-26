@@ -4,7 +4,8 @@
 #include "InsertionSort.h"
 #include "SelectionSort.h"
 #include "Quiz.h"
-#include "Searching.h"
+#include "mergesort.h"
+#include "QuickSort.h"
 
 namespace DataStructuresLearningSoftware {
 
@@ -283,8 +284,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// Sorting
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->ClientSize = System::Drawing::Size(1280, 720);
 			this->Controls->Add(this->MainPanel);
 			this->Controls->Add(this->panel2);
@@ -476,11 +476,19 @@ namespace DataStructuresLearningSoftware {
 					btnMergeSort->BackColor = Color::CornflowerBlue;
 					btnBack->Show();
 					btnNext->Show();
+					MainPanel->Controls->Clear();
+					mergesort ^newUserControl = gcnew mergesort();
+					newUserControl->username = username;
+					MainPanel->Controls->Add(newUserControl);
 				}
 				else if(moduleId == 4){
 					btnQuickSort->BackColor = Color::CornflowerBlue;
 					btnBack->Show();
 					btnNext->Show();
+					MainPanel->Controls->Clear();
+					quicksort ^newUserControl = gcnew quicksort();
+					newUserControl->username = username;
+					MainPanel->Controls->Add(newUserControl);
 				}
 				else if(moduleId == 5){
 					btnQuiz->BackColor = Color::CornflowerBlue;
