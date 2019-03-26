@@ -51,6 +51,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>"SDK Path\Include"</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -87,6 +88,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="A_and_LL.cpp" />
+    <ClCompile Include="BinarySearch.cpp" />
+    <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="DataStructuresLearningSoftware.cpp" />
     <ClCompile Include="DiscussionForum.cpp" />
     <ClCompile Include="Queue_Home.cpp" />
@@ -98,6 +102,14 @@
     <ClCompile Include="Stack_Main.cpp" />
     <ClCompile Include="Stack_Resources.cpp" />
     <ClCompile Include="Stack_Test.cpp" />
+    <ClCompile Include="InsertionSort.cpp" />
+    <ClCompile Include="LinearSearch.cpp" />
+    <ClCompile Include="moduleQuiz.cpp" />
+    <ClCompile Include="QuickSort.cpp" />
+    <ClCompile Include="Quiz.cpp" />
+    <ClCompile Include="Searching.cpp" />
+    <ClCompile Include="SelectionSort.cpp" />
+    <ClCompile Include="Sorting.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -118,11 +130,35 @@
     <ClInclude Include="DiscussionForum.h">
       <FileType>CppControl</FileType>
     </ClInclude>
+    <ClInclude Include="A_and_LL.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="BinarySearch.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="bubbleSort.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="InsertionSort.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="LinearSearch.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="MainPage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Queue_Home.h">
       <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="moduleQuiz.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="QuickSort.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="Quiz.h">
+      <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="resource.h" />
     <ClInclude Include="Stack_Animations.h">
@@ -148,6 +184,15 @@
     </ClInclude>
     <ClInclude Include="Stack_Test.h">
       <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="Searching.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="SelectionSort.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="Sorting.h">
+      <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="UI_Circular_Queue.h">
@@ -190,6 +235,18 @@
   <ItemGroup>
     <EmbeddedResource Include="DiscussionForum.resx">
       <DependentUpon>DiscussionForum.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BinarySearch.resx">
+      <DependentUpon>BinarySearch.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bubbleSort.resx">
+      <DependentUpon>bubbleSort.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertionSort.resx">
+      <DependentUpon>InsertionSort.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinearSearch.resx">
+      <DependentUpon>LinearSearch.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resX">
       <DependentUpon>MainPage.h</DependentUpon>
@@ -254,6 +311,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Stack_Test.resx">
       <DependentUpon>Stack_Test.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="moduleQuiz.resx">
+      <DependentUpon>moduleQuiz.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuickSort.resx">
+      <DependentUpon>QuickSort.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quiz.resx">
+      <DependentUpon>Quiz.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Searching.resx">
+      <DependentUpon>Searching.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionSort.resx">
+      <DependentUpon>SelectionSort.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sorting.resx">
+      <DependentUpon>Sorting.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
