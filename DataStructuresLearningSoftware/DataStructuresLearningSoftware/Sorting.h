@@ -4,6 +4,7 @@
 #include "InsertionSort.h"
 #include "SelectionSort.h"
 #include "Quiz.h"
+#include "Searching.h"
 
 namespace DataStructuresLearningSoftware {
 
