@@ -1,4 +1,4 @@
-﻿Build started 16-03-2019 9:02:34 PM.
+﻿Build started 26-03-2019 9:20:32 AM.
      1>Project "D:\Github\Data-Structures-Learning-Software\DataStructuresLearningSoftware\DataStructuresLearningSoftware\DataStructuresLearningSoftware.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\DataStructuresLearningSoftware.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -6,23 +6,42 @@
        Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
        ClCompile:
          All outputs are up-to-date.
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\DataStructuresLearningSoftware.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt BinarySearch.cpp DataStructuresLearningSoftware.cpp Searching.cpp /clr:nostdlib 
-         BinarySearch.cpp
-         DataStructuresLearningSoftware.cpp
-         Searching.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"SDK Path\Include" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\DataStructuresLearningSoftware.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt bubbleSort.cpp InsertionSort.cpp SelectionSort.cpp Sorting.cpp /clr:nostdlib 
+         bubbleSort.cpp
+         InsertionSort.cpp
+         SelectionSort.cpp
+         Sorting.cpp
          Generating Code...
          All outputs are up-to-date.
        CoreResGen:
-         No resources are out of date with respect to their source files. Skipping resource generation.
+         "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\NETFX 4.0 Tools\resgen.exe" /useSourcePath /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /compile BinarySearch.resx,Debug\DataStructuresLearningSoftware.BinarySearch.resources bubbleSort.resx,Debug\DataStructuresLearningSoftware.bubbleSort.resources InsertionSort.resx,Debug\DataStructuresLearningSoftware.InsertionSort.resources LinearSearch.resx,Debug\DataStructuresLearningSoftware.LinearSearch.resources MainPage.resX,Debug\DataStructuresLearningSoftware.MainPage.resources moduleQuiz.resx,Debug\DataStructuresLearningSoftware.moduleQuiz.resources QuickSort.resx,Debug\DataStructuresLearningSoftware.QuickSort.resources Quiz.resx,Debug\DataStructuresLearningSoftware.Quiz.resources Searching.resx,Debug\DataStructuresLearningSoftware.Searching.resources SelectionSort.resx,Debug\DataStructuresLearningSoftware.SelectionSort.resources Sorting.resx,Debug\DataStructuresLearningSoftware.Sorting.resources
+         Processing resource file "BinarySearch.resx" into "Debug\DataStructuresLearningSoftware.BinarySearch.resources".
+         Processing resource file "bubbleSort.resx" into "Debug\DataStructuresLearningSoftware.bubbleSort.resources".
+         Processing resource file "InsertionSort.resx" into "Debug\DataStructuresLearningSoftware.InsertionSort.resources".
+         Processing resource file "LinearSearch.resx" into "Debug\DataStructuresLearningSoftware.LinearSearch.resources".
+         Processing resource file "MainPage.resX" into "Debug\DataStructuresLearningSoftware.MainPage.resources".
+         Processing resource file "moduleQuiz.resx" into "Debug\DataStructuresLearningSoftware.moduleQuiz.resources".
+         Processing resource file "QuickSort.resx" into "Debug\DataStructuresLearningSoftware.QuickSort.resources".
+         Processing resource file "Quiz.resx" into "Debug\DataStructuresLearningSoftware.Quiz.resources".
+         Processing resource file "Searching.resx" into "Debug\DataStructuresLearningSoftware.Searching.resources".
+         Processing resource file "SelectionSort.resx" into "Debug\DataStructuresLearningSoftware.SelectionSort.resources".
+         Processing resource file "Sorting.resx" into "Debug\DataStructuresLearningSoftware.Sorting.resources".
        ResourceCompile:
          All outputs are up-to-date.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Github\Data-Structures-Learning-Software\DataStructuresLearningSoftware\Debug\DataStructuresLearningSoftware.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\DataStructuresLearningSoftware.BinarySearch.resources /ASSEMBLYRESOURCE:Debug\DataStructuresLearningSoftware.LinearSearch.resources /ASSEMBLYRESOURCE:Debug\DataStructuresLearningSoftware.MainPage.resources /ASSEMBLYRESOURCE:Debug\DataStructuresLearningSoftware.Searching.resources /MANIFEST /ManifestFile:"Debug\DataStructuresLearningSoftware.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Github\Data-Structures-Learning-Software\DataStructuresLearningSoftware\Debug\DataStructuresLearningSoftware.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Github\Data-Structures-Learning-Software\DataStructuresLearningSoftware\Debug\DataStructuresLearningSoftware.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\DataStructuresLearningSoftware.BinarySearch.resources /ASSEMBLYRESOURCE:Debug\DataStructuresLearningSoftware.bubbleSort.resources /ASSEMBLYRESOURCE:Debug\DataStructuresLearningSoftware.InsertionSort.resources /ASSEMBLYRESOURCE:Debug\DataStructuresLearningSoftware.LinearSearch.resources /ASSEMBLYRESOURCE:Debug\DataStructuresLearningSoftware.MainPage.resources /ASSEMBLYRESOURCE:Debug\DataStructuresLearningSoftware.moduleQuiz.resources /ASSEMBLYRESOURCE:Debug\DataStructuresLearningSoftware.QuickSort.resources /ASSEMBLYRESOURCE:Debug\DataStructuresLearningSoftware.Quiz.resources /ASSEMBLYRESOURCE:Debug\DataStructuresLearningSoftware.Searching.resources /ASSEMBLYRESOURCE:Debug\DataStructuresLearningSoftware.SelectionSort.resources /ASSEMBLYRESOURCE:Debug\DataStructuresLearningSoftware.Sorting.resources /MANIFEST /ManifestFile:"Debug\DataStructuresLearningSoftware.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Github\Data-Structures-Learning-Software\DataStructuresLearningSoftware\Debug\DataStructuresLearningSoftware.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
          Debug\AssemblyInfo.obj
          Debug\BinarySearch.obj
+         Debug\bubbleSort.obj
          Debug\DataStructuresLearningSoftware.obj
+         Debug\InsertionSort.obj
          Debug\LinearSearch.obj
+         Debug\moduleQuiz.obj
+         Debug\QuickSort.obj
+         Debug\Quiz.obj
          Debug\Searching.obj
+         Debug\SelectionSort.obj
+         Debug\Sorting.obj
          Debug\stdafx.obj
          "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
          DataStructuresLearningSoftware.vcxproj -> D:\Github\Data-Structures-Learning-Software\DataStructuresLearningSoftware\Debug\DataStructuresLearningSoftware.exe
@@ -35,4 +54,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.15
+Time Elapsed 00:00:05.60
