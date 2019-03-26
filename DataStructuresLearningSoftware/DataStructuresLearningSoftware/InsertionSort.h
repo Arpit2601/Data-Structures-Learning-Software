@@ -22,7 +22,7 @@ namespace{
 
 }
 
-namespace sorting_user_control {
+namespace DataStructuresLearningSoftware {
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -1141,6 +1141,8 @@ namespace sorting_user_control {
 
 		}
 #pragma endregion
+
+		public: String ^username;
 
 		//assign a colour to a label
 		//0->white,1->red,2->yellow,3->skyblue

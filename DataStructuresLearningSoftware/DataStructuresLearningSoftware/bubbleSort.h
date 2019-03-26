@@ -21,7 +21,7 @@ namespace{
 
 }
 
-namespace sorting_user_control {
+namespace DataStructuresLearningSoftware {
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -134,6 +134,8 @@ namespace sorting_user_control {
 	private: System::Windows::Forms::Panel^  quizPanel;
 
 	private: System::Windows::Forms::Label^  label34;
+	private: System::Windows::Forms::Label^  label35;
+	private: System::Windows::Forms::Label^  label36;
 
 	private: System::ComponentModel::IContainer^  components;
 
@@ -229,6 +231,8 @@ namespace sorting_user_control {
 			this->label33 = (gcnew System::Windows::Forms::Label());
 			this->quizPanel = (gcnew System::Windows::Forms::Panel());
 			this->label34 = (gcnew System::Windows::Forms::Label());
+			this->label35 = (gcnew System::Windows::Forms::Label());
+			this->label36 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->p15))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->p14))->BeginInit();
@@ -748,7 +752,6 @@ namespace sorting_user_control {
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(1065, 86);
 			this->label5->TabIndex = 40;
-			this->label5->Text = resources->GetString(L"label5.Text");
 			// 
 			// label6
 			// 
@@ -780,7 +783,6 @@ namespace sorting_user_control {
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(1065, 127);
 			this->label8->TabIndex = 42;
-			this->label8->Text = resources->GetString(L"label8.Text");
 			// 
 			// label9
 			// 
@@ -1088,11 +1090,33 @@ namespace sorting_user_control {
 			this->label34->TabIndex = 70;
 			this->label34->Text = L"Answer the question correctly to pass the module.";
 			// 
+			// label35
+			// 
+			this->label35->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label35->Location = System::Drawing::Point(20, 138);
+			this->label35->Name = L"label35";
+			this->label35->Size = System::Drawing::Size(1065, 86);
+			this->label35->TabIndex = 71;
+			this->label35->Text = resources->GetString(L"label35.Text");
+			// 
+			// label36
+			// 
+			this->label36->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label36->Location = System::Drawing::Point(21, 255);
+			this->label36->Name = L"label36";
+			this->label36->Size = System::Drawing::Size(1064, 130);
+			this->label36->TabIndex = 72;
+			this->label36->Text = resources->GetString(L"label36.Text");
+			// 
 			// bubbleSort
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::OldLace;
+			this->Controls->Add(this->label36);
+			this->Controls->Add(this->label35);
 			this->Controls->Add(this->label34);
 			this->Controls->Add(this->quizPanel);
 			this->Controls->Add(this->label33);
@@ -1163,6 +1187,7 @@ namespace sorting_user_control {
 		}
 #pragma endregion
 
+		public: String ^username;
 
 		//assign a colour to a label
 		//0->white,1->red,2->yellow,3->skyblue
@@ -1765,7 +1790,7 @@ namespace sorting_user_control {
 			 }
 	private: System::Void label9_Click(System::Object^  sender, System::EventArgs^  e) {
 			 }
-private: System::Void label20_Click(System::Object^  sender, System::EventArgs^  e) {
-		 }
-};
+	private: System::Void label20_Click(System::Object^  sender, System::EventArgs^  e) {
+			 }
+	};
 }

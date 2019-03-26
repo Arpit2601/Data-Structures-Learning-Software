@@ -527,7 +527,7 @@ namespace DataStructuresLearningSoftware {
 				 // Question Load
 				 moduleQuiz ^newPanel = gcnew moduleQuiz();
 				 newPanel->ds_id = 3;
-				 newPanel->module_id = 1;
+				 newPanel->module_id = 0;
 				 newPanel->username = username;
 				 quizPanel->Controls->Clear();
 				 quizPanel->Controls->Add(newPanel);
