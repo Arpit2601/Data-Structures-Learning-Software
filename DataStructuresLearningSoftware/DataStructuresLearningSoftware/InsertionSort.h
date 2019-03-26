@@ -756,6 +756,7 @@ namespace DataStructuresLearningSoftware {
 			this->label4->TabIndex = 48;
 			this->label4->Text = L"// Sort an arr[] of size n\r\ninsertionSort(arr, n)\r\nLoop from i = 1 to n-1.\r\n……a) " 
 				L"Pick element arr[i] and insert it into sorted sequence arr[0…i-1]";
+			this->label4->Click += gcnew System::EventHandler(this, &InsertionSort::label4_Click);
 			// 
 			// pictureBox1
 			// 
@@ -1160,104 +1161,104 @@ namespace DataStructuresLearningSoftware {
 		public: String ^username;
 
 		//assign a colour to a label
-		//0->white,1->red,2->yellow,3->skyblue
-		void colour(int l,int c){
-			switch(l){
+	  //0->white,1->red,2->yellow,3->skyblue
+	  void colour(int l,int c){
+		switch(l){
 			case 1:
-				if(c==0)l1->BackColor=System::Drawing::Color::White;
+				if(c==0)l1->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l1->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l1->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l1->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 2:
-				if(c==0)l2->BackColor=System::Drawing::Color::White;
+				if(c==0)l2->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l2->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l2->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l2->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 3:
-				if(c==0)l3->BackColor=System::Drawing::Color::White;
+				if(c==0)l3->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l3->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l3->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l3->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 4:
-				if(c==0)l4->BackColor=System::Drawing::Color::White;
+				if(c==0)l4->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l4->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l4->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l4->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 5:
-				if(c==0)l5->BackColor=System::Drawing::Color::White;
+				if(c==0)l5->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l5->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l5->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l5->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 6:
-				if(c==0)l6->BackColor=System::Drawing::Color::White;
+				if(c==0)l6->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l6->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l6->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l6->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 7:
-				if(c==0)l7->BackColor=System::Drawing::Color::White;
+				if(c==0)l7->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l7->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l7->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l7->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 8:
-				if(c==0)l8->BackColor=System::Drawing::Color::White;
+				if(c==0)l8->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l8->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l8->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l8->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 9:
-				if(c==0)l9->BackColor=System::Drawing::Color::White;
+				if(c==0)l9->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l9->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l9->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l9->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 10:
-				if(c==0)l10->BackColor=System::Drawing::Color::White;
+				if(c==0)l10->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l10->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l10->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l10->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 11:
-				if(c==0)l11->BackColor=System::Drawing::Color::White;
+				if(c==0)l11->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l11->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l11->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l11->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 12:
-				if(c==0)l12->BackColor=System::Drawing::Color::White;
+				if(c==0)l12->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l12->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l12->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l12->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 13:
-				if(c==0)l13->BackColor=System::Drawing::Color::White;
+				if(c==0)l13->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l13->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l13->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l13->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 14:
-				if(c==0)l14->BackColor=System::Drawing::Color::White;
+				if(c==0)l14->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l14->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l14->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l14->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 15:
-				if(c==0)l15->BackColor=System::Drawing::Color::White;
+				if(c==0)l15->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l15->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l15->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l15->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			default:
 				break;
-
-			}
-		}
+			
+		  }
+	  }
 
 		//assign a value to a label
 		void value(int l,int v){
@@ -1691,6 +1692,8 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void label11_Click(System::Object^  sender, System::EventArgs^  e) {
 			 }
 private: System::Void label14_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void label4_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
 };
 }
