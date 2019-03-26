@@ -1499,7 +1499,7 @@ private: System::Void HeaderHomebutton_Click(System::Object^  sender, System::Ev
 			 }
 			 if(designation=="prof")
 			 {
-				 if(isapproved=="NO"||isapproved=="0")
+				 if(isapproved=="False")
 				 {
 					HomepanelStatuslabel->Text="Designation as 'Professor' not verified by admin (Limited Capabilities)";
 					HomepanelStatuslabel->BackColor=Color::LightPink;
@@ -1747,12 +1747,12 @@ private: System::Void ProfileSavebutton_Click(System::Object^  sender, System::E
 					 count1++;
 				 }
 
-				 if (count1 > 1)		//More than 1 '.' after '@'
+				 /*if (count1 > 1)		//More than 1 '.' after '@'
 				 {
 					 ProfileErrorlabel->Text = "Email contains multiple '.' after '@'";
 					 ProfileErrorlabel->Show();
 					 return;
-				 }
+				 }*/
 				 if (count1 && email2[i]!='.')
 				 {
 					 count3++;
@@ -2135,9 +2135,10 @@ private: System::Void vartextBox_TextChanged(System::Object^  sender, System::Ev
 			 }
 
 			 //status
+			 //MessageBox::Show(isapproved);
 			 if(designation=="prof")
 			 {
-				 if(isapproved=="NO"||isapproved=="0")
+				 if(isapproved=="False")
 				 {
 					 HomepanelStatuslabel->Text="Designation as 'Professor' not verified by admin (Limited Capabilities)";
 					 HomepanelStatuslabel->BackColor=Color::LightPink;

@@ -1,4 +1,4 @@
-﻿Build started 26-Mar-19 5:50:37 PM.
+﻿Build started 26-Mar-19 11:01:32 PM.
      1>Project "C:\Users\Siddharth\Desktop\Data-Structures-Learning-Software\Login_HomePage\Login_HomePage.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Login_HomePage.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -34,4 +34,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.40
+Time Elapsed 00:00:03.91
