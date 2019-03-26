@@ -17,6 +17,7 @@ namespace Login_HomePage {
 	using namespace System::Drawing;
 	using namespace System::Data::OleDb;
 	using namespace System::IO;
+	using namespace System::Web;
 	using namespace System::Net::Mail;
 	using namespace System::Security::Cryptography;
 	using namespace System::Text;
@@ -85,6 +86,10 @@ namespace Login_HomePage {
 	private: System::Windows::Forms::Panel^  panel7;
 	private: System::Windows::Forms::Panel^  panel6;
 	public: System::Windows::Forms::TextBox^  vartextBox;
+	private: System::Windows::Forms::Label^  HomepanelStatuslabel;
+	public: 
+
+	public: 
 	private: 
 
 	public: 
@@ -97,32 +102,19 @@ namespace Login_HomePage {
 
 			try
 			{
-				//Dim Smtp_Server As New SmtpClient
-				SmtpClient ^Smtp_Server;
-				//Dim e_mail As New MailMessage()
-				MailMessage ^e_mail;
-				Smtp_Server->UseDefaultCredentials = false;
-				Smtp_Server->Credentials = gcnew Net::NetworkCredential("dslearningapp@gmail.com", "data4321");
-				Smtp_Server->Port = 587;
-				Smtp_Server->EnableSsl = true;
-				Smtp_Server->Host = "smtp.gmail.com";
+				MailMessage ^mail=gcnew MailMessage("dslearningapp@gmail.com",sendto,subject,message);
+				SmtpClient ^client=gcnew SmtpClient("smtp.gmail.com");
+				client->Port=587;
+				client->Credentials=gcnew System::Net::NetworkCredential("dslearningapp@gmail.com","data4321");
+				client->EnableSsl=true;
+				client->Send(mail);
+				return 1;			
 
-				e_mail = gcnew MailMessage;
-				//Hard coded sender id
-				e_mail->From = gcnew MailAddress("dslearningapp@gmail.com");
-				e_mail->To->Add(sendto);
-				e_mail->Subject = subject;
-				e_mail->IsBodyHtml = false;
-				e_mail->Body = message;
-				Smtp_Server->Send(e_mail);
-				//MsgBox("Mail Sent")
-				return 1;
-
-				//MsgBox(error_t.Message)
 
 			}
 			catch(Exception ^ex)
 			{
+				MessageBox::Show(ex->Message,"Email Error");
 				return 0;
 
 			}
@@ -136,7 +128,29 @@ namespace Login_HomePage {
 			//TODO: Add the constructor code here
 			//
 			//MessageBox::Show("inside homepage "+username);
-			username=vartextBox->Text;
+			//username=vartextBox->Text;
+
+			//Homepanel is shown by default
+			Profilepanel->Hide();
+			DSpanel->Hide();
+			Homepanel->Show();
+			HeaderStatusPanelpictureBox1->BackColor=Color::Red;
+			HeaderHomebutton->BackColor=Color::Gray;
+
+			//Profile panel textboxes should be read only
+			ProfileFirstNametextBox->Enabled=0;
+			ProfileLastNametextBox->Enabled=0;
+			ProfileemailtextBox->Enabled=0;
+			ProfileUsernametextBox->Enabled=0;
+			ProfileDesignationtextBox->Enabled=0;
+			ProfileContacttextBox->Enabled=0;
+
+			if(username=="guest")
+			{
+			HeaderProfilebutton->Enabled=0;
+				return;
+			
+			}
 			String ^projdirectory= System::IO::Directory::GetCurrentDirectory();
 			//MessageBox::Show(projdirectory);
 			String ^databasepath=projdirectory->Replace("Login_HomePage","Database.accdb");
@@ -376,6 +390,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileEditbutton = (gcnew System::Windows::Forms::Button());
 			this->ProfilePictureChangebutton = (gcnew System::Windows::Forms::Button());
 			this->ProfileopenFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
+			this->HomepanelStatuslabel = (gcnew System::Windows::Forms::Label());
 			this->HeaderPanel->SuspendLayout();
 			this->Headerstatuspanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox4))->BeginInit();
@@ -559,6 +574,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// Homepanel
 			// 
 			this->Homepanel->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->Homepanel->Controls->Add(this->HomepanelStatuslabel);
 			this->Homepanel->Controls->Add(this->vartextBox);
 			this->Homepanel->Controls->Add(this->panel7);
 			this->Homepanel->Controls->Add(this->HomeTitlelabel);
@@ -582,10 +598,10 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			this->panel7->BackColor = System::Drawing::Color::Navy;
 			this->panel7->Controls->Add(this->panel6);
-			this->panel7->Location = System::Drawing::Point(71, 81);
+			this->panel7->Location = System::Drawing::Point(69, 115);
 			this->panel7->Margin = System::Windows::Forms::Padding(0);
 			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(1126, 607);
+			this->panel7->Size = System::Drawing::Size(1120, 582);
 			this->panel7->TabIndex = 14;
 			// 
 			// panel6
@@ -603,9 +619,10 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->panel6->Controls->Add(this->searchingprogressBar);
 			this->panel6->Controls->Add(this->llprogressBar);
 			this->panel6->Controls->Add(this->ArrayprogressBar);
-			this->panel6->Location = System::Drawing::Point(9, 9);
+			this->panel6->Location = System::Drawing::Point(6, 6);
+			this->panel6->Margin = System::Windows::Forms::Padding(0);
 			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(1109, 586);
+			this->panel6->Size = System::Drawing::Size(1109, 570);
 			this->panel6->TabIndex = 13;
 			// 
 			// queueprogresslabel
@@ -613,7 +630,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->queueprogresslabel->AutoSize = true;
 			this->queueprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->queueprogresslabel->Location = System::Drawing::Point(3, 495);
+			this->queueprogresslabel->Location = System::Drawing::Point(12, 486);
 			this->queueprogresslabel->Name = L"queueprogresslabel";
 			this->queueprogresslabel->Size = System::Drawing::Size(245, 36);
 			this->queueprogresslabel->TabIndex = 12;
@@ -624,7 +641,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->stackprogresslabel->AutoSize = true;
 			this->stackprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->stackprogresslabel->Location = System::Drawing::Point(3, 398);
+			this->stackprogresslabel->Location = System::Drawing::Point(12, 389);
 			this->stackprogresslabel->Name = L"stackprogresslabel";
 			this->stackprogresslabel->Size = System::Drawing::Size(231, 36);
 			this->stackprogresslabel->TabIndex = 11;
@@ -635,7 +652,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->sortingprigresslabel->AutoSize = true;
 			this->sortingprigresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->sortingprigresslabel->Location = System::Drawing::Point(3, 310);
+			this->sortingprigresslabel->Location = System::Drawing::Point(12, 301);
 			this->sortingprigresslabel->Name = L"sortingprigresslabel";
 			this->sortingprigresslabel->Size = System::Drawing::Size(255, 36);
 			this->sortingprigresslabel->TabIndex = 10;
@@ -646,7 +663,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->searchingprogresslabel->AutoSize = true;
 			this->searchingprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->searchingprogresslabel->Location = System::Drawing::Point(3, 213);
+			this->searchingprogresslabel->Location = System::Drawing::Point(12, 204);
 			this->searchingprogresslabel->Name = L"searchingprogresslabel";
 			this->searchingprogresslabel->Size = System::Drawing::Size(296, 36);
 			this->searchingprogresslabel->TabIndex = 9;
@@ -657,7 +674,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->llprogresslabel->AutoSize = true;
 			this->llprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->llprogresslabel->Location = System::Drawing::Point(3, 107);
+			this->llprogresslabel->Location = System::Drawing::Point(12, 111);
 			this->llprogresslabel->Name = L"llprogresslabel";
 			this->llprogresslabel->Size = System::Drawing::Size(307, 36);
 			this->llprogresslabel->TabIndex = 8;
@@ -668,7 +685,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Arrayprogresslabel->AutoSize = true;
 			this->Arrayprogresslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->Arrayprogresslabel->Location = System::Drawing::Point(3, 6);
+			this->Arrayprogresslabel->Location = System::Drawing::Point(13, 10);
 			this->Arrayprogresslabel->Name = L"Arrayprogresslabel";
 			this->Arrayprogresslabel->Size = System::Drawing::Size(229, 36);
 			this->Arrayprogresslabel->TabIndex = 7;
@@ -677,7 +694,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// queueprogressBar
 			// 
 			this->queueprogressBar->ForeColor = System::Drawing::Color::Blue;
-			this->queueprogressBar->Location = System::Drawing::Point(9, 537);
+			this->queueprogressBar->Location = System::Drawing::Point(18, 528);
 			this->queueprogressBar->Maximum = 5;
 			this->queueprogressBar->Name = L"queueprogressBar";
 			this->queueprogressBar->Size = System::Drawing::Size(1085, 35);
@@ -686,7 +703,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// stackprogressBar
 			// 
 			this->stackprogressBar->ForeColor = System::Drawing::Color::Blue;
-			this->stackprogressBar->Location = System::Drawing::Point(9, 444);
+			this->stackprogressBar->Location = System::Drawing::Point(18, 435);
 			this->stackprogressBar->Maximum = 5;
 			this->stackprogressBar->Name = L"stackprogressBar";
 			this->stackprogressBar->Size = System::Drawing::Size(1085, 35);
@@ -695,7 +712,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// sortingprogressBar
 			// 
 			this->sortingprogressBar->ForeColor = System::Drawing::Color::Blue;
-			this->sortingprogressBar->Location = System::Drawing::Point(9, 349);
+			this->sortingprogressBar->Location = System::Drawing::Point(18, 340);
 			this->sortingprogressBar->Maximum = 5;
 			this->sortingprogressBar->Name = L"sortingprogressBar";
 			this->sortingprogressBar->Size = System::Drawing::Size(1085, 35);
@@ -704,7 +721,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// searchingprogressBar
 			// 
 			this->searchingprogressBar->ForeColor = System::Drawing::Color::Blue;
-			this->searchingprogressBar->Location = System::Drawing::Point(9, 256);
+			this->searchingprogressBar->Location = System::Drawing::Point(18, 247);
 			this->searchingprogressBar->Maximum = 5;
 			this->searchingprogressBar->Name = L"searchingprogressBar";
 			this->searchingprogressBar->Size = System::Drawing::Size(1085, 35);
@@ -714,7 +731,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// llprogressBar
 			// 
 			this->llprogressBar->ForeColor = System::Drawing::Color::Blue;
-			this->llprogressBar->Location = System::Drawing::Point(9, 154);
+			this->llprogressBar->Location = System::Drawing::Point(18, 158);
 			this->llprogressBar->Maximum = 5;
 			this->llprogressBar->Name = L"llprogressBar";
 			this->llprogressBar->Size = System::Drawing::Size(1085, 35);
@@ -723,7 +740,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// ArrayprogressBar
 			// 
 			this->ArrayprogressBar->ForeColor = System::Drawing::Color::Blue;
-			this->ArrayprogressBar->Location = System::Drawing::Point(9, 53);
+			this->ArrayprogressBar->Location = System::Drawing::Point(19, 57);
 			this->ArrayprogressBar->Maximum = 5;
 			this->ArrayprogressBar->Name = L"ArrayprogressBar";
 			this->ArrayprogressBar->Size = System::Drawing::Size(1085, 35);
@@ -735,7 +752,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HomeTitlelabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 28.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->HomeTitlelabel->ForeColor = System::Drawing::Color::Navy;
-			this->HomeTitlelabel->Location = System::Drawing::Point(16, 19);
+			this->HomeTitlelabel->Location = System::Drawing::Point(16, 9);
 			this->HomeTitlelabel->Name = L"HomeTitlelabel";
 			this->HomeTitlelabel->Size = System::Drawing::Size(795, 55);
 			this->HomeTitlelabel->TabIndex = 0;
@@ -1136,13 +1153,14 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileSecuritycomboBox
 			// 
-			this->ProfileSecuritycomboBox->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->ProfileSecuritycomboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, 
+			this->ProfileSecuritycomboBox->BackColor = System::Drawing::Color::Black;
+			this->ProfileSecuritycomboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ProfileSecuritycomboBox->FormattingEnabled = true;
-			this->ProfileSecuritycomboBox->Location = System::Drawing::Point(199, 592);
+			this->ProfileSecuritycomboBox->ForeColor = System::Drawing::Color::White;
+			this->ProfileSecuritycomboBox->Location = System::Drawing::Point(220, 588);
 			this->ProfileSecuritycomboBox->Name = L"ProfileSecuritycomboBox";
-			this->ProfileSecuritycomboBox->Size = System::Drawing::Size(825, 33);
+			this->ProfileSecuritycomboBox->Size = System::Drawing::Size(825, 37);
+			this->ProfileSecuritycomboBox->Sorted = true;
 			this->ProfileSecuritycomboBox->TabIndex = 36;
 			this->ProfileSecuritycomboBox->Text = L"Security Question";
 			// 
@@ -1343,6 +1361,21 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileopenFileDialog->FileName = L"ProfileopenFileDialog";
 			this->ProfileopenFileDialog->Filter = L"Jpg (*.jpg)|*.jpg";
 			// 
+			// HomepanelStatuslabel
+			// 
+			this->HomepanelStatuslabel->AutoSize = true;
+			this->HomepanelStatuslabel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->HomepanelStatuslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->HomepanelStatuslabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->HomepanelStatuslabel->Location = System::Drawing::Point(28, 73);
+			this->HomepanelStatuslabel->Name = L"HomepanelStatuslabel";
+			this->HomepanelStatuslabel->Size = System::Drawing::Size(85, 29);
+			this->HomepanelStatuslabel->TabIndex = 16;
+			this->HomepanelStatuslabel->Text = L"label3";
+			// 
 			// Homepage
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1388,6 +1421,11 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 		}
 #pragma endregion
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+				 if(username=="guest")
+				 {
+					 MessageBox::Show("Login to access profile","Guest");
+					 return;
+				 }
 				 Homepanel->Hide();
 				 DSpanel->Hide();
 				 Profilepanel->Show();
@@ -1451,6 +1489,35 @@ private: System::Void HeaderHomebutton_Click(System::Object^  sender, System::Ev
 			 HeaderForumbutton->BackColor=Color::Black;
 			 HeaderProfilebutton->BackColor=Color::Black;
 
+
+			 if(username=="guest")
+			 {
+				HomepanelStatuslabel->Text="Logged in as a guest (Progress won't be saved)";
+				HomepanelStatuslabel->BackColor=Color::LightBlue;
+				HomepanelStatuslabel->ForeColor=Color::Blue;
+				 return;
+			 }
+			 if(designation=="prof")
+			 {
+				 if(isapproved=="NO"||isapproved=="0")
+				 {
+					HomepanelStatuslabel->Text="Designation as 'Professor' not verified by admin (Limited Capabilities)";
+					HomepanelStatuslabel->BackColor=Color::LightPink;
+					HomepanelStatuslabel->ForeColor=Color::Red;
+				 }
+				 else
+				 {
+					 HomepanelStatuslabel->Text="Logged in as 'Professor'";
+					 HomepanelStatuslabel->BackColor=Color::LightGreen;
+					 HomepanelStatuslabel->ForeColor=Color::Green;
+				 }
+			 }
+			 if(designation=="stud")
+			 {
+				 HomepanelStatuslabel->Text="Logged in as 'Student'";
+				 HomepanelStatuslabel->BackColor=Color::LightGreen;
+				 HomepanelStatuslabel->ForeColor=Color::Green;
+			 }
 			 //retrieving progress info
 			 try
 			 {
@@ -1597,7 +1664,7 @@ private: System::Void ProfileSavebutton_Click(System::Object^  sender, System::E
 
 			 if(len4!=10&&len4!=0)
 			 {
-				 ProfileErrorlabel->Text = "Contact number is incorrect(Less than 10 digits)";
+				 ProfileErrorlabel->Text = "Contact number is Incorrect";
 				 ProfileErrorlabel->Show();
 				 return;
 			 }
@@ -1799,7 +1866,7 @@ private: System::Void ProfileSavebutton_Click(System::Object^  sender, System::E
 					 code=""+random_integer+"";
 
 				 int num=0;	
-				 num+=SendEmail(email2,code, "Email verification Code for DS Learning S/W");
+				 num+=SendEmail(email2,"Hello "+username+"\r\nVerification Code for Registration: "+code+"\r\n\r\nCheers\r\nTeam DSlearning", "Email verification Code for DS Learning S/W");
 				 if(!num)
 				 {
 					MessageBox::Show("Service unavailable: Change Email not currently available, other fields are updated","Email Verification");
@@ -1968,6 +2035,7 @@ private: System::Void ProfileSecuritySavebutton_Click(System::Object^  sender, S
 		 }
 private: System::Void HeaderLogoutbutton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 this->Close();
+			 //this->Show();
 			 
 			 
 
@@ -1981,8 +2049,17 @@ private: System::Void HeaderClosebutton_MouseLeave(System::Object^  sender, Syst
 			 HeaderClosebutton->BackColor=Color::White;
 		 }
 private: System::Void vartextBox_TextChanged(System::Object^  sender, System::EventArgs^  e) {
-			 MessageBox::Show("var textbox changed");
+			 //MessageBox::Show("var textbox changed");
 			 username=vartextBox->Text;
+			 if(username=="guest")
+			 {
+				 //HeaderProfilebutton->Enabled=0;
+				 HomepanelStatuslabel->Text="Logged in as a guest (Progress won't be saved)";
+				 HomepanelStatuslabel->BackColor=Color::LightBlue;
+				 HomepanelStatuslabel->ForeColor=Color::Blue;
+				 return;
+			 }
+			 
 			 String ^projdirectory= System::IO::Directory::GetCurrentDirectory();
 			 try
 			 {
@@ -2057,6 +2134,29 @@ private: System::Void vartextBox_TextChanged(System::Object^  sender, System::Ev
 				 MessageBox::Show(ex->Message,"Error while reading data on LOAD");
 			 }
 
+			 //status
+			 if(designation=="prof")
+			 {
+				 if(isapproved=="NO"||isapproved=="0")
+				 {
+					 HomepanelStatuslabel->Text="Designation as 'Professor' not verified by admin (Limited Capabilities)";
+					 HomepanelStatuslabel->BackColor=Color::LightPink;
+					 HomepanelStatuslabel->ForeColor=Color::Red;
+				 }
+				 else
+				 {
+					 HomepanelStatuslabel->Text="Logged in as 'Professor'";
+					 HomepanelStatuslabel->BackColor=Color::LightGreen;
+					 HomepanelStatuslabel->ForeColor=Color::Green;
+				 }
+			 }
+			 if(designation=="stud")
+			 {
+				 HomepanelStatuslabel->Text="Logged in as 'Student'";
+				 HomepanelStatuslabel->BackColor=Color::LightGreen;
+				 HomepanelStatuslabel->ForeColor=Color::Green;
+			 }
+
 
 
 			 //progress bars
@@ -2067,12 +2167,7 @@ private: System::Void vartextBox_TextChanged(System::Object^  sender, System::Ev
 			 stackprogressBar->Value=Convert::ToInt32(stack_progress);
 			 queueprogressBar->Value=Convert::ToInt32(queue_progress);
 
-			 //Homepanel is shown by default
-			 Profilepanel->Hide();
-			 DSpanel->Hide();
-			 Homepanel->Show();
-			 HeaderStatusPanelpictureBox1->BackColor=Color::Red;
-			 HeaderHomebutton->BackColor=Color::Gray;
+			 
 
 			 //Checking and setting profile picture if it exists
 
@@ -2087,13 +2182,7 @@ private: System::Void vartextBox_TextChanged(System::Object^  sender, System::Ev
 
 			 }
 
-			 //Profile panel textboxes should be read only
-			 ProfileFirstNametextBox->Enabled=0;
-			 ProfileLastNametextBox->Enabled=0;
-			 ProfileemailtextBox->Enabled=0;
-			 ProfileUsernametextBox->Enabled=0;
-			 ProfileDesignationtextBox->Enabled=0;
-			 ProfileContacttextBox->Enabled=0;
+			 
 
 			 //Reading security questions
 			 try
