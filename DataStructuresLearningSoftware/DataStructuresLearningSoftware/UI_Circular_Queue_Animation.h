@@ -129,8 +129,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// llAnimationPanel
 			// 
-			this->llAnimationPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->llAnimationPanel->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->llAnimationPanel->Location = System::Drawing::Point(13, 81);
 			this->llAnimationPanel->Name = L"llAnimationPanel";
 			this->llAnimationPanel->Size = System::Drawing::Size(1001, 365);
@@ -227,28 +226,28 @@ namespace DataStructuresLearningSoftware {
 		bool ll;
 
 
-		bool inputValidate(System::String ^input){
+		bool inputValidate(System::String ^textinput){
 			lblErrorMessage->Text = "";
-			if(rear >= maxInputs){
+			if(input.Count >= maxInputs){
 				lblErrorMessage->Text = "You have reached end of Queue";
 				return false;
 			}
-			if(input->Length > maxLength){
+			if(textinput->Length > maxLength){
 				lblErrorMessage->Text = "Max number of elements in queue reached";
 				return false;
 			}
 
-			if(input == ""){
+			if(textinput == ""){
 				lblErrorMessage->Text = "Enter an input value first.";
 				return false;
 			}
-			else if(input->Length > maxLength){
+			else if(textinput->Length > maxLength){
 				lblErrorMessage->Text = "Limit exceeded. Please enter a smaller number";
 				return false;
 			}
 
-			for(int i = 0; i < input->Length; i++){
-				if(input[i] < '0' || input[i] > '9'){
+			for(int i = 0; i < textinput->Length; i++){
+				if(textinput[i] < '0' || textinput[i] > '9'){
 					lblErrorMessage->Text = "Invalid input. Please enter an integer.";
 					return false;
 				}
@@ -299,24 +298,29 @@ namespace DataStructuresLearningSoftware {
 				 bool check = inputValidate(enqtext->Text);
 
 				 if(check){
-					 if(rear!=front)
-					 {
-						 // labelList[rear]
-					 }
 					 // Enter input into animation
 					 if(ll == true)
 					 {
 						 EnqueueLL();
-
+						 input.Add(enqtext->Text);
+						 enqtext->Text = "";
 					 }
 					 else
 					 {
-						 EnqueueArray();	
-						 rear++;
-					 }
-					 input.Add(enqtext->Text);
-					 enqtext->Text = "";
+						 if((rear +1)%maxInputs == front)
+						 {
+							 lblErrorMessage->Text = "You have reached end of Queue";
+						 }
+						 else
+						 {
+							 EnqueueArray();	
+							 rear++;
+							 rear= rear%maxInputs;
+							 input.Add(enqtext->Text);
+							 enqtext->Text = "";
+						 }
 
+					 }
 				 }
 
 				 setpointers();
@@ -440,6 +444,13 @@ namespace DataStructuresLearningSoftware {
 					 RearLabel->Font = gcnew Drawing::Font("Comic Sans MS", 10, FontStyle::Regular);
 					 llAnimationPanel->Controls->Add(RearLabel);
 				 }
+				 else
+				 {
+					 llAnimationPanel->Controls->Remove(RearLabel);
+					 llAnimationPanel->Controls->Remove(FrontLabel);
+					 llAnimationPanel->Controls->Remove(reararrow);
+					 llAnimationPanel->Controls->Remove(frontarrow);
+				 }
 			 }
 			 void setpointers(){
 				 if(ll == true)
@@ -480,7 +491,7 @@ namespace DataStructuresLearningSoftware {
 
 	private: System::Void dqbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 				 lblErrorMessage->Text = "";
-				 if(front>=rear)
+				 if(input.Count<=0)
 				 {	
 					 lblErrorMessage->Text = "Queue is empty!";
 				 }
@@ -495,6 +506,7 @@ namespace DataStructuresLearningSoftware {
 					 {
 						 DequeueArray();	
 						 front++;
+						 front=front%maxInputs;
 					 }
 					 input[0] = "";
 					 input.RemoveAt(0);
@@ -591,7 +603,7 @@ namespace DataStructuresLearningSoftware {
 
 	private: System::Void UI_Circular_Queue_Animation_Load(System::Object^  sender, System::EventArgs^  e) {
 
-				 maxInputs =11;
+				 maxInputs =9;
 				 maxLength = 5;
 				 arraybtn->Checked = true;
 
@@ -623,5 +635,5 @@ namespace DataStructuresLearningSoftware {
 			 }
 	private: System::Void arrayAnimationPanel_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 			 }
-};
+	};
 }
