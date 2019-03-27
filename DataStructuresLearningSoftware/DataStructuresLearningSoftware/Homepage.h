@@ -324,6 +324,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderStatusPanelpictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->HeaderStatusPanelpictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->Homepanel = (gcnew System::Windows::Forms::Panel());
+			this->HomepanelStatuslabel = (gcnew System::Windows::Forms::Label());
 			this->vartextBox = (gcnew System::Windows::Forms::TextBox());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
@@ -392,7 +393,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileEditbutton = (gcnew System::Windows::Forms::Button());
 			this->ProfilePictureChangebutton = (gcnew System::Windows::Forms::Button());
 			this->ProfileopenFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
-			this->HomepanelStatuslabel = (gcnew System::Windows::Forms::Label());
 			this->HeaderPanel->SuspendLayout();
 			this->Headerstatuspanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox4))->BeginInit();
@@ -586,6 +586,21 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Homepanel->Name = L"Homepanel";
 			this->Homepanel->Size = System::Drawing::Size(1280, 705);
 			this->Homepanel->TabIndex = 7;
+			// 
+			// HomepanelStatuslabel
+			// 
+			this->HomepanelStatuslabel->AutoSize = true;
+			this->HomepanelStatuslabel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->HomepanelStatuslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->HomepanelStatuslabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->HomepanelStatuslabel->Location = System::Drawing::Point(28, 73);
+			this->HomepanelStatuslabel->Name = L"HomepanelStatuslabel";
+			this->HomepanelStatuslabel->Size = System::Drawing::Size(85, 29);
+			this->HomepanelStatuslabel->TabIndex = 16;
+			this->HomepanelStatuslabel->Text = L"label3";
 			// 
 			// vartextBox
 			// 
@@ -1363,28 +1378,13 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileopenFileDialog->FileName = L"ProfileopenFileDialog";
 			this->ProfileopenFileDialog->Filter = L"Jpg (*.jpg)|*.jpg";
 			// 
-			// HomepanelStatuslabel
-			// 
-			this->HomepanelStatuslabel->AutoSize = true;
-			this->HomepanelStatuslabel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->HomepanelStatuslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->HomepanelStatuslabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->HomepanelStatuslabel->Location = System::Drawing::Point(28, 73);
-			this->HomepanelStatuslabel->Name = L"HomepanelStatuslabel";
-			this->HomepanelStatuslabel->Size = System::Drawing::Size(85, 29);
-			this->HomepanelStatuslabel->TabIndex = 16;
-			this->HomepanelStatuslabel->Text = L"label3";
-			// 
 			// Homepage
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1280, 770);
-			this->Controls->Add(this->Homepanel);
 			this->Controls->Add(this->Profilepanel);
+			this->Controls->Add(this->Homepanel);
 			this->Controls->Add(this->DSpanel);
 			this->Controls->Add(this->Headerstatuspanel);
 			this->Controls->Add(this->HeaderPanel);
@@ -1582,7 +1582,7 @@ private: System::Void HeaderDSButton_Click(System::Object^  sender, System::Even
 private: System::Void ProfilePictureChangebutton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 String ^filepath="";	//Source path for image file
 			 String ^projdirectory= System::IO::Directory::GetCurrentDirectory();
-			 String ^destinationpath=projdirectory->Replace("Login_HomePage","profilepic\\"+username+".jpg");
+			 String ^destinationpath=projdirectory+"\\..\\profilepic\\"+username+".jpg";
 			 ProfileErrorlabel->Hide();
 			 if(ProfileopenFileDialog->ShowDialog()==Windows::Forms::DialogResult::OK)
 			 {
@@ -1826,6 +1826,7 @@ private: System::Void ProfileSavebutton_Click(System::Object^  sender, System::E
 				 {
 
 					MessageBox::Show(ex->Message,"Error in Duplicate Email checking");
+					return;
 				 }
 				 
 			}
@@ -1844,7 +1845,8 @@ private: System::Void ProfileSavebutton_Click(System::Object^  sender, System::E
 			}
 			catch (Exception ^ ex)
 			{
-				MessageBox::Show(ex->Message,"Error while writing data");
+				MessageBox::Show(ex->Message,"Error while writing data from Profile section(SAVE Homepage)");
+				return;
 			}
 			first_name=first_name2;
 			last_name=last_name2;
@@ -1891,6 +1893,13 @@ private: System::Void ProfileSavebutton_Click(System::Object^  sender, System::E
 
 				 
 
+			 }
+			 else
+			 {
+				 MessageBox::Show("Fields Updated","Success");
+				 System::Object ^sender;
+				 System::EventArgs ^e;
+				 this->button3_Click(sender,e);
 			 }
 			 
 			 
@@ -2174,7 +2183,8 @@ private: System::Void vartextBox_TextChanged(System::Object^  sender, System::Ev
 
 			 //Checking and setting profile picture if it exists
 
-			 String ^destinationpath=projdirectory->Replace("Login_HomePage","profilepic\\"+username+".jpg");
+			 String ^destinationpath=projdirectory+"\\..\\profilepic\\"+username+".jpg";
+			 
 			 if(IO::File::Exists(destinationpath))
 			 {
 				 System::IO::FileStream ^fs;
