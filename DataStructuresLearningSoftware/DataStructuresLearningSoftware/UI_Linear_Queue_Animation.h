@@ -134,8 +134,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// llAnimationPanel
 			// 
-			this->llAnimationPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->llAnimationPanel->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->llAnimationPanel->Location = System::Drawing::Point(13, 81);
 			this->llAnimationPanel->Name = L"llAnimationPanel";
 			this->llAnimationPanel->Size = System::Drawing::Size(1001, 365);
@@ -451,6 +450,13 @@ namespace DataStructuresLearningSoftware {
 					 RearLabel->Font = gcnew Drawing::Font("Comic Sans MS", 10, FontStyle::Regular);
 					 llAnimationPanel->Controls->Add(RearLabel);
 				 }
+				 else
+				 {
+					 llAnimationPanel->Controls->Remove(RearLabel);
+					 llAnimationPanel->Controls->Remove(FrontLabel);
+					 llAnimationPanel->Controls->Remove(reararrow);
+					 llAnimationPanel->Controls->Remove(frontarrow);
+				 }
 			 }
 			 void setpointers(){
 				 if(ll == true)
@@ -491,7 +497,7 @@ namespace DataStructuresLearningSoftware {
 
 	private: System::Void dqbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 				 lblErrorMessage->Text = "";
-				 if(front>=rear)
+				 if(input.Count<=0)
 				 {	
 					 lblErrorMessage->Text = "Queue is empty!";
 				 }
@@ -506,6 +512,7 @@ namespace DataStructuresLearningSoftware {
 					 {
 						 DequeueArray();	
 						 front++;
+
 					 }
 					 input[0] = "";
 					 input.RemoveAt(0);

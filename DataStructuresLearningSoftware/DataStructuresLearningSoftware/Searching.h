@@ -5,6 +5,7 @@
 #include "QuickSort.h"
 #include "Quiz.h"
 #include "TopPanel.h"
+#include "LinkedList.h"
 
 namespace DataStructuresLearningSoftware {
 
@@ -261,8 +262,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// Searching
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->ClientSize = System::Drawing::Size(1264, 681);
 			this->Controls->Add(this->MainPanel);
 			this->Controls->Add(this->topPanel);
@@ -398,6 +398,10 @@ namespace DataStructuresLearningSoftware {
 					btnLinearSearchLL->BackColor = Color::CornflowerBlue;
 					btnBack->Show();
 					btnNext->Show();
+					MainPanel->Controls->Clear();
+					LinkedList ^newUserControl = gcnew LinkedList();
+					newUserControl->username = username;
+					MainPanel->Controls->Add(newUserControl);
 				}
 				else if(moduleId == 3){
 					btnQuiz->BackColor = Color::CornflowerBlue;
