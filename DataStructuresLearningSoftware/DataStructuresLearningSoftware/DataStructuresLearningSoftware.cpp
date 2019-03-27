@@ -25,6 +25,10 @@ int main(array<System::String ^> ^args)
 	Application::SetCompatibleTextRenderingDefault(false); 
 
 	// Create the main window and run it
+<<<<<<< HEAD
 	Application::Run(gcnew LoginForm());
+=======
+	Application::Run(gcnew Form1());
+>>>>>>> 33dc8665998ecacea1a0a3f10f3632a0c2999438
 	return 0;
 }

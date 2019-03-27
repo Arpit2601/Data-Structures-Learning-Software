@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 ﻿Build started 27-Mar-19 3:04:06 PM.
      1>Project "C:\Users\Siddharth\Desktop\proj\Data-Structures-Learning-Software\DataStructuresLearningSoftware\DataStructuresLearningSoftware\DataStructuresLearningSoftware.vcxproj" on node 2 (build target(s)).
+=======
+﻿Build started 27-03-2019 1:59:17 PM.
+     1>Project "D:\Github\Data-Structures-Learning-Software\DataStructuresLearningSoftware\DataStructuresLearningSoftware\DataStructuresLearningSoftware.vcxproj" on node 2 (build target(s)).
+>>>>>>> 33dc8665998ecacea1a0a3f10f3632a0c2999438
      1>InitializeBuildStatus:
          Creating "Debug\DataStructuresLearningSoftware.unsuccessfulbuild" because "AlwaysCreate" was specified.
        GenerateTargetFrameworkMonikerAttribute:
@@ -123,4 +128,8 @@
 
 Build succeeded.
 
+<<<<<<< HEAD
 Time Elapsed 00:00:13.43
+=======
+Time Elapsed 00:00:00.54
+>>>>>>> 33dc8665998ecacea1a0a3f10f3632a0c2999438
