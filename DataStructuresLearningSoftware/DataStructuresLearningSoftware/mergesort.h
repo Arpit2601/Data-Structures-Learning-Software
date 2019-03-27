@@ -1,5 +1,7 @@
 #pragma once
 
+#include "moduleQuiz.h"
+
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -61,6 +63,12 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  label13;
 	private: System::Windows::Forms::Label^  label14;
 	private: System::Windows::Forms::Label^  label15;
+	private: System::Windows::Forms::Label^  label16;
+	private: System::Windows::Forms::Label^  label17;
+	private: System::Windows::Forms::Label^  label18;
+	private: System::Windows::Forms::Panel^  quizPanel;
+
+	private: System::Windows::Forms::Label^  label19;
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -103,6 +111,11 @@ namespace DataStructuresLearningSoftware {
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->quizPanel = (gcnew System::Windows::Forms::Panel());
+			this->label19 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -383,17 +396,74 @@ namespace DataStructuresLearningSoftware {
 			this->label15->AutoSize = true;
 			this->label15->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label15->Location = System::Drawing::Point(20, 4097);
+			this->label15->Location = System::Drawing::Point(17, 4107);
 			this->label15->Name = L"label15";
 			this->label15->Size = System::Drawing::Size(135, 21);
 			this->label15->TabIndex = 32;
 			this->label15->Text = L"Sorting In Place:";
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label16->Location = System::Drawing::Point(151, 4108);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(216, 20);
+			this->label16->TabIndex = 33;
+			this->label16->Text = L"No in a typical implementation";
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label17->Location = System::Drawing::Point(20, 4137);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(63, 21);
+			this->label17->TabIndex = 34;
+			this->label17->Text = L"Stable:";
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label18->Location = System::Drawing::Point(86, 4138);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(34, 20);
+			this->label18->TabIndex = 35;
+			this->label18->Text = L"Yes";
+			// 
+			// quizPanel
+			// 
+			this->quizPanel->BackColor = System::Drawing::Color::White;
+			this->quizPanel->Location = System::Drawing::Point(20, 4252);
+			this->quizPanel->Name = L"quizPanel";
+			this->quizPanel->Size = System::Drawing::Size(1065, 450);
+			this->quizPanel->TabIndex = 36;
+			// 
+			// label19
+			// 
+			this->label19->AutoSize = true;
+			this->label19->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label19->Location = System::Drawing::Point(31, 4228);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(382, 21);
+			this->label19->TabIndex = 37;
+			this->label19->Text = L"Answer the question correctly to pass the module.";
 			// 
 			// mergesort
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::OldLace;
+			this->Controls->Add(this->label19);
+			this->Controls->Add(this->quizPanel);
+			this->Controls->Add(this->label18);
+			this->Controls->Add(this->label17);
+			this->Controls->Add(this->label16);
 			this->Controls->Add(this->label15);
 			this->Controls->Add(this->label14);
 			this->Controls->Add(this->label13);
@@ -419,7 +489,7 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->richTextBox1);
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"mergesort";
-			this->Size = System::Drawing::Size(1105, 4500);
+			this->Size = System::Drawing::Size(1105, 4800);
 			this->Load += gcnew System::EventHandler(this, &mergesort::mergesort_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
@@ -563,6 +633,16 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void mergesort_Load(System::Object^  sender, System::EventArgs^  e) {
 				 timer2_set=0;
 				 sort_selected=0;
+
+				 // Quiz Panel Load
+				 moduleQuiz ^newPanel = gcnew moduleQuiz();
+				 newPanel->ds_id = 4;
+				 newPanel->module_id = 3;
+				 newPanel->username = username;
+				 newPanel->update_id = 12;
+				 newPanel->update_name = "SortingProgress";
+				 quizPanel->Controls->Clear();
+				 quizPanel->Controls->Add(newPanel);
 			 }
 
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {

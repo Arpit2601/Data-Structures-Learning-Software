@@ -1,5 +1,7 @@
 #pragma once
 
+#include "moduleQuiz.h"
+
 #include <utility> 
 #include <vector>
 #include <string>
@@ -110,7 +112,8 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  label11;
 	private: System::Windows::Forms::Label^  label12;
 	private: System::Windows::Forms::Label^  label13;
-	private: System::Windows::Forms::Panel^  panel2;
+	private: System::Windows::Forms::Panel^  quizPanel;
+
 	private: System::Windows::Forms::Label^  label14;
 	private: System::ComponentModel::IContainer^  components;
 
@@ -184,7 +187,7 @@ namespace DataStructuresLearningSoftware {
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
-			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->quizPanel = (gcnew System::Windows::Forms::Panel());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->p15))->BeginInit();
@@ -814,12 +817,13 @@ namespace DataStructuresLearningSoftware {
 			this->label13->Text = L"The good thing about selection sort is it never makes more than O(n) swaps and ca" 
 				L"n be useful when memory write is a costly operation.";
 			// 
-			// panel2
+			// quizPanel
 			// 
-			this->panel2->Location = System::Drawing::Point(20, 4115);
-			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(1065, 450);
-			this->panel2->TabIndex = 67;
+			this->quizPanel->BackColor = System::Drawing::Color::White;
+			this->quizPanel->Location = System::Drawing::Point(20, 4115);
+			this->quizPanel->Name = L"quizPanel";
+			this->quizPanel->Size = System::Drawing::Size(1065, 450);
+			this->quizPanel->TabIndex = 67;
 			// 
 			// label14
 			// 
@@ -837,7 +841,7 @@ namespace DataStructuresLearningSoftware {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::OldLace;
 			this->Controls->Add(this->label14);
-			this->Controls->Add(this->panel2);
+			this->Controls->Add(this->quizPanel);
 			this->Controls->Add(this->label13);
 			this->Controls->Add(this->label12);
 			this->Controls->Add(this->label11);
@@ -1157,6 +1161,16 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void SelectionSort_Load(System::Object^  sender, System::EventArgs^  e) {
 				 hideLabels();
 				 scnt=0;
+
+				 // Quiz Panel Load
+				 moduleQuiz ^newPanel = gcnew moduleQuiz();
+				 newPanel->ds_id = 4;
+				 newPanel->module_id = 1;
+				 newPanel->username = username;
+				 newPanel->update_id = 12;
+				 newPanel->update_name = "SortingProgress";
+				 quizPanel->Controls->Clear();
+				 quizPanel->Controls->Add(newPanel);
 			 }
 	private: System::Void btnSS_Click(System::Object^  sender, System::EventArgs^  e) {
 				 timer1->Interval=2501;

@@ -650,6 +650,8 @@ namespace DataStructuresLearningSoftware {
 				 newPanel->ds_id = 3;
 				 newPanel->module_id = 1;
 				 newPanel->username = username;
+				 newPanel->update_id = 11;
+				 newPanel->update_name = "SearchingProgress";
 				 quizPanel->Controls->Clear();
 				 quizPanel->Controls->Add(newPanel);
 			 }

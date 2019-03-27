@@ -371,7 +371,7 @@ namespace DataStructuresLearningSoftware {
 				 moduleId = 0;
 
 				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
-				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 
 				 DB_Connection->Open();
 				 String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
@@ -497,6 +497,7 @@ namespace DataStructuresLearningSoftware {
 					MainPanel->Controls->Clear();
 					Quiz ^newUserControl = gcnew Quiz();
 					newUserControl->username = username;
+					newUserControl->ds_id = 4;
 					MainPanel->Controls->Add(newUserControl);
 				}
 			}

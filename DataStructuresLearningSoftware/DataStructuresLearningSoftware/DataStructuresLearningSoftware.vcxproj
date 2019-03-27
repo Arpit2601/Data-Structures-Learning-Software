@@ -87,14 +87,20 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Array_Insertion.cpp" />
+    <ClCompile Include="Array_Introduction.cpp" />
+    <ClCompile Include="Array_Search.cpp" />
+    <ClCompile Include="Array_Traversal.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
-    <ClCompile Include="A_and_LL.cpp" />
     <ClCompile Include="BinarySearch.cpp" />
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="DataStructuresLearningSoftware.cpp" />
     <ClCompile Include="DiscussionForum.cpp" />
     <ClCompile Include="Homepage.cpp" />
     <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="LinkedList_Deletion.cpp" />
+    <ClCompile Include="LinkedList_Insertion.cpp" />
+    <ClCompile Include="LinkedList_Traversal.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="mergesort.cpp" />
     <ClCompile Include="Queue_Home.cpp" />
@@ -131,11 +137,20 @@
     <ClCompile Include="UI_Queue_Quiz.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DiscussionForum.h">
+    <ClInclude Include="Array_Insertion.h">
       <FileType>CppControl</FileType>
     </ClInclude>
-    <ClInclude Include="A_and_LL.h">
-      <FileType>CppForm</FileType>
+    <ClInclude Include="Array_Introduction.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="Array_Search.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="Array_Traversal.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="DiscussionForum.h">
+      <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="BinarySearch.h">
       <FileType>CppControl</FileType>
@@ -153,6 +168,15 @@
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="LinkedList.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="LinkedList_Deletion.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="LinkedList_Insertion.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="LinkedList_Traversal.h">
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="LoginForm.h">
@@ -249,9 +273,6 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="A_and_LL.resx">
-      <DependentUpon>A_and_LL.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DiscussionForum.resx">
       <DependentUpon>DiscussionForum.h</DependentUpon>
     </EmbeddedResource>
