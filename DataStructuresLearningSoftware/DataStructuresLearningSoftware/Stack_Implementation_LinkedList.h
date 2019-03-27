@@ -76,10 +76,10 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// richTextBox1
 			// 
-			this->richTextBox1->BackColor = System::Drawing::Color::White;
-			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->richTextBox1->Cursor = System::Windows::Forms::Cursors::Default;
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
+			this->richTextBox1->BackColor = System::Drawing::Color::Bisque;
+			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->richTextBox1->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Bookman Old Style", 10.1F));
 			this->richTextBox1->Location = System::Drawing::Point(43, 263);
 			this->richTextBox1->Margin = System::Windows::Forms::Padding(4);
 			this->richTextBox1->Name = L"richTextBox1";
@@ -90,10 +90,11 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// richTextBox2
 			// 
-			this->richTextBox2->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->richTextBox2->BackColor = System::Drawing::Color::White;
 			this->richTextBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->richTextBox2->Cursor = System::Windows::Forms::Cursors::Default;
-			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->richTextBox2->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Georgia", 10.15F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
 			this->richTextBox2->Location = System::Drawing::Point(43, 66);
 			this->richTextBox2->Margin = System::Windows::Forms::Padding(4);
 			this->richTextBox2->Name = L"richTextBox2";
@@ -115,9 +116,8 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// Stack_Implementation_LinkedList
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackColor = System::Drawing::Color::White;
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->richTextBox2);
 			this->Controls->Add(this->richTextBox1);

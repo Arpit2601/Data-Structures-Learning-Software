@@ -76,7 +76,8 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// richTextBox1
 			// 
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13));
+			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
 			this->richTextBox1->Location = System::Drawing::Point(77, 87);
 			this->richTextBox1->Name = L"richTextBox1";
 			this->richTextBox1->Size = System::Drawing::Size(882, 83);
@@ -86,7 +87,8 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// richTextBox2
 			// 
-			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13));
+			this->richTextBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
 			this->richTextBox2->Location = System::Drawing::Point(77, 250);
 			this->richTextBox2->Name = L"richTextBox2";
 			this->richTextBox2->Size = System::Drawing::Size(592, 248);
@@ -117,15 +119,15 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// UI_Circular_Queue
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackColor = System::Drawing::Color::White;
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->richTextBox2);
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->Heading);
 			this->Name = L"UI_Circular_Queue";
-			this->Size = System::Drawing::Size(1088, 631);
+			this->Size = System::Drawing::Size(1105, 670);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();

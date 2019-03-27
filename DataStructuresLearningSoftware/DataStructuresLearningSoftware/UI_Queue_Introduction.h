@@ -84,7 +84,7 @@ namespace DataStructuresLearningSoftware {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(570, 205);
+			this->pictureBox1->Location = System::Drawing::Point(570, 308);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(431, 258);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -93,12 +93,13 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// richTextBox1
 			// 
+			this->richTextBox1->BackColor = System::Drawing::Color::White;
 			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
 			this->richTextBox1->Location = System::Drawing::Point(71, 78);
 			this->richTextBox1->Name = L"richTextBox1";
 			this->richTextBox1->ReadOnly = true;
-			this->richTextBox1->Size = System::Drawing::Size(910, 109);
+			this->richTextBox1->Size = System::Drawing::Size(930, 164);
 			this->richTextBox1->TabIndex = 4;
 			this->richTextBox1->Text = resources->GetString(L"richTextBox1.Text");
 			this->richTextBox1->WordWrap = false;
@@ -107,18 +108,20 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14));
-			this->label1->Location = System::Drawing::Point(66, 205);
+			this->label1->Location = System::Drawing::Point(66, 256);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(197, 29);
 			this->label1->TabIndex = 5;
 			this->label1->Text = L"Basic Operations";
+			this->label1->Click += gcnew System::EventHandler(this, &UI_Queue_Introduction::label1_Click_1);
 			// 
 			// richTextBox2
 			// 
+			this->richTextBox2->BackColor = System::Drawing::Color::White;
 			this->richTextBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
 			this->richTextBox2->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->richTextBox2->Location = System::Drawing::Point(71, 252);
+			this->richTextBox2->Location = System::Drawing::Point(71, 308);
 			this->richTextBox2->Name = L"richTextBox2";
 			this->richTextBox2->ReadOnly = true;
 			this->richTextBox2->Size = System::Drawing::Size(489, 129);
@@ -131,15 +134,15 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// UI_Queue_Introduction
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackColor = System::Drawing::Color::White;
 			this->Controls->Add(this->richTextBox2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->Heading);
 			this->Name = L"UI_Queue_Introduction";
-			this->Size = System::Drawing::Size(1088, 631);
+			this->Size = System::Drawing::Size(1105, 670);
 			this->Load += gcnew System::EventHandler(this, &UI_Queue_Introduction::UI_Queue_Introduction_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
@@ -157,5 +160,7 @@ namespace DataStructuresLearningSoftware {
 			 }
 	private: System::Void richTextBox2_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 			 }
+private: System::Void label1_Click_1(System::Object^  sender, System::EventArgs^  e) {
+		 }
 };
 }
