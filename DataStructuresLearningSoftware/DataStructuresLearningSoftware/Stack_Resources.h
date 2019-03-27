@@ -70,10 +70,11 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// richTextBox1
 			// 
-			this->richTextBox1->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->richTextBox1->BackColor = System::Drawing::Color::White;
 			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->richTextBox1->Cursor = System::Windows::Forms::Cursors::Default;
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.5F));
+			this->richTextBox1->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
 			this->richTextBox1->Location = System::Drawing::Point(59, 79);
 			this->richTextBox1->Margin = System::Windows::Forms::Padding(4);
 			this->richTextBox1->Name = L"richTextBox1";
@@ -84,9 +85,8 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// Stack_Resources
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackColor = System::Drawing::Color::White;
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->heading);
 			this->Margin = System::Windows::Forms::Padding(4);

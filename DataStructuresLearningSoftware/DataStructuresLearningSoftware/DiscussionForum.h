@@ -218,7 +218,7 @@ namespace DataStructuresLearningSoftware {
 			this->msgpanel->BackColor = System::Drawing::Color::White;
 			this->msgpanel->Location = System::Drawing::Point(0, 30);
 			this->msgpanel->Name = L"msgpanel";
-			this->msgpanel->Size = System::Drawing::Size(1104, 527);
+			this->msgpanel->Size = System::Drawing::Size(1105, 527);
 			this->msgpanel->TabIndex = 1;
 			// 
 			// message_detail
@@ -227,7 +227,7 @@ namespace DataStructuresLearningSoftware {
 			this->message_detail->BackColor = System::Drawing::Color::White;
 			this->message_detail->Location = System::Drawing::Point(0, 0);
 			this->message_detail->Name = L"message_detail";
-			this->message_detail->Size = System::Drawing::Size(1104, 557);
+			this->message_detail->Size = System::Drawing::Size(1105, 557);
 			this->message_detail->TabIndex = 2;
 			// 
 			// replypanel
@@ -281,14 +281,13 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// DiscussionForum
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->Controls->Add(this->message_detail);
 			this->Controls->Add(this->replypanel);
 			this->Controls->Add(this->toppanel);
 			this->Controls->Add(this->msgpanel);
 			this->Name = L"DiscussionForum";
-			this->Size = System::Drawing::Size(1104, 668);
+			this->Size = System::Drawing::Size(1105, 670);
 			this->Load += gcnew System::EventHandler(this, &DiscussionForum::DiscussionForum_Load);
 			this->toppanel->ResumeLayout(false);
 			this->toppanel->PerformLayout();
