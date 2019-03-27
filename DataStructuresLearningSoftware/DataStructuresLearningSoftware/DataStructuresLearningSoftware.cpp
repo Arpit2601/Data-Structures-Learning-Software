@@ -22,6 +22,6 @@ int main(array<System::String ^> ^args)
 	Application::SetCompatibleTextRenderingDefault(false); 
 
 	// Create the main window and run it
-	Application::Run(gcnew LoginForm());
+	Application::Run(gcnew Searching());
 	return 0;
 }

@@ -330,6 +330,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p15
 			// 
+			this->p15->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p15.Image")));
 			this->p15->Location = System::Drawing::Point(961, 43);
 			this->p15->Name = L"p15";
 			this->p15->Size = System::Drawing::Size(31, 38);
@@ -339,6 +340,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p14
 			// 
+			this->p14->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p14.Image")));
 			this->p14->Location = System::Drawing::Point(894, 43);
 			this->p14->Name = L"p14";
 			this->p14->Size = System::Drawing::Size(31, 38);
@@ -348,6 +350,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p13
 			// 
+			this->p13->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p13.Image")));
 			this->p13->Location = System::Drawing::Point(827, 43);
 			this->p13->Name = L"p13";
 			this->p13->Size = System::Drawing::Size(31, 38);
@@ -357,6 +360,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p12
 			// 
+			this->p12->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p12.Image")));
 			this->p12->Location = System::Drawing::Point(760, 43);
 			this->p12->Name = L"p12";
 			this->p12->Size = System::Drawing::Size(31, 38);
@@ -366,6 +370,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p11
 			// 
+			this->p11->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p11.Image")));
 			this->p11->Location = System::Drawing::Point(693, 43);
 			this->p11->Name = L"p11";
 			this->p11->Size = System::Drawing::Size(31, 38);
@@ -375,6 +380,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p10
 			// 
+			this->p10->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p10.Image")));
 			this->p10->Location = System::Drawing::Point(626, 43);
 			this->p10->Name = L"p10";
 			this->p10->Size = System::Drawing::Size(31, 38);
@@ -384,6 +390,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p9
 			// 
+			this->p9->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p9.Image")));
 			this->p9->Location = System::Drawing::Point(559, 43);
 			this->p9->Name = L"p9";
 			this->p9->Size = System::Drawing::Size(31, 38);
@@ -393,6 +400,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p8
 			// 
+			this->p8->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p8.Image")));
 			this->p8->Location = System::Drawing::Point(492, 43);
 			this->p8->Name = L"p8";
 			this->p8->Size = System::Drawing::Size(31, 38);
@@ -402,6 +410,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p7
 			// 
+			this->p7->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p7.Image")));
 			this->p7->Location = System::Drawing::Point(425, 43);
 			this->p7->Name = L"p7";
 			this->p7->Size = System::Drawing::Size(31, 38);
@@ -411,6 +420,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p6
 			// 
+			this->p6->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p6.Image")));
 			this->p6->Location = System::Drawing::Point(358, 43);
 			this->p6->Name = L"p6";
 			this->p6->Size = System::Drawing::Size(31, 38);
@@ -420,6 +430,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p5
 			// 
+			this->p5->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p5.Image")));
 			this->p5->Location = System::Drawing::Point(291, 43);
 			this->p5->Name = L"p5";
 			this->p5->Size = System::Drawing::Size(31, 38);
@@ -429,6 +440,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p4
 			// 
+			this->p4->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p4.Image")));
 			this->p4->Location = System::Drawing::Point(224, 43);
 			this->p4->Name = L"p4";
 			this->p4->Size = System::Drawing::Size(31, 38);
@@ -438,6 +450,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p3
 			// 
+			this->p3->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p3.Image")));
 			this->p3->Location = System::Drawing::Point(157, 43);
 			this->p3->Name = L"p3";
 			this->p3->Size = System::Drawing::Size(31, 38);
@@ -447,6 +460,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p2
 			// 
+			this->p2->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p2.Image")));
 			this->p2->Location = System::Drawing::Point(90, 43);
 			this->p2->Name = L"p2";
 			this->p2->Size = System::Drawing::Size(31, 38);
@@ -456,6 +470,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// p1
 			// 
+			this->p1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"p1.Image")));
 			this->p1->Location = System::Drawing::Point(23, 43);
 			this->p1->Name = L"p1";
 			this->p1->Size = System::Drawing::Size(31, 38);
@@ -874,104 +889,104 @@ namespace DataStructuresLearningSoftware {
 		public: String ^username;
 
 		//assign a colour to a label
-		//0->white,1->red,2->yellow,3->skyblue
-		void colour(int l,int c){
-			switch(l){
+	  //0->white,1->red,2->yellow,3->skyblue
+	  void colour(int l,int c){
+		switch(l){
 			case 1:
-				if(c==0)l1->BackColor=System::Drawing::Color::White;
+				if(c==0)l1->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l1->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l1->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l1->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 2:
-				if(c==0)l2->BackColor=System::Drawing::Color::White;
+				if(c==0)l2->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l2->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l2->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l2->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 3:
-				if(c==0)l3->BackColor=System::Drawing::Color::White;
+				if(c==0)l3->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l3->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l3->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l3->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 4:
-				if(c==0)l4->BackColor=System::Drawing::Color::White;
+				if(c==0)l4->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l4->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l4->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l4->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 5:
-				if(c==0)l5->BackColor=System::Drawing::Color::White;
+				if(c==0)l5->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l5->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l5->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l5->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 6:
-				if(c==0)l6->BackColor=System::Drawing::Color::White;
+				if(c==0)l6->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l6->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l6->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l6->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 7:
-				if(c==0)l7->BackColor=System::Drawing::Color::White;
+				if(c==0)l7->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l7->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l7->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l7->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 8:
-				if(c==0)l8->BackColor=System::Drawing::Color::White;
+				if(c==0)l8->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l8->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l8->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l8->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 9:
-				if(c==0)l9->BackColor=System::Drawing::Color::White;
+				if(c==0)l9->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l9->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l9->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l9->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 10:
-				if(c==0)l10->BackColor=System::Drawing::Color::White;
+				if(c==0)l10->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l10->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l10->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l10->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 11:
-				if(c==0)l11->BackColor=System::Drawing::Color::White;
+				if(c==0)l11->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l11->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l11->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l11->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 12:
-				if(c==0)l12->BackColor=System::Drawing::Color::White;
+				if(c==0)l12->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l12->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l12->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l12->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 13:
-				if(c==0)l13->BackColor=System::Drawing::Color::White;
+				if(c==0)l13->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l13->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l13->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l13->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 14:
-				if(c==0)l14->BackColor=System::Drawing::Color::White;
+				if(c==0)l14->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l14->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l14->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l14->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			case 15:
-				if(c==0)l15->BackColor=System::Drawing::Color::White;
+				if(c==0)l15->BackColor=System::Drawing::Color::FromArgb(192,255,192);
 				if(c==1)l15->BackColor=System::Drawing::Color::Pink;
 				if(c==2)l15->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l15->BackColor=System::Drawing::Color::SkyBlue;
 				break;
 			default:
 				break;
-
-			}
-		}
+			
+		  }
+	  }
 
 		//assign a value to a label
 		void value(int l,int v){
