@@ -101,8 +101,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// Stack_Introduction
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::White;
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->richTextBox1);

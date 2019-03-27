@@ -61,7 +61,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18));
-			this->label1->Location = System::Drawing::Point(104, 27);
+			this->label1->Location = System::Drawing::Point(79, 24);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(295, 36);
 			this->label1->TabIndex = 0;
@@ -69,22 +69,24 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// richTextBox1
 			// 
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
+			this->richTextBox1->BackColor = System::Drawing::Color::Bisque;
+			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Bookman Old Style", 10.1F));
 			this->richTextBox1->Location = System::Drawing::Point(85, 84);
 			this->richTextBox1->Name = L"richTextBox1";
 			this->richTextBox1->ReadOnly = true;
-			this->richTextBox1->Size = System::Drawing::Size(849, 452);
+			this->richTextBox1->Size = System::Drawing::Size(849, 586);
 			this->richTextBox1->TabIndex = 1;
 			this->richTextBox1->Text = resources->GetString(L"richTextBox1.Text");
 			// 
 			// UI_Linear_Queue_Array
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackColor = System::Drawing::Color::White;
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->label1);
 			this->Name = L"UI_Linear_Queue_Array";
-			this->Size = System::Drawing::Size(1088, 631);
+			this->Size = System::Drawing::Size(1105, 670);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

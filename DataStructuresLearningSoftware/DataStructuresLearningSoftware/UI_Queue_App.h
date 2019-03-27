@@ -73,37 +73,39 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// richTextBox1
 			// 
+			this->richTextBox1->BackColor = System::Drawing::Color::White;
 			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			this->richTextBox1->Location = System::Drawing::Point(90, 190);
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->richTextBox1->Location = System::Drawing::Point(90, 185);
 			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(747, 151);
+			this->richTextBox1->ReadOnly = true;
+			this->richTextBox1->Size = System::Drawing::Size(747, 136);
 			this->richTextBox1->TabIndex = 1;
 			this->richTextBox1->Text = resources->GetString(L"richTextBox1.Text");
 			this->richTextBox1->TextChanged += gcnew System::EventHandler(this, &UI_Queue_App::richTextBox1_TextChanged);
-			this->richTextBox1->SelectAll();
-			this->richTextBox1->SelectionBullet=true;
 			// 
 			// richTextBox2
 			// 
+			this->richTextBox2->BackColor = System::Drawing::Color::White;
 			this->richTextBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			this->richTextBox2->Location = System::Drawing::Point(90, 88);
+			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->richTextBox2->Location = System::Drawing::Point(90, 90);
 			this->richTextBox2->Name = L"richTextBox2";
-			this->richTextBox2->Size = System::Drawing::Size(747, 96);
+			this->richTextBox2->ReadOnly = true;
+			this->richTextBox2->Size = System::Drawing::Size(747, 80);
 			this->richTextBox2->TabIndex = 2;
 			this->richTextBox2->Text = resources->GetString(L"richTextBox2.Text");
 			this->richTextBox2->TextChanged += gcnew System::EventHandler(this, &UI_Queue_App::richTextBox2_TextChanged);
 			// 
 			// UI_Queue_App
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackColor = System::Drawing::Color::White;
 			this->Controls->Add(this->richTextBox2);
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->label1);
 			this->Name = L"UI_Queue_App";
-			this->Size = System::Drawing::Size(1088, 631);
+			this->Size = System::Drawing::Size(1105, 670);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

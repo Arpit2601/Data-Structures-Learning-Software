@@ -83,22 +83,28 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// dqbtn
 			// 
+			this->dqbtn->BackColor = System::Drawing::Color::Black;
+			this->dqbtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->dqbtn->ForeColor = System::Drawing::Color::White;
 			this->dqbtn->Location = System::Drawing::Point(556, 469);
 			this->dqbtn->Name = L"dqbtn";
-			this->dqbtn->Size = System::Drawing::Size(86, 37);
+			this->dqbtn->Size = System::Drawing::Size(90, 35);
 			this->dqbtn->TabIndex = 9;
 			this->dqbtn->Text = L"Dequeue";
-			this->dqbtn->UseVisualStyleBackColor = true;
+			this->dqbtn->UseVisualStyleBackColor = false;
 			this->dqbtn->Click += gcnew System::EventHandler(this, &UI_Circular_Queue_Animation::dqbtn_Click);
 			// 
 			// enqbtn
 			// 
+			this->enqbtn->BackColor = System::Drawing::Color::Black;
+			this->enqbtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->enqbtn->ForeColor = System::Drawing::Color::White;
 			this->enqbtn->Location = System::Drawing::Point(435, 469);
 			this->enqbtn->Name = L"enqbtn";
-			this->enqbtn->Size = System::Drawing::Size(86, 37);
+			this->enqbtn->Size = System::Drawing::Size(90, 35);
 			this->enqbtn->TabIndex = 8;
 			this->enqbtn->Text = L"Enqueue";
-			this->enqbtn->UseVisualStyleBackColor = true;
+			this->enqbtn->UseVisualStyleBackColor = false;
 			this->enqbtn->Click += gcnew System::EventHandler(this, &UI_Circular_Queue_Animation::enqbtn_Click);
 			// 
 			// label1
@@ -156,9 +162,12 @@ namespace DataStructuresLearningSoftware {
 			// arraybtn
 			// 
 			this->arraybtn->AutoSize = true;
+			this->arraybtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->arraybtn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
 			this->arraybtn->Location = System::Drawing::Point(174, 40);
 			this->arraybtn->Name = L"arraybtn";
-			this->arraybtn->Size = System::Drawing::Size(63, 21);
+			this->arraybtn->Size = System::Drawing::Size(62, 22);
 			this->arraybtn->TabIndex = 14;
 			this->arraybtn->TabStop = true;
 			this->arraybtn->Text = L"Array";
@@ -168,9 +177,12 @@ namespace DataStructuresLearningSoftware {
 			// llbtn
 			// 
 			this->llbtn->AutoSize = true;
+			this->llbtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->llbtn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
 			this->llbtn->Location = System::Drawing::Point(545, 40);
 			this->llbtn->Name = L"llbtn";
-			this->llbtn->Size = System::Drawing::Size(97, 21);
+			this->llbtn->Size = System::Drawing::Size(98, 22);
 			this->llbtn->TabIndex = 15;
 			this->llbtn->TabStop = true;
 			this->llbtn->Text = L"Linked List";
@@ -179,8 +191,8 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// UI_Circular_Queue_Animation
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackColor = System::Drawing::Color::White;
 			this->Controls->Add(this->arrayAnimationPanel);
 			this->Controls->Add(this->llAnimationPanel);
 			this->Controls->Add(this->llbtn);
@@ -192,7 +204,7 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->enqtext);
 			this->Name = L"UI_Circular_Queue_Animation";
-			this->Size = System::Drawing::Size(1088, 631);
+			this->Size = System::Drawing::Size(1105, 670);
 			this->Load += gcnew System::EventHandler(this, &UI_Circular_Queue_Animation::UI_Circular_Queue_Animation_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

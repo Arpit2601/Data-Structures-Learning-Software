@@ -133,9 +133,9 @@
         	 iii. Postfix: (+ X Y) Operators are written before their operands.
  
 •  BACKTRACKING
-   	Stack is used in the implementation of backtracking(recursive) algorihms like game playing, finding paths, exhaustive 	searching etc.
+   	Stack is used in the implementation of backtracking(recursive) algorihms like game playing, finding paths, exhaustive searching etc.
 
 •  MEMORY MANAGEMENT
-    	System stacks used in processors are used to store data for special purposes, like calling another function, returning    	a value from  function etc.</value>
+    	System stacks used in processors are used to store data for special purposes, like calling another function, returning a value from  function etc.</value>
   </data>
 </root>
