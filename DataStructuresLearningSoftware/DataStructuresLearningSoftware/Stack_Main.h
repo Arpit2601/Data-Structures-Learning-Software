@@ -97,7 +97,7 @@ namespace DataStructuresLearningSoftware {
 			this->panel1->Controls->Add(this->panel2);
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(131, 585);
+			this->panel1->Size = System::Drawing::Size(175, 720);
 			this->panel1->TabIndex = 0;
 			// 
 			// button3
@@ -110,7 +110,7 @@ namespace DataStructuresLearningSoftware {
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::Color::Black;
-			this->button3->Location = System::Drawing::Point(0, 65);
+			this->button3->Location = System::Drawing::Point(0, 60);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(175, 70);
 			this->button3->TabIndex = 3;
@@ -128,10 +128,10 @@ namespace DataStructuresLearningSoftware {
 			this->button7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button7->ForeColor = System::Drawing::Color::Black;
-			this->button7->Location = System::Drawing::Point(0, 240);
+			this->button7->Location = System::Drawing::Point(0, 220);
 			this->button7->Margin = System::Windows::Forms::Padding(4);
 			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(131, 24);
+			this->button7->Size = System::Drawing::Size(175, 30);
 			this->button7->TabIndex = 0;
 			this->button7->Text = L"Quiz Time";
 			this->button7->UseVisualStyleBackColor = false;
@@ -147,10 +147,10 @@ namespace DataStructuresLearningSoftware {
 			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button6->ForeColor = System::Drawing::Color::Black;
-			this->button6->Location = System::Drawing::Point(0, 210);
+			this->button6->Location = System::Drawing::Point(0, 190);
 			this->button6->Margin = System::Windows::Forms::Padding(4);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(131, 24);
+			this->button6->Size = System::Drawing::Size(175, 30);
 			this->button6->TabIndex = 6;
 			this->button6->Text = L"Resouces";
 			this->button6->UseVisualStyleBackColor = false;
@@ -166,10 +166,10 @@ namespace DataStructuresLearningSoftware {
 			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button5->ForeColor = System::Drawing::Color::Black;
-			this->button5->Location = System::Drawing::Point(0, 180);
+			this->button5->Location = System::Drawing::Point(0, 160);
 			this->button5->Margin = System::Windows::Forms::Padding(4);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(131, 24);
+			this->button5->Size = System::Drawing::Size(175, 30);
 			this->button5->TabIndex = 5;
 			this->button5->Text = L"Play With Stacks";
 			this->button5->UseVisualStyleBackColor = false;
@@ -185,10 +185,10 @@ namespace DataStructuresLearningSoftware {
 			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button4->ForeColor = System::Drawing::Color::Black;
-			this->button4->Location = System::Drawing::Point(0, 150);
+			this->button4->Location = System::Drawing::Point(0, 130);
 			this->button4->Margin = System::Windows::Forms::Padding(4);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(131, 24);
+			this->button4->Size = System::Drawing::Size(175, 30);
 			this->button4->TabIndex = 4;
 			this->button4->Text = L"Applications";
 			this->button4->UseVisualStyleBackColor = false;
@@ -204,9 +204,9 @@ namespace DataStructuresLearningSoftware {
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button2->ForeColor = System::Drawing::Color::Black;
-			this->button2->Location = System::Drawing::Point(0, 24);
+			this->button2->Location = System::Drawing::Point(0, 30);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(131, 41);
+			this->button2->Size = System::Drawing::Size(175, 30);
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"Implementation Using  Arrays";
 			this->button2->UseVisualStyleBackColor = false;
@@ -224,7 +224,7 @@ namespace DataStructuresLearningSoftware {
 			this->button1->ForeColor = System::Drawing::Color::Black;
 			this->button1->Location = System::Drawing::Point(0, 0);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(131, 24);
+			this->button1->Size = System::Drawing::Size(175, 30);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"Introduction";
 			this->button1->UseVisualStyleBackColor = false;
@@ -232,14 +232,14 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// panel2
 			// 
-			this->panel2->Location = System::Drawing::Point(131, 0);
+			this->panel2->Location = System::Drawing::Point(175, 0);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(826, 41);
+			this->panel2->Size = System::Drawing::Size(1104, 50);
 			this->panel2->TabIndex = 0;
 			// 
 			// panel3
 			// 
-			this->panel3->Location = System::Drawing::Point(131, 41);
+			this->panel3->Location = System::Drawing::Point(175, 50);
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(1105, 670);
 			this->panel3->TabIndex = 1;
@@ -253,7 +253,7 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Byte>(0)));
 			this->button8->ForeColor = System::Drawing::Color::Black;
 			this->button8->Location = System::Drawing::Point(758, 10);
-			this->button8->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button8->Margin = System::Windows::Forms::Padding(2);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(150, 24);
 			this->button8->TabIndex = 2;
@@ -270,8 +270,8 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-			this->MaximumSize = System::Drawing::Size(960, 585);
-			this->MinimumSize = System::Drawing::Size(960, 585);
+			this->MaximumSize = System::Drawing::Size(1280, 720);
+			this->MinimumSize = System::Drawing::Size(1280, 720);
 			this->Name = L"Stack_Main";
 			this->Text = L"Stack_Main";
 			this->Load += gcnew System::EventHandler(this, &Stack_Main::Stack_Main_Load);
