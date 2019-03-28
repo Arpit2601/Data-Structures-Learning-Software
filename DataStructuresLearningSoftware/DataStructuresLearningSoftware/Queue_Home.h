@@ -851,6 +851,7 @@ private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^ 
 			 display();
 		 }
 private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
+			 modulescheck();
 			 if(modulesCompleted<=0 && curid==4)
 			 {
 				 MessageBox::Show("Please Complete the Previous Module to access this.");

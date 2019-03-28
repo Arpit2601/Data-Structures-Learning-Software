@@ -617,6 +617,7 @@ private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^ 
 			 display();
 		 }
 private: System::Void btnNext_Click_1(System::Object^  sender, System::EventArgs^  e) {
+			 modulescheck();
 			 if(modulesCompleted<=1&&curid==3)
 			 {
 				 MessageBox::Show("Please Complete the Previous Module to access this.");
