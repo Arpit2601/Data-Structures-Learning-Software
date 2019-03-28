@@ -1,5 +1,7 @@
 #pragma once
 
+#include "moduleQuiz.h"
+
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -47,6 +49,8 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  label9;
 	private: System::Windows::Forms::Label^  label10;
 	private: System::Windows::Forms::Label^  label11;
+	private: System::Windows::Forms::Label^  label12;
+	private: System::Windows::Forms::Panel^  quizPanel;
 	protected: 
 
 	private:
@@ -75,6 +79,8 @@ namespace DataStructuresLearningSoftware {
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->quizPanel = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -83,9 +89,10 @@ namespace DataStructuresLearningSoftware {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Buxton Sketch", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(357, 20);
+			this->label1->Location = System::Drawing::Point(476, 25);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(390, 39);
+			this->label1->Size = System::Drawing::Size(476, 49);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"LINKED LIST: INTRODUCTION";
 			// 
@@ -93,9 +100,10 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->label2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(20, 81);
+			this->label2->Location = System::Drawing::Point(27, 100);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(1065, 43);
+			this->label2->Size = System::Drawing::Size(1420, 53);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"Like arrays, Linked List is a linear data structure. Unlike arrays, linked list e" 
 				L"lements are not stored at contiguous location; the elements are linked using poi" 
@@ -104,9 +112,10 @@ namespace DataStructuresLearningSoftware {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(173, 158);
+			this->pictureBox1->Location = System::Drawing::Point(231, 194);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(759, 169);
+			this->pictureBox1->Size = System::Drawing::Size(1012, 208);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 2;
 			this->pictureBox1->TabStop = false;
@@ -116,9 +125,10 @@ namespace DataStructuresLearningSoftware {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(20, 359);
+			this->label3->Location = System::Drawing::Point(27, 442);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(136, 21);
+			this->label3->Size = System::Drawing::Size(171, 27);
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"Why Linked List\?";
 			// 
@@ -126,9 +136,10 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->label4->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(20, 380);
+			this->label4->Location = System::Drawing::Point(27, 468);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(1065, 262);
+			this->label4->Size = System::Drawing::Size(1420, 322);
 			this->label4->TabIndex = 4;
 			this->label4->Text = resources->GetString(L"label4.Text");
 			// 
@@ -137,9 +148,10 @@ namespace DataStructuresLearningSoftware {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(20, 662);
+			this->label5->Location = System::Drawing::Point(27, 815);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(180, 21);
+			this->label5->Size = System::Drawing::Size(232, 27);
 			this->label5->TabIndex = 5;
 			this->label5->Text = L"Advantages over arrays";
 			// 
@@ -148,9 +160,10 @@ namespace DataStructuresLearningSoftware {
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(20, 683);
+			this->label6->Location = System::Drawing::Point(27, 841);
+			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(209, 40);
+			this->label6->Size = System::Drawing::Size(262, 52);
 			this->label6->TabIndex = 6;
 			this->label6->Text = L"1) Dynamic size\r\n2) Ease of insertion/deletion";
 			// 
@@ -159,9 +172,10 @@ namespace DataStructuresLearningSoftware {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(20, 742);
+			this->label7->Location = System::Drawing::Point(27, 913);
+			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(93, 21);
+			this->label7->Size = System::Drawing::Size(118, 27);
 			this->label7->TabIndex = 7;
 			this->label7->Text = L"Drawbacks:";
 			// 
@@ -169,9 +183,10 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->label8->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(21, 763);
+			this->label8->Location = System::Drawing::Point(28, 939);
+			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(1064, 86);
+			this->label8->Size = System::Drawing::Size(1419, 106);
 			this->label8->TabIndex = 8;
 			this->label8->Text = resources->GetString(L"label8.Text");
 			// 
@@ -180,9 +195,10 @@ namespace DataStructuresLearningSoftware {
 			this->label9->AutoSize = true;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(20, 859);
+			this->label9->Location = System::Drawing::Point(27, 1057);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(123, 21);
+			this->label9->Size = System::Drawing::Size(157, 27);
 			this->label9->TabIndex = 9;
 			this->label9->Text = L"Representation:";
 			// 
@@ -190,9 +206,10 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->label10->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label10->Location = System::Drawing::Point(21, 880);
+			this->label10->Location = System::Drawing::Point(28, 1083);
+			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(1065, 145);
+			this->label10->Size = System::Drawing::Size(1420, 178);
 			this->label10->TabIndex = 10;
 			this->label10->Text = resources->GetString(L"label10.Text");
 			// 
@@ -201,18 +218,42 @@ namespace DataStructuresLearningSoftware {
 			this->label11->BackColor = System::Drawing::Color::LightBlue;
 			this->label11->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label11->Location = System::Drawing::Point(21, 1039);
+			this->label11->Location = System::Drawing::Point(28, 1279);
+			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(1064, 127);
+			this->label11->Size = System::Drawing::Size(1419, 156);
 			this->label11->TabIndex = 11;
 			this->label11->Text = L"// A linked list node \r\nstruct Node \r\n{ \r\n  int data; \r\n  struct Node *next; \r\n};" 
 				L"";
 			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label12->Location = System::Drawing::Point(40, 1512);
+			this->label12->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(482, 27);
+			this->label12->TabIndex = 45;
+			this->label12->Text = L"Answer the question correctly to pass the module.";
+			// 
+			// quizPanel
+			// 
+			this->quizPanel->BackColor = System::Drawing::Color::White;
+			this->quizPanel->Location = System::Drawing::Point(26, 1541);
+			this->quizPanel->Margin = System::Windows::Forms::Padding(4);
+			this->quizPanel->Name = L"quizPanel";
+			this->quizPanel->Size = System::Drawing::Size(1420, 554);
+			this->quizPanel->TabIndex = 44;
+			// 
 			// LinkedList_Introduction
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::AliceBlue;
+			this->Controls->Add(this->label12);
+			this->Controls->Add(this->quizPanel);
 			this->Controls->Add(this->label11);
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->label9);
@@ -225,8 +266,10 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"LinkedList_Introduction";
-			this->Size = System::Drawing::Size(1105, 1300);
+			this->Size = System::Drawing::Size(1473, 2123);
+			this->Load += gcnew System::EventHandler(this, &LinkedList_Introduction::LinkedList_Introduction_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -235,5 +278,16 @@ namespace DataStructuresLearningSoftware {
 #pragma endregion
 
 		public: String ^username;
-	};
+	private: System::Void LinkedList_Introduction_Load(System::Object^  sender, System::EventArgs^  e) {
+				 // Quiz Panel Load
+				 moduleQuiz ^newPanel = gcnew moduleQuiz();
+				 newPanel->ds_id = 2;
+				 newPanel->module_id = 0;
+				 newPanel->username = username;
+				 newPanel->update_id = 10;
+				 newPanel->update_name = "ArraysProgress";
+				 quizPanel->Controls->Clear();
+				 quizPanel->Controls->Add(newPanel);
+			 }
+};
 }

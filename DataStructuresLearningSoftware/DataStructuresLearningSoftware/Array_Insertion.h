@@ -1,5 +1,7 @@
 #pragma once
 
+#include "moduleQuiz.h"
+
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -68,6 +70,8 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  label6;
 	private: System::Windows::Forms::Label^  label7;
 	private: System::Windows::Forms::Label^  label8;
+	private: System::Windows::Forms::Label^  label9;
+	private: System::Windows::Forms::Panel^  quizPanel;
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -116,6 +120,8 @@ namespace DataStructuresLearningSoftware {
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->quizPanel = (gcnew System::Windows::Forms::Panel());
 			this->insert_animation->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
@@ -127,10 +133,10 @@ namespace DataStructuresLearningSoftware {
 			this->insertarray->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->insertarray->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->insertarray->Location = System::Drawing::Point(849, 908);
-			this->insertarray->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->insertarray->Location = System::Drawing::Point(1132, 1118);
+			this->insertarray->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->insertarray->Name = L"insertarray";
-			this->insertarray->Size = System::Drawing::Size(100, 30);
+			this->insertarray->Size = System::Drawing::Size(133, 37);
 			this->insertarray->TabIndex = 12;
 			this->insertarray->Text = L"INSERT";
 			this->insertarray->UseVisualStyleBackColor = false;
@@ -140,10 +146,10 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->insertindex->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->insertindex->Location = System::Drawing::Point(526, 908);
-			this->insertindex->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->insertindex->Location = System::Drawing::Point(701, 1118);
+			this->insertindex->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->insertindex->Name = L"insertindex";
-			this->insertindex->Size = System::Drawing::Size(90, 28);
+			this->insertindex->Size = System::Drawing::Size(119, 34);
 			this->insertindex->TabIndex = 11;
 			// 
 			// label2
@@ -151,10 +157,9 @@ namespace DataStructuresLearningSoftware {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(400, 911);
-			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->Location = System::Drawing::Point(533, 1121);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(122, 20);
+			this->label2->Size = System::Drawing::Size(153, 26);
 			this->label2->TabIndex = 10;
 			this->label2->Text = L"Insert At Index";
 			// 
@@ -162,10 +167,10 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->insertvalue->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->insertvalue->Location = System::Drawing::Point(251, 908);
-			this->insertvalue->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->insertvalue->Location = System::Drawing::Point(335, 1118);
+			this->insertvalue->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->insertvalue->Name = L"insertvalue";
-			this->insertvalue->Size = System::Drawing::Size(100, 28);
+			this->insertvalue->Size = System::Drawing::Size(132, 34);
 			this->insertvalue->TabIndex = 9;
 			// 
 			// label1
@@ -173,10 +178,9 @@ namespace DataStructuresLearningSoftware {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(151, 911);
-			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label1->Location = System::Drawing::Point(201, 1121);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(96, 20);
+			this->label1->Size = System::Drawing::Size(121, 26);
 			this->label1->TabIndex = 8;
 			this->label1->Text = L"Insert Value";
 			// 
@@ -200,10 +204,10 @@ namespace DataStructuresLearningSoftware {
 			this->insert_animation->Controls->Add(this->l6);
 			this->insert_animation->Controls->Add(this->l7);
 			this->insert_animation->Controls->Add(this->l8);
-			this->insert_animation->Location = System::Drawing::Point(155, 698);
-			this->insert_animation->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->insert_animation->Location = System::Drawing::Point(207, 859);
+			this->insert_animation->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->insert_animation->Name = L"insert_animation";
-			this->insert_animation->Size = System::Drawing::Size(794, 206);
+			this->insert_animation->Size = System::Drawing::Size(1059, 254);
 			this->insert_animation->TabIndex = 7;
 			// 
 			// label19
@@ -211,90 +215,81 @@ namespace DataStructuresLearningSoftware {
 			this->label19->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label19->Location = System::Drawing::Point(7, 118);
-			this->label19->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label19->Location = System::Drawing::Point(9, 145);
 			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(76, 82);
+			this->label19->Size = System::Drawing::Size(101, 100);
 			this->label19->TabIndex = 16;
 			this->label19->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label18
 			// 
 			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(714, 6);
-			this->label18->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label18->Location = System::Drawing::Point(952, 7);
 			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(13, 13);
+			this->label18->Size = System::Drawing::Size(16, 17);
 			this->label18->TabIndex = 15;
 			this->label18->Text = L"8";
 			// 
 			// label17
 			// 
 			this->label17->AutoSize = true;
-			this->label17->Location = System::Drawing::Point(625, 6);
-			this->label17->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label17->Location = System::Drawing::Point(833, 7);
 			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(13, 13);
+			this->label17->Size = System::Drawing::Size(16, 17);
 			this->label17->TabIndex = 14;
 			this->label17->Text = L"7";
 			// 
 			// label16
 			// 
 			this->label16->AutoSize = true;
-			this->label16->Location = System::Drawing::Point(536, 6);
-			this->label16->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label16->Location = System::Drawing::Point(715, 7);
 			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(13, 13);
+			this->label16->Size = System::Drawing::Size(16, 17);
 			this->label16->TabIndex = 13;
 			this->label16->Text = L"6";
 			// 
 			// label15
 			// 
 			this->label15->AutoSize = true;
-			this->label15->Location = System::Drawing::Point(448, 6);
-			this->label15->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label15->Location = System::Drawing::Point(597, 7);
 			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(13, 13);
+			this->label15->Size = System::Drawing::Size(16, 17);
 			this->label15->TabIndex = 12;
 			this->label15->Text = L"5";
 			// 
 			// label14
 			// 
 			this->label14->AutoSize = true;
-			this->label14->Location = System::Drawing::Point(360, 6);
-			this->label14->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label14->Location = System::Drawing::Point(480, 7);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(13, 13);
+			this->label14->Size = System::Drawing::Size(16, 17);
 			this->label14->TabIndex = 11;
 			this->label14->Text = L"4";
 			// 
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(272, 6);
-			this->label13->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label13->Location = System::Drawing::Point(363, 7);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(13, 13);
+			this->label13->Size = System::Drawing::Size(16, 17);
 			this->label13->TabIndex = 10;
 			this->label13->Text = L"3";
 			// 
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(185, 6);
-			this->label12->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label12->Location = System::Drawing::Point(247, 7);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(13, 13);
+			this->label12->Size = System::Drawing::Size(16, 17);
 			this->label12->TabIndex = 9;
 			this->label12->Text = L"2";
 			// 
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(107, 6);
-			this->label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label11->Location = System::Drawing::Point(143, 7);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(13, 13);
+			this->label11->Size = System::Drawing::Size(16, 17);
 			this->label11->TabIndex = 8;
 			this->label11->Text = L"1";
 			// 
@@ -305,10 +300,9 @@ namespace DataStructuresLearningSoftware {
 			this->l1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l1->Location = System::Drawing::Point(110, 29);
-			this->l1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->l1->Location = System::Drawing::Point(147, 36);
 			this->l1->Name = L"l1";
-			this->l1->Size = System::Drawing::Size(63, 65);
+			this->l1->Size = System::Drawing::Size(83, 80);
 			this->l1->TabIndex = 7;
 			this->l1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -319,10 +313,9 @@ namespace DataStructuresLearningSoftware {
 			this->l2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l2->Location = System::Drawing::Point(188, 29);
-			this->l2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->l2->Location = System::Drawing::Point(251, 36);
 			this->l2->Name = L"l2";
-			this->l2->Size = System::Drawing::Size(72, 65);
+			this->l2->Size = System::Drawing::Size(95, 80);
 			this->l2->TabIndex = 6;
 			this->l2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -333,10 +326,9 @@ namespace DataStructuresLearningSoftware {
 			this->l3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l3->Location = System::Drawing::Point(274, 29);
-			this->l3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->l3->Location = System::Drawing::Point(365, 36);
 			this->l3->Name = L"l3";
-			this->l3->Size = System::Drawing::Size(76, 65);
+			this->l3->Size = System::Drawing::Size(101, 80);
 			this->l3->TabIndex = 5;
 			this->l3->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -347,10 +339,9 @@ namespace DataStructuresLearningSoftware {
 			this->l4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l4->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l4->Location = System::Drawing::Point(362, 29);
-			this->l4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->l4->Location = System::Drawing::Point(483, 36);
 			this->l4->Name = L"l4";
-			this->l4->Size = System::Drawing::Size(76, 65);
+			this->l4->Size = System::Drawing::Size(101, 80);
 			this->l4->TabIndex = 4;
 			this->l4->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -361,10 +352,9 @@ namespace DataStructuresLearningSoftware {
 			this->l5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l5->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l5->Location = System::Drawing::Point(450, 29);
-			this->l5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->l5->Location = System::Drawing::Point(600, 36);
 			this->l5->Name = L"l5";
-			this->l5->Size = System::Drawing::Size(76, 65);
+			this->l5->Size = System::Drawing::Size(101, 80);
 			this->l5->TabIndex = 3;
 			this->l5->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -375,10 +365,9 @@ namespace DataStructuresLearningSoftware {
 			this->l6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l6->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l6->Location = System::Drawing::Point(538, 29);
-			this->l6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->l6->Location = System::Drawing::Point(717, 36);
 			this->l6->Name = L"l6";
-			this->l6->Size = System::Drawing::Size(76, 65);
+			this->l6->Size = System::Drawing::Size(101, 80);
 			this->l6->TabIndex = 2;
 			this->l6->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -389,10 +378,9 @@ namespace DataStructuresLearningSoftware {
 			this->l7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l7->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l7->Location = System::Drawing::Point(627, 29);
-			this->l7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->l7->Location = System::Drawing::Point(836, 36);
 			this->l7->Name = L"l7";
-			this->l7->Size = System::Drawing::Size(76, 65);
+			this->l7->Size = System::Drawing::Size(101, 80);
 			this->l7->TabIndex = 1;
 			this->l7->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -403,10 +391,9 @@ namespace DataStructuresLearningSoftware {
 			this->l8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l8->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l8->Location = System::Drawing::Point(729, 29);
-			this->l8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->l8->Location = System::Drawing::Point(972, 36);
 			this->l8->Name = L"l8";
-			this->l8->Size = System::Drawing::Size(63, 65);
+			this->l8->Size = System::Drawing::Size(83, 80);
 			this->l8->TabIndex = 0;
 			this->l8->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -420,9 +407,10 @@ namespace DataStructuresLearningSoftware {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Buxton Sketch", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(401, 20);
+			this->label3->Location = System::Drawing::Point(535, 25);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(302, 39);
+			this->label3->Size = System::Drawing::Size(371, 49);
 			this->label3->TabIndex = 13;
 			this->label3->Text = L"INSERTION IN ARRAYS";
 			// 
@@ -430,9 +418,10 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->label4->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(20, 93);
+			this->label4->Location = System::Drawing::Point(27, 114);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(1065, 44);
+			this->label4->Size = System::Drawing::Size(1420, 54);
 			this->label4->TabIndex = 14;
 			this->label4->Text = L"In an unsorted array, the insert operation is faster as compared to sorted array " 
 				L"because we don’t have to care about the position at which the element is to be p" 
@@ -441,9 +430,10 @@ namespace DataStructuresLearningSoftware {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(152, 168);
+			this->pictureBox1->Location = System::Drawing::Point(203, 207);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(800, 437);
+			this->pictureBox1->Size = System::Drawing::Size(1067, 538);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 15;
 			this->pictureBox1->TabStop = false;
@@ -453,9 +443,10 @@ namespace DataStructuresLearningSoftware {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(157, 670);
+			this->label5->Location = System::Drawing::Point(209, 825);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(184, 26);
+			this->label5->Size = System::Drawing::Size(232, 33);
 			this->label5->TabIndex = 16;
 			this->label5->Text = L"LEARN WITH FUN";
 			// 
@@ -464,9 +455,10 @@ namespace DataStructuresLearningSoftware {
 			this->label6->BackColor = System::Drawing::Color::DarkSeaGreen;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(20, 972);
+			this->label6->Location = System::Drawing::Point(27, 1196);
+			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(1065, 888);
+			this->label6->Size = System::Drawing::Size(1420, 1093);
 			this->label6->TabIndex = 17;
 			this->label6->Text = resources->GetString(L"label6.Text");
 			// 
@@ -475,9 +467,10 @@ namespace DataStructuresLearningSoftware {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(20, 1896);
+			this->label7->Location = System::Drawing::Point(27, 2334);
+			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(67, 21);
+			this->label7->Size = System::Drawing::Size(83, 27);
 			this->label7->TabIndex = 18;
 			this->label7->Text = L"Output:";
 			// 
@@ -486,17 +479,41 @@ namespace DataStructuresLearningSoftware {
 			this->label8->BackColor = System::Drawing::Color::DarkSeaGreen;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(20, 1917);
+			this->label8->Location = System::Drawing::Point(27, 2359);
+			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(1065, 46);
+			this->label8->Size = System::Drawing::Size(1420, 57);
 			this->label8->TabIndex = 19;
 			this->label8->Text = L"Before Insertion: 12 16 20 40 50 70 \r\nAfter Insertion: 12 16 20 40 50 70 26 ";
 			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label9->Location = System::Drawing::Point(40, 2461);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(482, 27);
+			this->label9->TabIndex = 39;
+			this->label9->Text = L"Answer the question correctly to pass the module.";
+			// 
+			// quizPanel
+			// 
+			this->quizPanel->BackColor = System::Drawing::Color::White;
+			this->quizPanel->Location = System::Drawing::Point(26, 2490);
+			this->quizPanel->Margin = System::Windows::Forms::Padding(4);
+			this->quizPanel->Name = L"quizPanel";
+			this->quizPanel->Size = System::Drawing::Size(1420, 554);
+			this->quizPanel->TabIndex = 38;
+			// 
 			// Array_Insertion
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Honeydew;
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->quizPanel);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
@@ -510,9 +527,10 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->insertvalue);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->insert_animation);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"Array_Insertion";
-			this->Size = System::Drawing::Size(1105, 2050);
+			this->Size = System::Drawing::Size(1473, 3097);
+			this->Load += gcnew System::EventHandler(this, &Array_Insertion::Array_Insertion_Load);
 			this->insert_animation->ResumeLayout(false);
 			this->insert_animation->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
@@ -611,5 +629,16 @@ namespace DataStructuresLearningSoftware {
 					 this->label19->Location = System::Drawing::Point(x,this->label19->Location.Y);
 				 }
 			 }
-	};
+	private: System::Void Array_Insertion_Load(System::Object^  sender, System::EventArgs^  e) {
+				 // Quiz Panel Load
+				 moduleQuiz ^newPanel = gcnew moduleQuiz();
+				 newPanel->ds_id = 1;
+				 newPanel->module_id = 1;
+				 newPanel->username = username;
+				 newPanel->update_id = 9;
+				 newPanel->update_name = "ArraysProgress";
+				 quizPanel->Controls->Clear();
+				 quizPanel->Controls->Add(newPanel);
+			 }
+};
 }
