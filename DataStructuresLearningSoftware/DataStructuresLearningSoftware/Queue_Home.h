@@ -360,6 +360,8 @@ namespace DataStructuresLearningSoftware {
 		bool iscqclk;
 		static int linclkctr=0;
 	private: System::Void Queue_Home_Load(System::Object^  sender, System::EventArgs^  e) {
+				 islinclk=false;
+				 iscqclk=false;
 				 outputpanel->Controls->Clear();
 				 outputpanel->Controls->Add(gcnew UI_Queue_Introduction);
 			 }
@@ -456,11 +458,13 @@ namespace DataStructuresLearningSoftware {
 					  this->appbtn->Location = System::Drawing::Point(0, 180);
 					  this->quizbtn->Location = System::Drawing::Point(0, 210);
 				  }
-				  else
+				  else 
 				  {
-					  this->cqarrbtn->Location = System::Drawing::Point(0, 180);
-					  this->cqllbtn->Location = System::Drawing::Point(0, 210);
-					  this->ciranimbtn->Location = System::Drawing::Point(0, 240);
+					  this->cqarrbtn->Location = System::Drawing::Point(0, 90);
+					  this->cqllbtn->Location = System::Drawing::Point(0, 120);
+					  this->ciranimbtn->Location = System::Drawing::Point(0, 150);
+					  this->appbtn->Location = System::Drawing::Point(0, 180);
+					  this->quizbtn->Location = System::Drawing::Point(0, 210);
 				  }
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::LightSeaGreen;
