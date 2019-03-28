@@ -1480,8 +1480,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// DSpanel
 			// 
 			this->DSpanel->BackColor = System::Drawing::Color::Silver;
-			this->DSpanel->Controls->Add(this->Suggestionpanel);
 			this->DSpanel->Controls->Add(this->DSLinkpanel);
+			this->DSpanel->Controls->Add(this->Suggestionpanel);
 			this->DSpanel->Location = System::Drawing::Point(0, 65);
 			this->DSpanel->Margin = System::Windows::Forms::Padding(0);
 			this->DSpanel->Name = L"DSpanel";
