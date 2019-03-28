@@ -1572,8 +1572,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// DSpanel
 			// 
 			this->DSpanel->BackColor = System::Drawing::Color::AliceBlue;
-			this->DSpanel->Controls->Add(this->Suggestionpanel);
 			this->DSpanel->Controls->Add(this->DSLinkpanel);
+			this->DSpanel->Controls->Add(this->Suggestionpanel);
 			this->DSpanel->Location = System::Drawing::Point(0, 65);
 			this->DSpanel->Margin = System::Windows::Forms::Padding(0);
 			this->DSpanel->Name = L"DSpanel";
@@ -2242,9 +2242,9 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1280, 770);
+			this->Controls->Add(this->DSpanel);
 			this->Controls->Add(this->Homepanel);
 			this->Controls->Add(this->Profilepanel);
-			this->Controls->Add(this->DSpanel);
 			this->Controls->Add(this->Headerstatuspanel);
 			this->Controls->Add(this->HeaderPanel);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -2945,6 +2945,7 @@ private: System::Void vartextBox_TextChanged(System::Object^  sender, System::Ev
 				 HomepanelStatuslabel->Text="Logged in as a guest (Progress won't be saved)";
 				 HomepanelStatuslabel->BackColor=Color::LightBlue;
 				 HomepanelStatuslabel->ForeColor=Color::Blue;
+				 DSSuggestionsbutton->Hide();
 				 return;
 			 }
 			 
@@ -3072,7 +3073,7 @@ private: System::Void vartextBox_TextChanged(System::Object^  sender, System::Ev
 
 			 }
 
-			 
+			// MessageBox::Show("test"+isapproved);
 
 			 //Reading security questions
 			 try
@@ -3115,6 +3116,11 @@ private: System::Void vartextBox_TextChanged(System::Object^  sender, System::Ev
 			 catch (Exception ^ex)
 			 {
 				 MessageBox::Show(ex->Message,"Error while reading DS Table on Load");
+			 }
+
+			 if(designation=="stud")
+			 {
+				 DSSuggestionsbutton->Hide();
 			 }
 
 
@@ -3613,6 +3619,12 @@ private: System::Void SuggestionDeletebutton_Click(System::Object^  sender, Syst
 
 		 }
 private: System::Void DSSuggestionsbutton_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if(isapproved=="False")
+			 {
+				 MessageBox::Show("'Professor status not yet verified by Admin","Restricted");
+				 return;
+
+			 }
 			 DSLinkpanel->Hide();
 			 Suggestionpanel->Show();
 			 SuggestionADDpanel->Hide();
