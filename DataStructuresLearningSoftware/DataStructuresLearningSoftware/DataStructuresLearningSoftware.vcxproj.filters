@@ -159,6 +159,15 @@
     <ClCompile Include="LinkedList_Traversal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Arrays.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedList1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedList_Introduction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -296,6 +305,15 @@
     <ClInclude Include="LinkedList_Traversal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Arrays.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList_Introduction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -345,13 +363,22 @@
     <EmbeddedResource Include="mergesort.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
-    <EmbeddedResource Include="A_and_LL.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Arrays.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Array_Introduction.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Array_Search.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinkedList1.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

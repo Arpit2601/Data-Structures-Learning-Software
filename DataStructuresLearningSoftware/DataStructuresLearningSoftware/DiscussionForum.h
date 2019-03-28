@@ -335,7 +335,7 @@ namespace DataStructuresLearningSoftware {
 			String ^ module_name = "Array";
 			try{
 				OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
-				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 				DB_Connection->Open();
 				String ^ readString = "SELECT * FROM Messages ORDER BY [Date&Time] DESC;";
 				OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
@@ -485,7 +485,7 @@ namespace DataStructuresLearningSoftware {
 
 						 try{
 							 OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
-							 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+							 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 
 							 // username and designation and to be later on taken from main page
 							 String ^ messagetext = replytxt->Text;
@@ -526,7 +526,7 @@ namespace DataStructuresLearningSoftware {
 
 						 try{
 							 OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
-							 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+							 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 
 							 // username and designation and to be later on taken from main page
 							 String ^ replytext = replytxt->Text;
@@ -572,7 +572,7 @@ namespace DataStructuresLearningSoftware {
 				message_detail->Visible=true;
 				try{
 					OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
-					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 					DB_Connection->Open();
 					String ^ readString = "SELECT * FROM Messages WHERE MessageID=" + message_id ;
 					OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
@@ -786,7 +786,7 @@ namespace DataStructuresLearningSoftware {
 
 					reply_message_id = reply_message_id->Remove(0,1);
 					OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
-					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 					DB_Connection->Open();
 					OleDbCommand ^ cmd;
 					String ^ readString;
@@ -815,7 +815,7 @@ namespace DataStructuresLearningSoftware {
 
 					reply_message_id = reply_message_id->Remove(0,1);
 					OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
-					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 					DB_Connection->Open();
 					OleDbCommand ^ cmd;
 					String ^ readString;
@@ -851,7 +851,7 @@ namespace DataStructuresLearningSoftware {
 
 					reply_message_id = reply_message_id->Remove(0,1);
 					OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
-					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 					DB_Connection->Open();
 					OleDbCommand ^ cmd;
 					String ^ readString;
@@ -883,7 +883,7 @@ namespace DataStructuresLearningSoftware {
 
 					reply_message_id = reply_message_id->Remove(0,1);
 					OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
-					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 					DB_Connection->Open();
 					OleDbCommand ^ cmd;
 					String ^ readString;
@@ -919,7 +919,7 @@ namespace DataStructuresLearningSoftware {
 				String ^ reply_message_id = static_cast<String ^>(closebtn->Tag);
 				OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
 				reply_message_id = reply_message_id->Remove(0,1);
-				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 				DB_Connection->Open();
 				OleDbCommand ^ cmd;
 				String ^ readString;

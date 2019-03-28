@@ -8,7 +8,7 @@ using namespace System::Data;
 using namespace System::Drawing;
 
 
-namespace AandLink {
+namespace DataStructuresLearningSoftware {
 
 	/// <summary>
 	/// Summary for LinkedList_Traversal
@@ -363,6 +363,9 @@ namespace AandLink {
 
 		}
 #pragma endregion
+
+		public: String ^username;
+		
 		private: System::Void timerLTrav_Tick(System::Object^  sender, System::EventArgs^  e) {
 			  int var = this->arrowlli->Location.X;
 			 if(var<=this->lli7->Location.X + 73){

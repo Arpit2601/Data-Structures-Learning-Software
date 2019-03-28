@@ -8,7 +8,7 @@ using namespace System::Data;
 using namespace System::Drawing;
 
 
-namespace AandLink {
+namespace DataStructuresLearningSoftware {
 
 	/// <summary>
 	/// Summary for LinkedList_Insertion
@@ -292,6 +292,9 @@ namespace AandLink {
 
 		}
 #pragma endregion
+
+	public: String ^username;
+
 	private: System::Void insert_but_ll_Click(System::Object^  sender, System::EventArgs^  e) {
 				 if(this->insert_ll_tf->Text==""){
 					 this->insert_ll_tf->Text = "";

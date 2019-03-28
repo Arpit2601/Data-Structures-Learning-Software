@@ -9,6 +9,8 @@
 #include "A_and_LL.h"	// Start with Form1
 #include "LoginForm.h"
 #include "Homepage.h"
+#include "Arrays.h"
+#include "LinkedList1.h"
 #include "stdafx.h"
 #using <system.windows.forms.dll>
 #using <Microsoft.VisualBasic.dll>

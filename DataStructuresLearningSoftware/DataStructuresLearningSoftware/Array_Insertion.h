@@ -8,7 +8,7 @@ using namespace System::Data;
 using namespace System::Drawing;
 
 
-namespace AandLink {
+namespace DataStructuresLearningSoftware {
 
 	/// <summary>
 	/// Summary for Array_Insertion
@@ -35,7 +35,7 @@ namespace AandLink {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^  insert_lab_ar;
+
 	protected: 
 	private: System::Windows::Forms::Button^  insertarray;
 	private: System::Windows::Forms::TextBox^  insertindex;
@@ -61,6 +61,13 @@ namespace AandLink {
 	private: System::Windows::Forms::Label^  l7;
 	private: System::Windows::Forms::Label^  l8;
 	private: System::Windows::Forms::Timer^  insertimer;
+	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::Label^  label8;
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -77,7 +84,7 @@ namespace AandLink {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			this->insert_lab_ar = (gcnew System::Windows::Forms::Label());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Array_Insertion::typeid));
 			this->insertarray = (gcnew System::Windows::Forms::Button());
 			this->insertindex = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -102,65 +109,74 @@ namespace AandLink {
 			this->l7 = (gcnew System::Windows::Forms::Label());
 			this->l8 = (gcnew System::Windows::Forms::Label());
 			this->insertimer = (gcnew System::Windows::Forms::Timer(this->components));
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->insert_animation->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
-			// 
-			// insert_lab_ar
-			// 
-			this->insert_lab_ar->AutoSize = true;
-			this->insert_lab_ar->Font = (gcnew System::Drawing::Font(L"Century Gothic", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->insert_lab_ar->Location = System::Drawing::Point(25, 13);
-			this->insert_lab_ar->Name = L"insert_lab_ar";
-			this->insert_lab_ar->Size = System::Drawing::Size(74, 28);
-			this->insert_lab_ar->TabIndex = 1;
-			this->insert_lab_ar->Text = L"Insert";
 			// 
 			// insertarray
 			// 
-			this->insertarray->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->insertarray->BackColor = System::Drawing::Color::DarkSeaGreen;
+			this->insertarray->FlatAppearance->BorderSize = 0;
+			this->insertarray->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->insertarray->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->insertarray->Location = System::Drawing::Point(693, 300);
+			this->insertarray->Location = System::Drawing::Point(849, 908);
+			this->insertarray->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->insertarray->Name = L"insertarray";
-			this->insertarray->Size = System::Drawing::Size(95, 33);
+			this->insertarray->Size = System::Drawing::Size(100, 30);
 			this->insertarray->TabIndex = 12;
 			this->insertarray->Text = L"INSERT";
-			this->insertarray->UseVisualStyleBackColor = true;
+			this->insertarray->UseVisualStyleBackColor = false;
 			this->insertarray->Click += gcnew System::EventHandler(this, &Array_Insertion::insertarray_Click);
 			// 
 			// insertindex
 			// 
-			this->insertindex->Location = System::Drawing::Point(459, 306);
+			this->insertindex->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->insertindex->Location = System::Drawing::Point(526, 908);
+			this->insertindex->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->insertindex->Name = L"insertindex";
-			this->insertindex->Size = System::Drawing::Size(118, 22);
+			this->insertindex->Size = System::Drawing::Size(90, 28);
 			this->insertindex->TabIndex = 11;
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(322, 305);
+			this->label2->Location = System::Drawing::Point(400, 911);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(131, 21);
+			this->label2->Size = System::Drawing::Size(122, 20);
 			this->label2->TabIndex = 10;
 			this->label2->Text = L"Insert At Index";
 			// 
 			// insertvalue
 			// 
-			this->insertvalue->Location = System::Drawing::Point(133, 311);
+			this->insertvalue->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->insertvalue->Location = System::Drawing::Point(251, 908);
+			this->insertvalue->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->insertvalue->Name = L"insertvalue";
-			this->insertvalue->Size = System::Drawing::Size(119, 22);
+			this->insertvalue->Size = System::Drawing::Size(100, 28);
 			this->insertvalue->TabIndex = 9;
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(18, 310);
+			this->label1->Location = System::Drawing::Point(151, 911);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(109, 21);
+			this->label1->Size = System::Drawing::Size(96, 20);
 			this->label1->TabIndex = 8;
 			this->label1->Text = L"Insert Value";
 			// 
@@ -184,9 +200,10 @@ namespace AandLink {
 			this->insert_animation->Controls->Add(this->l6);
 			this->insert_animation->Controls->Add(this->l7);
 			this->insert_animation->Controls->Add(this->l8);
-			this->insert_animation->Location = System::Drawing::Point(0, 339);
+			this->insert_animation->Location = System::Drawing::Point(155, 698);
+			this->insert_animation->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->insert_animation->Name = L"insert_animation";
-			this->insert_animation->Size = System::Drawing::Size(1059, 254);
+			this->insert_animation->Size = System::Drawing::Size(794, 206);
 			this->insert_animation->TabIndex = 7;
 			// 
 			// label19
@@ -194,81 +211,90 @@ namespace AandLink {
 			this->label19->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label19->Location = System::Drawing::Point(9, 145);
+			this->label19->Location = System::Drawing::Point(7, 118);
+			this->label19->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(100, 100);
+			this->label19->Size = System::Drawing::Size(76, 82);
 			this->label19->TabIndex = 16;
 			this->label19->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label18
 			// 
 			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(952, 8);
+			this->label18->Location = System::Drawing::Point(714, 6);
+			this->label18->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(16, 17);
+			this->label18->Size = System::Drawing::Size(13, 13);
 			this->label18->TabIndex = 15;
 			this->label18->Text = L"8";
 			// 
 			// label17
 			// 
 			this->label17->AutoSize = true;
-			this->label17->Location = System::Drawing::Point(833, 8);
+			this->label17->Location = System::Drawing::Point(625, 6);
+			this->label17->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(16, 17);
+			this->label17->Size = System::Drawing::Size(13, 13);
 			this->label17->TabIndex = 14;
 			this->label17->Text = L"7";
 			// 
 			// label16
 			// 
 			this->label16->AutoSize = true;
-			this->label16->Location = System::Drawing::Point(714, 8);
+			this->label16->Location = System::Drawing::Point(536, 6);
+			this->label16->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(16, 17);
+			this->label16->Size = System::Drawing::Size(13, 13);
 			this->label16->TabIndex = 13;
 			this->label16->Text = L"6";
 			// 
 			// label15
 			// 
 			this->label15->AutoSize = true;
-			this->label15->Location = System::Drawing::Point(597, 8);
+			this->label15->Location = System::Drawing::Point(448, 6);
+			this->label15->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(16, 17);
+			this->label15->Size = System::Drawing::Size(13, 13);
 			this->label15->TabIndex = 12;
 			this->label15->Text = L"5";
 			// 
 			// label14
 			// 
 			this->label14->AutoSize = true;
-			this->label14->Location = System::Drawing::Point(480, 8);
+			this->label14->Location = System::Drawing::Point(360, 6);
+			this->label14->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(16, 17);
+			this->label14->Size = System::Drawing::Size(13, 13);
 			this->label14->TabIndex = 11;
 			this->label14->Text = L"4";
 			// 
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(362, 8);
+			this->label13->Location = System::Drawing::Point(272, 6);
+			this->label13->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(16, 17);
+			this->label13->Size = System::Drawing::Size(13, 13);
 			this->label13->TabIndex = 10;
 			this->label13->Text = L"3";
 			// 
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(247, 8);
+			this->label12->Location = System::Drawing::Point(185, 6);
+			this->label12->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(16, 17);
+			this->label12->Size = System::Drawing::Size(13, 13);
 			this->label12->TabIndex = 9;
 			this->label12->Text = L"2";
 			// 
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(143, 8);
+			this->label11->Location = System::Drawing::Point(107, 6);
+			this->label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(16, 17);
+			this->label11->Size = System::Drawing::Size(13, 13);
 			this->label11->TabIndex = 8;
 			this->label11->Text = L"1";
 			// 
@@ -279,9 +305,10 @@ namespace AandLink {
 			this->l1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l1->Location = System::Drawing::Point(146, 36);
+			this->l1->Location = System::Drawing::Point(110, 29);
+			this->l1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->l1->Name = L"l1";
-			this->l1->Size = System::Drawing::Size(83, 79);
+			this->l1->Size = System::Drawing::Size(63, 65);
 			this->l1->TabIndex = 7;
 			this->l1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -292,9 +319,10 @@ namespace AandLink {
 			this->l2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l2->Location = System::Drawing::Point(250, 36);
+			this->l2->Location = System::Drawing::Point(188, 29);
+			this->l2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->l2->Name = L"l2";
-			this->l2->Size = System::Drawing::Size(96, 79);
+			this->l2->Size = System::Drawing::Size(72, 65);
 			this->l2->TabIndex = 6;
 			this->l2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -305,9 +333,10 @@ namespace AandLink {
 			this->l3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l3->Location = System::Drawing::Point(365, 36);
+			this->l3->Location = System::Drawing::Point(274, 29);
+			this->l3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->l3->Name = L"l3";
-			this->l3->Size = System::Drawing::Size(100, 79);
+			this->l3->Size = System::Drawing::Size(76, 65);
 			this->l3->TabIndex = 5;
 			this->l3->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -318,9 +347,10 @@ namespace AandLink {
 			this->l4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l4->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l4->Location = System::Drawing::Point(483, 36);
+			this->l4->Location = System::Drawing::Point(362, 29);
+			this->l4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->l4->Name = L"l4";
-			this->l4->Size = System::Drawing::Size(100, 79);
+			this->l4->Size = System::Drawing::Size(76, 65);
 			this->l4->TabIndex = 4;
 			this->l4->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -331,9 +361,10 @@ namespace AandLink {
 			this->l5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l5->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l5->Location = System::Drawing::Point(600, 36);
+			this->l5->Location = System::Drawing::Point(450, 29);
+			this->l5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->l5->Name = L"l5";
-			this->l5->Size = System::Drawing::Size(100, 79);
+			this->l5->Size = System::Drawing::Size(76, 65);
 			this->l5->TabIndex = 3;
 			this->l5->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -344,9 +375,10 @@ namespace AandLink {
 			this->l6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l6->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l6->Location = System::Drawing::Point(717, 36);
+			this->l6->Location = System::Drawing::Point(538, 29);
+			this->l6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->l6->Name = L"l6";
-			this->l6->Size = System::Drawing::Size(100, 79);
+			this->l6->Size = System::Drawing::Size(76, 65);
 			this->l6->TabIndex = 2;
 			this->l6->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -357,9 +389,10 @@ namespace AandLink {
 			this->l7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l7->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l7->Location = System::Drawing::Point(836, 36);
+			this->l7->Location = System::Drawing::Point(627, 29);
+			this->l7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->l7->Name = L"l7";
-			this->l7->Size = System::Drawing::Size(100, 79);
+			this->l7->Size = System::Drawing::Size(76, 65);
 			this->l7->TabIndex = 1;
 			this->l7->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -370,9 +403,10 @@ namespace AandLink {
 			this->l8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->l8->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->l8->Location = System::Drawing::Point(972, 36);
+			this->l8->Location = System::Drawing::Point(729, 29);
+			this->l8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->l8->Name = L"l8";
-			this->l8->Size = System::Drawing::Size(83, 79);
+			this->l8->Size = System::Drawing::Size(63, 65);
 			this->l8->TabIndex = 0;
 			this->l8->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -381,26 +415,114 @@ namespace AandLink {
 			this->insertimer->Interval = 1;
 			this->insertimer->Tick += gcnew System::EventHandler(this, &Array_Insertion::insertimer_Tick);
 			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Buxton Sketch", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label3->Location = System::Drawing::Point(401, 20);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(302, 39);
+			this->label3->TabIndex = 13;
+			this->label3->Text = L"INSERTION IN ARRAYS";
+			// 
+			// label4
+			// 
+			this->label4->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label4->Location = System::Drawing::Point(20, 93);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(1065, 44);
+			this->label4->TabIndex = 14;
+			this->label4->Text = L"In an unsorted array, the insert operation is faster as compared to sorted array " 
+				L"because we don’t have to care about the position at which the element is to be p" 
+				L"laced.";
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(152, 168);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(800, 437);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 15;
+			this->pictureBox1->TabStop = false;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label5->Location = System::Drawing::Point(157, 670);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(184, 26);
+			this->label5->TabIndex = 16;
+			this->label5->Text = L"LEARN WITH FUN";
+			// 
+			// label6
+			// 
+			this->label6->BackColor = System::Drawing::Color::DarkSeaGreen;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label6->Location = System::Drawing::Point(20, 972);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(1065, 888);
+			this->label6->TabIndex = 17;
+			this->label6->Text = resources->GetString(L"label6.Text");
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label7->Location = System::Drawing::Point(20, 1896);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(67, 21);
+			this->label7->TabIndex = 18;
+			this->label7->Text = L"Output:";
+			// 
+			// label8
+			// 
+			this->label8->BackColor = System::Drawing::Color::DarkSeaGreen;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label8->Location = System::Drawing::Point(20, 1917);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(1065, 46);
+			this->label8->TabIndex = 19;
+			this->label8->Text = L"Before Insertion: 12 16 20 40 50 70 \r\nAfter Insertion: 12 16 20 40 50 70 26 ";
+			// 
 			// Array_Insertion
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::Honeydew;
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->label3);
 			this->Controls->Add(this->insertarray);
 			this->Controls->Add(this->insertindex);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->insertvalue);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->insert_animation);
-			this->Controls->Add(this->insert_lab_ar);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"Array_Insertion";
-			this->Size = System::Drawing::Size(1059, 610);
+			this->Size = System::Drawing::Size(1105, 2050);
 			this->insert_animation->ResumeLayout(false);
 			this->insert_animation->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+	public: String ^username;
+
 	private: System::Void insertarray_Click(System::Object^  sender, System::EventArgs^  e) {
 				 if(this->insertvalue->Text=="" || this->insertindex->Text==""){
 					 this->insertindex->Text = "";

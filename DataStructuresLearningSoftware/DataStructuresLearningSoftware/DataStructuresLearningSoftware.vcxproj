@@ -87,6 +87,7 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Arrays.cpp" />
     <ClCompile Include="Array_Insertion.cpp" />
     <ClCompile Include="Array_Introduction.cpp" />
     <ClCompile Include="Array_Search.cpp" />
@@ -98,8 +99,10 @@
     <ClCompile Include="DiscussionForum.cpp" />
     <ClCompile Include="Homepage.cpp" />
     <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="LinkedList1.cpp" />
     <ClCompile Include="LinkedList_Deletion.cpp" />
     <ClCompile Include="LinkedList_Insertion.cpp" />
+    <ClCompile Include="LinkedList_Introduction.cpp" />
     <ClCompile Include="LinkedList_Traversal.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="mergesort.cpp" />
@@ -137,6 +140,9 @@
     <ClCompile Include="UI_Queue_Quiz.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Arrays.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Array_Insertion.h">
       <FileType>CppControl</FileType>
     </ClInclude>
@@ -170,10 +176,16 @@
     <ClInclude Include="LinkedList.h">
       <FileType>CppControl</FileType>
     </ClInclude>
+    <ClInclude Include="LinkedList1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="LinkedList_Deletion.h">
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="LinkedList_Insertion.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="LinkedList_Introduction.h">
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="LinkedList_Traversal.h">
@@ -273,6 +285,21 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Arrays.resx">
+      <DependentUpon>Arrays.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Array_Insertion.resx">
+      <DependentUpon>Array_Insertion.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Array_Introduction.resx">
+      <DependentUpon>Array_Introduction.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Array_Search.resx">
+      <DependentUpon>Array_Search.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Array_Traversal.resx">
+      <DependentUpon>Array_Traversal.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DiscussionForum.resx">
       <DependentUpon>DiscussionForum.h</DependentUpon>
     </EmbeddedResource>
@@ -293,6 +320,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LinkedList.resx">
       <DependentUpon>LinkedList.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinkedList1.resx">
+      <DependentUpon>LinkedList1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinkedList_Introduction.resx">
+      <DependentUpon>LinkedList_Introduction.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.h</DependentUpon>
