@@ -141,6 +141,12 @@ namespace DataStructuresLearningSoftware {
 
 				 numQuestions = numQuestions < questionList.Count ? numQuestions : questionList.Count;
 
+				 if(numQuestions == 0) {
+					 MessageBox::Show("Sorry There are No Questions Available for this Module , try again later!");
+
+					 return;
+				 }
+
 				 while(questionList.Count > numQuestions){
 					 int id = rand()%questionList.Count;
 					 questionList.RemoveAt(id);

@@ -11,7 +11,9 @@
 #include "UI_Circular_Queue_Animation.h"
 #include "UI_Linear_Queue_Animation.h"
 #include "DiscussionForum.h"
-
+#include "Quiz.h"
+#include "UI_Queue_Quiz.h"
+#include "Stack_Main.h"
 namespace DataStructuresLearningSoftware {
 
 	using namespace System;
@@ -71,6 +73,16 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Button^  ciranimbtn;
 	private: System::Windows::Forms::Button^  linanimbtn;
 	private: System::Windows::Forms::Button^  discussbtn;
+	private: System::Windows::Forms::Label^  lblWelcome;
+	private: System::Windows::Forms::Button^  btnBack;
+	private: System::Windows::Forms::Button^  btnNext;
+	private: System::Windows::Forms::Button^  btnHome;
+	private: System::Windows::Forms::Button^  btnLogout;
+
+
+
+
+
 
 
 
@@ -89,6 +101,7 @@ namespace DataStructuresLearningSoftware {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Queue_Home::typeid));
 			this->sidetabpanel = (gcnew System::Windows::Forms::Panel());
 			this->ciranimbtn = (gcnew System::Windows::Forms::Button());
 			this->linanimbtn = (gcnew System::Windows::Forms::Button());
@@ -103,6 +116,11 @@ namespace DataStructuresLearningSoftware {
 			this->introbtn = (gcnew System::Windows::Forms::Button());
 			this->headerpanel = (gcnew System::Windows::Forms::Panel());
 			this->discussbtn = (gcnew System::Windows::Forms::Button());
+			this->lblWelcome = (gcnew System::Windows::Forms::Label());
+			this->btnBack = (gcnew System::Windows::Forms::Button());
+			this->btnNext = (gcnew System::Windows::Forms::Button());
+			this->btnHome = (gcnew System::Windows::Forms::Button());
+			this->btnLogout = (gcnew System::Windows::Forms::Button());
 			this->outputpanel = (gcnew System::Windows::Forms::Panel());
 			this->sidetabpanel->SuspendLayout();
 			this->headerpanel->SuspendLayout();
@@ -305,8 +323,13 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// headerpanel
 			// 
-			this->headerpanel->BackColor = System::Drawing::Color::White;
+			this->headerpanel->BackColor = System::Drawing::Color::LightSeaGreen;
 			this->headerpanel->Controls->Add(this->discussbtn);
+			this->headerpanel->Controls->Add(this->lblWelcome);
+			this->headerpanel->Controls->Add(this->btnBack);
+			this->headerpanel->Controls->Add(this->btnNext);
+			this->headerpanel->Controls->Add(this->btnHome);
+			this->headerpanel->Controls->Add(this->btnLogout);
 			this->headerpanel->Location = System::Drawing::Point(175, 0);
 			this->headerpanel->Name = L"headerpanel";
 			this->headerpanel->Size = System::Drawing::Size(1104, 50);
@@ -314,14 +337,81 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// discussbtn
 			// 
+			this->discussbtn->BackColor = System::Drawing::Color::LightSeaGreen;
 			this->discussbtn->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->discussbtn->Location = System::Drawing::Point(967, 21);
+			this->discussbtn->FlatAppearance->BorderSize = 0;
+			this->discussbtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->discussbtn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F));
+			this->discussbtn->Location = System::Drawing::Point(58, 0);
 			this->discussbtn->Name = L"discussbtn";
-			this->discussbtn->Size = System::Drawing::Size(105, 23);
+			this->discussbtn->Size = System::Drawing::Size(130, 50);
 			this->discussbtn->TabIndex = 0;
 			this->discussbtn->Text = L"Discussion ";
-			this->discussbtn->UseVisualStyleBackColor = true;
+			this->discussbtn->UseVisualStyleBackColor = false;
 			this->discussbtn->Click += gcnew System::EventHandler(this, &Queue_Home::discussbtn_Click);
+			// 
+			// lblWelcome
+			// 
+			this->lblWelcome->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lblWelcome->ForeColor = System::Drawing::Color::Black;
+			this->lblWelcome->Location = System::Drawing::Point(274, 15);
+			this->lblWelcome->Name = L"lblWelcome";
+			this->lblWelcome->Size = System::Drawing::Size(662, 20);
+			this->lblWelcome->TabIndex = 9;
+			this->lblWelcome->Text = L"label1";
+			this->lblWelcome->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			// 
+			// btnBack
+			// 
+			this->btnBack->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnBack->FlatAppearance->BorderSize = 0;
+			this->btnBack->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnBack->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnBack.Image")));
+			this->btnBack->Location = System::Drawing::Point(8, 0);
+			this->btnBack->Name = L"btnBack";
+			this->btnBack->Size = System::Drawing::Size(50, 50);
+			this->btnBack->TabIndex = 8;
+			this->btnBack->UseVisualStyleBackColor = true;
+			this->btnBack->Click += gcnew System::EventHandler(this, &Queue_Home::btnBack_Click);
+			// 
+			// btnNext
+			// 
+			this->btnNext->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnNext->FlatAppearance->BorderSize = 0;
+			this->btnNext->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnNext->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnNext.Image")));
+			this->btnNext->Location = System::Drawing::Point(946, 0);
+			this->btnNext->Name = L"btnNext";
+			this->btnNext->Size = System::Drawing::Size(50, 50);
+			this->btnNext->TabIndex = 7;
+			this->btnNext->UseVisualStyleBackColor = true;
+			this->btnNext->Click += gcnew System::EventHandler(this, &Queue_Home::btnNext_Click);
+			// 
+			// btnHome
+			// 
+			this->btnHome->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnHome->FlatAppearance->BorderSize = 0;
+			this->btnHome->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnHome->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnHome.Image")));
+			this->btnHome->Location = System::Drawing::Point(996, 0);
+			this->btnHome->Name = L"btnHome";
+			this->btnHome->Size = System::Drawing::Size(50, 50);
+			this->btnHome->TabIndex = 6;
+			this->btnHome->UseVisualStyleBackColor = true;
+			this->btnHome->Click += gcnew System::EventHandler(this, &Queue_Home::btnHome_Click);
+			// 
+			// btnLogout
+			// 
+			this->btnLogout->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnLogout->FlatAppearance->BorderSize = 0;
+			this->btnLogout->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnLogout->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnLogout.Image")));
+			this->btnLogout->Location = System::Drawing::Point(1046, 0);
+			this->btnLogout->Name = L"btnLogout";
+			this->btnLogout->Size = System::Drawing::Size(50, 50);
+			this->btnLogout->TabIndex = 5;
+			this->btnLogout->UseVisualStyleBackColor = true;
 			// 
 			// outputpanel
 			// 
@@ -348,23 +438,110 @@ namespace DataStructuresLearningSoftware {
 			this->headerpanel->ResumeLayout(false);
 			this->ResumeLayout(false);
 
-			this->linarrbtn->Hide();
-			this->linllbtn->Hide();
-			this->linanimbtn->Hide();
-			this->cqarrbtn->Hide();
-			this->cqllbtn->Hide(); 
-			this->ciranimbtn->Hide();
 		}
 #pragma endregion
-		bool islinclk;
-		bool iscqclk;
-		static int linclkctr=0;
+		public:
+			bool islinclk;
+			bool iscqclk;
+			static int linclkctr=0;
+			int curid;
+			String ^ username;
+			String ^ fullname;
+			int modulesCompleted;
+		
+
+
+	void display()
+	{
+		if(curid==0)
+		{
+			introbtn->PerformClick();
+		}
+		else if(curid==1)
+		{
+			linbtn->PerformClick();
+		}
+		else if(curid==2)
+		{
+			linarrbtn->PerformClick();
+		}
+		else if(curid==3)
+		{
+			linllbtn->PerformClick();
+		}
+		else if(curid==4)
+		{
+			linanimbtn->PerformClick();
+		}
+		else if(curid==5)
+		{
+			cqbtn->PerformClick();
+		}
+		else if(curid==6)
+		{
+			cqarrbtn->PerformClick();
+		}
+		else if(curid==7)
+		{
+			cqllbtn->PerformClick();
+		}
+		else if(curid==8)
+		{
+
+			ciranimbtn->PerformClick();
+		}
+		else if(curid==9)
+		{
+
+			appbtn->PerformClick();
+		}
+		else if(curid==10)
+		{
+
+			quizbtn->PerformClick();
+		}
+	}
+	void modulescheck()
+	{
+		OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+		DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+		DB_Connection->Open();
+		String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+		OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+		OleDbDataReader ^ reader = cmd->ExecuteReader();
+		if(reader->Read()){
+			modulesCompleted = reader->GetInt32(14);
+		}
+		DB_Connection->Close();
+	}
 	private: System::Void Queue_Home_Load(System::Object^  sender, System::EventArgs^  e) {
-				 outputpanel->Controls->Clear();
-				 outputpanel->Controls->Add(gcnew UI_Queue_Introduction);
+				 curid=0;
+				 display();
+				 username="lavish";
+				  modulesCompleted=0;
+				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+				 DB_Connection->Open();
+				 String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+				 OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+				 OleDbDataReader ^ reader = cmd->ExecuteReader();
+				 if(reader->Read()){
+					 fullname = reader->GetString(2);
+					 modulesCompleted = reader->GetInt32(14);
+				 }
+				 MessageBox::Show(Convert::ToString(modulesCompleted));
+				 lblWelcome->Text = "Welcome, "+fullname;
+				 outputpanel->AutoScroll=true;
+				 DB_Connection->Close();
 			 }
 
 	private: System::Void intro_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 curid=0;
+				 btnBack->Hide();
+				 btnNext->Show();
 				 introbtn->BackColor = Color::PaleTurquoise;
 				 linbtn->BackColor = Color::LightSeaGreen;
 				 linarrbtn->BackColor = Color::LightSeaGreen;
@@ -380,6 +557,10 @@ namespace DataStructuresLearningSoftware {
 				 outputpanel->Controls->Add(gcnew UI_Queue_Introduction);
 		 }
 	private: System::Void linbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 curid=1;
+				 btnBack->Show();
+				 btnNext->Show();
 				 islinclk = true;
 				 this->linllbtn->Show();
 				 this->linarrbtn->Show();
@@ -406,9 +587,15 @@ namespace DataStructuresLearningSoftware {
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::LightSeaGreen;
 				  outputpanel->Controls->Clear();
-				 outputpanel->Controls->Add(gcnew UI_Linear_Queue);
+				  UI_Linear_Queue^ newpanel = gcnew UI_Linear_Queue;
+				  newpanel->username=username; 
+				 outputpanel->Controls->Add(newpanel);
 		 }
 	private: System::Void linarrbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 curid=2;
+				 btnBack->Show();
+				 btnNext->Show();
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::PaleTurquoise;
 				 linarrbtn->BackColor = Color::PaleTurquoise;
@@ -425,6 +612,10 @@ namespace DataStructuresLearningSoftware {
 			 outputpanel->Controls->Add(gcnew UI_Linear_Queue_Array);
 		 }
 	private: System::Void linllbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 curid=3;
+				 btnBack->Show();
+				 btnNext->Show();
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::PaleTurquoise;
 				 linarrbtn->BackColor = Color::LightSeaGreen;
@@ -440,6 +631,15 @@ namespace DataStructuresLearningSoftware {
 			 outputpanel->Controls->Add(gcnew UI_Linear_Queue_LL);
 		 }
 	private: System::Void cirbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 if(modulesCompleted<=0)
+				 {
+					MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else{
+				 curid=5;
+				 btnBack->Show();
+				 btnNext->Show();
 				  iscqclk=true;
 				  this->ciranimbtn->Show();
 				  this->cqllbtn->Show();
@@ -473,10 +673,24 @@ namespace DataStructuresLearningSoftware {
 				 ciranimbtn->BackColor = Color::LightSeaGreen;
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::LightSeaGreen;
+
 				  outputpanel->Controls->Clear();
-				 outputpanel->Controls->Add(gcnew UI_Circular_Queue);
+				  UI_Circular_Queue^ newpanel = gcnew UI_Circular_Queue;
+				  newpanel->username=username; 
+				  outputpanel->Controls->Add(newpanel);
+				 }
+
 			 }
 	private: System::Void cqarrbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 if(modulesCompleted<=0)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else{
+				 btnBack->Show();
+				 btnNext->Show();
+				 curid=6;
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::LightSeaGreen;
 				 linarrbtn->BackColor = Color::LightSeaGreen;
@@ -489,9 +703,18 @@ namespace DataStructuresLearningSoftware {
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::LightSeaGreen;
 				  outputpanel->Controls->Clear();
-				 outputpanel->Controls->Add(gcnew UI_Circular_Queue_Array);
+				  outputpanel->Controls->Add(gcnew UI_Circular_Queue_Array);}
 		 }
 	private: System::Void cqllbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 if(modulesCompleted<=0)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else{
+				 btnBack->Show();
+				 btnNext->Show();
+				 curid=7;
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::LightSeaGreen;
 				 linarrbtn->BackColor = Color::LightSeaGreen;
@@ -504,9 +727,18 @@ namespace DataStructuresLearningSoftware {
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::LightSeaGreen;
 				  outputpanel->Controls->Clear();
-				 outputpanel->Controls->Add(gcnew UI_Circular_Queue_LL);
+				  outputpanel->Controls->Add(gcnew UI_Circular_Queue_LL);}
 			 }
 	private: System::Void appbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 if(modulesCompleted<=1)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else{
+				 btnBack->Show();
+				 btnNext->Show();
+				 curid=9;
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::LightSeaGreen;
 				 linarrbtn->BackColor = Color::LightSeaGreen;
@@ -519,9 +751,18 @@ namespace DataStructuresLearningSoftware {
 				 appbtn->BackColor = Color::PaleTurquoise;
 				 quizbtn->BackColor = Color::LightSeaGreen;
 				  outputpanel->Controls->Clear();
-				 outputpanel->Controls->Add(gcnew UI_Queue_App);
+				  outputpanel->Controls->Add(gcnew UI_Queue_App);}
 			 }
 	private: System::Void quizbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 if(modulesCompleted<=1)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else{
+				 btnBack->Show();
+				 btnNext->Hide();
+				 curid=10;
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::LightSeaGreen;
 				 linarrbtn->BackColor = Color::LightSeaGreen;
@@ -534,9 +775,16 @@ namespace DataStructuresLearningSoftware {
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::PaleTurquoise;
 				  outputpanel->Controls->Clear();
-				 outputpanel->Controls->Add(gcnew UI_Queue_Quiz);
+				 Quiz ^newUserControl = gcnew Quiz();
+				 newUserControl->username = username;
+				 newUserControl->ds_id = 6;
+				 outputpanel->Controls->Add(newUserControl);}
 			 }
 private: System::Void linanimbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+			 modulescheck();
+			 btnBack->Show();
+			 btnNext->Show();
+			 curid=4;
 			 introbtn->BackColor = Color::LightSeaGreen;
 			 linbtn->BackColor = Color::PaleTurquoise;
 			 linarrbtn->BackColor = Color::LightSeaGreen;
@@ -552,6 +800,15 @@ private: System::Void linanimbtn_Click(System::Object^  sender, System::EventArg
 			 outputpanel->Controls->Add(gcnew UI_Linear_Queue_Animation);
 		 }
 private: System::Void ciranimbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+			 modulescheck();
+			 if(modulesCompleted<=0)
+			 {
+				 MessageBox::Show("Please Complete the Previous Module to access this.");
+			 }
+			 else{
+			 btnBack->Show();
+			 btnNext->Show();
+			 curid=8;
 			 introbtn->BackColor = Color::LightSeaGreen;
 			 linbtn->BackColor = Color::LightSeaGreen;
 			 linarrbtn->BackColor = Color::LightSeaGreen;
@@ -564,7 +821,7 @@ private: System::Void ciranimbtn_Click(System::Object^  sender, System::EventArg
 			 appbtn->BackColor = Color::LightSeaGreen;
 			 quizbtn->BackColor = Color::LightSeaGreen;
 			  outputpanel->Controls->Clear();
-			 outputpanel->Controls->Add(gcnew UI_Circular_Queue_Animation);
+			  outputpanel->Controls->Add(gcnew UI_Circular_Queue_Animation);}
 		 }
 private: System::Void outputpanel_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 
@@ -577,6 +834,20 @@ private: System::Void richTextBox1_TextChanged(System::Object^  sender, System::
 private: System::Void discussbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 			 outputpanel->Controls->Clear();
 			 outputpanel->Controls->Add(gcnew DiscussionForum);
+		 }
+private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
+			 curid--;
+			 display();
+		 }
+private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
+			 curid++;
+			 display();
+	
+		 }
+private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
+			 Stack_Main ^ form = gcnew Stack_Main;
+			 this->Visible=false;
+			 form->Show(this);
 		 }
 };
 }

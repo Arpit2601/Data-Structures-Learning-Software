@@ -56,6 +56,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Button^  button6;
 	private: System::Windows::Forms::Button^  button7;
 	private: System::Windows::Forms::Button^  button8;
+	private: System::Windows::Forms::Button^  button9;
 
 	private:
 		/// <summary>
@@ -81,6 +82,7 @@ namespace DataStructuresLearningSoftware {
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->button8 = (gcnew System::Windows::Forms::Button());
+			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -243,6 +245,7 @@ namespace DataStructuresLearningSoftware {
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(1105, 670);
 			this->panel3->TabIndex = 1;
+			this->panel3->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Stack_Main::panel3_Paint);
 			// 
 			// button8
 			// 
@@ -253,7 +256,7 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Byte>(0)));
 			this->button8->ForeColor = System::Drawing::Color::Black;
 			this->button8->Location = System::Drawing::Point(758, 10);
-			this->button8->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button8->Margin = System::Windows::Forms::Padding(2);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(150, 24);
 			this->button8->TabIndex = 2;
@@ -261,11 +264,29 @@ namespace DataStructuresLearningSoftware {
 			this->button8->UseVisualStyleBackColor = false;
 			this->button8->Click += gcnew System::EventHandler(this, &Stack_Main::button8_Click);
 			// 
+			// button9
+			// 
+			this->button9->BackColor = System::Drawing::Color::White;
+			this->button9->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button9->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button9->ForeColor = System::Drawing::Color::Black;
+			this->button9->Location = System::Drawing::Point(424, 2);
+			this->button9->Margin = System::Windows::Forms::Padding(2);
+			this->button9->Name = L"button9";
+			this->button9->Size = System::Drawing::Size(150, 24);
+			this->button9->TabIndex = 3;
+			this->button9->Text = L"Discussion Forum";
+			this->button9->UseVisualStyleBackColor = false;
+			this->button9->Click += gcnew System::EventHandler(this, &Stack_Main::button9_Click);
+			// 
 			// Stack_Main
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::White;
-			this->ClientSize = System::Drawing::Size(1280, 720);
+			this->ClientSize = System::Drawing::Size(960, 585);
+			this->Controls->Add(this->button9);
 			this->Controls->Add(this->button8);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel1);
@@ -289,6 +310,11 @@ namespace DataStructuresLearningSoftware {
 				 button6->BackColor = Color::LightSeaGreen;
 				 button7->BackColor = Color::LightSeaGreen;
 				 panel3->Controls->Add(gcnew Stack_Introduction);
+				/* if(this->Owner!=nullptr)
+				 {
+					 this->Owner->Visible=false;
+				 }*/
+
 			 }
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 				 button1->BackColor = Color::PaleTurquoise;
@@ -370,5 +396,15 @@ namespace DataStructuresLearningSoftware {
 				 panel3->Controls->Clear();
 				 panel3->Controls->Add(gcnew DiscussionForum);
 			 }
+private: System::Void panel3_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+		 }
+private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if(this->Owner!=nullptr)
+			 {
+				 this->Owner->Visible=true;
+			 }
+			 this->Close();
+
+		 }
 };
 }

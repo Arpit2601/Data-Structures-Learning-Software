@@ -6,7 +6,7 @@ using namespace System::Collections;
 using namespace System::Windows::Forms;
 using namespace System::Data;
 using namespace System::Drawing;
-
+#include "moduleQuiz.h";
 
 namespace DataStructuresLearningSoftware {
 
@@ -41,6 +41,9 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::RichTextBox^  richTextBox2;
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Label^  label23;
+	private: System::Windows::Forms::Panel^  quizpanel;
 
 	private:
 		/// <summary>
@@ -61,6 +64,9 @@ namespace DataStructuresLearningSoftware {
 			this->richTextBox2 = (gcnew System::Windows::Forms::RichTextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label23 = (gcnew System::Windows::Forms::Label());
+			this->quizpanel = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -117,28 +123,74 @@ namespace DataStructuresLearningSoftware {
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Click += gcnew System::EventHandler(this, &UI_Circular_Queue::pictureBox1_Click);
 			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->BackColor = System::Drawing::Color::Transparent;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label6->Location = System::Drawing::Point(44, 1121);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(784, 24);
+			this->label6->TabIndex = 40;
+			this->label6->Text = L"NOTE: You have Access to all the sub modules , feel free to explore before answer" 
+				L"ing the quiz.\r\n";
+			// 
+			// label23
+			// 
+			this->label23->AutoSize = true;
+			this->label23->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label23->Location = System::Drawing::Point(52, 625);
+			this->label23->Name = L"label23";
+			this->label23->Size = System::Drawing::Size(482, 27);
+			this->label23->TabIndex = 39;
+			this->label23->Text = L"Answer the question correctly to pass the module.";
+			// 
+			// quizpanel
+			// 
+			this->quizpanel->Location = System::Drawing::Point(49, 655);
+			this->quizpanel->Name = L"quizpanel";
+			this->quizpanel->Size = System::Drawing::Size(1027, 464);
+			this->quizpanel->TabIndex = 38;
+			// 
 			// UI_Circular_Queue
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::White;
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label23);
+			this->Controls->Add(this->quizpanel);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->richTextBox2);
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->Heading);
 			this->Name = L"UI_Circular_Queue";
-			this->Size = System::Drawing::Size(1105, 670);
+			this->Size = System::Drawing::Size(1105, 1145);
+			this->Load += gcnew System::EventHandler(this, &UI_Circular_Queue::UI_Circular_Queue_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+				public: String^ username;
 	private: System::Void richTextBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 			 }
 	private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
 			 }
 private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void UI_Circular_Queue_Load(System::Object^  sender, System::EventArgs^  e) {
+			 moduleQuiz ^newPanel = gcnew moduleQuiz();
+			 newPanel->ds_id = 6;
+			 newPanel->module_id = 1;
+			 newPanel->username = username;
+			 newPanel->update_id = 14;
+			 newPanel->update_name = "QueuesProgress";
+			 quizpanel->Controls->Clear();
+			 quizpanel->Controls->Add(newPanel);
 		 }
 };
 }
