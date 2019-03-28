@@ -7,7 +7,8 @@
 #include "Stack_Resources.h"
 #include "Stack_Test.h"
 #include "DiscussionForum.h"
-
+#include "Quiz.h"
+#include "UI_Queue_Quiz.h"
 namespace DataStructuresLearningSoftware {
 
 	using namespace System;
@@ -57,6 +58,11 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Button^  button7;
 	private: System::Windows::Forms::Button^  button8;
 	private: System::Windows::Forms::Button^  button9;
+	private: System::Windows::Forms::Label^  lblWelcome;
+	private: System::Windows::Forms::Button^  btnBack;
+	private: System::Windows::Forms::Button^  btnNext;
+	private: System::Windows::Forms::Button^  btnHome;
+	private: System::Windows::Forms::Button^  btnLogout;
 
 	private:
 		/// <summary>
@@ -71,7 +77,9 @@ namespace DataStructuresLearningSoftware {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Stack_Main::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
@@ -80,15 +88,21 @@ namespace DataStructuresLearningSoftware {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
-			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->button8 = (gcnew System::Windows::Forms::Button());
-			this->button9 = (gcnew System::Windows::Forms::Button());
+			this->lblWelcome = (gcnew System::Windows::Forms::Label());
+			this->btnBack = (gcnew System::Windows::Forms::Button());
+			this->btnNext = (gcnew System::Windows::Forms::Button());
+			this->btnHome = (gcnew System::Windows::Forms::Button());
+			this->btnLogout = (gcnew System::Windows::Forms::Button());
+			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->panel1->SuspendLayout();
+			this->panel2->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::LightSeaGreen;
+			this->panel1->Controls->Add(this->button9);
 			this->panel1->Controls->Add(this->button3);
 			this->panel1->Controls->Add(this->button7);
 			this->panel1->Controls->Add(this->button6);
@@ -96,11 +110,27 @@ namespace DataStructuresLearningSoftware {
 			this->panel1->Controls->Add(this->button4);
 			this->panel1->Controls->Add(this->button2);
 			this->panel1->Controls->Add(this->button1);
-			this->panel1->Controls->Add(this->panel2);
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(175, 720);
 			this->panel1->TabIndex = 0;
+			// 
+			// button9
+			// 
+			this->button9->BackColor = System::Drawing::Color::White;
+			this->button9->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button9->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button9->ForeColor = System::Drawing::Color::Black;
+			this->button9->Location = System::Drawing::Point(11, 288);
+			this->button9->Margin = System::Windows::Forms::Padding(2);
+			this->button9->Name = L"button9";
+			this->button9->Size = System::Drawing::Size(150, 24);
+			this->button9->TabIndex = 3;
+			this->button9->Text = L"Test back";
+			this->button9->UseVisualStyleBackColor = false;
+			this->button9->Click += gcnew System::EventHandler(this, &Stack_Main::button9_Click);
 			// 
 			// button3
 			// 
@@ -234,10 +264,96 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// panel2
 			// 
+			this->panel2->BackColor = System::Drawing::Color::LightSeaGreen;
+			this->panel2->Controls->Add(this->button8);
+			this->panel2->Controls->Add(this->lblWelcome);
+			this->panel2->Controls->Add(this->btnBack);
+			this->panel2->Controls->Add(this->btnNext);
+			this->panel2->Controls->Add(this->btnHome);
+			this->panel2->Controls->Add(this->btnLogout);
 			this->panel2->Location = System::Drawing::Point(175, 0);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(1104, 50);
 			this->panel2->TabIndex = 0;
+			// 
+			// button8
+			// 
+			this->button8->BackColor = System::Drawing::Color::Transparent;
+			this->button8->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button8->FlatAppearance->BorderSize = 0;
+			this->button8->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button8->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 12));
+			this->button8->ForeColor = System::Drawing::Color::Black;
+			this->button8->Location = System::Drawing::Point(58, 0);
+			this->button8->Margin = System::Windows::Forms::Padding(2);
+			this->button8->Name = L"button8";
+			this->button8->Size = System::Drawing::Size(150, 50);
+			this->button8->TabIndex = 2;
+			this->button8->Text = L"Discussion";
+			this->button8->UseVisualStyleBackColor = false;
+			this->button8->Click += gcnew System::EventHandler(this, &Stack_Main::button8_Click);
+			// 
+			// lblWelcome
+			// 
+			this->lblWelcome->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lblWelcome->ForeColor = System::Drawing::Color::Black;
+			this->lblWelcome->Location = System::Drawing::Point(242, 15);
+			this->lblWelcome->Name = L"lblWelcome";
+			this->lblWelcome->Size = System::Drawing::Size(698, 20);
+			this->lblWelcome->TabIndex = 15;
+			this->lblWelcome->Text = L"label1";
+			this->lblWelcome->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			// 
+			// btnBack
+			// 
+			this->btnBack->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnBack->FlatAppearance->BorderSize = 0;
+			this->btnBack->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnBack->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnBack.Image")));
+			this->btnBack->Location = System::Drawing::Point(8, 0);
+			this->btnBack->Name = L"btnBack";
+			this->btnBack->Size = System::Drawing::Size(50, 50);
+			this->btnBack->TabIndex = 14;
+			this->btnBack->UseVisualStyleBackColor = true;
+			this->btnBack->Click += gcnew System::EventHandler(this, &Stack_Main::btnBack_Click);
+			// 
+			// btnNext
+			// 
+			this->btnNext->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnNext->FlatAppearance->BorderSize = 0;
+			this->btnNext->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnNext->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnNext.Image")));
+			this->btnNext->Location = System::Drawing::Point(946, 0);
+			this->btnNext->Name = L"btnNext";
+			this->btnNext->Size = System::Drawing::Size(50, 50);
+			this->btnNext->TabIndex = 13;
+			this->btnNext->UseVisualStyleBackColor = true;
+			this->btnNext->Click += gcnew System::EventHandler(this, &Stack_Main::btnNext_Click_1);
+			// 
+			// btnHome
+			// 
+			this->btnHome->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnHome->FlatAppearance->BorderSize = 0;
+			this->btnHome->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnHome->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnHome.Image")));
+			this->btnHome->Location = System::Drawing::Point(996, 0);
+			this->btnHome->Name = L"btnHome";
+			this->btnHome->Size = System::Drawing::Size(50, 50);
+			this->btnHome->TabIndex = 12;
+			this->btnHome->UseVisualStyleBackColor = true;
+			// 
+			// btnLogout
+			// 
+			this->btnLogout->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnLogout->FlatAppearance->BorderSize = 0;
+			this->btnLogout->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnLogout->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnLogout.Image")));
+			this->btnLogout->Location = System::Drawing::Point(1046, 0);
+			this->btnLogout->Name = L"btnLogout";
+			this->btnLogout->Size = System::Drawing::Size(50, 50);
+			this->btnLogout->TabIndex = 11;
+			this->btnLogout->UseVisualStyleBackColor = true;
 			// 
 			// panel3
 			// 
@@ -247,76 +363,105 @@ namespace DataStructuresLearningSoftware {
 			this->panel3->TabIndex = 1;
 			this->panel3->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Stack_Main::panel3_Paint);
 			// 
-			// button8
-			// 
-			this->button8->BackColor = System::Drawing::Color::White;
-			this->button8->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button8->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->button8->ForeColor = System::Drawing::Color::Black;
-			this->button8->Location = System::Drawing::Point(758, 10);
-			this->button8->Margin = System::Windows::Forms::Padding(2);
-			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(150, 24);
-			this->button8->TabIndex = 2;
-			this->button8->Text = L"Discussion Forum";
-			this->button8->UseVisualStyleBackColor = false;
-			this->button8->Click += gcnew System::EventHandler(this, &Stack_Main::button8_Click);
-			// 
-			// button9
-			// 
-			this->button9->BackColor = System::Drawing::Color::White;
-			this->button9->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button9->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->button9->ForeColor = System::Drawing::Color::Black;
-			this->button9->Location = System::Drawing::Point(424, 2);
-			this->button9->Margin = System::Windows::Forms::Padding(2);
-			this->button9->Name = L"button9";
-			this->button9->Size = System::Drawing::Size(150, 24);
-			this->button9->TabIndex = 3;
-			this->button9->Text = L"Discussion Forum";
-			this->button9->UseVisualStyleBackColor = false;
-			this->button9->Click += gcnew System::EventHandler(this, &Stack_Main::button9_Click);
-			// 
 			// Stack_Main
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::White;
-			this->ClientSize = System::Drawing::Size(960, 585);
-			this->Controls->Add(this->button9);
-			this->Controls->Add(this->button8);
+			this->ClientSize = System::Drawing::Size(1280, 720);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel1);
+			this->Controls->Add(this->panel2);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->MaximumSize = System::Drawing::Size(1280, 720);
 			this->MinimumSize = System::Drawing::Size(1280, 720);
 			this->Name = L"Stack_Main";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Stack_Main";
 			this->Load += gcnew System::EventHandler(this, &Stack_Main::Stack_Main_Load);
 			this->panel1->ResumeLayout(false);
+			this->panel2->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+		public: 
+			int curid;
+			String ^ username;
+			String ^ fullname;
+			int modulesCompleted;
+
+			void display()
+			{
+				if(curid==1)
+				{
+					button1->PerformClick();
+				}
+				else if(curid==2)
+				{
+					button2->PerformClick();
+				}
+				else if(curid==3)
+				{
+					button3->PerformClick();
+				}
+				else if(curid==4)
+				{
+					button4->PerformClick();
+				}
+				else if(curid==5)
+				{
+					button5->PerformClick();
+				}
+				else if(curid==6)
+				{
+					button6->PerformClick();
+				}
+				else if(curid==7)
+				{
+					button7->PerformClick();
+				}
+			}
+			void modulescheck()
+			{
+				OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+				DB_Connection->Open();
+				String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+				OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+				OleDbDataReader ^ reader = cmd->ExecuteReader();
+				if(reader->Read()){
+					modulesCompleted = reader->GetInt32(13);
+				}
+				DB_Connection->Close();
+			}
 	private: System::Void Stack_Main_Load(System::Object^  sender, System::EventArgs^  e) {
-				 button1->BackColor = Color::PaleTurquoise;
-				 button2->BackColor = Color::LightSeaGreen;
-				 button3->BackColor = Color::LightSeaGreen;
-				 button4->BackColor = Color::LightSeaGreen;
-				 button5->BackColor = Color::LightSeaGreen;
-				 button6->BackColor = Color::LightSeaGreen;
-				 button7->BackColor = Color::LightSeaGreen;
-				 panel3->Controls->Add(gcnew Stack_Introduction);
-				/* if(this->Owner!=nullptr)
-				 {
-					 this->Owner->Visible=false;
-				 }*/
+				panel3->AutoScroll=true;
+				 curid=1;
+				display();
+				username="lavish";
+				modulesCompleted=0;
+				OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+				DB_Connection->Open();
+				String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+				OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+				OleDbDataReader ^ reader = cmd->ExecuteReader();
+				if(reader->Read()){
+					fullname = reader->GetString(2);
+					modulesCompleted = reader->GetInt32(13);
+				}
+				lblWelcome->Text = "Welcome, "+fullname;
+				panel3->AutoScroll=true;
+				DB_Connection->Close();
 
 			 }
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 curid=1;
+				 btnBack->Hide();
+				 btnNext->Show();
 				 button1->BackColor = Color::PaleTurquoise;
 				 button2->BackColor = Color::LightSeaGreen;
 				 button3->BackColor = Color::LightSeaGreen;
@@ -328,6 +473,10 @@ namespace DataStructuresLearningSoftware {
 				 panel3->Controls->Add(gcnew Stack_Introduction);
 			 }
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 curid=2;
+				 btnBack->Show();
+				 btnNext->Show();
 				 button1->BackColor = Color::LightSeaGreen;
 				 button2->BackColor = Color::PaleTurquoise;
 				 button3->BackColor = Color::LightSeaGreen;
@@ -336,9 +485,20 @@ namespace DataStructuresLearningSoftware {
 				 button6->BackColor = Color::LightSeaGreen;
 				 button7->BackColor = Color::LightSeaGreen;
 				 panel3->Controls->Clear();
-				 panel3->Controls->Add(gcnew Stack_Implementation_Array);
+				 Stack_Implementation_Array ^ newquiz = gcnew Stack_Implementation_Array;
+				 newquiz->username= username;
+				 panel3->Controls->Add(newquiz);
 			 }
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 if(modulesCompleted<=0)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else{
+				 curid=3;
+				 btnBack->Show();
+				 btnNext->Show();
 				 button1->BackColor = Color::LightSeaGreen;
 				 button2->BackColor = Color::LightSeaGreen;
 				 button3->BackColor = Color::PaleTurquoise;
@@ -347,9 +507,22 @@ namespace DataStructuresLearningSoftware {
 				 button6->BackColor = Color::LightSeaGreen;
 				 button7->BackColor = Color::LightSeaGreen;
 				 panel3->Controls->Clear();
-				 panel3->Controls->Add(gcnew Stack_Implementation_LinkedList);	 
+				 Stack_Implementation_LinkedList ^ newquiz = gcnew Stack_Implementation_LinkedList;
+				 newquiz->username= username;
+				 panel3->Controls->Add(newquiz);
+				 }	 
 			 }
 	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
+				 				 modulescheck();
+				 if(modulesCompleted<=1)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else{
+
+				 curid=4;
+				 btnBack->Show();
+				 btnNext->Show();
 				 button1->BackColor = Color::LightSeaGreen;
 				 button2->BackColor = Color::LightSeaGreen;
 				 button3->BackColor = Color::LightSeaGreen;
@@ -358,9 +531,18 @@ namespace DataStructuresLearningSoftware {
 				 button6->BackColor = Color::LightSeaGreen;
 				 button7->BackColor = Color::LightSeaGreen;
 				 panel3->Controls->Clear();
-				 panel3->Controls->Add(gcnew Stack_Applications);
+				 panel3->Controls->Add(gcnew Stack_Applications);}
 			 }
 	private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 if(modulesCompleted<=1)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else{
+				 curid=5;
+				 btnBack->Show();
+				 btnNext->Show();
 				 button1->BackColor = Color::LightSeaGreen;
 				 button2->BackColor = Color::LightSeaGreen;
 				 button3->BackColor = Color::LightSeaGreen;
@@ -369,9 +551,18 @@ namespace DataStructuresLearningSoftware {
 				 button6->BackColor = Color::LightSeaGreen;
 				 button7->BackColor = Color::LightSeaGreen;
 				 panel3->Controls->Clear();
-				 panel3->Controls->Add(gcnew Stack_Animations);
+				 panel3->Controls->Add(gcnew Stack_Animations);}
 			 }
 	private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 if(modulesCompleted<=1)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else{
+				 curid=6;
+				 btnBack->Show();
+				 btnNext->Show();
 				 button1->BackColor = Color::LightSeaGreen;
 				 button2->BackColor = Color::LightSeaGreen;
 				 button3->BackColor = Color::LightSeaGreen;
@@ -380,9 +571,18 @@ namespace DataStructuresLearningSoftware {
 				 button6->BackColor = Color::PaleTurquoise;
 				 button7->BackColor = Color::LightSeaGreen;
 				 panel3->Controls->Clear();
-				 panel3->Controls->Add(gcnew Stack_Resources);
+				 panel3->Controls->Add(gcnew Stack_Resources);}
 			 }
 	private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 if(modulesCompleted<=1)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else{
+				 curid=7;
+				 btnBack->Show();
+				 btnNext->Hide();
 				 button1->BackColor = Color::LightSeaGreen;
 				 button2->BackColor = Color::LightSeaGreen;
 				 button3->BackColor = Color::LightSeaGreen;
@@ -390,7 +590,13 @@ namespace DataStructuresLearningSoftware {
 				 button5->BackColor = Color::LightSeaGreen;
 				 button6->BackColor = Color::LightSeaGreen;
 				 button7->BackColor = Color::PaleTurquoise;
-				 panel3->Controls->Add(gcnew Stack_Test);
+				 panel3->Controls->Clear();
+				 Quiz ^newUserControl = gcnew Quiz();
+				 newUserControl->username = username;
+				 newUserControl->ds_id = 5;
+				 panel3->Controls->Add(newUserControl);
+				 
+				 }
 			 }
 	private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
 				 panel3->Controls->Clear();
@@ -405,6 +611,25 @@ private: System::Void button9_Click(System::Object^  sender, System::EventArgs^ 
 			 }
 			 this->Close();
 
+		 }
+private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
+			 curid--;
+			 display();
+		 }
+private: System::Void btnNext_Click_1(System::Object^  sender, System::EventArgs^  e) {
+			 if(modulesCompleted<=1&&curid==3)
+			 {
+				 MessageBox::Show("Please Complete the Previous Module to access this.");
+			 }
+			 else if(modulesCompleted<=0&&curid==2)
+			 {
+				 MessageBox::Show("Please Complete the Previous Module to access this.");
+			 }
+			 else
+			 {
+				 curid++;
+				 display();
+			 }
 		 }
 };
 }
