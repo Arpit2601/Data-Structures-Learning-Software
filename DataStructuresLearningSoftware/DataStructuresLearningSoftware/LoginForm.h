@@ -2957,9 +2957,10 @@ private: System::Void LoginButton_Click(System::Object^  sender, System::EventAr
 						connection->Close();
 						form->vartextBox->Text=username;
 						//MessageBox::Show(form->username);
+						MessageBox::Show("True");
 						this->Hide();
-						form->ShowDialog();
-						
+						form->Show(this);
+						this->Visible=false;
 						
 						break;
 
@@ -2982,7 +2983,7 @@ private: System::Void LoginButton_Click(System::Object^  sender, System::EventAr
 				}
 				else
 				{
-					this->Show();
+					
 					UsernameTextBox->Text="";
 					PasswordTextBox->Text="";
 					UsernameTextBox->Focus();
@@ -3055,9 +3056,8 @@ private: System::Void GuestLoginButton_Click(System::Object^  sender, System::Ev
 			 Homepage ^form= gcnew Homepage;
 			 form->vartextBox->Text="guest";
 			 //MessageBox::Show(form->username);
-			 this->Hide();
-			 form->ShowDialog();
-			 this->Show();
+			 this->Visible=false;
+			 form->Show(this);
 			 UsernameTextBox->Text="";
 			 PasswordTextBox->Text="";
 			 UsernameTextBox->Focus();
