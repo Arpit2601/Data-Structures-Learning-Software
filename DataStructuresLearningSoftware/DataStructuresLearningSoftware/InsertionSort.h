@@ -1,5 +1,6 @@
 #pragma once
 
+#include "moduleQuiz.h"
 
 #include <utility> 
 #include <vector>
@@ -1426,6 +1427,16 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void InsertionSort_Load(System::Object^  sender, System::EventArgs^  e) {
 				 hideLabels();
 				 icnt=0;
+
+				 // Quiz Panel Load
+				 moduleQuiz ^newPanel = gcnew moduleQuiz();
+				 newPanel->ds_id = 4;
+				 newPanel->module_id = 2;
+				 newPanel->username = username;
+				 newPanel->update_id = 12;
+				 newPanel->update_name = "SortingProgress";
+				 quizPanel->Controls->Clear();
+				 quizPanel->Controls->Add(newPanel);
 			 }
 	private: System::Void btnIS_Click(System::Object^  sender, System::EventArgs^  e) {
 				 timer1->Interval=2501;

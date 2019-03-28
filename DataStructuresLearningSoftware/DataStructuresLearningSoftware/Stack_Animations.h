@@ -179,7 +179,7 @@ namespace DataStructuresLearningSoftware {
 			this->panel2->BackColor = System::Drawing::Color::White;
 			this->panel2->Location = System::Drawing::Point(0, 195);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(1088, 309);
+			this->panel2->Size = System::Drawing::Size(1105, 309);
 			this->panel2->TabIndex = 8;
 			// 
 			// label1
@@ -208,8 +208,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// Stack_Animations
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::White;
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
@@ -223,7 +222,7 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->textBox1);
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Stack_Animations";
-			this->Size = System::Drawing::Size(1088, 631);
+			this->Size = System::Drawing::Size(1105, 670);
 			this->Load += gcnew System::EventHandler(this, &Stack_Animations::Stack_Animations_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -262,7 +261,7 @@ namespace DataStructuresLearningSoftware {
 private: System::Void Stack_Animations_Load(System::Object^  sender, System::EventArgs^  e) {
 				 
 				numInputs = 0;
-				maxInputs = 10;
+				maxInputs = 15;
 				boxHeight = 60;
 				boxWidth = 60;
 				startX = 80;
@@ -281,7 +280,7 @@ private: System::Void Stack_Animations_Load(System::Object^  sender, System::Eve
 				 if(Stack_Array->Checked)
 				 {
 					
-					  for(int i=0;i<10;i++)
+					  for(int i=0;i<15;i++)
 					{
 					 Label ^newLabel = gcnew Label();
 					 newLabel->Location = Drawing::Point(startX+i*boxWidth, startY);

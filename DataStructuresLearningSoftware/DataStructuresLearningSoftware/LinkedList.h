@@ -1,5 +1,7 @@
 #pragma once
 
+#include "moduleQuiz.h"
+
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -61,6 +63,9 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  label14;
 	private: System::Windows::Forms::Label^  label15;
 	private: System::Windows::Forms::Label^  label16;
+	private: System::Windows::Forms::Panel^  quizPanel;
+
+	private: System::Windows::Forms::Label^  label17;
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -103,6 +108,8 @@ namespace DataStructuresLearningSoftware {
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->quizPanel = (gcnew System::Windows::Forms::Panel());
+			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -412,10 +419,30 @@ namespace DataStructuresLearningSoftware {
 			this->label16->TabIndex = 41;
 			this->label16->Text = L"Yes";
 			// 
+			// quizPanel
+			// 
+			this->quizPanel->Location = System::Drawing::Point(20, 3703);
+			this->quizPanel->Name = L"quizPanel";
+			this->quizPanel->Size = System::Drawing::Size(1030, 450);
+			this->quizPanel->TabIndex = 42;
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label17->Location = System::Drawing::Point(24, 3675);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(382, 21);
+			this->label17->TabIndex = 43;
+			this->label17->Text = L"Answer the question correctly to pass the module.";
+			// 
 			// LinkedList
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::Snow;
+			this->Controls->Add(this->label17);
+			this->Controls->Add(this->quizPanel);
 			this->Controls->Add(this->label16);
 			this->Controls->Add(this->label15);
 			this->Controls->Add(this->label14);
@@ -442,7 +469,7 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->richTextBox1);
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"LinkedList";
-			this->Size = System::Drawing::Size(1088, 3700);
+			this->Size = System::Drawing::Size(1088, 4200);
 			this->Load += gcnew System::EventHandler(this, &LinkedList::LinkedList_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -560,6 +587,16 @@ public:
 				 button6->Enabled=false;
 				 linked_list_arrow_length=60;
 				 arrow_select = gcnew PictureBox();
+
+				 // Quiz Panel Code
+				 moduleQuiz ^newPanel = gcnew moduleQuiz();
+				 newPanel->ds_id = 3;
+				 newPanel->module_id = 2;
+				 newPanel->username = username;
+				 newPanel->update_id = 11;
+				 newPanel->update_name = "SearchingProgress";
+				 quizPanel->Controls->Clear();
+				 quizPanel->Controls->Add(newPanel);
 			 }
 	private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e) {
 				 arrow_select->ImageLocation = IO::Path::GetDirectoryName(Application::StartupPath)+"\\media\\arrow_select.png";		

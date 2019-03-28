@@ -84,10 +84,12 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// richTextBox1
 			// 
+			this->richTextBox1->BackColor = System::Drawing::Color::White;
 			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
 			this->richTextBox1->Location = System::Drawing::Point(98, 92);
 			this->richTextBox1->Name = L"richTextBox1";
+			this->richTextBox1->ReadOnly = true;
 			this->richTextBox1->Size = System::Drawing::Size(610, 26);
 			this->richTextBox1->TabIndex = 1;
 			this->richTextBox1->Text = L"Elements are always added to the back and removed from the front";
@@ -96,7 +98,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			this->label2->Location = System::Drawing::Point(106, 132);
+			this->label2->Location = System::Drawing::Point(106, 165);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(91, 25);
 			this->label2->TabIndex = 2;
@@ -106,7 +108,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			this->label3->Location = System::Drawing::Point(106, 240);
+			this->label3->Location = System::Drawing::Point(106, 274);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(92, 25);
 			this->label3->TabIndex = 3;
@@ -116,7 +118,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			this->label4->Location = System::Drawing::Point(106, 355);
+			this->label4->Location = System::Drawing::Point(106, 378);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(57, 25);
 			this->label4->TabIndex = 4;
@@ -126,7 +128,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			this->label5->Location = System::Drawing::Point(106, 451);
+			this->label5->Location = System::Drawing::Point(106, 491);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(53, 25);
 			this->label5->TabIndex = 5;
@@ -134,11 +136,13 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// richTextBox2
 			// 
+			this->richTextBox2->BackColor = System::Drawing::Color::Bisque;
 			this->richTextBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->richTextBox2->Location = System::Drawing::Point(111, 383);
+			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Bookman Old Style", 10.1F));
+			this->richTextBox2->Location = System::Drawing::Point(451, 355);
 			this->richTextBox2->Name = L"richTextBox2";
-			this->richTextBox2->Size = System::Drawing::Size(476, 67);
+			this->richTextBox2->ReadOnly = true;
+			this->richTextBox2->Size = System::Drawing::Size(476, 90);
 			this->richTextBox2->TabIndex = 6;
 			this->richTextBox2->Text = L"begin procedure front\n   return queue[front]\nend procedure\n";
 			this->richTextBox2->WordWrap = false;
@@ -146,22 +150,26 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// richTextBox3
 			// 
+			this->richTextBox3->BackColor = System::Drawing::Color::Bisque;
 			this->richTextBox3->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->richTextBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->richTextBox3->Location = System::Drawing::Point(111, 268);
+			this->richTextBox3->Font = (gcnew System::Drawing::Font(L"Bookman Old Style", 10.1F));
+			this->richTextBox3->Location = System::Drawing::Point(451, 240);
 			this->richTextBox3->Name = L"richTextBox3";
-			this->richTextBox3->Size = System::Drawing::Size(476, 84);
+			this->richTextBox3->ReadOnly = true;
+			this->richTextBox3->Size = System::Drawing::Size(476, 90);
 			this->richTextBox3->TabIndex = 7;
 			this->richTextBox3->Text = L"procedure dequeue\n   if queue is empty\n      return underflow\n   end if\n   data =" 
 				L" queue[front]\n   front ← (front + 1)%(queue_size)\n   return true\nend procedure";
 			// 
 			// richTextBox4
 			// 
+			this->richTextBox4->BackColor = System::Drawing::Color::Bisque;
 			this->richTextBox4->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->richTextBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->richTextBox4->Location = System::Drawing::Point(111, 160);
+			this->richTextBox4->Font = (gcnew System::Drawing::Font(L"Bookman Old Style", 10.1F));
+			this->richTextBox4->Location = System::Drawing::Point(451, 132);
 			this->richTextBox4->Name = L"richTextBox4";
-			this->richTextBox4->Size = System::Drawing::Size(476, 77);
+			this->richTextBox4->ReadOnly = true;
+			this->richTextBox4->Size = System::Drawing::Size(476, 90);
 			this->richTextBox4->TabIndex = 8;
 			this->richTextBox4->Text = L"procedure enqueue(data)      \n   if queue is full\n      return overflow\n   endif\n" 
 				L"   rear ← (rear + 1)%(queue_size)\n   queue[rear] ← data\n   return true\nend proce" 
@@ -169,18 +177,20 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// richTextBox5
 			// 
+			this->richTextBox5->BackColor = System::Drawing::Color::Bisque;
 			this->richTextBox5->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->richTextBox5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->richTextBox5->Location = System::Drawing::Point(111, 479);
+			this->richTextBox5->Font = (gcnew System::Drawing::Font(L"Bookman Old Style", 10.1F));
+			this->richTextBox5->Location = System::Drawing::Point(451, 465);
 			this->richTextBox5->Name = L"richTextBox5";
-			this->richTextBox5->Size = System::Drawing::Size(476, 72);
+			this->richTextBox5->ReadOnly = true;
+			this->richTextBox5->Size = System::Drawing::Size(476, 90);
 			this->richTextBox5->TabIndex = 9;
 			this->richTextBox5->Text = L"begin procedure rear\n   return queue[rear]\nend procedure\n";
 			// 
 			// UI_Linear_Queue
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackColor = System::Drawing::Color::White;
 			this->Controls->Add(this->richTextBox5);
 			this->Controls->Add(this->richTextBox4);
 			this->Controls->Add(this->richTextBox3);

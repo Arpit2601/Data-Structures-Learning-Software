@@ -66,6 +66,13 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::TextBox^  RegisterUsernametextBox;
 	private: System::Windows::Forms::CheckBox^  RegisterpasswordcheckBox;
 	private: System::Windows::Forms::Button^  RegisterVerificationResendbutton;
+	private: System::Windows::Forms::Panel^  NewUserDesignPanel2;
+	private: System::Windows::Forms::Panel^  NewUserDesignpanel;
+	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	private: System::Windows::Forms::PictureBox^  pictureBox3;
+	private: System::Windows::Forms::Label^  label3;
 			 String ^query;
 		
 
@@ -179,24 +186,24 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Panel^  headerpanel;
 	protected:
 	private: System::Windows::Forms::Panel^  loginpanel;
-	private: System::Windows::Forms::PictureBox^  LogoPicturebox;
+
 
 	private: System::Windows::Forms::Button^  closebutton;
-	private: System::Windows::Forms::Panel^  UsernameDesignpanel;
+
 
 	private: System::Windows::Forms::PictureBox^  Usernamepicturebox;
 
 	private: System::Windows::Forms::TextBox^  UsernameTextBox;
-	private: System::Windows::Forms::Panel^  PasswordDesignPanel;
+
 
 	private: System::Windows::Forms::PictureBox^  PasswordPictureBox;
 	private: System::Windows::Forms::TextBox^  PasswordTextBox;
 	private: System::Windows::Forms::CheckBox^  LoginPagePasswordShowcheckBox;
 
 
-	private: System::Windows::Forms::PictureBox^  LoginpictureBox;
 
-	private: System::Windows::Forms::PictureBox^  ForgotPasswordPicturebox;
+
+
 
 	private: System::Windows::Forms::Button^  LoginButton;
 
@@ -204,7 +211,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Button^  GuestLoginButton;
 	private: System::Windows::Forms::Button^  RegisterButton;
 	private: System::Windows::Forms::PictureBox^  pictureBox2;
-	private: System::Windows::Forms::PictureBox^  pictureBox1;
+
 	private: System::Windows::Forms::Panel^  ForgotPasswordpanel;
 	private: System::Windows::Forms::Panel^  ForgotPasswordUsernamepanel;
 
@@ -280,8 +287,8 @@ private: System::Windows::Forms::PictureBox^  RegisterFirstNamepictureBox;
 private: System::Windows::Forms::Label^  RegisterHeaderlabel;
 
 
-private: System::Windows::Forms::PictureBox^  ReigsterHeaderpictureBox;
-private: System::Windows::Forms::PictureBox^  RegisterHomepictureBox;
+
+
 
 
 
@@ -370,26 +377,25 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->headerpanel = (gcnew System::Windows::Forms::Panel());
 			this->closebutton = (gcnew System::Windows::Forms::Button());
 			this->loginpanel = (gcnew System::Windows::Forms::Panel());
-			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->NewUserDesignPanel2 = (gcnew System::Windows::Forms::Panel());
+			this->NewUserDesignpanel = (gcnew System::Windows::Forms::Panel());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->GuestLoginButton = (gcnew System::Windows::Forms::Button());
 			this->RegisterButton = (gcnew System::Windows::Forms::Button());
-			this->LoginpictureBox = (gcnew System::Windows::Forms::PictureBox());
-			this->ForgotPasswordPicturebox = (gcnew System::Windows::Forms::PictureBox());
 			this->LoginButton = (gcnew System::Windows::Forms::Button());
 			this->ForgotPasswordButton = (gcnew System::Windows::Forms::Button());
 			this->LoginPagePasswordShowcheckBox = (gcnew System::Windows::Forms::CheckBox());
-			this->PasswordDesignPanel = (gcnew System::Windows::Forms::Panel());
 			this->PasswordPictureBox = (gcnew System::Windows::Forms::PictureBox());
 			this->PasswordTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->UsernameDesignpanel = (gcnew System::Windows::Forms::Panel());
 			this->Usernamepicturebox = (gcnew System::Windows::Forms::PictureBox());
 			this->UsernameTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->LogoPicturebox = (gcnew System::Windows::Forms::PictureBox());
 			this->ForgotPasswordpanel = (gcnew System::Windows::Forms::Panel());
-			this->ChangePasswordpanel = (gcnew System::Windows::Forms::Panel());
 			this->ChangePasswordHomepictureBox = (gcnew System::Windows::Forms::PictureBox());
-			this->ChangePasswordHomebutton = (gcnew System::Windows::Forms::Button());
+			this->ChangePasswordpanel = (gcnew System::Windows::Forms::Panel());
 			this->PasswordChangeChangebutton = (gcnew System::Windows::Forms::Button());
 			this->ChangePasswordcheckBox = (gcnew System::Windows::Forms::CheckBox());
 			this->ChangePasswordErrorlabel = (gcnew System::Windows::Forms::Label());
@@ -399,6 +405,7 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ChangePasswordNewPasswordDesignpanel = (gcnew System::Windows::Forms::Panel());
 			this->ChangePasswordNewPasswordpictureBox = (gcnew System::Windows::Forms::PictureBox());
 			this->ChangePasswordNewPasswordtextBox = (gcnew System::Windows::Forms::TextBox());
+			this->ChangePasswordHomebutton = (gcnew System::Windows::Forms::Button());
 			this->ForgotPasswordVerificationpanel = (gcnew System::Windows::Forms::Panel());
 			this->ForgotPasswordEmailCodepanel = (gcnew System::Windows::Forms::Panel());
 			this->ForgotPasswordEmailCodeDesignpanel = (gcnew System::Windows::Forms::Panel());
@@ -442,6 +449,7 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordHeaderlabel = (gcnew System::Windows::Forms::Label());
 			this->Registerpanel = (gcnew System::Windows::Forms::Panel());
 			this->RegisterDetailspanel = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->RegisterpasswordcheckBox = (gcnew System::Windows::Forms::CheckBox());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->RegisterPasswordpictureBox = (gcnew System::Windows::Forms::PictureBox());
@@ -454,7 +462,6 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterTeacherpictureBox = (gcnew System::Windows::Forms::PictureBox());
 			this->RegisterStudentpictureBox = (gcnew System::Windows::Forms::PictureBox());
 			this->RegisterTeacherradioButton = (gcnew System::Windows::Forms::RadioButton());
-			this->RegisterRegisterbutton = (gcnew System::Windows::Forms::Button());
 			this->RegisterStudentradioButton = (gcnew System::Windows::Forms::RadioButton());
 			this->RegisterUsernameDesignpanel = (gcnew System::Windows::Forms::Panel());
 			this->RegisterEmailtextBox = (gcnew System::Windows::Forms::TextBox());
@@ -480,21 +487,17 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegitsterVerificationlabel2 = (gcnew System::Windows::Forms::Label());
 			this->RegitsterVerificationlabel1 = (gcnew System::Windows::Forms::Label());
 			this->RegisterHomebutton = (gcnew System::Windows::Forms::Button());
-			this->RegisterHomepictureBox = (gcnew System::Windows::Forms::PictureBox());
-			this->ReigsterHeaderpictureBox = (gcnew System::Windows::Forms::PictureBox());
 			this->RegisterHeaderlabel = (gcnew System::Windows::Forms::Label());
+			this->RegisterRegisterbutton = (gcnew System::Windows::Forms::Button());
 			this->headerpanel->SuspendLayout();
 			this->loginpanel->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->LoginpictureBox))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ForgotPasswordPicturebox))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PasswordPictureBox))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->Usernamepicturebox))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->LogoPicturebox))->BeginInit();
 			this->ForgotPasswordpanel->SuspendLayout();
-			this->ChangePasswordpanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ChangePasswordHomepictureBox))->BeginInit();
+			this->ChangePasswordpanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ChangePasswordConfirmPasswordpictureBox))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ChangePasswordNewPasswordpictureBox))->BeginInit();
 			this->ForgotPasswordVerificationpanel->SuspendLayout();
@@ -514,6 +517,7 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ForgotPasswordUsernamepictureBox))->BeginInit();
 			this->Registerpanel->SuspendLayout();
 			this->RegisterDetailspanel->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterPasswordpictureBox))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->registerSecuritypictureBox))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterTeacherpictureBox))->BeginInit();
@@ -524,13 +528,11 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterFirstNamepictureBox))->BeginInit();
 			this->RegisterVerificationpanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterVerificationpictureBox))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterHomepictureBox))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ReigsterHeaderpictureBox))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// headerpanel
 			// 
-			this->headerpanel->BackColor = System::Drawing::Color::Cyan;
+			this->headerpanel->BackColor = System::Drawing::Color::Transparent;
 			this->headerpanel->Controls->Add(this->closebutton);
 			this->headerpanel->Dock = System::Windows::Forms::DockStyle::Top;
 			this->headerpanel->Location = System::Drawing::Point(0, 0);
@@ -541,10 +543,15 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			// closebutton
 			// 
-			this->closebutton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->closebutton->BackColor = System::Drawing::Color::Transparent;
 			this->closebutton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"closebutton.BackgroundImage")));
 			this->closebutton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->closebutton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->closebutton->FlatAppearance->BorderSize = 0;
+			this->closebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->closebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->closebutton->ForeColor = System::Drawing::Color::White;
 			this->closebutton->Location = System::Drawing::Point(994, 0);
 			this->closebutton->Margin = System::Windows::Forms::Padding(0);
 			this->closebutton->Name = L"closebutton";
@@ -557,22 +564,24 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->loginpanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)), 
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->loginpanel->Controls->Add(this->pictureBox2);
+			this->loginpanel->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"loginpanel.BackgroundImage")));
+			this->loginpanel->Controls->Add(this->label3);
+			this->loginpanel->Controls->Add(this->label2);
 			this->loginpanel->Controls->Add(this->pictureBox1);
+			this->loginpanel->Controls->Add(this->NewUserDesignPanel2);
+			this->loginpanel->Controls->Add(this->NewUserDesignpanel);
+			this->loginpanel->Controls->Add(this->label1);
+			this->loginpanel->Controls->Add(this->pictureBox2);
 			this->loginpanel->Controls->Add(this->GuestLoginButton);
 			this->loginpanel->Controls->Add(this->RegisterButton);
-			this->loginpanel->Controls->Add(this->LoginpictureBox);
-			this->loginpanel->Controls->Add(this->ForgotPasswordPicturebox);
 			this->loginpanel->Controls->Add(this->LoginButton);
 			this->loginpanel->Controls->Add(this->ForgotPasswordButton);
 			this->loginpanel->Controls->Add(this->LoginPagePasswordShowcheckBox);
-			this->loginpanel->Controls->Add(this->PasswordDesignPanel);
 			this->loginpanel->Controls->Add(this->PasswordPictureBox);
 			this->loginpanel->Controls->Add(this->PasswordTextBox);
-			this->loginpanel->Controls->Add(this->UsernameDesignpanel);
 			this->loginpanel->Controls->Add(this->Usernamepicturebox);
 			this->loginpanel->Controls->Add(this->UsernameTextBox);
-			this->loginpanel->Controls->Add(this->LogoPicturebox);
+			this->loginpanel->Cursor = System::Windows::Forms::Cursors::Default;
 			this->loginpanel->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->loginpanel->Location = System::Drawing::Point(0, 46);
 			this->loginpanel->Margin = System::Windows::Forms::Padding(0);
@@ -581,129 +590,148 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->loginpanel->TabIndex = 1;
 			this->loginpanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &LoginForm::loginpanel_Paint);
 			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::Color::Transparent;
+			this->label3->Location = System::Drawing::Point(367, 113);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(433, 30);
+			this->label3->TabIndex = 25;
+			this->label3->Text = L"Data Structure Learning Software";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->label2->Location = System::Drawing::Point(501, 202);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(85, 39);
+			this->label2->TabIndex = 24;
+			this->label2->Text = L"Login";
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(780, 395);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(40, 30);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 23;
+			this->pictureBox1->TabStop = false;
+			// 
+			// NewUserDesignPanel2
+			// 
+			this->NewUserDesignPanel2->BackColor = System::Drawing::Color::Black;
+			this->NewUserDesignPanel2->Location = System::Drawing::Point(379, 562);
+			this->NewUserDesignPanel2->Name = L"NewUserDesignPanel2";
+			this->NewUserDesignPanel2->Size = System::Drawing::Size(108, 2);
+			this->NewUserDesignPanel2->TabIndex = 22;
+			// 
+			// NewUserDesignpanel
+			// 
+			this->NewUserDesignpanel->BackColor = System::Drawing::Color::Black;
+			this->NewUserDesignpanel->Location = System::Drawing::Point(610, 562);
+			this->NewUserDesignpanel->Name = L"NewUserDesignpanel";
+			this->NewUserDesignpanel->Size = System::Drawing::Size(116, 2);
+			this->NewUserDesignpanel->TabIndex = 21;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::Black;
+			this->label1->Location = System::Drawing::Point(493, 548);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(117, 27);
+			this->label1->TabIndex = 20;
+			this->label1->Text = L"New User\?";
+			// 
 			// pictureBox2
 			// 
+			this->pictureBox2->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox2.BackgroundImage")));
 			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox2->Location = System::Drawing::Point(239, 656);
+			this->pictureBox2->Location = System::Drawing::Point(306, 656);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(60, 49);
 			this->pictureBox2->TabIndex = 15;
 			this->pictureBox2->TabStop = false;
 			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.BackgroundImage")));
-			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox1->Location = System::Drawing::Point(239, 587);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(61, 50);
-			this->pictureBox1->TabIndex = 14;
-			this->pictureBox1->TabStop = false;
-			// 
 			// GuestLoginButton
 			// 
-			this->GuestLoginButton->BackColor = System::Drawing::Color::Cyan;
+			this->GuestLoginButton->BackColor = System::Drawing::Color::White;
+			this->GuestLoginButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->GuestLoginButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->GuestLoginButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->GuestLoginButton->Location = System::Drawing::Point(306, 656);
+			this->GuestLoginButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold));
+			this->GuestLoginButton->ForeColor = System::Drawing::Color::Black;
+			this->GuestLoginButton->Location = System::Drawing::Point(379, 656);
 			this->GuestLoginButton->Name = L"GuestLoginButton";
-			this->GuestLoginButton->Size = System::Drawing::Size(513, 49);
+			this->GuestLoginButton->Size = System::Drawing::Size(348, 40);
 			this->GuestLoginButton->TabIndex = 13;
 			this->GuestLoginButton->Text = L"Guest Login";
 			this->GuestLoginButton->UseVisualStyleBackColor = false;
 			this->GuestLoginButton->Click += gcnew System::EventHandler(this, &LoginForm::GuestLoginButton_Click);
-			this->GuestLoginButton->Enter += gcnew System::EventHandler(this, &LoginForm::GuestLoginButton_Enter);
-			this->GuestLoginButton->Leave += gcnew System::EventHandler(this, &LoginForm::GuestLoginButton_Leave);
-			this->GuestLoginButton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::GuestLoginButton_MouseEnter);
-			this->GuestLoginButton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::GuestLoginButton_MouseLeave);
 			// 
 			// RegisterButton
 			// 
-			this->RegisterButton->BackColor = System::Drawing::Color::Cyan;
+			this->RegisterButton->BackColor = System::Drawing::Color::White;
+			this->RegisterButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->RegisterButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->RegisterButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->RegisterButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->RegisterButton->Location = System::Drawing::Point(306, 588);
+			this->RegisterButton->ForeColor = System::Drawing::Color::Black;
+			this->RegisterButton->Location = System::Drawing::Point(379, 588);
 			this->RegisterButton->Name = L"RegisterButton";
-			this->RegisterButton->Size = System::Drawing::Size(513, 49);
+			this->RegisterButton->Size = System::Drawing::Size(347, 40);
 			this->RegisterButton->TabIndex = 12;
-			this->RegisterButton->Text = L"New User \? Sign Up";
+			this->RegisterButton->Text = L"Create your account now";
 			this->RegisterButton->UseVisualStyleBackColor = false;
 			this->RegisterButton->Click += gcnew System::EventHandler(this, &LoginForm::RegisterButton_Click);
-			this->RegisterButton->Enter += gcnew System::EventHandler(this, &LoginForm::RegisterButton_Enter);
-			this->RegisterButton->Leave += gcnew System::EventHandler(this, &LoginForm::RegisterButton_Leave);
-			this->RegisterButton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::RegisterButton_MouseEnter);
-			this->RegisterButton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::RegisterButton_MouseLeave);
-			// 
-			// LoginpictureBox
-			// 
-			this->LoginpictureBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->LoginpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"LoginpictureBox.BackgroundImage")));
-			this->LoginpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->LoginpictureBox->Location = System::Drawing::Point(743, 498);
-			this->LoginpictureBox->Margin = System::Windows::Forms::Padding(0);
-			this->LoginpictureBox->Name = L"LoginpictureBox";
-			this->LoginpictureBox->Size = System::Drawing::Size(76, 71);
-			this->LoginpictureBox->TabIndex = 11;
-			this->LoginpictureBox->TabStop = false;
-			this->LoginpictureBox->Click += gcnew System::EventHandler(this, &LoginForm::pictureBox2_Click);
-			// 
-			// ForgotPasswordPicturebox
-			// 
-			this->ForgotPasswordPicturebox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->ForgotPasswordPicturebox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ForgotPasswordPicturebox.BackgroundImage")));
-			this->ForgotPasswordPicturebox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ForgotPasswordPicturebox->Location = System::Drawing::Point(239, 496);
-			this->ForgotPasswordPicturebox->Margin = System::Windows::Forms::Padding(0);
-			this->ForgotPasswordPicturebox->Name = L"ForgotPasswordPicturebox";
-			this->ForgotPasswordPicturebox->Size = System::Drawing::Size(78, 72);
-			this->ForgotPasswordPicturebox->TabIndex = 10;
-			this->ForgotPasswordPicturebox->TabStop = false;
 			// 
 			// LoginButton
 			// 
-			this->LoginButton->BackColor = System::Drawing::Color::Cyan;
-			this->LoginButton->Cursor = System::Windows::Forms::Cursors::Default;
+			this->LoginButton->BackColor = System::Drawing::Color::White;
+			this->LoginButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->LoginButton->FlatAppearance->BorderSize = 0;
 			this->LoginButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->LoginButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->LoginButton->Location = System::Drawing::Point(570, 498);
+			this->LoginButton->ForeColor = System::Drawing::Color::Black;
+			this->LoginButton->Location = System::Drawing::Point(379, 445);
 			this->LoginButton->Margin = System::Windows::Forms::Padding(0);
 			this->LoginButton->Name = L"LoginButton";
-			this->LoginButton->Size = System::Drawing::Size(173, 72);
+			this->LoginButton->Size = System::Drawing::Size(347, 40);
 			this->LoginButton->TabIndex = 9;
 			this->LoginButton->Text = L"Login";
 			this->LoginButton->UseVisualStyleBackColor = false;
 			this->LoginButton->Click += gcnew System::EventHandler(this, &LoginForm::LoginButton_Click);
-			this->LoginButton->Enter += gcnew System::EventHandler(this, &LoginForm::LoginButton_Enter);
-			this->LoginButton->Leave += gcnew System::EventHandler(this, &LoginForm::LoginButton_Leave);
-			this->LoginButton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::LoginButton_MouseEnter);
-			this->LoginButton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::LoginButton_MouseLeave);
 			// 
 			// ForgotPasswordButton
 			// 
-			this->ForgotPasswordButton->BackColor = System::Drawing::Color::Cyan;
+			this->ForgotPasswordButton->BackColor = System::Drawing::Color::Transparent;
 			this->ForgotPasswordButton->FlatAppearance->BorderSize = 0;
-			this->ForgotPasswordButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->ForgotPasswordButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
+			this->ForgotPasswordButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->ForgotPasswordButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Underline, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ForgotPasswordButton->Location = System::Drawing::Point(317, 498);
+			this->ForgotPasswordButton->ForeColor = System::Drawing::Color::Black;
+			this->ForgotPasswordButton->Location = System::Drawing::Point(552, 347);
 			this->ForgotPasswordButton->Margin = System::Windows::Forms::Padding(0);
 			this->ForgotPasswordButton->Name = L"ForgotPasswordButton";
-			this->ForgotPasswordButton->Size = System::Drawing::Size(200, 72);
+			this->ForgotPasswordButton->Size = System::Drawing::Size(200, 34);
 			this->ForgotPasswordButton->TabIndex = 8;
 			this->ForgotPasswordButton->Text = L"Forgot Password";
 			this->ForgotPasswordButton->UseVisualStyleBackColor = false;
 			this->ForgotPasswordButton->Click += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordButton_Click);
-			this->ForgotPasswordButton->Enter += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordButton_Enter);
-			this->ForgotPasswordButton->Leave += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordButton_Leave);
-			this->ForgotPasswordButton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordButton_MouseEnter);
-			this->ForgotPasswordButton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordButton_MouseLeave);
 			// 
 			// LoginPagePasswordShowcheckBox
 			// 
@@ -711,45 +739,35 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->LoginPagePasswordShowcheckBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->LoginPagePasswordShowcheckBox->ForeColor = System::Drawing::Color::White;
-			this->LoginPagePasswordShowcheckBox->Location = System::Drawing::Point(655, 446);
+			this->LoginPagePasswordShowcheckBox->Location = System::Drawing::Point(756, 402);
 			this->LoginPagePasswordShowcheckBox->Name = L"LoginPagePasswordShowcheckBox";
-			this->LoginPagePasswordShowcheckBox->Size = System::Drawing::Size(164, 24);
+			this->LoginPagePasswordShowcheckBox->Size = System::Drawing::Size(18, 17);
 			this->LoginPagePasswordShowcheckBox->TabIndex = 7;
-			this->LoginPagePasswordShowcheckBox->Text = L"Show Password";
 			this->LoginPagePasswordShowcheckBox->UseVisualStyleBackColor = true;
 			this->LoginPagePasswordShowcheckBox->CheckedChanged += gcnew System::EventHandler(this, &LoginForm::LoginPagePasswordShowcheckBox_CheckedChanged);
 			// 
-			// PasswordDesignPanel
-			// 
-			this->PasswordDesignPanel->BackColor = System::Drawing::Color::White;
-			this->PasswordDesignPanel->Location = System::Drawing::Point(239, 424);
-			this->PasswordDesignPanel->Name = L"PasswordDesignPanel";
-			this->PasswordDesignPanel->Size = System::Drawing::Size(580, 1);
-			this->PasswordDesignPanel->TabIndex = 6;
-			this->PasswordDesignPanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &LoginForm::panel2_Paint);
-			// 
 			// PasswordPictureBox
 			// 
+			this->PasswordPictureBox->BackColor = System::Drawing::Color::Transparent;
 			this->PasswordPictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PasswordPictureBox.BackgroundImage")));
 			this->PasswordPictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->PasswordPictureBox->Location = System::Drawing::Point(239, 362);
+			this->PasswordPictureBox->Location = System::Drawing::Point(322, 376);
 			this->PasswordPictureBox->Name = L"PasswordPictureBox";
-			this->PasswordPictureBox->Size = System::Drawing::Size(67, 60);
+			this->PasswordPictureBox->Size = System::Drawing::Size(50, 50);
 			this->PasswordPictureBox->TabIndex = 5;
 			this->PasswordPictureBox->TabStop = false;
 			this->PasswordPictureBox->Click += gcnew System::EventHandler(this, &LoginForm::pictureBox3_Click);
 			// 
 			// PasswordTextBox
 			// 
-			this->PasswordTextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->PasswordTextBox->BackColor = System::Drawing::Color::White;
 			this->PasswordTextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->PasswordTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->PasswordTextBox->ForeColor = System::Drawing::Color::White;
-			this->PasswordTextBox->Location = System::Drawing::Point(312, 395);
+			this->PasswordTextBox->ForeColor = System::Drawing::Color::Black;
+			this->PasswordTextBox->Location = System::Drawing::Point(379, 393);
 			this->PasswordTextBox->Name = L"PasswordTextBox";
-			this->PasswordTextBox->Size = System::Drawing::Size(507, 31);
+			this->PasswordTextBox->Size = System::Drawing::Size(348, 31);
 			this->PasswordTextBox->TabIndex = 4;
 			this->PasswordTextBox->Text = L"Password";
 			this->PasswordTextBox->Click += gcnew System::EventHandler(this, &LoginForm::PasswordTextBox_Click);
@@ -757,56 +775,40 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->PasswordTextBox->MouseEnter += gcnew System::EventHandler(this, &LoginForm::PasswordTextBox_MouseEnter);
 			this->PasswordTextBox->MouseLeave += gcnew System::EventHandler(this, &LoginForm::PasswordTextBox_MouseLeave);
 			// 
-			// UsernameDesignpanel
-			// 
-			this->UsernameDesignpanel->BackColor = System::Drawing::Color::White;
-			this->UsernameDesignpanel->Location = System::Drawing::Point(239, 336);
-			this->UsernameDesignpanel->Name = L"UsernameDesignpanel";
-			this->UsernameDesignpanel->Size = System::Drawing::Size(580, 1);
-			this->UsernameDesignpanel->TabIndex = 3;
-			// 
 			// Usernamepicturebox
 			// 
+			this->Usernamepicturebox->BackColor = System::Drawing::Color::Transparent;
 			this->Usernamepicturebox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Usernamepicturebox.BackgroundImage")));
 			this->Usernamepicturebox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->Usernamepicturebox->Location = System::Drawing::Point(239, 274);
+			this->Usernamepicturebox->Location = System::Drawing::Point(322, 288);
 			this->Usernamepicturebox->Name = L"Usernamepicturebox";
-			this->Usernamepicturebox->Size = System::Drawing::Size(67, 60);
+			this->Usernamepicturebox->Size = System::Drawing::Size(50, 50);
 			this->Usernamepicturebox->TabIndex = 2;
 			this->Usernamepicturebox->TabStop = false;
 			// 
 			// UsernameTextBox
 			// 
-			this->UsernameTextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->UsernameTextBox->BackColor = System::Drawing::Color::White;
 			this->UsernameTextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->UsernameTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->UsernameTextBox->ForeColor = System::Drawing::Color::White;
-			this->UsernameTextBox->Location = System::Drawing::Point(312, 307);
+			this->UsernameTextBox->ForeColor = System::Drawing::Color::Black;
+			this->UsernameTextBox->Location = System::Drawing::Point(378, 306);
 			this->UsernameTextBox->Name = L"UsernameTextBox";
-			this->UsernameTextBox->Size = System::Drawing::Size(507, 31);
+			this->UsernameTextBox->Size = System::Drawing::Size(349, 31);
 			this->UsernameTextBox->TabIndex = 1;
 			this->UsernameTextBox->Text = L"Username";
 			this->UsernameTextBox->Click += gcnew System::EventHandler(this, &LoginForm::UsernameTextBox_Click);
 			this->UsernameTextBox->MouseEnter += gcnew System::EventHandler(this, &LoginForm::UsernameTextBox_MouseEnter);
 			this->UsernameTextBox->MouseLeave += gcnew System::EventHandler(this, &LoginForm::UsernameTextBox_MouseLeave);
 			// 
-			// LogoPicturebox
-			// 
-			this->LogoPicturebox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"LogoPicturebox.BackgroundImage")));
-			this->LogoPicturebox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->LogoPicturebox->Location = System::Drawing::Point(410, 14);
-			this->LogoPicturebox->Name = L"LogoPicturebox";
-			this->LogoPicturebox->Size = System::Drawing::Size(251, 237);
-			this->LogoPicturebox->TabIndex = 0;
-			this->LogoPicturebox->TabStop = false;
-			// 
 			// ForgotPasswordpanel
 			// 
-			this->ForgotPasswordpanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->ForgotPasswordpanel->BackColor = System::Drawing::Color::White;
+			this->ForgotPasswordpanel->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ForgotPasswordpanel.BackgroundImage")));
+			this->ForgotPasswordpanel->Controls->Add(this->ChangePasswordHomepictureBox);
 			this->ForgotPasswordpanel->Controls->Add(this->ChangePasswordpanel);
+			this->ForgotPasswordpanel->Controls->Add(this->ChangePasswordHomebutton);
 			this->ForgotPasswordpanel->Controls->Add(this->ForgotPasswordVerificationpanel);
 			this->ForgotPasswordpanel->Controls->Add(this->ForgotPasswordUsernamepanel);
 			this->ForgotPasswordpanel->Controls->Add(this->ForgotPasswordHeaderlabel);
@@ -816,10 +818,20 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordpanel->Size = System::Drawing::Size(1048, 717);
 			this->ForgotPasswordpanel->TabIndex = 18;
 			// 
+			// ChangePasswordHomepictureBox
+			// 
+			this->ChangePasswordHomepictureBox->BackColor = System::Drawing::Color::Transparent;
+			this->ChangePasswordHomepictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ChangePasswordHomepictureBox.BackgroundImage")));
+			this->ChangePasswordHomepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ChangePasswordHomepictureBox->Location = System::Drawing::Point(790, 22);
+			this->ChangePasswordHomepictureBox->Name = L"ChangePasswordHomepictureBox";
+			this->ChangePasswordHomepictureBox->Size = System::Drawing::Size(50, 50);
+			this->ChangePasswordHomepictureBox->TabIndex = 11;
+			this->ChangePasswordHomepictureBox->TabStop = false;
+			// 
 			// ChangePasswordpanel
 			// 
-			this->ChangePasswordpanel->Controls->Add(this->ChangePasswordHomepictureBox);
-			this->ChangePasswordpanel->Controls->Add(this->ChangePasswordHomebutton);
+			this->ChangePasswordpanel->BackColor = System::Drawing::Color::Transparent;
 			this->ChangePasswordpanel->Controls->Add(this->PasswordChangeChangebutton);
 			this->ChangePasswordpanel->Controls->Add(this->ChangePasswordcheckBox);
 			this->ChangePasswordpanel->Controls->Add(this->ChangePasswordErrorlabel);
@@ -834,37 +846,9 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ChangePasswordpanel->Size = System::Drawing::Size(995, 570);
 			this->ChangePasswordpanel->TabIndex = 13;
 			// 
-			// ChangePasswordHomepictureBox
-			// 
-			this->ChangePasswordHomepictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ChangePasswordHomepictureBox.BackgroundImage")));
-			this->ChangePasswordHomepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ChangePasswordHomepictureBox->Location = System::Drawing::Point(751, 495);
-			this->ChangePasswordHomepictureBox->Name = L"ChangePasswordHomepictureBox";
-			this->ChangePasswordHomepictureBox->Size = System::Drawing::Size(63, 61);
-			this->ChangePasswordHomepictureBox->TabIndex = 11;
-			this->ChangePasswordHomepictureBox->TabStop = false;
-			// 
-			// ChangePasswordHomebutton
-			// 
-			this->ChangePasswordHomebutton->BackColor = System::Drawing::Color::Cyan;
-			this->ChangePasswordHomebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->ChangePasswordHomebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ChangePasswordHomebutton->Location = System::Drawing::Point(820, 495);
-			this->ChangePasswordHomebutton->Name = L"ChangePasswordHomebutton";
-			this->ChangePasswordHomebutton->Size = System::Drawing::Size(162, 61);
-			this->ChangePasswordHomebutton->TabIndex = 9;
-			this->ChangePasswordHomebutton->Text = L"Login Page";
-			this->ChangePasswordHomebutton->UseVisualStyleBackColor = false;
-			this->ChangePasswordHomebutton->Click += gcnew System::EventHandler(this, &LoginForm::ChangePasswordHomebutton_Click);
-			this->ChangePasswordHomebutton->Enter += gcnew System::EventHandler(this, &LoginForm::ChangePasswordHomebutton_Enter);
-			this->ChangePasswordHomebutton->Leave += gcnew System::EventHandler(this, &LoginForm::ChangePasswordHomebutton_Leave);
-			this->ChangePasswordHomebutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::ChangePasswordHomebutton_MouseEnter);
-			this->ChangePasswordHomebutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::ChangePasswordHomebutton_MouseLeave);
-			// 
 			// PasswordChangeChangebutton
 			// 
-			this->PasswordChangeChangebutton->BackColor = System::Drawing::Color::Cyan;
+			this->PasswordChangeChangebutton->BackColor = System::Drawing::Color::White;
 			this->PasswordChangeChangebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->PasswordChangeChangebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -875,17 +859,13 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->PasswordChangeChangebutton->Text = L"Change";
 			this->PasswordChangeChangebutton->UseVisualStyleBackColor = false;
 			this->PasswordChangeChangebutton->Click += gcnew System::EventHandler(this, &LoginForm::PasswordChangeChangebutton_Click);
-			this->PasswordChangeChangebutton->Enter += gcnew System::EventHandler(this, &LoginForm::PasswordChangeChangebutton_Enter);
-			this->PasswordChangeChangebutton->Leave += gcnew System::EventHandler(this, &LoginForm::PasswordChangeChangebutton_Leave);
-			this->PasswordChangeChangebutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::PasswordChangeChangebutton_MouseEnter);
-			this->PasswordChangeChangebutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::PasswordChangeChangebutton_MouseLeave);
 			// 
 			// ChangePasswordcheckBox
 			// 
 			this->ChangePasswordcheckBox->AutoSize = true;
 			this->ChangePasswordcheckBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ChangePasswordcheckBox->ForeColor = System::Drawing::Color::White;
+			this->ChangePasswordcheckBox->ForeColor = System::Drawing::Color::Black;
 			this->ChangePasswordcheckBox->Location = System::Drawing::Point(601, 309);
 			this->ChangePasswordcheckBox->Name = L"ChangePasswordcheckBox";
 			this->ChangePasswordcheckBox->Size = System::Drawing::Size(180, 28);
@@ -908,7 +888,7 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			// ChangePasswordConfirmPasswordDesignpanel
 			// 
-			this->ChangePasswordConfirmPasswordDesignpanel->BackColor = System::Drawing::Color::White;
+			this->ChangePasswordConfirmPasswordDesignpanel->BackColor = System::Drawing::Color::Black;
 			this->ChangePasswordConfirmPasswordDesignpanel->Location = System::Drawing::Point(221, 282);
 			this->ChangePasswordConfirmPasswordDesignpanel->Name = L"ChangePasswordConfirmPasswordDesignpanel";
 			this->ChangePasswordConfirmPasswordDesignpanel->Size = System::Drawing::Size(560, 1);
@@ -926,12 +906,11 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			// ChangePasswordConfirmPasswordtextBox
 			// 
-			this->ChangePasswordConfirmPasswordtextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->ChangePasswordConfirmPasswordtextBox->BackColor = System::Drawing::Color::White;
 			this->ChangePasswordConfirmPasswordtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ChangePasswordConfirmPasswordtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ChangePasswordConfirmPasswordtextBox->ForeColor = System::Drawing::Color::White;
+			this->ChangePasswordConfirmPasswordtextBox->ForeColor = System::Drawing::Color::Black;
 			this->ChangePasswordConfirmPasswordtextBox->Location = System::Drawing::Point(286, 251);
 			this->ChangePasswordConfirmPasswordtextBox->Name = L"ChangePasswordConfirmPasswordtextBox";
 			this->ChangePasswordConfirmPasswordtextBox->Size = System::Drawing::Size(492, 27);
@@ -940,7 +919,7 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			// ChangePasswordNewPasswordDesignpanel
 			// 
-			this->ChangePasswordNewPasswordDesignpanel->BackColor = System::Drawing::Color::White;
+			this->ChangePasswordNewPasswordDesignpanel->BackColor = System::Drawing::Color::Black;
 			this->ChangePasswordNewPasswordDesignpanel->Location = System::Drawing::Point(221, 192);
 			this->ChangePasswordNewPasswordDesignpanel->Name = L"ChangePasswordNewPasswordDesignpanel";
 			this->ChangePasswordNewPasswordDesignpanel->Size = System::Drawing::Size(560, 1);
@@ -958,20 +937,36 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			// ChangePasswordNewPasswordtextBox
 			// 
-			this->ChangePasswordNewPasswordtextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->ChangePasswordNewPasswordtextBox->BackColor = System::Drawing::Color::White;
 			this->ChangePasswordNewPasswordtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->ChangePasswordNewPasswordtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ChangePasswordNewPasswordtextBox->ForeColor = System::Drawing::Color::White;
+			this->ChangePasswordNewPasswordtextBox->ForeColor = System::Drawing::Color::Black;
 			this->ChangePasswordNewPasswordtextBox->Location = System::Drawing::Point(286, 161);
 			this->ChangePasswordNewPasswordtextBox->Name = L"ChangePasswordNewPasswordtextBox";
 			this->ChangePasswordNewPasswordtextBox->Size = System::Drawing::Size(492, 27);
 			this->ChangePasswordNewPasswordtextBox->TabIndex = 0;
 			this->ChangePasswordNewPasswordtextBox->Text = L"New Password";
 			// 
+			// ChangePasswordHomebutton
+			// 
+			this->ChangePasswordHomebutton->BackColor = System::Drawing::Color::Transparent;
+			this->ChangePasswordHomebutton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->ChangePasswordHomebutton->FlatAppearance->BorderSize = 0;
+			this->ChangePasswordHomebutton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->ChangePasswordHomebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)), 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ChangePasswordHomebutton->Location = System::Drawing::Point(859, 22);
+			this->ChangePasswordHomebutton->Name = L"ChangePasswordHomebutton";
+			this->ChangePasswordHomebutton->Size = System::Drawing::Size(162, 61);
+			this->ChangePasswordHomebutton->TabIndex = 9;
+			this->ChangePasswordHomebutton->Text = L"Login Page";
+			this->ChangePasswordHomebutton->UseVisualStyleBackColor = false;
+			this->ChangePasswordHomebutton->Click += gcnew System::EventHandler(this, &LoginForm::ChangePasswordHomebutton_Click);
+			// 
 			// ForgotPasswordVerificationpanel
 			// 
+			this->ForgotPasswordVerificationpanel->BackColor = System::Drawing::Color::Transparent;
 			this->ForgotPasswordVerificationpanel->Controls->Add(this->ForgotPasswordEmailCodepanel);
 			this->ForgotPasswordVerificationpanel->Controls->Add(this->ForgotPasswordEmailpanel);
 			this->ForgotPasswordVerificationpanel->Controls->Add(this->ForgotPasswordQuestionpanel);
@@ -1099,7 +1094,7 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			// ForgotPasswordEmailDesignpanel
 			// 
-			this->ForgotPasswordEmailDesignpanel->BackColor = System::Drawing::Color::White;
+			this->ForgotPasswordEmailDesignpanel->BackColor = System::Drawing::Color::Black;
 			this->ForgotPasswordEmailDesignpanel->Location = System::Drawing::Point(160, 163);
 			this->ForgotPasswordEmailDesignpanel->Name = L"ForgotPasswordEmailDesignpanel";
 			this->ForgotPasswordEmailDesignpanel->Size = System::Drawing::Size(631, 1);
@@ -1255,10 +1250,6 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordVerificationHomebutton->Text = L"Login Page";
 			this->ForgotPasswordVerificationHomebutton->UseVisualStyleBackColor = false;
 			this->ForgotPasswordVerificationHomebutton->Click += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordVerificationHomebutton_Click);
-			this->ForgotPasswordVerificationHomebutton->Enter += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordVerificationHomebutton_Enter);
-			this->ForgotPasswordVerificationHomebutton->Leave += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordVerificationHomebutton_Leave);
-			this->ForgotPasswordVerificationHomebutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordVerificationHomebutton_MouseEnter);
-			this->ForgotPasswordVerificationHomebutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordVerificationHomebutton_MouseLeave);
 			// 
 			// ForgotPasswordVerificationBackbutton
 			// 
@@ -1273,10 +1264,6 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordVerificationBackbutton->Text = L"Back";
 			this->ForgotPasswordVerificationBackbutton->UseVisualStyleBackColor = false;
 			this->ForgotPasswordVerificationBackbutton->Click += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordVerificationBackbutton_Click);
-			this->ForgotPasswordVerificationBackbutton->Enter += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordVerificationBackbutton_Enter);
-			this->ForgotPasswordVerificationBackbutton->Leave += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordVerificationBackbutton_Leave);
-			this->ForgotPasswordVerificationBackbutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordVerificationBackbutton_MouseEnter);
-			this->ForgotPasswordVerificationBackbutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordVerificationBackbutton_MouseLeave);
 			// 
 			// ForgotPasswordVerificationNextbutton
 			// 
@@ -1291,10 +1278,6 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordVerificationNextbutton->Text = L"Next";
 			this->ForgotPasswordVerificationNextbutton->UseVisualStyleBackColor = false;
 			this->ForgotPasswordVerificationNextbutton->Click += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordVerificationNextbutton_Click);
-			this->ForgotPasswordVerificationNextbutton->Enter += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordVerificationNextbutton_Enter);
-			this->ForgotPasswordVerificationNextbutton->Leave += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordVerificationNextbutton_Leave);
-			this->ForgotPasswordVerificationNextbutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordVerificationNextbutton_MouseEnter);
-			this->ForgotPasswordVerificationNextbutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordVerificationNextbutton_MouseLeave);
 			// 
 			// ForgotPasswordQuestionradiobutton
 			// 
@@ -1340,6 +1323,7 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			// ForgotPasswordUsernamepanel
 			// 
+			this->ForgotPasswordUsernamepanel->BackColor = System::Drawing::Color::Transparent;
 			this->ForgotPasswordUsernamepanel->Controls->Add(this->ForgotPasswordUsernameErrorlabel);
 			this->ForgotPasswordUsernamepanel->Controls->Add(this->ForgotPasswordHomepictureBox);
 			this->ForgotPasswordUsernamepanel->Controls->Add(this->ForgotPasswordNextpictureBox);
@@ -1369,7 +1353,6 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			// ForgotPasswordHomepictureBox
 			// 
-			this->ForgotPasswordHomepictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ForgotPasswordHomepictureBox.BackgroundImage")));
 			this->ForgotPasswordHomepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ForgotPasswordHomepictureBox->Location = System::Drawing::Point(752, 495);
 			this->ForgotPasswordHomepictureBox->Name = L"ForgotPasswordHomepictureBox";
@@ -1399,28 +1382,25 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			// ForgotPasswordHomebutton
 			// 
-			this->ForgotPasswordHomebutton->BackColor = System::Drawing::Color::Cyan;
+			this->ForgotPasswordHomebutton->BackColor = System::Drawing::Color::Transparent;
 			this->ForgotPasswordHomebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->ForgotPasswordHomebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordHomebutton->Location = System::Drawing::Point(820, 495);
 			this->ForgotPasswordHomebutton->Name = L"ForgotPasswordHomebutton";
-			this->ForgotPasswordHomebutton->Size = System::Drawing::Size(153, 49);
+			this->ForgotPasswordHomebutton->Size = System::Drawing::Size(0, 0);
 			this->ForgotPasswordHomebutton->TabIndex = 5;
-			this->ForgotPasswordHomebutton->Text = L"Login Page";
 			this->ForgotPasswordHomebutton->UseVisualStyleBackColor = false;
 			this->ForgotPasswordHomebutton->Click += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordHomebutton_Click);
-			this->ForgotPasswordHomebutton->Enter += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordHomebutton_Enter);
-			this->ForgotPasswordHomebutton->Leave += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordHomebutton_Leave);
-			this->ForgotPasswordHomebutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordHomebutton_MouseEnter);
-			this->ForgotPasswordHomebutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordHomebutton_MouseLeave);
 			// 
 			// ForgotPasswordNextbutton
 			// 
-			this->ForgotPasswordNextbutton->BackColor = System::Drawing::Color::Cyan;
-			this->ForgotPasswordNextbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->ForgotPasswordNextbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
+			this->ForgotPasswordNextbutton->BackColor = System::Drawing::Color::Transparent;
+			this->ForgotPasswordNextbutton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->ForgotPasswordNextbutton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->ForgotPasswordNextbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)), 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ForgotPasswordNextbutton->ForeColor = System::Drawing::Color::Black;
 			this->ForgotPasswordNextbutton->Location = System::Drawing::Point(553, 309);
 			this->ForgotPasswordNextbutton->Name = L"ForgotPasswordNextbutton";
 			this->ForgotPasswordNextbutton->Size = System::Drawing::Size(147, 47);
@@ -1428,17 +1408,15 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordNextbutton->Text = L"Next";
 			this->ForgotPasswordNextbutton->UseVisualStyleBackColor = false;
 			this->ForgotPasswordNextbutton->Click += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordNextbutton_Click);
-			this->ForgotPasswordNextbutton->Enter += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordNextbutton_Enter);
-			this->ForgotPasswordNextbutton->Leave += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordNextbutton_Leave);
-			this->ForgotPasswordNextbutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordNextbutton_MouseEnter);
-			this->ForgotPasswordNextbutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordNextbutton_MouseLeave);
 			// 
 			// ForgotPasswordBackbutton
 			// 
-			this->ForgotPasswordBackbutton->BackColor = System::Drawing::Color::Cyan;
-			this->ForgotPasswordBackbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->ForgotPasswordBackbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
+			this->ForgotPasswordBackbutton->BackColor = System::Drawing::Color::Transparent;
+			this->ForgotPasswordBackbutton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->ForgotPasswordBackbutton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->ForgotPasswordBackbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)), 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ForgotPasswordBackbutton->ForeColor = System::Drawing::Color::Black;
 			this->ForgotPasswordBackbutton->Location = System::Drawing::Point(308, 309);
 			this->ForgotPasswordBackbutton->Name = L"ForgotPasswordBackbutton";
 			this->ForgotPasswordBackbutton->Size = System::Drawing::Size(156, 47);
@@ -1446,10 +1424,6 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordBackbutton->Text = L"Back";
 			this->ForgotPasswordBackbutton->UseVisualStyleBackColor = false;
 			this->ForgotPasswordBackbutton->Click += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordBackbutton_Click);
-			this->ForgotPasswordBackbutton->Enter += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordBackbutton_Enter);
-			this->ForgotPasswordBackbutton->Leave += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordBackbutton_Leave);
-			this->ForgotPasswordBackbutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordBackbutton_MouseEnter);
-			this->ForgotPasswordBackbutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordBackbutton_MouseLeave);
 			// 
 			// panel2
 			// 
@@ -1471,15 +1445,14 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			// ForgotPasswordUsernametextBox
 			// 
-			this->ForgotPasswordUsernametextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->ForgotPasswordUsernametextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->ForgotPasswordUsernametextBox->BackColor = System::Drawing::Color::White;
+			this->ForgotPasswordUsernametextBox->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->ForgotPasswordUsernametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ForgotPasswordUsernametextBox->ForeColor = System::Drawing::Color::White;
+			this->ForgotPasswordUsernametextBox->ForeColor = System::Drawing::Color::Black;
 			this->ForgotPasswordUsernametextBox->Location = System::Drawing::Point(297, 193);
 			this->ForgotPasswordUsernametextBox->Name = L"ForgotPasswordUsernametextBox";
-			this->ForgotPasswordUsernametextBox->Size = System::Drawing::Size(462, 31);
+			this->ForgotPasswordUsernametextBox->Size = System::Drawing::Size(462, 38);
 			this->ForgotPasswordUsernametextBox->TabIndex = 0;
 			this->ForgotPasswordUsernametextBox->Text = L"Enter Registered Username";
 			this->ForgotPasswordUsernametextBox->Click += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordUsernametextBox_Click);
@@ -1490,10 +1463,11 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// ForgotPasswordHeaderlabel
 			// 
 			this->ForgotPasswordHeaderlabel->AutoSize = true;
+			this->ForgotPasswordHeaderlabel->BackColor = System::Drawing::Color::Transparent;
 			this->ForgotPasswordHeaderlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ForgotPasswordHeaderlabel->ForeColor = System::Drawing::Color::White;
-			this->ForgotPasswordHeaderlabel->Location = System::Drawing::Point(370, 37);
+			this->ForgotPasswordHeaderlabel->ForeColor = System::Drawing::Color::Black;
+			this->ForgotPasswordHeaderlabel->Location = System::Drawing::Point(19, 37);
 			this->ForgotPasswordHeaderlabel->Name = L"ForgotPasswordHeaderlabel";
 			this->ForgotPasswordHeaderlabel->Size = System::Drawing::Size(325, 46);
 			this->ForgotPasswordHeaderlabel->TabIndex = 0;
@@ -1501,14 +1475,13 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			// Registerpanel
 			// 
-			this->Registerpanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->Registerpanel->BackColor = System::Drawing::Color::White;
+			this->Registerpanel->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Registerpanel.BackgroundImage")));
 			this->Registerpanel->Controls->Add(this->RegisterDetailspanel);
 			this->Registerpanel->Controls->Add(this->RegisterVerificationpanel);
 			this->Registerpanel->Controls->Add(this->RegisterHomebutton);
-			this->Registerpanel->Controls->Add(this->RegisterHomepictureBox);
-			this->Registerpanel->Controls->Add(this->ReigsterHeaderpictureBox);
 			this->Registerpanel->Controls->Add(this->RegisterHeaderlabel);
+			this->Registerpanel->Controls->Add(this->RegisterRegisterbutton);
 			this->Registerpanel->Location = System::Drawing::Point(0, 46);
 			this->Registerpanel->Name = L"Registerpanel";
 			this->Registerpanel->Size = System::Drawing::Size(1048, 717);
@@ -1516,6 +1489,8 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			// RegisterDetailspanel
 			// 
+			this->RegisterDetailspanel->BackColor = System::Drawing::Color::Transparent;
+			this->RegisterDetailspanel->Controls->Add(this->pictureBox3);
 			this->RegisterDetailspanel->Controls->Add(this->RegisterpasswordcheckBox);
 			this->RegisterDetailspanel->Controls->Add(this->panel1);
 			this->RegisterDetailspanel->Controls->Add(this->RegisterPasswordpictureBox);
@@ -1528,7 +1503,6 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterDetailspanel->Controls->Add(this->RegisterTeacherpictureBox);
 			this->RegisterDetailspanel->Controls->Add(this->RegisterStudentpictureBox);
 			this->RegisterDetailspanel->Controls->Add(this->RegisterTeacherradioButton);
-			this->RegisterDetailspanel->Controls->Add(this->RegisterRegisterbutton);
 			this->RegisterDetailspanel->Controls->Add(this->RegisterStudentradioButton);
 			this->RegisterDetailspanel->Controls->Add(this->RegisterUsernameDesignpanel);
 			this->RegisterDetailspanel->Controls->Add(this->RegisterEmailtextBox);
@@ -1549,17 +1523,26 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterDetailspanel->TabIndex = 1;
 			this->RegisterDetailspanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &LoginForm::RegisterDetailspanel_Paint);
 			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox3.Image")));
+			this->pictureBox3->Location = System::Drawing::Point(846, 108);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(50, 40);
+			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox3->TabIndex = 28;
+			this->pictureBox3->TabStop = false;
+			// 
 			// RegisterpasswordcheckBox
 			// 
 			this->RegisterpasswordcheckBox->AutoSize = true;
-			this->RegisterpasswordcheckBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterpasswordcheckBox->ForeColor = System::Drawing::Color::White;
+			this->RegisterpasswordcheckBox->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->RegisterpasswordcheckBox->Font = (gcnew System::Drawing::Font(L"Times New Roman", 11));
+			this->RegisterpasswordcheckBox->ForeColor = System::Drawing::Color::Black;
 			this->RegisterpasswordcheckBox->Location = System::Drawing::Point(825, 123);
 			this->RegisterpasswordcheckBox->Name = L"RegisterpasswordcheckBox";
-			this->RegisterpasswordcheckBox->Size = System::Drawing::Size(151, 24);
+			this->RegisterpasswordcheckBox->Size = System::Drawing::Size(15, 14);
 			this->RegisterpasswordcheckBox->TabIndex = 27;
-			this->RegisterpasswordcheckBox->Text = L"Show Password";
 			this->RegisterpasswordcheckBox->UseVisualStyleBackColor = true;
 			this->RegisterpasswordcheckBox->CheckedChanged += gcnew System::EventHandler(this, &LoginForm::RegisterpasswordcheckBox_CheckedChanged);
 			// 
@@ -1577,21 +1560,19 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterPasswordpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->RegisterPasswordpictureBox->Location = System::Drawing::Point(583, 45);
 			this->RegisterPasswordpictureBox->Name = L"RegisterPasswordpictureBox";
-			this->RegisterPasswordpictureBox->Size = System::Drawing::Size(57, 53);
+			this->RegisterPasswordpictureBox->Size = System::Drawing::Size(50, 50);
 			this->RegisterPasswordpictureBox->TabIndex = 25;
 			this->RegisterPasswordpictureBox->TabStop = false;
 			// 
 			// registerPasswordtextBox
 			// 
-			this->registerPasswordtextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->registerPasswordtextBox->BackColor = System::Drawing::Color::CadetBlue;
 			this->registerPasswordtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->registerPasswordtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->registerPasswordtextBox->ForeColor = System::Drawing::Color::White;
+			this->registerPasswordtextBox->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14));
+			this->registerPasswordtextBox->ForeColor = System::Drawing::Color::Black;
 			this->registerPasswordtextBox->Location = System::Drawing::Point(646, 67);
 			this->registerPasswordtextBox->Name = L"registerPasswordtextBox";
-			this->registerPasswordtextBox->Size = System::Drawing::Size(325, 31);
+			this->registerPasswordtextBox->Size = System::Drawing::Size(325, 27);
 			this->registerPasswordtextBox->TabIndex = 24;
 			this->registerPasswordtextBox->Text = L"Password";
 			// 
@@ -1607,35 +1588,34 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->registerSecuritypictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"registerSecuritypictureBox.BackgroundImage")));
 			this->registerSecuritypictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->registerSecuritypictureBox->Location = System::Drawing::Point(22, 395);
+			this->registerSecuritypictureBox->Location = System::Drawing::Point(22, 368);
 			this->registerSecuritypictureBox->Name = L"registerSecuritypictureBox";
-			this->registerSecuritypictureBox->Size = System::Drawing::Size(57, 52);
+			this->registerSecuritypictureBox->Size = System::Drawing::Size(50, 50);
 			this->registerSecuritypictureBox->TabIndex = 22;
 			this->registerSecuritypictureBox->TabStop = false;
 			// 
 			// RegisterSecurityAnswertextBox
 			// 
-			this->RegisterSecurityAnswertextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->RegisterSecurityAnswertextBox->BackColor = System::Drawing::Color::CadetBlue;
 			this->RegisterSecurityAnswertextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->RegisterSecurityAnswertextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterSecurityAnswertextBox->ForeColor = System::Drawing::Color::White;
+			this->RegisterSecurityAnswertextBox->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14));
+			this->RegisterSecurityAnswertextBox->ForeColor = System::Drawing::Color::Black;
 			this->RegisterSecurityAnswertextBox->Location = System::Drawing::Point(85, 416);
 			this->RegisterSecurityAnswertextBox->Name = L"RegisterSecurityAnswertextBox";
-			this->RegisterSecurityAnswertextBox->Size = System::Drawing::Size(473, 31);
+			this->RegisterSecurityAnswertextBox->Size = System::Drawing::Size(473, 27);
 			this->RegisterSecurityAnswertextBox->TabIndex = 21;
 			this->RegisterSecurityAnswertextBox->Text = L"Answer";
 			// 
 			// RegisterSecuritycomboBox
 			// 
-			this->RegisterSecuritycomboBox->BackColor = System::Drawing::Color::Black;
-			this->RegisterSecuritycomboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
+			this->RegisterSecuritycomboBox->BackColor = System::Drawing::Color::CadetBlue;
+			this->RegisterSecuritycomboBox->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->RegisterSecuritycomboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterSecuritycomboBox->ForeColor = System::Drawing::Color::White;
+			this->RegisterSecuritycomboBox->ForeColor = System::Drawing::Color::Black;
 			this->RegisterSecuritycomboBox->Location = System::Drawing::Point(85, 354);
 			this->RegisterSecuritycomboBox->Name = L"RegisterSecuritycomboBox";
-			this->RegisterSecuritycomboBox->Size = System::Drawing::Size(821, 33);
+			this->RegisterSecuritycomboBox->Size = System::Drawing::Size(821, 30);
 			this->RegisterSecuritycomboBox->Sorted = true;
 			this->RegisterSecuritycomboBox->TabIndex = 20;
 			this->RegisterSecuritycomboBox->Text = L"Security Question";
@@ -1675,45 +1655,28 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// RegisterTeacherradioButton
 			// 
 			this->RegisterTeacherradioButton->AutoSize = true;
+			this->RegisterTeacherradioButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->RegisterTeacherradioButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterTeacherradioButton->ForeColor = System::Drawing::Color::White;
+			this->RegisterTeacherradioButton->ForeColor = System::Drawing::Color::Black;
 			this->RegisterTeacherradioButton->Location = System::Drawing::Point(351, 511);
 			this->RegisterTeacherradioButton->Name = L"RegisterTeacherradioButton";
-			this->RegisterTeacherradioButton->Size = System::Drawing::Size(138, 33);
+			this->RegisterTeacherradioButton->Size = System::Drawing::Size(137, 33);
 			this->RegisterTeacherradioButton->TabIndex = 16;
 			this->RegisterTeacherradioButton->TabStop = true;
 			this->RegisterTeacherradioButton->Text = L"Professor";
 			this->RegisterTeacherradioButton->UseVisualStyleBackColor = true;
 			// 
-			// RegisterRegisterbutton
-			// 
-			this->RegisterRegisterbutton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->RegisterRegisterbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->RegisterRegisterbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterRegisterbutton->Location = System::Drawing::Point(843, 492);
-			this->RegisterRegisterbutton->Name = L"RegisterRegisterbutton";
-			this->RegisterRegisterbutton->Size = System::Drawing::Size(133, 54);
-			this->RegisterRegisterbutton->TabIndex = 15;
-			this->RegisterRegisterbutton->Text = L"Register";
-			this->RegisterRegisterbutton->UseVisualStyleBackColor = false;
-			this->RegisterRegisterbutton->Click += gcnew System::EventHandler(this, &LoginForm::RegisterRegisterbutton_Click);
-			this->RegisterRegisterbutton->Enter += gcnew System::EventHandler(this, &LoginForm::RegisterRegisterbutton_Enter);
-			this->RegisterRegisterbutton->Leave += gcnew System::EventHandler(this, &LoginForm::RegisterRegisterbutton_Leave);
-			this->RegisterRegisterbutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::RegisterRegisterbutton_MouseEnter);
-			this->RegisterRegisterbutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::RegisterRegisterbutton_MouseLeave);
-			// 
 			// RegisterStudentradioButton
 			// 
 			this->RegisterStudentradioButton->AutoSize = true;
+			this->RegisterStudentradioButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->RegisterStudentradioButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterStudentradioButton->ForeColor = System::Drawing::Color::White;
+			this->RegisterStudentradioButton->ForeColor = System::Drawing::Color::Black;
 			this->RegisterStudentradioButton->Location = System::Drawing::Point(22, 511);
 			this->RegisterStudentradioButton->Name = L"RegisterStudentradioButton";
-			this->RegisterStudentradioButton->Size = System::Drawing::Size(116, 33);
+			this->RegisterStudentradioButton->Size = System::Drawing::Size(115, 33);
 			this->RegisterStudentradioButton->TabIndex = 13;
 			this->RegisterStudentradioButton->TabStop = true;
 			this->RegisterStudentradioButton->Text = L"Student";
@@ -1729,15 +1692,13 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			// RegisterEmailtextBox
 			// 
-			this->RegisterEmailtextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->RegisterEmailtextBox->BackColor = System::Drawing::Color::CadetBlue;
 			this->RegisterEmailtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->RegisterEmailtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterEmailtextBox->ForeColor = System::Drawing::Color::White;
+			this->RegisterEmailtextBox->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14));
+			this->RegisterEmailtextBox->ForeColor = System::Drawing::Color::Black;
 			this->RegisterEmailtextBox->Location = System::Drawing::Point(86, 301);
 			this->RegisterEmailtextBox->Name = L"RegisterEmailtextBox";
-			this->RegisterEmailtextBox->Size = System::Drawing::Size(473, 31);
+			this->RegisterEmailtextBox->Size = System::Drawing::Size(377, 27);
 			this->RegisterEmailtextBox->TabIndex = 9;
 			this->RegisterEmailtextBox->Text = L"Email";
 			this->RegisterEmailtextBox->Click += gcnew System::EventHandler(this, &LoginForm::RegisterEmailtextBox_Click);
@@ -1747,7 +1708,7 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->Registertypelabel->AutoSize = true;
 			this->Registertypelabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->Registertypelabel->ForeColor = System::Drawing::Color::White;
+			this->Registertypelabel->ForeColor = System::Drawing::Color::Black;
 			this->Registertypelabel->Location = System::Drawing::Point(16, 453);
 			this->Registertypelabel->Name = L"Registertypelabel";
 			this->Registertypelabel->Size = System::Drawing::Size(179, 32);
@@ -1760,7 +1721,7 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterUsernamepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->RegisterUsernamepictureBox->Location = System::Drawing::Point(22, 45);
 			this->RegisterUsernamepictureBox->Name = L"RegisterUsernamepictureBox";
-			this->RegisterUsernamepictureBox->Size = System::Drawing::Size(57, 53);
+			this->RegisterUsernamepictureBox->Size = System::Drawing::Size(50, 50);
 			this->RegisterUsernamepictureBox->TabIndex = 10;
 			this->RegisterUsernamepictureBox->TabStop = false;
 			// 
@@ -1778,21 +1739,19 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterEmailpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->RegisterEmailpictureBox->Location = System::Drawing::Point(22, 279);
 			this->RegisterEmailpictureBox->Name = L"RegisterEmailpictureBox";
-			this->RegisterEmailpictureBox->Size = System::Drawing::Size(57, 53);
+			this->RegisterEmailpictureBox->Size = System::Drawing::Size(50, 50);
 			this->RegisterEmailpictureBox->TabIndex = 7;
 			this->RegisterEmailpictureBox->TabStop = false;
 			// 
 			// RegisterLastNametextBox
 			// 
-			this->RegisterLastNametextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->RegisterLastNametextBox->BackColor = System::Drawing::Color::CadetBlue;
 			this->RegisterLastNametextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->RegisterLastNametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterLastNametextBox->ForeColor = System::Drawing::Color::White;
+			this->RegisterLastNametextBox->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14));
+			this->RegisterLastNametextBox->ForeColor = System::Drawing::Color::Black;
 			this->RegisterLastNametextBox->Location = System::Drawing::Point(86, 225);
 			this->RegisterLastNametextBox->Name = L"RegisterLastNametextBox";
-			this->RegisterLastNametextBox->Size = System::Drawing::Size(473, 31);
+			this->RegisterLastNametextBox->Size = System::Drawing::Size(275, 27);
 			this->RegisterLastNametextBox->TabIndex = 6;
 			this->RegisterLastNametextBox->Text = L"Last Name (Optional)";
 			this->RegisterLastNametextBox->Click += gcnew System::EventHandler(this, &LoginForm::RegisterLastNametextBox_Click);
@@ -1811,21 +1770,19 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterLastNamepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->RegisterLastNamepictureBox->Location = System::Drawing::Point(22, 203);
 			this->RegisterLastNamepictureBox->Name = L"RegisterLastNamepictureBox";
-			this->RegisterLastNamepictureBox->Size = System::Drawing::Size(57, 53);
+			this->RegisterLastNamepictureBox->Size = System::Drawing::Size(50, 50);
 			this->RegisterLastNamepictureBox->TabIndex = 4;
 			this->RegisterLastNamepictureBox->TabStop = false;
 			// 
 			// RegisterFirstNametextBox
 			// 
-			this->RegisterFirstNametextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->RegisterFirstNametextBox->BackColor = System::Drawing::Color::CadetBlue;
 			this->RegisterFirstNametextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->RegisterFirstNametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterFirstNametextBox->ForeColor = System::Drawing::Color::White;
+			this->RegisterFirstNametextBox->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14));
+			this->RegisterFirstNametextBox->ForeColor = System::Drawing::Color::Black;
 			this->RegisterFirstNametextBox->Location = System::Drawing::Point(85, 148);
 			this->RegisterFirstNametextBox->Name = L"RegisterFirstNametextBox";
-			this->RegisterFirstNametextBox->Size = System::Drawing::Size(473, 31);
+			this->RegisterFirstNametextBox->Size = System::Drawing::Size(276, 27);
 			this->RegisterFirstNametextBox->TabIndex = 3;
 			this->RegisterFirstNametextBox->Text = L"First Name";
 			this->RegisterFirstNametextBox->Click += gcnew System::EventHandler(this, &LoginForm::RegisterFirstNametextBox_Click);
@@ -1844,22 +1801,19 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterFirstNamepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->RegisterFirstNamepictureBox->Location = System::Drawing::Point(22, 126);
 			this->RegisterFirstNamepictureBox->Name = L"RegisterFirstNamepictureBox";
-			this->RegisterFirstNamepictureBox->Size = System::Drawing::Size(57, 53);
+			this->RegisterFirstNamepictureBox->Size = System::Drawing::Size(50, 50);
 			this->RegisterFirstNamepictureBox->TabIndex = 1;
 			this->RegisterFirstNamepictureBox->TabStop = false;
-			this->RegisterFirstNamepictureBox->Click += gcnew System::EventHandler(this, &LoginForm::pictureBox3_Click_1);
 			// 
 			// RegisterUsernametextBox
 			// 
-			this->RegisterUsernametextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->RegisterUsernametextBox->BackColor = System::Drawing::Color::CadetBlue;
 			this->RegisterUsernametextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->RegisterUsernametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterUsernametextBox->ForeColor = System::Drawing::Color::White;
+			this->RegisterUsernametextBox->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14));
+			this->RegisterUsernametextBox->ForeColor = System::Drawing::Color::Black;
 			this->RegisterUsernametextBox->Location = System::Drawing::Point(85, 67);
 			this->RegisterUsernametextBox->Name = L"RegisterUsernametextBox";
-			this->RegisterUsernametextBox->Size = System::Drawing::Size(325, 31);
+			this->RegisterUsernametextBox->Size = System::Drawing::Size(237, 27);
 			this->RegisterUsernametextBox->TabIndex = 0;
 			this->RegisterUsernametextBox->Text = L"Username";
 			this->RegisterUsernametextBox->Click += gcnew System::EventHandler(this, &LoginForm::RegisterUsernametextBox_Click);
@@ -1895,10 +1849,6 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterVerificationResendbutton->Text = L"Resend";
 			this->RegisterVerificationResendbutton->UseVisualStyleBackColor = false;
 			this->RegisterVerificationResendbutton->Click += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationResendbutton_Click);
-			this->RegisterVerificationResendbutton->Enter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationResendbutton_Enter);
-			this->RegisterVerificationResendbutton->Leave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationResendbutton_Leave);
-			this->RegisterVerificationResendbutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationResendbutton_MouseEnter);
-			this->RegisterVerificationResendbutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationResendbutton_MouseLeave);
 			// 
 			// RegisterVerificationVerifybutton
 			// 
@@ -1913,10 +1863,6 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterVerificationVerifybutton->Text = L"Verify";
 			this->RegisterVerificationVerifybutton->UseVisualStyleBackColor = false;
 			this->RegisterVerificationVerifybutton->Click += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationVerifybutton_Click);
-			this->RegisterVerificationVerifybutton->Enter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationVerifybutton_Enter);
-			this->RegisterVerificationVerifybutton->Leave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationVerifybutton_Leave);
-			this->RegisterVerificationVerifybutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationVerifybutton_MouseEnter);
-			this->RegisterVerificationVerifybutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationVerifybutton_MouseLeave);
 			// 
 			// RegisterVerificationStatuslabel
 			// 
@@ -1943,10 +1889,6 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterVerificationBackbutton->Text = L"Back";
 			this->RegisterVerificationBackbutton->UseVisualStyleBackColor = false;
 			this->RegisterVerificationBackbutton->Click += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationBackbutton_Click);
-			this->RegisterVerificationBackbutton->Enter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationBackbutton_Enter);
-			this->RegisterVerificationBackbutton->Leave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationBackbutton_Leave);
-			this->RegisterVerificationBackbutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationBackbutton_MouseEnter);
-			this->RegisterVerificationBackbutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationBackbutton_MouseLeave);
 			// 
 			// RegisterVerificationDesignpanel
 			// 
@@ -2008,58 +1950,54 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			// RegisterHomebutton
 			// 
-			this->RegisterHomebutton->BackColor = System::Drawing::Color::Cyan;
+			this->RegisterHomebutton->BackColor = System::Drawing::Color::Transparent;
+			this->RegisterHomebutton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->RegisterHomebutton->FlatAppearance->BorderSize = 0;
 			this->RegisterHomebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->RegisterHomebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->RegisterHomebutton->Location = System::Drawing::Point(855, 645);
+			this->RegisterHomebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Underline, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->RegisterHomebutton->ForeColor = System::Drawing::Color::White;
+			this->RegisterHomebutton->Location = System::Drawing::Point(825, 3);
 			this->RegisterHomebutton->Name = L"RegisterHomebutton";
 			this->RegisterHomebutton->Size = System::Drawing::Size(148, 59);
 			this->RegisterHomebutton->TabIndex = 16;
 			this->RegisterHomebutton->Text = L"Login Page";
 			this->RegisterHomebutton->UseVisualStyleBackColor = false;
 			this->RegisterHomebutton->Click += gcnew System::EventHandler(this, &LoginForm::RegisterHomebutton_Click);
-			this->RegisterHomebutton->Enter += gcnew System::EventHandler(this, &LoginForm::RegisterHomebutton_Enter);
-			this->RegisterHomebutton->Leave += gcnew System::EventHandler(this, &LoginForm::RegisterHomebutton_Leave);
-			this->RegisterHomebutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::RegisterHomebutton_MouseEnter);
-			this->RegisterHomebutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::RegisterHomebutton_MouseLeave);
-			// 
-			// RegisterHomepictureBox
-			// 
-			this->RegisterHomepictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"RegisterHomepictureBox.BackgroundImage")));
-			this->RegisterHomepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->RegisterHomepictureBox->Location = System::Drawing::Point(785, 644);
-			this->RegisterHomepictureBox->Name = L"RegisterHomepictureBox";
-			this->RegisterHomepictureBox->Size = System::Drawing::Size(64, 61);
-			this->RegisterHomepictureBox->TabIndex = 4;
-			this->RegisterHomepictureBox->TabStop = false;
-			// 
-			// ReigsterHeaderpictureBox
-			// 
-			this->ReigsterHeaderpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ReigsterHeaderpictureBox.BackgroundImage")));
-			this->ReigsterHeaderpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ReigsterHeaderpictureBox->Location = System::Drawing::Point(49, 3);
-			this->ReigsterHeaderpictureBox->Name = L"ReigsterHeaderpictureBox";
-			this->ReigsterHeaderpictureBox->Size = System::Drawing::Size(82, 69);
-			this->ReigsterHeaderpictureBox->TabIndex = 2;
-			this->ReigsterHeaderpictureBox->TabStop = false;
 			// 
 			// RegisterHeaderlabel
 			// 
 			this->RegisterHeaderlabel->AutoSize = true;
-			this->RegisterHeaderlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterHeaderlabel->ForeColor = System::Drawing::Color::White;
-			this->RegisterHeaderlabel->Location = System::Drawing::Point(137, 14);
+			this->RegisterHeaderlabel->BackColor = System::Drawing::Color::Transparent;
+			this->RegisterHeaderlabel->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->RegisterHeaderlabel->ForeColor = System::Drawing::Color::PeachPuff;
+			this->RegisterHeaderlabel->Location = System::Drawing::Point(18, 14);
 			this->RegisterHeaderlabel->Name = L"RegisterHeaderlabel";
-			this->RegisterHeaderlabel->Size = System::Drawing::Size(161, 44);
+			this->RegisterHeaderlabel->Size = System::Drawing::Size(159, 53);
 			this->RegisterHeaderlabel->TabIndex = 0;
 			this->RegisterHeaderlabel->Text = L"Sign Up";
 			// 
+			// RegisterRegisterbutton
+			// 
+			this->RegisterRegisterbutton->BackColor = System::Drawing::Color::White;
+			this->RegisterRegisterbutton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->RegisterRegisterbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->RegisterRegisterbutton->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->RegisterRegisterbutton->ForeColor = System::Drawing::Color::Black;
+			this->RegisterRegisterbutton->Location = System::Drawing::Point(49, 640);
+			this->RegisterRegisterbutton->Name = L"RegisterRegisterbutton";
+			this->RegisterRegisterbutton->Size = System::Drawing::Size(133, 54);
+			this->RegisterRegisterbutton->TabIndex = 15;
+			this->RegisterRegisterbutton->Text = L"Register";
+			this->RegisterRegisterbutton->UseVisualStyleBackColor = false;
+			this->RegisterRegisterbutton->Click += gcnew System::EventHandler(this, &LoginForm::RegisterRegisterbutton_Click);
+			// 
 			// LoginForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackColor = System::Drawing::Color::White;
 			this->ClientSize = System::Drawing::Size(1048, 763);
 			this->Controls->Add(this->Registerpanel);
 			this->Controls->Add(this->ForgotPasswordpanel);
@@ -2073,18 +2011,15 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->headerpanel->ResumeLayout(false);
 			this->loginpanel->ResumeLayout(false);
 			this->loginpanel->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->LoginpictureBox))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ForgotPasswordPicturebox))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PasswordPictureBox))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->Usernamepicturebox))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->LogoPicturebox))->EndInit();
 			this->ForgotPasswordpanel->ResumeLayout(false);
 			this->ForgotPasswordpanel->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ChangePasswordHomepictureBox))->EndInit();
 			this->ChangePasswordpanel->ResumeLayout(false);
 			this->ChangePasswordpanel->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ChangePasswordHomepictureBox))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ChangePasswordConfirmPasswordpictureBox))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ChangePasswordNewPasswordpictureBox))->EndInit();
 			this->ForgotPasswordVerificationpanel->ResumeLayout(false);
@@ -2111,6 +2046,7 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->Registerpanel->PerformLayout();
 			this->RegisterDetailspanel->ResumeLayout(false);
 			this->RegisterDetailspanel->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterPasswordpictureBox))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->registerSecuritypictureBox))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterTeacherpictureBox))->EndInit();
@@ -2122,8 +2058,6 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterVerificationpanel->ResumeLayout(false);
 			this->RegisterVerificationpanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterVerificationpictureBox))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterHomepictureBox))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ReigsterHeaderpictureBox))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -2177,8 +2111,7 @@ private: System::Void ChangePasswordcheckBox_CheckedChanged(System::Object^  sen
 				 ChangePasswordConfirmPasswordtextBox->PasswordChar = '*';
 			 }
 }
-private: System::Void pictureBox3_Click_1(System::Object^  sender, System::EventArgs^  e) {
-}
+
 private: System::Void closebutton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 this->Close();
 }
@@ -3168,211 +3101,213 @@ private: System::Void ForgotPasswordUsernametextBox_MouseLeave(System::Object^  
 				ForgotPasswordUsernametextBox->Text="Enter Registered Username";
 			 }
 		 }
-private: System::Void LoginButton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 LoginButton->BackColor=Color::LightYellow;
-		 }
-private: System::Void LoginButton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 LoginButton->BackColor=Color::Cyan;
-		 }
-private: System::Void ForgotPasswordButton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordButton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ForgotPasswordButton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordButton->BackColor=Color::Cyan;
-		 }
-private: System::Void RegisterButton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterButton->BackColor=Color::LightYellow;
-		 }
-private: System::Void RegisterButton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterButton->BackColor=Color::Cyan;
-		 }
-private: System::Void GuestLoginButton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 GuestLoginButton->BackColor=Color::LightYellow;
-		 }
-private: System::Void GuestLoginButton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-		 GuestLoginButton->BackColor=Color::Cyan;
-		 }
-private: System::Void LoginButton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 LoginButton->BackColor=Color::LightYellow;
-		 }
-private: System::Void LoginButton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 LoginButton->BackColor=Color::Cyan;
-		 }
-private: System::Void ForgotPasswordButton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordButton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ForgotPasswordButton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordButton->BackColor=Color::Cyan;
-		 }
-private: System::Void RegisterButton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterButton->BackColor=Color::LightYellow;
-		 }
-private: System::Void RegisterButton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterButton->BackColor=Color::Cyan;
-		 }
-private: System::Void GuestLoginButton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 GuestLoginButton->BackColor=Color::LightYellow;
-		 }
-private: System::Void GuestLoginButton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 GuestLoginButton->BackColor=Color::Cyan;
-		 }
-private: System::Void ForgotPasswordBackbutton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordBackbutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ForgotPasswordBackbutton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordBackbutton->BackColor=Color::Cyan;
-		 }
-private: System::Void ForgotPasswordBackbutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordBackbutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ForgotPasswordBackbutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordBackbutton->BackColor=Color::Cyan;
-		 }
-private: System::Void ForgotPasswordNextbutton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordNextbutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ForgotPasswordNextbutton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordNextbutton->BackColor=Color::Cyan;
-		 }
-private: System::Void ForgotPasswordNextbutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordNextbutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ForgotPasswordNextbutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordNextbutton->BackColor=Color::Cyan;
-		 }
-private: System::Void ForgotPasswordHomebutton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordHomebutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ForgotPasswordHomebutton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordHomebutton->BackColor=Color::Cyan;
-		 }
-private: System::Void ForgotPasswordHomebutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordHomebutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ForgotPasswordHomebutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordHomebutton->BackColor=Color::Cyan;
-		 }
-
-private: System::Void ForgotPasswordVerificationBackbutton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordVerificationBackbutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ForgotPasswordVerificationBackbutton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordVerificationBackbutton->BackColor=Color::Cyan;
-		 }
-private: System::Void ForgotPasswordVerificationBackbutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordVerificationBackbutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ForgotPasswordVerificationBackbutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordVerificationBackbutton->BackColor=Color::Cyan;
-		 }
-private: System::Void ForgotPasswordVerificationNextbutton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordVerificationNextbutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ForgotPasswordVerificationNextbutton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordVerificationNextbutton->BackColor=Color::Cyan;
-		 }
-private: System::Void ForgotPasswordVerificationNextbutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordVerificationNextbutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ForgotPasswordVerificationNextbutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordVerificationNextbutton->BackColor=Color::Cyan;
-		 }
-private: System::Void ForgotPasswordVerificationHomebutton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordVerificationHomebutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ForgotPasswordVerificationHomebutton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordVerificationHomebutton->BackColor=Color::Cyan;
-		 }
-private: System::Void ForgotPasswordVerificationHomebutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordVerificationHomebutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ForgotPasswordVerificationHomebutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 ForgotPasswordVerificationHomebutton->BackColor=Color::Cyan;
-		 }
-private: System::Void PasswordChangeChangebutton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 PasswordChangeChangebutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void PasswordChangeChangebutton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 PasswordChangeChangebutton->BackColor=Color::Cyan;
-		 }
-private: System::Void PasswordChangeChangebutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 PasswordChangeChangebutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void PasswordChangeChangebutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 PasswordChangeChangebutton->BackColor=Color::Cyan;
-		 }
-private: System::Void ChangePasswordHomebutton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 ChangePasswordHomebutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ChangePasswordHomebutton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 ChangePasswordHomebutton->BackColor=Color::Cyan;
-		 }
-private: System::Void ChangePasswordHomebutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 ChangePasswordHomebutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void ChangePasswordHomebutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 ChangePasswordHomebutton->BackColor=Color::Cyan;
-		 }
-private: System::Void RegisterRegisterbutton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterRegisterbutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void RegisterRegisterbutton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterRegisterbutton->BackColor=Color::Cyan;
-		 }
-private: System::Void RegisterHomebutton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterHomebutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void RegisterHomebutton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterHomebutton->BackColor=Color::Cyan;
-		 }
-private: System::Void RegisterHomebutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterHomebutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void RegisterHomebutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterHomebutton->BackColor=Color::Cyan;
-		 }
-private: System::Void RegisterRegisterbutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterRegisterbutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void RegisterRegisterbutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterRegisterbutton->BackColor=Color::Cyan;
-		 }
-private: System::Void RegisterVerificationBackbutton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterVerificationBackbutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void RegisterVerificationBackbutton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterVerificationBackbutton->BackColor=Color::Cyan;
-		 }
-
-private: System::Void RegisterVerificationBackbutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterVerificationBackbutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void RegisterVerificationBackbutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterVerificationBackbutton->BackColor=Color::Cyan;
-		 }
-private: System::Void RegisterVerificationVerifybutton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterVerificationVerifybutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void RegisterVerificationVerifybutton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterVerificationVerifybutton->BackColor=Color::Cyan;
-		 }
-private: System::Void RegisterVerificationVerifybutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterVerificationVerifybutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void RegisterVerificationVerifybutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterVerificationVerifybutton->BackColor=Color::Cyan;
-		 }
-private: System::Void RegisterVerificationResendbutton_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterVerificationResendbutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void RegisterVerificationResendbutton_Leave(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterVerificationResendbutton->BackColor=Color::Cyan;
-		 }
-private: System::Void RegisterVerificationResendbutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterVerificationResendbutton->BackColor=Color::LightYellow;
-		 }
-private: System::Void RegisterVerificationResendbutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-			 RegisterVerificationResendbutton->BackColor=Color::Cyan;
-		 }
+//private: System::Void LoginButton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 LoginButton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void LoginButton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 LoginButton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void ForgotPasswordButton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordButton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ForgotPasswordButton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordButton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void RegisterButton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterButton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void RegisterButton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterButton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void GuestLoginButton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 GuestLoginButton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void GuestLoginButton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//		 GuestLoginButton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void LoginButton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 LoginButton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void LoginButton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 LoginButton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void ForgotPasswordButton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordButton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ForgotPasswordButton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordButton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void RegisterButton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterButton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void RegisterButton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterButton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void GuestLoginButton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 GuestLoginButton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void GuestLoginButton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 GuestLoginButton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void ForgotPasswordBackbutton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordBackbutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ForgotPasswordBackbutton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordBackbutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void ForgotPasswordBackbutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordBackbutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ForgotPasswordBackbutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordBackbutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void ForgotPasswordNextbutton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordNextbutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ForgotPasswordNextbutton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordNextbutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void ForgotPasswordNextbutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordNextbutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ForgotPasswordNextbutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordNextbutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void ForgotPasswordHomebutton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordHomebutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ForgotPasswordHomebutton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordHomebutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void ForgotPasswordHomebutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordHomebutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ForgotPasswordHomebutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordHomebutton->BackColor=Color::Cyan;
+//		 }
+//
+//private: System::Void ForgotPasswordVerificationBackbutton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordVerificationBackbutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ForgotPasswordVerificationBackbutton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordVerificationBackbutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void ForgotPasswordVerificationBackbutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordVerificationBackbutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ForgotPasswordVerificationBackbutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordVerificationBackbutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void ForgotPasswordVerificationNextbutton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordVerificationNextbutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ForgotPasswordVerificationNextbutton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordVerificationNextbutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void ForgotPasswordVerificationNextbutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordVerificationNextbutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ForgotPasswordVerificationNextbutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordVerificationNextbutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void ForgotPasswordVerificationHomebutton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordVerificationHomebutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ForgotPasswordVerificationHomebutton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordVerificationHomebutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void ForgotPasswordVerificationHomebutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordVerificationHomebutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ForgotPasswordVerificationHomebutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 ForgotPasswordVerificationHomebutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void PasswordChangeChangebutton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 PasswordChangeChangebutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void PasswordChangeChangebutton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 PasswordChangeChangebutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void PasswordChangeChangebutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 PasswordChangeChangebutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void PasswordChangeChangebutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 PasswordChangeChangebutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void ChangePasswordHomebutton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 ChangePasswordHomebutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ChangePasswordHomebutton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 ChangePasswordHomebutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void ChangePasswordHomebutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 ChangePasswordHomebutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void ChangePasswordHomebutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 ChangePasswordHomebutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void RegisterRegisterbutton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterRegisterbutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void RegisterRegisterbutton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterRegisterbutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void RegisterHomebutton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterHomebutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void RegisterHomebutton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterHomebutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void RegisterHomebutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterHomebutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void RegisterHomebutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterHomebutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void RegisterRegisterbutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterRegisterbutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void RegisterRegisterbutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterRegisterbutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void RegisterVerificationBackbutton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterVerificationBackbutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void RegisterVerificationBackbutton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterVerificationBackbutton->BackColor=Color::Cyan;
+//		 }
+//
+//private: System::Void RegisterVerificationBackbutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterVerificationBackbutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void RegisterVerificationBackbutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterVerificationBackbutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void RegisterVerificationVerifybutton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterVerificationVerifybutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void RegisterVerificationVerifybutton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterVerificationVerifybutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void RegisterVerificationVerifybutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterVerificationVerifybutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void RegisterVerificationVerifybutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterVerificationVerifybutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void RegisterVerificationResendbutton_Enter(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterVerificationResendbutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void RegisterVerificationResendbutton_Leave(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterVerificationResendbutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void RegisterVerificationResendbutton_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterVerificationResendbutton->BackColor=Color::LightYellow;
+//		 }
+//private: System::Void RegisterVerificationResendbutton_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+//			 RegisterVerificationResendbutton->BackColor=Color::Cyan;
+//		 }
+//private: System::Void RegisterHeaderlabel_Click(System::Object^  sender, System::EventArgs^  e) {
+//		 }
 };
 }

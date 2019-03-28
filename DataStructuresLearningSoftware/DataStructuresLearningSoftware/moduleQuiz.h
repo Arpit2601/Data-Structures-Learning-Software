@@ -81,8 +81,8 @@ namespace DataStructuresLearningSoftware {
 		}
 #pragma endregion
 
-	public: String ^username;
-			int ds_id, numQuestions, questionId, module_id;
+	public: String ^username, ^update_name;
+			int ds_id, numQuestions, questionId, module_id, update_id;
 			System::Collections::Generic::List<String ^> questionList;
 			System::Collections::Generic::List<String ^> optionAList;
 			System::Collections::Generic::List<String ^> optionBList;
@@ -120,7 +120,7 @@ namespace DataStructuresLearningSoftware {
 				 srand((unsigned int)time(0));
 
 				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
-				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 
 				 DB_Connection->Open();
 				 String ^ readString = "SELECT * FROM Quizzes WHERE DataStructureID="+ds_id+" AND ModuleID="+module_id;
@@ -138,6 +138,11 @@ namespace DataStructuresLearningSoftware {
 					 answerBList.Add(reader->GetBoolean(8));
 					 answerCList.Add(reader->GetBoolean(9));
 					 answerDList.Add(reader->GetBoolean(10));
+				 }
+
+				 if(questionList.Count == 0){
+					 MessageBox::Show("There are no questions available for this module.");
+					 return;
 				 }
 
 				 while(questionList.Count > numQuestions){
@@ -313,7 +318,7 @@ namespace DataStructuresLearningSoftware {
 				srand((unsigned int)time(0));
 
 				OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
-				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 
 				DB_Connection->Open();
 				String ^ readString = "SELECT * FROM Quizzes WHERE DataStructureID="+ds_id+" AND ModuleID="+module_id;
@@ -537,22 +542,28 @@ namespace DataStructuresLearningSoftware {
 					int modulesCompleted;
 
 					OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
-					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+					DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 
 					DB_Connection->Open();
 					String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
 					OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
 					OleDbDataReader ^ reader = cmd->ExecuteReader();
 					if(reader->Read()){
-						modulesCompleted = reader->GetInt32(11);
+						modulesCompleted = reader->GetInt32(update_id);
 					}
 
 					modulesCompleted++;
-					String ^updateString = "UPDATE Users SET SearchingProgress = " + modulesCompleted + " WHERE UserName='" + username + "'";
+					String ^updateString = "UPDATE Users SET " + update_name +" = " + modulesCompleted + " WHERE UserName='" + username + "'";
 					OleDb::OleDbCommand ^command = gcnew OleDb::OleDbCommand(updateString, DB_Connection);
 					command->ExecuteScalar();
 					DB_Connection->Close();
 
+
+					// Refresh page
+
+					if(update_id == 12){
+						
+					}
 				}
 				else{
 					newLabel->Text = "Your answer is incorrect. Please try again.";

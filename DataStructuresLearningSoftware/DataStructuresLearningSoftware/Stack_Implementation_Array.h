@@ -37,6 +37,7 @@ namespace DataStructuresLearningSoftware {
 		}
 	private: System::Windows::Forms::RichTextBox^  richTextBox1;
 	private: System::Windows::Forms::Label^  label1;
+
 	protected: 
 
 	private:
@@ -59,10 +60,10 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// richTextBox1
 			// 
-			this->richTextBox1->BackColor = System::Drawing::Color::White;
-			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->richTextBox1->Cursor = System::Windows::Forms::Cursors::Default;
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
+			this->richTextBox1->BackColor = System::Drawing::Color::Bisque;
+			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->richTextBox1->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Bookman Old Style", 10.1F));
 			this->richTextBox1->Location = System::Drawing::Point(52, 68);
 			this->richTextBox1->Margin = System::Windows::Forms::Padding(4);
 			this->richTextBox1->Name = L"richTextBox1";
@@ -85,9 +86,8 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// Stack_Implementation_Array
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackColor = System::Drawing::Color::White;
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->richTextBox1);
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);

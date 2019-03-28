@@ -9,6 +9,8 @@
 #include "A_and_LL.h"	// Start with Form1
 #include "LoginForm.h"
 #include "Homepage.h"
+#include "Arrays.h"
+#include "LinkedList1.h"
 #include "stdafx.h"
 #using <system.windows.forms.dll>
 #using <Microsoft.VisualBasic.dll>
@@ -25,10 +27,6 @@ int main(array<System::String ^> ^args)
 	Application::SetCompatibleTextRenderingDefault(false); 
 
 	// Create the main window and run it
-
-	Application::Run(gcnew LoginForm());
-
-	Application::Run(gcnew Form1());
-
+	Application::Run(gcnew Queue_Home());
 	return 0;
 }

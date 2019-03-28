@@ -1,5 +1,7 @@
 #pragma once
 
+#include "moduleQuiz.h"
+
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -35,12 +37,12 @@ namespace DataStructuresLearningSoftware {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::PictureBox^  pictureBox1;
+
 	protected: 
-	private: System::Windows::Forms::Label^  label4;
+
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label1;
-	private: System::Windows::Forms::Label^  label3;
+
 
 	private: System::Windows::Forms::Label^  label6;
 	private: System::Windows::Forms::Button^  button5;
@@ -59,14 +61,14 @@ namespace DataStructuresLearningSoftware {
 
 	private: System::Windows::Forms::Panel^  panel1;
 
-	private: System::Windows::Forms::Label^  label8;
-	private: System::Windows::Forms::Label^  label7;
-	private: System::Windows::Forms::Label^  label17;
-	private: System::Windows::Forms::Label^  label16;
-	private: System::Windows::Forms::Label^  label15;
-	private: System::Windows::Forms::Label^  label14;
-	private: System::Windows::Forms::Label^  label13;
-	private: System::Windows::Forms::Label^  label5;
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Label^  label23;
 	private: System::Windows::Forms::Panel^  quizPanel;
 	private: System::Windows::Forms::Label^  label24;
@@ -83,6 +85,38 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Timer^  timer1;
 	private: System::Windows::Forms::Timer^  timer2;
 	private: System::Windows::Forms::Timer^  timer3;
+
+
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::Label^  label8;
+	private: System::Windows::Forms::Label^  label13;
+	private: System::Windows::Forms::Label^  label14;
+	private: System::Windows::Forms::Label^  label15;
+	private: System::Windows::Forms::Label^  label16;
+	private: System::Windows::Forms::Label^  label17;
+	private: System::Windows::Forms::Label^  label25;
+	private: System::Windows::Forms::Label^  label26;
+	private: System::Windows::Forms::Label^  label27;
+	private: System::Windows::Forms::Label^  label28;
+	private: System::Windows::Forms::Label^  label29;
+	private: System::Windows::Forms::Label^  label30;
+	private: System::Windows::Forms::Label^  label31;
+	private: System::Windows::Forms::Label^  label32;
+	private: System::Windows::Forms::Label^  label33;
+	private: System::Windows::Forms::Label^  label34;
+	private: System::Windows::Forms::Label^  label35;
+	private: System::Windows::Forms::Label^  label36;
+	private: System::Windows::Forms::Label^  label37;
+	private: System::Windows::Forms::Label^  label38;
+	private: System::Windows::Forms::Label^  label39;
+	private: System::Windows::Forms::Label^  label40;
+	private: System::Windows::Forms::Label^  label41;
+	private: System::Windows::Forms::Label^  label42;
+
 	private: System::ComponentModel::IContainer^  components;
 
 	protected: 
@@ -102,11 +136,9 @@ namespace DataStructuresLearningSoftware {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(quicksort::typeid));
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
@@ -124,42 +156,43 @@ namespace DataStructuresLearningSoftware {
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->label21 = (gcnew System::Windows::Forms::Label());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label17 = (gcnew System::Windows::Forms::Label());
-			this->label16 = (gcnew System::Windows::Forms::Label());
-			this->label15 = (gcnew System::Windows::Forms::Label());
-			this->label14 = (gcnew System::Windows::Forms::Label());
-			this->label13 = (gcnew System::Windows::Forms::Label());
-			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label23 = (gcnew System::Windows::Forms::Label());
 			this->quizPanel = (gcnew System::Windows::Forms::Panel());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->timer3 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->label25 = (gcnew System::Windows::Forms::Label());
+			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->label27 = (gcnew System::Windows::Forms::Label());
+			this->label28 = (gcnew System::Windows::Forms::Label());
+			this->label29 = (gcnew System::Windows::Forms::Label());
+			this->label30 = (gcnew System::Windows::Forms::Label());
+			this->label31 = (gcnew System::Windows::Forms::Label());
+			this->label32 = (gcnew System::Windows::Forms::Label());
+			this->label33 = (gcnew System::Windows::Forms::Label());
+			this->label34 = (gcnew System::Windows::Forms::Label());
+			this->label35 = (gcnew System::Windows::Forms::Label());
+			this->label36 = (gcnew System::Windows::Forms::Label());
+			this->label37 = (gcnew System::Windows::Forms::Label());
+			this->label38 = (gcnew System::Windows::Forms::Label());
+			this->label39 = (gcnew System::Windows::Forms::Label());
+			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->label41 = (gcnew System::Windows::Forms::Label());
+			this->label42 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
-			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Location = System::Drawing::Point(194, 284);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(679, 347);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox1->TabIndex = 17;
-			this->pictureBox1->TabStop = false;
-			// 
-			// label4
-			// 
-			this->label4->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(110, 115);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(924, 88);
-			this->label4->TabIndex = 16;
-			this->label4->Text = L"Always pick first element as pivot.\r\nAlways pick last element as pivot (implement" 
-				L"ed below)\r\nPick a random element as pivot.\r\nPick median as pivot.";
 			// 
 			// label2
 			// 
@@ -175,31 +208,23 @@ namespace DataStructuresLearningSoftware {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Buxton Sketch", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(427, 11);
+			this->label1->Location = System::Drawing::Point(462, 11);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(180, 39);
 			this->label1->TabIndex = 14;
 			this->label1->Text = L"QUICK SORT";
-			// 
-			// label3
-			// 
-			this->label3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(20, 214);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(1038, 49);
-			this->label3->TabIndex = 18;
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(19, 669);
+			this->label6->Location = System::Drawing::Point(19, 2600);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(184, 26);
 			this->label6->TabIndex = 28;
 			this->label6->Text = L"LEARN WITH FUN";
+			this->label6->Click += gcnew System::EventHandler(this, &quicksort::label6_Click);
 			// 
 			// button5
 			// 
@@ -209,7 +234,7 @@ namespace DataStructuresLearningSoftware {
 			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button5->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button5->Location = System::Drawing::Point(852, 934);
+			this->button5->Location = System::Drawing::Point(852, 2858);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(100, 30);
 			this->button5->TabIndex = 27;
@@ -225,7 +250,7 @@ namespace DataStructuresLearningSoftware {
 			this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button7->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button7->Location = System::Drawing::Point(958, 934);
+			this->button7->Location = System::Drawing::Point(958, 2858);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(100, 30);
 			this->button7->TabIndex = 26;
@@ -242,7 +267,7 @@ namespace DataStructuresLearningSoftware {
 			this->button3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::Color::Black;
-			this->button3->Location = System::Drawing::Point(126, 937);
+			this->button3->Location = System::Drawing::Point(126, 2861);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(110, 30);
 			this->button3->TabIndex = 22;
@@ -254,7 +279,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->txtInput->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->txtInput->Location = System::Drawing::Point(20, 937);
+			this->txtInput->Location = System::Drawing::Point(20, 2861);
 			this->txtInput->Name = L"txtInput";
 			this->txtInput->Size = System::Drawing::Size(100, 28);
 			this->txtInput->TabIndex = 21;
@@ -267,7 +292,7 @@ namespace DataStructuresLearningSoftware {
 			this->buttonresume->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->buttonresume->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->buttonresume->Location = System::Drawing::Point(746, 936);
+			this->buttonresume->Location = System::Drawing::Point(746, 2860);
 			this->buttonresume->Name = L"buttonresume";
 			this->buttonresume->Size = System::Drawing::Size(100, 30);
 			this->buttonresume->TabIndex = 20;
@@ -278,7 +303,7 @@ namespace DataStructuresLearningSoftware {
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::White;
-			this->panel1->Location = System::Drawing::Point(20, 698);
+			this->panel1->Location = System::Drawing::Point(20, 2629);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(1038, 178);
 			this->panel1->TabIndex = 19;
@@ -286,11 +311,11 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// label24
 			// 
-			this->label24->BackColor = System::Drawing::SystemColors::Control;
+			this->label24->BackColor = System::Drawing::Color::Bisque;
 			this->label24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label24->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->label24->Location = System::Drawing::Point(916, 892);
+			this->label24->Location = System::Drawing::Point(916, 2816);
 			this->label24->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label24->Name = L"label24";
 			this->label24->Size = System::Drawing::Size(59, 29);
@@ -298,11 +323,11 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// label22
 			// 
-			this->label22->BackColor = System::Drawing::SystemColors::Control;
+			this->label22->BackColor = System::Drawing::Color::Bisque;
 			this->label22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label22->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->label22->Location = System::Drawing::Point(489, 892);
+			this->label22->Location = System::Drawing::Point(489, 2816);
 			this->label22->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label22->Name = L"label22";
 			this->label22->Size = System::Drawing::Size(59, 29);
@@ -310,11 +335,11 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// label12
 			// 
-			this->label12->BackColor = System::Drawing::SystemColors::Control;
+			this->label12->BackColor = System::Drawing::Color::Bisque;
 			this->label12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label12->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->label12->Location = System::Drawing::Point(866, 896);
+			this->label12->Location = System::Drawing::Point(866, 2820);
 			this->label12->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(46, 25);
@@ -323,11 +348,11 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// label10
 			// 
-			this->label10->BackColor = System::Drawing::SystemColors::Control;
+			this->label10->BackColor = System::Drawing::Color::Bisque;
 			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label10->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->label10->Location = System::Drawing::Point(802, 892);
+			this->label10->Location = System::Drawing::Point(802, 2816);
 			this->label10->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(59, 29);
@@ -335,11 +360,11 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// label9
 			// 
-			this->label9->BackColor = System::Drawing::SystemColors::Control;
+			this->label9->BackColor = System::Drawing::Color::Bisque;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label9->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->label9->Location = System::Drawing::Point(691, 892);
+			this->label9->Location = System::Drawing::Point(691, 2816);
 			this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(106, 29);
@@ -348,11 +373,11 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// label11
 			// 
-			this->label11->BackColor = System::Drawing::SystemColors::Control;
+			this->label11->BackColor = System::Drawing::Color::Bisque;
 			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label11->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->label11->Location = System::Drawing::Point(132, 892);
+			this->label11->Location = System::Drawing::Point(132, 2816);
 			this->label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(59, 29);
@@ -360,24 +385,25 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// label18
 			// 
-			this->label18->BackColor = System::Drawing::SystemColors::Control;
+			this->label18->BackColor = System::Drawing::Color::Bisque;
 			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label18->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->label18->Location = System::Drawing::Point(21, 892);
+			this->label18->Location = System::Drawing::Point(21, 2816);
 			this->label18->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label18->Name = L"label18";
 			this->label18->Size = System::Drawing::Size(106, 29);
 			this->label18->TabIndex = 24;
 			this->label18->Text = L"Pivot:";
+			this->label18->Click += gcnew System::EventHandler(this, &quicksort::label18_Click);
 			// 
 			// label19
 			// 
-			this->label19->BackColor = System::Drawing::SystemColors::Control;
+			this->label19->BackColor = System::Drawing::Color::Bisque;
 			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label19->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->label19->Location = System::Drawing::Point(438, 896);
+			this->label19->Location = System::Drawing::Point(438, 2820);
 			this->label19->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label19->Name = L"label19";
 			this->label19->Size = System::Drawing::Size(46, 25);
@@ -386,11 +412,11 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// label20
 			// 
-			this->label20->BackColor = System::Drawing::SystemColors::Control;
+			this->label20->BackColor = System::Drawing::Color::Bisque;
 			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label20->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->label20->Location = System::Drawing::Point(375, 892);
+			this->label20->Location = System::Drawing::Point(375, 2816);
 			this->label20->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label20->Name = L"label20";
 			this->label20->Size = System::Drawing::Size(59, 29);
@@ -398,111 +424,23 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// label21
 			// 
-			this->label21->BackColor = System::Drawing::SystemColors::Control;
+			this->label21->BackColor = System::Drawing::Color::Bisque;
 			this->label21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label21->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->label21->Location = System::Drawing::Point(264, 892);
+			this->label21->Location = System::Drawing::Point(264, 2816);
 			this->label21->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label21->Name = L"label21";
 			this->label21->Size = System::Drawing::Size(106, 29);
 			this->label21->TabIndex = 21;
 			this->label21->Text = L"Comparing:";
 			// 
-			// label8
-			// 
-			this->label8->AutoSize = true;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(389, 1003);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(300, 21);
-			this->label8->TabIndex = 30;
-			this->label8->Text = L"Recursive implementation of Quick Sort\r\n";
-			// 
-			// label7
-			// 
-			this->label7->BackColor = System::Drawing::Color::Bisque;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(18, 1026);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(1038, 1556);
-			this->label7->TabIndex = 29;
-			// 
-			// label17
-			// 
-			this->label17->AutoSize = true;
-			this->label17->BackColor = System::Drawing::Color::Bisque;
-			this->label17->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label17->Location = System::Drawing::Point(160, 2662);
-			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(210, 20);
-			this->label17->TabIndex = 36;
-			this->label17->Text = L"T(n) = T(k) + T(n-k-1) + O(n) ";
-			// 
-			// label16
-			// 
-			this->label16->AutoSize = true;
-			this->label16->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label16->Location = System::Drawing::Point(160, 2633);
-			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(374, 20);
-			this->label16->TabIndex = 35;
-			this->label16->Text = L"The time complexity of Quick Sort can be written as";
-			// 
-			// label15
-			// 
-			this->label15->AutoSize = true;
-			this->label15->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label15->Location = System::Drawing::Point(20, 2632);
-			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(135, 21);
-			this->label15->TabIndex = 34;
-			this->label15->Text = L"Time Complexity:";
-			// 
-			// label14
-			// 
-			this->label14->AutoSize = true;
-			this->label14->BackColor = System::Drawing::Color::Bisque;
-			this->label14->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label14->Location = System::Drawing::Point(92, 2598);
-			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(103, 20);
-			this->label14->TabIndex = 33;
-			this->label14->Text = L"Sorted Array";
-			// 
-			// label13
-			// 
-			this->label13->AutoSize = true;
-			this->label13->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label13->Location = System::Drawing::Point(20, 2597);
-			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(67, 21);
-			this->label13->TabIndex = 32;
-			this->label13->Text = L"Output:";
-			// 
-			// label5
-			// 
-			this->label5->BackColor = System::Drawing::Color::Bisque;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(20, 2716);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(1038, 780);
-			this->label5->TabIndex = 37;
-			// 
 			// label23
 			// 
 			this->label23->AutoSize = true;
 			this->label23->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label23->Location = System::Drawing::Point(18, 3509);
+			this->label23->Location = System::Drawing::Point(18, 5122);
 			this->label23->Name = L"label23";
 			this->label23->Size = System::Drawing::Size(382, 21);
 			this->label23->TabIndex = 39;
@@ -510,7 +448,8 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// quizPanel
 			// 
-			this->quizPanel->Location = System::Drawing::Point(16, 3534);
+			this->quizPanel->BackColor = System::Drawing::Color::White;
+			this->quizPanel->Location = System::Drawing::Point(16, 5147);
 			this->quizPanel->Name = L"quizPanel";
 			this->quizPanel->Size = System::Drawing::Size(1030, 450);
 			this->quizPanel->TabIndex = 38;
@@ -523,7 +462,7 @@ namespace DataStructuresLearningSoftware {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(261, 937);
+			this->button1->Location = System::Drawing::Point(261, 2861);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(100, 30);
 			this->button1->TabIndex = 31;
@@ -543,10 +482,359 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->timer3->Interval = 1000;
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(201, 599);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(703, 312);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 17;
+			this->pictureBox1->TabStop = false;
+			this->pictureBox1->Click += gcnew System::EventHandler(this, &quicksort::pictureBox1_Click);
+			// 
+			// label3
+			// 
+			this->label3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label3->Location = System::Drawing::Point(20, 72);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(1065, 225);
+			this->label3->TabIndex = 40;
+			this->label3->Text = resources->GetString(L"label3.Text");
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label4->Location = System::Drawing::Point(20, 306);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(360, 21);
+			this->label4->TabIndex = 41;
+			this->label4->Text = L"Pseudo Code for recursive QuickSort function :";
+			// 
+			// label5
+			// 
+			this->label5->BackColor = System::Drawing::Color::Bisque;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label5->Location = System::Drawing::Point(20, 327);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(1065, 248);
+			this->label5->TabIndex = 42;
+			this->label5->Text = resources->GetString(L"label5.Text");
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label7->Location = System::Drawing::Point(20, 927);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(148, 21);
+			this->label7->TabIndex = 43;
+			this->label7->Text = L"Partition Algorithm";
+			// 
+			// label8
+			// 
+			this->label8->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label8->Location = System::Drawing::Point(20, 948);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(1065, 65);
+			this->label8->TabIndex = 44;
+			this->label8->Text = resources->GetString(L"label8.Text");
+			// 
+			// label13
+			// 
+			this->label13->BackColor = System::Drawing::Color::Bisque;
+			this->label13->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label13->Location = System::Drawing::Point(20, 1013);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(1065, 265);
+			this->label13->TabIndex = 45;
+			this->label13->Text = resources->GetString(L"label13.Text");
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label14->Location = System::Drawing::Point(20, 1288);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(208, 21);
+			this->label14->TabIndex = 46;
+			this->label14->Text = L"Pseudo code for partition()";
+			// 
+			// label15
+			// 
+			this->label15->BackColor = System::Drawing::Color::Bisque;
+			this->label15->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label15->Location = System::Drawing::Point(20, 1309);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(1065, 507);
+			this->label15->TabIndex = 47;
+			this->label15->Text = resources->GetString(L"label15.Text");
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label16->Location = System::Drawing::Point(20, 1825);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(207, 21);
+			this->label16->TabIndex = 48;
+			this->label16->Text = L"Illustration of partition() :";
+			// 
+			// label17
+			// 
+			this->label17->BackColor = System::Drawing::Color::Bisque;
+			this->label17->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label17->Location = System::Drawing::Point(21, 1846);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(1065, 685);
+			this->label17->TabIndex = 49;
+			this->label17->Text = resources->GetString(L"label17.Text");
+			// 
+			// label25
+			// 
+			this->label25->AutoSize = true;
+			this->label25->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label25->Location = System::Drawing::Point(16, 2937);
+			this->label25->Name = L"label25";
+			this->label25->Size = System::Drawing::Size(127, 21);
+			this->label25->TabIndex = 50;
+			this->label25->Text = L"Implementation:";
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label26->Location = System::Drawing::Point(16, 2958);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(464, 20);
+			this->label26->TabIndex = 51;
+			this->label26->Text = L"Following are C++, Java and Python implementations of QuickSort.";
+			// 
+			// label27
+			// 
+			this->label27->BackColor = System::Drawing::Color::Bisque;
+			this->label27->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label27->Location = System::Drawing::Point(16, 2978);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(1065, 1472);
+			this->label27->TabIndex = 52;
+			this->label27->Text = resources->GetString(L"label27.Text");
+			this->label27->Click += gcnew System::EventHandler(this, &quicksort::label27_Click);
+			// 
+			// label28
+			// 
+			this->label28->AutoSize = true;
+			this->label28->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label28->Location = System::Drawing::Point(16, 4463);
+			this->label28->Name = L"label28";
+			this->label28->Size = System::Drawing::Size(67, 21);
+			this->label28->TabIndex = 53;
+			this->label28->Text = L"Output:";
+			// 
+			// label29
+			// 
+			this->label29->BackColor = System::Drawing::Color::Bisque;
+			this->label29->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label29->Location = System::Drawing::Point(16, 4484);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(1065, 40);
+			this->label29->TabIndex = 54;
+			this->label29->Text = L"Sorted array:\r\n1 5 7 8 9 10";
+			// 
+			// label30
+			// 
+			this->label30->AutoSize = true;
+			this->label30->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label30->Location = System::Drawing::Point(16, 4540);
+			this->label30->Name = L"label30";
+			this->label30->Size = System::Drawing::Size(170, 21);
+			this->label30->TabIndex = 55;
+			this->label30->Text = L"Analysis of QuickSort";
+			// 
+			// label31
+			// 
+			this->label31->AutoSize = true;
+			this->label31->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label31->Location = System::Drawing::Point(16, 4561);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(450, 20);
+			this->label31->TabIndex = 56;
+			this->label31->Text = L"Time taken by QuickSort in general can be written as following.";
+			// 
+			// label32
+			// 
+			this->label32->AutoSize = true;
+			this->label32->BackColor = System::Drawing::Color::Bisque;
+			this->label32->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label32->Location = System::Drawing::Point(20, 4581);
+			this->label32->Name = L"label32";
+			this->label32->Size = System::Drawing::Size(240, 20);
+			this->label32->TabIndex = 57;
+			this->label32->Text = L"T(n) = T(k) + T(n-k-1) + \\theta(n)";
+			// 
+			// label33
+			// 
+			this->label33->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label33->Location = System::Drawing::Point(16, 4601);
+			this->label33->Name = L"label33";
+			this->label33->Size = System::Drawing::Size(1065, 42);
+			this->label33->TabIndex = 58;
+			this->label33->Text = resources->GetString(L"label33.Text");
+			// 
+			// label34
+			// 
+			this->label34->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label34->Location = System::Drawing::Point(16, 4652);
+			this->label34->Name = L"label34";
+			this->label34->Size = System::Drawing::Size(1065, 62);
+			this->label34->TabIndex = 59;
+			this->label34->Text = resources->GetString(L"label34.Text");
+			// 
+			// label35
+			// 
+			this->label35->AutoSize = true;
+			this->label35->BackColor = System::Drawing::Color::Bisque;
+			this->label35->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label35->Location = System::Drawing::Point(16, 4714);
+			this->label35->Name = L"label35";
+			this->label35->Size = System::Drawing::Size(225, 60);
+			this->label35->TabIndex = 60;
+			this->label35->Text = L"T(n) = T(0) + T(n-1) + \\theta(n)\r\nwhich is equivalent to  \r\n T(n) = T(n-1) + \\the" 
+				L"ta(n)";
+			// 
+			// label36
+			// 
+			this->label36->AutoSize = true;
+			this->label36->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label36->Location = System::Drawing::Point(16, 4785);
+			this->label36->Name = L"label36";
+			this->label36->Size = System::Drawing::Size(335, 20);
+			this->label36->TabIndex = 61;
+			this->label36->Text = L"The solution of above recurrence is \\theta(n2).";
+			// 
+			// label37
+			// 
+			this->label37->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label37->Location = System::Drawing::Point(16, 4821);
+			this->label37->Name = L"label37";
+			this->label37->Size = System::Drawing::Size(1065, 23);
+			this->label37->TabIndex = 62;
+			this->label37->Text = L"Best Case: The best case occurs when the partition process always picks the middl" 
+				L"e element as pivot. Following is recurrence for best case.";
+			// 
+			// label38
+			// 
+			this->label38->BackColor = System::Drawing::Color::Bisque;
+			this->label38->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label38->Location = System::Drawing::Point(16, 4844);
+			this->label38->Name = L"label38";
+			this->label38->Size = System::Drawing::Size(199, 23);
+			this->label38->TabIndex = 63;
+			this->label38->Text = L"T(n) = 2T(n/2) + \\theta(n)";
+			// 
+			// label39
+			// 
+			this->label39->AutoSize = true;
+			this->label39->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label39->Location = System::Drawing::Point(16, 4867);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(701, 20);
+			this->label39->TabIndex = 64;
+			this->label39->Text = L"The solution of above recurrence is \\theta(nLogn). It can be solved using case 2 " 
+				L"of Master Theorem.";
+			// 
+			// label40
+			// 
+			this->label40->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label40->Location = System::Drawing::Point(16, 4904);
+			this->label40->Name = L"label40";
+			this->label40->Size = System::Drawing::Size(1065, 104);
+			this->label40->TabIndex = 65;
+			this->label40->Text = resources->GetString(L"label40.Text");
+			// 
+			// label41
+			// 
+			this->label41->AutoSize = true;
+			this->label41->BackColor = System::Drawing::Color::Bisque;
+			this->label41->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label41->Location = System::Drawing::Point(16, 5008);
+			this->label41->Name = L"label41";
+			this->label41->Size = System::Drawing::Size(261, 20);
+			this->label41->TabIndex = 66;
+			this->label41->Text = L"T(n) = T(n/9) + T(9n/10) + \\theta(n)";
+			// 
+			// label42
+			// 
+			this->label42->AutoSize = true;
+			this->label42->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label42->Location = System::Drawing::Point(16, 5028);
+			this->label42->Name = L"label42";
+			this->label42->Size = System::Drawing::Size(325, 20);
+			this->label42->TabIndex = 67;
+			this->label42->Text = L"Solution of above recurrence is also O(nLogn)";
+			// 
 			// quicksort
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::OldLace;
+			this->Controls->Add(this->label42);
+			this->Controls->Add(this->label41);
+			this->Controls->Add(this->label40);
+			this->Controls->Add(this->label39);
+			this->Controls->Add(this->label38);
+			this->Controls->Add(this->label37);
+			this->Controls->Add(this->label36);
+			this->Controls->Add(this->label35);
+			this->Controls->Add(this->label34);
+			this->Controls->Add(this->label33);
+			this->Controls->Add(this->label32);
+			this->Controls->Add(this->label31);
+			this->Controls->Add(this->label30);
+			this->Controls->Add(this->label29);
+			this->Controls->Add(this->label28);
+			this->Controls->Add(this->label27);
+			this->Controls->Add(this->label26);
+			this->Controls->Add(this->label25);
+			this->Controls->Add(this->label17);
+			this->Controls->Add(this->label16);
+			this->Controls->Add(this->label15);
+			this->Controls->Add(this->label14);
+			this->Controls->Add(this->label13);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label24);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label22);
@@ -554,20 +842,12 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->label12);
 			this->Controls->Add(this->quizPanel);
 			this->Controls->Add(this->label10);
-			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label9);
-			this->Controls->Add(this->label17);
 			this->Controls->Add(this->label11);
-			this->Controls->Add(this->label16);
 			this->Controls->Add(this->label18);
-			this->Controls->Add(this->label15);
 			this->Controls->Add(this->label19);
 			this->Controls->Add(this->label20);
-			this->Controls->Add(this->label14);
 			this->Controls->Add(this->label21);
-			this->Controls->Add(this->label13);
-			this->Controls->Add(this->label8);
-			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button7);
@@ -575,14 +855,12 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->txtInput);
 			this->Controls->Add(this->buttonresume);
 			this->Controls->Add(this->panel1);
-			this->Controls->Add(this->label3);
 			this->Controls->Add(this->pictureBox1);
-			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"quicksort";
-			this->Size = System::Drawing::Size(1068, 4062);
+			this->Size = System::Drawing::Size(1105, 5700);
 			this->Load += gcnew System::EventHandler(this, &quicksort::quicksort_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
@@ -704,6 +982,16 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void quicksort_Load(System::Object^  sender, System::EventArgs^  e) {
 				 quicksort_stack=new int[100];
 				 sort_selected=1;
+
+				 // Quiz Panel Load
+				 moduleQuiz ^newPanel = gcnew moduleQuiz();
+				 newPanel->ds_id = 4;
+				 newPanel->module_id = 4;
+				 newPanel->username = username;
+				 newPanel->update_id = 12;
+				 newPanel->update_name = "SortingProgress";
+				 quizPanel->Controls->Clear();
+				 quizPanel->Controls->Add(newPanel);
 			 }
 
 	private: System::Void btnPause_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -846,5 +1134,13 @@ namespace DataStructuresLearningSoftware {
 
 	private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 			 }
+private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void label6_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void label18_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void label27_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
 };
 }

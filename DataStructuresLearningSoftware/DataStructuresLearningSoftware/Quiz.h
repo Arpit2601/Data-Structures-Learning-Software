@@ -106,8 +106,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void Quiz_Load(System::Object^  sender, System::EventArgs^  e) {
 				 mainPanel->BackColor = Color::AliceBlue;
 
-				 ds_id = 3;
-				 numQuestions = 2;
+				 numQuestions = 5;
 				 questionId = 0;
 
 				 // selectedList = gcnew array<String ^>(numQuestions);
@@ -121,7 +120,7 @@ namespace DataStructuresLearningSoftware {
 				 srand((unsigned int)time(0));
 
 				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
-				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\..\\Database.accdb";
+				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 
 				 DB_Connection->Open();
 				 String ^ readString = "SELECT * FROM Quizzes WHERE DataStructureID="+ds_id;
@@ -139,6 +138,8 @@ namespace DataStructuresLearningSoftware {
 					 answerCList.Add(reader->GetBoolean(9));
 					 answerDList.Add(reader->GetBoolean(10));
 				 }
+
+				 numQuestions = numQuestions < questionList.Count ? numQuestions : questionList.Count;
 
 				 while(questionList.Count > numQuestions){
 					 int id = rand()%questionList.Count;
