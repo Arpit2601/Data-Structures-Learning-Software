@@ -600,7 +600,9 @@ namespace DataStructuresLearningSoftware {
 			 }
 	private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
 				 panel3->Controls->Clear();
-				 panel3->Controls->Add(gcnew DiscussionForum);
+				 DiscussionForum ^ discuss = gcnew DiscussionForum;
+				 discuss->username=username;
+				 panel3->Controls->Add(discuss);
 			 }
 private: System::Void panel3_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 		 }

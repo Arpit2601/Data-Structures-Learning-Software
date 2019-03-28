@@ -844,7 +844,9 @@ private: System::Void richTextBox1_TextChanged(System::Object^  sender, System::
 		 }
 private: System::Void discussbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 			 outputpanel->Controls->Clear();
-			 outputpanel->Controls->Add(gcnew DiscussionForum);
+			 DiscussionForum ^ discuss = gcnew DiscussionForum;
+			 discuss->username=username;
+			 outputpanel->Controls->Add(discuss);
 		 }
 private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
 			 curid--;

@@ -310,11 +310,25 @@ namespace DataStructuresLearningSoftware {
 		String ^ reply_message;
 		int message_id;
 		int Number_of_replies_width;
+		String ^ username;
+		String ^ designation;
 		System::Collections::Generic::List<System::String ^> filters;
 		// on load function
 
 		void loadbase()
 		{
+			OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+			DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+			DB_Connection->Open();
+			String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+			OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+			OleDbDataReader ^ reader = cmd->ExecuteReader();
+			if(reader->Read()){
+				designation = reader->GetString(7);
+			}
+			MessageBox::Show(designation);
+			DB_Connection->Close();
 			msgpanel->Controls->Clear();
 			reply_message="message";
 			msgpanel->Visible=true;
@@ -492,8 +506,6 @@ namespace DataStructuresLearningSoftware {
 							 String ^  date = System::DateTime::Now.ToString();
 							 String ^ tag = tagcombo->Text;
 							 String ^ closed = "NO";
-							 String ^ username = "SD";
-							 String ^ designation = "as";
 							 String ^ reportedabuse = "NO";
 
 
@@ -676,9 +688,16 @@ namespace DataStructuresLearningSoftware {
 					message_detail->Controls->Add(datetext);
 					message_detail->Controls->Add(typetext);
 					message_detail->Controls->Add(reportabuse);
+
+					message_detail->Controls->Add(replylabel);
 					message_detail->Controls->Add(closethread);
 					message_detail->Controls->Add(deletethread);
-					message_detail->Controls->Add(replylabel);
+					if(designation=="stud")
+					{
+						deletethread->Hide();
+						closethread->Hide();
+					}
+
 
 					if(reader->GetString(4)=="YES")
 					{
@@ -763,6 +782,11 @@ namespace DataStructuresLearningSoftware {
 						message_detail->Controls->Add(typetext);
 						message_detail->Controls->Add(reportabuse);
 						message_detail->Controls->Add(deletereply);
+						if(designation=="stud")
+						{
+							
+							deletereply->Hide();
+						}
 						replystarty += reply->Height + 40;
 
 					}

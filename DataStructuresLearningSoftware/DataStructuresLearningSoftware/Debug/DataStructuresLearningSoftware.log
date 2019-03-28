@@ -1,4 +1,4 @@
-﻿Build started 29-03-2019 12:14:40 AM.
+﻿Build started 29-03-2019 12:36:36 AM.
      1>Project "D:\Work\Data-Structures-Learning-Software\DataStructuresLearningSoftware\DataStructuresLearningSoftware\DataStructuresLearningSoftware.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\DataStructuresLearningSoftware.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -22,4 +22,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.14
+Time Elapsed 00:00:00.12
