@@ -56,7 +56,7 @@ namespace trees {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Name = L"BST_introduction";
-			this->Size = System::Drawing::Size(1264, 673);
+			this->Size = System::Drawing::Size(1261, 549);
 			this->ResumeLayout(false);
 
 		}

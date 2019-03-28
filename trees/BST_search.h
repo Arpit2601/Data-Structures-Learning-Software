@@ -48,14 +48,14 @@ namespace trees {
 	private: System::Windows::Forms::Button^  btn_post;
 	private: System::Windows::Forms::Button^  btn_res;
 	private: System::Windows::Forms::Panel^  panel1;
-	private: Microsoft::VisualBasic::PowerPacks::ShapeContainer^  shapeContainer1;
-	private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape7;
-	private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape6;
-	private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape5;
-	private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape4;
-	private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape3;
-	private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape2;
-	private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Label^  bl7;
 	private: System::Windows::Forms::Label^  bl6;
 	private: System::Windows::Forms::Label^  bl5;
@@ -101,14 +101,6 @@ namespace trees {
 			this->bl3 = (gcnew System::Windows::Forms::Label());
 			this->bl2 = (gcnew System::Windows::Forms::Label());
 			this->bl1 = (gcnew System::Windows::Forms::Label());
-			this->shapeContainer1 = (gcnew Microsoft::VisualBasic::PowerPacks::ShapeContainer());
-			this->ovalShape7 = (gcnew Microsoft::VisualBasic::PowerPacks::OvalShape());
-			this->ovalShape6 = (gcnew Microsoft::VisualBasic::PowerPacks::OvalShape());
-			this->ovalShape5 = (gcnew Microsoft::VisualBasic::PowerPacks::OvalShape());
-			this->ovalShape4 = (gcnew Microsoft::VisualBasic::PowerPacks::OvalShape());
-			this->ovalShape3 = (gcnew Microsoft::VisualBasic::PowerPacks::OvalShape());
-			this->ovalShape2 = (gcnew Microsoft::VisualBasic::PowerPacks::OvalShape());
-			this->ovalShape1 = (gcnew Microsoft::VisualBasic::PowerPacks::OvalShape());
 			this->timer_in = (gcnew System::Windows::Forms::Timer(this->components));
 			this->timer_pre = (gcnew System::Windows::Forms::Timer(this->components));
 			this->timer_pos = (gcnew System::Windows::Forms::Timer(this->components));
@@ -121,7 +113,7 @@ namespace trees {
 			this->lab1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lab1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lab1->Location = System::Drawing::Point(549, 217);
+			this->lab1->Location = System::Drawing::Point(537, 217);
 			this->lab1->Name = L"lab1";
 			this->lab1->Size = System::Drawing::Size(41, 29);
 			this->lab1->TabIndex = 0;
@@ -146,7 +138,7 @@ namespace trees {
 			this->lab3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lab3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lab3->Location = System::Drawing::Point(846, 331);
+			this->lab3->Location = System::Drawing::Point(787, 331);
 			this->lab3->Name = L"lab3";
 			this->lab3->Size = System::Drawing::Size(41, 29);
 			this->lab3->TabIndex = 2;
@@ -158,7 +150,7 @@ namespace trees {
 			this->lab4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lab4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lab4->Location = System::Drawing::Point(102, 484);
+			this->lab4->Location = System::Drawing::Point(127, 472);
 			this->lab4->Name = L"lab4";
 			this->lab4->Size = System::Drawing::Size(27, 29);
 			this->lab4->TabIndex = 3;
@@ -170,7 +162,7 @@ namespace trees {
 			this->lab5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lab5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lab5->Location = System::Drawing::Point(459, 484);
+			this->lab5->Location = System::Drawing::Point(431, 472);
 			this->lab5->Name = L"lab5";
 			this->lab5->Size = System::Drawing::Size(41, 29);
 			this->lab5->TabIndex = 4;
@@ -182,7 +174,7 @@ namespace trees {
 			this->lab6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lab6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lab6->Location = System::Drawing::Point(639, 484);
+			this->lab6->Location = System::Drawing::Point(643, 472);
 			this->lab6->Name = L"lab6";
 			this->lab6->Size = System::Drawing::Size(41, 29);
 			this->lab6->TabIndex = 5;
@@ -194,7 +186,7 @@ namespace trees {
 			this->lab7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lab7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lab7->Location = System::Drawing::Point(1052, 484);
+			this->lab7->Location = System::Drawing::Point(974, 472);
 			this->lab7->Name = L"lab7";
 			this->lab7->Size = System::Drawing::Size(41, 29);
 			this->lab7->TabIndex = 6;
@@ -260,10 +252,9 @@ namespace trees {
 			this->panel1->Controls->Add(this->lab3);
 			this->panel1->Controls->Add(this->lab2);
 			this->panel1->Controls->Add(this->lab1);
-			this->panel1->Controls->Add(this->shapeContainer1);
-			this->panel1->Location = System::Drawing::Point(41, 66);
+			this->panel1->Location = System::Drawing::Point(47, 3);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1156, 557);
+			this->panel1->Size = System::Drawing::Size(1156, 543);
 			this->panel1->TabIndex = 0;
 			// 
 			// bl7
@@ -350,60 +341,6 @@ namespace trees {
 			this->bl1->TabIndex = 0;
 			this->bl1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
-			// shapeContainer1
-			// 
-			this->shapeContainer1->Location = System::Drawing::Point(0, 0);
-			this->shapeContainer1->Margin = System::Windows::Forms::Padding(0);
-			this->shapeContainer1->Name = L"shapeContainer1";
-			this->shapeContainer1->Shapes->AddRange(gcnew cli::array< Microsoft::VisualBasic::PowerPacks::Shape^  >(7) {this->ovalShape7, 
-				this->ovalShape6, this->ovalShape5, this->ovalShape4, this->ovalShape3, this->ovalShape2, this->ovalShape1});
-			this->shapeContainer1->Size = System::Drawing::Size(1156, 557);
-			this->shapeContainer1->TabIndex = 7;
-			this->shapeContainer1->TabStop = false;
-			// 
-			// ovalShape7
-			// 
-			this->ovalShape7->Location = System::Drawing::Point(78, 461);
-			this->ovalShape7->Name = L"ovalShape7";
-			this->ovalShape7->Size = System::Drawing::Size(75, 75);
-			// 
-			// ovalShape6
-			// 
-			this->ovalShape6->Location = System::Drawing::Point(261, 309);
-			this->ovalShape6->Name = L"ovalShape6";
-			this->ovalShape6->Size = System::Drawing::Size(75, 75);
-			this->ovalShape6->Click += gcnew System::EventHandler(this, &BST_search::ovalShape6_Click);
-			// 
-			// ovalShape5
-			// 
-			this->ovalShape5->Location = System::Drawing::Point(442, 460);
-			this->ovalShape5->Name = L"ovalShape5";
-			this->ovalShape5->Size = System::Drawing::Size(75, 75);
-			// 
-			// ovalShape4
-			// 
-			this->ovalShape4->Location = System::Drawing::Point(621, 462);
-			this->ovalShape4->Name = L"ovalShape4";
-			this->ovalShape4->Size = System::Drawing::Size(75, 75);
-			// 
-			// ovalShape3
-			// 
-			this->ovalShape3->Location = System::Drawing::Point(1036, 462);
-			this->ovalShape3->Name = L"ovalShape3";
-			this->ovalShape3->Size = System::Drawing::Size(75, 75);
-			// 
-			// ovalShape2
-			// 
-			this->ovalShape2->Location = System::Drawing::Point(828, 306);
-			this->ovalShape2->Name = L"ovalShape2";
-			this->ovalShape2->Size = System::Drawing::Size(75, 75);
-			// 
-			// ovalShape1
-			// 
-			this->ovalShape1->Location = System::Drawing::Point(531, 193);
-			this->ovalShape1->Name = L"ovalShape1";
-			this->ovalShape1->Size = System::Drawing::Size(75, 75);
-			// 
 			// timer_in
 			// 
 			this->timer_in->Interval = 1500;
@@ -425,7 +362,7 @@ namespace trees {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Controls->Add(this->panel1);
 			this->Name = L"BST_search";
-			this->Size = System::Drawing::Size(1264, 673);
+			this->Size = System::Drawing::Size(1261, 549);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->ResumeLayout(false);

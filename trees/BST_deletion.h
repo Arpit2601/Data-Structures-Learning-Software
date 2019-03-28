@@ -147,7 +147,7 @@ namespace trees {
 			this->groupBox1->Controls->Add(this->BTree_delete_but);
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Century", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->groupBox1->Location = System::Drawing::Point(879, 372);
+			this->groupBox1->Location = System::Drawing::Point(886, 159);
 			this->groupBox1->Name = L"groupBox1";
 			this->groupBox1->Size = System::Drawing::Size(356, 254);
 			this->groupBox1->TabIndex = 1;
@@ -211,7 +211,7 @@ namespace trees {
 			this->delete_animation1->Controls->Add(this->DL4);
 			this->delete_animation1->Controls->Add(this->DL5);
 			this->delete_animation1->Controls->Add(this->DL1);
-			this->delete_animation1->Location = System::Drawing::Point(35, 259);
+			this->delete_animation1->Location = System::Drawing::Point(32, 118);
 			this->delete_animation1->Name = L"delete_animation1";
 			this->delete_animation1->Size = System::Drawing::Size(822, 367);
 			this->delete_animation1->TabIndex = 2;
@@ -343,7 +343,7 @@ namespace trees {
 			this->Controls->Add(this->delete_animation1);
 			this->Controls->Add(this->groupBox1);
 			this->Name = L"BST_deletion";
-			this->Size = System::Drawing::Size(1264, 673);
+			this->Size = System::Drawing::Size(1261, 549);
 			this->Load += gcnew System::EventHandler(this, &BST_deletion::BST_deletion_Load);
 			this->groupBox1->ResumeLayout(false);
 			this->delete_animation1->ResumeLayout(false);
