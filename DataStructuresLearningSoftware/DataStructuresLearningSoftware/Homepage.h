@@ -89,6 +89,47 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Panel^  panel6;
 	public: System::Windows::Forms::TextBox^  vartextBox;
 	private: System::Windows::Forms::Label^  HomepanelStatuslabel;
+	private: System::Windows::Forms::Panel^  DSpanel;
+	private: System::Windows::Forms::Panel^  Suggestionpanel;
+
+	private: System::Windows::Forms::RadioButton^  deleteradioButton;
+	private: System::Windows::Forms::RadioButton^  addradioButton;
+	private: System::Windows::Forms::Panel^  SuggestionsADDpanel;
+
+	private: System::Windows::Forms::CheckBox^  checkBox1;
+	private: System::Windows::Forms::CheckBox^  checkBox2;
+	private: System::Windows::Forms::CheckBox^  checkBox3;
+	private: System::Windows::Forms::CheckBox^  checkBox4;
+	private: System::Windows::Forms::Label^  DSSuggestionlabel;
+	private: System::Windows::Forms::ComboBox^  ModulecomboBox;
+	private: System::Windows::Forms::ComboBox^  DScomboBox;
+	private: System::Windows::Forms::Panel^  DSLinkpanel;
+	private: System::Windows::Forms::Panel^  panel9;
+	private: System::Windows::Forms::Panel^  panel13;
+	private: System::Windows::Forms::PictureBox^  pictureBox6;
+	private: System::Windows::Forms::Panel^  panel11;
+	private: System::Windows::Forms::TextBox^  textBox6;
+	private: System::Windows::Forms::PictureBox^  pictureBox4;
+	private: System::Windows::Forms::TextBox^  textBox4;
+	private: System::Windows::Forms::Panel^  panel10;
+	private: System::Windows::Forms::PictureBox^  pictureBox3;
+	private: System::Windows::Forms::TextBox^  textBox3;
+	private: System::Windows::Forms::Panel^  panel12;
+	private: System::Windows::Forms::PictureBox^  pictureBox5;
+	private: System::Windows::Forms::TextBox^  textBox5;
+	private: System::Windows::Forms::Panel^  panel8;
+	private: System::Windows::Forms::PictureBox^  pictureBox2;
+	private: System::Windows::Forms::TextBox^  textBox2;
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	private: System::Windows::Forms::TextBox^  textBox1;
+
+
+
+
+
+
+
+
 	public: 
 
 	public: 
@@ -207,7 +248,7 @@ namespace DataStructuresLearningSoftware {
 public: System::Windows::Forms::Panel^  Homepanel;
 private: 
 
-	private: System::Windows::Forms::Panel^  DSpanel;
+
 	private: System::Windows::Forms::Panel^  Profilepanel;
 	private: System::Windows::Forms::Panel^  Profilepanel5;
 private: System::Windows::Forms::TextBox^  ProfileemailtextBox;
@@ -341,7 +382,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->llprogressBar = (gcnew System::Windows::Forms::ProgressBar());
 			this->ArrayprogressBar = (gcnew System::Windows::Forms::ProgressBar());
 			this->HomeTitlelabel = (gcnew System::Windows::Forms::Label());
-			this->DSpanel = (gcnew System::Windows::Forms::Panel());
 			this->Profilepanel = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->ProfilepictureBox = (gcnew System::Windows::Forms::PictureBox());
@@ -393,6 +433,37 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileEditbutton = (gcnew System::Windows::Forms::Button());
 			this->ProfilePictureChangebutton = (gcnew System::Windows::Forms::Button());
 			this->ProfileopenFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
+			this->DSpanel = (gcnew System::Windows::Forms::Panel());
+			this->Suggestionpanel = (gcnew System::Windows::Forms::Panel());
+			this->DSLinkpanel = (gcnew System::Windows::Forms::Panel());
+			this->DScomboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->ModulecomboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->DSSuggestionlabel = (gcnew System::Windows::Forms::Label());
+			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox3 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox4 = (gcnew System::Windows::Forms::CheckBox());
+			this->SuggestionsADDpanel = (gcnew System::Windows::Forms::Panel());
+			this->addradioButton = (gcnew System::Windows::Forms::RadioButton());
+			this->deleteradioButton = (gcnew System::Windows::Forms::RadioButton());
+			this->panel9 = (gcnew System::Windows::Forms::Panel());
+			this->panel8 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->panel12 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->panel10 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->panel11 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->panel13 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->HeaderPanel->SuspendLayout();
 			this->Headerstatuspanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox4))->BeginInit();
@@ -413,6 +484,15 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox1))->BeginInit();
+			this->DSpanel->SuspendLayout();
+			this->Suggestionpanel->SuspendLayout();
+			this->SuggestionsADDpanel->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox6))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// HeaderPanel
@@ -774,14 +854,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HomeTitlelabel->Size = System::Drawing::Size(795, 55);
 			this->HomeTitlelabel->TabIndex = 0;
 			this->HomeTitlelabel->Text = L"Data Structures Learning Software";
-			// 
-			// DSpanel
-			// 
-			this->DSpanel->Location = System::Drawing::Point(0, 65);
-			this->DSpanel->Margin = System::Windows::Forms::Padding(0);
-			this->DSpanel->Name = L"DSpanel";
-			this->DSpanel->Size = System::Drawing::Size(1280, 705);
-			this->DSpanel->TabIndex = 10;
 			// 
 			// Profilepanel
 			// 
@@ -1378,14 +1450,367 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileopenFileDialog->FileName = L"ProfileopenFileDialog";
 			this->ProfileopenFileDialog->Filter = L"Jpg (*.jpg)|*.jpg";
 			// 
+			// DSpanel
+			// 
+			this->DSpanel->BackColor = System::Drawing::Color::Silver;
+			this->DSpanel->Controls->Add(this->Suggestionpanel);
+			this->DSpanel->Controls->Add(this->DSLinkpanel);
+			this->DSpanel->Location = System::Drawing::Point(0, 65);
+			this->DSpanel->Margin = System::Windows::Forms::Padding(0);
+			this->DSpanel->Name = L"DSpanel";
+			this->DSpanel->Size = System::Drawing::Size(1280, 705);
+			this->DSpanel->TabIndex = 13;
+			// 
+			// Suggestionpanel
+			// 
+			this->Suggestionpanel->BackColor = System::Drawing::Color::Silver;
+			this->Suggestionpanel->Controls->Add(this->deleteradioButton);
+			this->Suggestionpanel->Controls->Add(this->addradioButton);
+			this->Suggestionpanel->Controls->Add(this->SuggestionsADDpanel);
+			this->Suggestionpanel->Controls->Add(this->DSSuggestionlabel);
+			this->Suggestionpanel->Controls->Add(this->ModulecomboBox);
+			this->Suggestionpanel->Controls->Add(this->DScomboBox);
+			this->Suggestionpanel->Location = System::Drawing::Point(30, 12);
+			this->Suggestionpanel->Name = L"Suggestionpanel";
+			this->Suggestionpanel->Size = System::Drawing::Size(1217, 672);
+			this->Suggestionpanel->TabIndex = 0;
+			// 
+			// DSLinkpanel
+			// 
+			this->DSLinkpanel->Location = System::Drawing::Point(34, 37);
+			this->DSLinkpanel->Name = L"DSLinkpanel";
+			this->DSLinkpanel->Size = System::Drawing::Size(1213, 631);
+			this->DSLinkpanel->TabIndex = 1;
+			// 
+			// DScomboBox
+			// 
+			this->DScomboBox->BackColor = System::Drawing::Color::Gray;
+			this->DScomboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->DScomboBox->ForeColor = System::Drawing::Color::White;
+			this->DScomboBox->FormattingEnabled = true;
+			this->DScomboBox->Location = System::Drawing::Point(19, 62);
+			this->DScomboBox->Name = L"DScomboBox";
+			this->DScomboBox->Size = System::Drawing::Size(1176, 33);
+			this->DScomboBox->TabIndex = 0;
+			// 
+			// ModulecomboBox
+			// 
+			this->ModulecomboBox->BackColor = System::Drawing::Color::Gray;
+			this->ModulecomboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->ModulecomboBox->ForeColor = System::Drawing::Color::White;
+			this->ModulecomboBox->FormattingEnabled = true;
+			this->ModulecomboBox->Location = System::Drawing::Point(19, 117);
+			this->ModulecomboBox->Name = L"ModulecomboBox";
+			this->ModulecomboBox->Size = System::Drawing::Size(1176, 33);
+			this->ModulecomboBox->TabIndex = 1;
+			// 
+			// DSSuggestionlabel
+			// 
+			this->DSSuggestionlabel->AutoSize = true;
+			this->DSSuggestionlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->DSSuggestionlabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->DSSuggestionlabel->Location = System::Drawing::Point(12, 10);
+			this->DSSuggestionlabel->Name = L"DSSuggestionlabel";
+			this->DSSuggestionlabel->Size = System::Drawing::Size(216, 39);
+			this->DSSuggestionlabel->TabIndex = 2;
+			this->DSSuggestionlabel->Text = L"Suggestions";
+			// 
+			// checkBox1
+			// 
+			this->checkBox1->AutoSize = true;
+			this->checkBox1->Location = System::Drawing::Point(36, 399);
+			this->checkBox1->Name = L"checkBox1";
+			this->checkBox1->Size = System::Drawing::Size(98, 21);
+			this->checkBox1->TabIndex = 5;
+			this->checkBox1->Text = L"checkBox1";
+			this->checkBox1->UseVisualStyleBackColor = true;
+			// 
+			// checkBox2
+			// 
+			this->checkBox2->AutoSize = true;
+			this->checkBox2->Location = System::Drawing::Point(267, 404);
+			this->checkBox2->Name = L"checkBox2";
+			this->checkBox2->Size = System::Drawing::Size(98, 21);
+			this->checkBox2->TabIndex = 6;
+			this->checkBox2->Text = L"checkBox2";
+			this->checkBox2->UseVisualStyleBackColor = true;
+			// 
+			// checkBox3
+			// 
+			this->checkBox3->AutoSize = true;
+			this->checkBox3->Location = System::Drawing::Point(601, 386);
+			this->checkBox3->Name = L"checkBox3";
+			this->checkBox3->Size = System::Drawing::Size(98, 21);
+			this->checkBox3->TabIndex = 7;
+			this->checkBox3->Text = L"checkBox3";
+			this->checkBox3->UseVisualStyleBackColor = true;
+			// 
+			// checkBox4
+			// 
+			this->checkBox4->AutoSize = true;
+			this->checkBox4->Location = System::Drawing::Point(848, 404);
+			this->checkBox4->Name = L"checkBox4";
+			this->checkBox4->Size = System::Drawing::Size(98, 21);
+			this->checkBox4->TabIndex = 8;
+			this->checkBox4->Text = L"checkBox4";
+			this->checkBox4->UseVisualStyleBackColor = true;
+			// 
+			// SuggestionsADDpanel
+			// 
+			this->SuggestionsADDpanel->Controls->Add(this->panel13);
+			this->SuggestionsADDpanel->Controls->Add(this->pictureBox6);
+			this->SuggestionsADDpanel->Controls->Add(this->panel11);
+			this->SuggestionsADDpanel->Controls->Add(this->textBox6);
+			this->SuggestionsADDpanel->Controls->Add(this->pictureBox4);
+			this->SuggestionsADDpanel->Controls->Add(this->textBox4);
+			this->SuggestionsADDpanel->Controls->Add(this->panel10);
+			this->SuggestionsADDpanel->Controls->Add(this->pictureBox3);
+			this->SuggestionsADDpanel->Controls->Add(this->textBox3);
+			this->SuggestionsADDpanel->Controls->Add(this->panel12);
+			this->SuggestionsADDpanel->Controls->Add(this->pictureBox5);
+			this->SuggestionsADDpanel->Controls->Add(this->textBox5);
+			this->SuggestionsADDpanel->Controls->Add(this->panel8);
+			this->SuggestionsADDpanel->Controls->Add(this->pictureBox2);
+			this->SuggestionsADDpanel->Controls->Add(this->textBox2);
+			this->SuggestionsADDpanel->Controls->Add(this->panel9);
+			this->SuggestionsADDpanel->Controls->Add(this->pictureBox1);
+			this->SuggestionsADDpanel->Controls->Add(this->textBox1);
+			this->SuggestionsADDpanel->Controls->Add(this->checkBox1);
+			this->SuggestionsADDpanel->Controls->Add(this->checkBox2);
+			this->SuggestionsADDpanel->Controls->Add(this->checkBox3);
+			this->SuggestionsADDpanel->Controls->Add(this->checkBox4);
+			this->SuggestionsADDpanel->Location = System::Drawing::Point(19, 233);
+			this->SuggestionsADDpanel->Name = L"SuggestionsADDpanel";
+			this->SuggestionsADDpanel->Size = System::Drawing::Size(1176, 423);
+			this->SuggestionsADDpanel->TabIndex = 9;
+			// 
+			// addradioButton
+			// 
+			this->addradioButton->AutoSize = true;
+			this->addradioButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->addradioButton->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->addradioButton->Location = System::Drawing::Point(19, 160);
+			this->addradioButton->Name = L"addradioButton";
+			this->addradioButton->Size = System::Drawing::Size(86, 33);
+			this->addradioButton->TabIndex = 10;
+			this->addradioButton->TabStop = true;
+			this->addradioButton->Text = L"ADD";
+			this->addradioButton->UseVisualStyleBackColor = true;
+			// 
+			// deleteradioButton
+			// 
+			this->deleteradioButton->AutoSize = true;
+			this->deleteradioButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->deleteradioButton->ForeColor = System::Drawing::Color::DarkRed;
+			this->deleteradioButton->Location = System::Drawing::Point(19, 199);
+			this->deleteradioButton->Name = L"deleteradioButton";
+			this->deleteradioButton->Size = System::Drawing::Size(134, 33);
+			this->deleteradioButton->TabIndex = 11;
+			this->deleteradioButton->TabStop = true;
+			this->deleteradioButton->Text = L"DELETE";
+			this->deleteradioButton->UseVisualStyleBackColor = true;
+			// 
+			// panel9
+			// 
+			this->panel9->BackColor = System::Drawing::Color::White;
+			this->panel9->Location = System::Drawing::Point(46, 68);
+			this->panel9->Name = L"panel9";
+			this->panel9->Size = System::Drawing::Size(1091, 1);
+			this->panel9->TabIndex = 11;
+			// 
+			// panel8
+			// 
+			this->panel8->BackColor = System::Drawing::Color::White;
+			this->panel8->Location = System::Drawing::Point(9, 157);
+			this->panel8->Name = L"panel8";
+			this->panel8->Size = System::Drawing::Size(531, 1);
+			this->panel8->TabIndex = 14;
+			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox2.BackgroundImage")));
+			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox2->Location = System::Drawing::Point(9, 100);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(51, 52);
+			this->pictureBox2->TabIndex = 13;
+			this->pictureBox2->TabStop = false;
+			// 
+			// textBox2
+			// 
+			this->textBox2->BackColor = System::Drawing::Color::Silver;
+			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->textBox2->ForeColor = System::Drawing::Color::Black;
+			this->textBox2->Location = System::Drawing::Point(66, 121);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(474, 31);
+			this->textBox2->TabIndex = 12;
+			this->textBox2->Text = L"Question";
+			// 
+			// panel12
+			// 
+			this->panel12->BackColor = System::Drawing::Color::White;
+			this->panel12->Location = System::Drawing::Point(9, 379);
+			this->panel12->Name = L"panel12";
+			this->panel12->Size = System::Drawing::Size(1091, 1);
+			this->panel12->TabIndex = 23;
+			// 
+			// pictureBox5
+			// 
+			this->pictureBox5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox5.BackgroundImage")));
+			this->pictureBox5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox5->Location = System::Drawing::Point(9, 322);
+			this->pictureBox5->Name = L"pictureBox5";
+			this->pictureBox5->Size = System::Drawing::Size(51, 52);
+			this->pictureBox5->TabIndex = 22;
+			this->pictureBox5->TabStop = false;
+			// 
+			// textBox5
+			// 
+			this->textBox5->BackColor = System::Drawing::Color::Silver;
+			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->textBox5->ForeColor = System::Drawing::Color::Black;
+			this->textBox5->Location = System::Drawing::Point(66, 343);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(1032, 31);
+			this->textBox5->TabIndex = 21;
+			this->textBox5->Text = L"Question";
+			// 
+			// textBox1
+			// 
+			this->textBox1->BackColor = System::Drawing::Color::Silver;
+			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->textBox1->ForeColor = System::Drawing::Color::Black;
+			this->textBox1->Location = System::Drawing::Point(103, 32);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(1032, 31);
+			this->textBox1->TabIndex = 9;
+			this->textBox1->Text = L"Question";
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.BackgroundImage")));
+			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox1->Location = System::Drawing::Point(46, 11);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(51, 52);
+			this->pictureBox1->TabIndex = 10;
+			this->pictureBox1->TabStop = false;
+			// 
+			// panel10
+			// 
+			this->panel10->BackColor = System::Drawing::Color::White;
+			this->panel10->Location = System::Drawing::Point(627, 157);
+			this->panel10->Name = L"panel10";
+			this->panel10->Size = System::Drawing::Size(531, 1);
+			this->panel10->TabIndex = 26;
+			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox3.BackgroundImage")));
+			this->pictureBox3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox3->Location = System::Drawing::Point(627, 100);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(51, 52);
+			this->pictureBox3->TabIndex = 25;
+			this->pictureBox3->TabStop = false;
+			// 
+			// textBox3
+			// 
+			this->textBox3->BackColor = System::Drawing::Color::Silver;
+			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->textBox3->ForeColor = System::Drawing::Color::Black;
+			this->textBox3->Location = System::Drawing::Point(684, 121);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(474, 31);
+			this->textBox3->TabIndex = 24;
+			this->textBox3->Text = L"Question";
+			// 
+			// panel11
+			// 
+			this->panel11->BackColor = System::Drawing::Color::White;
+			this->panel11->Location = System::Drawing::Point(9, 242);
+			this->panel11->Name = L"panel11";
+			this->panel11->Size = System::Drawing::Size(531, 1);
+			this->panel11->TabIndex = 29;
+			// 
+			// pictureBox4
+			// 
+			this->pictureBox4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox4.BackgroundImage")));
+			this->pictureBox4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox4->Location = System::Drawing::Point(9, 185);
+			this->pictureBox4->Name = L"pictureBox4";
+			this->pictureBox4->Size = System::Drawing::Size(51, 52);
+			this->pictureBox4->TabIndex = 28;
+			this->pictureBox4->TabStop = false;
+			// 
+			// textBox4
+			// 
+			this->textBox4->BackColor = System::Drawing::Color::Silver;
+			this->textBox4->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->textBox4->ForeColor = System::Drawing::Color::Black;
+			this->textBox4->Location = System::Drawing::Point(66, 206);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(474, 31);
+			this->textBox4->TabIndex = 27;
+			this->textBox4->Text = L"Question";
+			// 
+			// panel13
+			// 
+			this->panel13->BackColor = System::Drawing::Color::White;
+			this->panel13->Location = System::Drawing::Point(627, 242);
+			this->panel13->Name = L"panel13";
+			this->panel13->Size = System::Drawing::Size(531, 1);
+			this->panel13->TabIndex = 17;
+			// 
+			// pictureBox6
+			// 
+			this->pictureBox6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox6.BackgroundImage")));
+			this->pictureBox6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox6->Location = System::Drawing::Point(627, 185);
+			this->pictureBox6->Name = L"pictureBox6";
+			this->pictureBox6->Size = System::Drawing::Size(51, 52);
+			this->pictureBox6->TabIndex = 16;
+			this->pictureBox6->TabStop = false;
+			// 
+			// textBox6
+			// 
+			this->textBox6->BackColor = System::Drawing::Color::Silver;
+			this->textBox6->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->textBox6->ForeColor = System::Drawing::Color::Black;
+			this->textBox6->Location = System::Drawing::Point(684, 206);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(474, 31);
+			this->textBox6->TabIndex = 15;
+			this->textBox6->Text = L"Question";
+			// 
 			// Homepage
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1280, 770);
+			this->Controls->Add(this->DSpanel);
 			this->Controls->Add(this->Profilepanel);
 			this->Controls->Add(this->Homepanel);
-			this->Controls->Add(this->DSpanel);
 			this->Controls->Add(this->Headerstatuspanel);
 			this->Controls->Add(this->HeaderPanel);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -1418,6 +1843,17 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox1))->EndInit();
+			this->DSpanel->ResumeLayout(false);
+			this->Suggestionpanel->ResumeLayout(false);
+			this->Suggestionpanel->PerformLayout();
+			this->SuggestionsADDpanel->ResumeLayout(false);
+			this->SuggestionsADDpanel->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox6))->EndInit();
 			this->ResumeLayout(false);
 
 		}
