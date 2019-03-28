@@ -27,6 +27,6 @@ int main(array<System::String ^> ^args)
 	Application::SetCompatibleTextRenderingDefault(false); 
 
 	// Create the main window and run it
-	Application::Run(gcnew Stack_Main());
+	Application::Run(gcnew Queue_Home());
 	return 0;
 }
