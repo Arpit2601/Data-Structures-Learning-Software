@@ -307,6 +307,20 @@ namespace DataStructuresLearningSoftware {
 
 
 	private: System::Void btnBubbleSort_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+				 DB_Connection->Open();
+				 String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+				 OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+				 OleDbDataReader ^ reader = cmd->ExecuteReader();
+				 if(reader->Read()){
+					 modulesCompleted = reader->GetInt32(12);
+				 }
+
+				 DB_Connection->Close();
+
 				 if(modulesCompleted < 0){	// 0 is module ID of Bubble Sort
 					 MessageBox::Show("Complete the previous module to unlock this module");
 				 }
@@ -316,6 +330,20 @@ namespace DataStructuresLearningSoftware {
 				 }
 			 }
 	private: System::Void btnSelectionSort_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+				 DB_Connection->Open();
+				 String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+				 OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+				 OleDbDataReader ^ reader = cmd->ExecuteReader();
+				 if(reader->Read()){
+					 modulesCompleted = reader->GetInt32(12);
+				 }
+
+				 DB_Connection->Close();
+
 				 if(modulesCompleted < 1){	// 1 is module ID of Selection Sort
 					 MessageBox::Show("Complete the previous module to unlock this module");
 				 }
@@ -326,6 +354,20 @@ namespace DataStructuresLearningSoftware {
 			 }
 
 	private: System::Void btnInsertionSort_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+				 DB_Connection->Open();
+				 String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+				 OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+				 OleDbDataReader ^ reader = cmd->ExecuteReader();
+				 if(reader->Read()){
+					 modulesCompleted = reader->GetInt32(12);
+				 }
+
+				 DB_Connection->Close();
+
 				 if(modulesCompleted < 2){	// 2 is module ID of Insertion Sort
 					 MessageBox::Show("Complete the previous module to unlock this module");
 				 }
@@ -336,6 +378,20 @@ namespace DataStructuresLearningSoftware {
 			}
 	
 	private: System::Void btnMergeSort_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+				 DB_Connection->Open();
+				 String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+				 OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+				 OleDbDataReader ^ reader = cmd->ExecuteReader();
+				 if(reader->Read()){
+					 modulesCompleted = reader->GetInt32(12);
+				 }
+
+				 DB_Connection->Close();
+
 				 if(modulesCompleted < 3){	// 3 is module ID of Merge Sort
 					 MessageBox::Show("Complete the previous module to unlock this module");
 				 }
@@ -346,6 +402,20 @@ namespace DataStructuresLearningSoftware {
 			}
 
 	private: System::Void btnQuickSort_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+				 DB_Connection->Open();
+				 String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+				 OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+				 OleDbDataReader ^ reader = cmd->ExecuteReader();
+				 if(reader->Read()){
+					 modulesCompleted = reader->GetInt32(12);
+				 }
+
+				 DB_Connection->Close();
+
 				 if(modulesCompleted < 4){	// 4 is module ID of Quick Sort
 					 MessageBox::Show("Complete the previous module to unlock this module");
 				 }
@@ -356,6 +426,20 @@ namespace DataStructuresLearningSoftware {
 			}
 	
 	private: System::Void btnQuiz_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+				 DB_Connection->Open();
+				 String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+				 OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+				 OleDbDataReader ^ reader = cmd->ExecuteReader();
+				 if(reader->Read()){
+					 modulesCompleted = reader->GetInt32(12);
+				 }
+
+				 DB_Connection->Close();
+
 				 if(modulesCompleted < 5){	// 5 is module ID of Quiz
 					 MessageBox::Show("Complete the previous module to unlock this module");
 				 }
@@ -381,6 +465,8 @@ namespace DataStructuresLearningSoftware {
 					 fullname = reader->GetString(2);
 					 modulesCompleted = reader->GetInt32(12);
 				 }
+
+				 DB_Connection->Close();
 
 				 lblWelcome->Text = "Welcome, "+fullname;
 
@@ -503,6 +589,20 @@ namespace DataStructuresLearningSoftware {
 			}
 
 	private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+				 DB_Connection->Open();
+				 String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+				 OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+				 OleDbDataReader ^ reader = cmd->ExecuteReader();
+				 if(reader->Read()){
+					 modulesCompleted = reader->GetInt32(12);
+				 }
+
+				 DB_Connection->Close();
+
 				 if(moduleId-1 > modulesCompleted){
 					 MessageBox::Show("Complete the previous module to unlock this module");
 				 }
@@ -514,6 +614,20 @@ namespace DataStructuresLearningSoftware {
 
 
 	private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+				 DB_Connection->Open();
+				 String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+				 OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+				 OleDbDataReader ^ reader = cmd->ExecuteReader();
+				 if(reader->Read()){
+					 modulesCompleted = reader->GetInt32(12);
+				 }
+
+				 DB_Connection->Close();
+
 				 if(moduleId+1 > modulesCompleted){
 					 MessageBox::Show("Complete the previous module to unlock this module");
 				 }

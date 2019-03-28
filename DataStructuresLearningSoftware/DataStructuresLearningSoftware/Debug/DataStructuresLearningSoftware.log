@@ -1,4 +1,4 @@
-﻿Build started 28-03-2019 1:54:07 PM.
+﻿Build started 28-03-2019 5:52:49 PM.
      1>Project "D:\Github\Data-Structures-Learning-Software\DataStructuresLearningSoftware\DataStructuresLearningSoftware\DataStructuresLearningSoftware.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Touching "Debug\DataStructuresLearningSoftware.unsuccessfulbuild".
@@ -22,4 +22,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.55
+Time Elapsed 00:00:00.50
