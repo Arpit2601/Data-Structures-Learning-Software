@@ -552,17 +552,12 @@ namespace DataStructuresLearningSoftware {
 						modulesCompleted = reader->GetInt32(update_id);
 					}
 
-					modulesCompleted++;
-					String ^updateString = "UPDATE Users SET " + update_name +" = " + modulesCompleted + " WHERE UserName='" + username + "'";
-					OleDb::OleDbCommand ^command = gcnew OleDb::OleDbCommand(updateString, DB_Connection);
-					command->ExecuteScalar();
-					DB_Connection->Close();
-
-
-					// Refresh page
-
-					if(update_id == 12){
-						
+					if(module_id >= modulesCompleted){
+						modulesCompleted++;
+						String ^updateString = "UPDATE Users SET " + update_name +" = " + modulesCompleted + " WHERE UserName='" + username + "'";
+						OleDb::OleDbCommand ^command = gcnew OleDb::OleDbCommand(updateString, DB_Connection);
+						command->ExecuteScalar();
+						DB_Connection->Close();
 					}
 				}
 				else{

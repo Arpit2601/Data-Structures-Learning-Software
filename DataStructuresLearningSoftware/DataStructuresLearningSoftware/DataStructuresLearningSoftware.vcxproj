@@ -324,8 +324,17 @@
     <EmbeddedResource Include="LinkedList1.resx">
       <DependentUpon>LinkedList1.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LinkedList_Deletion.resx">
+      <DependentUpon>LinkedList_Deletion.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinkedList_Insertion.resx">
+      <DependentUpon>LinkedList_Insertion.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LinkedList_Introduction.resx">
       <DependentUpon>LinkedList_Introduction.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinkedList_Traversal.resx">
+      <DependentUpon>LinkedList_Traversal.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.h</DependentUpon>

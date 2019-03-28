@@ -44,6 +44,9 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  label6;
 	private: System::Windows::Forms::Label^  label7;
 	private: System::Windows::Forms::Label^  label8;
+	private: System::Windows::Forms::Label^  label9;
+	private: System::Windows::Forms::Label^  label10;
+	private: System::Windows::Forms::Label^  label11;
 	protected: 
 
 	private:
@@ -69,6 +72,9 @@ namespace DataStructuresLearningSoftware {
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -161,17 +167,55 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// label8
 			// 
+			this->label8->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
 			this->label8->Location = System::Drawing::Point(21, 763);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(100, 23);
+			this->label8->Size = System::Drawing::Size(1064, 86);
 			this->label8->TabIndex = 8;
 			this->label8->Text = resources->GetString(L"label8.Text");
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label9->Location = System::Drawing::Point(20, 859);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(123, 21);
+			this->label9->TabIndex = 9;
+			this->label9->Text = L"Representation:";
+			// 
+			// label10
+			// 
+			this->label10->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label10->Location = System::Drawing::Point(21, 880);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(1065, 145);
+			this->label10->TabIndex = 10;
+			this->label10->Text = resources->GetString(L"label10.Text");
+			// 
+			// label11
+			// 
+			this->label11->BackColor = System::Drawing::Color::LightBlue;
+			this->label11->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label11->Location = System::Drawing::Point(21, 1039);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(1064, 127);
+			this->label11->TabIndex = 11;
+			this->label11->Text = L"// A linked list node \r\nstruct Node \r\n{ \r\n  int data; \r\n  struct Node *next; \r\n};" 
+				L"";
 			// 
 			// LinkedList_Introduction
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::AliceBlue;
+			this->Controls->Add(this->label11);
+			this->Controls->Add(this->label10);
+			this->Controls->Add(this->label9);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
@@ -182,7 +226,7 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Name = L"LinkedList_Introduction";
-			this->Size = System::Drawing::Size(1105, 1500);
+			this->Size = System::Drawing::Size(1105, 1300);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();

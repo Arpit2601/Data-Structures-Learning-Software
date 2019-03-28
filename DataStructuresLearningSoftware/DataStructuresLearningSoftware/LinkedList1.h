@@ -86,12 +86,12 @@ namespace DataStructuresLearningSoftware {
 			this->btnInsertion = (gcnew System::Windows::Forms::Button());
 			this->btnIntroduction = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->lblWelcome = (gcnew System::Windows::Forms::Label());
 			this->btnLogout = (gcnew System::Windows::Forms::Button());
 			this->btnHome = (gcnew System::Windows::Forms::Button());
 			this->btnNext = (gcnew System::Windows::Forms::Button());
 			this->btnBack = (gcnew System::Windows::Forms::Button());
 			this->MainPanel = (gcnew System::Windows::Forms::Panel());
-			this->lblWelcome = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->SuspendLayout();
@@ -197,6 +197,18 @@ namespace DataStructuresLearningSoftware {
 			this->panel2->Size = System::Drawing::Size(1105, 50);
 			this->panel2->TabIndex = 1;
 			// 
+			// lblWelcome
+			// 
+			this->lblWelcome->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lblWelcome->ForeColor = System::Drawing::Color::Firebrick;
+			this->lblWelcome->Location = System::Drawing::Point(50, 15);
+			this->lblWelcome->Name = L"lblWelcome";
+			this->lblWelcome->Size = System::Drawing::Size(905, 20);
+			this->lblWelcome->TabIndex = 4;
+			this->lblWelcome->Text = L"label1";
+			this->lblWelcome->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			// 
 			// btnLogout
 			// 
 			this->btnLogout->Cursor = System::Windows::Forms::Cursors::Hand;
@@ -249,22 +261,11 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// MainPanel
 			// 
+			this->MainPanel->AutoScroll = true;
 			this->MainPanel->Location = System::Drawing::Point(175, 50);
 			this->MainPanel->Name = L"MainPanel";
 			this->MainPanel->Size = System::Drawing::Size(1105, 670);
 			this->MainPanel->TabIndex = 2;
-			// 
-			// lblWelcome
-			// 
-			this->lblWelcome->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->lblWelcome->ForeColor = System::Drawing::Color::Firebrick;
-			this->lblWelcome->Location = System::Drawing::Point(50, 15);
-			this->lblWelcome->Name = L"lblWelcome";
-			this->lblWelcome->Size = System::Drawing::Size(905, 20);
-			this->lblWelcome->TabIndex = 4;
-			this->lblWelcome->Text = L"label1";
-			this->lblWelcome->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
 			// LinkedList1
 			// 
