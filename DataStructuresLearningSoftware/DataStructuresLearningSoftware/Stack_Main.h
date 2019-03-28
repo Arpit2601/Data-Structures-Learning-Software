@@ -301,6 +301,8 @@ namespace DataStructuresLearningSoftware {
 
 		}
 #pragma endregion
+	public: String ^username;
+
 	private: System::Void Stack_Main_Load(System::Object^  sender, System::EventArgs^  e) {
 				 button1->BackColor = Color::PaleTurquoise;
 				 button2->BackColor = Color::LightSeaGreen;

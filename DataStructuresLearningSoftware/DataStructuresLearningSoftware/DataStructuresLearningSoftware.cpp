@@ -29,6 +29,7 @@ int main(array<System::String ^> ^args)
 	// Create the main window and run it
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	Application::Run(gcnew LoginForm());
 =======
 	Application::Run(gcnew Stack_Main());
@@ -36,5 +37,8 @@ int main(array<System::String ^> ^args)
 =======
 	Application::Run(gcnew Queue_Home());
 >>>>>>> 135305b2f2bea9eee209d0ab436b3b13cf56983b
+=======
+	Application::Run(gcnew LoginForm());
+>>>>>>> 6385574a5651bb7899617d8e82630ed213b301fd
 	return 0;
 }
