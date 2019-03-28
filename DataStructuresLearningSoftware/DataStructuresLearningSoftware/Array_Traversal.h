@@ -8,7 +8,7 @@ using namespace System::Data;
 using namespace System::Drawing;
 
 
-namespace AandLink {
+namespace DataStructuresLearningSoftware {
 
 	/// <summary>
 	/// Summary for Array_Traversal
@@ -35,7 +35,7 @@ namespace AandLink {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^  trav_lab_ar;
+
 	protected: 
 	private: System::Windows::Forms::Panel^  panelForTraversal;
 	private: System::Windows::Forms::Label^  Llabel;
@@ -57,6 +57,7 @@ namespace AandLink {
 	private: System::Windows::Forms::Label^  LB2;
 	private: System::Windows::Forms::Label^  LB1;
 	private: System::Windows::Forms::Timer^  timerTraversal;
+	private: System::Windows::Forms::Label^  label1;
 
 	private: System::ComponentModel::IContainer^  components;
 
@@ -74,7 +75,6 @@ namespace AandLink {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			this->trav_lab_ar = (gcnew System::Windows::Forms::Label());
 			this->panelForTraversal = (gcnew System::Windows::Forms::Panel());
 			this->Llabel = (gcnew System::Windows::Forms::Label());
 			this->btnPlay = (gcnew System::Windows::Forms::Button());
@@ -95,19 +95,9 @@ namespace AandLink {
 			this->LB2 = (gcnew System::Windows::Forms::Label());
 			this->LB1 = (gcnew System::Windows::Forms::Label());
 			this->timerTraversal = (gcnew System::Windows::Forms::Timer(this->components));
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panelForTraversal->SuspendLayout();
 			this->SuspendLayout();
-			// 
-			// trav_lab_ar
-			// 
-			this->trav_lab_ar->AutoSize = true;
-			this->trav_lab_ar->Font = (gcnew System::Drawing::Font(L"Century Gothic", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->trav_lab_ar->Location = System::Drawing::Point(14, 10);
-			this->trav_lab_ar->Name = L"trav_lab_ar";
-			this->trav_lab_ar->Size = System::Drawing::Size(115, 28);
-			this->trav_lab_ar->TabIndex = 7;
-			this->trav_lab_ar->Text = L"Traversal";
 			// 
 			// panelForTraversal
 			// 
@@ -130,18 +120,20 @@ namespace AandLink {
 			this->panelForTraversal->Controls->Add(this->LB4);
 			this->panelForTraversal->Controls->Add(this->LB2);
 			this->panelForTraversal->Controls->Add(this->LB1);
-			this->panelForTraversal->Location = System::Drawing::Point(28, 276);
+			this->panelForTraversal->Location = System::Drawing::Point(176, 189);
+			this->panelForTraversal->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panelForTraversal->Name = L"panelForTraversal";
-			this->panelForTraversal->Size = System::Drawing::Size(1002, 307);
+			this->panelForTraversal->Size = System::Drawing::Size(752, 249);
 			this->panelForTraversal->TabIndex = 8;
 			// 
 			// Llabel
 			// 
 			this->Llabel->BackColor = System::Drawing::SystemColors::MenuHighlight;
 			this->Llabel->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->Llabel->Location = System::Drawing::Point(11, 53);
+			this->Llabel->Location = System::Drawing::Point(8, 43);
+			this->Llabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->Llabel->Name = L"Llabel";
-			this->Llabel->Size = System::Drawing::Size(100, 50);
+			this->Llabel->Size = System::Drawing::Size(76, 41);
 			this->Llabel->TabIndex = 15;
 			this->Llabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -149,9 +141,10 @@ namespace AandLink {
 			// 
 			this->btnPlay->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->btnPlay->Location = System::Drawing::Point(877, 11);
+			this->btnPlay->Location = System::Drawing::Point(658, 9);
+			this->btnPlay->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnPlay->Name = L"btnPlay";
-			this->btnPlay->Size = System::Drawing::Size(103, 31);
+			this->btnPlay->Size = System::Drawing::Size(77, 25);
 			this->btnPlay->TabIndex = 4;
 			this->btnPlay->Text = L"Play";
 			this->btnPlay->UseVisualStyleBackColor = true;
@@ -161,9 +154,10 @@ namespace AandLink {
 			// 
 			this->btnPause->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->btnPause->Location = System::Drawing::Point(771, 11);
+			this->btnPause->Location = System::Drawing::Point(578, 9);
+			this->btnPause->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnPause->Name = L"btnPause";
-			this->btnPause->Size = System::Drawing::Size(100, 31);
+			this->btnPause->Size = System::Drawing::Size(75, 25);
 			this->btnPause->TabIndex = 5;
 			this->btnPause->Text = L"Pause";
 			this->btnPause->UseVisualStyleBackColor = true;
@@ -173,9 +167,10 @@ namespace AandLink {
 			// 
 			this->lbel7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->lbel7->Location = System::Drawing::Point(805, 226);
+			this->lbel7->Location = System::Drawing::Point(604, 184);
+			this->lbel7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbel7->Name = L"lbel7";
-			this->lbel7->Size = System::Drawing::Size(100, 50);
+			this->lbel7->Size = System::Drawing::Size(75, 41);
 			this->lbel7->TabIndex = 14;
 			this->lbel7->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -183,9 +178,10 @@ namespace AandLink {
 			// 
 			this->lbel6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->lbel6->Location = System::Drawing::Point(685, 226);
+			this->lbel6->Location = System::Drawing::Point(514, 184);
+			this->lbel6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbel6->Name = L"lbel6";
-			this->lbel6->Size = System::Drawing::Size(100, 50);
+			this->lbel6->Size = System::Drawing::Size(75, 41);
 			this->lbel6->TabIndex = 13;
 			this->lbel6->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -193,9 +189,10 @@ namespace AandLink {
 			// 
 			this->btnStart->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->btnStart->Location = System::Drawing::Point(665, 11);
+			this->btnStart->Location = System::Drawing::Point(499, 9);
+			this->btnStart->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnStart->Name = L"btnStart";
-			this->btnStart->Size = System::Drawing::Size(100, 31);
+			this->btnStart->Size = System::Drawing::Size(75, 25);
 			this->btnStart->TabIndex = 3;
 			this->btnStart->Text = L"Start";
 			this->btnStart->UseVisualStyleBackColor = true;
@@ -205,9 +202,10 @@ namespace AandLink {
 			// 
 			this->lbel5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->lbel5->Location = System::Drawing::Point(565, 226);
+			this->lbel5->Location = System::Drawing::Point(424, 184);
+			this->lbel5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbel5->Name = L"lbel5";
-			this->lbel5->Size = System::Drawing::Size(100, 50);
+			this->lbel5->Size = System::Drawing::Size(75, 41);
 			this->lbel5->TabIndex = 12;
 			this->lbel5->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -215,9 +213,10 @@ namespace AandLink {
 			// 
 			this->lbel4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->lbel4->Location = System::Drawing::Point(445, 226);
+			this->lbel4->Location = System::Drawing::Point(334, 184);
+			this->lbel4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbel4->Name = L"lbel4";
-			this->lbel4->Size = System::Drawing::Size(100, 50);
+			this->lbel4->Size = System::Drawing::Size(75, 41);
 			this->lbel4->TabIndex = 11;
 			this->lbel4->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -225,9 +224,10 @@ namespace AandLink {
 			// 
 			this->lbel3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->lbel3->Location = System::Drawing::Point(325, 226);
+			this->lbel3->Location = System::Drawing::Point(244, 184);
+			this->lbel3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbel3->Name = L"lbel3";
-			this->lbel3->Size = System::Drawing::Size(100, 50);
+			this->lbel3->Size = System::Drawing::Size(75, 41);
 			this->lbel3->TabIndex = 10;
 			this->lbel3->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -235,9 +235,10 @@ namespace AandLink {
 			// 
 			this->lbel2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->lbel2->Location = System::Drawing::Point(205, 226);
+			this->lbel2->Location = System::Drawing::Point(154, 184);
+			this->lbel2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbel2->Name = L"lbel2";
-			this->lbel2->Size = System::Drawing::Size(100, 50);
+			this->lbel2->Size = System::Drawing::Size(75, 41);
 			this->lbel2->TabIndex = 9;
 			this->lbel2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -245,9 +246,10 @@ namespace AandLink {
 			// 
 			this->lbel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->lbel1->Location = System::Drawing::Point(85, 226);
+			this->lbel1->Location = System::Drawing::Point(64, 184);
+			this->lbel1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbel1->Name = L"lbel1";
-			this->lbel1->Size = System::Drawing::Size(100, 50);
+			this->lbel1->Size = System::Drawing::Size(75, 41);
 			this->lbel1->TabIndex = 8;
 			this->lbel1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
@@ -256,9 +258,10 @@ namespace AandLink {
 			this->LB5->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->LB5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->LB5->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->LB5->Location = System::Drawing::Point(565, 113);
+			this->LB5->Location = System::Drawing::Point(424, 92);
+			this->LB5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->LB5->Name = L"LB5";
-			this->LB5->Size = System::Drawing::Size(100, 100);
+			this->LB5->Size = System::Drawing::Size(76, 82);
 			this->LB5->TabIndex = 6;
 			this->LB5->Text = L"45";
 			this->LB5->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -268,9 +271,10 @@ namespace AandLink {
 			this->LB3->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->LB3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->LB3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->LB3->Location = System::Drawing::Point(325, 113);
+			this->LB3->Location = System::Drawing::Point(244, 92);
+			this->LB3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->LB3->Name = L"LB3";
-			this->LB3->Size = System::Drawing::Size(100, 100);
+			this->LB3->Size = System::Drawing::Size(76, 82);
 			this->LB3->TabIndex = 5;
 			this->LB3->Text = L"897";
 			this->LB3->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -280,9 +284,10 @@ namespace AandLink {
 			this->LB7->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->LB7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->LB7->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->LB7->Location = System::Drawing::Point(805, 113);
+			this->LB7->Location = System::Drawing::Point(604, 92);
+			this->LB7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->LB7->Name = L"LB7";
-			this->LB7->Size = System::Drawing::Size(100, 100);
+			this->LB7->Size = System::Drawing::Size(76, 82);
 			this->LB7->TabIndex = 4;
 			this->LB7->Text = L"245";
 			this->LB7->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -292,9 +297,10 @@ namespace AandLink {
 			this->LB6->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->LB6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->LB6->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->LB6->Location = System::Drawing::Point(685, 113);
+			this->LB6->Location = System::Drawing::Point(514, 92);
+			this->LB6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->LB6->Name = L"LB6";
-			this->LB6->Size = System::Drawing::Size(100, 100);
+			this->LB6->Size = System::Drawing::Size(76, 82);
 			this->LB6->TabIndex = 3;
 			this->LB6->Text = L"64";
 			this->LB6->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -304,9 +310,10 @@ namespace AandLink {
 			this->LB4->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->LB4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->LB4->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->LB4->Location = System::Drawing::Point(445, 113);
+			this->LB4->Location = System::Drawing::Point(334, 92);
+			this->LB4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->LB4->Name = L"LB4";
-			this->LB4->Size = System::Drawing::Size(100, 100);
+			this->LB4->Size = System::Drawing::Size(76, 82);
 			this->LB4->TabIndex = 2;
 			this->LB4->Text = L"23";
 			this->LB4->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -316,9 +323,10 @@ namespace AandLink {
 			this->LB2->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->LB2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->LB2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->LB2->Location = System::Drawing::Point(205, 113);
+			this->LB2->Location = System::Drawing::Point(154, 92);
+			this->LB2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->LB2->Name = L"LB2";
-			this->LB2->Size = System::Drawing::Size(100, 100);
+			this->LB2->Size = System::Drawing::Size(76, 82);
 			this->LB2->TabIndex = 1;
 			this->LB2->Text = L"244";
 			this->LB2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -328,9 +336,10 @@ namespace AandLink {
 			this->LB1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->LB1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->LB1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->LB1->Location = System::Drawing::Point(85, 113);
+			this->LB1->Location = System::Drawing::Point(64, 92);
+			this->LB1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->LB1->Name = L"LB1";
-			this->LB1->Size = System::Drawing::Size(100, 100);
+			this->LB1->Size = System::Drawing::Size(76, 82);
 			this->LB1->TabIndex = 0;
 			this->LB1->Text = L"10";
 			this->LB1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -340,20 +349,36 @@ namespace AandLink {
 			this->timerTraversal->Interval = 1;
 			this->timerTraversal->Tick += gcnew System::EventHandler(this, &Array_Traversal::timerTraversal_Tick);
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Buxton Sketch", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(397, 20);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(310, 39);
+			this->label1->TabIndex = 9;
+			this->label1->Text = L"TRAVERSAL IN ARRAYS";
+			// 
 			// Array_Traversal
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::Honeydew;
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->panelForTraversal);
-			this->Controls->Add(this->trav_lab_ar);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"Array_Traversal";
-			this->Size = System::Drawing::Size(1059, 610);
+			this->Size = System::Drawing::Size(1065, 670);
 			this->panelForTraversal->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+
+		public: String ^username;
+
 		private: System::Void timerTraversal_Tick(System::Object^  sender, System::EventArgs^  e) {
 
 			 int var = this->Llabel->Location.X;

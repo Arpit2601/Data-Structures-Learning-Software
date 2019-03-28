@@ -8,7 +8,7 @@ using namespace System::Data;
 using namespace System::Drawing;
 
 
-namespace AandLink {
+namespace DataStructuresLearningSoftware {
 
 	/// <summary>
 	/// Summary for LinkedList_Deletion
@@ -297,6 +297,9 @@ namespace AandLink {
 
 		}
 #pragma endregion
+
+	public: String ^username;
+
 	private: System::Void delete_ll_but_Click(System::Object^  sender, System::EventArgs^  e) {
 				 if(this->deletevalue->Text==""){
 					 this->deletevalue->Text = "";

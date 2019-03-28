@@ -558,6 +558,9 @@ namespace DataStructuresLearningSoftware {
 					command->ExecuteScalar();
 					DB_Connection->Close();
 
+
+					// Refresh page
+
 					if(update_id == 12){
 						
 					}
