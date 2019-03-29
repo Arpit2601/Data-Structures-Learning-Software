@@ -57,10 +57,10 @@ namespace sorting_user_control {
 		}
 	private: System::Windows::Forms::Timer^  timer1;
 	private: System::Windows::Forms::TextBox^  txtFrom;
-	private: System::Windows::Forms::Label^  l1;
-	private: System::Windows::Forms::Label^  l2;
-	private: System::Windows::Forms::Label^  l3;
-	private: System::Windows::Forms::Label^  l4;
+
+
+
+
 	private: System::Windows::Forms::TextBox^  txtTo;
 	private: System::Windows::Forms::Button^  btnAdd;
 	private: System::Windows::Forms::Button^  btnDFS;
@@ -70,10 +70,49 @@ namespace sorting_user_control {
 	private: System::Windows::Forms::Button^  btnPause;
 	private: System::Windows::Forms::Button^  btnDecrease;
 	private: System::Windows::Forms::Button^  btnIncrease;
-	private: System::Windows::Forms::Label^  l5;
-	private: System::Windows::Forms::Label^  l6;
-	private: System::Windows::Forms::Label^  l7;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls78;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls68;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls67;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls58;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls57;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls56;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls48;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls47;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls46;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls45;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls38;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls37;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls36;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls35;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls34;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls27;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls28;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls24;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls23;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls25;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls14;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls18;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls16;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls15;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls17;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls13;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls12;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls26;
+	private: Microsoft::VisualBasic::PowerPacks::ShapeContainer^  shapeContainer1;
+	private: System::Windows::Forms::Label^  l1;
+	private: System::Windows::Forms::Label^  l2;
+	private: System::Windows::Forms::Label^  l3;
+	private: System::Windows::Forms::Label^  l4;
 	private: System::Windows::Forms::Label^  l8;
+	private: System::Windows::Forms::Label^  l7;
+	private: System::Windows::Forms::Label^  l6;
+	private: System::Windows::Forms::Label^  l5;
+
+
+
+
+
+
 
 	protected: 
 	private: System::ComponentModel::IContainer^  components;
@@ -94,10 +133,6 @@ namespace sorting_user_control {
 			this->components = (gcnew System::ComponentModel::Container());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->txtFrom = (gcnew System::Windows::Forms::TextBox());
-			this->l1 = (gcnew System::Windows::Forms::Label());
-			this->l2 = (gcnew System::Windows::Forms::Label());
-			this->l3 = (gcnew System::Windows::Forms::Label());
-			this->l4 = (gcnew System::Windows::Forms::Label());
 			this->txtTo = (gcnew System::Windows::Forms::TextBox());
 			this->btnAdd = (gcnew System::Windows::Forms::Button());
 			this->btnDFS = (gcnew System::Windows::Forms::Button());
@@ -107,10 +142,43 @@ namespace sorting_user_control {
 			this->btnPause = (gcnew System::Windows::Forms::Button());
 			this->btnDecrease = (gcnew System::Windows::Forms::Button());
 			this->btnIncrease = (gcnew System::Windows::Forms::Button());
-			this->l5 = (gcnew System::Windows::Forms::Label());
-			this->l6 = (gcnew System::Windows::Forms::Label());
-			this->l7 = (gcnew System::Windows::Forms::Label());
+			this->ls78 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls68 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls67 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls58 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls57 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls56 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls48 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls47 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls46 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls45 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls38 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls37 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls36 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls35 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls34 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls27 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls28 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls24 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls23 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls25 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls14 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls18 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls16 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls15 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls17 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls13 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls12 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls26 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->shapeContainer1 = (gcnew Microsoft::VisualBasic::PowerPacks::ShapeContainer());
+			this->l1 = (gcnew System::Windows::Forms::Label());
+			this->l2 = (gcnew System::Windows::Forms::Label());
+			this->l3 = (gcnew System::Windows::Forms::Label());
+			this->l4 = (gcnew System::Windows::Forms::Label());
 			this->l8 = (gcnew System::Windows::Forms::Label());
+			this->l7 = (gcnew System::Windows::Forms::Label());
+			this->l6 = (gcnew System::Windows::Forms::Label());
+			this->l5 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// timer1
@@ -125,62 +193,6 @@ namespace sorting_user_control {
 			this->txtFrom->Size = System::Drawing::Size(100, 20);
 			this->txtFrom->TabIndex = 0;
 			this->txtFrom->TextChanged += gcnew System::EventHandler(this, &Graph::txtFrom_TextChanged);
-			// 
-			// l1
-			// 
-			this->l1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->l1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->l1->Location = System::Drawing::Point(538, 25);
-			this->l1->Name = L"l1";
-			this->l1->Size = System::Drawing::Size(30, 30);
-			this->l1->TabIndex = 1;
-			this->l1->Text = L"1";
-			this->l1->Visible = false;
-			this->l1->Click += gcnew System::EventHandler(this, &Graph::l1_Click);
-			// 
-			// l2
-			// 
-			this->l2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->l2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->l2->Location = System::Drawing::Point(617, 155);
-			this->l2->Name = L"l2";
-			this->l2->Size = System::Drawing::Size(30, 30);
-			this->l2->TabIndex = 2;
-			this->l2->Text = L"2";
-			this->l2->Visible = false;
-			this->l2->Click += gcnew System::EventHandler(this, &Graph::l2_Click);
-			// 
-			// l3
-			// 
-			this->l3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->l3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->l3->Location = System::Drawing::Point(414, 185);
-			this->l3->Name = L"l3";
-			this->l3->Size = System::Drawing::Size(30, 30);
-			this->l3->TabIndex = 3;
-			this->l3->Text = L"3";
-			this->l3->Visible = false;
-			this->l3->Click += gcnew System::EventHandler(this, &Graph::l3_Click);
-			// 
-			// l4
-			// 
-			this->l4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->l4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->l4->Location = System::Drawing::Point(225, 266);
-			this->l4->Name = L"l4";
-			this->l4->Size = System::Drawing::Size(30, 30);
-			this->l4->TabIndex = 4;
-			this->l4->Text = L"4";
-			this->l4->Visible = false;
-			this->l4->Click += gcnew System::EventHandler(this, &Graph::l4_Click);
 			// 
 			// txtTo
 			// 
@@ -281,44 +293,350 @@ namespace sorting_user_control {
 			this->btnIncrease->Visible = false;
 			this->btnIncrease->Click += gcnew System::EventHandler(this, &Graph::btnIncrease_Click);
 			// 
-			// l5
+			// ls78
 			// 
-			this->l5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
+			this->ls78->BorderWidth = 3;
+			this->ls78->Name = L"ls78";
+			this->ls78->Visible = false;
+			this->ls78->X1 = 262;
+			this->ls78->X2 = 843;
+			this->ls78->Y1 = 87;
+			this->ls78->Y2 = 161;
+			// 
+			// ls68
+			// 
+			this->ls68->BorderWidth = 3;
+			this->ls68->Name = L"ls68";
+			this->ls68->Visible = false;
+			this->ls68->X1 = 469;
+			this->ls68->X2 = 251;
+			this->ls68->Y1 = 324;
+			this->ls68->Y2 = 111;
+			// 
+			// ls67
+			// 
+			this->ls67->BorderWidth = 3;
+			this->ls67->Name = L"ls67";
+			this->ls67->Visible = false;
+			this->ls67->X1 = 508;
+			this->ls67->X2 = 852;
+			this->ls67->Y1 = 320;
+			this->ls67->Y2 = 184;
+			// 
+			// ls58
+			// 
+			this->ls58->BorderWidth = 3;
+			this->ls58->Name = L"ls58";
+			this->ls58->Visible = false;
+			this->ls58->X1 = 263;
+			this->ls58->X2 = 742;
+			this->ls58->Y1 = 103;
+			this->ls58->Y2 = 290;
+			// 
+			// ls57
+			// 
+			this->ls57->BorderWidth = 3;
+			this->ls57->Name = L"ls57";
+			this->ls57->Visible = false;
+			this->ls57->X1 = 782;
+			this->ls57->X2 = 862;
+			this->ls57->Y1 = 288;
+			this->ls57->Y2 = 186;
+			// 
+			// ls56
+			// 
+			this->ls56->BorderWidth = 3;
+			this->ls56->Name = L"ls56";
+			this->ls56->Visible = false;
+			this->ls56->X1 = 507;
+			this->ls56->X2 = 745;
+			this->ls56->Y1 = 337;
+			this->ls56->Y2 = 307;
+			// 
+			// ls48
+			// 
+			this->ls48->BorderWidth = 3;
+			this->ls48->Name = L"ls48";
+			this->ls48->Visible = false;
+			this->ls48->X1 = 226;
+			this->ls48->X2 = 243;
+			this->ls48->Y1 = 272;
+			this->ls48->Y2 = 109;
+			// 
+			// ls47
+			// 
+			this->ls47->BorderWidth = 3;
+			this->ls47->Name = L"ls47";
+			this->ls47->Visible = false;
+			this->ls47->X1 = 248;
+			this->ls47->X2 = 842;
+			this->ls47->Y1 = 289;
+			this->ls47->Y2 = 173;
+			// 
+			// ls46
+			// 
+			this->ls46->BorderWidth = 3;
+			this->ls46->Name = L"ls46";
+			this->ls46->Visible = false;
+			this->ls46->X1 = 470;
+			this->ls46->X2 = 244;
+			this->ls46->Y1 = 337;
+			this->ls46->Y2 = 299;
+			// 
+			// ls45
+			// 
+			this->ls45->BorderWidth = 3;
+			this->ls45->Name = L"ls45";
+			this->ls45->Visible = false;
+			this->ls45->X1 = 745;
+			this->ls45->X2 = 245;
+			this->ls45->Y1 = 299;
+			this->ls45->Y2 = 291;
+			// 
+			// ls38
+			// 
+			this->ls38->BorderWidth = 3;
+			this->ls38->Name = L"ls38";
+			this->ls38->Visible = false;
+			this->ls38->X1 = 260;
+			this->ls38->X2 = 398;
+			this->ls38->Y1 = 110;
+			this->ls38->Y2 = 202;
+			// 
+			// ls37
+			// 
+			this->ls37->BorderWidth = 3;
+			this->ls37->Name = L"ls37";
+			this->ls37->Visible = false;
+			this->ls37->X1 = 843;
+			this->ls37->X2 = 435;
+			this->ls37->Y1 = 182;
+			this->ls37->Y2 = 211;
+			// 
+			// ls36
+			// 
+			this->ls36->BorderWidth = 3;
+			this->ls36->Name = L"ls36";
+			this->ls36->Visible = false;
+			this->ls36->X1 = 474;
+			this->ls36->X2 = 423;
+			this->ls36->Y1 = 310;
+			this->ls36->Y2 = 227;
+			// 
+			// ls35
+			// 
+			this->ls35->BorderWidth = 3;
+			this->ls35->Name = L"ls35";
+			this->ls35->Visible = false;
+			this->ls35->X1 = 745;
+			this->ls35->X2 = 434;
+			this->ls35->Y1 = 294;
+			this->ls35->Y2 = 216;
+			// 
+			// ls34
+			// 
+			this->ls34->BorderWidth = 3;
+			this->ls34->Name = L"ls34";
+			this->ls34->Visible = false;
+			this->ls34->X1 = 245;
+			this->ls34->X2 = 398;
+			this->ls34->Y1 = 281;
+			this->ls34->Y2 = 217;
+			// 
+			// ls27
+			// 
+			this->ls27->BorderWidth = 3;
+			this->ls27->Name = L"ls27";
+			this->ls27->Visible = false;
+			this->ls27->X1 = 843;
+			this->ls27->X2 = 636;
+			this->ls27->Y1 = 166;
+			this->ls27->Y2 = 175;
+			// 
+			// ls28
+			// 
+			this->ls28->BorderWidth = 3;
+			this->ls28->Name = L"ls28";
+			this->ls28->Visible = false;
+			this->ls28->X1 = 261;
+			this->ls28->X2 = 602;
+			this->ls28->Y1 = 95;
+			this->ls28->Y2 = 173;
+			// 
+			// ls24
+			// 
+			this->ls24->BorderWidth = 3;
+			this->ls24->Name = L"ls24";
+			this->ls24->Visible = false;
+			this->ls24->X1 = 246;
+			this->ls24->X2 = 600;
+			this->ls24->Y1 = 285;
+			this->ls24->Y2 = 187;
+			// 
+			// ls23
+			// 
+			this->ls23->BorderWidth = 3;
+			this->ls23->Name = L"ls23";
+			this->ls23->Visible = false;
+			this->ls23->X1 = 433;
+			this->ls23->X2 = 603;
+			this->ls23->Y1 = 204;
+			this->ls23->Y2 = 179;
+			// 
+			// ls25
+			// 
+			this->ls25->BorderWidth = 3;
+			this->ls25->Name = L"ls25";
+			this->ls25->Visible = false;
+			this->ls25->X1 = 745;
+			this->ls25->X2 = 618;
+			this->ls25->Y1 = 289;
+			this->ls25->Y2 = 195;
+			// 
+			// ls14
+			// 
+			this->ls14->BorderWidth = 3;
+			this->ls14->Name = L"ls14";
+			this->ls14->Visible = false;
+			this->ls14->X1 = 244;
+			this->ls14->X2 = 517;
+			this->ls14->Y1 = 274;
+			this->ls14->Y2 = 57;
+			// 
+			// ls18
+			// 
+			this->ls18->BorderWidth = 3;
+			this->ls18->Name = L"ls18";
+			this->ls18->Visible = false;
+			this->ls18->X1 = 259;
+			this->ls18->X2 = 524;
+			this->ls18->Y1 = 79;
+			this->ls18->Y2 = 45;
+			// 
+			// ls16
+			// 
+			this->ls16->BorderWidth = 3;
+			this->ls16->Name = L"ls16";
+			this->ls16->Visible = false;
+			this->ls16->X1 = 489;
+			this->ls16->X2 = 535;
+			this->ls16->Y1 = 310;
+			this->ls16->Y2 = 66;
+			// 
+			// ls15
+			// 
+			this->ls15->BorderWidth = 3;
+			this->ls15->Name = L"ls15";
+			this->ls15->Visible = false;
+			this->ls15->X1 = 748;
+			this->ls15->X2 = 558;
+			this->ls15->Y1 = 278;
+			this->ls15->Y2 = 58;
+			// 
+			// ls17
+			// 
+			this->ls17->BorderWidth = 3;
+			this->ls17->Name = L"ls17";
+			this->ls17->Visible = false;
+			this->ls17->X1 = 841;
+			this->ls17->X2 = 559;
+			this->ls17->Y1 = 154;
+			this->ls17->Y2 = 50;
+			// 
+			// ls13
+			// 
+			this->ls13->BorderWidth = 3;
+			this->ls13->Name = L"ls13";
+			this->ls13->Visible = false;
+			this->ls13->X1 = 433;
+			this->ls13->X2 = 525;
+			this->ls13->Y1 = 192;
+			this->ls13->Y2 = 66;
+			// 
+			// ls12
+			// 
+			this->ls12->BorderWidth = 3;
+			this->ls12->Name = L"ls12";
+			this->ls12->Visible = false;
+			this->ls12->X1 = 603;
+			this->ls12->X2 = 552;
+			this->ls12->Y1 = 164;
+			this->ls12->Y2 = 66;
+			// 
+			// ls26
+			// 
+			this->ls26->BorderWidth = 3;
+			this->ls26->Name = L"ls26";
+			this->ls26->Visible = false;
+			this->ls26->X1 = 504;
+			this->ls26->X2 = 602;
+			this->ls26->Y1 = 311;
+			this->ls26->Y2 = 195;
+			// 
+			// shapeContainer1
+			// 
+			this->shapeContainer1->Location = System::Drawing::Point(0, 0);
+			this->shapeContainer1->Margin = System::Windows::Forms::Padding(0);
+			this->shapeContainer1->Name = L"shapeContainer1";
+			this->shapeContainer1->Shapes->AddRange(gcnew cli::array< Microsoft::VisualBasic::PowerPacks::Shape^  >(28) {this->ls26, this->ls12, 
+				this->ls13, this->ls17, this->ls15, this->ls16, this->ls18, this->ls14, this->ls25, this->ls23, this->ls24, this->ls28, this->ls27, 
+				this->ls34, this->ls35, this->ls36, this->ls37, this->ls38, this->ls45, this->ls46, this->ls47, this->ls48, this->ls56, this->ls57, 
+				this->ls58, this->ls67, this->ls68, this->ls78});
+			this->shapeContainer1->Size = System::Drawing::Size(1088, 631);
+			this->shapeContainer1->TabIndex = 14;
+			this->shapeContainer1->TabStop = false;
+			// 
+			// l1
+			// 
+			this->l1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->l5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->l1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l5->Location = System::Drawing::Point(726, 290);
-			this->l5->Name = L"l5";
-			this->l5->Size = System::Drawing::Size(30, 30);
-			this->l5->TabIndex = 14;
-			this->l5->Text = L"5";
-			this->l5->Visible = false;
+			this->l1->Location = System::Drawing::Point(526, 35);
+			this->l1->Name = L"l1";
+			this->l1->Size = System::Drawing::Size(30, 30);
+			this->l1->TabIndex = 29;
+			this->l1->Text = L"1";
+			this->l1->Visible = false;
 			// 
-			// l6
+			// l2
 			// 
-			this->l6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
+			this->l2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->l6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->l2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l6->Location = System::Drawing::Point(488, 305);
-			this->l6->Name = L"l6";
-			this->l6->Size = System::Drawing::Size(30, 30);
-			this->l6->TabIndex = 15;
-			this->l6->Text = L"6";
-			this->l6->Visible = false;
+			this->l2->Location = System::Drawing::Point(603, 165);
+			this->l2->Name = L"l2";
+			this->l2->Size = System::Drawing::Size(30, 30);
+			this->l2->TabIndex = 30;
+			this->l2->Text = L"2";
+			this->l2->Visible = false;
 			// 
-			// l7
+			// l3
 			// 
-			this->l7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
+			this->l3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->l7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->l3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l7->Location = System::Drawing::Point(860, 145);
-			this->l7->Name = L"l7";
-			this->l7->Size = System::Drawing::Size(30, 30);
-			this->l7->TabIndex = 16;
-			this->l7->Text = L"7";
-			this->l7->Visible = false;
+			this->l3->Location = System::Drawing::Point(403, 195);
+			this->l3->Name = L"l3";
+			this->l3->Size = System::Drawing::Size(30, 30);
+			this->l3->TabIndex = 31;
+			this->l3->Text = L"3";
+			this->l3->Visible = false;
+			// 
+			// l4
+			// 
+			this->l4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->l4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->l4->Location = System::Drawing::Point(214, 270);
+			this->l4->Name = L"l4";
+			this->l4->Size = System::Drawing::Size(30, 30);
+			this->l4->TabIndex = 32;
+			this->l4->Text = L"4";
+			this->l4->Visible = false;
 			// 
 			// l8
 			// 
@@ -326,21 +644,64 @@ namespace sorting_user_control {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l8->Location = System::Drawing::Point(243, 69);
+			this->l8->Location = System::Drawing::Point(231, 80);
 			this->l8->Name = L"l8";
 			this->l8->Size = System::Drawing::Size(30, 30);
-			this->l8->TabIndex = 17;
+			this->l8->TabIndex = 36;
 			this->l8->Text = L"8";
 			this->l8->Visible = false;
+			// 
+			// l7
+			// 
+			this->l7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->l7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->l7->Location = System::Drawing::Point(846, 154);
+			this->l7->Name = L"l7";
+			this->l7->Size = System::Drawing::Size(30, 30);
+			this->l7->TabIndex = 37;
+			this->l7->Text = L"7";
+			this->l7->Visible = false;
+			// 
+			// l6
+			// 
+			this->l6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->l6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->l6->Location = System::Drawing::Point(474, 314);
+			this->l6->Name = L"l6";
+			this->l6->Size = System::Drawing::Size(30, 30);
+			this->l6->TabIndex = 38;
+			this->l6->Text = L"6";
+			this->l6->Visible = false;
+			// 
+			// l5
+			// 
+			this->l5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->l5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->l5->Location = System::Drawing::Point(749, 282);
+			this->l5->Name = L"l5";
+			this->l5->Size = System::Drawing::Size(30, 30);
+			this->l5->TabIndex = 39;
+			this->l5->Text = L"5";
+			this->l5->Visible = false;
 			// 
 			// Graph
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->Controls->Add(this->l8);
-			this->Controls->Add(this->l7);
-			this->Controls->Add(this->l6);
 			this->Controls->Add(this->l5);
+			this->Controls->Add(this->l6);
+			this->Controls->Add(this->l7);
+			this->Controls->Add(this->l8);
+			this->Controls->Add(this->l4);
+			this->Controls->Add(this->l3);
+			this->Controls->Add(this->l2);
+			this->Controls->Add(this->l1);
 			this->Controls->Add(this->btnIncrease);
 			this->Controls->Add(this->btnDecrease);
 			this->Controls->Add(this->btnPause);
@@ -350,11 +711,8 @@ namespace sorting_user_control {
 			this->Controls->Add(this->btnDFS);
 			this->Controls->Add(this->btnAdd);
 			this->Controls->Add(this->txtTo);
-			this->Controls->Add(this->l4);
-			this->Controls->Add(this->l3);
-			this->Controls->Add(this->l2);
-			this->Controls->Add(this->l1);
 			this->Controls->Add(this->txtFrom);
+			this->Controls->Add(this->shapeContainer1);
 			this->Name = L"Graph";
 			this->Size = System::Drawing::Size(1088, 631);
 			this->Load += gcnew System::EventHandler(this, &Graph::Graph_Load);
@@ -416,48 +774,6 @@ namespace sorting_user_control {
 				if(c==2)l8->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l8->BackColor=System::Drawing::Color::White;
 				break;
-			/*case 9:
-				if(c==0)l9->BackColor=System::Drawing::Color::FromArgb(192,255,192);
-				if(c==1)l9->BackColor=System::Drawing::Color::Pink;
-				if(c==2)l9->BackColor=System::Drawing::Color::Yellow;
-				if(c==3)l9->BackColor=System::Drawing::Color::White;
-				break;
-			case 10:
-				if(c==0)l10->BackColor=System::Drawing::Color::FromArgb(192,255,192);
-				if(c==1)l10->BackColor=System::Drawing::Color::Pink;
-				if(c==2)l10->BackColor=System::Drawing::Color::Yellow;
-				if(c==3)l10->BackColor=System::Drawing::Color::White;
-				break;
-			case 11:
-				if(c==0)l11->BackColor=System::Drawing::Color::FromArgb(192,255,192);
-				if(c==1)l11->BackColor=System::Drawing::Color::Pink;
-				if(c==2)l11->BackColor=System::Drawing::Color::Yellow;
-				if(c==3)l11->BackColor=System::Drawing::Color::White;
-				break;
-			case 12:
-				if(c==0)l12->BackColor=System::Drawing::Color::FromArgb(192,255,192);
-				if(c==1)l12->BackColor=System::Drawing::Color::Pink;
-				if(c==2)l12->BackColor=System::Drawing::Color::Yellow;
-				if(c==3)l12->BackColor=System::Drawing::Color::White;
-				break;
-			case 13:
-				if(c==0)l13->BackColor=System::Drawing::Color::FromArgb(192,255,192);
-				if(c==1)l13->BackColor=System::Drawing::Color::Pink;
-				if(c==2)l13->BackColor=System::Drawing::Color::Yellow;
-				if(c==3)l13->BackColor=System::Drawing::Color::White;
-				break;
-			case 14:
-				if(c==0)l14->BackColor=System::Drawing::Color::FromArgb(192,255,192);
-				if(c==1)l14->BackColor=System::Drawing::Color::Pink;
-				if(c==2)l14->BackColor=System::Drawing::Color::Yellow;
-				if(c==3)l14->BackColor=System::Drawing::Color::White;
-				break;
-			case 15:
-				if(c==0)l15->BackColor=System::Drawing::Color::FromArgb(192,255,192);
-				if(c==1)l15->BackColor=System::Drawing::Color::Pink;
-				if(c==2)l15->BackColor=System::Drawing::Color::Yellow;
-				if(c==3)l15->BackColor=System::Drawing::Color::White;
-				break;*/
 			default:
 				break;
 			
@@ -499,38 +815,178 @@ namespace sorting_user_control {
 				if(i==0)l8->Visible=false;
 				if(i==1)l8->Visible=true;
 				break;
-			/*case 9:
-				if(i==0)p9->Visible=false;
-				if(i==1)p9->Visible=true;
-				break;
-			case 10:
-				if(i==0)p10->Visible=false;
-				if(i==1)p10->Visible=true;
-				break;
-			case 11:
-				if(i==0)p11->Visible=false;
-				if(i==1)p11->Visible=true;
-				break;
-			case 12:
-				if(i==0)p12->Visible=false;
-				if(i==1)p12->Visible=true;
-				break;
-			case 13:
-				if(i==0)p13->Visible=false;
-				if(i==1)p13->Visible=true;
-				break;
-			case 14:
-				if(i==0)p14->Visible=false;
-				if(i==1)p14->Visible=true;
-				break;
-			case 15:
-				if(i==0)p15->Visible=false;
-				if(i==1)p15->Visible=true;
-				break;*/
 			default:
 				break;
 		}
 	  }
+
+
+	  //making edges visible
+	  void edge(int a,int b,int i){
+		  int x=std::min(a,b);
+		  int y=std::max(a,b);
+		switch(x){
+			case 1:
+				switch(y){
+					case 2:
+						if(i==1)ls12->Visible=true;
+						if(i==0)ls12->Visible=false;
+						break;
+					case 3:
+						if(i==1)ls13->Visible=true;
+						if(i==0)ls13->Visible=false;
+						break;
+					case 4:
+						if(i==1)ls14->Visible=true;
+						if(i==0)ls14->Visible=false;
+						break;
+					case 5:
+						if(i==1)ls15->Visible=true;
+						if(i==0)ls15->Visible=false;
+						break;
+					case 6:
+						if(i==1)ls16->Visible=true;
+						if(i==0)ls16->Visible=false;
+						break;
+					case 7:
+						if(i==1)ls17->Visible=true;
+						if(i==0)ls17->Visible=false;
+						break;
+					case 8:
+						if(i==1)ls18->Visible=true;
+						if(i==0)ls18->Visible=false;
+						break;
+					default:
+						break;
+				}
+				break;
+			case 2:
+				switch(y){
+					case 3:
+						if(i==1)ls23->Visible=true;
+						if(i==0)ls23->Visible=false;
+						break;
+					case 4:
+						if(i==1)ls24->Visible=true;
+						if(i==0)ls24->Visible=false;
+						break;
+					case 5:
+						if(i==1)ls25->Visible=true;
+						if(i==0)ls25->Visible=false;;
+						break;
+					case 6:
+						if(i==1)ls26->Visible=true;
+						if(i==0)ls26->Visible=false;
+						break;
+					case 7:
+						if(i==1)ls27->Visible=true;
+						if(i==0)ls27->Visible=false;
+						break;
+					case 8:
+						if(i==1)ls28->Visible=true;
+						if(i==0)ls28->Visible=false;
+						break;
+					default:
+						break;
+				}
+				break;
+			case 3:
+				switch(y){
+					case 4:
+						if(i==1)ls34->Visible=true;
+						if(i==0)ls34->Visible=false;
+						break;
+					case 5:
+						if(i==1)ls35->Visible=true;
+						if(i==0)ls35->Visible=false;
+						break;
+					case 6:
+						if(i==1)ls36->Visible=true;
+						if(i==0)ls36->Visible=false;
+						break;
+					case 7:
+						if(i==1)ls37->Visible=true;
+						if(i==0)ls37->Visible=false;
+						break;
+					case 8:
+						if(i==1)ls38->Visible=true;
+						if(i==0)ls38->Visible=false;
+						break;
+					default:
+						break;
+				}
+				break;
+			case 4:
+				switch(y){
+					case 5:
+						if(i==1)ls45->Visible=true;
+						if(i==0)ls45->Visible=false;
+						break;
+					case 6:
+						if(i==1)ls46->Visible=true;
+						if(i==0)ls47->Visible=false;
+						break;
+					case 7:
+						if(i==1)ls47->Visible=true;
+						if(i==0)ls47->Visible=false;
+						break;
+					case 8:
+						if(i==1)ls48->Visible=true;
+						if(i==0)ls48->Visible=false;
+						break;
+					default:
+						break;
+				}
+				break;
+			case 5:
+				switch(y){
+					case 6:
+						if(i==1)ls56->Visible=true;
+						if(i==0)ls56->Visible=false;
+						break;
+					case 7:
+						if(i==1)ls57->Visible=true;
+						if(i==0)ls57->Visible=false;
+						break;
+					case 8:
+						if(i==1)ls58->Visible=true;
+						if(i==0)ls58->Visible=false;
+						break;
+					default:
+						break;
+				}
+				break;
+			case 6:
+				switch(y){
+					case 7:
+						if(i==1)ls67->Visible=true;
+						if(i==0)ls67->Visible=false;
+						break;
+					case 8:
+						if(i==1)ls68->Visible=true;
+						if(i==0)ls68->Visible=false;
+						break;
+					default:
+						break;
+				}
+				break;
+			case 7:
+				switch(y){
+					case 8:
+						if(i==1)ls78->Visible=true;
+						if(i==0)ls78->Visible=false;
+						break;
+					default:
+						break;
+				}
+				break;
+			default:
+				break;
+		}
+	  }
+
+
+
 
 	  void reset(){
 			n=0;
@@ -540,6 +996,11 @@ namespace sorting_user_control {
 			for(int i=0;i<100;i++){
 				vis[i]=0;	
 				adj[i].clear();
+			}
+			for(int i=1;i<=8;i++){
+				for(int j=i+1;j<=8;j++){
+					edge(i,j,0);
+				}
 			}
 	  
 	  }
@@ -629,6 +1090,7 @@ namespace sorting_user_control {
 						 }else if(p==1){
 							adj[a].push_back(b);
 							adj[b].push_back(a);
+							edge(a,b,1);
 							MessageBox::Show("Edge Entered Succesfully");
 						 }else{
 							addcounter--;

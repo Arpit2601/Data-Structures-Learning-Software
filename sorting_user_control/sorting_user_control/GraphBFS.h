@@ -80,6 +80,55 @@ namespace sorting_user_control {
 	private: System::Windows::Forms::Label^  l3;
 	private: System::Windows::Forms::Label^  l2;
 	private: System::Windows::Forms::Label^  l1;
+	private: Microsoft::VisualBasic::PowerPacks::ShapeContainer^  shapeContainer1;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls26;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls12;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls78;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls68;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls67;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls58;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls57;
+
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls56;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls48;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls47;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls46;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls45;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls38;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls37;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls36;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls35;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls34;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls27;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls28;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls24;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls23;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls25;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls14;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls18;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls16;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls15;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls17;
+	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls13;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -120,6 +169,35 @@ namespace sorting_user_control {
 			this->l3 = (gcnew System::Windows::Forms::Label());
 			this->l2 = (gcnew System::Windows::Forms::Label());
 			this->l1 = (gcnew System::Windows::Forms::Label());
+			this->shapeContainer1 = (gcnew Microsoft::VisualBasic::PowerPacks::ShapeContainer());
+			this->ls78 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls68 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls67 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls58 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls57 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls56 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls48 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls47 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls46 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls45 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls38 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls37 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls36 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls35 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls34 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls27 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls28 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls24 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls23 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls25 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls14 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls18 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls16 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls15 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls17 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls13 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls12 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->ls26 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
 			this->SuspendLayout();
 			// 
 			// btnIncrease
@@ -274,7 +352,7 @@ namespace sorting_user_control {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l5->Location = System::Drawing::Point(713, 298);
+			this->l5->Location = System::Drawing::Point(748, 279);
 			this->l5->Name = L"l5";
 			this->l5->Size = System::Drawing::Size(30, 30);
 			this->l5->TabIndex = 32;
@@ -333,6 +411,299 @@ namespace sorting_user_control {
 			this->l1->Text = L"1";
 			this->l1->Visible = false;
 			// 
+			// shapeContainer1
+			// 
+			this->shapeContainer1->Location = System::Drawing::Point(0, 0);
+			this->shapeContainer1->Margin = System::Windows::Forms::Padding(0);
+			this->shapeContainer1->Name = L"shapeContainer1";
+			this->shapeContainer1->Shapes->AddRange(gcnew cli::array< Microsoft::VisualBasic::PowerPacks::Shape^  >(28) {this->ls78, this->ls68, 
+				this->ls67, this->ls58, this->ls57, this->ls56, this->ls48, this->ls47, this->ls46, this->ls45, this->ls38, this->ls37, this->ls36, 
+				this->ls35, this->ls34, this->ls27, this->ls28, this->ls24, this->ls23, this->ls25, this->ls14, this->ls18, this->ls16, this->ls15, 
+				this->ls17, this->ls13, this->ls12, this->ls26});
+			this->shapeContainer1->Size = System::Drawing::Size(1088, 631);
+			this->shapeContainer1->TabIndex = 36;
+			this->shapeContainer1->TabStop = false;
+			// 
+			// ls78
+			// 
+			this->ls78->BorderWidth = 3;
+			this->ls78->Name = L"ls78";
+			this->ls78->Visible = false;
+			this->ls78->X1 = 262;
+			this->ls78->X2 = 843;
+			this->ls78->Y1 = 86;
+			this->ls78->Y2 = 160;
+			// 
+			// ls68
+			// 
+			this->ls68->BorderWidth = 3;
+			this->ls68->Name = L"ls68";
+			this->ls68->Visible = false;
+			this->ls68->X1 = 469;
+			this->ls68->X2 = 251;
+			this->ls68->Y1 = 323;
+			this->ls68->Y2 = 110;
+			// 
+			// ls67
+			// 
+			this->ls67->BorderWidth = 3;
+			this->ls67->Name = L"ls67";
+			this->ls67->Visible = false;
+			this->ls67->X1 = 508;
+			this->ls67->X2 = 852;
+			this->ls67->Y1 = 319;
+			this->ls67->Y2 = 183;
+			// 
+			// ls58
+			// 
+			this->ls58->BorderWidth = 3;
+			this->ls58->Name = L"ls58";
+			this->ls58->Visible = false;
+			this->ls58->X1 = 263;
+			this->ls58->X2 = 742;
+			this->ls58->Y1 = 102;
+			this->ls58->Y2 = 289;
+			// 
+			// ls57
+			// 
+			this->ls57->BorderWidth = 3;
+			this->ls57->Name = L"ls57";
+			this->ls57->Visible = false;
+			this->ls57->X1 = 782;
+			this->ls57->X2 = 862;
+			this->ls57->Y1 = 287;
+			this->ls57->Y2 = 185;
+			// 
+			// ls56
+			// 
+			this->ls56->BorderWidth = 3;
+			this->ls56->Name = L"ls56";
+			this->ls56->Visible = false;
+			this->ls56->X1 = 507;
+			this->ls56->X2 = 745;
+			this->ls56->Y1 = 336;
+			this->ls56->Y2 = 306;
+			// 
+			// ls48
+			// 
+			this->ls48->BorderWidth = 3;
+			this->ls48->Name = L"ls48";
+			this->ls48->Visible = false;
+			this->ls48->X1 = 226;
+			this->ls48->X2 = 243;
+			this->ls48->Y1 = 271;
+			this->ls48->Y2 = 108;
+			// 
+			// ls47
+			// 
+			this->ls47->BorderWidth = 3;
+			this->ls47->Name = L"ls47";
+			this->ls47->Visible = false;
+			this->ls47->X1 = 248;
+			this->ls47->X2 = 842;
+			this->ls47->Y1 = 288;
+			this->ls47->Y2 = 172;
+			// 
+			// ls46
+			// 
+			this->ls46->BorderWidth = 3;
+			this->ls46->Name = L"ls46";
+			this->ls46->Visible = false;
+			this->ls46->X1 = 470;
+			this->ls46->X2 = 244;
+			this->ls46->Y1 = 336;
+			this->ls46->Y2 = 298;
+			// 
+			// ls45
+			// 
+			this->ls45->BorderWidth = 3;
+			this->ls45->Name = L"ls45";
+			this->ls45->Visible = false;
+			this->ls45->X1 = 745;
+			this->ls45->X2 = 245;
+			this->ls45->Y1 = 298;
+			this->ls45->Y2 = 290;
+			// 
+			// ls38
+			// 
+			this->ls38->BorderWidth = 3;
+			this->ls38->Name = L"ls38";
+			this->ls38->Visible = false;
+			this->ls38->X1 = 260;
+			this->ls38->X2 = 398;
+			this->ls38->Y1 = 109;
+			this->ls38->Y2 = 201;
+			// 
+			// ls37
+			// 
+			this->ls37->BorderWidth = 3;
+			this->ls37->Name = L"ls37";
+			this->ls37->Visible = false;
+			this->ls37->X1 = 843;
+			this->ls37->X2 = 435;
+			this->ls37->Y1 = 181;
+			this->ls37->Y2 = 210;
+			// 
+			// ls36
+			// 
+			this->ls36->BorderWidth = 3;
+			this->ls36->Name = L"ls36";
+			this->ls36->Visible = false;
+			this->ls36->X1 = 474;
+			this->ls36->X2 = 421;
+			this->ls36->Y1 = 309;
+			this->ls36->Y2 = 222;
+			// 
+			// ls35
+			// 
+			this->ls35->BorderWidth = 3;
+			this->ls35->Name = L"ls35";
+			this->ls35->Visible = false;
+			this->ls35->X1 = 745;
+			this->ls35->X2 = 434;
+			this->ls35->Y1 = 293;
+			this->ls35->Y2 = 215;
+			// 
+			// ls34
+			// 
+			this->ls34->BorderWidth = 3;
+			this->ls34->Name = L"ls34";
+			this->ls34->Visible = false;
+			this->ls34->X1 = 245;
+			this->ls34->X2 = 398;
+			this->ls34->Y1 = 280;
+			this->ls34->Y2 = 216;
+			// 
+			// ls27
+			// 
+			this->ls27->BorderWidth = 3;
+			this->ls27->Name = L"ls27";
+			this->ls27->Visible = false;
+			this->ls27->X1 = 843;
+			this->ls27->X2 = 636;
+			this->ls27->Y1 = 165;
+			this->ls27->Y2 = 174;
+			// 
+			// ls28
+			// 
+			this->ls28->BorderWidth = 3;
+			this->ls28->Name = L"ls28";
+			this->ls28->Visible = false;
+			this->ls28->X1 = 261;
+			this->ls28->X2 = 602;
+			this->ls28->Y1 = 94;
+			this->ls28->Y2 = 172;
+			// 
+			// ls24
+			// 
+			this->ls24->BorderWidth = 3;
+			this->ls24->Name = L"ls24";
+			this->ls24->Visible = false;
+			this->ls24->X1 = 246;
+			this->ls24->X2 = 600;
+			this->ls24->Y1 = 284;
+			this->ls24->Y2 = 186;
+			// 
+			// ls23
+			// 
+			this->ls23->BorderWidth = 3;
+			this->ls23->Name = L"ls23";
+			this->ls23->Visible = false;
+			this->ls23->X1 = 433;
+			this->ls23->X2 = 603;
+			this->ls23->Y1 = 203;
+			this->ls23->Y2 = 178;
+			// 
+			// ls25
+			// 
+			this->ls25->BorderWidth = 3;
+			this->ls25->Name = L"ls25";
+			this->ls25->Visible = false;
+			this->ls25->X1 = 745;
+			this->ls25->X2 = 618;
+			this->ls25->Y1 = 288;
+			this->ls25->Y2 = 194;
+			// 
+			// ls14
+			// 
+			this->ls14->BorderWidth = 3;
+			this->ls14->Name = L"ls14";
+			this->ls14->Visible = false;
+			this->ls14->X1 = 244;
+			this->ls14->X2 = 517;
+			this->ls14->Y1 = 273;
+			this->ls14->Y2 = 56;
+			// 
+			// ls18
+			// 
+			this->ls18->BorderWidth = 3;
+			this->ls18->Name = L"ls18";
+			this->ls18->Visible = false;
+			this->ls18->X1 = 259;
+			this->ls18->X2 = 524;
+			this->ls18->Y1 = 78;
+			this->ls18->Y2 = 44;
+			// 
+			// ls16
+			// 
+			this->ls16->BorderWidth = 3;
+			this->ls16->Name = L"ls16";
+			this->ls16->Visible = false;
+			this->ls16->X1 = 489;
+			this->ls16->X2 = 535;
+			this->ls16->Y1 = 309;
+			this->ls16->Y2 = 65;
+			// 
+			// ls15
+			// 
+			this->ls15->BorderWidth = 3;
+			this->ls15->Name = L"ls15";
+			this->ls15->Visible = false;
+			this->ls15->X1 = 748;
+			this->ls15->X2 = 558;
+			this->ls15->Y1 = 277;
+			this->ls15->Y2 = 57;
+			// 
+			// ls17
+			// 
+			this->ls17->BorderWidth = 3;
+			this->ls17->Name = L"ls17";
+			this->ls17->Visible = false;
+			this->ls17->X1 = 841;
+			this->ls17->X2 = 559;
+			this->ls17->Y1 = 153;
+			this->ls17->Y2 = 49;
+			// 
+			// ls13
+			// 
+			this->ls13->BorderWidth = 3;
+			this->ls13->Name = L"ls13";
+			this->ls13->Visible = false;
+			this->ls13->X1 = 433;
+			this->ls13->X2 = 525;
+			this->ls13->Y1 = 190;
+			this->ls13->Y2 = 65;
+			// 
+			// ls12
+			// 
+			this->ls12->BorderWidth = 3;
+			this->ls12->Name = L"ls12";
+			this->ls12->Visible = false;
+			this->ls12->X1 = 603;
+			this->ls12->X2 = 552;
+			this->ls12->Y1 = 163;
+			this->ls12->Y2 = 65;
+			// 
+			// ls26
+			// 
+			this->ls26->BorderWidth = 3;
+			this->ls26->Name = L"ls26";
+			this->ls26->Visible = false;
+			this->ls26->X1 = 504;
+			this->ls26->X2 = 602;
+			this->ls26->Y1 = 310;
+			this->ls26->Y2 = 194;
+			// 
 			// GraphBFS
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -355,6 +726,7 @@ namespace sorting_user_control {
 			this->Controls->Add(this->btnAdd);
 			this->Controls->Add(this->txtTo);
 			this->Controls->Add(this->txtFrom);
+			this->Controls->Add(this->shapeContainer1);
 			this->Name = L"GraphBFS";
 			this->Size = System::Drawing::Size(1088, 631);
 			this->Load += gcnew System::EventHandler(this, &GraphBFS::GraphBFS_Load);
@@ -417,48 +789,6 @@ namespace sorting_user_control {
 				if(c==2)l8->BackColor=System::Drawing::Color::Yellow;
 				if(c==3)l8->BackColor=System::Drawing::Color::White;
 				break;
-			/*case 9:
-				if(c==0)l9->BackColor=System::Drawing::Color::FromArgb(192,255,192);
-				if(c==1)l9->BackColor=System::Drawing::Color::Pink;
-				if(c==2)l9->BackColor=System::Drawing::Color::Yellow;
-				if(c==3)l9->BackColor=System::Drawing::Color::White;
-				break;
-			case 10:
-				if(c==0)l10->BackColor=System::Drawing::Color::FromArgb(192,255,192);
-				if(c==1)l10->BackColor=System::Drawing::Color::Pink;
-				if(c==2)l10->BackColor=System::Drawing::Color::Yellow;
-				if(c==3)l10->BackColor=System::Drawing::Color::White;
-				break;
-			case 11:
-				if(c==0)l11->BackColor=System::Drawing::Color::FromArgb(192,255,192);
-				if(c==1)l11->BackColor=System::Drawing::Color::Pink;
-				if(c==2)l11->BackColor=System::Drawing::Color::Yellow;
-				if(c==3)l11->BackColor=System::Drawing::Color::White;
-				break;
-			case 12:
-				if(c==0)l12->BackColor=System::Drawing::Color::FromArgb(192,255,192);
-				if(c==1)l12->BackColor=System::Drawing::Color::Pink;
-				if(c==2)l12->BackColor=System::Drawing::Color::Yellow;
-				if(c==3)l12->BackColor=System::Drawing::Color::White;
-				break;
-			case 13:
-				if(c==0)l13->BackColor=System::Drawing::Color::FromArgb(192,255,192);
-				if(c==1)l13->BackColor=System::Drawing::Color::Pink;
-				if(c==2)l13->BackColor=System::Drawing::Color::Yellow;
-				if(c==3)l13->BackColor=System::Drawing::Color::White;
-				break;
-			case 14:
-				if(c==0)l14->BackColor=System::Drawing::Color::FromArgb(192,255,192);
-				if(c==1)l14->BackColor=System::Drawing::Color::Pink;
-				if(c==2)l14->BackColor=System::Drawing::Color::Yellow;
-				if(c==3)l14->BackColor=System::Drawing::Color::White;
-				break;
-			case 15:
-				if(c==0)l15->BackColor=System::Drawing::Color::FromArgb(192,255,192);
-				if(c==1)l15->BackColor=System::Drawing::Color::Pink;
-				if(c==2)l15->BackColor=System::Drawing::Color::Yellow;
-				if(c==3)l15->BackColor=System::Drawing::Color::White;
-				break;*/
 			default:
 				break;
 			
@@ -500,38 +830,178 @@ namespace sorting_user_control {
 				if(i==0)l8->Visible=false;
 				if(i==1)l8->Visible=true;
 				break;
-			/*case 9:
-				if(i==0)p9->Visible=false;
-				if(i==1)p9->Visible=true;
-				break;
-			case 10:
-				if(i==0)p10->Visible=false;
-				if(i==1)p10->Visible=true;
-				break;
-			case 11:
-				if(i==0)p11->Visible=false;
-				if(i==1)p11->Visible=true;
-				break;
-			case 12:
-				if(i==0)p12->Visible=false;
-				if(i==1)p12->Visible=true;
-				break;
-			case 13:
-				if(i==0)p13->Visible=false;
-				if(i==1)p13->Visible=true;
-				break;
-			case 14:
-				if(i==0)p14->Visible=false;
-				if(i==1)p14->Visible=true;
-				break;
-			case 15:
-				if(i==0)p15->Visible=false;
-				if(i==1)p15->Visible=true;
-				break;*/
 			default:
 				break;
 		}
 	  }
+
+
+	  //making edges visible
+	  void edge(int a,int b,int i){
+		  int x=std::min(a,b);
+		  int y=std::max(a,b);
+		switch(x){
+			case 1:
+				switch(y){
+					case 2:
+						if(i==1)ls12->Visible=true;
+						if(i==0)ls12->Visible=false;
+						break;
+					case 3:
+						if(i==1)ls13->Visible=true;
+						if(i==0)ls13->Visible=false;
+						break;
+					case 4:
+						if(i==1)ls14->Visible=true;
+						if(i==0)ls14->Visible=false;
+						break;
+					case 5:
+						if(i==1)ls15->Visible=true;
+						if(i==0)ls15->Visible=false;
+						break;
+					case 6:
+						if(i==1)ls16->Visible=true;
+						if(i==0)ls16->Visible=false;
+						break;
+					case 7:
+						if(i==1)ls17->Visible=true;
+						if(i==0)ls17->Visible=false;
+						break;
+					case 8:
+						if(i==1)ls18->Visible=true;
+						if(i==0)ls18->Visible=false;
+						break;
+					default:
+						break;
+				}
+				break;
+			case 2:
+				switch(y){
+					case 3:
+						if(i==1)ls23->Visible=true;
+						if(i==0)ls23->Visible=false;
+						break;
+					case 4:
+						if(i==1)ls24->Visible=true;
+						if(i==0)ls24->Visible=false;
+						break;
+					case 5:
+						if(i==1)ls25->Visible=true;
+						if(i==0)ls25->Visible=false;;
+						break;
+					case 6:
+						if(i==1)ls26->Visible=true;
+						if(i==0)ls26->Visible=false;
+						break;
+					case 7:
+						if(i==1)ls27->Visible=true;
+						if(i==0)ls27->Visible=false;
+						break;
+					case 8:
+						if(i==1)ls28->Visible=true;
+						if(i==0)ls28->Visible=false;
+						break;
+					default:
+						break;
+				}
+				break;
+			case 3:
+				switch(y){
+					case 4:
+						if(i==1)ls34->Visible=true;
+						if(i==0)ls34->Visible=false;
+						break;
+					case 5:
+						if(i==1)ls35->Visible=true;
+						if(i==0)ls35->Visible=false;
+						break;
+					case 6:
+						if(i==1)ls36->Visible=true;
+						if(i==0)ls36->Visible=false;
+						break;
+					case 7:
+						if(i==1)ls37->Visible=true;
+						if(i==0)ls37->Visible=false;
+						break;
+					case 8:
+						if(i==1)ls38->Visible=true;
+						if(i==0)ls38->Visible=false;
+						break;
+					default:
+						break;
+				}
+				break;
+			case 4:
+				switch(y){
+					case 5:
+						if(i==1)ls45->Visible=true;
+						if(i==0)ls45->Visible=false;
+						break;
+					case 6:
+						if(i==1)ls46->Visible=true;
+						if(i==0)ls47->Visible=false;
+						break;
+					case 7:
+						if(i==1)ls47->Visible=true;
+						if(i==0)ls47->Visible=false;
+						break;
+					case 8:
+						if(i==1)ls48->Visible=true;
+						if(i==0)ls48->Visible=false;
+						break;
+					default:
+						break;
+				}
+				break;
+			case 5:
+				switch(y){
+					case 6:
+						if(i==1)ls56->Visible=true;
+						if(i==0)ls56->Visible=false;
+						break;
+					case 7:
+						if(i==1)ls57->Visible=true;
+						if(i==0)ls57->Visible=false;
+						break;
+					case 8:
+						if(i==1)ls58->Visible=true;
+						if(i==0)ls58->Visible=false;
+						break;
+					default:
+						break;
+				}
+				break;
+			case 6:
+				switch(y){
+					case 7:
+						if(i==1)ls67->Visible=true;
+						if(i==0)ls67->Visible=false;
+						break;
+					case 8:
+						if(i==1)ls68->Visible=true;
+						if(i==0)ls68->Visible=false;
+						break;
+					default:
+						break;
+				}
+				break;
+			case 7:
+				switch(y){
+					case 8:
+						if(i==1)ls78->Visible=true;
+						if(i==0)ls78->Visible=false;
+						break;
+					default:
+						break;
+				}
+				break;
+			default:
+				break;
+		}
+	  }
+
+
+
 
 	  //bfs of the graph
 	  void bfsUtil(int s){
@@ -570,6 +1040,11 @@ namespace sorting_user_control {
 			for(int i=0;i<100;i++){
 				bvis[i]=0;	
 				badj[i].clear();
+			}
+			for(int i=1;i<=8;i++){
+				for(int j=i+1;j<=8;j++){
+					edge(i,j,0);
+				}
 			}
 	  
 	  }
@@ -655,6 +1130,7 @@ private: System::Void btnAdd_Click(System::Object^  sender, System::EventArgs^  
 						 }else if(p==1){
 							badj[a].push_back(b);
 							badj[b].push_back(a);
+							edge(a,b,1);
 							MessageBox::Show("Edge Entered Succesfully");
 						 }else{
 							baddcounter--;
