@@ -66,6 +66,12 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Timer^  timer_in;
 	private: System::Windows::Forms::Timer^  timer_pre;
 	private: System::Windows::Forms::Timer^  timer_pos;
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	private: System::Windows::Forms::PictureBox^  pictureBox3;
+	private: System::Windows::Forms::PictureBox^  pictureBox2;
+	private: System::Windows::Forms::PictureBox^  pictureBox4;
+	private: System::Windows::Forms::PictureBox^  pictureBox6;
+	private: System::Windows::Forms::PictureBox^  pictureBox5;
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -82,6 +88,7 @@ namespace DataStructuresLearningSoftware {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(BST_search::typeid));
 			this->lab1 = (gcnew System::Windows::Forms::Label());
 			this->lab2 = (gcnew System::Windows::Forms::Label());
 			this->lab3 = (gcnew System::Windows::Forms::Label());
@@ -104,100 +111,111 @@ namespace DataStructuresLearningSoftware {
 			this->timer_in = (gcnew System::Windows::Forms::Timer(this->components));
 			this->timer_pre = (gcnew System::Windows::Forms::Timer(this->components));
 			this->timer_pos = (gcnew System::Windows::Forms::Timer(this->components));
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox6))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// lab1
 			// 
-			this->lab1->AutoSize = true;
 			this->lab1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->lab1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lab1->ForeColor = System::Drawing::Color::Sienna;
-			this->lab1->Location = System::Drawing::Point(537, 217);
+			this->lab1->Location = System::Drawing::Point(531, 183);
 			this->lab1->Name = L"lab1";
-			this->lab1->Size = System::Drawing::Size(43, 31);
+			this->lab1->Size = System::Drawing::Size(70, 70);
 			this->lab1->TabIndex = 0;
 			this->lab1->Text = L"17";
+			this->lab1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// lab2
 			// 
-			this->lab2->AutoSize = true;
 			this->lab2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->lab2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lab2->ForeColor = System::Drawing::Color::Sienna;
-			this->lab2->Location = System::Drawing::Point(280, 331);
+			this->lab2->Location = System::Drawing::Point(388, 296);
 			this->lab2->Name = L"lab2";
-			this->lab2->Size = System::Drawing::Size(43, 31);
+			this->lab2->Size = System::Drawing::Size(70, 70);
 			this->lab2->TabIndex = 1;
 			this->lab2->Text = L"12";
 			this->lab2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// lab3
 			// 
-			this->lab3->AutoSize = true;
 			this->lab3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->lab3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lab3->ForeColor = System::Drawing::Color::Sienna;
-			this->lab3->Location = System::Drawing::Point(787, 331);
+			this->lab3->Location = System::Drawing::Point(661, 296);
 			this->lab3->Name = L"lab3";
-			this->lab3->Size = System::Drawing::Size(43, 31);
+			this->lab3->Size = System::Drawing::Size(70, 70);
 			this->lab3->TabIndex = 2;
 			this->lab3->Text = L"23";
+			this->lab3->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// lab4
 			// 
-			this->lab4->AutoSize = true;
 			this->lab4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->lab4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lab4->ForeColor = System::Drawing::Color::Sienna;
-			this->lab4->Location = System::Drawing::Point(127, 472);
+			this->lab4->Location = System::Drawing::Point(245, 420);
 			this->lab4->Name = L"lab4";
-			this->lab4->Size = System::Drawing::Size(29, 31);
+			this->lab4->Size = System::Drawing::Size(70, 70);
 			this->lab4->TabIndex = 3;
 			this->lab4->Text = L"4";
+			this->lab4->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// lab5
 			// 
-			this->lab5->AutoSize = true;
 			this->lab5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->lab5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lab5->ForeColor = System::Drawing::Color::Sienna;
-			this->lab5->Location = System::Drawing::Point(431, 472);
+			this->lab5->Location = System::Drawing::Point(508, 420);
 			this->lab5->Name = L"lab5";
-			this->lab5->Size = System::Drawing::Size(43, 31);
+			this->lab5->Size = System::Drawing::Size(70, 70);
 			this->lab5->TabIndex = 4;
 			this->lab5->Text = L"15";
+			this->lab5->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// lab6
 			// 
-			this->lab6->AutoSize = true;
 			this->lab6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->lab6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lab6->ForeColor = System::Drawing::Color::Sienna;
-			this->lab6->Location = System::Drawing::Point(643, 472);
+			this->lab6->Location = System::Drawing::Point(584, 420);
 			this->lab6->Name = L"lab6";
-			this->lab6->Size = System::Drawing::Size(43, 31);
+			this->lab6->Size = System::Drawing::Size(70, 70);
 			this->lab6->TabIndex = 5;
 			this->lab6->Text = L"20";
+			this->lab6->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// lab7
 			// 
-			this->lab7->AutoSize = true;
 			this->lab7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->lab7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lab7->ForeColor = System::Drawing::Color::Sienna;
-			this->lab7->Location = System::Drawing::Point(974, 472);
+			this->lab7->Location = System::Drawing::Point(763, 420);
 			this->lab7->Name = L"lab7";
-			this->lab7->Size = System::Drawing::Size(43, 31);
+			this->lab7->Size = System::Drawing::Size(70, 70);
 			this->lab7->TabIndex = 6;
 			this->lab7->Text = L"47";
+			this->lab7->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// btn_in
 			// 
@@ -283,6 +301,12 @@ namespace DataStructuresLearningSoftware {
 			this->panel1->Controls->Add(this->lab3);
 			this->panel1->Controls->Add(this->lab2);
 			this->panel1->Controls->Add(this->lab1);
+			this->panel1->Controls->Add(this->pictureBox1);
+			this->panel1->Controls->Add(this->pictureBox3);
+			this->panel1->Controls->Add(this->pictureBox2);
+			this->panel1->Controls->Add(this->pictureBox4);
+			this->panel1->Controls->Add(this->pictureBox6);
+			this->panel1->Controls->Add(this->pictureBox5);
 			this->panel1->Location = System::Drawing::Point(47, 3);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(1156, 543);
@@ -394,6 +418,66 @@ namespace DataStructuresLearningSoftware {
 			this->timer_pos->Interval = 1500;
 			this->timer_pos->Tick += gcnew System::EventHandler(this, &BST_search::timer_pos_Tick);
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(572, 228);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(112, 84);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 12;
+			this->pictureBox1->TabStop = false;
+			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox2.Image")));
+			this->pictureBox2->Location = System::Drawing::Point(425, 350);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(112, 84);
+			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox2->TabIndex = 13;
+			this->pictureBox2->TabStop = false;
+			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox3.Image")));
+			this->pictureBox3->Location = System::Drawing::Point(701, 350);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(112, 84);
+			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox3->TabIndex = 14;
+			this->pictureBox3->TabStop = false;
+			// 
+			// pictureBox4
+			// 
+			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox4.Image")));
+			this->pictureBox4->Location = System::Drawing::Point(438, 228);
+			this->pictureBox4->Name = L"pictureBox4";
+			this->pictureBox4->Size = System::Drawing::Size(112, 84);
+			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox4->TabIndex = 15;
+			this->pictureBox4->TabStop = false;
+			// 
+			// pictureBox5
+			// 
+			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox5.Image")));
+			this->pictureBox5->Location = System::Drawing::Point(602, 350);
+			this->pictureBox5->Name = L"pictureBox5";
+			this->pictureBox5->Size = System::Drawing::Size(112, 84);
+			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox5->TabIndex = 16;
+			this->pictureBox5->TabStop = false;
+			// 
+			// pictureBox6
+			// 
+			this->pictureBox6->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox6.Image")));
+			this->pictureBox6->Location = System::Drawing::Point(295, 350);
+			this->pictureBox6->Name = L"pictureBox6";
+			this->pictureBox6->Size = System::Drawing::Size(112, 84);
+			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox6->TabIndex = 17;
+			this->pictureBox6->TabStop = false;
+			// 
 			// BST_search
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
@@ -402,7 +486,12 @@ namespace DataStructuresLearningSoftware {
 			this->Name = L"BST_search";
 			this->Size = System::Drawing::Size(1277, 596);
 			this->panel1->ResumeLayout(false);
-			this->panel1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox6))->EndInit();
 			this->ResumeLayout(false);
 
 		}

@@ -67,6 +67,18 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Timer^  BTdeletetimer2;
 	private: System::Windows::Forms::Timer^  BTdeletetimer3;
 	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::PictureBox^  PB2;
+	private: System::Windows::Forms::PictureBox^  PB6;
+
+
+	private: System::Windows::Forms::PictureBox^  PB4;
+
+	private: System::Windows::Forms::PictureBox^  PB3;
+	private: System::Windows::Forms::PictureBox^  PB5;
+
+
+	private: System::Windows::Forms::PictureBox^  PB1;
+
 
 
 
@@ -121,12 +133,24 @@ namespace DataStructuresLearningSoftware {
 			this->DL4 = (gcnew System::Windows::Forms::Label());
 			this->DL5 = (gcnew System::Windows::Forms::Label());
 			this->DL1 = (gcnew System::Windows::Forms::Label());
+			this->PB2 = (gcnew System::Windows::Forms::PictureBox());
+			this->PB6 = (gcnew System::Windows::Forms::PictureBox());
+			this->PB4 = (gcnew System::Windows::Forms::PictureBox());
+			this->PB3 = (gcnew System::Windows::Forms::PictureBox());
+			this->PB5 = (gcnew System::Windows::Forms::PictureBox());
+			this->PB1 = (gcnew System::Windows::Forms::PictureBox());
 			this->BTdeletetimer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->BTdeletetimer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->BTdeletetimer3 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->groupBox1->SuspendLayout();
 			this->delete_animation1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB6))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// BTree_delete_but
@@ -225,6 +249,12 @@ namespace DataStructuresLearningSoftware {
 			this->delete_animation1->Controls->Add(this->DL4);
 			this->delete_animation1->Controls->Add(this->DL5);
 			this->delete_animation1->Controls->Add(this->DL1);
+			this->delete_animation1->Controls->Add(this->PB2);
+			this->delete_animation1->Controls->Add(this->PB6);
+			this->delete_animation1->Controls->Add(this->PB4);
+			this->delete_animation1->Controls->Add(this->PB3);
+			this->delete_animation1->Controls->Add(this->PB5);
+			this->delete_animation1->Controls->Add(this->PB1);
 			this->delete_animation1->Location = System::Drawing::Point(42, 192);
 			this->delete_animation1->Name = L"delete_animation1";
 			this->delete_animation1->Size = System::Drawing::Size(822, 367);
@@ -257,7 +287,7 @@ namespace DataStructuresLearningSoftware {
 			this->DL2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->DL2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->DL2->Location = System::Drawing::Point(181, 116);
+			this->DL2->Location = System::Drawing::Point(223, 108);
 			this->DL2->Name = L"DL2";
 			this->DL2->Size = System::Drawing::Size(70, 70);
 			this->DL2->TabIndex = 6;
@@ -270,7 +300,7 @@ namespace DataStructuresLearningSoftware {
 			this->DL3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->DL3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->DL3->Location = System::Drawing::Point(542, 116);
+			this->DL3->Location = System::Drawing::Point(488, 108);
 			this->DL3->Name = L"DL3";
 			this->DL3->Size = System::Drawing::Size(70, 70);
 			this->DL3->TabIndex = 5;
@@ -283,7 +313,7 @@ namespace DataStructuresLearningSoftware {
 			this->DL7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->DL7->Font = (gcnew System::Drawing::Font(L"Century Gothic", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->DL7->Location = System::Drawing::Point(684, 217);
+			this->DL7->Location = System::Drawing::Point(590, 229);
 			this->DL7->Name = L"DL7";
 			this->DL7->Size = System::Drawing::Size(70, 70);
 			this->DL7->TabIndex = 4;
@@ -296,7 +326,7 @@ namespace DataStructuresLearningSoftware {
 			this->DL6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->DL6->Font = (gcnew System::Drawing::Font(L"Century Gothic", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->DL6->Location = System::Drawing::Point(392, 217);
+			this->DL6->Location = System::Drawing::Point(392, 229);
 			this->DL6->Name = L"DL6";
 			this->DL6->Size = System::Drawing::Size(70, 70);
 			this->DL6->TabIndex = 3;
@@ -309,7 +339,7 @@ namespace DataStructuresLearningSoftware {
 			this->DL4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->DL4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->DL4->Location = System::Drawing::Point(36, 217);
+			this->DL4->Location = System::Drawing::Point(91, 229);
 			this->DL4->Name = L"DL4";
 			this->DL4->Size = System::Drawing::Size(70, 70);
 			this->DL4->TabIndex = 2;
@@ -322,7 +352,7 @@ namespace DataStructuresLearningSoftware {
 			this->DL5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->DL5->Font = (gcnew System::Drawing::Font(L"Century Gothic", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->DL5->Location = System::Drawing::Point(316, 217);
+			this->DL5->Location = System::Drawing::Point(316, 229);
 			this->DL5->Name = L"DL5";
 			this->DL5->Size = System::Drawing::Size(70, 70);
 			this->DL5->TabIndex = 1;
@@ -335,12 +365,72 @@ namespace DataStructuresLearningSoftware {
 			this->DL1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->DL1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->DL1->Location = System::Drawing::Point(354, 32);
+			this->DL1->Location = System::Drawing::Point(359, 8);
 			this->DL1->Name = L"DL1";
 			this->DL1->Size = System::Drawing::Size(70, 70);
 			this->DL1->TabIndex = 0;
 			this->DL1->Text = L"23";
 			this->DL1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// PB2
+			// 
+			this->PB2->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PB2.Image")));
+			this->PB2->Location = System::Drawing::Point(405, 56);
+			this->PB2->Name = L"PB2";
+			this->PB2->Size = System::Drawing::Size(109, 81);
+			this->PB2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->PB2->TabIndex = 9;
+			this->PB2->TabStop = false;
+			// 
+			// PB6
+			// 
+			this->PB6->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PB6.Image")));
+			this->PB6->Location = System::Drawing::Point(520, 160);
+			this->PB6->Name = L"PB6";
+			this->PB6->Size = System::Drawing::Size(109, 81);
+			this->PB6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->PB6->TabIndex = 10;
+			this->PB6->TabStop = false;
+			// 
+			// PB4
+			// 
+			this->PB4->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PB4.Image")));
+			this->PB4->Location = System::Drawing::Point(242, 160);
+			this->PB4->Name = L"PB4";
+			this->PB4->Size = System::Drawing::Size(109, 81);
+			this->PB4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->PB4->TabIndex = 11;
+			this->PB4->TabStop = false;
+			// 
+			// PB3
+			// 
+			this->PB3->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PB3.Image")));
+			this->PB3->Location = System::Drawing::Point(138, 160);
+			this->PB3->Name = L"PB3";
+			this->PB3->Size = System::Drawing::Size(109, 81);
+			this->PB3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->PB3->TabIndex = 12;
+			this->PB3->TabStop = false;
+			// 
+			// PB5
+			// 
+			this->PB5->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PB5.Image")));
+			this->PB5->Location = System::Drawing::Point(405, 160);
+			this->PB5->Name = L"PB5";
+			this->PB5->Size = System::Drawing::Size(109, 81);
+			this->PB5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->PB5->TabIndex = 13;
+			this->PB5->TabStop = false;
+			// 
+			// PB1
+			// 
+			this->PB1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PB1.Image")));
+			this->PB1->Location = System::Drawing::Point(268, 56);
+			this->PB1->Name = L"PB1";
+			this->PB1->Size = System::Drawing::Size(109, 81);
+			this->PB1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->PB1->TabIndex = 14;
+			this->PB1->TabStop = false;
 			// 
 			// BTdeletetimer1
 			// 
@@ -380,11 +470,17 @@ namespace DataStructuresLearningSoftware {
 			this->Load += gcnew System::EventHandler(this, &BST_deletion::BST_deletion_Load);
 			this->groupBox1->ResumeLayout(false);
 			this->delete_animation1->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB6))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-	private: System::Void BST_deletion_Load(System::Object^  sender, System::EventArgs^  e){
+	private: System::Void BST_deletion_Load(System::Object^  sender, System::EventArgs^  e){	 
 			 }
 	private: System::Void BTree_delete_but_Click(System::Object^  sender, System::EventArgs^  e) {
 				 if(this->RB1->Checked == true){
@@ -397,6 +493,7 @@ namespace DataStructuresLearningSoftware {
 					 this->Checklabel->Text = "0";
 					 this->BTree_delete_but->Enabled = false;
 					 this->DL6->Visible = false;
+					 this->PB5->Visible = false;
 					 this->Infolabel->Text = "Let Us Delete 34 , Node With One Child .";
 					 BTdeletetimer2->Enabled = true;
 				 }
@@ -413,6 +510,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void BTdeletetimer1_Tick(System::Object^  sender, System::EventArgs^  e) {
 				 if(this->Checklabel->Text == "6"){
 					 this->DL5->Visible = true;
+					 this->PB4->Visible = true;
 					 this->Infolabel->Text = "";
 					 this->DL5->BackColor =  System::Drawing::Color::Wheat;
 					 this->DL1->BackColor = System::Drawing::Color::Wheat;
@@ -423,6 +521,7 @@ namespace DataStructuresLearningSoftware {
 				 else if(this->Checklabel->Text == "5"){
 					 this->Checklabel->Text = "6";
 					 this->DL5->Visible = false;
+					 this->PB4->Visible = false;
 				 }
 				 else if(this->Checklabel->Text == "4"){
 					 this->Checklabel->Text = "5";
@@ -467,6 +566,13 @@ namespace DataStructuresLearningSoftware {
 				 this->DL6->Visible = true;
 				 this->DL7->Visible = true;
 
+				 this->PB1->Visible = true;
+				 this->PB2->Visible = true;
+				 this->PB3->Visible = true;
+				 this->PB4->Visible = true;
+				 this->PB5->Visible = true;
+				 this->PB6->Visible = true;
+
 				 this->DL5->Text = "17";
 				 this->DL1->Text = "23";
 				 this->DL2->Text = "11";
@@ -482,6 +588,8 @@ namespace DataStructuresLearningSoftware {
 					 this->DL7->Text = "97";
 					 this->DL7->Visible = true;
 					 this->DL6->Visible = true;
+					 this->PB6->Visible = true;
+					 this->PB5->Visible = true;
 					 this->Infolabel->Text = "";
 					 this->DL7->BackColor = System::Drawing::Color::Wheat;
 					 this->DL1->BackColor = System::Drawing::Color::Wheat;
@@ -494,6 +602,7 @@ namespace DataStructuresLearningSoftware {
 					 this->DL3->BackColor = System::Drawing::Color::DarkOrange;
 					 this->DL3->Text = "97";
 					 this->DL7->Visible = false;
+					 this->PB6->Visibel = false;
 					 this->Infolabel->Text = "That's It !!";
 				 }
 				 else if(this->Checklabel->Text == "3"){
@@ -522,6 +631,7 @@ namespace DataStructuresLearningSoftware {
 					 this->DL1->Visible = true;		  
 					 this->DL3->Visible = true;	  
 					 this->DL6->Visible = true; 
+					 this->PB5->Visible = true;
 					 this->DL1->Text = "23"; 
 					 this->DL3->Text = "34"; 
 					 this->DL6->Text = "28";
@@ -531,6 +641,7 @@ namespace DataStructuresLearningSoftware {
 				 else if(this->Checklabel->Text == "6"){
 					 this->Checklabel->Text = "7";
 					 this->DL6->Visible = false;
+					 this->PB5->Visible = false;
 					 this->Infolabel->Text = "You're Done !!";
 				 }
 				 else if(this->Checklabel->Text == "5"){

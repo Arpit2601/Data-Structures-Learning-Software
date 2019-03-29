@@ -64,6 +64,18 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Timer^  BTinsert_timer;
 	private: System::Windows::Forms::Timer^  FixMe;
 	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::PictureBox^  PBI2;
+	private: System::Windows::Forms::PictureBox^  PBI6;
+
+
+	private: System::Windows::Forms::PictureBox^  PBI4;
+
+	private: System::Windows::Forms::PictureBox^  PBI1;
+	private: System::Windows::Forms::PictureBox^  PBI3;
+	private: System::Windows::Forms::PictureBox^  PBI5;
+
+
+
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -92,10 +104,22 @@ namespace DataStructuresLearningSoftware {
 			this->BT3 = (gcnew System::Windows::Forms::Label());
 			this->BT2 = (gcnew System::Windows::Forms::Label());
 			this->BT1 = (gcnew System::Windows::Forms::Label());
+			this->PBI2 = (gcnew System::Windows::Forms::PictureBox());
+			this->PBI6 = (gcnew System::Windows::Forms::PictureBox());
+			this->PBI4 = (gcnew System::Windows::Forms::PictureBox());
+			this->PBI1 = (gcnew System::Windows::Forms::PictureBox());
+			this->PBI3 = (gcnew System::Windows::Forms::PictureBox());
+			this->PBI5 = (gcnew System::Windows::Forms::PictureBox());
 			this->BTinsert_timer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->FixMe = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->Btree_insert_animation->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PBI2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PBI6))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PBI4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PBI1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PBI3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PBI5))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label6
@@ -142,6 +166,12 @@ namespace DataStructuresLearningSoftware {
 			this->Btree_insert_animation->Controls->Add(this->BT3);
 			this->Btree_insert_animation->Controls->Add(this->BT2);
 			this->Btree_insert_animation->Controls->Add(this->BT1);
+			this->Btree_insert_animation->Controls->Add(this->PBI2);
+			this->Btree_insert_animation->Controls->Add(this->PBI6);
+			this->Btree_insert_animation->Controls->Add(this->PBI4);
+			this->Btree_insert_animation->Controls->Add(this->PBI1);
+			this->Btree_insert_animation->Controls->Add(this->PBI3);
+			this->Btree_insert_animation->Controls->Add(this->PBI5);
 			this->Btree_insert_animation->Location = System::Drawing::Point(105, 51);
 			this->Btree_insert_animation->Name = L"Btree_insert_animation";
 			this->Btree_insert_animation->Size = System::Drawing::Size(711, 442);
@@ -192,7 +222,7 @@ namespace DataStructuresLearningSoftware {
 			this->BT7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->BT7->Font = (gcnew System::Drawing::Font(L"Century Gothic", 28.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->BT7->Location = System::Drawing::Point(496, 283);
+			this->BT7->Location = System::Drawing::Point(533, 283);
 			this->BT7->Name = L"BT7";
 			this->BT7->Size = System::Drawing::Size(108, 79);
 			this->BT7->TabIndex = 4;
@@ -238,6 +268,72 @@ namespace DataStructuresLearningSoftware {
 			this->BT1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			this->BT1->Visible = false;
 			// 
+			// PBI2
+			// 
+			this->PBI2->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PBI2.Image")));
+			this->PBI2->Location = System::Drawing::Point(360, 72);
+			this->PBI2->Name = L"PBI2";
+			this->PBI2->Size = System::Drawing::Size(89, 96);
+			this->PBI2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->PBI2->TabIndex = 8;
+			this->PBI2->TabStop = false;
+			this->PBI2->Visible = false;
+			// 
+			// PBI6
+			// 
+			this->PBI6->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PBI6.Image")));
+			this->PBI6->Location = System::Drawing::Point(495, 211);
+			this->PBI6->Name = L"PBI6";
+			this->PBI6->Size = System::Drawing::Size(89, 96);
+			this->PBI6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->PBI6->TabIndex = 9;
+			this->PBI6->TabStop = false;
+			this->PBI6->Visible = false;
+			// 
+			// PBI4
+			// 
+			this->PBI4->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PBI4.Image")));
+			this->PBI4->Location = System::Drawing::Point(227, 211);
+			this->PBI4->Name = L"PBI4";
+			this->PBI4->Size = System::Drawing::Size(89, 96);
+			this->PBI4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->PBI4->TabIndex = 10;
+			this->PBI4->TabStop = false;
+			this->PBI4->Visible = false;
+			// 
+			// PBI1
+			// 
+			this->PBI1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PBI1.Image")));
+			this->PBI1->Location = System::Drawing::Point(213, 72);
+			this->PBI1->Name = L"PBI1";
+			this->PBI1->Size = System::Drawing::Size(89, 96);
+			this->PBI1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->PBI1->TabIndex = 11;
+			this->PBI1->TabStop = false;
+			this->PBI1->Visible = false;
+			// 
+			// PBI3
+			// 
+			this->PBI3->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PBI3.Image")));
+			this->PBI3->Location = System::Drawing::Point(82, 211);
+			this->PBI3->Name = L"PBI3";
+			this->PBI3->Size = System::Drawing::Size(89, 96);
+			this->PBI3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->PBI3->TabIndex = 12;
+			this->PBI3->TabStop = false;
+			this->PBI3->Visible = false;
+			// 
+			// PBI5
+			// 
+			this->PBI5->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PBI5.Image")));
+			this->PBI5->Location = System::Drawing::Point(371, 211);
+			this->PBI5->Name = L"PBI5";
+			this->PBI5->Size = System::Drawing::Size(89, 96);
+			this->PBI5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->PBI5->TabIndex = 13;
+			this->PBI5->TabStop = false;
+			this->PBI5->Visible = false;
+			// 
 			// BTinsert_timer
 			// 
 			this->BTinsert_timer->Interval = 800;
@@ -271,6 +367,12 @@ namespace DataStructuresLearningSoftware {
 			this->Name = L"BST_insertion";
 			this->Size = System::Drawing::Size(1277, 596);
 			this->Btree_insert_animation->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PBI2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PBI6))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PBI4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PBI1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PBI3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PBI5))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -333,6 +435,7 @@ namespace DataStructuresLearningSoftware {
 					 this->BT4->BackColor = System::Drawing::SystemColors::MenuHighlight;
 					 this->BT4->Text = this->BTinsert_value->Text;
 					 this->BT4->Visible = true;
+					 this->PBI3->Visible = true;
 					 this->BTinsert_value->Text = "";
 					 this->BTinsert_value->Enabled = true;
 					 this->InsertBT->Enabled = true;
@@ -343,6 +446,7 @@ namespace DataStructuresLearningSoftware {
 					 this->BT5->BackColor = System::Drawing::SystemColors::MenuHighlight;
 					 this->BT5->Text = this->BTinsert_value->Text;
 					 this->BT5->Visible = true;
+					 this->PBI4->Visible = true;
 					 this->BTinsert_value->Text = "";
 					 this->BTinsert_value->Enabled = true;
 					 this->InsertBT->Enabled = true;
@@ -353,6 +457,7 @@ namespace DataStructuresLearningSoftware {
 					 this->BT6->BackColor = System::Drawing::SystemColors::MenuHighlight;
 					 this->BT6->Text = this->BTinsert_value->Text;
 					 this->BT6->Visible = true;
+					 this->PBI5->Visible = true;
 					 this->BTinsert_value->Text = "";
 					 this->BTinsert_value->Enabled = true;
 					 this->InsertBT->Enabled = true;
@@ -363,6 +468,7 @@ namespace DataStructuresLearningSoftware {
 					 this->BT7->BackColor = System::Drawing::SystemColors::MenuHighlight;
 					 this->BT7->Text = this->BTinsert_value->Text;
 					 this->BT7->Visible = true;
+					 this->PBI6->Visible = true;
 					 this->BTinsert_value->Text = "";
 					 this->BTinsert_value->Enabled = true;
 					 this->InsertBT->Enabled = true;
@@ -373,6 +479,7 @@ namespace DataStructuresLearningSoftware {
 					 this->BT3->BackColor = System::Drawing::SystemColors::MenuHighlight;
 					 this->BT3->Text = this->BTinsert_value->Text;
 					 this->BT3->Visible = true;
+					 this->PBI2->Visible = true;
 					 this->BTinsert_value->Text = "";
 					 this->BTinsert_value->Enabled = true;
 					 this->InsertBT->Enabled = true;
@@ -383,6 +490,7 @@ namespace DataStructuresLearningSoftware {
 					 this->BT2->BackColor = System::Drawing::SystemColors::MenuHighlight;
 					 this->BT2->Text = this->BTinsert_value->Text;
 					 this->BT2->Visible = true;
+					 this->PBI1->Visible = true;
 					 this->BTinsert_value->Text = "";
 					 this->BTinsert_value->Enabled = true;
 					 this->InsertBT->Enabled = true;
