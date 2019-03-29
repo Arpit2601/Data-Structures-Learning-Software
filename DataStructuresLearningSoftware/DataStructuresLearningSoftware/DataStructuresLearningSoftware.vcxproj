@@ -94,6 +94,12 @@
     <ClCompile Include="Array_Traversal.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="BinarySearch.cpp" />
+    <ClCompile Include="BST.cpp" />
+    <ClCompile Include="BST_deletion.cpp" />
+    <ClCompile Include="BST_insertion.cpp" />
+    <ClCompile Include="BST_intro.cpp" />
+    <ClCompile Include="BST_introduction.cpp" />
+    <ClCompile Include="BST_search.cpp" />
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="DataStructuresLearningSoftware.cpp" />
     <ClCompile Include="DiscussionForum.cpp" />
@@ -153,6 +159,24 @@
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="Array_Traversal.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="BST.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="BST_deletion.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="BST_insertion.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="BST_intro.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="BST_introduction.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="BST_search.h">
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="DiscussionForum.h">
@@ -299,6 +323,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Array_Traversal.resx">
       <DependentUpon>Array_Traversal.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BST.resx">
+      <DependentUpon>BST.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BST_deletion.resx">
+      <DependentUpon>BST_deletion.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BST_insertion.resx">
+      <DependentUpon>BST_insertion.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BST_intro.resx">
+      <DependentUpon>BST_intro.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BST_introduction.resx">
+      <DependentUpon>BST_introduction.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BST_search.resx">
+      <DependentUpon>BST_search.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DiscussionForum.resx">
       <DependentUpon>DiscussionForum.h</DependentUpon>
