@@ -3115,8 +3115,8 @@ private: System::Void LoginButton_Click(System::Object^  sender, System::EventAr
 						//MessageBox::Show(form->username);
 						//MessageBox::Show("True");
 						this->Hide();
-						form->Show(this);
-						this->Visible=false;
+						form->ShowDialog();
+						
 						
 						break;
 
@@ -3139,7 +3139,7 @@ private: System::Void LoginButton_Click(System::Object^  sender, System::EventAr
 				}
 				else
 				{
-					
+					this->Show();
 					UsernameTextBox->Text="";
 					PasswordTextBox->Text="";
 					UsernameTextBox->Focus();

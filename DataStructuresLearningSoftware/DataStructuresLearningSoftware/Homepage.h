@@ -2933,10 +2933,10 @@ private: System::Void ProfileSecuritySavebutton_Click(System::Object^  sender, S
 
 		 }
 private: System::Void HeaderLogoutbutton_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(this->Owner!=nullptr)
+			 /*if(this->Owner!=nullptr)
 			 {
 				 this->Owner->Visible=true;
-			 }
+			 }*/
 			 this->Close(); 
 			 
 
@@ -3549,37 +3549,37 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 			 LinkedList1 ^newForm = gcnew LinkedList1();
 			 newForm->username = username;
 			 this->Hide();
-			 newForm->Show(this);
+			 newForm->ShowDialog(this);
 		 }
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Sorting ^newForm = gcnew Sorting();
 			 newForm->username = username;
 			 this->Hide();
-			 newForm->Show(this);
+			 newForm->ShowDialog(this);
 		 }
 private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Stack_Main ^newForm = gcnew Stack_Main();
 			 newForm->username = username;
 			 this->Hide();
-			 newForm->Show(this);
+			 newForm->ShowDialog(this);
 		 }
 private: System::Void btnArrays_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Arrays ^newForm = gcnew Arrays();
 			 newForm->username = username;
 			 this->Hide();
-			 newForm->Show(this);
+			 newForm->ShowDialog(this);
 		 }
 private: System::Void btnSearching_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Searching ^newForm = gcnew Searching();
 			 newForm->username = username;
 			 this->Hide();
-			 newForm->Show(this);
+			 newForm->ShowDialog(this);
 		 }
 private: System::Void btnStacks_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Stack_Main ^newForm = gcnew Stack_Main();
 			 newForm->username = username;
 			 this->Hide();
-			 newForm->Show(this);
+			 newForm->ShowDialog(this);
 		 }
 private: System::Void SuggestionDeletebutton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 String ^ques=SuggestionDeletelistBox->SelectedItem->ToString();
