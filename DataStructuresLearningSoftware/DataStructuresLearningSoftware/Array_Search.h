@@ -324,43 +324,56 @@ namespace DataStructuresLearningSoftware {
 					 if(var==this->label_rec_1->Location.X && this->label_rec_1->Text==this->input->Text)
 					 {
 						 timer1->Enabled = false;
+						 this->input->Enabled = true;
+						 this->button3->Enabled = true;
 						 this->label_rec_1->BackColor = System::Drawing::SystemColors::InactiveBorder;
 						 this->label_rec_1->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
 					 }
 					 else if(var==this->label_rec_2->Location.X && this->label_rec_2->Text==this->input->Text)
 					 {
 						 timer1->Enabled = false;
+						 this->input->Enabled = true;
+						 this->button3->Enabled = true;
 						 this->label_rec_2->BackColor = System::Drawing::SystemColors::InactiveBorder;
 						 this->label_rec_2->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
 					 }
 					 else if(var==this->label_rec_3->Location.X && this->label_rec_3->Text==this->input->Text)
 					 {
 						 timer1->Enabled = false;
+						 this->input->Enabled = true;
+						 this->button3->Enabled = true;
 						 this->label_rec_3->BackColor = System::Drawing::SystemColors::InactiveBorder;
 						 this->label_rec_3->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
 					 }
 					 else if(var==this->label_rec_4->Location.X && this->label_rec_4->Text==this->input->Text)
 					 {
 						 timer1->Enabled = false;
+						 this->input->Enabled = true;
+						 this->button3->Enabled = true;
 						 this->label_rec_4->BackColor = System::Drawing::SystemColors::InactiveBorder;
 						 this->label_rec_4->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
 					 }
 					 else if(var==this->label_rec_5->Location.X && this->label_rec_5->Text==this->input->Text)
 					 {
 						 timer1->Enabled = false;
+						 this->input->Enabled = true;
+						 this->button3->Enabled = true;
 						 this->label_rec_5->BackColor = System::Drawing::SystemColors::InactiveBorder;
 						 this->label_rec_5->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
 					 }
 					 else if(var==this->label_rec_6->Location.X && this->label_rec_6->Text==this->input->Text)
 					 {
 						 timer1->Enabled = false;
+						 this->input->Enabled = true;
+						 this->button3->Enabled = true;
 						 this->label_rec_6->BackColor = System::Drawing::SystemColors::InactiveBorder;
 						 this->label_rec_6->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
 					 }
 					 else if(var==this->label_rec_7->Location.X && this->label_rec_7->Text==this->input->Text)
 					 {
 						 timer1->Enabled = false;
-
+						 this->input->Enabled = true;
+						 this->button3->Enabled = true;
 						 this->label_rec_7->BackColor = System::Drawing::SystemColors::InactiveBorder;
 						 this->label_rec_7->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
 					 }
@@ -373,6 +386,8 @@ namespace DataStructuresLearningSoftware {
 				 {
 					 timer1->Enabled = false;
 					 MessageBox::Show("Element Not Found !!");
+					 this->input->Enabled = true;
+					 this->button3->Enabled = true;
 					 this->arrow->Location = System::Drawing::Point( 9, this->arrow->Location.Y);
 					 this->input->Text = "";
 				 }
@@ -397,6 +412,8 @@ namespace DataStructuresLearningSoftware {
 				 if(this->input->Text!="")
 				 {
 					 timer1->Enabled = true;
+					 this->input->Enabled = false;
+					 this->button3->Enabled = false;
 				 }
 				 else
 				 {
@@ -420,7 +437,7 @@ namespace DataStructuresLearningSoftware {
 				 this->label_rec_6->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 				 this->label_rec_7->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 				 this->arrow->Location = System::Drawing::Point( 9, this->arrow->Location.Y);
-				 this->input->Text = "";
+				 //this->input->Text = "";
 			 }
 
 	private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {

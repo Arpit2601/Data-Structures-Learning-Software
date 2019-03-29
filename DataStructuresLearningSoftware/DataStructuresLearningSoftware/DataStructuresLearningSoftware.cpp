@@ -30,7 +30,7 @@ int main(array<System::String ^> ^args)
 
 	// Create the main window and run it
 
-	Application::Run(gcnew BST_mainpage());
+	Application::Run(gcnew Arrays());
 
 
 	return 0;
