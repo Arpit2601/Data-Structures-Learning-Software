@@ -11,7 +11,9 @@
 #include "Homepage.h"
 #include "Arrays.h"
 #include "LinkedList1.h"
-#include "stdafx.h"
+#include "BST.h"
+//#include "stdafx.h"
+
 #using <system.windows.forms.dll>
 #using <Microsoft.VisualBasic.dll>
 
@@ -28,7 +30,7 @@ int main(array<System::String ^> ^args)
 
 	// Create the main window and run it
 
-	Application::Run(gcnew Stack_Main());
+	Application::Run(gcnew BST_mainpage());
 
 
 	return 0;
