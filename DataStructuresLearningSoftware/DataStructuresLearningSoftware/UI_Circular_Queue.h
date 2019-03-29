@@ -135,6 +135,7 @@ namespace DataStructuresLearningSoftware {
 			this->label6->TabIndex = 40;
 			this->label6->Text = L"NOTE: You have Access to all the sub modules , feel free to explore before answer" 
 				L"ing the quiz.\r\n";
+			this->label6->Click += gcnew System::EventHandler(this, &UI_Circular_Queue::label6_Click);
 			// 
 			// label23
 			// 
@@ -146,6 +147,7 @@ namespace DataStructuresLearningSoftware {
 			this->label23->Size = System::Drawing::Size(482, 27);
 			this->label23->TabIndex = 39;
 			this->label23->Text = L"Answer the question correctly to pass the module.";
+			this->label23->Click += gcnew System::EventHandler(this, &UI_Circular_Queue::label23_Click);
 			// 
 			// quizpanel
 			// 
@@ -153,6 +155,7 @@ namespace DataStructuresLearningSoftware {
 			this->quizpanel->Name = L"quizpanel";
 			this->quizpanel->Size = System::Drawing::Size(1027, 464);
 			this->quizpanel->TabIndex = 38;
+			this->quizpanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &UI_Circular_Queue::quizpanel_Paint);
 			// 
 			// UI_Circular_Queue
 			// 
@@ -191,6 +194,12 @@ private: System::Void UI_Circular_Queue_Load(System::Object^  sender, System::Ev
 			 newPanel->update_name = "QueuesProgress";
 			 quizpanel->Controls->Clear();
 			 quizpanel->Controls->Add(newPanel);
+		 }
+private: System::Void quizpanel_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+		 }
+private: System::Void label23_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void label6_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
 };
 }

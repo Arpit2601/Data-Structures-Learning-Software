@@ -310,11 +310,27 @@ namespace DataStructuresLearningSoftware {
 		String ^ reply_message;
 		int message_id;
 		int Number_of_replies_width;
+		String ^ username;
+		String ^ designation;
+		bool approved ;
 		System::Collections::Generic::List<System::String ^> filters;
 		// on load function
 
 		void loadbase()
 		{
+			OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+			DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+			DB_Connection->Open();
+			String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+			OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+			OleDbDataReader ^ reader = cmd->ExecuteReader();
+			if(reader->Read()){
+				designation = reader->GetString(7);
+				approved = reader->GetBoolean(6);
+			}
+		
+			DB_Connection->Close();
 			msgpanel->Controls->Clear();
 			reply_message="message";
 			msgpanel->Visible=true;
@@ -330,6 +346,7 @@ namespace DataStructuresLearningSoftware {
 			Number_of_replies_width=(msgpanel->Size.Width)*(0.10);
 			replybtn->Enabled=true;
 			bool flag = false;
+
 			// to be done later select a field on load 
 			tagcombo->Text = "Array";
 			String ^ module_name = "Array";
@@ -390,6 +407,7 @@ namespace DataStructuresLearningSoftware {
 						background->BorderStyle=System::Windows::Forms::BorderStyle::FixedSingle;
 
 						Number_of_replies->Text=count.ToString()+" comments";
+						
 						username_text->Text = "By: " + reader->GetString(5);
 						type_text->Text = reader->GetString(6);
 						date_text->Text = "Posted " + System::DateTime::Now.Subtract(reader->GetDateTime(2)).Hours.ToString()+" Hours ago";
@@ -432,6 +450,11 @@ namespace DataStructuresLearningSoftware {
 						message_text->Cursor= System::Windows::Forms::Cursors::Hand;
 						Number_of_replies->Cursor= System::Windows::Forms::Cursors::Hand;
 						
+						if(reader->GetString(5)==username)
+						{
+							//MessageBox::Show(username);
+							message_text->ForeColor=System::Drawing::Color::SaddleBrown;
+						}
 						starty+=105;
 						msgpanel->Controls->Add(username_text);
 						msgpanel->Controls->Add(type_text);
@@ -440,7 +463,7 @@ namespace DataStructuresLearningSoftware {
 						msgpanel->Controls->Add(tag_pic);
 						msgpanel->Controls->Add(Number_of_replies);
 						msgpanel->Controls->Add(background);
-						
+
 					}
 				}
 			}
@@ -474,7 +497,11 @@ namespace DataStructuresLearningSoftware {
 
 			// function for posting messages and replies
 	private: System::Void replybtn_Click(System::Object^  sender, System::EventArgs^  e) {
-
+				 if(username=="guest")
+				 {
+					 MessageBox::Show("Login or Sign-up to post this message!!");
+				 }
+				 else{
 				 // function for posting message and replies on clicking post button
 				 if(reply_message=="message")
 				 {
@@ -492,10 +519,7 @@ namespace DataStructuresLearningSoftware {
 							 String ^  date = System::DateTime::Now.ToString();
 							 String ^ tag = tagcombo->Text;
 							 String ^ closed = "NO";
-							 String ^ username = "SD";
-							 String ^ designation = "as";
 							 String ^ reportedabuse = "NO";
-
 
 
 							 String ^ insertString = "insert into Messages([Message],[Date&Time],[FieldTag],[Closed],[Username],[Designation],[ReportedAbuse]) VALUES('" +messagetext+ "','" + date + "' , '" +tag+ "', '" +closed+ "', '" +username+ "', '" +designation+ "', '" +reportedabuse+ "' );";
@@ -534,8 +558,7 @@ namespace DataStructuresLearningSoftware {
 							 int message_id_for_reply = message_id;
 
 							 String ^ closed = "NO";
-							 String ^ username = "SD";
-							 String ^ designation = "as";
+							 String ^ designation = designation;
 							 String ^ reportedabuse = "NO";
 
 
@@ -562,7 +585,7 @@ namespace DataStructuresLearningSoftware {
 
 
 			 }
-
+			 }
 			 // function for refreshing message detail page after clicking on post
 	public: Void refresh_messagebody(int message_id)
 			{
@@ -671,14 +694,26 @@ namespace DataStructuresLearningSoftware {
 					deletethread->Tag = "M" + reader->GetValue(0);
 					deletethread->Click  += gcnew EventHandler(this, &DiscussionForum::deletethread_Click);
 
+
+					
 					message_detail->Controls->Add(messagetext);
 					message_detail->Controls->Add(usernametext);
 					message_detail->Controls->Add(datetext);
 					message_detail->Controls->Add(typetext);
 					message_detail->Controls->Add(reportabuse);
+
+					message_detail->Controls->Add(replylabel);
 					message_detail->Controls->Add(closethread);
 					message_detail->Controls->Add(deletethread);
-					message_detail->Controls->Add(replylabel);
+					if(designation=="admin"||(designation=="prof"&&approved==true))
+					{
+						
+					}
+					else
+					{
+						closethread->Hide();
+						deletethread->Hide();
+					}
 
 					if(reader->GetString(4)=="YES")
 					{
@@ -757,12 +792,25 @@ namespace DataStructuresLearningSoftware {
 						deletereply->Tag = "R" + readerreply->GetValue(0);
 						deletereply->Cursor= System::Windows::Forms::Cursors::Hand;
 
+						if(readerreply->GetString(2)==username)
+						{
+							reply->ForeColor=System::Drawing::Color::SaddleBrown;
+						}
+
 						message_detail->Controls->Add(reply);
 						message_detail->Controls->Add(usernametext);
 						message_detail->Controls->Add(datetext);
 						message_detail->Controls->Add(typetext);
 						message_detail->Controls->Add(reportabuse);
 						message_detail->Controls->Add(deletereply);
+						if(designation=="admin"||(designation=="prof"&&approved==true))
+						{
+
+						}
+						else
+						{
+							deletereply->Hide();
+						}
 						replystarty += reply->Height + 40;
 
 					}

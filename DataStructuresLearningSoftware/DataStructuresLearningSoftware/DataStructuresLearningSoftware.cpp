@@ -28,14 +28,8 @@ int main(array<System::String ^> ^args)
 
 	// Create the main window and run it
 
-	Application::Run(gcnew LoginForm());
-
 	Application::Run(gcnew Stack_Main());
 
-
-	Application::Run(gcnew Queue_Home());
-
-	Application::Run(gcnew LoginForm());
 
 	return 0;
 }

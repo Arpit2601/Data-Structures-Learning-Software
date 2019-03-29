@@ -6,6 +6,7 @@ using namespace System::Collections;
 using namespace System::Windows::Forms;
 using namespace System::Data;
 using namespace System::Drawing;
+#include "moduleQuiz.h";
 
 
 namespace DataStructuresLearningSoftware {
@@ -39,6 +40,9 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::RichTextBox^  richTextBox1;
 	private: System::Windows::Forms::RichTextBox^  richTextBox2;
 	private: System::Windows::Forms::Label^  label1;
+
+	private: System::Windows::Forms::Label^  label23;
+	private: System::Windows::Forms::Panel^  quizpanel;
 	protected: 
 
 	private:
@@ -59,6 +63,8 @@ namespace DataStructuresLearningSoftware {
 			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->richTextBox2 = (gcnew System::Windows::Forms::RichTextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label23 = (gcnew System::Windows::Forms::Label());
+			this->quizpanel = (gcnew System::Windows::Forms::Panel());
 			this->SuspendLayout();
 			// 
 			// Heading
@@ -114,23 +120,55 @@ namespace DataStructuresLearningSoftware {
 			this->label1->TabIndex = 5;
 			this->label1->Text = L"Following is the code for stack implementation using linked lists:-";
 			// 
+			// label23
+			// 
+			this->label23->AutoSize = true;
+			this->label23->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label23->Location = System::Drawing::Point(38, 696);
+			this->label23->Name = L"label23";
+			this->label23->Size = System::Drawing::Size(482, 27);
+			this->label23->TabIndex = 45;
+			this->label23->Text = L"Answer the question correctly to pass the module.";
+			// 
+			// quizpanel
+			// 
+			this->quizpanel->Location = System::Drawing::Point(35, 726);
+			this->quizpanel->Name = L"quizpanel";
+			this->quizpanel->Size = System::Drawing::Size(1027, 464);
+			this->quizpanel->TabIndex = 44;
+			// 
 			// Stack_Implementation_LinkedList
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::White;
+			this->Controls->Add(this->label23);
+			this->Controls->Add(this->quizpanel);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->richTextBox2);
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->Heading);
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Stack_Implementation_LinkedList";
-			this->Size = System::Drawing::Size(1105, 670);
+			this->Size = System::Drawing::Size(1105, 1216);
+			this->Load += gcnew System::EventHandler(this, &Stack_Implementation_LinkedList::Stack_Implementation_LinkedList_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+		public: String^ username;
 	private: System::Void Heading_Click(System::Object^  sender, System::EventArgs^  e) {
 			 }
-	};
+	private: System::Void Stack_Implementation_LinkedList_Load(System::Object^  sender, System::EventArgs^  e) {
+				 moduleQuiz ^newPanel = gcnew moduleQuiz();
+				 newPanel->ds_id = 5;
+				 newPanel->module_id = 1;
+				 newPanel->username = username;
+				 newPanel->update_id = 13;
+				 newPanel->update_name = "StacksProgress";
+				 quizpanel->Controls->Clear();
+				 quizpanel->Controls->Add(newPanel);
+			 }
+};
 }

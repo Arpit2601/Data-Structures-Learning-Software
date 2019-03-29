@@ -541,7 +541,6 @@ namespace DataStructuresLearningSoftware {
 					 fullname = reader->GetString(2);
 					 modulesCompleted = reader->GetInt32(14);
 				 }
-				 MessageBox::Show(Convert::ToString(modulesCompleted));
 				 lblWelcome->Text = "Welcome, "+fullname;
 				 outputpanel->AutoScroll=true;
 				 DB_Connection->Close();
@@ -845,16 +844,28 @@ private: System::Void richTextBox1_TextChanged(System::Object^  sender, System::
 		 }
 private: System::Void discussbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 			 outputpanel->Controls->Clear();
-			 outputpanel->Controls->Add(gcnew DiscussionForum);
+			 DiscussionForum ^ discuss = gcnew DiscussionForum;
+			 discuss->username=username;
+			 outputpanel->Controls->Add(discuss);
 		 }
 private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
 			 curid--;
 			 display();
 		 }
 private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
+			 modulescheck();
+			 if(modulesCompleted<=0 && curid==4)
+			 {
+				 MessageBox::Show("Please Complete the Previous Module to access this.");
+			 }
+			 else if(modulesCompleted<=1 && curid==8)
+			 {
+				 MessageBox::Show("Please Complete the Previous Module to access this.");
+			 }else{		 
+			 
 			 curid++;
 			 display();
-	
+			 }
 		 }
 private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Stack_Main ^ form = gcnew Stack_Main;
