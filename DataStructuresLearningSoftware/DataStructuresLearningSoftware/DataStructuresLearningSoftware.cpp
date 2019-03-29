@@ -29,12 +29,7 @@ int main(array<System::String ^> ^args)
 	Application::SetCompatibleTextRenderingDefault(false); 
 
 	// Create the main window and run it
-
-<<<<<<< HEAD
-	Application::Run(gcnew LoginForm());
-=======
 	Application::Run(gcnew BST_mainpage());
->>>>>>> 02e37d95857f6df044ad12aaf1331b3f148682ed
 
 
 	return 0;

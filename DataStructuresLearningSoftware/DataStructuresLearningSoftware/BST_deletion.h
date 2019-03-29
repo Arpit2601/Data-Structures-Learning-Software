@@ -602,7 +602,7 @@ namespace DataStructuresLearningSoftware {
 					 this->DL3->BackColor = System::Drawing::Color::DarkOrange;
 					 this->DL3->Text = "97";
 					 this->DL7->Visible = false;
-					 this->PB6->Visibel = false;
+					 this->PB6->Visible = false;
 					 this->Infolabel->Text = "That's It !!";
 				 }
 				 else if(this->Checklabel->Text == "3"){

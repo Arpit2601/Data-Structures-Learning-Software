@@ -381,6 +381,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void InsertBT_Click(System::Object^  sender, System::EventArgs^  e) {
 				 if(this->BTinsert_value->Text == ""){
 					 MessageBox::Show("Please Enter Value In The TextBox");
+					 return ;
 				 }
 				 int len=this->BTinsert_value->Text->Length;int num=0;
 				 for(int i=0;i<len;i++){if(isalpha(this->BTinsert_value->Text[i]) || this->BTinsert_value->Text[i]=='.'){num=1;}}
