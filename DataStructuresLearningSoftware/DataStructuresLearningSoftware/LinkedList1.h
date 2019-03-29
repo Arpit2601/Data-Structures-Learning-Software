@@ -53,7 +53,7 @@ namespace DataStructuresLearningSoftware {
 
 	private: System::Windows::Forms::Button^  btnIntroduction;
 	private: System::Windows::Forms::Button^  btnQuiz;
-	private: System::Windows::Forms::Button^  btnLogout;
+
 	private: System::Windows::Forms::Button^  btnHome;
 	private: System::Windows::Forms::Button^  btnNext;
 
@@ -87,7 +87,6 @@ namespace DataStructuresLearningSoftware {
 			this->btnIntroduction = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->lblWelcome = (gcnew System::Windows::Forms::Label());
-			this->btnLogout = (gcnew System::Windows::Forms::Button());
 			this->btnHome = (gcnew System::Windows::Forms::Button());
 			this->btnNext = (gcnew System::Windows::Forms::Button());
 			this->btnBack = (gcnew System::Windows::Forms::Button());
@@ -188,7 +187,6 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->panel2->BackColor = System::Drawing::Color::AliceBlue;
 			this->panel2->Controls->Add(this->lblWelcome);
-			this->panel2->Controls->Add(this->btnLogout);
 			this->panel2->Controls->Add(this->btnHome);
 			this->panel2->Controls->Add(this->btnNext);
 			this->panel2->Controls->Add(this->btnBack);
@@ -209,29 +207,18 @@ namespace DataStructuresLearningSoftware {
 			this->lblWelcome->Text = L"label1";
 			this->lblWelcome->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
-			// btnLogout
-			// 
-			this->btnLogout->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnLogout->FlatAppearance->BorderSize = 0;
-			this->btnLogout->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnLogout->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnLogout.Image")));
-			this->btnLogout->Location = System::Drawing::Point(1055, 0);
-			this->btnLogout->Name = L"btnLogout";
-			this->btnLogout->Size = System::Drawing::Size(50, 50);
-			this->btnLogout->TabIndex = 3;
-			this->btnLogout->UseVisualStyleBackColor = true;
-			// 
 			// btnHome
 			// 
 			this->btnHome->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnHome->FlatAppearance->BorderSize = 0;
 			this->btnHome->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnHome->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnHome.Image")));
-			this->btnHome->Location = System::Drawing::Point(1005, 0);
+			this->btnHome->Location = System::Drawing::Point(1055, 0);
 			this->btnHome->Name = L"btnHome";
 			this->btnHome->Size = System::Drawing::Size(50, 50);
 			this->btnHome->TabIndex = 2;
 			this->btnHome->UseVisualStyleBackColor = true;
+			this->btnHome->Click += gcnew System::EventHandler(this, &LinkedList1::btnHome_Click);
 			// 
 			// btnNext
 			// 
@@ -239,7 +226,7 @@ namespace DataStructuresLearningSoftware {
 			this->btnNext->FlatAppearance->BorderSize = 0;
 			this->btnNext->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnNext->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnNext.Image")));
-			this->btnNext->Location = System::Drawing::Point(955, 0);
+			this->btnNext->Location = System::Drawing::Point(1005, 0);
 			this->btnNext->Name = L"btnNext";
 			this->btnNext->Size = System::Drawing::Size(50, 50);
 			this->btnNext->TabIndex = 1;
@@ -475,5 +462,11 @@ namespace DataStructuresLearningSoftware {
 					 display();
 				 }			 
 			}
+private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if(this->Owner != nullptr){
+				 this->Hide();
+				 this->Owner->Show();
+			 }
+		 }
 };
 }
