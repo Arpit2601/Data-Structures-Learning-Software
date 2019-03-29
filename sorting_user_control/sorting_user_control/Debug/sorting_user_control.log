@@ -1,7 +1,7 @@
-﻿Build started 28-Mar-19 8:04:33 PM.
+﻿Build started 29-Mar-19 9:38:16 PM.
      1>Project "D:\projects\Sorting Part2\sorting_user_control\sorting_user_control\sorting_user_control.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Debug\sorting_user_control.unsuccessfulbuild".
+         Creating "Debug\sorting_user_control.unsuccessfulbuild" because "AlwaysCreate" was specified.
        GenerateTargetFrameworkMonikerAttribute:
        Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
        ClCompile:
@@ -38,4 +38,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.98
+Time Elapsed 00:00:03.13

@@ -603,6 +603,7 @@ private: System::Void btnAdd_Click(System::Object^  sender, System::EventArgs^  
 						 }
 				 }
 			     else if(baddcounter==2){
+					 int check=1;
 						try{
 						   bm=Convert::ToInt32(txtFrom->Text);
 						   label1->Text="Enter the Edges";
@@ -614,7 +615,17 @@ private: System::Void btnAdd_Click(System::Object^  sender, System::EventArgs^  
 						 }catch(...){
 						   MessageBox::Show("Please Enter the Number of Edges as Integer Only");
 						   baddcounter--;
+						   check=0;
 						}
+
+						if(check){
+							if(bm>(bn*(bn-1))/2){
+								MessageBox::Show("Number of Edges can't be more than Complete graph with same number of nodes");
+								baddcounter--;
+							}
+						}
+
+
 					
 				 }else if(baddcounter>=3 && baddcounter<=bm+2){
 						 int a,b;

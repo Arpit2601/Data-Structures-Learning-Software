@@ -579,6 +579,7 @@ namespace sorting_user_control {
 						 }
 				 }
 			     else if(addcounter==2){
+					 int check=1;
 						try{
 						   m=Convert::ToInt32(txtFrom->Text);
 						   label1->Text="Enter the Edges";
@@ -590,6 +591,14 @@ namespace sorting_user_control {
 						 }catch(...){
 						   MessageBox::Show("Please Enter the Number of Edges as Integer Only");
 						   addcounter--;
+						   check=0;
+						}
+
+						if(check){
+							if(m>(n*(n-1))/2){
+								MessageBox::Show("Number of Edges can't be more than Complete graph with same number of nodes");
+								addcounter--;
+							}
 						}
 					
 				 }else if(addcounter>=3 && addcounter<=m+2){
