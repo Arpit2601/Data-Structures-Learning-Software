@@ -2040,9 +2040,9 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1048, 763);
+			this->Controls->Add(this->loginpanel);
 			this->Controls->Add(this->Registerpanel);
 			this->Controls->Add(this->ForgotPasswordpanel);
-			this->Controls->Add(this->loginpanel);
 			this->Controls->Add(this->headerpanel);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->MaximizeBox = false;
@@ -3003,10 +3003,10 @@ private: System::Void LoginButton_Click(System::Object^  sender, System::EventAr
 						connection->Close();
 						form->vartextBox->Text=username;
 						//MessageBox::Show(form->username);
-						MessageBox::Show("True");
+						//MessageBox::Show("True");
 						this->Hide();
-						form->Show(this);
-						this->Visible=false;
+						form->ShowDialog();
+						
 						
 						break;
 
@@ -3029,7 +3029,7 @@ private: System::Void LoginButton_Click(System::Object^  sender, System::EventAr
 				}
 				else
 				{
-					
+					this->Show();
 					UsernameTextBox->Text="";
 					PasswordTextBox->Text="";
 					UsernameTextBox->Focus();
