@@ -1,7 +1,7 @@
-﻿Build started 29-03-2019 12:36:36 AM.
-     1>Project "D:\Work\Data-Structures-Learning-Software\DataStructuresLearningSoftware\DataStructuresLearningSoftware\DataStructuresLearningSoftware.vcxproj" on node 2 (build target(s)).
+﻿Build started 29-03-2019 9:08:29 PM.
+     1>Project "D:\Github\Data-Structures-Learning-Software\DataStructuresLearningSoftware\DataStructuresLearningSoftware\DataStructuresLearningSoftware.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Creating "Debug\DataStructuresLearningSoftware.unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "Debug\DataStructuresLearningSoftware.unsuccessfulbuild".
        GenerateTargetFrameworkMonikerAttribute:
        Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
        ClCompile:
@@ -14,12 +14,12 @@
          All outputs are up-to-date.
        Link:
          All outputs are up-to-date.
-         DataStructuresLearningSoftware.vcxproj -> D:\Work\Data-Structures-Learning-Software\DataStructuresLearningSoftware\Debug\DataStructuresLearningSoftware.exe
+         DataStructuresLearningSoftware.vcxproj -> D:\Github\Data-Structures-Learning-Software\DataStructuresLearningSoftware\Debug\DataStructuresLearningSoftware.exe
        FinalizeBuildStatus:
          Deleting file "Debug\DataStructuresLearningSoftware.unsuccessfulbuild".
          Touching "Debug\DataStructuresLearningSoftware.lastbuildstate".
-     1>Done Building Project "D:\Work\Data-Structures-Learning-Software\DataStructuresLearningSoftware\DataStructuresLearningSoftware\DataStructuresLearningSoftware.vcxproj" (build target(s)).
+     1>Done Building Project "D:\Github\Data-Structures-Learning-Software\DataStructuresLearningSoftware\DataStructuresLearningSoftware\DataStructuresLearningSoftware.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.12
+Time Elapsed 00:00:00.07
