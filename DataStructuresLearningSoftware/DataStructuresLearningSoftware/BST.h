@@ -65,6 +65,7 @@ namespace DataStructuresLearningSoftware {
 			// BST_mainpage
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->AutoScroll = true;
 			this->ClientSize = System::Drawing::Size(1280, 720);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"BST_mainpage";

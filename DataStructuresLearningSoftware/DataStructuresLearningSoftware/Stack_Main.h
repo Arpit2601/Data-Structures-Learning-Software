@@ -123,7 +123,7 @@ namespace DataStructuresLearningSoftware {
 			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button9->ForeColor = System::Drawing::Color::Black;
-			this->button9->Location = System::Drawing::Point(11, 288);
+			this->button9->Location = System::Drawing::Point(11, 295);
 			this->button9->Margin = System::Windows::Forms::Padding(2);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(150, 24);
@@ -142,7 +142,7 @@ namespace DataStructuresLearningSoftware {
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::Color::Black;
-			this->button3->Location = System::Drawing::Point(0, 60);
+			this->button3->Location = System::Drawing::Point(0, 100);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(175, 70);
 			this->button3->TabIndex = 3;
@@ -160,7 +160,7 @@ namespace DataStructuresLearningSoftware {
 			this->button7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button7->ForeColor = System::Drawing::Color::Black;
-			this->button7->Location = System::Drawing::Point(0, 220);
+			this->button7->Location = System::Drawing::Point(0, 260);
 			this->button7->Margin = System::Windows::Forms::Padding(4);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(175, 30);
@@ -179,7 +179,7 @@ namespace DataStructuresLearningSoftware {
 			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button6->ForeColor = System::Drawing::Color::Black;
-			this->button6->Location = System::Drawing::Point(0, 190);
+			this->button6->Location = System::Drawing::Point(0, 230);
 			this->button6->Margin = System::Windows::Forms::Padding(4);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(175, 30);
@@ -198,7 +198,7 @@ namespace DataStructuresLearningSoftware {
 			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button5->ForeColor = System::Drawing::Color::Black;
-			this->button5->Location = System::Drawing::Point(0, 160);
+			this->button5->Location = System::Drawing::Point(0, 200);
 			this->button5->Margin = System::Windows::Forms::Padding(4);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(175, 30);
@@ -217,7 +217,7 @@ namespace DataStructuresLearningSoftware {
 			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button4->ForeColor = System::Drawing::Color::Black;
-			this->button4->Location = System::Drawing::Point(0, 130);
+			this->button4->Location = System::Drawing::Point(0, 170);
 			this->button4->Margin = System::Windows::Forms::Padding(4);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(175, 30);
@@ -238,7 +238,7 @@ namespace DataStructuresLearningSoftware {
 			this->button2->ForeColor = System::Drawing::Color::Black;
 			this->button2->Location = System::Drawing::Point(0, 30);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(175, 30);
+			this->button2->Size = System::Drawing::Size(175, 70);
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"Implementation Using  Arrays";
 			this->button2->UseVisualStyleBackColor = false;

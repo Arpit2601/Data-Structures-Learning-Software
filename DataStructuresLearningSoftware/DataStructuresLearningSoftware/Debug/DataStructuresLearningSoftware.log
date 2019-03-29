@@ -1,4 +1,4 @@
-﻿Build started 29-03-2019 22:45:49.
+﻿Build started 30-03-2019 02:21:34.
      1>Project "F:\cloned from git\Data-Structures-Learning-Software\DataStructuresLearningSoftware\DataStructuresLearningSoftware\DataStructuresLearningSoftware.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\DataStructuresLearningSoftware.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -6,10 +6,74 @@
        Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
        ClCompile:
          All outputs are up-to-date.
-         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"SDK Path\Include" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\DataStructuresLearningSoftware.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt BST.cpp BST_insertion.cpp BST_intro.cpp DataStructuresLearningSoftware.cpp /clr:nostdlib 
+         BST.cpp
+         BST_insertion.cpp
+         BST_intro.cpp
+         DataStructuresLearningSoftware.cpp
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Circular_Queue.h(9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Circular_Queue_Animation.h(284): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Circular_Queue_Animation.h(299): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Circular_Queue_Animation.h(302): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Circular_Queue_Animation.h(422): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Circular_Queue_Animation.h(429): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Circular_Queue_Animation.h(441): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Circular_Queue_Animation.h(450): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Circular_Queue_Animation.h(494): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Circular_Queue_Animation.h(496): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Circular_Queue_Animation.h(499): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Linear_Queue_Animation.h(283): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Linear_Queue_Animation.h(298): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Linear_Queue_Animation.h(301): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Linear_Queue_Animation.h(416): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Linear_Queue_Animation.h(423): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Linear_Queue_Animation.h(435): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Linear_Queue_Animation.h(444): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Linear_Queue_Animation.h(488): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Linear_Queue_Animation.h(490): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\UI_Linear_Queue_Animation.h(493): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(338): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(340): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(341): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(342): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(343): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(344): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(345): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(346): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(609): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(660): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(661): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(662): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(663): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(664): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(665): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(674): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(675): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(676): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(677): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(678): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(770): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(771): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(772): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(773): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(774): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(775): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(780): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(781): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(782): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(783): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(784): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\DiscussionForum.h(785): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\Stack_Implementation_Array.h(9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\Stack_Implementation_LinkedList.h(9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\mergesort.h(734): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\mergesort.h(735): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>f:\cloned from git\data-structures-learning-software\datastructureslearningsoftware\datastructureslearningsoftware\mergesort.h(740): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+         Generating Code...
          All outputs are up-to-date.
        CoreResGen:
-         No resources are out of date with respect to their source files. Skipping resource generation.
+         "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\NETFX 4.0 Tools\resgen.exe" /useSourcePath /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /compile BST_insertion.resx,Debug\DataStructuresLearningSoftware.BST_insertion.resources
+         Processing resource file "BST_insertion.resx" into "Debug\DataStructuresLearningSoftware.BST_insertion.resources".
        ResourceCompile:
          All outputs are up-to-date.
        Link:
@@ -79,4 +143,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.04
+Time Elapsed 00:00:06.61

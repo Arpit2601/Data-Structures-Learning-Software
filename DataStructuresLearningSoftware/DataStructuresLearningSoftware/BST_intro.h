@@ -1,5 +1,5 @@
 #pragma once
-
+#include "moduleQuiz.h"
 #include "BST_introduction.h"
 #include "BST_insertion.h"
 #include "BST_deletion.h"
@@ -47,6 +47,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Button^  BST_insert_btn;
 	private: System::Windows::Forms::Button^  BST_deletion_btn;
 	private: System::Windows::Forms::Button^  BST_traversal_btn;
+	private: System::Windows::Forms::Button^  button1;
 
 
 	protected: 
@@ -76,6 +77,7 @@ namespace DataStructuresLearningSoftware {
 			this->BST_insert_btn = (gcnew System::Windows::Forms::Button());
 			this->BST_deletion_btn = (gcnew System::Windows::Forms::Button());
 			this->BST_traversal_btn = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// BST_main_lab
@@ -92,6 +94,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// panel1
 			// 
+			this->panel1->AutoScroll = true;
 			this->panel1->Location = System::Drawing::Point(0, 121);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(1277, 596);
@@ -107,7 +110,7 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Byte>(0)));
 			this->BST_intro_btn->Location = System::Drawing::Point(38, 69);
 			this->BST_intro_btn->Name = L"BST_intro_btn";
-			this->BST_intro_btn->Size = System::Drawing::Size(225, 46);
+			this->BST_intro_btn->Size = System::Drawing::Size(170, 40);
 			this->BST_intro_btn->TabIndex = 2;
 			this->BST_intro_btn->Text = L"Introduction";
 			this->BST_intro_btn->UseVisualStyleBackColor = false;
@@ -121,9 +124,9 @@ namespace DataStructuresLearningSoftware {
 			this->BST_insert_btn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->BST_insert_btn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->BST_insert_btn->Location = System::Drawing::Point(310, 69);
+			this->BST_insert_btn->Location = System::Drawing::Point(289, 69);
 			this->BST_insert_btn->Name = L"BST_insert_btn";
-			this->BST_insert_btn->Size = System::Drawing::Size(248, 46);
+			this->BST_insert_btn->Size = System::Drawing::Size(170, 40);
 			this->BST_insert_btn->TabIndex = 3;
 			this->BST_insert_btn->Text = L"Insertion";
 			this->BST_insert_btn->UseVisualStyleBackColor = false;
@@ -137,9 +140,9 @@ namespace DataStructuresLearningSoftware {
 			this->BST_deletion_btn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->BST_deletion_btn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->BST_deletion_btn->Location = System::Drawing::Point(601, 69);
+			this->BST_deletion_btn->Location = System::Drawing::Point(537, 69);
 			this->BST_deletion_btn->Name = L"BST_deletion_btn";
-			this->BST_deletion_btn->Size = System::Drawing::Size(251, 46);
+			this->BST_deletion_btn->Size = System::Drawing::Size(170, 40);
 			this->BST_deletion_btn->TabIndex = 4;
 			this->BST_deletion_btn->Text = L"Deletion";
 			this->BST_deletion_btn->UseVisualStyleBackColor = false;
@@ -153,18 +156,36 @@ namespace DataStructuresLearningSoftware {
 			this->BST_traversal_btn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->BST_traversal_btn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->BST_traversal_btn->Location = System::Drawing::Point(891, 69);
+			this->BST_traversal_btn->Location = System::Drawing::Point(786, 69);
 			this->BST_traversal_btn->Name = L"BST_traversal_btn";
-			this->BST_traversal_btn->Size = System::Drawing::Size(270, 46);
+			this->BST_traversal_btn->Size = System::Drawing::Size(170, 40);
 			this->BST_traversal_btn->TabIndex = 5;
 			this->BST_traversal_btn->Text = L"Traversal";
 			this->BST_traversal_btn->UseVisualStyleBackColor = false;
 			this->BST_traversal_btn->Click += gcnew System::EventHandler(this, &BST_intro::BST_traversal_btn_Click);
 			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::Salmon;
+			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button1->FlatAppearance->BorderSize = 0;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button1->Location = System::Drawing::Point(1063, 69);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(170, 40);
+			this->button1->TabIndex = 6;
+			this->button1->Text = L"Quiz";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &BST_intro::button1_Click);
+			// 
 			// BST_intro
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->AutoScroll = true;
 			this->BackColor = System::Drawing::Color::Bisque;
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->BST_traversal_btn);
 			this->Controls->Add(this->BST_deletion_btn);
 			this->Controls->Add(this->BST_insert_btn);
@@ -179,7 +200,8 @@ namespace DataStructuresLearningSoftware {
 
 		}
 #pragma endregion
-
+		public:
+			String ^ username;
 	private: System::Void BST_intro_btn_Click(System::Object^  sender, System::EventArgs^  e) {
 				 this->panel1->Controls->Clear();
 				 this->panel1->Controls->Add(gcnew BST_introduction);
@@ -204,5 +226,8 @@ namespace DataStructuresLearningSoftware {
 				 this->panel1->Controls->Clear();
 				 this->panel1->Controls->Add(gcnew BST_search);
 			 }
-	};
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+				 
+			 }
+};
 }
