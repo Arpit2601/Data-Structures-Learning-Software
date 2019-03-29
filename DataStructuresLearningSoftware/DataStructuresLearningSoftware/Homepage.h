@@ -2920,10 +2920,10 @@ private: System::Void ProfileSecuritySavebutton_Click(System::Object^  sender, S
 
 		 }
 private: System::Void HeaderLogoutbutton_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(this->Owner!=nullptr)
+			 /*if(this->Owner!=nullptr)
 			 {
 				 this->Owner->Visible=true;
-			 }
+			 }*/
 			 this->Close(); 
 			 
 
