@@ -12,6 +12,7 @@
 #include "Arrays.h"
 #include "LinkedList1.h"
 #include "BST.h"
+#include "MainPage.h"
 //#include "stdafx.h"
 
 #using <system.windows.forms.dll>
@@ -31,6 +32,7 @@ int main(array<System::String ^> ^args)
 	// Create the main window and run it
 
 
+	Application::Run(gcnew MainPage());
 	Application::Run(gcnew LoginForm());
 
 	Application::Run(gcnew BST_mainpage());

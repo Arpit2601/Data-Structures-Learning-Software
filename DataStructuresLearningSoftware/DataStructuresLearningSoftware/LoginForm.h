@@ -2183,7 +2183,7 @@ private: System::Void ChangePasswordcheckBox_CheckedChanged(System::Object^  sen
 private: System::Void pictureBox3_Click_1(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void closebutton_Click(System::Object^  sender, System::EventArgs^  e) {
-			 this->Close();
+			 exit(0);
 }
 private: System::Void UsernameTextBox_Click(System::Object^  sender, System::EventArgs^  e) {
 			 static int count = 1;

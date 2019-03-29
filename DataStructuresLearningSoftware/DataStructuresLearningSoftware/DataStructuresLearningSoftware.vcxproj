@@ -111,6 +111,7 @@
     <ClCompile Include="LinkedList_Introduction.cpp" />
     <ClCompile Include="LinkedList_Traversal.cpp" />
     <ClCompile Include="LoginForm.cpp" />
+    <ClCompile Include="MainPage1.cpp" />
     <ClCompile Include="mergesort.cpp" />
     <ClCompile Include="Queue_Home.cpp" />
     <ClCompile Include="Stack_Animations.cpp" />
