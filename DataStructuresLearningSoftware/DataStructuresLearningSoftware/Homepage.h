@@ -483,6 +483,17 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfilePictureChangebutton = (gcnew System::Windows::Forms::Button());
 			this->ProfileopenFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->DSpanel = (gcnew System::Windows::Forms::Panel());
+			this->DSLinkpanel = (gcnew System::Windows::Forms::Panel());
+			this->DSSuggestionsbutton = (gcnew System::Windows::Forms::Button());
+			this->btnGraphs = (gcnew System::Windows::Forms::Button());
+			this->btnHeaps = (gcnew System::Windows::Forms::Button());
+			this->btnTrees = (gcnew System::Windows::Forms::Button());
+			this->btnQueues = (gcnew System::Windows::Forms::Button());
+			this->btnStacks = (gcnew System::Windows::Forms::Button());
+			this->btnSorting = (gcnew System::Windows::Forms::Button());
+			this->btnSearching = (gcnew System::Windows::Forms::Button());
+			this->btnLinkedList = (gcnew System::Windows::Forms::Button());
+			this->btnArrays = (gcnew System::Windows::Forms::Button());
 			this->Suggestionpanel = (gcnew System::Windows::Forms::Panel());
 			this->SuggestionDSbutton = (gcnew System::Windows::Forms::Button());
 			this->SuggestionPastpanel = (gcnew System::Windows::Forms::Panel());
@@ -518,17 +529,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->DSSuggestionlabel = (gcnew System::Windows::Forms::Label());
 			this->ModulecomboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->DScomboBox = (gcnew System::Windows::Forms::ComboBox());
-			this->DSLinkpanel = (gcnew System::Windows::Forms::Panel());
-			this->DSSuggestionsbutton = (gcnew System::Windows::Forms::Button());
-			this->btnGraphs = (gcnew System::Windows::Forms::Button());
-			this->btnHeaps = (gcnew System::Windows::Forms::Button());
-			this->btnTrees = (gcnew System::Windows::Forms::Button());
-			this->btnQueues = (gcnew System::Windows::Forms::Button());
-			this->btnStacks = (gcnew System::Windows::Forms::Button());
-			this->btnSorting = (gcnew System::Windows::Forms::Button());
-			this->btnSearching = (gcnew System::Windows::Forms::Button());
-			this->btnLinkedList = (gcnew System::Windows::Forms::Button());
-			this->btnArrays = (gcnew System::Windows::Forms::Button());
 			this->HeaderPanel->SuspendLayout();
 			this->Headerstatuspanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox4))->BeginInit();
@@ -550,6 +550,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox1))->BeginInit();
 			this->DSpanel->SuspendLayout();
+			this->DSLinkpanel->SuspendLayout();
 			this->Suggestionpanel->SuspendLayout();
 			this->SuggestionPastpanel->SuspendLayout();
 			this->SuggestionDeletepanel->SuspendLayout();
@@ -559,7 +560,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
-			this->DSLinkpanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// HeaderPanel
@@ -1345,6 +1345,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileSecurityAnswertextBox->Size = System::Drawing::Size(291, 27);
 			this->ProfileSecurityAnswertextBox->TabIndex = 37;
 			this->ProfileSecurityAnswertextBox->Text = L"Answer";
+			this->ProfileSecurityAnswertextBox->MouseEnter += gcnew System::EventHandler(this, &Homepage::ProfileSecurityAnswertextBox_MouseEnter);
+			this->ProfileSecurityAnswertextBox->MouseLeave += gcnew System::EventHandler(this, &Homepage::ProfileSecurityAnswertextBox_MouseLeave);
 			// 
 			// ProfileSecuritycomboBox
 			// 
@@ -1392,6 +1394,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileOldPasswordSecuritytextBox->Size = System::Drawing::Size(291, 27);
 			this->ProfileOldPasswordSecuritytextBox->TabIndex = 33;
 			this->ProfileOldPasswordSecuritytextBox->Text = L"Password";
+			this->ProfileOldPasswordSecuritytextBox->MouseEnter += gcnew System::EventHandler(this, &Homepage::ProfileOldPasswordSecuritytextBox_MouseEnter);
+			this->ProfileOldPasswordSecuritytextBox->MouseLeave += gcnew System::EventHandler(this, &Homepage::ProfileOldPasswordSecuritytextBox_MouseLeave);
 			// 
 			// ProfileChangePasswordpanel3
 			// 
@@ -1425,6 +1429,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileConfirmPasswordtextBox->Size = System::Drawing::Size(291, 27);
 			this->ProfileConfirmPasswordtextBox->TabIndex = 30;
 			this->ProfileConfirmPasswordtextBox->Text = L"Confirm Password";
+			this->ProfileConfirmPasswordtextBox->MouseEnter += gcnew System::EventHandler(this, &Homepage::ProfileConfirmPasswordtextBox_MouseEnter);
+			this->ProfileConfirmPasswordtextBox->MouseLeave += gcnew System::EventHandler(this, &Homepage::ProfileConfirmPasswordtextBox_MouseLeave);
 			// 
 			// ProfileChangePasswordpanel2
 			// 
@@ -1458,6 +1464,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileNewPasswordtextBox->Size = System::Drawing::Size(289, 27);
 			this->ProfileNewPasswordtextBox->TabIndex = 27;
 			this->ProfileNewPasswordtextBox->Text = L"New Password";
+			this->ProfileNewPasswordtextBox->MouseEnter += gcnew System::EventHandler(this, &Homepage::ProfileNewPasswordtextBox_MouseEnter);
+			this->ProfileNewPasswordtextBox->MouseLeave += gcnew System::EventHandler(this, &Homepage::ProfileNewPasswordtextBox_MouseLeave);
 			// 
 			// ProfileChangePasswordpanel1
 			// 
@@ -1492,6 +1500,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfileOldPasswordtextBox->TabIndex = 24;
 			this->ProfileOldPasswordtextBox->Text = L"Current Password";
 			this->ProfileOldPasswordtextBox->TextChanged += gcnew System::EventHandler(this, &Homepage::textBox1_TextChanged);
+			this->ProfileOldPasswordtextBox->MouseEnter += gcnew System::EventHandler(this, &Homepage::ProfileOldPasswordtextBox_MouseEnter);
+			this->ProfileOldPasswordtextBox->MouseLeave += gcnew System::EventHandler(this, &Homepage::ProfileOldPasswordtextBox_MouseLeave);
 			// 
 			// label2
 			// 
@@ -1579,6 +1589,189 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->DSpanel->Name = L"DSpanel";
 			this->DSpanel->Size = System::Drawing::Size(1280, 705);
 			this->DSpanel->TabIndex = 13;
+			// 
+			// DSLinkpanel
+			// 
+			this->DSLinkpanel->BackColor = System::Drawing::Color::White;
+			this->DSLinkpanel->Controls->Add(this->DSSuggestionsbutton);
+			this->DSLinkpanel->Controls->Add(this->btnGraphs);
+			this->DSLinkpanel->Controls->Add(this->btnHeaps);
+			this->DSLinkpanel->Controls->Add(this->btnTrees);
+			this->DSLinkpanel->Controls->Add(this->btnQueues);
+			this->DSLinkpanel->Controls->Add(this->btnStacks);
+			this->DSLinkpanel->Controls->Add(this->btnSorting);
+			this->DSLinkpanel->Controls->Add(this->btnSearching);
+			this->DSLinkpanel->Controls->Add(this->btnLinkedList);
+			this->DSLinkpanel->Controls->Add(this->btnArrays);
+			this->DSLinkpanel->Location = System::Drawing::Point(32, 37);
+			this->DSLinkpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->DSLinkpanel->Name = L"DSLinkpanel";
+			this->DSLinkpanel->Size = System::Drawing::Size(1216, 631);
+			this->DSLinkpanel->TabIndex = 1;
+			// 
+			// DSSuggestionsbutton
+			// 
+			this->DSSuggestionsbutton->BackColor = System::Drawing::Color::Black;
+			this->DSSuggestionsbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->DSSuggestionsbutton->ForeColor = System::Drawing::Color::White;
+			this->DSSuggestionsbutton->Location = System::Drawing::Point(1019, 538);
+			this->DSSuggestionsbutton->Name = L"DSSuggestionsbutton";
+			this->DSSuggestionsbutton->Size = System::Drawing::Size(181, 73);
+			this->DSSuggestionsbutton->TabIndex = 10;
+			this->DSSuggestionsbutton->Text = L"Suggestions";
+			this->DSSuggestionsbutton->UseVisualStyleBackColor = false;
+			this->DSSuggestionsbutton->Click += gcnew System::EventHandler(this, &Homepage::DSSuggestionsbutton_Click);
+			// 
+			// btnGraphs
+			// 
+			this->btnGraphs->BackColor = System::Drawing::Color::DarkSeaGreen;
+			this->btnGraphs->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnGraphs->FlatAppearance->BorderSize = 0;
+			this->btnGraphs->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnGraphs->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnGraphs->Location = System::Drawing::Point(728, 224);
+			this->btnGraphs->Margin = System::Windows::Forms::Padding(4);
+			this->btnGraphs->Name = L"btnGraphs";
+			this->btnGraphs->Size = System::Drawing::Size(243, 224);
+			this->btnGraphs->TabIndex = 9;
+			this->btnGraphs->Text = L"Graphs";
+			this->btnGraphs->UseVisualStyleBackColor = false;
+			// 
+			// btnHeaps
+			// 
+			this->btnHeaps->BackColor = System::Drawing::Color::Bisque;
+			this->btnHeaps->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnHeaps->FlatAppearance->BorderSize = 0;
+			this->btnHeaps->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnHeaps->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnHeaps->Location = System::Drawing::Point(485, 224);
+			this->btnHeaps->Margin = System::Windows::Forms::Padding(4);
+			this->btnHeaps->Name = L"btnHeaps";
+			this->btnHeaps->Size = System::Drawing::Size(243, 224);
+			this->btnHeaps->TabIndex = 8;
+			this->btnHeaps->Text = L"Heaps";
+			this->btnHeaps->UseVisualStyleBackColor = false;
+			// 
+			// btnTrees
+			// 
+			this->btnTrees->BackColor = System::Drawing::Color::LightCoral;
+			this->btnTrees->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnTrees->FlatAppearance->BorderSize = 0;
+			this->btnTrees->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnTrees->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnTrees->Location = System::Drawing::Point(243, 224);
+			this->btnTrees->Margin = System::Windows::Forms::Padding(4);
+			this->btnTrees->Name = L"btnTrees";
+			this->btnTrees->Size = System::Drawing::Size(243, 224);
+			this->btnTrees->TabIndex = 7;
+			this->btnTrees->Text = L"Trees";
+			this->btnTrees->UseVisualStyleBackColor = false;
+			// 
+			// btnQueues
+			// 
+			this->btnQueues->BackColor = System::Drawing::Color::CornflowerBlue;
+			this->btnQueues->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnQueues->FlatAppearance->BorderSize = 0;
+			this->btnQueues->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnQueues->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnQueues->Location = System::Drawing::Point(0, 224);
+			this->btnQueues->Margin = System::Windows::Forms::Padding(4);
+			this->btnQueues->Name = L"btnQueues";
+			this->btnQueues->Size = System::Drawing::Size(243, 224);
+			this->btnQueues->TabIndex = 6;
+			this->btnQueues->Text = L"Queues";
+			this->btnQueues->UseVisualStyleBackColor = false;
+			this->btnQueues->Click += gcnew System::EventHandler(this, &Homepage::button7_Click);
+			// 
+			// btnStacks
+			// 
+			this->btnStacks->BackColor = System::Drawing::Color::DarkSeaGreen;
+			this->btnStacks->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnStacks->FlatAppearance->BorderSize = 0;
+			this->btnStacks->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnStacks->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnStacks->Location = System::Drawing::Point(971, 0);
+			this->btnStacks->Margin = System::Windows::Forms::Padding(4);
+			this->btnStacks->Name = L"btnStacks";
+			this->btnStacks->Size = System::Drawing::Size(243, 224);
+			this->btnStacks->TabIndex = 4;
+			this->btnStacks->Text = L"Stacks";
+			this->btnStacks->UseVisualStyleBackColor = false;
+			this->btnStacks->Click += gcnew System::EventHandler(this, &Homepage::btnStacks_Click);
+			// 
+			// btnSorting
+			// 
+			this->btnSorting->BackColor = System::Drawing::Color::Bisque;
+			this->btnSorting->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnSorting->FlatAppearance->BorderSize = 0;
+			this->btnSorting->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnSorting->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnSorting->Location = System::Drawing::Point(728, 0);
+			this->btnSorting->Margin = System::Windows::Forms::Padding(4);
+			this->btnSorting->Name = L"btnSorting";
+			this->btnSorting->Size = System::Drawing::Size(243, 224);
+			this->btnSorting->TabIndex = 3;
+			this->btnSorting->Text = L"Sorting";
+			this->btnSorting->UseVisualStyleBackColor = false;
+			this->btnSorting->Click += gcnew System::EventHandler(this, &Homepage::button4_Click);
+			// 
+			// btnSearching
+			// 
+			this->btnSearching->BackColor = System::Drawing::Color::LightCoral;
+			this->btnSearching->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnSearching->FlatAppearance->BorderSize = 0;
+			this->btnSearching->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnSearching->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnSearching->Location = System::Drawing::Point(485, 0);
+			this->btnSearching->Margin = System::Windows::Forms::Padding(4);
+			this->btnSearching->Name = L"btnSearching";
+			this->btnSearching->Size = System::Drawing::Size(243, 224);
+			this->btnSearching->TabIndex = 2;
+			this->btnSearching->Text = L"Searching";
+			this->btnSearching->UseVisualStyleBackColor = false;
+			this->btnSearching->Click += gcnew System::EventHandler(this, &Homepage::btnSearching_Click);
+			// 
+			// btnLinkedList
+			// 
+			this->btnLinkedList->BackColor = System::Drawing::Color::CornflowerBlue;
+			this->btnLinkedList->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnLinkedList->FlatAppearance->BorderSize = 0;
+			this->btnLinkedList->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnLinkedList->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnLinkedList->Location = System::Drawing::Point(243, 0);
+			this->btnLinkedList->Margin = System::Windows::Forms::Padding(4);
+			this->btnLinkedList->Name = L"btnLinkedList";
+			this->btnLinkedList->Size = System::Drawing::Size(243, 224);
+			this->btnLinkedList->TabIndex = 1;
+			this->btnLinkedList->Text = L"Linked Lists";
+			this->btnLinkedList->UseVisualStyleBackColor = false;
+			this->btnLinkedList->Click += gcnew System::EventHandler(this, &Homepage::button2_Click);
+			// 
+			// btnArrays
+			// 
+			this->btnArrays->BackColor = System::Drawing::Color::DarkSeaGreen;
+			this->btnArrays->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnArrays->FlatAppearance->BorderSize = 0;
+			this->btnArrays->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnArrays->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnArrays->Location = System::Drawing::Point(0, 0);
+			this->btnArrays->Margin = System::Windows::Forms::Padding(4);
+			this->btnArrays->Name = L"btnArrays";
+			this->btnArrays->Size = System::Drawing::Size(243, 224);
+			this->btnArrays->TabIndex = 0;
+			this->btnArrays->Text = L"Arrays";
+			this->btnArrays->UseVisualStyleBackColor = false;
+			this->btnArrays->Click += gcnew System::EventHandler(this, &Homepage::btnArrays_Click);
 			// 
 			// Suggestionpanel
 			// 
@@ -2054,197 +2247,14 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->DScomboBox->TabIndex = 0;
 			this->DScomboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &Homepage::DScomboBox_SelectedIndexChanged);
 			// 
-			// DSLinkpanel
-			// 
-			this->DSLinkpanel->BackColor = System::Drawing::Color::White;
-			this->DSLinkpanel->Controls->Add(this->DSSuggestionsbutton);
-			this->DSLinkpanel->Controls->Add(this->btnGraphs);
-			this->DSLinkpanel->Controls->Add(this->btnHeaps);
-			this->DSLinkpanel->Controls->Add(this->btnTrees);
-			this->DSLinkpanel->Controls->Add(this->btnQueues);
-			this->DSLinkpanel->Controls->Add(this->btnStacks);
-			this->DSLinkpanel->Controls->Add(this->btnSorting);
-			this->DSLinkpanel->Controls->Add(this->btnSearching);
-			this->DSLinkpanel->Controls->Add(this->btnLinkedList);
-			this->DSLinkpanel->Controls->Add(this->btnArrays);
-			this->DSLinkpanel->Location = System::Drawing::Point(32, 37);
-			this->DSLinkpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->DSLinkpanel->Name = L"DSLinkpanel";
-			this->DSLinkpanel->Size = System::Drawing::Size(1216, 631);
-			this->DSLinkpanel->TabIndex = 1;
-			// 
-			// DSSuggestionsbutton
-			// 
-			this->DSSuggestionsbutton->BackColor = System::Drawing::Color::Black;
-			this->DSSuggestionsbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->DSSuggestionsbutton->ForeColor = System::Drawing::Color::White;
-			this->DSSuggestionsbutton->Location = System::Drawing::Point(1019, 538);
-			this->DSSuggestionsbutton->Name = L"DSSuggestionsbutton";
-			this->DSSuggestionsbutton->Size = System::Drawing::Size(181, 73);
-			this->DSSuggestionsbutton->TabIndex = 10;
-			this->DSSuggestionsbutton->Text = L"Suggestions";
-			this->DSSuggestionsbutton->UseVisualStyleBackColor = false;
-			this->DSSuggestionsbutton->Click += gcnew System::EventHandler(this, &Homepage::DSSuggestionsbutton_Click);
-			// 
-			// btnGraphs
-			// 
-			this->btnGraphs->BackColor = System::Drawing::Color::DarkSeaGreen;
-			this->btnGraphs->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnGraphs->FlatAppearance->BorderSize = 0;
-			this->btnGraphs->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnGraphs->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnGraphs->Location = System::Drawing::Point(728, 224);
-			this->btnGraphs->Margin = System::Windows::Forms::Padding(4);
-			this->btnGraphs->Name = L"btnGraphs";
-			this->btnGraphs->Size = System::Drawing::Size(243, 224);
-			this->btnGraphs->TabIndex = 9;
-			this->btnGraphs->Text = L"Graphs";
-			this->btnGraphs->UseVisualStyleBackColor = false;
-			// 
-			// btnHeaps
-			// 
-			this->btnHeaps->BackColor = System::Drawing::Color::Bisque;
-			this->btnHeaps->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnHeaps->FlatAppearance->BorderSize = 0;
-			this->btnHeaps->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnHeaps->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnHeaps->Location = System::Drawing::Point(485, 224);
-			this->btnHeaps->Margin = System::Windows::Forms::Padding(4);
-			this->btnHeaps->Name = L"btnHeaps";
-			this->btnHeaps->Size = System::Drawing::Size(243, 224);
-			this->btnHeaps->TabIndex = 8;
-			this->btnHeaps->Text = L"Heaps";
-			this->btnHeaps->UseVisualStyleBackColor = false;
-			// 
-			// btnTrees
-			// 
-			this->btnTrees->BackColor = System::Drawing::Color::LightCoral;
-			this->btnTrees->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnTrees->FlatAppearance->BorderSize = 0;
-			this->btnTrees->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnTrees->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnTrees->Location = System::Drawing::Point(243, 224);
-			this->btnTrees->Margin = System::Windows::Forms::Padding(4);
-			this->btnTrees->Name = L"btnTrees";
-			this->btnTrees->Size = System::Drawing::Size(243, 224);
-			this->btnTrees->TabIndex = 7;
-			this->btnTrees->Text = L"Trees";
-			this->btnTrees->UseVisualStyleBackColor = false;
-			// 
-			// btnQueues
-			// 
-			this->btnQueues->BackColor = System::Drawing::Color::CornflowerBlue;
-			this->btnQueues->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnQueues->FlatAppearance->BorderSize = 0;
-			this->btnQueues->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnQueues->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnQueues->Location = System::Drawing::Point(0, 224);
-			this->btnQueues->Margin = System::Windows::Forms::Padding(4);
-			this->btnQueues->Name = L"btnQueues";
-			this->btnQueues->Size = System::Drawing::Size(243, 224);
-			this->btnQueues->TabIndex = 6;
-			this->btnQueues->Text = L"Queues";
-			this->btnQueues->UseVisualStyleBackColor = false;
-			this->btnQueues->Click += gcnew System::EventHandler(this, &Homepage::button7_Click);
-			// 
-			// btnStacks
-			// 
-			this->btnStacks->BackColor = System::Drawing::Color::DarkSeaGreen;
-			this->btnStacks->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnStacks->FlatAppearance->BorderSize = 0;
-			this->btnStacks->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnStacks->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnStacks->Location = System::Drawing::Point(971, 0);
-			this->btnStacks->Margin = System::Windows::Forms::Padding(4);
-			this->btnStacks->Name = L"btnStacks";
-			this->btnStacks->Size = System::Drawing::Size(243, 224);
-			this->btnStacks->TabIndex = 4;
-			this->btnStacks->Text = L"Stacks";
-			this->btnStacks->UseVisualStyleBackColor = false;
-			this->btnStacks->Click += gcnew System::EventHandler(this, &Homepage::btnStacks_Click);
-			// 
-			// btnSorting
-			// 
-			this->btnSorting->BackColor = System::Drawing::Color::Bisque;
-			this->btnSorting->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnSorting->FlatAppearance->BorderSize = 0;
-			this->btnSorting->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnSorting->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnSorting->Location = System::Drawing::Point(728, 0);
-			this->btnSorting->Margin = System::Windows::Forms::Padding(4);
-			this->btnSorting->Name = L"btnSorting";
-			this->btnSorting->Size = System::Drawing::Size(243, 224);
-			this->btnSorting->TabIndex = 3;
-			this->btnSorting->Text = L"Sorting";
-			this->btnSorting->UseVisualStyleBackColor = false;
-			this->btnSorting->Click += gcnew System::EventHandler(this, &Homepage::button4_Click);
-			// 
-			// btnSearching
-			// 
-			this->btnSearching->BackColor = System::Drawing::Color::LightCoral;
-			this->btnSearching->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnSearching->FlatAppearance->BorderSize = 0;
-			this->btnSearching->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnSearching->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnSearching->Location = System::Drawing::Point(485, 0);
-			this->btnSearching->Margin = System::Windows::Forms::Padding(4);
-			this->btnSearching->Name = L"btnSearching";
-			this->btnSearching->Size = System::Drawing::Size(243, 224);
-			this->btnSearching->TabIndex = 2;
-			this->btnSearching->Text = L"Searching";
-			this->btnSearching->UseVisualStyleBackColor = false;
-			this->btnSearching->Click += gcnew System::EventHandler(this, &Homepage::btnSearching_Click);
-			// 
-			// btnLinkedList
-			// 
-			this->btnLinkedList->BackColor = System::Drawing::Color::CornflowerBlue;
-			this->btnLinkedList->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnLinkedList->FlatAppearance->BorderSize = 0;
-			this->btnLinkedList->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnLinkedList->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnLinkedList->Location = System::Drawing::Point(243, 0);
-			this->btnLinkedList->Margin = System::Windows::Forms::Padding(4);
-			this->btnLinkedList->Name = L"btnLinkedList";
-			this->btnLinkedList->Size = System::Drawing::Size(243, 224);
-			this->btnLinkedList->TabIndex = 1;
-			this->btnLinkedList->Text = L"Linked Lists";
-			this->btnLinkedList->UseVisualStyleBackColor = false;
-			this->btnLinkedList->Click += gcnew System::EventHandler(this, &Homepage::button2_Click);
-			// 
-			// btnArrays
-			// 
-			this->btnArrays->BackColor = System::Drawing::Color::DarkSeaGreen;
-			this->btnArrays->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnArrays->FlatAppearance->BorderSize = 0;
-			this->btnArrays->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnArrays->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnArrays->Location = System::Drawing::Point(0, 0);
-			this->btnArrays->Margin = System::Windows::Forms::Padding(4);
-			this->btnArrays->Name = L"btnArrays";
-			this->btnArrays->Size = System::Drawing::Size(243, 224);
-			this->btnArrays->TabIndex = 0;
-			this->btnArrays->Text = L"Arrays";
-			this->btnArrays->UseVisualStyleBackColor = false;
-			this->btnArrays->Click += gcnew System::EventHandler(this, &Homepage::btnArrays_Click);
-			// 
 			// Homepage
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1280, 770);
+			this->Controls->Add(this->Profilepanel);
 			this->Controls->Add(this->DSpanel);
 			this->Controls->Add(this->Homepanel);
-			this->Controls->Add(this->Profilepanel);
 			this->Controls->Add(this->Headerstatuspanel);
 			this->Controls->Add(this->HeaderPanel);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -2279,6 +2289,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox1))->EndInit();
 			this->DSpanel->ResumeLayout(false);
+			this->DSLinkpanel->ResumeLayout(false);
 			this->Suggestionpanel->ResumeLayout(false);
 			this->Suggestionpanel->PerformLayout();
 			this->SuggestionPastpanel->ResumeLayout(false);
@@ -2290,7 +2301,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
-			this->DSLinkpanel->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -2335,7 +2345,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 				 ProfileOldPasswordSecuritytextBox->Text="Password";
 				 ProfileSecuritycomboBox->Text="Security Question";
 				 ProfileSecurityAnswertextBox->Text="Answer";
-				 ProfileOldPasswordtextBox->Text="Old Password";
+				 ProfileOldPasswordtextBox->Text="Current Password";
 				 ProfileNewPasswordtextBox->Text="New Password";
 				 ProfileConfirmPasswordtextBox->Text="Confirm Password";
 			 }
@@ -2920,11 +2930,12 @@ private: System::Void ProfileSecuritySavebutton_Click(System::Object^  sender, S
 
 		 }
 private: System::Void HeaderLogoutbutton_Click(System::Object^  sender, System::EventArgs^  e) {
-			 /*if(this->Owner!=nullptr)
+			 if(this->Owner!=nullptr)
 			 {
-				 this->Owner->Visible=true;
-			 }*/
-			 this->Close(); 
+				 this->Hide();
+				 this->Owner->Show();
+			 }
+			 //this->Close(); 
 			 
 
 		 }
@@ -3636,6 +3647,67 @@ private: System::Void DSSuggestionsbutton_Click(System::Object^  sender, System:
 private: System::Void SuggestionDSbutton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 DSLinkpanel->Show();
 			 Suggestionpanel->Hide();
+		 }
+private: System::Void ProfileOldPasswordtextBox_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+			 if(ProfileOldPasswordtextBox->Text=="Current Password")
+			 {
+				ProfileOldPasswordtextBox->Text="";
+				ProfileOldPasswordtextBox->Focus();
+				ProfileOldPasswordtextBox->Select();
+			 }
+		 }
+private: System::Void ProfileOldPasswordtextBox_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+			 if(ProfileOldPasswordtextBox->Text=="")
+				 ProfileOldPasswordtextBox->Text="Current Password";
+		 }
+private: System::Void ProfileNewPasswordtextBox_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+			 if(ProfileNewPasswordtextBox->Text=="New Password")
+			 {
+				 ProfileNewPasswordtextBox->Text="";
+				 ProfileNewPasswordtextBox->Focus();
+				 ProfileNewPasswordtextBox->Select();
+			 }
+		 }
+private: System::Void ProfileNewPasswordtextBox_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+			 if(ProfileNewPasswordtextBox->Text=="")
+				 ProfileNewPasswordtextBox->Text="New Password";
+		 }
+private: System::Void ProfileConfirmPasswordtextBox_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+			 if(ProfileConfirmPasswordtextBox->Text=="Confirm Password")
+			 {
+				ProfileConfirmPasswordtextBox->Text="";
+				ProfileConfirmPasswordtextBox->Focus();
+				ProfileConfirmPasswordtextBox->Select();
+			 }
+		 }
+private: System::Void ProfileConfirmPasswordtextBox_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+			 if(ProfileConfirmPasswordtextBox->Text=="")
+				 ProfileConfirmPasswordtextBox->Text="Confirm Password";
+		 }
+private: System::Void ProfileOldPasswordSecuritytextBox_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+			 if(ProfileOldPasswordSecuritytextBox->Text=="Password")
+			 {
+				 ProfileOldPasswordSecuritytextBox->Text="";
+				 ProfileOldPasswordSecuritytextBox->Focus();
+				 ProfileOldPasswordSecuritytextBox->Select();
+			 }
+			 
+		 }
+private: System::Void ProfileOldPasswordSecuritytextBox_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+			 if(ProfileOldPasswordSecuritytextBox->Text=="")
+				 ProfileOldPasswordSecuritytextBox->Text="Password";
+		 }
+private: System::Void ProfileSecurityAnswertextBox_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+			 if(ProfileSecurityAnswertextBox->Text=="Answer")
+			 {
+				ProfileSecurityAnswertextBox->Text="";
+				ProfileSecurityAnswertextBox->Focus();
+				ProfileSecurityAnswertextBox->Select();
+			 }
+		 }
+private: System::Void ProfileSecurityAnswertextBox_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+			 if(ProfileSecurityAnswertextBox->Text=="")
+			 ProfileSecurityAnswertextBox->Text="Answer";
 		 }
 };
 }
