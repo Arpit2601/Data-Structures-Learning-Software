@@ -1068,6 +1068,7 @@ private: System::Void btnAdd_Click(System::Object^  sender, System::EventArgs^  
 				 if(baddcounter==1){
 						try{
 						   bn=Convert::ToInt32(txtFrom->Text);
+						   if(bn>8)MessageBox::Show("Maximum 8 nodes allowed::Displaying 8 nodes");
 						   for(int i=1;i<=bn;i++){
 								lvisible(i,1);
 						   }
@@ -1081,12 +1082,6 @@ private: System::Void btnAdd_Click(System::Object^  sender, System::EventArgs^  
 					 int check=1;
 						try{
 						   bm=Convert::ToInt32(txtFrom->Text);
-						   label1->Text="Enter the Edges";
-						   txtTo->Visible=true;
-						   label1->Visible=true;
-						   label2->Visible=true;
-						   label3->Visible=true;
-
 						 }catch(...){
 						   MessageBox::Show("Please Enter the Number of Edges as Integer Only");
 						   baddcounter--;
@@ -1097,6 +1092,12 @@ private: System::Void btnAdd_Click(System::Object^  sender, System::EventArgs^  
 							if(bm>(bn*(bn-1))/2){
 								MessageBox::Show("Number of Edges can't be more than Complete graph with same number of nodes");
 								baddcounter--;
+							}else{
+								label1->Text="Enter the Edges";
+								txtTo->Visible=true;
+								label1->Visible=true;
+								label2->Visible=true;
+								label3->Visible=true;
 							}
 						}
 

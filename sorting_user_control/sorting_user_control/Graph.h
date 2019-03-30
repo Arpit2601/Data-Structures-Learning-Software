@@ -1030,6 +1030,7 @@ namespace sorting_user_control {
 				 if(addcounter==1){
 						try{
 						   n=Convert::ToInt32(txtFrom->Text);
+						   if(n>8)MessageBox::Show("Maximum 8 nodes allowed::Displaying 8 nodes");
 						   for(int i=1;i<=n;i++){
 								lvisible(i,1);
 						   }
@@ -1043,12 +1044,6 @@ namespace sorting_user_control {
 					 int check=1;
 						try{
 						   m=Convert::ToInt32(txtFrom->Text);
-						   label1->Text="Enter the Edges";
-						   txtTo->Visible=true;
-						   label1->Visible=true;
-						   label2->Visible=true;
-						   label3->Visible=true;
-
 						 }catch(...){
 						   MessageBox::Show("Please Enter the Number of Edges as Integer Only");
 						   addcounter--;
@@ -1059,6 +1054,12 @@ namespace sorting_user_control {
 							if(m>(n*(n-1))/2){
 								MessageBox::Show("Number of Edges can't be more than Complete graph with same number of nodes");
 								addcounter--;
+							}else{
+								label1->Text="Enter the Edges";
+								txtTo->Visible=true;
+								label1->Visible=true;
+								label2->Visible=true;
+								label3->Visible=true;
 							}
 						}
 					
