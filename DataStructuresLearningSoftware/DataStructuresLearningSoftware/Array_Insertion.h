@@ -1,5 +1,12 @@
 #pragma once
-
+#include "moduleQuiz.h"
+#include<string.h>
+#include <string>
+#include <iostream> 
+#include <ctime> 
+#include <cstdlib>
+#using <system.windows.forms.dll>
+#using <Microsoft.VisualBasic.dll>
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -523,6 +530,7 @@ namespace DataStructuresLearningSoftware {
 #pragma endregion
 	public: String ^username;
 
+	
 	private: System::Void insertarray_Click(System::Object^  sender, System::EventArgs^  e) {
 				 if(this->insertvalue->Text=="" || this->insertindex->Text==""){
 					 this->insertindex->Text = "";
@@ -530,7 +538,16 @@ namespace DataStructuresLearningSoftware {
 					 MessageBox::Show("Please Enter Values In The Text Boxes");
 				 }
 				 else{
-					 if(int::Parse(this->insertvalue->Text)<= 1000 && int::Parse(this->insertvalue->Text)>= -1000 && int::Parse(this->insertindex->Text)>= 1 && int::Parse(this->insertindex->Text)<= 8){
+					 int len1=this->insertvalue->Text->Length;int num1=0;
+					 for(int i=0;i<len1;i++){if(isalpha(this->insertvalue->Text[i]) || this->insertvalue->Text[i]=='.'){num1=1;}}
+					 int len2=this->insertindex->Text->Length;int num2=0;
+					 for(int i=0;i<len2;i++){if(isalpha(this->insertindex->Text[i]) || this->insertindex->Text[i]=='.'){num2=1;}}
+					 if(num1==1 || num2==1){
+						 this->insertindex->Text = "";
+						 this->insertvalue->Text = "";
+						 MessageBox::Show("Please Enter Value Between -1000 to 1000 And Index Between 1 To 8");
+					 }
+					 else if(int::Parse(this->insertvalue->Text)<= 1000 && int::Parse(this->insertvalue->Text)>= -1000 && int::Parse(this->insertindex->Text)>= 1 && int::Parse(this->insertindex->Text)<= 8){
 						 this->label19->Text = this->insertvalue->Text;
 						 insertimer->Enabled = true;
 					 }
@@ -541,6 +558,7 @@ namespace DataStructuresLearningSoftware {
 					 }
 				 }
 			 }
+			 
 	private: System::Void insertimer_Tick(System::Object^  sender, System::EventArgs^  e) {
 				 if(int::Parse(this->insertindex->Text)==1 && this->label19->Location.X == this->l1->Location.X){
 					 this->l1->Text = this->insertvalue->Text;

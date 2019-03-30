@@ -31,6 +31,7 @@ int main(array<System::String ^> ^args)
 	Application::Run(gcnew MainPage());
 	Application::Run(gcnew Graphs_Home());
 
+	//Application::Run(gcnew MainPage());
 
 	return 0;
 }

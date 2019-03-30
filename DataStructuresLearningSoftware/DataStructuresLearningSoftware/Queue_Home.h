@@ -424,6 +424,13 @@ namespace DataStructuresLearningSoftware {
 			this->headerpanel->ResumeLayout(false);
 			this->ResumeLayout(false);
 
+			this->linarrbtn->Hide();
+			this->linllbtn->Hide();
+			this->linanimbtn->Hide();
+			this->cqarrbtn->Hide();
+			this->cqllbtn->Hide(); 
+			this->ciranimbtn->Hide();
+
 		}
 #pragma endregion
 		public:

@@ -1,5 +1,5 @@
 #pragma once
-
+#include "moduleQuiz.h"
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -37,6 +37,8 @@ namespace DataStructuresLearningSoftware {
 		}
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	private: System::Windows::Forms::Label^  label12;
+	private: System::Windows::Forms::Panel^  quizPanel;
 	protected: 
 
 	private:
@@ -55,6 +57,8 @@ namespace DataStructuresLearningSoftware {
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(BST_introduction::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->quizPanel = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -79,18 +83,55 @@ namespace DataStructuresLearningSoftware {
 			this->pictureBox1->TabIndex = 1;
 			this->pictureBox1->TabStop = false;
 			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label12->Location = System::Drawing::Point(127, 630);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(482, 27);
+			this->label12->TabIndex = 27;
+			this->label12->Text = L"Answer the question correctly to pass the module.";
+			// 
+			// quizPanel
+			// 
+			this->quizPanel->AutoScroll = true;
+			this->quizPanel->Location = System::Drawing::Point(132, 660);
+			this->quizPanel->Name = L"quizPanel";
+			this->quizPanel->Size = System::Drawing::Size(1030, 450);
+			this->quizPanel->TabIndex = 28;
+			// 
 			// BST_introduction
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->AutoScroll = true;
 			this->BackColor = System::Drawing::Color::Transparent;
+			this->Controls->Add(this->quizPanel);
+			this->Controls->Add(this->label12);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label1);
 			this->Name = L"BST_introduction";
-			this->Size = System::Drawing::Size(1277, 596);
+			this->Size = System::Drawing::Size(1277, 1150);
+			this->Load += gcnew System::EventHandler(this, &BST_introduction::BST_introduction_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
+		public:
+			String ^ username;
+	private: System::Void BST_introduction_Load(System::Object^  sender, System::EventArgs^  e) {
+				 // Question Load
+				 moduleQuiz ^newPanel = gcnew moduleQuiz();
+				 newPanel->ds_id = 7;
+				 newPanel->module_id = 0;
+				 newPanel->username = username;
+				 newPanel->update_id = 18;
+				 newPanel->update_name = "BSTProgress";
+				 quizPanel->Controls->Clear();
+				 quizPanel->Controls->Add(newPanel);
+			 }
 	};
 }
