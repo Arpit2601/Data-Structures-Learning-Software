@@ -1,5 +1,7 @@
 #pragma once
 
+#include "moduleQuiz.h"
+
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -52,6 +54,9 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  search_q;
 	private: System::Windows::Forms::Timer^  timer1;
 	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Panel^  quizPanel;
+
+	private: System::Windows::Forms::Label^  label2;
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -83,6 +88,8 @@ namespace DataStructuresLearningSoftware {
 			this->search_q = (gcnew System::Windows::Forms::Label());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->quizPanel = (gcnew System::Windows::Forms::Panel());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->arrow))->BeginInit();
 			this->SuspendLayout();
@@ -292,11 +299,32 @@ namespace DataStructuresLearningSoftware {
 			this->label1->TabIndex = 14;
 			this->label1->Text = L"SEARCHING IN ARRAYS";
 			// 
+			// quizPanel
+			// 
+			this->quizPanel->BackColor = System::Drawing::Color::White;
+			this->quizPanel->Location = System::Drawing::Point(37, 531);
+			this->quizPanel->Name = L"quizPanel";
+			this->quizPanel->Size = System::Drawing::Size(1030, 450);
+			this->quizPanel->TabIndex = 15;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(44, 507);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(382, 21);
+			this->label2->TabIndex = 16;
+			this->label2->Text = L"Answer the question correctly to pass the module.";
+			// 
 			// Array_Search
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Honeydew;
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->quizPanel);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->Reset_Button);
 			this->Controls->Add(this->button3);
@@ -305,7 +333,8 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->search_q);
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Array_Search";
-			this->Size = System::Drawing::Size(1105, 675);
+			this->Size = System::Drawing::Size(1105, 1000);
+			this->Load += gcnew System::EventHandler(this, &Array_Search::Array_Search_Load);
 			this->panel1->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->arrow))->EndInit();
 			this->ResumeLayout(false);
@@ -442,5 +471,16 @@ namespace DataStructuresLearningSoftware {
 
 	private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 			 }
+private: System::Void Array_Search_Load(System::Object^  sender, System::EventArgs^  e) {
+			 // Quiz Panel Load
+			 moduleQuiz ^newPanel = gcnew moduleQuiz();
+			 newPanel->ds_id = 1;
+			 newPanel->module_id = 3;
+			 newPanel->username = username;
+			 newPanel->update_id = 9;
+			 newPanel->update_name = "ArraysProgress";
+			 quizPanel->Controls->Clear();
+			 quizPanel->Controls->Add(newPanel);
+		 }
 };
 }

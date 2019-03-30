@@ -121,7 +121,7 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Byte>(0)));
 			this->but_play->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->but_play->Location = System::Drawing::Point(717, 2);
-			this->but_play->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->but_play->Margin = System::Windows::Forms::Padding(2);
 			this->but_play->Name = L"but_play";
 			this->but_play->Size = System::Drawing::Size(70, 25);
 			this->but_play->TabIndex = 7;
@@ -137,7 +137,7 @@ namespace DataStructuresLearningSoftware {
 			this->but_pause->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->but_pause->Location = System::Drawing::Point(643, 2);
-			this->but_pause->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->but_pause->Margin = System::Windows::Forms::Padding(2);
 			this->but_pause->Name = L"but_pause";
 			this->but_pause->Size = System::Drawing::Size(70, 25);
 			this->but_pause->TabIndex = 6;
@@ -153,7 +153,7 @@ namespace DataStructuresLearningSoftware {
 			this->but_start->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->but_start->Location = System::Drawing::Point(569, 2);
-			this->but_start->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->but_start->Margin = System::Windows::Forms::Padding(2);
 			this->but_start->Name = L"but_start";
 			this->but_start->Size = System::Drawing::Size(70, 25);
 			this->but_start->TabIndex = 5;
@@ -185,7 +185,7 @@ namespace DataStructuresLearningSoftware {
 			this->panel3->Controls->Add(this->lli2);
 			this->panel3->Controls->Add(this->lli1);
 			this->panel3->Location = System::Drawing::Point(158, 203);
-			this->panel3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->panel3->Margin = System::Windows::Forms::Padding(2);
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(789, 286);
 			this->panel3->TabIndex = 4;
@@ -474,7 +474,7 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->panel3);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"LinkedList_Traversal";
 			this->Size = System::Drawing::Size(1105, 1700);
 			this->Load += gcnew System::EventHandler(this, &LinkedList_Traversal::LinkedList_Traversal_Load);

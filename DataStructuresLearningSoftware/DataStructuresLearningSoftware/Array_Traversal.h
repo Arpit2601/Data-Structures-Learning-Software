@@ -1,5 +1,7 @@
 #pragma once
 
+#include "moduleQuiz.h"
+
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -58,6 +60,9 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  LB1;
 	private: System::Windows::Forms::Timer^  timerTraversal;
 	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Panel^  quizPanel;
+
+	private: System::Windows::Forms::Label^  label2;
 
 	private: System::ComponentModel::IContainer^  components;
 
@@ -96,6 +101,8 @@ namespace DataStructuresLearningSoftware {
 			this->LB1 = (gcnew System::Windows::Forms::Label());
 			this->timerTraversal = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->quizPanel = (gcnew System::Windows::Forms::Panel());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panelForTraversal->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -121,7 +128,7 @@ namespace DataStructuresLearningSoftware {
 			this->panelForTraversal->Controls->Add(this->LB2);
 			this->panelForTraversal->Controls->Add(this->LB1);
 			this->panelForTraversal->Location = System::Drawing::Point(176, 189);
-			this->panelForTraversal->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->panelForTraversal->Margin = System::Windows::Forms::Padding(2);
 			this->panelForTraversal->Name = L"panelForTraversal";
 			this->panelForTraversal->Size = System::Drawing::Size(752, 249);
 			this->panelForTraversal->TabIndex = 8;
@@ -142,7 +149,7 @@ namespace DataStructuresLearningSoftware {
 			this->btnPlay->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->btnPlay->Location = System::Drawing::Point(658, 9);
-			this->btnPlay->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnPlay->Margin = System::Windows::Forms::Padding(2);
 			this->btnPlay->Name = L"btnPlay";
 			this->btnPlay->Size = System::Drawing::Size(77, 25);
 			this->btnPlay->TabIndex = 4;
@@ -155,7 +162,7 @@ namespace DataStructuresLearningSoftware {
 			this->btnPause->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->btnPause->Location = System::Drawing::Point(578, 9);
-			this->btnPause->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnPause->Margin = System::Windows::Forms::Padding(2);
 			this->btnPause->Name = L"btnPause";
 			this->btnPause->Size = System::Drawing::Size(75, 25);
 			this->btnPause->TabIndex = 5;
@@ -190,7 +197,7 @@ namespace DataStructuresLearningSoftware {
 			this->btnStart->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->btnStart->Location = System::Drawing::Point(499, 9);
-			this->btnStart->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnStart->Margin = System::Windows::Forms::Padding(2);
 			this->btnStart->Name = L"btnStart";
 			this->btnStart->Size = System::Drawing::Size(75, 25);
 			this->btnStart->TabIndex = 3;
@@ -360,16 +367,38 @@ namespace DataStructuresLearningSoftware {
 			this->label1->TabIndex = 9;
 			this->label1->Text = L"TRAVERSAL IN ARRAYS";
 			// 
+			// quizPanel
+			// 
+			this->quizPanel->BackColor = System::Drawing::Color::White;
+			this->quizPanel->Location = System::Drawing::Point(17, 532);
+			this->quizPanel->Name = L"quizPanel";
+			this->quizPanel->Size = System::Drawing::Size(1030, 450);
+			this->quizPanel->TabIndex = 10;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(24, 508);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(382, 21);
+			this->label2->TabIndex = 11;
+			this->label2->Text = L"Answer the question correctly to pass the module.";
+			// 
 			// Array_Traversal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Honeydew;
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->quizPanel);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->panelForTraversal);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Array_Traversal";
-			this->Size = System::Drawing::Size(1065, 670);
+			this->Size = System::Drawing::Size(1065, 1000);
+			this->Load += gcnew System::EventHandler(this, &Array_Traversal::Array_Traversal_Load);
 			this->panelForTraversal->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -447,7 +476,8 @@ namespace DataStructuresLearningSoftware {
 			}
 			
 		 
-		 }
+		 
+}
 private: System::Void btnStart_Click(System::Object^  sender, System::EventArgs^  e) {
 			 timerTraversal->Enabled = true;
 		 }
@@ -457,6 +487,17 @@ private: System::Void btnPlay_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void btnPause_Click(System::Object^  sender, System::EventArgs^  e) {
 			 timerTraversal->Enabled = false;
 		 }
+		 private: System::Void Array_Traversal_Load(System::Object^  sender, System::EventArgs^  e) {
+					  // Quiz Panel Load
+					  moduleQuiz ^newPanel = gcnew moduleQuiz();
+					  newPanel->ds_id = 1;
+					  newPanel->module_id = 2;
+					  newPanel->username = username;
+					  newPanel->update_id = 9;
+					  newPanel->update_name = "ArraysProgress";
+					  quizPanel->Controls->Clear();
+					  quizPanel->Controls->Add(newPanel);
+				  }
 
 };
 }
