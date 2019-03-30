@@ -306,6 +306,7 @@ namespace DataStructuresLearningSoftware {
 
 
 	private: System::Void enqbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+				 dqelemlbl->Text ="";
 				 // Data Validation
 				 bool check = inputValidate(enqtext->Text);
 
@@ -624,6 +625,7 @@ namespace DataStructuresLearningSoftware {
 
 
 	private: System::Void arraybtn_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+				 dqelemlbl->Text ="";
 				 if(arraybtn->Checked ==true)
 				 {
 					 arrayAnimationPanel->Show();

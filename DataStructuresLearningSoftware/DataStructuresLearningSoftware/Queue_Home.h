@@ -515,7 +515,7 @@ namespace DataStructuresLearningSoftware {
 				 outputpanel->Controls->Add(gcnew UI_Queue_Introduction);
 				 curid=0;
 				 display();
-				 username="lavish";
+
 				  modulesCompleted=0;
 				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
 				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
@@ -832,6 +832,7 @@ private: System::Void richTextBox1_TextChanged(System::Object^  sender, System::
 private: System::Void discussbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 			 outputpanel->Controls->Clear();
 			 DiscussionForum ^ discuss = gcnew DiscussionForum;
+			 discuss->module="Queue";
 			 discuss->username=username;
 			 outputpanel->Controls->Add(discuss);
 		 }
@@ -855,9 +856,10 @@ private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^ 
 			 }
 		 }
 private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
-			 Stack_Main ^ form = gcnew Stack_Main;
-			 this->Visible=false;
-			 form->Show(this);
+			 if(this->Owner != nullptr){
+				 this->Close();
+				 this->Owner->Show();
+			 }
 		 }
 };
 }
