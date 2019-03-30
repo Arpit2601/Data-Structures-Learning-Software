@@ -365,6 +365,12 @@
     <EmbeddedResource Include="bubbleSort.resx">
       <DependentUpon>bubbleSort.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Graph.resx">
+      <DependentUpon>Graph.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphBFS.resx">
+      <DependentUpon>GraphBFS.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Graphs_Home.resx">
       <DependentUpon>Graphs_Home.h</DependentUpon>
     </EmbeddedResource>

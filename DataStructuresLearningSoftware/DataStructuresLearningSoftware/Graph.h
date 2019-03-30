@@ -107,6 +107,17 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  l7;
 	private: System::Windows::Forms::Label^  l6;
 	private: System::Windows::Forms::Label^  l5;
+	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::RichTextBox^  richTextBox1;
+
+
+
+
+
+
+
+
 
 
 
@@ -131,6 +142,7 @@ namespace DataStructuresLearningSoftware {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Graph::typeid));
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->txtFrom = (gcnew System::Windows::Forms::TextBox());
 			this->txtTo = (gcnew System::Windows::Forms::TextBox());
@@ -179,6 +191,9 @@ namespace DataStructuresLearningSoftware {
 			this->l7 = (gcnew System::Windows::Forms::Label());
 			this->l6 = (gcnew System::Windows::Forms::Label());
 			this->l5 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->SuspendLayout();
 			// 
 			// timer1
@@ -188,61 +203,69 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// txtFrom
 			// 
-			this->txtFrom->Location = System::Drawing::Point(247, 476);
+			this->txtFrom->Location = System::Drawing::Point(225, 520);
+			this->txtFrom->Margin = System::Windows::Forms::Padding(4);
 			this->txtFrom->Name = L"txtFrom";
-			this->txtFrom->Size = System::Drawing::Size(100, 20);
+			this->txtFrom->Size = System::Drawing::Size(132, 22);
 			this->txtFrom->TabIndex = 0;
 			this->txtFrom->TextChanged += gcnew System::EventHandler(this, &Graph::txtFrom_TextChanged);
 			// 
 			// txtTo
 			// 
-			this->txtTo->Location = System::Drawing::Point(418, 476);
+			this->txtTo->Location = System::Drawing::Point(413, 523);
+			this->txtTo->Margin = System::Windows::Forms::Padding(4);
 			this->txtTo->Name = L"txtTo";
-			this->txtTo->Size = System::Drawing::Size(100, 20);
+			this->txtTo->Size = System::Drawing::Size(132, 22);
 			this->txtTo->TabIndex = 5;
 			this->txtTo->Visible = false;
 			this->txtTo->TextChanged += gcnew System::EventHandler(this, &Graph::txtTo_TextChanged);
 			// 
 			// btnAdd
 			// 
-			this->btnAdd->Location = System::Drawing::Point(572, 476);
+			this->btnAdd->BackColor = System::Drawing::Color::DarkKhaki;
+			this->btnAdd->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnAdd->Location = System::Drawing::Point(572, 523);
+			this->btnAdd->Margin = System::Windows::Forms::Padding(4);
 			this->btnAdd->Name = L"btnAdd";
-			this->btnAdd->Size = System::Drawing::Size(75, 41);
+			this->btnAdd->Size = System::Drawing::Size(100, 50);
 			this->btnAdd->TabIndex = 6;
 			this->btnAdd->Text = L"Add";
-			this->btnAdd->UseVisualStyleBackColor = true;
+			this->btnAdd->UseVisualStyleBackColor = false;
 			this->btnAdd->Click += gcnew System::EventHandler(this, &Graph::btnAdd_Click);
 			// 
 			// btnDFS
 			// 
-			this->btnDFS->Location = System::Drawing::Point(681, 476);
+			this->btnDFS->BackColor = System::Drawing::Color::DarkKhaki;
+			this->btnDFS->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnDFS->Location = System::Drawing::Point(680, 523);
+			this->btnDFS->Margin = System::Windows::Forms::Padding(4);
 			this->btnDFS->Name = L"btnDFS";
-			this->btnDFS->Size = System::Drawing::Size(75, 41);
+			this->btnDFS->Size = System::Drawing::Size(100, 50);
 			this->btnDFS->TabIndex = 7;
 			this->btnDFS->Text = L"DFS";
-			this->btnDFS->UseVisualStyleBackColor = true;
+			this->btnDFS->UseVisualStyleBackColor = false;
 			this->btnDFS->Visible = false;
 			this->btnDFS->Click += gcnew System::EventHandler(this, &Graph::button1_Click);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(3, 476);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 10.2F));
+			this->label1->Location = System::Drawing::Point(13, 520);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(195, 20);
+			this->label1->Size = System::Drawing::Size(201, 24);
 			this->label1->TabIndex = 8;
 			this->label1->Text = L"Enter number of Nodes";
 			this->label1->Click += gcnew System::EventHandler(this, &Graph::label1_Click);
 			// 
 			// label2
 			// 
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(243, 510);
+			this->label2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 10.2F));
+			this->label2->Location = System::Drawing::Point(221, 562);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(117, 20);
+			this->label2->Size = System::Drawing::Size(156, 25);
 			this->label2->TabIndex = 9;
 			this->label2->Text = L"Edge Node 1";
 			this->label2->Visible = false;
@@ -250,11 +273,11 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// label3
 			// 
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(414, 510);
+			this->label3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 10.2F));
+			this->label3->Location = System::Drawing::Point(409, 562);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(116, 20);
+			this->label3->Size = System::Drawing::Size(155, 25);
 			this->label3->TabIndex = 10;
 			this->label3->Text = L"Edge Node 2";
 			this->label3->Visible = false;
@@ -262,34 +285,43 @@ namespace DataStructuresLearningSoftware {
 			// 
 			// btnPause
 			// 
-			this->btnPause->Location = System::Drawing::Point(789, 476);
+			this->btnPause->BackColor = System::Drawing::Color::DarkKhaki;
+			this->btnPause->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnPause->Location = System::Drawing::Point(791, 523);
+			this->btnPause->Margin = System::Windows::Forms::Padding(4);
 			this->btnPause->Name = L"btnPause";
-			this->btnPause->Size = System::Drawing::Size(75, 41);
+			this->btnPause->Size = System::Drawing::Size(100, 50);
 			this->btnPause->TabIndex = 11;
 			this->btnPause->Text = L"Pause";
-			this->btnPause->UseVisualStyleBackColor = true;
+			this->btnPause->UseVisualStyleBackColor = false;
 			this->btnPause->Visible = false;
 			this->btnPause->Click += gcnew System::EventHandler(this, &Graph::btnPause_Click);
 			// 
 			// btnDecrease
 			// 
-			this->btnDecrease->Location = System::Drawing::Point(891, 476);
+			this->btnDecrease->BackColor = System::Drawing::Color::DarkKhaki;
+			this->btnDecrease->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnDecrease->Location = System::Drawing::Point(899, 523);
+			this->btnDecrease->Margin = System::Windows::Forms::Padding(4);
 			this->btnDecrease->Name = L"btnDecrease";
-			this->btnDecrease->Size = System::Drawing::Size(75, 41);
+			this->btnDecrease->Size = System::Drawing::Size(100, 50);
 			this->btnDecrease->TabIndex = 12;
 			this->btnDecrease->Text = L"Decrease Speed";
-			this->btnDecrease->UseVisualStyleBackColor = true;
+			this->btnDecrease->UseVisualStyleBackColor = false;
 			this->btnDecrease->Visible = false;
 			this->btnDecrease->Click += gcnew System::EventHandler(this, &Graph::btnDecrease_Click);
 			// 
 			// btnIncrease
 			// 
-			this->btnIncrease->Location = System::Drawing::Point(993, 476);
+			this->btnIncrease->BackColor = System::Drawing::Color::DarkKhaki;
+			this->btnIncrease->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnIncrease->Location = System::Drawing::Point(1007, 523);
+			this->btnIncrease->Margin = System::Windows::Forms::Padding(4);
 			this->btnIncrease->Name = L"btnIncrease";
-			this->btnIncrease->Size = System::Drawing::Size(75, 41);
+			this->btnIncrease->Size = System::Drawing::Size(100, 50);
 			this->btnIncrease->TabIndex = 13;
 			this->btnIncrease->Text = L"Increase Speed";
-			this->btnIncrease->UseVisualStyleBackColor = true;
+			this->btnIncrease->UseVisualStyleBackColor = false;
 			this->btnIncrease->Visible = false;
 			this->btnIncrease->Click += gcnew System::EventHandler(this, &Graph::btnIncrease_Click);
 			// 
@@ -582,7 +614,7 @@ namespace DataStructuresLearningSoftware {
 				this->ls13, this->ls17, this->ls15, this->ls16, this->ls18, this->ls14, this->ls25, this->ls23, this->ls24, this->ls28, this->ls27, 
 				this->ls34, this->ls35, this->ls36, this->ls37, this->ls38, this->ls45, this->ls46, this->ls47, this->ls48, this->ls56, this->ls57, 
 				this->ls58, this->ls67, this->ls68, this->ls78});
-			this->shapeContainer1->Size = System::Drawing::Size(1088, 631);
+			this->shapeContainer1->Size = System::Drawing::Size(1105, 2000);
 			this->shapeContainer1->TabIndex = 14;
 			this->shapeContainer1->TabStop = false;
 			// 
@@ -592,9 +624,10 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l1->Location = System::Drawing::Point(526, 35);
+			this->l1->Location = System::Drawing::Point(701, 43);
+			this->l1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l1->Name = L"l1";
-			this->l1->Size = System::Drawing::Size(30, 30);
+			this->l1->Size = System::Drawing::Size(40, 37);
 			this->l1->TabIndex = 29;
 			this->l1->Text = L"1";
 			this->l1->Visible = false;
@@ -605,9 +638,10 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l2->Location = System::Drawing::Point(603, 165);
+			this->l2->Location = System::Drawing::Point(804, 203);
+			this->l2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l2->Name = L"l2";
-			this->l2->Size = System::Drawing::Size(30, 30);
+			this->l2->Size = System::Drawing::Size(40, 37);
 			this->l2->TabIndex = 30;
 			this->l2->Text = L"2";
 			this->l2->Visible = false;
@@ -618,9 +652,10 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l3->Location = System::Drawing::Point(403, 195);
+			this->l3->Location = System::Drawing::Point(537, 240);
+			this->l3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l3->Name = L"l3";
-			this->l3->Size = System::Drawing::Size(30, 30);
+			this->l3->Size = System::Drawing::Size(40, 37);
 			this->l3->TabIndex = 31;
 			this->l3->Text = L"3";
 			this->l3->Visible = false;
@@ -631,9 +666,10 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l4->Location = System::Drawing::Point(214, 270);
+			this->l4->Location = System::Drawing::Point(285, 332);
+			this->l4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l4->Name = L"l4";
-			this->l4->Size = System::Drawing::Size(30, 30);
+			this->l4->Size = System::Drawing::Size(40, 37);
 			this->l4->TabIndex = 32;
 			this->l4->Text = L"4";
 			this->l4->Visible = false;
@@ -644,9 +680,10 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l8->Location = System::Drawing::Point(231, 80);
+			this->l8->Location = System::Drawing::Point(308, 98);
+			this->l8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l8->Name = L"l8";
-			this->l8->Size = System::Drawing::Size(30, 30);
+			this->l8->Size = System::Drawing::Size(40, 37);
 			this->l8->TabIndex = 36;
 			this->l8->Text = L"8";
 			this->l8->Visible = false;
@@ -657,9 +694,10 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l7->Location = System::Drawing::Point(846, 154);
+			this->l7->Location = System::Drawing::Point(1128, 190);
+			this->l7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l7->Name = L"l7";
-			this->l7->Size = System::Drawing::Size(30, 30);
+			this->l7->Size = System::Drawing::Size(40, 37);
 			this->l7->TabIndex = 37;
 			this->l7->Text = L"7";
 			this->l7->Visible = false;
@@ -670,9 +708,10 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l6->Location = System::Drawing::Point(474, 314);
+			this->l6->Location = System::Drawing::Point(632, 386);
+			this->l6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l6->Name = L"l6";
-			this->l6->Size = System::Drawing::Size(30, 30);
+			this->l6->Size = System::Drawing::Size(40, 37);
 			this->l6->TabIndex = 38;
 			this->l6->Text = L"6";
 			this->l6->Visible = false;
@@ -683,17 +722,52 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l5->Location = System::Drawing::Point(749, 282);
+			this->l5->Location = System::Drawing::Point(999, 347);
+			this->l5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l5->Name = L"l5";
-			this->l5->Size = System::Drawing::Size(30, 30);
+			this->l5->Size = System::Drawing::Size(40, 37);
 			this->l5->TabIndex = 39;
 			this->l5->Text = L"5";
 			this->l5->Visible = false;
 			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::DarkKhaki;
+			this->button1->Location = System::Drawing::Point(572, 580);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(100, 50);
+			this->button1->TabIndex = 40;
+			this->button1->Text = L"Reset";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &Graph::button1_Click_1);
+			// 
+			// label4
+			// 
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label4->Location = System::Drawing::Point(75, 663);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(924, 81);
+			this->label4->TabIndex = 41;
+			this->label4->Text = resources->GetString(L"label4.Text");
+			// 
+			// richTextBox1
+			// 
+			this->richTextBox1->BackColor = System::Drawing::Color::PeachPuff;
+			this->richTextBox1->Location = System::Drawing::Point(79, 747);
+			this->richTextBox1->Name = L"richTextBox1";
+			this->richTextBox1->ReadOnly = true;
+			this->richTextBox1->Size = System::Drawing::Size(920, 1400);
+			this->richTextBox1->TabIndex = 42;
+			this->richTextBox1->Text = resources->GetString(L"richTextBox1.Text");
+			// 
 			// Graph
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackColor = System::Drawing::Color::Transparent;
+			this->Controls->Add(this->richTextBox1);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->l5);
 			this->Controls->Add(this->l6);
 			this->Controls->Add(this->l7);
@@ -713,8 +787,9 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->txtTo);
 			this->Controls->Add(this->txtFrom);
 			this->Controls->Add(this->shapeContainer1);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Graph";
-			this->Size = System::Drawing::Size(1088, 631);
+			this->Size = System::Drawing::Size(1105, 2000);
 			this->Load += gcnew System::EventHandler(this, &Graph::Graph_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -1002,6 +1077,9 @@ namespace DataStructuresLearningSoftware {
 					edge(i,j,0);
 				}
 			}
+			for(int i=0;i<=8;i++){
+				lvisible(i,0);
+			}
 
 		}
 
@@ -1184,5 +1262,8 @@ namespace DataStructuresLearningSoftware {
 			 }
 	private: System::Void txtFrom_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 			 }
-	};
+	private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs^  e) {
+				 reset();
+			 }
+};
 }

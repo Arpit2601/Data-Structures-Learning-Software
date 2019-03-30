@@ -22,7 +22,7 @@ namespace{
 
 
 
-namespace sorting_user_control {
+namespace DataStructuresLearningSoftware {
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -110,6 +110,10 @@ namespace sorting_user_control {
 	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls15;
 	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls17;
 	private: Microsoft::VisualBasic::PowerPacks::LineShape^  ls13;
+	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::RichTextBox^  richTextBox1;
+
 
 
 
@@ -150,6 +154,7 @@ namespace sorting_user_control {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(GraphBFS::typeid));
 			this->btnIncrease = (gcnew System::Windows::Forms::Button());
 			this->btnDecrease = (gcnew System::Windows::Forms::Button());
 			this->btnPause = (gcnew System::Windows::Forms::Button());
@@ -198,59 +203,73 @@ namespace sorting_user_control {
 			this->ls13 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
 			this->ls12 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
 			this->ls26 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->SuspendLayout();
 			// 
 			// btnIncrease
 			// 
-			this->btnIncrease->Location = System::Drawing::Point(1002, 514);
+			this->btnIncrease->BackColor = System::Drawing::Color::DarkKhaki;
+			this->btnIncrease->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnIncrease->Location = System::Drawing::Point(997, 518);
+			this->btnIncrease->Margin = System::Windows::Forms::Padding(4);
 			this->btnIncrease->Name = L"btnIncrease";
-			this->btnIncrease->Size = System::Drawing::Size(75, 41);
+			this->btnIncrease->Size = System::Drawing::Size(100, 50);
 			this->btnIncrease->TabIndex = 27;
 			this->btnIncrease->Text = L"Increase Speed";
-			this->btnIncrease->UseVisualStyleBackColor = true;
+			this->btnIncrease->UseVisualStyleBackColor = false;
 			this->btnIncrease->Visible = false;
 			this->btnIncrease->Click += gcnew System::EventHandler(this, &GraphBFS::btnIncrease_Click);
 			// 
 			// btnDecrease
 			// 
-			this->btnDecrease->Location = System::Drawing::Point(900, 514);
+			this->btnDecrease->BackColor = System::Drawing::Color::DarkKhaki;
+			this->btnDecrease->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnDecrease->Location = System::Drawing::Point(889, 518);
+			this->btnDecrease->Margin = System::Windows::Forms::Padding(4);
 			this->btnDecrease->Name = L"btnDecrease";
-			this->btnDecrease->Size = System::Drawing::Size(75, 41);
+			this->btnDecrease->Size = System::Drawing::Size(100, 50);
 			this->btnDecrease->TabIndex = 26;
 			this->btnDecrease->Text = L"Decrease Speed";
-			this->btnDecrease->UseVisualStyleBackColor = true;
+			this->btnDecrease->UseVisualStyleBackColor = false;
 			this->btnDecrease->Visible = false;
 			this->btnDecrease->Click += gcnew System::EventHandler(this, &GraphBFS::btnDecrease_Click);
 			// 
 			// btnPause
 			// 
-			this->btnPause->Location = System::Drawing::Point(798, 514);
+			this->btnPause->BackColor = System::Drawing::Color::DarkKhaki;
+			this->btnPause->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnPause->Location = System::Drawing::Point(781, 517);
+			this->btnPause->Margin = System::Windows::Forms::Padding(4);
 			this->btnPause->Name = L"btnPause";
-			this->btnPause->Size = System::Drawing::Size(75, 41);
+			this->btnPause->Size = System::Drawing::Size(100, 50);
 			this->btnPause->TabIndex = 25;
 			this->btnPause->Text = L"Pause";
-			this->btnPause->UseVisualStyleBackColor = true;
+			this->btnPause->UseVisualStyleBackColor = false;
 			this->btnPause->Visible = false;
 			this->btnPause->Click += gcnew System::EventHandler(this, &GraphBFS::btnPause_Click);
 			// 
 			// label3
 			// 
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->label3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(423, 548);
+			this->label3->Location = System::Drawing::Point(390, 552);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(116, 20);
+			this->label3->Size = System::Drawing::Size(155, 25);
 			this->label3->TabIndex = 24;
 			this->label3->Text = L"Edge Node 2";
 			this->label3->Visible = false;
 			// 
 			// label2
 			// 
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->label2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(252, 548);
+			this->label2->Location = System::Drawing::Point(239, 552);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(117, 20);
+			this->label2->Size = System::Drawing::Size(156, 25);
 			this->label2->TabIndex = 23;
 			this->label2->Text = L"Edge Node 1";
 			this->label2->Visible = false;
@@ -258,48 +277,57 @@ namespace sorting_user_control {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->label1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(12, 514);
+			this->label1->Location = System::Drawing::Point(24, 518);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(195, 20);
+			this->label1->Size = System::Drawing::Size(201, 24);
 			this->label1->TabIndex = 22;
 			this->label1->Text = L"Enter number of Nodes";
 			// 
 			// btnBFS
 			// 
-			this->btnBFS->Location = System::Drawing::Point(690, 514);
+			this->btnBFS->BackColor = System::Drawing::Color::DarkKhaki;
+			this->btnBFS->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnBFS->Location = System::Drawing::Point(661, 517);
+			this->btnBFS->Margin = System::Windows::Forms::Padding(4);
 			this->btnBFS->Name = L"btnBFS";
-			this->btnBFS->Size = System::Drawing::Size(75, 41);
+			this->btnBFS->Size = System::Drawing::Size(100, 50);
 			this->btnBFS->TabIndex = 21;
 			this->btnBFS->Text = L"BFS";
-			this->btnBFS->UseVisualStyleBackColor = true;
+			this->btnBFS->UseVisualStyleBackColor = false;
 			this->btnBFS->Visible = false;
 			this->btnBFS->Click += gcnew System::EventHandler(this, &GraphBFS::btnBFS_Click);
 			// 
 			// btnAdd
 			// 
-			this->btnAdd->Location = System::Drawing::Point(581, 514);
+			this->btnAdd->BackColor = System::Drawing::Color::DarkKhaki;
+			this->btnAdd->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnAdd->Location = System::Drawing::Point(552, 518);
+			this->btnAdd->Margin = System::Windows::Forms::Padding(4);
 			this->btnAdd->Name = L"btnAdd";
-			this->btnAdd->Size = System::Drawing::Size(75, 41);
+			this->btnAdd->Size = System::Drawing::Size(100, 50);
 			this->btnAdd->TabIndex = 20;
 			this->btnAdd->Text = L"Add";
-			this->btnAdd->UseVisualStyleBackColor = true;
+			this->btnAdd->UseVisualStyleBackColor = false;
 			this->btnAdd->Click += gcnew System::EventHandler(this, &GraphBFS::btnAdd_Click);
 			// 
 			// txtTo
 			// 
-			this->txtTo->Location = System::Drawing::Point(427, 514);
+			this->txtTo->Location = System::Drawing::Point(394, 517);
+			this->txtTo->Margin = System::Windows::Forms::Padding(4);
 			this->txtTo->Name = L"txtTo";
-			this->txtTo->Size = System::Drawing::Size(100, 20);
+			this->txtTo->Size = System::Drawing::Size(132, 22);
 			this->txtTo->TabIndex = 19;
 			this->txtTo->Visible = false;
 			// 
 			// txtFrom
 			// 
-			this->txtFrom->Location = System::Drawing::Point(256, 514);
+			this->txtFrom->Location = System::Drawing::Point(243, 517);
+			this->txtFrom->Margin = System::Windows::Forms::Padding(4);
 			this->txtFrom->Name = L"txtFrom";
-			this->txtFrom->Size = System::Drawing::Size(100, 20);
+			this->txtFrom->Size = System::Drawing::Size(132, 22);
 			this->txtFrom->TabIndex = 14;
 			// 
 			// timer1
@@ -313,9 +341,10 @@ namespace sorting_user_control {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l8->Location = System::Drawing::Point(230, 77);
+			this->l8->Location = System::Drawing::Point(307, 95);
+			this->l8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l8->Name = L"l8";
-			this->l8->Size = System::Drawing::Size(30, 30);
+			this->l8->Size = System::Drawing::Size(40, 37);
 			this->l8->TabIndex = 35;
 			this->l8->Text = L"8";
 			this->l8->Visible = false;
@@ -326,9 +355,10 @@ namespace sorting_user_control {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l7->Location = System::Drawing::Point(847, 153);
+			this->l7->Location = System::Drawing::Point(1129, 188);
+			this->l7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l7->Name = L"l7";
-			this->l7->Size = System::Drawing::Size(30, 30);
+			this->l7->Size = System::Drawing::Size(40, 37);
 			this->l7->TabIndex = 34;
 			this->l7->Text = L"7";
 			this->l7->Visible = false;
@@ -339,9 +369,10 @@ namespace sorting_user_control {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l6->Location = System::Drawing::Point(475, 313);
+			this->l6->Location = System::Drawing::Point(633, 385);
+			this->l6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l6->Name = L"l6";
-			this->l6->Size = System::Drawing::Size(30, 30);
+			this->l6->Size = System::Drawing::Size(40, 37);
 			this->l6->TabIndex = 33;
 			this->l6->Text = L"6";
 			this->l6->Visible = false;
@@ -352,9 +383,10 @@ namespace sorting_user_control {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l5->Location = System::Drawing::Point(748, 279);
+			this->l5->Location = System::Drawing::Point(997, 343);
+			this->l5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l5->Name = L"l5";
-			this->l5->Size = System::Drawing::Size(30, 30);
+			this->l5->Size = System::Drawing::Size(40, 37);
 			this->l5->TabIndex = 32;
 			this->l5->Text = L"5";
 			this->l5->Visible = false;
@@ -365,9 +397,10 @@ namespace sorting_user_control {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l4->Location = System::Drawing::Point(212, 274);
+			this->l4->Location = System::Drawing::Point(283, 337);
+			this->l4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l4->Name = L"l4";
-			this->l4->Size = System::Drawing::Size(30, 30);
+			this->l4->Size = System::Drawing::Size(40, 37);
 			this->l4->TabIndex = 31;
 			this->l4->Text = L"4";
 			this->l4->Visible = false;
@@ -378,9 +411,10 @@ namespace sorting_user_control {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l3->Location = System::Drawing::Point(401, 193);
+			this->l3->Location = System::Drawing::Point(535, 238);
+			this->l3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l3->Name = L"l3";
-			this->l3->Size = System::Drawing::Size(30, 30);
+			this->l3->Size = System::Drawing::Size(40, 37);
 			this->l3->TabIndex = 30;
 			this->l3->Text = L"3";
 			this->l3->Visible = false;
@@ -391,9 +425,10 @@ namespace sorting_user_control {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l2->Location = System::Drawing::Point(604, 163);
+			this->l2->Location = System::Drawing::Point(805, 201);
+			this->l2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l2->Name = L"l2";
-			this->l2->Size = System::Drawing::Size(30, 30);
+			this->l2->Size = System::Drawing::Size(40, 37);
 			this->l2->TabIndex = 29;
 			this->l2->Text = L"2";
 			this->l2->Visible = false;
@@ -404,9 +439,10 @@ namespace sorting_user_control {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l1->Location = System::Drawing::Point(525, 33);
+			this->l1->Location = System::Drawing::Point(700, 41);
+			this->l1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l1->Name = L"l1";
-			this->l1->Size = System::Drawing::Size(30, 30);
+			this->l1->Size = System::Drawing::Size(40, 37);
 			this->l1->TabIndex = 28;
 			this->l1->Text = L"1";
 			this->l1->Visible = false;
@@ -420,7 +456,7 @@ namespace sorting_user_control {
 				this->ls67, this->ls58, this->ls57, this->ls56, this->ls48, this->ls47, this->ls46, this->ls45, this->ls38, this->ls37, this->ls36, 
 				this->ls35, this->ls34, this->ls27, this->ls28, this->ls24, this->ls23, this->ls25, this->ls14, this->ls18, this->ls16, this->ls15, 
 				this->ls17, this->ls13, this->ls12, this->ls26});
-			this->shapeContainer1->Size = System::Drawing::Size(1088, 631);
+			this->shapeContainer1->Size = System::Drawing::Size(1105, 2000);
 			this->shapeContainer1->TabIndex = 36;
 			this->shapeContainer1->TabStop = false;
 			// 
@@ -704,10 +740,44 @@ namespace sorting_user_control {
 			this->ls26->Y1 = 310;
 			this->ls26->Y2 = 194;
 			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::DarkKhaki;
+			this->button1->Location = System::Drawing::Point(552, 601);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(100, 50);
+			this->button1->TabIndex = 37;
+			this->button1->Text = L"Reset";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &GraphBFS::button1_Click);
+			// 
+			// label4
+			// 
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label4->Location = System::Drawing::Point(84, 703);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(924, 81);
+			this->label4->TabIndex = 38;
+			this->label4->Text = resources->GetString(L"label4.Text");
+			// 
+			// richTextBox1
+			// 
+			this->richTextBox1->BackColor = System::Drawing::Color::PeachPuff;
+			this->richTextBox1->Location = System::Drawing::Point(88, 774);
+			this->richTextBox1->Name = L"richTextBox1";
+			this->richTextBox1->ReadOnly = true;
+			this->richTextBox1->Size = System::Drawing::Size(920, 1400);
+			this->richTextBox1->TabIndex = 39;
+			this->richTextBox1->Text = resources->GetString(L"richTextBox1.Text");
+			// 
 			// GraphBFS
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackColor = System::Drawing::Color::Transparent;
+			this->Controls->Add(this->richTextBox1);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->l8);
 			this->Controls->Add(this->l7);
 			this->Controls->Add(this->l6);
@@ -727,8 +797,10 @@ namespace sorting_user_control {
 			this->Controls->Add(this->txtTo);
 			this->Controls->Add(this->txtFrom);
 			this->Controls->Add(this->shapeContainer1);
+			this->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"GraphBFS";
-			this->Size = System::Drawing::Size(1088, 631);
+			this->Size = System::Drawing::Size(1105, 2000);
 			this->Load += gcnew System::EventHandler(this, &GraphBFS::GraphBFS_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -1046,6 +1118,9 @@ namespace sorting_user_control {
 					edge(i,j,0);
 				}
 			}
+			for(int i=0;i<=8;i++){
+				lvisible(i,0);
+			}
 
 		}
 
@@ -1191,5 +1266,8 @@ namespace sorting_user_control {
 				 }
 
 			 }
-	};
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+				 reset();
+			 }
+};
 }
