@@ -30,13 +30,19 @@ int main(array<System::String ^> ^args)
 	Application::SetCompatibleTextRenderingDefault(false); 
 
 	// Create the main window and run it
+	Application::Run(gcnew MainPage());
+	Application::Run(gcnew LoginForm());
 
+<<<<<<< HEAD
 
 	Application::Run(gcnew MainPage());
 	Application::Run(gcnew LoginForm());
 
 	Application::Run(gcnew BST_mainpage());
 
+=======
+	//Application::Run(gcnew MainPage());
+>>>>>>> 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
 
 
 	return 0;

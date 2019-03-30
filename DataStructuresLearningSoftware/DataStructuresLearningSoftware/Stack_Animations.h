@@ -313,8 +313,17 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 			 if(numInputs==maxInputs){MessageBox::Show("You have reached maximum limit. Pop some elements to push more.");}
 			 else 
 			 {
-				if(textBox1->Text == "" ){MessageBox::Show("Enter some text/number to push.");}
-				if(textBox1->Text != "")
+				 int input_len=this->textBox1->Text->Length;int count=0,flag=0;
+				 for(int i=0;i<input_len;i++)
+				 {
+					 if(this->textBox1->Text[i]==' '){count++;flag=1;}
+				 }
+				 if(flag==1){MessageBox::Show("White spaces are not allowed");}
+				else if(count==input_len){MessageBox::Show("White spaces are not allowed");}
+				else if(textBox1->Text == "" ){MessageBox::Show("Enter some text/number to push.");}
+				else if(textBox1->Text->Length>3){MessageBox::Show("Please enter less than 3 characters.");}
+				
+				else 
 				{
 					// for array implementation
 					numInputs++;
