@@ -57,7 +57,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Button^  button6;
 	private: System::Windows::Forms::Button^  button7;
 	private: System::Windows::Forms::Button^  button8;
-	private: System::Windows::Forms::Button^  button9;
+
 	private: System::Windows::Forms::Label^  lblWelcome;
 	private: System::Windows::Forms::Button^  btnBack;
 	private: System::Windows::Forms::Button^  btnNext;
@@ -79,7 +79,6 @@ namespace DataStructuresLearningSoftware {
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Stack_Main::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
@@ -101,7 +100,6 @@ namespace DataStructuresLearningSoftware {
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::LightSeaGreen;
-			this->panel1->Controls->Add(this->button9);
 			this->panel1->Controls->Add(this->button3);
 			this->panel1->Controls->Add(this->button7);
 			this->panel1->Controls->Add(this->button6);
@@ -113,23 +111,6 @@ namespace DataStructuresLearningSoftware {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(175, 720);
 			this->panel1->TabIndex = 0;
-			// 
-			// button9
-			// 
-			this->button9->BackColor = System::Drawing::Color::White;
-			this->button9->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button9->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->button9->ForeColor = System::Drawing::Color::Black;
-			this->button9->Location = System::Drawing::Point(11, 295);
-			this->button9->Margin = System::Windows::Forms::Padding(2);
-			this->button9->Name = L"button9";
-			this->button9->Size = System::Drawing::Size(150, 24);
-			this->button9->TabIndex = 3;
-			this->button9->Text = L"Test back";
-			this->button9->UseVisualStyleBackColor = false;
-			this->button9->Click += gcnew System::EventHandler(this, &Stack_Main::button9_Click);
 			// 
 			// button3
 			// 
@@ -426,7 +407,6 @@ namespace DataStructuresLearningSoftware {
 				panel3->AutoScroll=true;
 				 curid=1;
 				display();
-				username="lavish";
 				modulesCompleted=0;
 				OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
 				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";

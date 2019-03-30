@@ -52,6 +52,7 @@ namespace DataStructuresLearningSoftware {
 
 	private: System::Windows::Forms::RadioButton^  llbtn;
 	private: System::Windows::Forms::Panel^  llAnimationPanel;
+	private: System::Windows::Forms::Button^  reset;
 
 
 
@@ -79,6 +80,7 @@ namespace DataStructuresLearningSoftware {
 			this->dqelemlbl = (gcnew System::Windows::Forms::Label());
 			this->arraybtn = (gcnew System::Windows::Forms::RadioButton());
 			this->llbtn = (gcnew System::Windows::Forms::RadioButton());
+			this->reset = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// dqbtn
@@ -188,10 +190,24 @@ namespace DataStructuresLearningSoftware {
 			this->llbtn->UseVisualStyleBackColor = true;
 			this->llbtn->CheckedChanged += gcnew System::EventHandler(this, &UI_Linear_Queue_Animation::llbtn_CheckedChanged);
 			// 
+			// reset
+			// 
+			this->reset->BackColor = System::Drawing::Color::Black;
+			this->reset->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->reset->ForeColor = System::Drawing::Color::White;
+			this->reset->Location = System::Drawing::Point(435, 522);
+			this->reset->Name = L"reset";
+			this->reset->Size = System::Drawing::Size(90, 35);
+			this->reset->TabIndex = 17;
+			this->reset->Text = L"Reset";
+			this->reset->UseVisualStyleBackColor = false;
+			this->reset->Click += gcnew System::EventHandler(this, &UI_Linear_Queue_Animation::reset_Click);
+			// 
 			// UI_Linear_Queue_Animation
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::White;
+			this->Controls->Add(this->reset);
 			this->Controls->Add(this->arrayAnimationPanel);
 			this->Controls->Add(this->llAnimationPanel);
 			this->Controls->Add(this->llbtn);
@@ -307,7 +323,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void enqbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 				 // Data Validation
 				 bool check = inputValidate(enqtext->Text);
-
+				 dqelemlbl->Text ="";
 				 if(check){
 					 if(rear!=front)
 					 {
@@ -618,6 +634,7 @@ namespace DataStructuresLearningSoftware {
 
 
 	private: System::Void arraybtn_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+				  dqelemlbl->Text ="";
 				 if(arraybtn->Checked ==true)
 				 {
 					 arrayAnimationPanel->Show();
@@ -639,5 +656,26 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void llbtn_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 
 			 }
-	};
+	private: System::Void reset_Click(System::Object^  sender, System::EventArgs^  e) {
+				dqelemlbl->Text ="";
+				 input.Clear();
+				 if(arraybtn->Checked ==true)
+				 {
+					 arrayAnimationPanel->Show();
+					 llAnimationPanel->Hide();
+					 ll=false;
+					 ArrayBase();
+
+				 }
+				 else
+				 {
+					 llAnimationPanel->Show();
+					 arrayAnimationPanel->Hide();
+					 ll = true;
+					 LLBase();
+
+				 }
+
+			 }
+};
 }

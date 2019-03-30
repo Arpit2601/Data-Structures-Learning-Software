@@ -29,6 +29,10 @@ int main(array<System::String ^> ^args)
 	Application::SetCompatibleTextRenderingDefault(false); 
 
 	// Create the main window and run it
+<<<<<<< HEAD
+	Application::Run(gcnew LoginForm());
+	//Application::Run(gcnew Queue_Home());
+=======
 	Application::Run(gcnew MainPage());
 	//Application::Run(gcnew Graphs_Home());
 

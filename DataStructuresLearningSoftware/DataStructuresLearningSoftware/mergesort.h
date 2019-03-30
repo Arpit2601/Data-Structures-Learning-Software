@@ -126,7 +126,7 @@ namespace DataStructuresLearningSoftware {
 			this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button7->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button7->Location = System::Drawing::Point(985, 1562);
+			this->button7->Location = System::Drawing::Point(985, 1392);
 			this->button7->Margin = System::Windows::Forms::Padding(2);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(100, 30);
@@ -142,7 +142,7 @@ namespace DataStructuresLearningSoftware {
 			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button6->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button6->Location = System::Drawing::Point(777, 1562);
+			this->button6->Location = System::Drawing::Point(777, 1392);
 			this->button6->Margin = System::Windows::Forms::Padding(2);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(100, 30);
@@ -158,7 +158,7 @@ namespace DataStructuresLearningSoftware {
 			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button5->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button5->Location = System::Drawing::Point(881, 1562);
+			this->button5->Location = System::Drawing::Point(881, 1392);
 			this->button5->Margin = System::Windows::Forms::Padding(2);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(100, 30);
@@ -174,8 +174,9 @@ namespace DataStructuresLearningSoftware {
 			this->panel1->Location = System::Drawing::Point(20, 1138);
 			this->panel1->Margin = System::Windows::Forms::Padding(2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1065, 420);
+			this->panel1->Size = System::Drawing::Size(1065, 239);
 			this->panel1->TabIndex = 13;
+			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &mergesort::panel1_Paint);
 			// 
 			// button4
 			// 
@@ -184,7 +185,7 @@ namespace DataStructuresLearningSoftware {
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button4->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(228, 1562);
+			this->button4->Location = System::Drawing::Point(228, 1392);
 			this->button4->Margin = System::Windows::Forms::Padding(2);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(100, 30);
@@ -200,7 +201,7 @@ namespace DataStructuresLearningSoftware {
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(124, 1562);
+			this->button3->Location = System::Drawing::Point(124, 1392);
 			this->button3->Margin = System::Windows::Forms::Padding(2);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(100, 30);
@@ -213,7 +214,7 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->richTextBox1->Location = System::Drawing::Point(20, 1562);
+			this->richTextBox1->Location = System::Drawing::Point(20, 1392);
 			this->richTextBox1->Margin = System::Windows::Forms::Padding(2);
 			this->richTextBox1->Name = L"richTextBox1";
 			this->richTextBox1->Size = System::Drawing::Size(100, 30);
@@ -500,6 +501,7 @@ namespace DataStructuresLearningSoftware {
 
 	public:	
 		String ^username;
+
 		int num_elements;
 		int box_length;
 		int box_width;
@@ -518,6 +520,9 @@ namespace DataStructuresLearningSoftware {
 		int partition_h;
 		int partition_var;
 		int partition_no;
+		int id;
+		int mergesort_id;
+		int mid,right_end;
 
 		System::Collections::Generic::List<int> input_array;
 		System::Collections::Generic::List<int> input_array_completed;
@@ -542,6 +547,9 @@ namespace DataStructuresLearningSoftware {
 				}
 				else if(input_array_completed[i]==-3){
 					newLabel->BackColor = Color::Red;
+				}
+				else if(input_array_completed[i]==1){
+					newLabel->BackColor= Color::Yellow;	
 				}
 				else{
 					newLabel->BackColor = Color::Orange;
@@ -633,7 +641,8 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void mergesort_Load(System::Object^  sender, System::EventArgs^  e) {
 				 timer2_set=0;
 				 sort_selected=0;
-
+				 button5->Enabled=false;
+				 button6->Enabled=false;
 				 // Quiz Panel Load
 				 moduleQuiz ^newPanel = gcnew moduleQuiz();
 				 newPanel->ds_id = 4;
@@ -664,6 +673,9 @@ namespace DataStructuresLearningSoftware {
 				 timer1->Enabled = false;
 				 timer2->Enabled= false;
 				 panel1->Controls->Clear();
+				 button5->Enabled=false;
+				 button6->Enabled=false;
+				 input_array_completed.Clear();
 				 num_elements = 0;
 				 input_array.Clear();
 			 }
@@ -692,6 +704,8 @@ namespace DataStructuresLearningSoftware {
 					 //mergesort
 					 if(input_array.Count==0){MessageBox::Show("The input array is null,add something");}
 					 curr_size=0.5;
+					 button5->Enabled=true;
+					 button6->Enabled=true;
 					 timer1->Enabled=true;
 				 } 
 				 else{
@@ -714,12 +728,12 @@ namespace DataStructuresLearningSoftware {
 
 				 if(sort_selected==0){
 					 //mergesort
-					 start_y+=100;
 					 left_start=0;
 					 timer2->Enabled=true;
-					 timer1->Enabled=false;				 
+
+					 timer1->Enabled=false;
 					 curr_size=curr_size*2;
-					 if(curr_size>n-1){timer1->Enabled=false;timer2->Enabled=false;input_array.Clear();}
+					 if(curr_size>n-1){timer1->Enabled=false;timer2->Enabled=false;input_array.Clear();button5->Enabled=false;button6->Enabled=false;input_array_completed.Clear();}
 				 }
 				 else{
 					 //quicksort
@@ -727,23 +741,39 @@ namespace DataStructuresLearningSoftware {
 			 }
 	private: System::Void timer2_Tick_1(System::Object^  sender, System::EventArgs^  e) {
 				 //mergesort	
-
 				 int n= input_array.Count;
-				 int mid,right_end;
 
-				 mid=left_start + curr_size-1;
-				 right_end= min(left_start + 2* curr_size -1 , n-1);	
+				 if(mergesort_id==0){
 
-				 DoMerge(left_start,right_end,mid);	
-				 show_array(left_start,right_end);
+					 mid=left_start + curr_size-1;
+					 right_end= min(left_start + 2* curr_size -1 , n-1);	
 
-				 left_start+= 2*curr_size;
+					 for(int i=left_start;i<=right_end;i++)input_array_completed[i]=1;
+					 panel1->Controls->Clear();
+					 show_array(0,input_array.Count-1);
+					 mergesort_id=1;
 
-				 if(left_start>n-2){
-					 show_array(right_end,n-1);
-					 timer1->Enabled=true;
-					 timer2->Enabled=false;
+				 }
+				 else{
+
+					 DoMerge(left_start,right_end,mid);
+
+					 for(int i=0;i<=input_array.Count-1;i++)input_array_completed[i]=0;
+					 panel1->Controls->Clear();
+					 show_array(0,input_array.Count-1);
+					 left_start+= 2*curr_size;
+
+					 if(left_start>n-2){
+						 show_array(right_end,n-1);
+						 timer1->Enabled=true;
+						 timer2->Enabled=false;
+					 }
+					 mergesort_id=0;
+
+
 				 }
 			 }
-	};
+	private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+			 }
+};
 }
