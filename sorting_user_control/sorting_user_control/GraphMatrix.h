@@ -2179,11 +2179,17 @@ private: System::Windows::Forms::Button^  btnReset;
 			for(int i=1;i<=8;i++){
 				for(int j=1;j<=8;j++){
 					lvisible(10*i+j,0);
+					lText(10*i+j,0);
 				}
 		   }
 			for(int i=1;i<=8;i++){
 				labels(i,0);
 			}
+
+			label1->Text="Enter Number of Nodes";
+			label2->Visible=false;
+			label3->Visible=false;
+			txtTo->Visible=false;
 
 	  
 	  }
@@ -2320,6 +2326,7 @@ private: System::Windows::Forms::Button^  btnReset;
 								maddcounter--;
 							}else{
 								label1->Text="Enter the Edges";
+								txtFrom->Text="";
 								txtTo->Visible=true;
 								label1->Visible=true;
 								label2->Visible=true;

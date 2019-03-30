@@ -55,14 +55,15 @@ namespace sorting_user_control {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^  btnIncrease;
+
 	protected: 
-	private: System::Windows::Forms::Button^  btnDecrease;
-	private: System::Windows::Forms::Button^  btnPause;
+
+
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label1;
-	private: System::Windows::Forms::Button^  btnBFS;
+	private: System::Windows::Forms::Button^  btnReset;
+
 	private: System::Windows::Forms::Button^  btnAdd;
 	private: System::Windows::Forms::TextBox^  txtTo;
 	private: System::Windows::Forms::TextBox^  txtFrom;
@@ -153,13 +154,10 @@ namespace sorting_user_control {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->btnIncrease = (gcnew System::Windows::Forms::Button());
-			this->btnDecrease = (gcnew System::Windows::Forms::Button());
-			this->btnPause = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->btnBFS = (gcnew System::Windows::Forms::Button());
+			this->btnReset = (gcnew System::Windows::Forms::Button());
 			this->btnAdd = (gcnew System::Windows::Forms::Button());
 			this->txtTo = (gcnew System::Windows::Forms::TextBox());
 			this->txtFrom = (gcnew System::Windows::Forms::TextBox());
@@ -237,36 +235,6 @@ namespace sorting_user_control {
 			this->t11 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
-			// btnIncrease
-			// 
-			this->btnIncrease->Location = System::Drawing::Point(1002, 519);
-			this->btnIncrease->Name = L"btnIncrease";
-			this->btnIncrease->Size = System::Drawing::Size(75, 41);
-			this->btnIncrease->TabIndex = 37;
-			this->btnIncrease->Text = L"Increase Speed";
-			this->btnIncrease->UseVisualStyleBackColor = true;
-			this->btnIncrease->Visible = false;
-			// 
-			// btnDecrease
-			// 
-			this->btnDecrease->Location = System::Drawing::Point(900, 519);
-			this->btnDecrease->Name = L"btnDecrease";
-			this->btnDecrease->Size = System::Drawing::Size(75, 41);
-			this->btnDecrease->TabIndex = 36;
-			this->btnDecrease->Text = L"Decrease Speed";
-			this->btnDecrease->UseVisualStyleBackColor = true;
-			this->btnDecrease->Visible = false;
-			// 
-			// btnPause
-			// 
-			this->btnPause->Location = System::Drawing::Point(798, 519);
-			this->btnPause->Name = L"btnPause";
-			this->btnPause->Size = System::Drawing::Size(75, 41);
-			this->btnPause->TabIndex = 35;
-			this->btnPause->Text = L"Pause";
-			this->btnPause->UseVisualStyleBackColor = true;
-			this->btnPause->Visible = false;
-			// 
 			// label3
 			// 
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
@@ -300,15 +268,15 @@ namespace sorting_user_control {
 			this->label1->TabIndex = 32;
 			this->label1->Text = L"Enter number of Nodes";
 			// 
-			// btnBFS
+			// btnReset
 			// 
-			this->btnBFS->Location = System::Drawing::Point(690, 519);
-			this->btnBFS->Name = L"btnBFS";
-			this->btnBFS->Size = System::Drawing::Size(75, 41);
-			this->btnBFS->TabIndex = 31;
-			this->btnBFS->Text = L"BFS";
-			this->btnBFS->UseVisualStyleBackColor = true;
-			this->btnBFS->Visible = false;
+			this->btnReset->Location = System::Drawing::Point(690, 519);
+			this->btnReset->Name = L"btnReset";
+			this->btnReset->Size = System::Drawing::Size(75, 41);
+			this->btnReset->TabIndex = 31;
+			this->btnReset->Text = L"Reset";
+			this->btnReset->UseVisualStyleBackColor = true;
+			this->btnReset->Click += gcnew System::EventHandler(this, &GraphList::btnReset_Click_1);
 			// 
 			// btnAdd
 			// 
@@ -1419,13 +1387,10 @@ namespace sorting_user_control {
 			this->Controls->Add(this->t13);
 			this->Controls->Add(this->t12);
 			this->Controls->Add(this->t11);
-			this->Controls->Add(this->btnIncrease);
-			this->Controls->Add(this->btnDecrease);
-			this->Controls->Add(this->btnPause);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->btnBFS);
+			this->Controls->Add(this->btnReset);
 			this->Controls->Add(this->btnAdd);
 			this->Controls->Add(this->txtTo);
 			this->Controls->Add(this->txtFrom);
@@ -2064,7 +2029,10 @@ namespace sorting_user_control {
 			for(int i=1;i<=8;i++){
 				labels(i,0);
 			}
-
+			label1->Text="Enter Number of Nodes";
+			label2->Visible=false;
+			label3->Visible=false;
+			txtTo->Visible=false;
 	  
 	  }
 
@@ -2385,11 +2353,12 @@ namespace sorting_user_control {
 						}
 
 						if(check){
-							if(lm>ln*ln){
-								MessageBox::Show("Number of edges should be less than square of number of Nodes");
+							if(lm>(ln*(ln-1))/2){
+								MessageBox::Show("Number of edges can't be more than that of Complete Graph");
 								laddcounter--;
 							}else{
 								label1->Text="Enter the Edges";
+								txtFrom->Text="";
 								txtTo->Visible=true;
 								label1->Visible=true;
 								label2->Visible=true;
@@ -2422,9 +2391,21 @@ namespace sorting_user_control {
 							MessageBox::Show("No Self Loops Allowed");
 							laddcounter--;
 						 }else if(p==1){
-							ladj[a].push_back(b);
-							ladj[b].push_back(a);
-							textVisible(a,b);
+							 int ch=1;
+							 for(int i=0;i<ladj[a].size();i++){
+								 if(ladj[a][i]==b){
+									ch=0;
+									break;
+								 }
+							 }
+							 if(ch==1){
+								ladj[a].push_back(b);
+								ladj[b].push_back(a);
+								textVisible(a,b);
+							 }else{
+								MessageBox::Show("Edge Already Added");
+								laddcounter--; 
+							}							
 							
 						 }else{
 							laddcounter--;
@@ -2442,6 +2423,9 @@ namespace sorting_user_control {
 				 
 			 }
 private: System::Void btnReset_Click(System::Object^  sender, System::EventArgs^  e) {
+			 reset();
+		 }
+private: System::Void btnReset_Click_1(System::Object^  sender, System::EventArgs^  e) {
 			 reset();
 		 }
 };
