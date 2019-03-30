@@ -1,5 +1,7 @@
 #pragma once
 
+#include "moduleQuiz.h"
+
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -73,6 +75,9 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  label16;
 	private: System::Windows::Forms::Label^  label17;
 	private: System::Windows::Forms::Label^  label18;
+	private: System::Windows::Forms::Panel^  quizPanel;
+	private: System::Windows::Forms::Label^  label19;
+
 
 	private: System::ComponentModel::IContainer^  components;
 
@@ -127,6 +132,8 @@ namespace DataStructuresLearningSoftware {
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->quizPanel = (gcnew System::Windows::Forms::Panel());
+			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->insert_animation_ll->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->BeginInit();
@@ -141,7 +148,7 @@ namespace DataStructuresLearningSoftware {
 			this->insert_but_ll->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->insert_but_ll->Location = System::Drawing::Point(849, 886);
-			this->insert_but_ll->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->insert_but_ll->Margin = System::Windows::Forms::Padding(2);
 			this->insert_but_ll->Name = L"insert_but_ll";
 			this->insert_but_ll->Size = System::Drawing::Size(100, 30);
 			this->insert_but_ll->TabIndex = 7;
@@ -154,7 +161,7 @@ namespace DataStructuresLearningSoftware {
 			this->insert_ll_tf->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->insert_ll_tf->Location = System::Drawing::Point(309, 886);
-			this->insert_ll_tf->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->insert_ll_tf->Margin = System::Windows::Forms::Padding(2);
 			this->insert_ll_tf->Name = L"insert_ll_tf";
 			this->insert_ll_tf->Size = System::Drawing::Size(100, 28);
 			this->insert_ll_tf->TabIndex = 6;
@@ -185,7 +192,7 @@ namespace DataStructuresLearningSoftware {
 			this->insert_animation_ll->Controls->Add(this->head_ll);
 			this->insert_animation_ll->Controls->Add(this->ll1);
 			this->insert_animation_ll->Location = System::Drawing::Point(155, 672);
-			this->insert_animation_ll->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->insert_animation_ll->Margin = System::Windows::Forms::Padding(2);
 			this->insert_animation_ll->Name = L"insert_animation_ll";
 			this->insert_animation_ll->Size = System::Drawing::Size(794, 210);
 			this->insert_animation_ll->TabIndex = 4;
@@ -544,11 +551,32 @@ namespace DataStructuresLearningSoftware {
 			this->label18->TabIndex = 27;
 			this->label18->Text = resources->GetString(L"label18.Text");
 			// 
+			// quizPanel
+			// 
+			this->quizPanel->BackColor = System::Drawing::Color::White;
+			this->quizPanel->Location = System::Drawing::Point(37, 3438);
+			this->quizPanel->Name = L"quizPanel";
+			this->quizPanel->Size = System::Drawing::Size(1030, 450);
+			this->quizPanel->TabIndex = 28;
+			// 
+			// label19
+			// 
+			this->label19->AutoSize = true;
+			this->label19->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label19->Location = System::Drawing::Point(40, 3414);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(382, 21);
+			this->label19->TabIndex = 29;
+			this->label19->Text = L"Answer the question correctly to pass the module.";
+			// 
 			// LinkedList_Insertion
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::AliceBlue;
+			this->Controls->Add(this->label19);
+			this->Controls->Add(this->quizPanel);
 			this->Controls->Add(this->label18);
 			this->Controls->Add(this->label17);
 			this->Controls->Add(this->label16);
@@ -573,9 +601,10 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->insert_ll_tf);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->insert_animation_ll);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"LinkedList_Insertion";
-			this->Size = System::Drawing::Size(1105, 3500);
+			this->Size = System::Drawing::Size(1105, 3900);
+			this->Load += gcnew System::EventHandler(this, &LinkedList_Insertion::LinkedList_Insertion_Load);
 			this->insert_animation_ll->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->EndInit();
@@ -790,5 +819,16 @@ namespace DataStructuresLearningSoftware {
 					 }
 				 }
 			 }
-	};
+	private: System::Void LinkedList_Insertion_Load(System::Object^  sender, System::EventArgs^  e) {
+				 // Quiz Panel Load
+				 moduleQuiz ^newPanel = gcnew moduleQuiz();
+				 newPanel->ds_id = 2;
+				 newPanel->module_id = 1;
+				 newPanel->username = username;
+				 newPanel->update_id = 10;
+				 newPanel->update_name = "LinkedListProgress";
+				 quizPanel->Controls->Clear();
+				 quizPanel->Controls->Add(newPanel);
+			 }
+};
 }

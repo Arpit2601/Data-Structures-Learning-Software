@@ -1,5 +1,7 @@
 #pragma once
 
+#include "moduleQuiz.h"
+
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -47,6 +49,9 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  label9;
 	private: System::Windows::Forms::Label^  label10;
 	private: System::Windows::Forms::Label^  label11;
+	private: System::Windows::Forms::Panel^  quizPanel;
+
+	private: System::Windows::Forms::Label^  label12;
 	protected: 
 
 	private:
@@ -75,6 +80,8 @@ namespace DataStructuresLearningSoftware {
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->quizPanel = (gcnew System::Windows::Forms::Panel());
+			this->label12 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -208,11 +215,32 @@ namespace DataStructuresLearningSoftware {
 			this->label11->Text = L"// A linked list node \r\nstruct Node \r\n{ \r\n  int data; \r\n  struct Node *next; \r\n};" 
 				L"";
 			// 
+			// quizPanel
+			// 
+			this->quizPanel->BackColor = System::Drawing::Color::White;
+			this->quizPanel->Location = System::Drawing::Point(36, 1274);
+			this->quizPanel->Name = L"quizPanel";
+			this->quizPanel->Size = System::Drawing::Size(1030, 450);
+			this->quizPanel->TabIndex = 12;
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label12->Location = System::Drawing::Point(42, 1250);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(382, 21);
+			this->label12->TabIndex = 13;
+			this->label12->Text = L"Answer the question correctly to pass the module.";
+			// 
 			// LinkedList_Introduction
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::AliceBlue;
+			this->Controls->Add(this->label12);
+			this->Controls->Add(this->quizPanel);
 			this->Controls->Add(this->label11);
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->label9);
@@ -226,7 +254,8 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Name = L"LinkedList_Introduction";
-			this->Size = System::Drawing::Size(1105, 1300);
+			this->Size = System::Drawing::Size(1105, 1800);
+			this->Load += gcnew System::EventHandler(this, &LinkedList_Introduction::LinkedList_Introduction_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -235,5 +264,16 @@ namespace DataStructuresLearningSoftware {
 #pragma endregion
 
 		public: String ^username;
-	};
+	private: System::Void LinkedList_Introduction_Load(System::Object^  sender, System::EventArgs^  e) {
+				 // Quiz Panel Load
+				 moduleQuiz ^newPanel = gcnew moduleQuiz();
+				 newPanel->ds_id = 2;
+				 newPanel->module_id = 0;
+				 newPanel->username = username;
+				 newPanel->update_id = 10;
+				 newPanel->update_name = "LinkedListProgress";
+				 quizPanel->Controls->Clear();
+				 quizPanel->Controls->Add(newPanel);
+			 }
+};
 }

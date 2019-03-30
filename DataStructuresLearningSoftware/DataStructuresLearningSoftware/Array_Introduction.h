@@ -1,5 +1,7 @@
 #pragma once
 
+#include "moduleQuiz.h"
+
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -47,6 +49,8 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  label8;
 	private: System::Windows::Forms::Label^  label9;
 	private: System::Windows::Forms::Label^  label10;
+	private: System::Windows::Forms::Panel^  quizPanel;
+	private: System::Windows::Forms::Label^  label11;
 	protected: 
 
 	private:
@@ -75,6 +79,8 @@ namespace DataStructuresLearningSoftware {
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->quizPanel = (gcnew System::Windows::Forms::Panel());
+			this->label11 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->BeginInit();
 			this->SuspendLayout();
@@ -208,11 +214,32 @@ namespace DataStructuresLearningSoftware {
 			this->label10->Text = L"Usually, an array of characters is called a ‘string’, whereas an array of ints or" 
 				L" floats is called simply an array.";
 			// 
+			// quizPanel
+			// 
+			this->quizPanel->BackColor = System::Drawing::Color::White;
+			this->quizPanel->Location = System::Drawing::Point(37, 1530);
+			this->quizPanel->Name = L"quizPanel";
+			this->quizPanel->Size = System::Drawing::Size(1030, 450);
+			this->quizPanel->TabIndex = 12;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label11->Location = System::Drawing::Point(44, 1506);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(382, 21);
+			this->label11->TabIndex = 13;
+			this->label11->Text = L"Answer the question correctly to pass the module.";
+			// 
 			// Array_Introduction
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Honeydew;
+			this->Controls->Add(this->label11);
+			this->Controls->Add(this->quizPanel);
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->label8);
@@ -226,7 +253,8 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Name = L"Array_Introduction";
-			this->Size = System::Drawing::Size(1105, 1500);
+			this->Size = System::Drawing::Size(1105, 2000);
+			this->Load += gcnew System::EventHandler(this, &Array_Introduction::Array_Introduction_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->EndInit();
 			this->ResumeLayout(false);
@@ -236,5 +264,16 @@ namespace DataStructuresLearningSoftware {
 #pragma endregion
 
 		public: String ^username;
-	};
+	private: System::Void Array_Introduction_Load(System::Object^  sender, System::EventArgs^  e) {
+				 // Quiz Panel Load
+				 moduleQuiz ^newPanel = gcnew moduleQuiz();
+				 newPanel->ds_id = 1;
+				 newPanel->module_id = 0;
+				 newPanel->username = username;
+				 newPanel->update_id = 9;
+				 newPanel->update_name = "ArraysProgress";
+				 quizPanel->Controls->Clear();
+				 quizPanel->Controls->Add(newPanel);
+			 }
+};
 }

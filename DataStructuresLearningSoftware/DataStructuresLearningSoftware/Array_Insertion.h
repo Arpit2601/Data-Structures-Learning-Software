@@ -75,6 +75,9 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  label6;
 	private: System::Windows::Forms::Label^  label7;
 	private: System::Windows::Forms::Label^  label8;
+	private: System::Windows::Forms::Panel^  quizPanel;
+
+	private: System::Windows::Forms::Label^  label9;
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -123,6 +126,8 @@ namespace DataStructuresLearningSoftware {
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->quizPanel = (gcnew System::Windows::Forms::Panel());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->insert_animation->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
@@ -135,7 +140,7 @@ namespace DataStructuresLearningSoftware {
 			this->insertarray->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->insertarray->Location = System::Drawing::Point(849, 908);
-			this->insertarray->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->insertarray->Margin = System::Windows::Forms::Padding(2);
 			this->insertarray->Name = L"insertarray";
 			this->insertarray->Size = System::Drawing::Size(100, 30);
 			this->insertarray->TabIndex = 12;
@@ -148,7 +153,7 @@ namespace DataStructuresLearningSoftware {
 			this->insertindex->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->insertindex->Location = System::Drawing::Point(526, 908);
-			this->insertindex->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->insertindex->Margin = System::Windows::Forms::Padding(2);
 			this->insertindex->Name = L"insertindex";
 			this->insertindex->Size = System::Drawing::Size(90, 28);
 			this->insertindex->TabIndex = 11;
@@ -170,7 +175,7 @@ namespace DataStructuresLearningSoftware {
 			this->insertvalue->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->insertvalue->Location = System::Drawing::Point(251, 908);
-			this->insertvalue->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->insertvalue->Margin = System::Windows::Forms::Padding(2);
 			this->insertvalue->Name = L"insertvalue";
 			this->insertvalue->Size = System::Drawing::Size(100, 28);
 			this->insertvalue->TabIndex = 9;
@@ -208,7 +213,7 @@ namespace DataStructuresLearningSoftware {
 			this->insert_animation->Controls->Add(this->l7);
 			this->insert_animation->Controls->Add(this->l8);
 			this->insert_animation->Location = System::Drawing::Point(155, 698);
-			this->insert_animation->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->insert_animation->Margin = System::Windows::Forms::Padding(2);
 			this->insert_animation->Name = L"insert_animation";
 			this->insert_animation->Size = System::Drawing::Size(794, 206);
 			this->insert_animation->TabIndex = 7;
@@ -499,11 +504,32 @@ namespace DataStructuresLearningSoftware {
 			this->label8->TabIndex = 19;
 			this->label8->Text = L"Before Insertion: 12 16 20 40 50 70 \r\nAfter Insertion: 12 16 20 40 50 70 26 ";
 			// 
+			// quizPanel
+			// 
+			this->quizPanel->BackColor = System::Drawing::Color::White;
+			this->quizPanel->Location = System::Drawing::Point(37, 2072);
+			this->quizPanel->Name = L"quizPanel";
+			this->quizPanel->Size = System::Drawing::Size(1030, 450);
+			this->quizPanel->TabIndex = 20;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label9->Location = System::Drawing::Point(40, 2048);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(382, 21);
+			this->label9->TabIndex = 21;
+			this->label9->Text = L"Answer the question correctly to pass the module.";
+			// 
 			// Array_Insertion
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Honeydew;
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->quizPanel);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
@@ -517,9 +543,10 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->insertvalue);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->insert_animation);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Array_Insertion";
-			this->Size = System::Drawing::Size(1105, 2050);
+			this->Size = System::Drawing::Size(1105, 2600);
+			this->Load += gcnew System::EventHandler(this, &Array_Insertion::Array_Insertion_Load);
 			this->insert_animation->ResumeLayout(false);
 			this->insert_animation->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
@@ -629,5 +656,16 @@ namespace DataStructuresLearningSoftware {
 					 this->label19->Location = System::Drawing::Point(x,this->label19->Location.Y);
 				 }
 			 }
-	};
+	private: System::Void Array_Insertion_Load(System::Object^  sender, System::EventArgs^  e) {
+				 // Quiz Panel
+				 moduleQuiz ^newPanel = gcnew moduleQuiz();
+				 newPanel->ds_id = 1;
+				 newPanel->module_id = 1;
+				 newPanel->username = username;
+				 newPanel->update_id = 9;
+				 newPanel->update_name = "ArraysProgress";
+				 quizPanel->Controls->Clear();
+				 quizPanel->Controls->Add(newPanel);
+			 }
+};
 }

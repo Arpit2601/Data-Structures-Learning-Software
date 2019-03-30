@@ -1,5 +1,7 @@
 #pragma once
 
+#include "moduleQuiz.h"
+
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -62,6 +64,9 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  label6;
 	private: System::Windows::Forms::Label^  label7;
 	private: System::Windows::Forms::Label^  label8;
+	private: System::Windows::Forms::Panel^  quizPanel;
+	private: System::Windows::Forms::Label^  label9;
+
 
 	private: System::ComponentModel::IContainer^  components;
 
@@ -105,6 +110,8 @@ namespace DataStructuresLearningSoftware {
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->quizPanel = (gcnew System::Windows::Forms::Panel());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->panel2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
@@ -117,7 +124,7 @@ namespace DataStructuresLearningSoftware {
 			this->delete_ll_but->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->delete_ll_but->Location = System::Drawing::Point(847, 772);
-			this->delete_ll_but->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->delete_ll_but->Margin = System::Windows::Forms::Padding(2);
 			this->delete_ll_but->Name = L"delete_ll_but";
 			this->delete_ll_but->Size = System::Drawing::Size(100, 30);
 			this->delete_ll_but->TabIndex = 7;
@@ -130,7 +137,7 @@ namespace DataStructuresLearningSoftware {
 			this->deletevalue->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->deletevalue->Location = System::Drawing::Point(254, 774);
-			this->deletevalue->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->deletevalue->Margin = System::Windows::Forms::Padding(2);
 			this->deletevalue->Name = L"deletevalue";
 			this->deletevalue->Size = System::Drawing::Size(100, 28);
 			this->deletevalue->TabIndex = 6;
@@ -161,7 +168,7 @@ namespace DataStructuresLearningSoftware {
 			this->panel2->Controls->Add(this->f2);
 			this->panel2->Controls->Add(this->f1);
 			this->panel2->Location = System::Drawing::Point(157, 562);
-			this->panel2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->panel2->Margin = System::Windows::Forms::Padding(2);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(790, 208);
 			this->panel2->TabIndex = 4;
@@ -395,11 +402,32 @@ namespace DataStructuresLearningSoftware {
 			this->label8->TabIndex = 15;
 			this->label8->Text = L"Created Linked List:\r\n 2  3  1  7\r\nLinked List after Deletion of 1:\r\n 2  3  7";
 			// 
+			// quizPanel
+			// 
+			this->quizPanel->BackColor = System::Drawing::Color::White;
+			this->quizPanel->Location = System::Drawing::Point(37, 2799);
+			this->quizPanel->Name = L"quizPanel";
+			this->quizPanel->Size = System::Drawing::Size(1030, 450);
+			this->quizPanel->TabIndex = 16;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label9->Location = System::Drawing::Point(38, 2775);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(382, 21);
+			this->label9->TabIndex = 17;
+			this->label9->Text = L"Answer the question correctly to pass the module.";
+			// 
 			// LinkedList_Deletion
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::AliceBlue;
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->quizPanel);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
@@ -412,9 +440,10 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->deletevalue);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->panel2);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"LinkedList_Deletion";
-			this->Size = System::Drawing::Size(1105, 2800);
+			this->Size = System::Drawing::Size(1105, 3300);
+			this->Load += gcnew System::EventHandler(this, &LinkedList_Deletion::LinkedList_Deletion_Load);
 			this->panel2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
@@ -641,5 +670,16 @@ here :
 					 this->del_tail->Location = System::Drawing::Point(this->del_tail->Location.X-1,this->del_tail->Location.Y);
 				 }
 			 }
-	};
+	private: System::Void LinkedList_Deletion_Load(System::Object^  sender, System::EventArgs^  e) {
+				 // Quiz Panel Load
+				 moduleQuiz ^newPanel = gcnew moduleQuiz();
+				 newPanel->ds_id = 2;
+				 newPanel->module_id = 2;
+				 newPanel->username = username;
+				 newPanel->update_id = 10;
+				 newPanel->update_name = "LinkedListProgress";
+				 quizPanel->Controls->Clear();
+				 quizPanel->Controls->Add(newPanel);
+			 }
+};
 }
