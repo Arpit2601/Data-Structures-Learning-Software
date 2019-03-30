@@ -168,6 +168,8 @@ private: System::Windows::Forms::Button^  btnTrees;
 private: System::Windows::Forms::Button^  btnQueues;
 private: System::Windows::Forms::Button^  DSSuggestionsbutton;
 private: System::Windows::Forms::Button^  SuggestionDSbutton;
+private: Microsoft::VisualBasic::PowerPacks::ShapeContainer^  shapeContainer1;
+private: Microsoft::VisualBasic::PowerPacks::OvalShape^  ovalShape1;
 
 
 
@@ -529,6 +531,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->DSSuggestionlabel = (gcnew System::Windows::Forms::Label());
 			this->ModulecomboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->DScomboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->shapeContainer1 = (gcnew Microsoft::VisualBasic::PowerPacks::ShapeContainer());
+			this->ovalShape1 = (gcnew Microsoft::VisualBasic::PowerPacks::OvalShape());
 			this->HeaderPanel->SuspendLayout();
 			this->Headerstatuspanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox4))->BeginInit();
@@ -972,6 +976,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Profilepanel->Controls->Add(this->ProfileSavebutton);
 			this->Profilepanel->Controls->Add(this->ProfileEditbutton);
 			this->Profilepanel->Controls->Add(this->ProfilePictureChangebutton);
+			this->Profilepanel->Controls->Add(this->shapeContainer1);
 			this->Profilepanel->Location = System::Drawing::Point(0, 65);
 			this->Profilepanel->Margin = System::Windows::Forms::Padding(0);
 			this->Profilepanel->Name = L"Profilepanel";
@@ -2246,6 +2251,24 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->DScomboBox->Size = System::Drawing::Size(1176, 33);
 			this->DScomboBox->TabIndex = 0;
 			this->DScomboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &Homepage::DScomboBox_SelectedIndexChanged);
+			// 
+			// shapeContainer1
+			// 
+			this->shapeContainer1->Location = System::Drawing::Point(0, 0);
+			this->shapeContainer1->Margin = System::Windows::Forms::Padding(0);
+			this->shapeContainer1->Name = L"shapeContainer1";
+			this->shapeContainer1->Shapes->AddRange(gcnew cli::array< Microsoft::VisualBasic::PowerPacks::Shape^  >(1) {this->ovalShape1});
+			this->shapeContainer1->Size = System::Drawing::Size(1280, 705);
+			this->shapeContainer1->TabIndex = 50;
+			this->shapeContainer1->TabStop = false;
+			// 
+			// ovalShape1
+			// 
+			this->ovalShape1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ovalShape1.BackgroundImage")));
+			this->ovalShape1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ovalShape1->Location = System::Drawing::Point(816, 73);
+			this->ovalShape1->Name = L"ovalShape1";
+			this->ovalShape1->Size = System::Drawing::Size(144, 117);
 			// 
 			// Homepage
 			// 
