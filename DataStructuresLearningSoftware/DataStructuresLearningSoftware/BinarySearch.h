@@ -662,6 +662,9 @@ namespace DataStructuresLearningSoftware {
 				 bool check = inputValidate(txtInput->Text);
 
 				 if(check){
+					 int x = Convert::ToInt32(txtInput->Text);
+					 txtInput->Text = Convert::ToString(x);
+
 					 // Enter input into animation
 					 numInputs++;
 					 Label ^newLabel = gcnew Label();
@@ -694,6 +697,9 @@ namespace DataStructuresLearningSoftware {
 				 bool check = inputValidate(txtSearch->Text);
 
 				 if(check){
+					 int x = Convert::ToInt32(txtSearch->Text);
+					 txtSearch->Text = Convert::ToString(x);
+
 					 Label ^newLabel = gcnew Label();
 					 newLabel->Text = "Input to search: " + txtSearch->Text;
 					 newLabel->Font = gcnew Drawing::Font("Comic Sans MS", 11, FontStyle::Regular);
@@ -727,6 +733,9 @@ namespace DataStructuresLearningSoftware {
 				 labelList.Clear();
 				 indexList.Clear();
 				 outputLabel->Text = "";
+
+				 btnEnterInput->Enabled = true;
+				 btnSearch->Enabled = true;
 			 }
 
 	private: System::Void btnPause_Click_1(System::Object^  sender, System::EventArgs^  e) {
@@ -759,6 +768,8 @@ namespace DataStructuresLearningSoftware {
 				 // si = -5;
 				 // ei = -5;
 				 // outputLabel->Text = "";
+				 btnEnterInput->Enabled = false;
+				 btnSearch->Enabled = false;
 
 				 timer1->Enabled = true;
 			 }

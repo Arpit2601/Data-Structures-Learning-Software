@@ -330,8 +330,6 @@ namespace DataStructuresLearningSoftware {
 			}
 
 	private: System::Void LinkedList1_Load(System::Object^  sender, System::EventArgs^  e) {
-				 username = "lavish";
-
 				 moduleId = 0;
 
 				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
