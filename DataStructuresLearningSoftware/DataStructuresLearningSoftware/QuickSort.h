@@ -82,9 +82,9 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  label20;
 	private: System::Windows::Forms::Label^  label21;
 	private: System::Windows::Forms::Button^  button1;
-	private: System::Windows::Forms::Timer^  timer1;
-	private: System::Windows::Forms::Timer^  timer2;
-	private: System::Windows::Forms::Timer^  timer3;
+
+
+
 
 
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
@@ -116,6 +116,9 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  label40;
 	private: System::Windows::Forms::Label^  label41;
 	private: System::Windows::Forms::Label^  label42;
+	private: System::Windows::Forms::Timer^  timer1;
+	private: System::Windows::Forms::Timer^  timer2;
+	private: System::Windows::Forms::Timer^  timer3;
 
 	private: System::ComponentModel::IContainer^  components;
 
@@ -159,9 +162,6 @@ namespace DataStructuresLearningSoftware {
 			this->label23 = (gcnew System::Windows::Forms::Label());
 			this->quizPanel = (gcnew System::Windows::Forms::Panel());
 			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
-			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
-			this->timer3 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
@@ -191,6 +191,9 @@ namespace DataStructuresLearningSoftware {
 			this->label40 = (gcnew System::Windows::Forms::Label());
 			this->label41 = (gcnew System::Windows::Forms::Label());
 			this->label42 = (gcnew System::Windows::Forms::Label());
+			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->timer3 = (gcnew System::Windows::Forms::Timer(this->components));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -224,7 +227,6 @@ namespace DataStructuresLearningSoftware {
 			this->label6->Size = System::Drawing::Size(184, 26);
 			this->label6->TabIndex = 28;
 			this->label6->Text = L"LEARN WITH FUN";
-			this->label6->Click += gcnew System::EventHandler(this, &quicksort::label6_Click);
 			// 
 			// button5
 			// 
@@ -307,7 +309,6 @@ namespace DataStructuresLearningSoftware {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(1038, 178);
 			this->panel1->TabIndex = 19;
-			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &quicksort::panel1_Paint);
 			// 
 			// label24
 			// 
@@ -395,7 +396,6 @@ namespace DataStructuresLearningSoftware {
 			this->label18->Size = System::Drawing::Size(106, 29);
 			this->label18->TabIndex = 24;
 			this->label18->Text = L"Pivot:";
-			this->label18->Click += gcnew System::EventHandler(this, &quicksort::label18_Click);
 			// 
 			// label19
 			// 
@@ -470,18 +470,6 @@ namespace DataStructuresLearningSoftware {
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &quicksort::button1_Click);
 			// 
-			// timer1
-			// 
-			this->timer1->Interval = 1000;
-			// 
-			// timer2
-			// 
-			this->timer2->Interval = 1000;
-			// 
-			// timer3
-			// 
-			this->timer3->Interval = 1000;
-			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.Image")));
@@ -491,7 +479,6 @@ namespace DataStructuresLearningSoftware {
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 17;
 			this->pictureBox1->TabStop = false;
-			this->pictureBox1->Click += gcnew System::EventHandler(this, &quicksort::pictureBox1_Click);
 			// 
 			// label3
 			// 
@@ -633,7 +620,6 @@ namespace DataStructuresLearningSoftware {
 			this->label27->Size = System::Drawing::Size(1065, 1472);
 			this->label27->TabIndex = 52;
 			this->label27->Text = resources->GetString(L"label27.Text");
-			this->label27->Click += gcnew System::EventHandler(this, &quicksort::label27_Click);
 			// 
 			// label28
 			// 
@@ -798,9 +784,23 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Byte>(0)));
 			this->label42->Location = System::Drawing::Point(16, 5028);
 			this->label42->Name = L"label42";
-			this->label42->Size = System::Drawing::Size(325, 20);
+			this->label42->Size = System::Drawing::Size(39, 20);
 			this->label42->TabIndex = 67;
-			this->label42->Text = L"Solution of above recurrence is also O(nLogn)";
+			this->label42->Text = L"time";
+			// 
+			// timer1
+			// 
+			this->timer1->Interval = 1000;
+			this->timer1->Tick += gcnew System::EventHandler(this, &quicksort::timer1_Tick);
+			// 
+			// timer2
+			// 
+			this->timer2->Interval = 1000;
+			// 
+			// timer3
+			// 
+			this->timer3->Interval = 1000;
+			this->timer3->Tick += gcnew System::EventHandler(this, &quicksort::timer3_Tick);
 			// 
 			// quicksort
 			// 
@@ -982,6 +982,8 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void quicksort_Load(System::Object^  sender, System::EventArgs^  e) {
 				 quicksort_stack=new int[100];
 				 sort_selected=1;
+				 buttonresume->Enabled=false;
+				 button5->Enabled=false;
 
 				 // Quiz Panel Load
 				 moduleQuiz ^newPanel = gcnew moduleQuiz();
@@ -1023,10 +1025,10 @@ namespace DataStructuresLearningSoftware {
 				 panel1->Controls->Clear();
 				 num_elements = 0;
 				 input_array.Clear();
-				 label4->Text="";
-				 label6->Text="";
-				 label8->Text="";
+				 label20->Text="";
+				 label22->Text="";
 				 label10->Text="";
+				 label24->Text="";
 				 label11->Text="";
 			 }
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -1035,6 +1037,8 @@ namespace DataStructuresLearningSoftware {
 				 quicksort_top=-1;
 				 quicksort_stack[++quicksort_top]=0;
 				 quicksort_stack[++quicksort_top]=input_array.Count-1;
+				 buttonresume->Enabled=true;
+				 button5->Enabled=true;
 				 timer1->Enabled=true;
 			 }
 
@@ -1048,99 +1052,89 @@ namespace DataStructuresLearningSoftware {
 
 			 //------------------------------------------TIMER CODE-----------------------------------------------------------//
 
-	public: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e) {
-				//timer
-				int n=input_array.Count;
-				if(sort_selected==0){
-					//mergesort
-				}
-				else{
-					//quicksort
-					if(quicksort_top<0){
-						for(int i=0;i<input_array.Count-1;i++){input_array_completed[i]=-2;}
-						panel1->Controls->Clear();
-						show_array(0,input_array.Count-1);
-						timer1->Enabled=false;
-						timer3->Enabled=false;
-						input_array.Clear();
-						return;
-					}
-					panel1->Controls->Clear();
-					show_array(0,input_array.Count-1);			
-					partition_h = quicksort_stack[ quicksort_top-- ]; 
-					partition_l = quicksort_stack[ quicksort_top-- ]; 
-					partition_var=partition_l;
-					partition_no=partition_l-1;
-					label8->Text=System::Convert::ToString(input_array[partition_h]);
-					input_array_completed[partition_h]=-1;
-					timer1->Enabled=false;
-					timer3->Enabled=true;
-					// p is obtained from the timer3 which does partition 
-
-
-				}
-			}
-
-
-	private: System::Void timer3_Tick(System::Object^  sender, System::EventArgs^  e) {
-				 //quicksort Partition
-
-				 for(int i=0;i<input_array.Count-1;i++){if(input_array_completed[i]==-3)input_array_completed[i]=0;}
-
-				 int l=partition_l;
-				 int h=partition_h;
-				 int x = input_array[h]; 
-				 label4->Text=System::Convert::ToString(input_array[partition_var]);
-				 label6->Text=System::Convert::ToString(x);
-				 input_array_completed[partition_var]=-3;
-				 if(input_array[partition_var]<=x){
-					 partition_no++;
-					 swap(partition_no,partition_var);
-
-				 }
-				 panel1->Controls->Clear();
-				 show_array(0,input_array.Count-1);
-				 partition_var+=1;
-
-				 if(partition_var > h-1){
-					 timer3->Enabled=false;
-
-					 swap(partition_no+1,partition_h);
-					 input_array_completed[partition_h]=0;
-					 input_array_completed[partition_no+1]=-2;
+	
+private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e) {
+			 //timer
+			 int n=input_array.Count;
+			 if(sort_selected==0){
+				 //mergesort
+			 }
+			 else{
+				 //quicksort
+				 if(quicksort_top<0){
+					 for(int i=0;i<input_array.Count;i++){input_array_completed[i]=-2;}
 					 panel1->Controls->Clear();
 					 show_array(0,input_array.Count-1);
+					 timer1->Enabled=false;
+					 timer3->Enabled=false;
+					 input_array.Clear();
+					 buttonresume->Enabled=false;
+					 button5->Enabled=false;
+					 return;
+				 }
+				 panel1->Controls->Clear();
+				 show_array(0,input_array.Count-1);			
+				 partition_h = quicksort_stack[ quicksort_top-- ]; 
+				 partition_l = quicksort_stack[ quicksort_top-- ]; 
+				 partition_var=partition_l;
+				 partition_no=partition_l-1;
+				 label11->Text=System::Convert::ToString(input_array[partition_h]);
+				 input_array_completed[partition_h]=-1;
+				 timer1->Enabled=false;
+				 timer3->Enabled=true;
+				 // p is obtained from the timer3 which does partition 
 
-					 int p=partition_no+1;
-					 if ( p-1 > partition_l ) 
-					 { 
-						 quicksort_stack[ ++quicksort_top ] = partition_l; 
-						 quicksort_stack[ ++quicksort_top ] = p - 1; 
 
-					 } 
-					 if ( p+1 < partition_h ) 
-					 {	 
-						 quicksort_stack[ ++quicksort_top ] = p + 1; 
-						 quicksort_stack[ ++quicksort_top ] = partition_h; 
+			 }
 
-					 }
+		 }
+private: System::Void timer3_Tick(System::Object^  sender, System::EventArgs^  e) {
+			 //quicksort Partition
 
-					 timer1->Enabled=true;
-					 for(int i=0;i<input_array.Count-1;i++){if(input_array_completed[i]==-3)input_array_completed[i]=0;}
+			 for(int i=0;i<input_array.Count-1;i++){if(input_array_completed[i]==-3)input_array_completed[i]=0;}
+
+			 int l=partition_l;
+			 int h=partition_h;
+			 int x = input_array[h]; 
+			 label20->Text=System::Convert::ToString(input_array[partition_var]);
+			 label22->Text=System::Convert::ToString(x);
+			 input_array_completed[partition_var]=-3;
+			 if(input_array[partition_var]<=x){
+				 partition_no++;
+				 swap(partition_no,partition_var);
+
+			 }
+			 panel1->Controls->Clear();
+			 show_array(0,input_array.Count-1);
+			 partition_var+=1;
+
+			 if(partition_var > h-1){
+				 timer3->Enabled=false;
+
+				 swap(partition_no+1,partition_h);
+				 input_array_completed[partition_h]=0;
+				 input_array_completed[partition_no+1]=-2;
+				 panel1->Controls->Clear();
+				 show_array(0,input_array.Count-1);
+
+				 int p=partition_no+1;
+				 if ( p-1 > partition_l ) 
+				 { 
+					 quicksort_stack[ ++quicksort_top ] = partition_l; 
+					 quicksort_stack[ ++quicksort_top ] = p - 1; 
+
+				 } 
+				 if ( p+1 < partition_h ) 
+				 {	 
+					 quicksort_stack[ ++quicksort_top ] = p + 1; 
+					 quicksort_stack[ ++quicksort_top ] = partition_h; 
 
 				 }
 
-			 }
+				 timer1->Enabled=true;
+				 for(int i=0;i<input_array.Count-1;i++){if(input_array_completed[i]==-3)input_array_completed[i]=0;}
 
-	private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 			 }
-private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void label6_Click(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void label18_Click(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void label27_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
 };
 }
