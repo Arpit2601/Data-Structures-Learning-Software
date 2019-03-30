@@ -1,4 +1,4 @@
-﻿Build started 30-Mar-19 6:11:28 PM.
+﻿Build started 31-Mar-19 12:18:44 AM.
      1>Project "D:\projects\sorting new 2\sorting_user_control\sorting_user_control\sorting_user_control.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\sorting_user_control.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -6,9 +6,8 @@
        Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
        ClCompile:
          All outputs are up-to-date.
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\sorting_user_control.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.VisualBasic.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\VBPowerPacks\v10.0\Microsoft.VisualBasic.PowerPacks.Vs.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt GraphBFS.cpp sorting_user_control.cpp /clr:nostdlib 
-         GraphBFS.cpp
-     1>d:\projects\sorting new 2\sorting_user_control\sorting_user_control\GraphBFS.h(1014): warning C4018: '<' : signed/unsigned mismatch
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\sorting_user_control.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.VisualBasic.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\VBPowerPacks\v10.0\Microsoft.VisualBasic.PowerPacks.Vs.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt GraphMatrix.cpp sorting_user_control.cpp /clr:nostdlib 
+         GraphMatrix.cpp
          sorting_user_control.cpp
      1>d:\projects\sorting new 2\sorting_user_control\sorting_user_control\Graph.h(1011): warning C4018: '<' : signed/unsigned mismatch
      1>d:\projects\sorting new 2\sorting_user_control\sorting_user_control\GraphBFS.h(1014): warning C4018: '<' : signed/unsigned mismatch
@@ -19,10 +18,12 @@
        ResourceCompile:
          All outputs are up-to-date.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\projects\sorting new 2\sorting_user_control\Debug\sorting_user_control.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\sorting_user_control.bubbleSort.resources /ASSEMBLYRESOURCE:Debug\sorting_user_control.Form1.resources /ASSEMBLYRESOURCE:Debug\sorting_user_control.Graph.resources /ASSEMBLYRESOURCE:Debug\sorting_user_control.GraphBFS.resources /ASSEMBLYRESOURCE:Debug\sorting_user_control.InsertionSort.resources /ASSEMBLYRESOURCE:Debug\sorting_user_control.SelectionSort.resources /MANIFEST /ManifestFile:"Debug\sorting_user_control.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\projects\sorting new 2\sorting_user_control\Debug\sorting_user_control.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\projects\sorting new 2\sorting_user_control\Debug\sorting_user_control.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\sorting_user_control.bubbleSort.resources /ASSEMBLYRESOURCE:Debug\sorting_user_control.Form1.resources /ASSEMBLYRESOURCE:Debug\sorting_user_control.Graph.resources /ASSEMBLYRESOURCE:Debug\sorting_user_control.GraphBFS.resources /ASSEMBLYRESOURCE:Debug\sorting_user_control.GraphList.resources /ASSEMBLYRESOURCE:Debug\sorting_user_control.GraphMatrix.resources /ASSEMBLYRESOURCE:Debug\sorting_user_control.InsertionSort.resources /ASSEMBLYRESOURCE:Debug\sorting_user_control.SelectionSort.resources /MANIFEST /ManifestFile:"Debug\sorting_user_control.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\projects\sorting new 2\sorting_user_control\Debug\sorting_user_control.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
          Debug\AssemblyInfo.obj
          Debug\bubbleSort.obj
          Debug\GraphBFS.obj
+         Debug\GraphList.obj
+         Debug\GraphMatrix.obj
          Debug\InsertionSort.obj
          Debug\SelectionSort.obj
          Debug\sorting_user_control.obj
@@ -38,4 +39,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.22
+Time Elapsed 00:00:02.18

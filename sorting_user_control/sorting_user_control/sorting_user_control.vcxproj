@@ -95,6 +95,8 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="GraphBFS.cpp" />
+    <ClCompile Include="GraphList.cpp" />
+    <ClCompile Include="GraphMatrix.cpp" />
     <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="SelectionSort.cpp" />
     <ClCompile Include="sorting_user_control.cpp" />
@@ -114,6 +116,12 @@
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="GraphBFS.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="GraphList.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="GraphMatrix.h">
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="InsertionSort.h">
@@ -141,6 +149,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GraphBFS.resx">
       <DependentUpon>GraphBFS.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphList.resx">
+      <DependentUpon>GraphList.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphMatrix.resx">
+      <DependentUpon>GraphMatrix.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsertionSort.resx">
       <DependentUpon>InsertionSort.h</DependentUpon>

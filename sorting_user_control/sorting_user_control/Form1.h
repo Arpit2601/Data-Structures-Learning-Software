@@ -4,6 +4,8 @@
 #include "SelectionSort.h"
 #include "Graph.h"
 #include "GraphBFS.h"
+#include "GraphMatrix.h"
+#include "GraphList.h"
 
 namespace sorting_user_control {
 
@@ -49,6 +51,8 @@ namespace sorting_user_control {
 	private: System::Windows::Forms::Panel^  MainPanel;
 	private: System::Windows::Forms::Button^  btnGraph;
 	private: System::Windows::Forms::Button^  button4;
+	private: System::Windows::Forms::Button^  button6;
+	private: System::Windows::Forms::Button^  button5;
 
 
 	private:
@@ -65,6 +69,9 @@ namespace sorting_user_control {
 		void InitializeComponent(void)
 		{
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->btnGraph = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -72,12 +79,13 @@ namespace sorting_user_control {
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->MainPanel = (gcnew System::Windows::Forms::Panel());
-			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel1
 			// 
+			this->panel1->Controls->Add(this->button6);
+			this->panel1->Controls->Add(this->button5);
 			this->panel1->Controls->Add(this->button4);
 			this->panel1->Controls->Add(this->btnGraph);
 			this->panel1->Controls->Add(this->button3);
@@ -89,6 +97,36 @@ namespace sorting_user_control {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(175, 681);
 			this->panel1->TabIndex = 0;
+			// 
+			// button6
+			// 
+			this->button6->Location = System::Drawing::Point(0, 283);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(175, 40);
+			this->button6->TabIndex = 8;
+			this->button6->Text = L"Graph_Adjacency List";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &Form1::button6_Click);
+			// 
+			// button5
+			// 
+			this->button5->Location = System::Drawing::Point(0, 247);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(175, 40);
+			this->button5->TabIndex = 7;
+			this->button5->Text = L"Graph_Adjacency Matrix";
+			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &Form1::button5_Click);
+			// 
+			// button4
+			// 
+			this->button4->Location = System::Drawing::Point(0, 214);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(175, 40);
+			this->button4->TabIndex = 6;
+			this->button4->Text = L"GraphBFS";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &Form1::button4_Click_1);
 			// 
 			// btnGraph
 			// 
@@ -152,16 +190,6 @@ namespace sorting_user_control {
 			this->MainPanel->Size = System::Drawing::Size(1088, 631);
 			this->MainPanel->TabIndex = 2;
 			// 
-			// button4
-			// 
-			this->button4->Location = System::Drawing::Point(0, 214);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(175, 40);
-			this->button4->TabIndex = 6;
-			this->button4->Text = L"GraphBFS";
-			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &Form1::button4_Click_1);
-			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -200,6 +228,14 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button4_Click_1(System::Object^  sender, System::EventArgs^  e) {
 				MainPanel->Controls->Clear();
 				MainPanel->Controls->Add(gcnew GraphBFS);
+		 }
+private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+				MainPanel->Controls->Clear();
+				MainPanel->Controls->Add(gcnew GraphMatrix);
+		 }
+private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
+				MainPanel->Controls->Clear();
+				MainPanel->Controls->Add(gcnew GraphList);
 		 }
 };
 }
