@@ -6,7 +6,10 @@
 #include "Sorting.h"
 #include "Stack_Main.h"
 #include "Queue_Home.h"
-
+#include "BST.h"
+#include "Graph.h"
+#include "Heap.h"
+#include "Graphs_Home.h"
 #include<string.h>
 #include <string>
 #include <iostream> 
@@ -1624,12 +1627,13 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->btnGraphs->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->btnGraphs->Location = System::Drawing::Point(728, 224);
-			this->btnGraphs->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnGraphs->Margin = System::Windows::Forms::Padding(4);
 			this->btnGraphs->Name = L"btnGraphs";
 			this->btnGraphs->Size = System::Drawing::Size(243, 224);
 			this->btnGraphs->TabIndex = 9;
 			this->btnGraphs->Text = L"Graphs";
 			this->btnGraphs->UseVisualStyleBackColor = false;
+			this->btnGraphs->Click += gcnew System::EventHandler(this, &Homepage::btnGraphs_Click);
 			// 
 			// btnHeaps
 			// 
@@ -1640,12 +1644,13 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->btnHeaps->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->btnHeaps->Location = System::Drawing::Point(485, 224);
-			this->btnHeaps->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnHeaps->Margin = System::Windows::Forms::Padding(4);
 			this->btnHeaps->Name = L"btnHeaps";
 			this->btnHeaps->Size = System::Drawing::Size(243, 224);
 			this->btnHeaps->TabIndex = 8;
 			this->btnHeaps->Text = L"Heaps";
 			this->btnHeaps->UseVisualStyleBackColor = false;
+			this->btnHeaps->Click += gcnew System::EventHandler(this, &Homepage::btnHeaps_Click);
 			// 
 			// btnTrees
 			// 
@@ -1656,12 +1661,13 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->btnTrees->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->btnTrees->Location = System::Drawing::Point(243, 224);
-			this->btnTrees->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnTrees->Margin = System::Windows::Forms::Padding(4);
 			this->btnTrees->Name = L"btnTrees";
 			this->btnTrees->Size = System::Drawing::Size(243, 224);
 			this->btnTrees->TabIndex = 7;
 			this->btnTrees->Text = L"Trees";
 			this->btnTrees->UseVisualStyleBackColor = false;
+			this->btnTrees->Click += gcnew System::EventHandler(this, &Homepage::btnTrees_Click);
 			// 
 			// btnQueues
 			// 
@@ -1672,7 +1678,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->btnQueues->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->btnQueues->Location = System::Drawing::Point(0, 224);
-			this->btnQueues->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnQueues->Margin = System::Windows::Forms::Padding(4);
 			this->btnQueues->Name = L"btnQueues";
 			this->btnQueues->Size = System::Drawing::Size(243, 224);
 			this->btnQueues->TabIndex = 6;
@@ -1689,7 +1695,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->btnStacks->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->btnStacks->Location = System::Drawing::Point(971, 0);
-			this->btnStacks->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnStacks->Margin = System::Windows::Forms::Padding(4);
 			this->btnStacks->Name = L"btnStacks";
 			this->btnStacks->Size = System::Drawing::Size(243, 224);
 			this->btnStacks->TabIndex = 4;
@@ -1706,7 +1712,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->btnSorting->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->btnSorting->Location = System::Drawing::Point(728, 0);
-			this->btnSorting->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnSorting->Margin = System::Windows::Forms::Padding(4);
 			this->btnSorting->Name = L"btnSorting";
 			this->btnSorting->Size = System::Drawing::Size(243, 224);
 			this->btnSorting->TabIndex = 3;
@@ -1723,7 +1729,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->btnSearching->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->btnSearching->Location = System::Drawing::Point(485, 0);
-			this->btnSearching->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnSearching->Margin = System::Windows::Forms::Padding(4);
 			this->btnSearching->Name = L"btnSearching";
 			this->btnSearching->Size = System::Drawing::Size(243, 224);
 			this->btnSearching->TabIndex = 2;
@@ -1740,7 +1746,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->btnLinkedList->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->btnLinkedList->Location = System::Drawing::Point(243, 0);
-			this->btnLinkedList->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnLinkedList->Margin = System::Windows::Forms::Padding(4);
 			this->btnLinkedList->Name = L"btnLinkedList";
 			this->btnLinkedList->Size = System::Drawing::Size(243, 224);
 			this->btnLinkedList->TabIndex = 1;
@@ -1757,7 +1763,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->btnArrays->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->btnArrays->Location = System::Drawing::Point(0, 0);
-			this->btnArrays->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnArrays->Margin = System::Windows::Forms::Padding(4);
 			this->btnArrays->Name = L"btnArrays";
 			this->btnArrays->Size = System::Drawing::Size(243, 224);
 			this->btnArrays->TabIndex = 0;
@@ -3642,6 +3648,24 @@ private: System::Void SuggestionDSbutton_Click(System::Object^  sender, System::
 		 }
 private: System::Void HeaderForumbutton_Click(System::Object^  sender, System::EventArgs^  e) {
 
+		 }
+private: System::Void btnTrees_Click(System::Object^  sender, System::EventArgs^  e) {
+			 BST_mainpage ^newForm = gcnew BST_mainpage();
+			 newForm->username = username;
+			 this->Hide();
+			 newForm->ShowDialog(this);
+		 }
+private: System::Void btnHeaps_Click(System::Object^  sender, System::EventArgs^  e) {
+			 Heap ^newForm = gcnew Heap();
+			 newForm->username = username;
+			 this->Hide();
+			 newForm->ShowDialog(this);
+		 }
+private: System::Void btnGraphs_Click(System::Object^  sender, System::EventArgs^  e) {
+			 Graphs_Home ^newForm = gcnew Graphs_Home();
+			 newForm->username = username;
+			 this->Hide();
+			 newForm->ShowDialog(this);
 		 }
 };
 }

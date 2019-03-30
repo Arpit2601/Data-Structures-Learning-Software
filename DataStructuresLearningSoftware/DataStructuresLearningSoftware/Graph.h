@@ -796,6 +796,8 @@ namespace DataStructuresLearningSoftware {
 
 		}
 #pragma endregion
+		public:
+			String ^ username;
 
 		//assign a colour to a label
 		//0->white,1->red,2->yellow,3->skyblue

@@ -109,7 +109,7 @@ namespace DataStructuresLearningSoftware {
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Margin = System::Windows::Forms::Padding(4);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(233, 886);
+			this->panel1->Size = System::Drawing::Size(175, 720);
 			this->panel1->TabIndex = 0;
 			// 
 			// btnQuiz
@@ -121,7 +121,7 @@ namespace DataStructuresLearningSoftware {
 			this->btnQuiz->Location = System::Drawing::Point(0, 258);
 			this->btnQuiz->Margin = System::Windows::Forms::Padding(4);
 			this->btnQuiz->Name = L"btnQuiz";
-			this->btnQuiz->Size = System::Drawing::Size(233, 49);
+			this->btnQuiz->Size = System::Drawing::Size(175, 50);
 			this->btnQuiz->TabIndex = 4;
 			this->btnQuiz->Text = L"Quiz Time";
 			this->btnQuiz->UseVisualStyleBackColor = true;
@@ -137,7 +137,7 @@ namespace DataStructuresLearningSoftware {
 			this->btnSearch->Location = System::Drawing::Point(0, 209);
 			this->btnSearch->Margin = System::Windows::Forms::Padding(4);
 			this->btnSearch->Name = L"btnSearch";
-			this->btnSearch->Size = System::Drawing::Size(233, 49);
+			this->btnSearch->Size = System::Drawing::Size(175, 50);
 			this->btnSearch->TabIndex = 3;
 			this->btnSearch->Text = L"Search";
 			this->btnSearch->UseVisualStyleBackColor = true;
@@ -153,7 +153,7 @@ namespace DataStructuresLearningSoftware {
 			this->btnTraversal->Location = System::Drawing::Point(0, 160);
 			this->btnTraversal->Margin = System::Windows::Forms::Padding(4);
 			this->btnTraversal->Name = L"btnTraversal";
-			this->btnTraversal->Size = System::Drawing::Size(233, 49);
+			this->btnTraversal->Size = System::Drawing::Size(175, 50);
 			this->btnTraversal->TabIndex = 2;
 			this->btnTraversal->Text = L"Traversal";
 			this->btnTraversal->UseVisualStyleBackColor = true;
@@ -169,7 +169,7 @@ namespace DataStructuresLearningSoftware {
 			this->btnInsertion->Location = System::Drawing::Point(0, 111);
 			this->btnInsertion->Margin = System::Windows::Forms::Padding(4);
 			this->btnInsertion->Name = L"btnInsertion";
-			this->btnInsertion->Size = System::Drawing::Size(233, 49);
+			this->btnInsertion->Size = System::Drawing::Size(175, 50);
 			this->btnInsertion->TabIndex = 1;
 			this->btnInsertion->Text = L"Insertion";
 			this->btnInsertion->UseVisualStyleBackColor = true;
@@ -185,7 +185,7 @@ namespace DataStructuresLearningSoftware {
 			this->btnIntroduction->Location = System::Drawing::Point(0, 62);
 			this->btnIntroduction->Margin = System::Windows::Forms::Padding(4);
 			this->btnIntroduction->Name = L"btnIntroduction";
-			this->btnIntroduction->Size = System::Drawing::Size(233, 49);
+			this->btnIntroduction->Size = System::Drawing::Size(175, 50);
 			this->btnIntroduction->TabIndex = 0;
 			this->btnIntroduction->Text = L"Introduction";
 			this->btnIntroduction->UseVisualStyleBackColor = true;
@@ -199,10 +199,10 @@ namespace DataStructuresLearningSoftware {
 			this->panel2->Controls->Add(this->btnHome);
 			this->panel2->Controls->Add(this->btnNext);
 			this->panel2->Controls->Add(this->btnBack);
-			this->panel2->Location = System::Drawing::Point(233, 0);
+			this->panel2->Location = System::Drawing::Point(175, 0);
 			this->panel2->Margin = System::Windows::Forms::Padding(4);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(1473, 62);
+			this->panel2->Size = System::Drawing::Size(1104, 50);
 			this->panel2->TabIndex = 1;
 			// 
 			// button8
@@ -213,10 +213,10 @@ namespace DataStructuresLearningSoftware {
 			this->button8->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button8->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 12));
 			this->button8->ForeColor = System::Drawing::Color::Black;
-			this->button8->Location = System::Drawing::Point(72, 2);
+			this->button8->Location = System::Drawing::Point(58, 0);
 			this->button8->Margin = System::Windows::Forms::Padding(2);
 			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(154, 58);
+			this->button8->Size = System::Drawing::Size(150, 50);
 			this->button8->TabIndex = 5;
 			this->button8->Text = L"Discussion";
 			this->button8->UseVisualStyleBackColor = false;
@@ -228,10 +228,10 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Byte>(0)));
 			this->lblWelcome->ForeColor = System::Drawing::Color::Firebrick;
 			this->lblWelcome->ImageAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->lblWelcome->Location = System::Drawing::Point(67, 18);
+			this->lblWelcome->Location = System::Drawing::Point(242, 15);
 			this->lblWelcome->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblWelcome->Name = L"lblWelcome";
-			this->lblWelcome->Size = System::Drawing::Size(1207, 25);
+			this->lblWelcome->Size = System::Drawing::Size(698, 20);
 			this->lblWelcome->TabIndex = 4;
 			this->lblWelcome->Text = L"label1";
 			this->lblWelcome->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -242,10 +242,10 @@ namespace DataStructuresLearningSoftware {
 			this->btnHome->FlatAppearance->BorderSize = 0;
 			this->btnHome->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnHome->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnHome.Image")));
-			this->btnHome->Location = System::Drawing::Point(1407, 0);
+			this->btnHome->Location = System::Drawing::Point(1046, 0);
 			this->btnHome->Margin = System::Windows::Forms::Padding(4);
 			this->btnHome->Name = L"btnHome";
-			this->btnHome->Size = System::Drawing::Size(67, 62);
+			this->btnHome->Size = System::Drawing::Size(50, 50);
 			this->btnHome->TabIndex = 2;
 			this->btnHome->UseVisualStyleBackColor = true;
 			this->btnHome->Click += gcnew System::EventHandler(this, &Arrays::btnHome_Click);
@@ -256,10 +256,10 @@ namespace DataStructuresLearningSoftware {
 			this->btnNext->FlatAppearance->BorderSize = 0;
 			this->btnNext->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btnNext->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnNext.Image")));
-			this->btnNext->Location = System::Drawing::Point(1340, 0);
+			this->btnNext->Location = System::Drawing::Point(996, 0);
 			this->btnNext->Margin = System::Windows::Forms::Padding(4);
 			this->btnNext->Name = L"btnNext";
-			this->btnNext->Size = System::Drawing::Size(67, 62);
+			this->btnNext->Size = System::Drawing::Size(50, 50);
 			this->btnNext->TabIndex = 1;
 			this->btnNext->UseVisualStyleBackColor = true;
 			this->btnNext->Click += gcnew System::EventHandler(this, &Arrays::btnNext_Click);
@@ -273,7 +273,7 @@ namespace DataStructuresLearningSoftware {
 			this->btnBack->Location = System::Drawing::Point(0, 0);
 			this->btnBack->Margin = System::Windows::Forms::Padding(4);
 			this->btnBack->Name = L"btnBack";
-			this->btnBack->Size = System::Drawing::Size(67, 62);
+			this->btnBack->Size = System::Drawing::Size(50, 50);
 			this->btnBack->TabIndex = 0;
 			this->btnBack->UseVisualStyleBackColor = true;
 			this->btnBack->Click += gcnew System::EventHandler(this, &Arrays::btnBack_Click);
@@ -281,16 +281,16 @@ namespace DataStructuresLearningSoftware {
 			// MainPanel
 			// 
 			this->MainPanel->AutoScroll = true;
-			this->MainPanel->Location = System::Drawing::Point(233, 62);
+			this->MainPanel->Location = System::Drawing::Point(175, 50);
 			this->MainPanel->Margin = System::Windows::Forms::Padding(4);
 			this->MainPanel->Name = L"MainPanel";
-			this->MainPanel->Size = System::Drawing::Size(1473, 825);
+			this->MainPanel->Size = System::Drawing::Size(1105, 670);
 			this->MainPanel->TabIndex = 2;
 			// 
 			// Arrays
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
-			this->ClientSize = System::Drawing::Size(1707, 886);
+			this->ClientSize = System::Drawing::Size(1280, 720);
 			this->Controls->Add(this->MainPanel);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);

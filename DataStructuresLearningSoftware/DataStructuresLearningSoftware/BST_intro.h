@@ -48,6 +48,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Button^  BST_deletion_btn;
 	private: System::Windows::Forms::Button^  BST_traversal_btn;
 	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  btnHome;
 
 
 	protected: 
@@ -71,6 +72,7 @@ namespace DataStructuresLearningSoftware {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(BST_intro::typeid));
 			this->BST_main_lab = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->BST_intro_btn = (gcnew System::Windows::Forms::Button());
@@ -78,6 +80,7 @@ namespace DataStructuresLearningSoftware {
 			this->BST_deletion_btn = (gcnew System::Windows::Forms::Button());
 			this->BST_traversal_btn = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->btnHome = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// BST_main_lab
@@ -180,11 +183,25 @@ namespace DataStructuresLearningSoftware {
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &BST_intro::button1_Click);
 			// 
+			// btnHome
+			// 
+			this->btnHome->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnHome->FlatAppearance->BorderSize = 0;
+			this->btnHome->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnHome->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnHome.Image")));
+			this->btnHome->Location = System::Drawing::Point(1230, 0);
+			this->btnHome->Name = L"btnHome";
+			this->btnHome->Size = System::Drawing::Size(50, 50);
+			this->btnHome->TabIndex = 13;
+			this->btnHome->UseVisualStyleBackColor = true;
+			this->btnHome->Click += gcnew System::EventHandler(this, &BST_intro::btnHome_Click);
+			// 
 			// BST_intro
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->AutoScroll = true;
 			this->BackColor = System::Drawing::Color::Bisque;
+			this->Controls->Add(this->btnHome);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->BST_traversal_btn);
 			this->Controls->Add(this->BST_deletion_btn);
@@ -229,5 +246,10 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 				 
 			 }
+private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
+			 /*if(this->Owner != nullptr){
+				 this->Hide();
+				 this->Owner->Show();}*/
+		 }
 };
 }

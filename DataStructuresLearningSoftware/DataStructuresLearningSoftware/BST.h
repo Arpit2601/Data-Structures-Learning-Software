@@ -47,6 +47,8 @@ namespace DataStructuresLearningSoftware {
 
 	protected: 
 
+	protected: 
+
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -69,15 +71,23 @@ namespace DataStructuresLearningSoftware {
 			this->ClientSize = System::Drawing::Size(1280, 720);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"BST_mainpage";
-			this->Text = L"BST_mainpage";
+			this->Text = L"uttb";
 			this->Load += gcnew System::EventHandler(this, &BST_mainpage::BST_mainpage_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+	public:
+		String ^ username;
 	private: System::Void BST_mainpage_Load(System::Object^  sender, System::EventArgs^  e) {
 				 this->Controls->Clear();
 				 this->Controls->Add(gcnew BST_intro);
+			 }
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+				 if(this->Owner != nullptr){
+					 this->Hide();
+					 this->Owner->Show();
+				 }
 			 }
 	};
 }

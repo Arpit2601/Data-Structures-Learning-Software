@@ -13,7 +13,7 @@
 #include "LinkedList1.h"
 #include "stdafx.h"
 #include "Graphs_Home.h"
-
+#include "Heap.h"
 #using <system.windows.forms.dll>
 #using <Microsoft.VisualBasic.dll>
 
@@ -29,14 +29,13 @@ int main(array<System::String ^> ^args)
 	Application::SetCompatibleTextRenderingDefault(false); 
 
 	// Create the main window and run it
-<<<<<<< HEAD
-	Application::Run(gcnew LoginForm());
-	//Application::Run(gcnew Queue_Home());
-=======
-	Application::Run(gcnew MainPage());
-	//Application::Run(gcnew Graphs_Home());
 
-	Application::Run(gcnew Graphs_Home());
+	Application::Run(gcnew MainPage());
+	Application::Run(gcnew LoginForm());
+	//Application::Run(gcnew MainPage());
+	//Application::Run(gcnew Graphs_Home());
+	//Application::Run(gcnew Heap);
+	//Application::Run(gcnew Graphs_Home());
 
 	return 0;
 }

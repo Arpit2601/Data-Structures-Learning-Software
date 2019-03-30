@@ -108,6 +108,10 @@
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="GraphBFS.cpp" />
     <ClCompile Include="Graphs_Home.cpp" />
+    <ClCompile Include="Heap.cpp" />
+    <ClCompile Include="Heap_Deletion.cpp" />
+    <ClCompile Include="Heap_Insertion.cpp" />
+    <ClCompile Include="Heap_Introduction.cpp" />
     <ClCompile Include="Homepage.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LinkedList1.cpp" />
@@ -201,6 +205,18 @@
     </ClInclude>
     <ClInclude Include="Graphs_Home.h">
       <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Heap.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Heap_Deletion.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="Heap_Insertion.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="Heap_Introduction.h">
+      <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="Homepage.h">
       <FileType>CppForm</FileType>
@@ -373,6 +389,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Graphs_Home.resx">
       <DependentUpon>Graphs_Home.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Heap.resx">
+      <DependentUpon>Heap.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Heap_Deletion.resx">
+      <DependentUpon>Heap_Deletion.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Heap_Insertion.resx">
+      <DependentUpon>Heap_Insertion.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Heap_Introduction.resx">
+      <DependentUpon>Heap_Introduction.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.h</DependentUpon>
