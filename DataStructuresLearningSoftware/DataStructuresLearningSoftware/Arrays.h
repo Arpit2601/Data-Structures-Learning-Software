@@ -10,6 +10,7 @@ namespace DataStructuresLearningSoftware {
 
 	using namespace System;
 	using namespace System::ComponentModel;
+	using namespace System::Diagnostics;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
@@ -330,8 +331,6 @@ namespace DataStructuresLearningSoftware {
 			}
 	
 	private: System::Void Arrays_Load(System::Object^  sender, System::EventArgs^  e) {
-				 username = "lavish";
-
 				 moduleId = 0;
 
 				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
@@ -347,6 +346,8 @@ namespace DataStructuresLearningSoftware {
 				 }
 
 				 lblWelcome->Text = "Welcome, "+fullname;
+
+				 MessageBox::Show(Convert::ToString(modulesCompleted));
 
 				 display();		 
 			}

@@ -366,7 +366,6 @@ namespace DataStructuresLearningSoftware {
 			 }
 
 	private: System::Void Searching_Load(System::Object^  sender, System::EventArgs^  e) {
-				 username = "lavish";
 
 				 moduleId = 0;
 

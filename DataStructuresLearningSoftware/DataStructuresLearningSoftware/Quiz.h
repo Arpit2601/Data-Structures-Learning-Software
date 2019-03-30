@@ -477,6 +477,40 @@ namespace DataStructuresLearningSoftware {
 					// MessageBox::Show(Convert::ToString(score));
 				}
 
+				bool isPresent = false;
+				int new_score, present_score;
+
+				OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+				DB_Connection->Open();
+				String ^readString = "SELECT * FROM UserProgress WHERE UserName='"+username+"' AND DataStructureID="+ds_id;
+				OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+				MessageBox::Show("ayayyayya");
+				OleDbDataReader ^ reader = cmd->ExecuteReader();
+				if(reader->Read()){
+					isPresent = true;
+					present_score = reader->GetInt32(3);
+					new_score = score > present_score ? score : present_score;
+				}
+
+				if(isPresent){
+					MessageBox::Show("hdsasdsasadsaauh");
+					// Update database
+					String ^updateString = "UPDATE UserProgress SET Score=" + new_score + " WHERE UserName='" + username + "' AND DataStructureID="+ds_id;
+					OleDb::OleDbCommand ^command = gcnew OleDb::OleDbCommand(updateString, DB_Connection);
+					command->ExecuteScalar();
+					DB_Connection->Close();
+				}
+				else{
+					// Insert into database
+					MessageBox::Show("hdsauh");
+					String ^insertString = "INSERT INTO [UserProgress] ([UserName], [DataStructureID],[Score]) VALUES ('"+username+"',"+ds_id+", "+score+"); ";
+					OleDb::OleDbCommand ^command = gcnew OleDb::OleDbCommand(insertString, DB_Connection);
+					command->ExecuteNonQuery();
+					DB_Connection->Close();
+				}
+
 				Label ^newLabel = gcnew Label();
 				newLabel->Text = "You scored "+Convert::ToString(score)+" out of "+Convert::ToString(maxScore)+".";
 				newLabel->Font = gcnew Drawing::Font("Comic Sans MS", 12, FontStyle::Regular);

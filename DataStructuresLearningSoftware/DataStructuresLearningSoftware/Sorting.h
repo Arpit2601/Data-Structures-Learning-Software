@@ -437,7 +437,6 @@ namespace DataStructuresLearningSoftware {
 			}
 	
 	private: System::Void Sorting_Load(System::Object^  sender, System::EventArgs^  e) {
-				 username = "lavish";
 
 				 moduleId = 0;
 
