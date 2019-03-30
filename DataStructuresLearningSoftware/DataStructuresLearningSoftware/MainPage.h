@@ -16,11 +16,11 @@ namespace DataStructuresLearningSoftware {
 	public ref class MainPage : public System::Windows::Forms::Form
 	{
 	public:
-<<<<<<< HEAD
+//<< HEAD
 	int count;
-=======
-		int count;
->>>>>>> 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
+//==
+	
+// 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
 		MainPage(void)
 		{
 			InitializeComponent();
@@ -79,16 +79,16 @@ namespace DataStructuresLearningSoftware {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::White;
-<<<<<<< HEAD
+//<< HEAD
 			this->label1->Location = System::Drawing::Point(248, 46);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(460, 69);
-=======
+//==
 			this->label1->Location = System::Drawing::Point(186, 37);
 			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(373, 55);
->>>>>>> 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
+// 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Data Structures";
 			// 
@@ -98,16 +98,16 @@ namespace DataStructuresLearningSoftware {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::Silver;
-<<<<<<< HEAD
+//<< HEAD
 			this->label2->Location = System::Drawing::Point(513, 115);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(185, 32);
-=======
+//==
 			this->label2->Location = System::Drawing::Point(385, 93);
 			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(141, 26);
->>>>>>> 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
+// 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"Learning App";
 			// 
@@ -115,16 +115,16 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.Image")));
-<<<<<<< HEAD
+//<< HEAD
 			this->pictureBox1->Location = System::Drawing::Point(251, 297);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(482, 342);
-=======
+//==
 			this->pictureBox1->Location = System::Drawing::Point(188, 241);
 			this->pictureBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(362, 278);
->>>>>>> 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
+// 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 2;
 			this->pictureBox1->TabStop = false;
@@ -139,19 +139,19 @@ namespace DataStructuresLearningSoftware {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Black;
-<<<<<<< HEAD
+//<< HEAD
 			this->ClientSize = System::Drawing::Size(1024, 720);
-=======
+//==
 			this->ClientSize = System::Drawing::Size(768, 585);
->>>>>>> 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
+// 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-<<<<<<< HEAD
+//<< HEAD
 			this->Margin = System::Windows::Forms::Padding(4);
-=======
->>>>>>> 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
+//==
+// 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
 			this->Name = L"MainPage";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MainPage";
@@ -178,10 +178,10 @@ namespace DataStructuresLearningSoftware {
 				 //MessageBox::Show(""+count);
 
 			 }
-<<<<<<< HEAD
+//<< HEAD
 };
-=======
-	};
->>>>>>> 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
+//==
+	
+// 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
 }
 

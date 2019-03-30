@@ -33,16 +33,12 @@ int main(array<System::String ^> ^args)
 	Application::Run(gcnew MainPage());
 	Application::Run(gcnew LoginForm());
 
-<<<<<<< HEAD
+//<< HEAD
 
-	Application::Run(gcnew MainPage());
-	Application::Run(gcnew LoginForm());
-
-	Application::Run(gcnew BST_mainpage());
-
-=======
+	
+//==
 	//Application::Run(gcnew MainPage());
->>>>>>> 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
+//>>> 34383c9a50c3d4f8851b1bafbabe185f21d9f89e
 
 
 	return 0;
