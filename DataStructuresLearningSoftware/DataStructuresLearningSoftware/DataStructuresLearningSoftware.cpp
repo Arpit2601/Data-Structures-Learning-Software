@@ -32,10 +32,6 @@ int main(array<System::String ^> ^args)
 
 	Application::Run(gcnew MainPage());
 	Application::Run(gcnew LoginForm());
-	//Application::Run(gcnew MainPage());
-	//Application::Run(gcnew Graphs_Home());
-	//Application::Run(gcnew Heap);
-	//Application::Run(gcnew Graphs_Home());
 
 	return 0;
 }

@@ -206,7 +206,7 @@ namespace DataStructuresLearningSoftware {
 			this->txtFrom->Location = System::Drawing::Point(225, 520);
 			this->txtFrom->Margin = System::Windows::Forms::Padding(4);
 			this->txtFrom->Name = L"txtFrom";
-			this->txtFrom->Size = System::Drawing::Size(132, 22);
+			this->txtFrom->Size = System::Drawing::Size(132, 20);
 			this->txtFrom->TabIndex = 0;
 			this->txtFrom->TextChanged += gcnew System::EventHandler(this, &Graph::txtFrom_TextChanged);
 			// 
@@ -215,7 +215,7 @@ namespace DataStructuresLearningSoftware {
 			this->txtTo->Location = System::Drawing::Point(413, 523);
 			this->txtTo->Margin = System::Windows::Forms::Padding(4);
 			this->txtTo->Name = L"txtTo";
-			this->txtTo->Size = System::Drawing::Size(132, 22);
+			this->txtTo->Size = System::Drawing::Size(132, 20);
 			this->txtTo->TabIndex = 5;
 			this->txtTo->Visible = false;
 			this->txtTo->TextChanged += gcnew System::EventHandler(this, &Graph::txtTo_TextChanged);
@@ -254,7 +254,7 @@ namespace DataStructuresLearningSoftware {
 			this->label1->Location = System::Drawing::Point(13, 520);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(201, 24);
+			this->label1->Size = System::Drawing::Size(162, 19);
 			this->label1->TabIndex = 8;
 			this->label1->Text = L"Enter number of Nodes";
 			this->label1->Click += gcnew System::EventHandler(this, &Graph::label1_Click);
@@ -624,7 +624,7 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l1->Location = System::Drawing::Point(701, 43);
+			this->l1->Location = System::Drawing::Point(524, 30);
 			this->l1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l1->Name = L"l1";
 			this->l1->Size = System::Drawing::Size(40, 37);
@@ -638,7 +638,7 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l2->Location = System::Drawing::Point(804, 203);
+			this->l2->Location = System::Drawing::Point(599, 166);
 			this->l2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l2->Name = L"l2";
 			this->l2->Size = System::Drawing::Size(40, 37);
@@ -652,7 +652,7 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l3->Location = System::Drawing::Point(537, 240);
+			this->l3->Location = System::Drawing::Point(398, 195);
 			this->l3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l3->Name = L"l3";
 			this->l3->Size = System::Drawing::Size(40, 37);
@@ -666,7 +666,7 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l4->Location = System::Drawing::Point(285, 332);
+			this->l4->Location = System::Drawing::Point(204, 274);
 			this->l4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l4->Name = L"l4";
 			this->l4->Size = System::Drawing::Size(40, 37);
@@ -680,7 +680,7 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l8->Location = System::Drawing::Point(308, 98);
+			this->l8->Location = System::Drawing::Point(221, 66);
 			this->l8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l8->Name = L"l8";
 			this->l8->Size = System::Drawing::Size(40, 37);
@@ -694,7 +694,7 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l7->Location = System::Drawing::Point(1128, 190);
+			this->l7->Location = System::Drawing::Point(846, 151);
 			this->l7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l7->Name = L"l7";
 			this->l7->Size = System::Drawing::Size(40, 37);
@@ -708,7 +708,7 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l6->Location = System::Drawing::Point(632, 386);
+			this->l6->Location = System::Drawing::Point(468, 317);
 			this->l6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l6->Name = L"l6";
 			this->l6->Size = System::Drawing::Size(40, 37);
@@ -722,13 +722,14 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->l5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->l5->Location = System::Drawing::Point(999, 347);
+			this->l5->Location = System::Drawing::Point(749, 284);
 			this->l5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->l5->Name = L"l5";
 			this->l5->Size = System::Drawing::Size(40, 37);
 			this->l5->TabIndex = 39;
 			this->l5->Text = L"5";
 			this->l5->Visible = false;
+			this->l5->Click += gcnew System::EventHandler(this, &Graph::l5_Click);
 			// 
 			// button1
 			// 
@@ -1082,6 +1083,10 @@ namespace DataStructuresLearningSoftware {
 			for(int i=0;i<=8;i++){
 				lvisible(i,0);
 			}
+			txtTo->Visible=false;
+			label1->Text="Enter Number of Nodes";
+			label2->Visible=false;
+			label3->Visible=false;
 
 		}
 
@@ -1175,7 +1180,6 @@ namespace DataStructuresLearningSoftware {
 						 adj[a].push_back(b);
 						 adj[b].push_back(a);
 						 edge(a,b,1);
-						 MessageBox::Show("Edge Entered Succesfully");
 					 }else{
 						 addcounter--;
 					 }
@@ -1267,5 +1271,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs^  e) {
 				 reset();
 			 }
+private: System::Void l5_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
 };
 }

@@ -45,8 +45,8 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Panel^  panel2;
 	private: System::Windows::Forms::Button^  button8;
 	private: System::Windows::Forms::Label^  lblWelcome;
-	private: System::Windows::Forms::Button^  btnBack;
-	private: System::Windows::Forms::Button^  btnNext;
+
+
 	private: System::Windows::Forms::Button^  btnHome;
 	protected: 
 
@@ -71,8 +71,6 @@ namespace DataStructuresLearningSoftware {
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->lblWelcome = (gcnew System::Windows::Forms::Label());
-			this->btnBack = (gcnew System::Windows::Forms::Button());
-			this->btnNext = (gcnew System::Windows::Forms::Button());
 			this->btnHome = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
@@ -133,8 +131,6 @@ namespace DataStructuresLearningSoftware {
 			this->panel2->BackColor = System::Drawing::Color::LightSeaGreen;
 			this->panel2->Controls->Add(this->button8);
 			this->panel2->Controls->Add(this->lblWelcome);
-			this->panel2->Controls->Add(this->btnBack);
-			this->panel2->Controls->Add(this->btnNext);
 			this->panel2->Controls->Add(this->btnHome);
 			this->panel2->Location = System::Drawing::Point(175, 0);
 			this->panel2->Name = L"panel2";
@@ -170,30 +166,6 @@ namespace DataStructuresLearningSoftware {
 			this->lblWelcome->Text = L"label1";
 			this->lblWelcome->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
-			// btnBack
-			// 
-			this->btnBack->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnBack->FlatAppearance->BorderSize = 0;
-			this->btnBack->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnBack->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnBack.Image")));
-			this->btnBack->Location = System::Drawing::Point(8, 0);
-			this->btnBack->Name = L"btnBack";
-			this->btnBack->Size = System::Drawing::Size(50, 50);
-			this->btnBack->TabIndex = 19;
-			this->btnBack->UseVisualStyleBackColor = true;
-			// 
-			// btnNext
-			// 
-			this->btnNext->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnNext->FlatAppearance->BorderSize = 0;
-			this->btnNext->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnNext->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnNext.Image")));
-			this->btnNext->Location = System::Drawing::Point(996, 0);
-			this->btnNext->Name = L"btnNext";
-			this->btnNext->Size = System::Drawing::Size(50, 50);
-			this->btnNext->TabIndex = 18;
-			this->btnNext->UseVisualStyleBackColor = true;
-			// 
 			// btnHome
 			// 
 			this->btnHome->Cursor = System::Windows::Forms::Cursors::Hand;
@@ -205,6 +177,7 @@ namespace DataStructuresLearningSoftware {
 			this->btnHome->Size = System::Drawing::Size(50, 50);
 			this->btnHome->TabIndex = 17;
 			this->btnHome->UseVisualStyleBackColor = true;
+			this->btnHome->Click += gcnew System::EventHandler(this, &Graphs_Home::btnHome_Click);
 			// 
 			// Graphs_Home
 			// 
@@ -217,6 +190,7 @@ namespace DataStructuresLearningSoftware {
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Graphs_Home";
 			this->Text = L"Graphs_Home";
+			this->Load += gcnew System::EventHandler(this, &Graphs_Home::Graphs_Home_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel2->ResumeLayout(false);
 			this->ResumeLayout(false);
@@ -225,6 +199,7 @@ namespace DataStructuresLearningSoftware {
 #pragma endregion
 		public: 
 			String ^ username;
+			String ^fullname;
 			// BFS
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 				 mainPanel->Controls->Clear();
@@ -244,6 +219,27 @@ private: System::Void button8_Click(System::Object^  sender, System::EventArgs^ 
 			 DiscussionForum ^ discuss = gcnew DiscussionForum;
 			 discuss->username=username;
 			 mainPanel->Controls->Add(discuss);
+		 }
+private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if(this->Owner != nullptr){
+				 this->Hide();
+				 this->Owner->Show();
+			 }
+		 }
+private: System::Void Graphs_Home_Load(System::Object^  sender, System::EventArgs^  e) {
+			 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+			 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+			 DB_Connection->Open();
+			 String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+			 OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+			 OleDbDataReader ^ reader = cmd->ExecuteReader();
+			 if(reader->Read()){
+				 fullname = reader->GetString(2);
+			 }
+			 lblWelcome->Text = "Welcome, "+fullname;
+
+			 DB_Connection->Close();
 		 }
 };
 }

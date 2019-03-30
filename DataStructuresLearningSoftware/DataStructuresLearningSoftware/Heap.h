@@ -43,8 +43,8 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Panel^  panel2;
 	private: System::Windows::Forms::Button^  button8;
 	private: System::Windows::Forms::Label^  lblWelcome;
-	private: System::Windows::Forms::Button^  btnBack;
-	private: System::Windows::Forms::Button^  btnNext;
+
+
 	private: System::Windows::Forms::Button^  btnHome;
 	private: System::Windows::Forms::Button^  button3;
 	private: System::Windows::Forms::Button^  button2;
@@ -73,8 +73,6 @@ namespace DataStructuresLearningSoftware {
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->lblWelcome = (gcnew System::Windows::Forms::Label());
-			this->btnBack = (gcnew System::Windows::Forms::Button());
-			this->btnNext = (gcnew System::Windows::Forms::Button());
 			this->btnHome = (gcnew System::Windows::Forms::Button());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->panel1->SuspendLayout();
@@ -140,8 +138,6 @@ namespace DataStructuresLearningSoftware {
 			this->panel2->BackColor = System::Drawing::Color::LightSeaGreen;
 			this->panel2->Controls->Add(this->button8);
 			this->panel2->Controls->Add(this->lblWelcome);
-			this->panel2->Controls->Add(this->btnBack);
-			this->panel2->Controls->Add(this->btnNext);
 			this->panel2->Controls->Add(this->btnHome);
 			this->panel2->Location = System::Drawing::Point(175, 0);
 			this->panel2->Name = L"panel2";
@@ -177,30 +173,6 @@ namespace DataStructuresLearningSoftware {
 			this->lblWelcome->Text = L"label1";
 			this->lblWelcome->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
-			// btnBack
-			// 
-			this->btnBack->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnBack->FlatAppearance->BorderSize = 0;
-			this->btnBack->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnBack->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnBack.Image")));
-			this->btnBack->Location = System::Drawing::Point(8, 0);
-			this->btnBack->Name = L"btnBack";
-			this->btnBack->Size = System::Drawing::Size(50, 50);
-			this->btnBack->TabIndex = 14;
-			this->btnBack->UseVisualStyleBackColor = true;
-			// 
-			// btnNext
-			// 
-			this->btnNext->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnNext->FlatAppearance->BorderSize = 0;
-			this->btnNext->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnNext->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"btnNext.Image")));
-			this->btnNext->Location = System::Drawing::Point(996, 0);
-			this->btnNext->Name = L"btnNext";
-			this->btnNext->Size = System::Drawing::Size(50, 50);
-			this->btnNext->TabIndex = 13;
-			this->btnNext->UseVisualStyleBackColor = true;
-			// 
 			// btnHome
 			// 
 			this->btnHome->Cursor = System::Windows::Forms::Cursors::Hand;
@@ -212,6 +184,7 @@ namespace DataStructuresLearningSoftware {
 			this->btnHome->Size = System::Drawing::Size(50, 50);
 			this->btnHome->TabIndex = 12;
 			this->btnHome->UseVisualStyleBackColor = true;
+			this->btnHome->Click += gcnew System::EventHandler(this, &Heap::btnHome_Click);
 			// 
 			// panel3
 			// 
@@ -230,6 +203,7 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->panel1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"Heap";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Heap";
 			this->Load += gcnew System::EventHandler(this, &Heap::Heap_Load_1);
 			this->panel1->ResumeLayout(false);
@@ -240,6 +214,7 @@ namespace DataStructuresLearningSoftware {
 #pragma endregion
 		public:
 			String ^ username;
+			String ^fullname;
 
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 				 panel3->Controls->Clear();
@@ -276,6 +251,26 @@ private: System::Void button8_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void Heap_Load_1(System::Object^  sender, System::EventArgs^  e) {
 			 panel3->Controls->Clear();
 			 panel3->Controls->Add(gcnew Heap_Introduction);
+
+			 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+			 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+			 DB_Connection->Open();
+			 String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+			 OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+			 OleDbDataReader ^ reader = cmd->ExecuteReader();
+			 if(reader->Read()){
+				 fullname = reader->GetString(2);
+			 }
+			 lblWelcome->Text = "Welcome, "+fullname;
+
+			 DB_Connection->Close();
+		 }
+private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if(this->Owner != nullptr){
+				 this->Hide();
+				 this->Owner->Show();
+			 }
 		 }
 };
 }

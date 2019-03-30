@@ -857,7 +857,7 @@ private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^ 
 		 }
 private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
 			 if(this->Owner != nullptr){
-				 this->Close();
+				 this->Hide();
 				 this->Owner->Show();
 			 }
 		 }

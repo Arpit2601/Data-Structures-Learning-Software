@@ -6,6 +6,7 @@
 #include "Quiz.h"
 #include "TopPanel.h"
 #include "LinkedList.h"
+#include "DiscussionForum.h"
 
 namespace DataStructuresLearningSoftware {
 
@@ -60,6 +61,7 @@ namespace DataStructuresLearningSoftware {
 
 
 	private: System::Windows::Forms::Label^  lblWelcome;
+	private: System::Windows::Forms::Button^  button1;
 
 
 
@@ -87,6 +89,7 @@ namespace DataStructuresLearningSoftware {
 			this->btnBinarySearch = (gcnew System::Windows::Forms::Button());
 			this->btnLinearSearch = (gcnew System::Windows::Forms::Button());
 			this->topPanel = (gcnew System::Windows::Forms::Panel());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->lblWelcome = (gcnew System::Windows::Forms::Label());
 			this->btnBack = (gcnew System::Windows::Forms::Button());
 			this->btnNext = (gcnew System::Windows::Forms::Button());
@@ -179,6 +182,7 @@ namespace DataStructuresLearningSoftware {
 			// topPanel
 			// 
 			this->topPanel->BackColor = System::Drawing::Color::Snow;
+			this->topPanel->Controls->Add(this->button1);
 			this->topPanel->Controls->Add(this->lblWelcome);
 			this->topPanel->Controls->Add(this->btnBack);
 			this->topPanel->Controls->Add(this->btnNext);
@@ -188,14 +192,29 @@ namespace DataStructuresLearningSoftware {
 			this->topPanel->Size = System::Drawing::Size(1088, 50);
 			this->topPanel->TabIndex = 1;
 			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::IndianRed;
+			this->button1->FlatAppearance->BorderSize = 0;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button1->Location = System::Drawing::Point(50, 10);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(150, 30);
+			this->button1->TabIndex = 5;
+			this->button1->Text = L"Discussion Forum";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &Searching::button1_Click);
+			// 
 			// lblWelcome
 			// 
 			this->lblWelcome->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lblWelcome->ForeColor = System::Drawing::Color::Firebrick;
-			this->lblWelcome->Location = System::Drawing::Point(50, 15);
+			this->lblWelcome->Location = System::Drawing::Point(206, 15);
 			this->lblWelcome->Name = L"lblWelcome";
-			this->lblWelcome->Size = System::Drawing::Size(878, 20);
+			this->lblWelcome->Size = System::Drawing::Size(722, 20);
 			this->lblWelcome->TabIndex = 4;
 			this->lblWelcome->Text = L"label1";
 			this->lblWelcome->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -256,6 +275,7 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->panel1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"Searching";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Searching";
 			this->Load += gcnew System::EventHandler(this, &Searching::Searching_Load);
 			this->panel1->ResumeLayout(false);
@@ -508,9 +528,15 @@ namespace DataStructuresLearningSoftware {
 			}
 private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
 			 if(this->Owner != nullptr){
-				 this->Close();
+				 this->Hide();
 				 this->Owner->Show();
 			 }
+		 }
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+			 MainPanel->Controls->Clear();
+			 DiscussionForum ^ discuss = gcnew DiscussionForum;
+			 discuss->username=username;
+			 MainPanel->Controls->Add(discuss);
 		 }
 };
 

@@ -3545,37 +3545,37 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 			 LinkedList1 ^newForm = gcnew LinkedList1();
 			 newForm->username = username;
 			 this->Hide();
-			 newForm->ShowDialog(this);
+			 newForm->Show(this);
 		 }
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Sorting ^newForm = gcnew Sorting();
 			 newForm->username = username;
 			 this->Hide();
-			 newForm->ShowDialog(this);
+			 newForm->Show(this);
 		 }
 private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Queue_Home ^newForm = gcnew Queue_Home();
 			 newForm->username = username;
 			 this->Hide();
-			 newForm->ShowDialog(this);
+			 newForm->Show(this);
 		 }
 private: System::Void btnArrays_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Arrays ^newForm = gcnew Arrays();
 			 newForm->username = username;
 			 this->Hide();
-			 newForm->ShowDialog(this);
+			 newForm->Show(this);
 		 }
 private: System::Void btnSearching_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Searching ^newForm = gcnew Searching();
 			 newForm->username = username;
 			 this->Hide();
-			 newForm->ShowDialog(this);
+			 newForm->Show(this);
 		 }
 private: System::Void btnStacks_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Stack_Main ^newForm = gcnew Stack_Main();
 			 newForm->username = username;
 			 this->Hide();
-			 newForm->ShowDialog(this);
+			 newForm->Show(this);
 		 }
 private: System::Void SuggestionDeletebutton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 String ^ques=SuggestionDeletelistBox->SelectedItem->ToString();
@@ -3653,19 +3653,19 @@ private: System::Void btnTrees_Click(System::Object^  sender, System::EventArgs^
 			 BST_mainpage ^newForm = gcnew BST_mainpage();
 			 newForm->username = username;
 			 this->Hide();
-			 newForm->ShowDialog(this);
+			 newForm->Show(this);
 		 }
 private: System::Void btnHeaps_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Heap ^newForm = gcnew Heap();
 			 newForm->username = username;
 			 this->Hide();
-			 newForm->ShowDialog(this);
+			 newForm->Show(this);
 		 }
 private: System::Void btnGraphs_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Graphs_Home ^newForm = gcnew Graphs_Home();
 			 newForm->username = username;
 			 this->Hide();
-			 newForm->ShowDialog(this);
+			 newForm->Show(this);
 		 }
 };
 }
