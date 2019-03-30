@@ -1068,7 +1068,10 @@ private: System::Void btnAdd_Click(System::Object^  sender, System::EventArgs^  
 				 if(baddcounter==1){
 						try{
 						   bn=Convert::ToInt32(txtFrom->Text);
-						   if(bn>8)MessageBox::Show("Maximum 8 nodes allowed::Displaying 8 nodes");
+						   if(bn>8){
+							   MessageBox::Show("Maximum 8 nodes allowed::Displaying 8 nodes");
+							   bn=8;
+						   }
 						   for(int i=1;i<=bn;i++){
 								lvisible(i,1);
 						   }

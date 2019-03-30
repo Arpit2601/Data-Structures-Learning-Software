@@ -1030,7 +1030,10 @@ namespace sorting_user_control {
 				 if(addcounter==1){
 						try{
 						   n=Convert::ToInt32(txtFrom->Text);
-						   if(n>8)MessageBox::Show("Maximum 8 nodes allowed::Displaying 8 nodes");
+						   if(n>8){
+							   MessageBox::Show("Maximum 8 nodes allowed::Displaying 8 nodes");
+							   n=8;
+						   }
 						   for(int i=1;i<=n;i++){
 								lvisible(i,1);
 						   }
