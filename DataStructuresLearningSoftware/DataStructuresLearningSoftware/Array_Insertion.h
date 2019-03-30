@@ -551,6 +551,11 @@ namespace DataStructuresLearningSoftware {
 						 this->label19->Text = this->insertvalue->Text;
 						 insertimer->Enabled = true;
 					 }
+					 else{
+						 this->insertindex->Text = "";
+						 this->insertvalue->Text = "";
+						 MessageBox::Show("Please Enter Value Between -1000 to 1000 And Index Between 1 To 8");
+					 }
 				 }
 			 }
 			 
