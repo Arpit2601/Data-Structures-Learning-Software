@@ -12,6 +12,7 @@
 #include "Arrays.h"
 #include "LinkedList1.h"
 #include "stdafx.h"
+#include "Graphs_Home.h"
 #using <system.windows.forms.dll>
 #using <Microsoft.VisualBasic.dll>
 
@@ -28,7 +29,7 @@ int main(array<System::String ^> ^args)
 
 	// Create the main window and run it
 	Application::Run(gcnew MainPage());
-	Application::Run(gcnew LoginForm());
+	Application::Run(gcnew Graphs_Home());
 
 
 	return 0;

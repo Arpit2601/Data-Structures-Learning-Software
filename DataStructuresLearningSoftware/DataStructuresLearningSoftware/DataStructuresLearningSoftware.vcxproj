@@ -76,6 +76,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -97,6 +99,9 @@
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="DataStructuresLearningSoftware.cpp" />
     <ClCompile Include="DiscussionForum.cpp" />
+    <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="GraphBFS.cpp" />
+    <ClCompile Include="Graphs_Home.cpp" />
     <ClCompile Include="Homepage.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LinkedList1.cpp" />
@@ -163,6 +168,15 @@
     </ClInclude>
     <ClInclude Include="bubbleSort.h">
       <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="GraphBFS.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="Graphs_Home.h">
+      <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Homepage.h">
       <FileType>CppForm</FileType>
@@ -308,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="bubbleSort.resx">
       <DependentUpon>bubbleSort.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphs_Home.resx">
+      <DependentUpon>Graphs_Home.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.h</DependentUpon>
