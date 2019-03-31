@@ -1,4 +1,4 @@
-﻿Build started 31-Mar-19 7:12:32 PM.
+﻿Build started 31-Mar-19 8:15:54 PM.
      1>Project "C:\Users\Siddharth\Desktop\projlatest\Data-Structures-Learning-Software\DataStructuresLearningSoftware\DataStructuresLearningSoftware\DataStructuresLearningSoftware.vcxproj" on node 2 (rebuild target(s)).
      1>InitializeBuildStatus:
          Creating "Release\DataStructuresLearningSoftware.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -812,4 +812,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:40.18
+Time Elapsed 00:00:36.57

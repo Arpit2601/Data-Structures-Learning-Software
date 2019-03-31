@@ -107,16 +107,21 @@ namespace DataStructuresLearningSoftware	 {
 
 	private: System::Windows::Forms::Button^  ARRejectbutton;
 	private: System::Windows::Forms::Button^  ARApprovebutton;
-	private: System::Windows::Forms::TextBox^  arinfotextBox;
-	private: System::Windows::Forms::Panel^  suggestionpanel;
-	private: System::Windows::Forms::Button^  SuggestionRejectbutton;
-	private: System::Windows::Forms::Button^  suggestionapprovebutton;
-	private: System::Windows::Forms::TextBox^  suggestioninfotextBox;
-
-	private: System::Windows::Forms::ListBox^  suggestionlistBox;
 	private: System::Windows::Forms::Panel^  udpanel;
+
+
+
+
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Button^  udDeletebutton;
-	private: System::Windows::Forms::TextBox^  udinfotextBox;
+
 	private: System::Windows::Forms::ListBox^  udlistBox;
 	private: System::Windows::Forms::Panel^  lupanel;
 	private: System::Windows::Forms::Button^  lulockbutton;
@@ -132,6 +137,21 @@ namespace DataStructuresLearningSoftware	 {
 	private: System::Windows::Forms::Panel^  abrpanel;
 	private: System::Windows::Forms::ListBox^  abrlistBox;
 	private: System::Windows::Forms::Panel^  outputpanel;
+	private: System::Windows::Forms::Panel^  suggestionpanel;
+	private: System::Windows::Forms::ListBox^  suggestionlistBox;
+
+	private: System::Windows::Forms::Button^  SuggestionRejectbutton;
+	private: System::Windows::Forms::Button^  suggestionapprovebutton;
+private: System::Windows::Forms::ListBox^  suggestioninfotextBox;
+private: System::Windows::Forms::ListBox^  arinfotextBox;
+private: System::Windows::Forms::ListBox^  udinfotextBox;
+
+
+
+
+
+
+
 
 
 
@@ -454,22 +474,21 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderStatusPanelpictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->HeaderStatusPanelpictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->Homepanel = (gcnew System::Windows::Forms::Panel());
-			this->suggestionpanel = (gcnew System::Windows::Forms::Panel());
-			this->SuggestionRejectbutton = (gcnew System::Windows::Forms::Button());
-			this->suggestionapprovebutton = (gcnew System::Windows::Forms::Button());
-			this->suggestioninfotextBox = (gcnew System::Windows::Forms::TextBox());
-			this->suggestionlistBox = (gcnew System::Windows::Forms::ListBox());
 			this->ARpanel = (gcnew System::Windows::Forms::Panel());
-			this->arinfotextBox = (gcnew System::Windows::Forms::TextBox());
+			this->arinfotextBox = (gcnew System::Windows::Forms::ListBox());
 			this->ARRejectbutton = (gcnew System::Windows::Forms::Button());
 			this->ARApprovebutton = (gcnew System::Windows::Forms::Button());
 			this->arlistBox = (gcnew System::Windows::Forms::ListBox());
+			this->suggestionpanel = (gcnew System::Windows::Forms::Panel());
+			this->suggestioninfotextBox = (gcnew System::Windows::Forms::ListBox());
+			this->suggestionlistBox = (gcnew System::Windows::Forms::ListBox());
+			this->SuggestionRejectbutton = (gcnew System::Windows::Forms::Button());
+			this->suggestionapprovebutton = (gcnew System::Windows::Forms::Button());
 			this->lupanel = (gcnew System::Windows::Forms::Panel());
 			this->lulockbutton = (gcnew System::Windows::Forms::Button());
 			this->lulistBox = (gcnew System::Windows::Forms::ListBox());
 			this->udpanel = (gcnew System::Windows::Forms::Panel());
 			this->udDeletebutton = (gcnew System::Windows::Forms::Button());
-			this->udinfotextBox = (gcnew System::Windows::Forms::TextBox());
 			this->udlistBox = (gcnew System::Windows::Forms::ListBox());
 			this->abrpanel = (gcnew System::Windows::Forms::Panel());
 			this->abrlistBox = (gcnew System::Windows::Forms::ListBox());
@@ -537,6 +556,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfilePictureChangebutton = (gcnew System::Windows::Forms::Button());
 			this->ProfileopenFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->outputpanel = (gcnew System::Windows::Forms::Panel());
+			this->udinfotextBox = (gcnew System::Windows::Forms::ListBox());
 			this->HeaderPanel->SuspendLayout();
 			this->Headerstatuspanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox4))->BeginInit();
@@ -544,8 +564,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox1))->BeginInit();
 			this->Homepanel->SuspendLayout();
-			this->suggestionpanel->SuspendLayout();
 			this->ARpanel->SuspendLayout();
+			this->suggestionpanel->SuspendLayout();
 			this->lupanel->SuspendLayout();
 			this->udpanel->SuspendLayout();
 			this->abrpanel->SuspendLayout();
@@ -726,10 +746,10 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// Homepanel
 			// 
 			this->Homepanel->BackColor = System::Drawing::Color::AliceBlue;
-			this->Homepanel->Controls->Add(this->suggestionpanel);
-			this->Homepanel->Controls->Add(this->ARpanel);
-			this->Homepanel->Controls->Add(this->lupanel);
 			this->Homepanel->Controls->Add(this->udpanel);
+			this->Homepanel->Controls->Add(this->lupanel);
+			this->Homepanel->Controls->Add(this->ARpanel);
+			this->Homepanel->Controls->Add(this->suggestionpanel);
 			this->Homepanel->Controls->Add(this->abrpanel);
 			this->Homepanel->Controls->Add(this->uupanel);
 			this->Homepanel->Controls->Add(this->AdminHeaderpanel);
@@ -741,71 +761,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Homepanel->Name = L"Homepanel";
 			this->Homepanel->Size = System::Drawing::Size(1280, 705);
 			this->Homepanel->TabIndex = 7;
-			// 
-			// suggestionpanel
-			// 
-			this->suggestionpanel->Controls->Add(this->SuggestionRejectbutton);
-			this->suggestionpanel->Controls->Add(this->suggestionapprovebutton);
-			this->suggestionpanel->Controls->Add(this->suggestioninfotextBox);
-			this->suggestionpanel->Controls->Add(this->suggestionlistBox);
-			this->suggestionpanel->Location = System::Drawing::Point(17, 91);
-			this->suggestionpanel->Name = L"suggestionpanel";
-			this->suggestionpanel->Size = System::Drawing::Size(1248, 611);
-			this->suggestionpanel->TabIndex = 20;
-			// 
-			// SuggestionRejectbutton
-			// 
-			this->SuggestionRejectbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->SuggestionRejectbutton->Location = System::Drawing::Point(835, 540);
-			this->SuggestionRejectbutton->Name = L"SuggestionRejectbutton";
-			this->SuggestionRejectbutton->Size = System::Drawing::Size(198, 58);
-			this->SuggestionRejectbutton->TabIndex = 6;
-			this->SuggestionRejectbutton->Text = L"Reject";
-			this->SuggestionRejectbutton->UseVisualStyleBackColor = true;
-			this->SuggestionRejectbutton->Click += gcnew System::EventHandler(this, &AdminForm::SuggestionRejectbutton_Click);
-			// 
-			// suggestionapprovebutton
-			// 
-			this->suggestionapprovebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->suggestionapprovebutton->Location = System::Drawing::Point(1039, 540);
-			this->suggestionapprovebutton->Name = L"suggestionapprovebutton";
-			this->suggestionapprovebutton->Size = System::Drawing::Size(198, 58);
-			this->suggestionapprovebutton->TabIndex = 5;
-			this->suggestionapprovebutton->Text = L"Approve";
-			this->suggestionapprovebutton->UseVisualStyleBackColor = true;
-			this->suggestionapprovebutton->Click += gcnew System::EventHandler(this, &AdminForm::suggestionapprovebutton_Click);
-			// 
-			// suggestioninfotextBox
-			// 
-			this->suggestioninfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->suggestioninfotextBox->Location = System::Drawing::Point(7, 491);
-			this->suggestioninfotextBox->Multiline = true;
-			this->suggestioninfotextBox->Name = L"suggestioninfotextBox";
-			this->suggestioninfotextBox->ReadOnly = true;
-			this->suggestioninfotextBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->suggestioninfotextBox->ScrollBars = System::Windows::Forms::ScrollBars::Horizontal;
-			this->suggestioninfotextBox->Size = System::Drawing::Size(1230, 22);
-			this->suggestioninfotextBox->TabIndex = 4;
-			// 
-			// suggestionlistBox
-			// 
-			this->suggestionlistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)));
-			this->suggestionlistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->suggestionlistBox->FormattingEnabled = true;
-			this->suggestionlistBox->HorizontalExtent = 15000;
-			this->suggestionlistBox->HorizontalScrollbar = true;
-			this->suggestionlistBox->ItemHeight = 31;
-			this->suggestionlistBox->Location = System::Drawing::Point(7, 4);
-			this->suggestionlistBox->Name = L"suggestionlistBox";
-			this->suggestionlistBox->ScrollAlwaysVisible = true;
-			this->suggestionlistBox->Size = System::Drawing::Size(1230, 469);
-			this->suggestionlistBox->TabIndex = 1;
-			this->suggestionlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::suggestionlistBox_SelectedIndexChanged);
 			// 
 			// ARpanel
 			// 
@@ -820,12 +775,19 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// arinfotextBox
 			// 
-			this->arinfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->arinfotextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->arinfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->arinfotextBox->Location = System::Drawing::Point(14, 500);
+			this->arinfotextBox->FormattingEnabled = true;
+			this->arinfotextBox->HorizontalExtent = 15000;
+			this->arinfotextBox->HorizontalScrollbar = true;
+			this->arinfotextBox->ItemHeight = 31;
+			this->arinfotextBox->Location = System::Drawing::Point(10, 453);
 			this->arinfotextBox->Name = L"arinfotextBox";
-			this->arinfotextBox->ReadOnly = true;
-			this->arinfotextBox->Size = System::Drawing::Size(1226, 34);
+			this->arinfotextBox->ScrollAlwaysVisible = true;
+			this->arinfotextBox->SelectionMode = System::Windows::Forms::SelectionMode::None;
+			this->arinfotextBox->Size = System::Drawing::Size(1230, 97);
 			this->arinfotextBox->TabIndex = 3;
 			// 
 			// ARRejectbutton
@@ -865,9 +827,76 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->arlistBox->Location = System::Drawing::Point(10, 4);
 			this->arlistBox->Name = L"arlistBox";
 			this->arlistBox->ScrollAlwaysVisible = true;
-			this->arlistBox->Size = System::Drawing::Size(1230, 469);
+			this->arlistBox->Size = System::Drawing::Size(1230, 438);
 			this->arlistBox->TabIndex = 0;
 			this->arlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::arlistBox_SelectedIndexChanged);
+			// 
+			// suggestionpanel
+			// 
+			this->suggestionpanel->Controls->Add(this->suggestioninfotextBox);
+			this->suggestionpanel->Controls->Add(this->suggestionlistBox);
+			this->suggestionpanel->Controls->Add(this->SuggestionRejectbutton);
+			this->suggestionpanel->Controls->Add(this->suggestionapprovebutton);
+			this->suggestionpanel->Location = System::Drawing::Point(17, 91);
+			this->suggestionpanel->Name = L"suggestionpanel";
+			this->suggestionpanel->Size = System::Drawing::Size(1248, 611);
+			this->suggestionpanel->TabIndex = 29;
+			// 
+			// suggestioninfotextBox
+			// 
+			this->suggestioninfotextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->suggestioninfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->suggestioninfotextBox->FormattingEnabled = true;
+			this->suggestioninfotextBox->HorizontalExtent = 15000;
+			this->suggestioninfotextBox->HorizontalScrollbar = true;
+			this->suggestioninfotextBox->ItemHeight = 31;
+			this->suggestioninfotextBox->Location = System::Drawing::Point(10, 437);
+			this->suggestioninfotextBox->Name = L"suggestioninfotextBox";
+			this->suggestioninfotextBox->ScrollAlwaysVisible = true;
+			this->suggestioninfotextBox->SelectionMode = System::Windows::Forms::SelectionMode::None;
+			this->suggestioninfotextBox->Size = System::Drawing::Size(1230, 97);
+			this->suggestioninfotextBox->TabIndex = 9;
+			// 
+			// suggestionlistBox
+			// 
+			this->suggestionlistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->suggestionlistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->suggestionlistBox->FormattingEnabled = true;
+			this->suggestionlistBox->HorizontalExtent = 15000;
+			this->suggestionlistBox->HorizontalScrollbar = true;
+			this->suggestionlistBox->ItemHeight = 31;
+			this->suggestionlistBox->Location = System::Drawing::Point(9, 16);
+			this->suggestionlistBox->Name = L"suggestionlistBox";
+			this->suggestionlistBox->ScrollAlwaysVisible = true;
+			this->suggestionlistBox->Size = System::Drawing::Size(1230, 407);
+			this->suggestionlistBox->TabIndex = 8;
+			this->suggestionlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::suggestionlistBox_SelectedIndexChanged_1);
+			// 
+			// SuggestionRejectbutton
+			// 
+			this->SuggestionRejectbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->SuggestionRejectbutton->Location = System::Drawing::Point(835, 540);
+			this->SuggestionRejectbutton->Name = L"SuggestionRejectbutton";
+			this->SuggestionRejectbutton->Size = System::Drawing::Size(198, 58);
+			this->SuggestionRejectbutton->TabIndex = 6;
+			this->SuggestionRejectbutton->Text = L"Reject";
+			this->SuggestionRejectbutton->UseVisualStyleBackColor = true;
+			// 
+			// suggestionapprovebutton
+			// 
+			this->suggestionapprovebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->suggestionapprovebutton->Location = System::Drawing::Point(1039, 540);
+			this->suggestionapprovebutton->Name = L"suggestionapprovebutton";
+			this->suggestionapprovebutton->Size = System::Drawing::Size(198, 58);
+			this->suggestionapprovebutton->TabIndex = 5;
+			this->suggestionapprovebutton->Text = L"Approve";
+			this->suggestionapprovebutton->UseVisualStyleBackColor = true;
 			// 
 			// lupanel
 			// 
@@ -908,8 +937,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// udpanel
 			// 
-			this->udpanel->Controls->Add(this->udDeletebutton);
 			this->udpanel->Controls->Add(this->udinfotextBox);
+			this->udpanel->Controls->Add(this->udDeletebutton);
 			this->udpanel->Controls->Add(this->udlistBox);
 			this->udpanel->Location = System::Drawing::Point(17, 91);
 			this->udpanel->Name = L"udpanel";
@@ -928,18 +957,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->udDeletebutton->UseVisualStyleBackColor = true;
 			this->udDeletebutton->Click += gcnew System::EventHandler(this, &AdminForm::udDeletebutton_Click);
 			// 
-			// udinfotextBox
-			// 
-			this->udinfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->udinfotextBox->Location = System::Drawing::Point(9, 500);
-			this->udinfotextBox->Name = L"udinfotextBox";
-			this->udinfotextBox->ReadOnly = true;
-			this->udinfotextBox->ScrollBars = System::Windows::Forms::ScrollBars::Horizontal;
-			this->udinfotextBox->Size = System::Drawing::Size(1230, 34);
-			this->udinfotextBox->TabIndex = 5;
-			this->udinfotextBox->TextChanged += gcnew System::EventHandler(this, &AdminForm::udinfotextBox_TextChanged);
-			// 
 			// udlistBox
 			// 
 			this->udlistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
@@ -953,7 +970,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->udlistBox->Location = System::Drawing::Point(9, 16);
 			this->udlistBox->Name = L"udlistBox";
 			this->udlistBox->ScrollAlwaysVisible = true;
-			this->udlistBox->Size = System::Drawing::Size(1230, 469);
+			this->udlistBox->Size = System::Drawing::Size(1230, 407);
 			this->udlistBox->TabIndex = 2;
 			this->udlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::udlistBox_SelectedIndexChanged);
 			// 
@@ -1785,14 +1802,31 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->outputpanel->Size = System::Drawing::Size(1280, 705);
 			this->outputpanel->TabIndex = 51;
 			// 
+			// udinfotextBox
+			// 
+			this->udinfotextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->udinfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->udinfotextBox->FormattingEnabled = true;
+			this->udinfotextBox->HorizontalExtent = 15000;
+			this->udinfotextBox->HorizontalScrollbar = true;
+			this->udinfotextBox->ItemHeight = 31;
+			this->udinfotextBox->Location = System::Drawing::Point(10, 439);
+			this->udinfotextBox->Name = L"udinfotextBox";
+			this->udinfotextBox->ScrollAlwaysVisible = true;
+			this->udinfotextBox->SelectionMode = System::Windows::Forms::SelectionMode::None;
+			this->udinfotextBox->Size = System::Drawing::Size(1230, 97);
+			this->udinfotextBox->TabIndex = 7;
+			// 
 			// AdminForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1280, 770);
+			this->Controls->Add(this->Homepanel);
 			this->Controls->Add(this->outputpanel);
 			this->Controls->Add(this->Profilepanel);
-			this->Controls->Add(this->Homepanel);
 			this->Controls->Add(this->Headerstatuspanel);
 			this->Controls->Add(this->HeaderPanel);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -1811,13 +1845,10 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox1))->EndInit();
 			this->Homepanel->ResumeLayout(false);
 			this->Homepanel->PerformLayout();
-			this->suggestionpanel->ResumeLayout(false);
-			this->suggestionpanel->PerformLayout();
 			this->ARpanel->ResumeLayout(false);
-			this->ARpanel->PerformLayout();
+			this->suggestionpanel->ResumeLayout(false);
 			this->lupanel->ResumeLayout(false);
 			this->udpanel->ResumeLayout(false);
-			this->udpanel->PerformLayout();
 			this->abrpanel->ResumeLayout(false);
 			this->uupanel->ResumeLayout(false);
 			this->AdminHeaderpanel->ResumeLayout(false);
@@ -2673,7 +2704,7 @@ private: System::Void arlistBox_SelectedIndexChanged(System::Object^  sender, Sy
 			 String ^user=arlistBox->SelectedItem->ToString();
 			 if(user=="")
 			 {
-				 arinfotextBox->Text="";
+				 arinfotextBox->Items->Clear();
 				 return;
 			 }
 			 try
@@ -2689,7 +2720,8 @@ private: System::Void arlistBox_SelectedIndexChanged(System::Object^  sender, Sy
 					 String ^lastname=reader->GetString(17);
 					 String ^email=reader->GetString(4);
 					 //String ^contact=
-					 arinfotextBox->Text="FIRST NAME: "+firstname+" |LAST NAME :"+lastname+" |EMAIL: "+email;
+					 arinfotextBox->Items->Clear();
+					 arinfotextBox->Items->Add("FIRST NAME: "+firstname+" |LAST NAME :"+lastname+" |EMAIL: "+email);
 
 				 }
 
@@ -2814,6 +2846,8 @@ private: System::Void suggestionlistBox_SelectedIndexChanged(System::Object^  se
 			 }
 			 //MessageBox::Show(id);
 			 int ID=Convert::ToInt32(id);
+
+			 MessageBox::Show("Reached here");
 			 
 			 try
 			 {
@@ -2842,10 +2876,10 @@ private: System::Void suggestionlistBox_SelectedIndexChanged(System::Object^  se
 					 String ^ds=Convert::ToString(ds2);
 					 String ^module=Convert::ToString(module2);
 					 String ^reason=reader->GetString(16);
-					 
+					 MessageBox::Show("Reached here");
 					 
 					 suggestioninfotextBox->Text="TYPE: "+type+" |QUESTION :"+ques+" |OPTION 1: "+op1+" |OPTION 2: "+op2+" |OPTION 3: "+op3+" |OPTION 4: "+op4+" |USER: "+user+" |DS: "+ds+" : "+ds+" |MODULE: "+module+" |REASON: "+reason;
-
+					 MessageBox::Show("Reached here");
 				 }
 
 				 connection->Close();
@@ -3082,7 +3116,7 @@ private: System::Void udlistBox_SelectedIndexChanged(System::Object^  sender, Sy
 			 String ^user=udlistBox->SelectedItem->ToString();
 			 if(user=="")
 			 {
-				 suggestioninfotextBox->Text="";
+				udinfotextBox->Items->Clear();
 				 return;
 			 }
 			 //MessageBox::Show(id);
@@ -3105,8 +3139,8 @@ private: System::Void udlistBox_SelectedIndexChanged(System::Object^  sender, Sy
 					 //String ^contact=reader->GetString(5);
 					 
 
-
-					 udinfotextBox->Text="FIRST NAME: "+firstname+" |LAST NAME :"+lastname+" |EMAIL: "+email+" |DESIGNATION: "+designation+" |CONTACT: "+contact;
+					udinfotextBox->Items->Clear();
+					 udinfotextBox->Items->Add("FIRST NAME: "+firstname+" |LAST NAME :"+lastname+" |EMAIL: "+email+" |DESIGNATION: "+designation+" |CONTACT: "+contact);
 
 				 }
 
@@ -3480,6 +3514,62 @@ private: System::Void HeaderForumbutton_Click_1(System::Object^  sender, System:
 			 //HeaderDSButton->BackColor=Color::Black;
 			 HeaderForumbutton->BackColor=Color::Gray;
 			 HeaderProfilebutton->BackColor=Color::Black;
+		 }
+private: System::Void textBox1_TextChanged_1(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void suggestionlistBox_SelectedIndexChanged_1(System::Object^  sender, System::EventArgs^  e) {
+			 String ^id=suggestionlistBox->SelectedItem->ToString();
+			 if(id=="")
+			 {
+				 suggestioninfotextBox->Items->Clear();
+				 return;
+			 }
+			 //MessageBox::Show(id);
+			 int ID=Convert::ToInt32(id);
+
+			 //MessageBox::Show("Reached here");
+
+			 try
+			 {
+				 connection->Open();
+				 command->Connection=connection;
+				 query="Select * from Suggestion where [ID]="+ID+";";
+				 command->CommandText=query;
+				 OleDbDataReader ^reader=command->ExecuteReader();
+				 //MessageBox::Show("Reached here");
+				 while(reader->Read())
+				 {
+					 String ^type=reader->GetString(1);
+					 String ^ques=reader->GetString(2);
+					 //MessageBox::Show("|"+reader->GetData(3)+"|");
+					 String ^op1=reader->GetString(3);
+					 String ^op2=reader->GetString(4);
+					 String ^op3=reader->GetString(5);
+					 String ^op4=reader->GetString(6);
+					 //String ^ ans1=reader->GetString(7);
+					 //String ^ans2=reader->GetString(8);
+					 //String ^ans3=reader->GetString(9);
+					 //String ^ans4=reader->GetString(10);
+					 String ^user=reader->GetString(12);
+					 int ds2=reader->GetInt32(13);
+					 int module2=reader->GetInt32(14);
+					 String ^ds=Convert::ToString(ds2);
+					 String ^module=Convert::ToString(module2);
+					 String ^reason=reader->GetString(16);
+					 //MessageBox::Show("Reached here");
+
+					 suggestioninfotextBox->Items->Clear();
+					 suggestioninfotextBox->Items->Add("TYPE: "+type+" |QUESTION :"+ques+" |OPTION 1: "+op1+" |OPTION 2: "+op2+" |OPTION 3: "+op3+" |OPTION 4: "+op4+" |USER: "+user+" |DS: "+ds+" : "+ds+" |MODULE: "+module+" |REASON: "+reason);
+					 //MessageBox::Show("Reached here");
+				 }
+
+				 connection->Close();
+
+			 }
+			 catch (Exception ^e)
+			 {
+				 MessageBox::Show(e->Message,"Error while connecting to DB from Suggestion Info retrieval");
+			 }
 		 }
 };
 }

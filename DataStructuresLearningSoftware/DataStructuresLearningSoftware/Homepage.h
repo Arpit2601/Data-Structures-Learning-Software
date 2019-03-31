@@ -1610,10 +1610,10 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// Suggestionpanel
 			// 
 			this->Suggestionpanel->BackColor = System::Drawing::Color::Silver;
+			this->Suggestionpanel->Controls->Add(this->SuggestionDeletepanel);
 			this->Suggestionpanel->Controls->Add(this->SuggestionDSbutton);
 			this->Suggestionpanel->Controls->Add(this->SuggestionPastpanel);
 			this->Suggestionpanel->Controls->Add(this->SuggestionADDpanel);
-			this->Suggestionpanel->Controls->Add(this->SuggestionDeletepanel);
 			this->Suggestionpanel->Controls->Add(this->PastSuggestionradioButton);
 			this->Suggestionpanel->Controls->Add(this->deleteradioButton);
 			this->Suggestionpanel->Controls->Add(this->addradioButton);
@@ -2278,10 +2278,10 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1280, 770);
+			this->Controls->Add(this->DSpanel);
 			this->Controls->Add(this->outputpanel);
 			this->Controls->Add(this->Homepanel);
 			this->Controls->Add(this->Profilepanel);
-			this->Controls->Add(this->DSpanel);
 			this->Controls->Add(this->Headerstatuspanel);
 			this->Controls->Add(this->HeaderPanel);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -3446,12 +3446,18 @@ private: System::Void SuggestionAddSuggestionbutton_Click(System::Object^  sende
 			if(SuggestionAddOption4checkBox->Checked==true)
 				a4=1;
 
+			if(a1==0&&a2==0&&a3==0&&a4==0)
+			{
+				MessageBox::Show("Atleast one option should be correct","Suggestion ADD Error");
+				return;
+			}
+
 			//Success
 			try
 			{
 				connection->Open();
 				command->Connection=connection;
-				query = "INSERT INTO [Suggestion] ([Type], Question, Option1, Option2, Option3, Option4 , Answer1, Answer2, Answer3,Answer4,Status,Username,DS,[Module],[Reason,[ReasonD]]) VALUES ('ADD', '"+ques+"', '"+op1+"', '"+op2+"', '"+op3+"', '"+op4+"', "+a1+", "+a2+", "+a3+", "+a4+", 'Pending','"+username+"',"+ds_id+","+module_id+",'-','-'); ";
+				query = "INSERT INTO [Suggestion] ([Type], Question, Option1, Option2, Option3, Option4 , Answer1, Answer2, Answer3,Answer4,Status,Username,DS,[Module],[Reason],[ReasonD]) VALUES ('ADD', '"+ques+"', '"+op1+"', '"+op2+"', '"+op3+"', '"+op4+"', "+a1+", "+a2+", "+a3+", "+a4+", 'Pending','"+username+"',"+ds_id+","+module_id+",'-','-'); ";
 				command->CommandText=query;
 				command->ExecuteNonQuery();
 				connection->Close();
@@ -3701,7 +3707,7 @@ private: System::Void SuggestionDeletebutton_Click(System::Object^  sender, Syst
 			 {
 				 connection->Open();
 				 command->Connection=connection;
-				 query = "INSERT INTO [Suggestion] ([Type], [Question],[Status],[Username],[DS],[Module],[Reason],[ReasonD]) VALUES ('DELETE','"+ques+"', 'Pending','"+username+"',"+ds_id+","+module_id+",'-','"+input+"'); ";
+				 query = "INSERT INTO [Suggestion] ([Type], [Question],[Status],[Username],[DS],[Module],[Reason],[ReasonD],Option1,Option2,Option3,Option4) VALUES ('DELETE','"+ques+"', 'Pending','"+username+"',"+ds_id+","+module_id+",'-','"+input+"','-','-','-','-'); ";
 				 command->CommandText=query;
 				 command->ExecuteNonQuery();
 				 connection->Close();
