@@ -300,7 +300,7 @@ namespace DataStructuresLearningSoftware	 {
 
 				//Retrieving user info
 			
-			vartextBox->Text="sid";
+			
 
 		}
 
@@ -438,7 +438,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(AdminForm::typeid));
 			this->HeaderPanel = (gcnew System::Windows::Forms::Panel());
 			this->HeaderForumbutton = (gcnew System::Windows::Forms::Button());
 			this->HeaderClosebutton = (gcnew System::Windows::Forms::Button());
@@ -452,6 +451,10 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderStatusPanelpictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->HeaderStatusPanelpictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->Homepanel = (gcnew System::Windows::Forms::Panel());
+			this->udpanel = (gcnew System::Windows::Forms::Panel());
+			this->udDeletebutton = (gcnew System::Windows::Forms::Button());
+			this->udinfotextBox = (gcnew System::Windows::Forms::TextBox());
+			this->udlistBox = (gcnew System::Windows::Forms::ListBox());
 			this->lupanel = (gcnew System::Windows::Forms::Panel());
 			this->lulockbutton = (gcnew System::Windows::Forms::Button());
 			this->lulistBox = (gcnew System::Windows::Forms::ListBox());
@@ -465,10 +468,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->suggestionapprovebutton = (gcnew System::Windows::Forms::Button());
 			this->suggestioninfotextBox = (gcnew System::Windows::Forms::TextBox());
 			this->suggestionlistBox = (gcnew System::Windows::Forms::ListBox());
-			this->udpanel = (gcnew System::Windows::Forms::Panel());
-			this->udDeletebutton = (gcnew System::Windows::Forms::Button());
-			this->udinfotextBox = (gcnew System::Windows::Forms::TextBox());
-			this->udlistBox = (gcnew System::Windows::Forms::ListBox());
 			this->ARpanel = (gcnew System::Windows::Forms::Panel());
 			this->arinfotextBox = (gcnew System::Windows::Forms::TextBox());
 			this->ARRejectbutton = (gcnew System::Windows::Forms::Button());
@@ -541,11 +540,11 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox1))->BeginInit();
 			this->Homepanel->SuspendLayout();
+			this->udpanel->SuspendLayout();
 			this->lupanel->SuspendLayout();
 			this->abrpanel->SuspendLayout();
 			this->uupanel->SuspendLayout();
 			this->suggestionpanel->SuspendLayout();
-			this->udpanel->SuspendLayout();
 			this->ARpanel->SuspendLayout();
 			this->AdminHeaderpanel->SuspendLayout();
 			this->Profilepanel->SuspendLayout();
@@ -595,7 +594,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// HeaderClosebutton
 			// 
 			this->HeaderClosebutton->BackColor = System::Drawing::Color::White;
-			this->HeaderClosebutton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"HeaderClosebutton.BackgroundImage")));
 			this->HeaderClosebutton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->HeaderClosebutton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->HeaderClosebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
@@ -722,8 +720,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// Homepanel
 			// 
 			this->Homepanel->BackColor = System::Drawing::Color::AliceBlue;
-			this->Homepanel->Controls->Add(this->udpanel);
 			this->Homepanel->Controls->Add(this->lupanel);
+			this->Homepanel->Controls->Add(this->udpanel);
 			this->Homepanel->Controls->Add(this->abrpanel);
 			this->Homepanel->Controls->Add(this->uupanel);
 			this->Homepanel->Controls->Add(this->suggestionpanel);
@@ -737,6 +735,57 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Homepanel->Name = L"Homepanel";
 			this->Homepanel->Size = System::Drawing::Size(1280, 705);
 			this->Homepanel->TabIndex = 7;
+			// 
+			// udpanel
+			// 
+			this->udpanel->Controls->Add(this->udDeletebutton);
+			this->udpanel->Controls->Add(this->udinfotextBox);
+			this->udpanel->Controls->Add(this->udlistBox);
+			this->udpanel->Location = System::Drawing::Point(17, 91);
+			this->udpanel->Name = L"udpanel";
+			this->udpanel->Size = System::Drawing::Size(1248, 611);
+			this->udpanel->TabIndex = 22;
+			// 
+			// udDeletebutton
+			// 
+			this->udDeletebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->udDeletebutton->Location = System::Drawing::Point(1086, 550);
+			this->udDeletebutton->Name = L"udDeletebutton";
+			this->udDeletebutton->Size = System::Drawing::Size(154, 52);
+			this->udDeletebutton->TabIndex = 6;
+			this->udDeletebutton->Text = L"Delete";
+			this->udDeletebutton->UseVisualStyleBackColor = true;
+			this->udDeletebutton->Click += gcnew System::EventHandler(this, &AdminForm::udDeletebutton_Click);
+			// 
+			// udinfotextBox
+			// 
+			this->udinfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->udinfotextBox->Location = System::Drawing::Point(9, 500);
+			this->udinfotextBox->Name = L"udinfotextBox";
+			this->udinfotextBox->ReadOnly = true;
+			this->udinfotextBox->ScrollBars = System::Windows::Forms::ScrollBars::Horizontal;
+			this->udinfotextBox->Size = System::Drawing::Size(1230, 34);
+			this->udinfotextBox->TabIndex = 5;
+			this->udinfotextBox->TextChanged += gcnew System::EventHandler(this, &AdminForm::udinfotextBox_TextChanged);
+			// 
+			// udlistBox
+			// 
+			this->udlistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->udlistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->udlistBox->FormattingEnabled = true;
+			this->udlistBox->HorizontalExtent = 15000;
+			this->udlistBox->HorizontalScrollbar = true;
+			this->udlistBox->ItemHeight = 31;
+			this->udlistBox->Location = System::Drawing::Point(9, 16);
+			this->udlistBox->Name = L"udlistBox";
+			this->udlistBox->ScrollAlwaysVisible = true;
+			this->udlistBox->Size = System::Drawing::Size(1230, 469);
+			this->udlistBox->TabIndex = 2;
+			this->udlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::udlistBox_SelectedIndexChanged);
 			// 
 			// lupanel
 			// 
@@ -901,57 +950,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->suggestionlistBox->Size = System::Drawing::Size(1230, 469);
 			this->suggestionlistBox->TabIndex = 1;
 			this->suggestionlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::suggestionlistBox_SelectedIndexChanged);
-			// 
-			// udpanel
-			// 
-			this->udpanel->Controls->Add(this->udDeletebutton);
-			this->udpanel->Controls->Add(this->udinfotextBox);
-			this->udpanel->Controls->Add(this->udlistBox);
-			this->udpanel->Location = System::Drawing::Point(17, 91);
-			this->udpanel->Name = L"udpanel";
-			this->udpanel->Size = System::Drawing::Size(1248, 611);
-			this->udpanel->TabIndex = 22;
-			// 
-			// udDeletebutton
-			// 
-			this->udDeletebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->udDeletebutton->Location = System::Drawing::Point(1086, 550);
-			this->udDeletebutton->Name = L"udDeletebutton";
-			this->udDeletebutton->Size = System::Drawing::Size(154, 52);
-			this->udDeletebutton->TabIndex = 6;
-			this->udDeletebutton->Text = L"Delete";
-			this->udDeletebutton->UseVisualStyleBackColor = true;
-			this->udDeletebutton->Click += gcnew System::EventHandler(this, &AdminForm::udDeletebutton_Click);
-			// 
-			// udinfotextBox
-			// 
-			this->udinfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->udinfotextBox->Location = System::Drawing::Point(9, 500);
-			this->udinfotextBox->Name = L"udinfotextBox";
-			this->udinfotextBox->ReadOnly = true;
-			this->udinfotextBox->ScrollBars = System::Windows::Forms::ScrollBars::Horizontal;
-			this->udinfotextBox->Size = System::Drawing::Size(1230, 34);
-			this->udinfotextBox->TabIndex = 5;
-			this->udinfotextBox->TextChanged += gcnew System::EventHandler(this, &AdminForm::udinfotextBox_TextChanged);
-			// 
-			// udlistBox
-			// 
-			this->udlistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(224)));
-			this->udlistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->udlistBox->FormattingEnabled = true;
-			this->udlistBox->HorizontalExtent = 15000;
-			this->udlistBox->HorizontalScrollbar = true;
-			this->udlistBox->ItemHeight = 31;
-			this->udlistBox->Location = System::Drawing::Point(9, 16);
-			this->udlistBox->Name = L"udlistBox";
-			this->udlistBox->ScrollAlwaysVisible = true;
-			this->udlistBox->Size = System::Drawing::Size(1230, 469);
-			this->udlistBox->TabIndex = 2;
-			this->udlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::udlistBox_SelectedIndexChanged);
 			// 
 			// ARpanel
 			// 
@@ -1196,7 +1194,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfilepictureBox
 			// 
-			this->ProfilepictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfilepictureBox.BackgroundImage")));
 			this->ProfilepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ProfilepictureBox->Location = System::Drawing::Point(9, 6);
 			this->ProfilepictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -1529,7 +1526,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileSecuritypictureBox2
 			// 
-			this->ProfileSecuritypictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfileSecuritypictureBox2.BackgroundImage")));
 			this->ProfileSecuritypictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ProfileSecuritypictureBox2->Location = System::Drawing::Point(780, 640);
 			this->ProfileSecuritypictureBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -1576,7 +1572,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileSecuritypictureBox1
 			// 
-			this->ProfileSecuritypictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfileSecuritypictureBox1.BackgroundImage")));
 			this->ProfileSecuritypictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ProfileSecuritypictureBox1->Location = System::Drawing::Point(33, 640);
 			this->ProfileSecuritypictureBox1->Margin = System::Windows::Forms::Padding(0);
@@ -1609,7 +1604,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileChangePasswordpictureBox3
 			// 
-			this->ProfileChangePasswordpictureBox3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfileChangePasswordpictureBox3.BackgroundImage")));
 			this->ProfileChangePasswordpictureBox3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ProfileChangePasswordpictureBox3->Location = System::Drawing::Point(780, 487);
 			this->ProfileChangePasswordpictureBox3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -1642,7 +1636,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileChangePasswordpictureBox2
 			// 
-			this->ProfileChangePasswordpictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfileChangePasswordpictureBox2.BackgroundImage")));
 			this->ProfileChangePasswordpictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ProfileChangePasswordpictureBox2->Location = System::Drawing::Point(408, 487);
 			this->ProfileChangePasswordpictureBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -1675,7 +1668,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileChangePasswordpictureBox1
 			// 
-			this->ProfileChangePasswordpictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfileChangePasswordpictureBox1.BackgroundImage")));
 			this->ProfileChangePasswordpictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ProfileChangePasswordpictureBox1->Location = System::Drawing::Point(33, 487);
 			this->ProfileChangePasswordpictureBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -1799,13 +1791,13 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox1))->EndInit();
 			this->Homepanel->ResumeLayout(false);
 			this->Homepanel->PerformLayout();
+			this->udpanel->ResumeLayout(false);
+			this->udpanel->PerformLayout();
 			this->lupanel->ResumeLayout(false);
 			this->abrpanel->ResumeLayout(false);
 			this->uupanel->ResumeLayout(false);
 			this->suggestionpanel->ResumeLayout(false);
 			this->suggestionpanel->PerformLayout();
-			this->udpanel->ResumeLayout(false);
-			this->udpanel->PerformLayout();
 			this->ARpanel->ResumeLayout(false);
 			this->ARpanel->PerformLayout();
 			this->AdminHeaderpanel->ResumeLayout(false);
@@ -3110,6 +3102,7 @@ private: System::Void udDeletebutton_Click(System::Object^  sender, System::Even
 				 if(designation=="admin")
 				 {
 					 MessageBox::Show("Can't delete an Admin","Delete User");
+					 connection->Close();
 					 return;
 				 }
 
@@ -3237,8 +3230,10 @@ private: System::Void lulockbutton_Click(System::Object^  sender, System::EventA
 				 if(designation=="admin")
 				 {
 					 MessageBox::Show("Can't lock an Admin","Lock User");
+					 connection->Close();
 					 return;
 				 }
+				 connection->Close();
 
 			 }
 			 catch (Exception ^e)
@@ -3259,6 +3254,7 @@ private: System::Void lulockbutton_Click(System::Object^  sender, System::EventA
 				 System::Object ^sender;
 				 System::EventArgs ^e;
 				 this->button3_Click_1(sender,e);
+				
 
 			 }
 			 catch (Exception ^e)
@@ -3303,6 +3299,7 @@ private: System::Void button7_Click(System::Object^  sender, System::EventArgs^ 
 				 System::Object ^sender;
 				 System::EventArgs ^e;
 				 this->button6_Click(sender,e);
+				
 
 			 }
 			 catch (Exception ^e)

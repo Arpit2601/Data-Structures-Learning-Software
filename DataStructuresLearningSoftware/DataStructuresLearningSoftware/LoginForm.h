@@ -3114,22 +3114,50 @@ private: System::Void LoginButton_Click(System::Object^  sender, System::EventAr
 				while(reader->Read())
 				{n++;
 					String ^pass=reader->GetString(3);
+					String ^lstatus=reader->GetString(22);
+					String ^designation=reader->GetString(7);
 					if(pass==password)
-					{connection->Close();
-						Homepage ^form= gcnew Homepage;
+					{	
+
+						//connection->Close();
+						if(lstatus=="Locked")
+						{
+							MessageBox::Show("Account locked by Admin","Login");
+							break;
+						}
+						if(designation!="admin")
+						{
+							Homepage ^form= gcnew Homepage;
+
+							form->vartextBox->Text=username;
+							//MessageBox::Show(form->username);
+							//MessageBox::Show("True");
+							this->Hide();
+							form->ShowDialog();
+							this->Show();
+							UsernameTextBox->Text="";
+							PasswordTextBox->Text="";
+							UsernameTextBox->Focus();
+							UsernameTextBox->Select();
+
+							break;
+						}
+						else
+						{
+							AdminForm ^form= gcnew AdminForm;
+
+							form->vartextBox->Text=username;
+							//MessageBox::Show(form->username);
+							//MessageBox::Show("True");
+							this->Hide();
+							form->ShowDialog();
+							this->Show();
+							UsernameTextBox->Text="";
+							PasswordTextBox->Text="";
+							UsernameTextBox->Focus();
+							UsernameTextBox->Select();
+						}
 						
-						form->vartextBox->Text=username;
-						//MessageBox::Show(form->username);
-						//MessageBox::Show("True");
-						this->Hide();
-						form->ShowDialog();
-						this->Show();
-						UsernameTextBox->Text="";
-						PasswordTextBox->Text="";
-						UsernameTextBox->Focus();
-						UsernameTextBox->Select();
-						
-						break;
 
 					}
 					else
