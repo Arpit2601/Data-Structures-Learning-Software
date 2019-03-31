@@ -585,12 +585,7 @@ private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^ 
 				 modulesCompleted = reader->GetInt32(10);
 			 }
 
-			 DB_Connection->Close();
-
-			 if(this->Owner != nullptr){
-				 this->Hide();
-				 this->Owner->Show();
-			 }
+			 this->Close();
 		 }
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 			 MainPanel->Controls->Clear();

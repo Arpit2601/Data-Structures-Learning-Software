@@ -59,10 +59,6 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::CheckBox^  searchcheck;
 	private: System::Windows::Forms::CheckBox^  llcheck;
 	private: System::Windows::Forms::CheckBox^  arrycheck;
-	private: System::Windows::Forms::CheckBox^  heapcheck;
-
-	private: System::Windows::Forms::CheckBox^  graphcheck;
-	private: System::Windows::Forms::CheckBox^  bstcheck;
 
 
 
@@ -81,9 +77,6 @@ namespace DataStructuresLearningSoftware {
 		void InitializeComponent(void)
 		{
 			this->toppanel = (gcnew System::Windows::Forms::Panel());
-			this->heapcheck = (gcnew System::Windows::Forms::CheckBox());
-			this->graphcheck = (gcnew System::Windows::Forms::CheckBox());
-			this->bstcheck = (gcnew System::Windows::Forms::CheckBox());
 			this->stackcheck = (gcnew System::Windows::Forms::CheckBox());
 			this->queuecheck = (gcnew System::Windows::Forms::CheckBox());
 			this->sortcheck = (gcnew System::Windows::Forms::CheckBox());
@@ -91,8 +84,8 @@ namespace DataStructuresLearningSoftware {
 			this->llcheck = (gcnew System::Windows::Forms::CheckBox());
 			this->arrycheck = (gcnew System::Windows::Forms::CheckBox());
 			this->filterbtn = (gcnew System::Windows::Forms::Button());
-			this->message_detail = (gcnew System::Windows::Forms::Panel());
 			this->msgpanel = (gcnew System::Windows::Forms::Panel());
+			this->message_detail = (gcnew System::Windows::Forms::Panel());
 			this->replypanel = (gcnew System::Windows::Forms::Panel());
 			this->tagcombo = (gcnew System::Windows::Forms::ComboBox());
 			this->replybtn = (gcnew System::Windows::Forms::Button());
@@ -105,10 +98,6 @@ namespace DataStructuresLearningSoftware {
 			// 
 			this->toppanel->BackColor = System::Drawing::Color::White;
 			this->toppanel->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->toppanel->Controls->Add(this->message_detail);
-			this->toppanel->Controls->Add(this->heapcheck);
-			this->toppanel->Controls->Add(this->graphcheck);
-			this->toppanel->Controls->Add(this->bstcheck);
 			this->toppanel->Controls->Add(this->stackcheck);
 			this->toppanel->Controls->Add(this->queuecheck);
 			this->toppanel->Controls->Add(this->sortcheck);
@@ -121,48 +110,6 @@ namespace DataStructuresLearningSoftware {
 			this->toppanel->Size = System::Drawing::Size(1104, 31);
 			this->toppanel->TabIndex = 0;
 			// 
-			// heapcheck
-			// 
-			this->heapcheck->AutoSize = true;
-			this->heapcheck->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->heapcheck->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->heapcheck->ForeColor = System::Drawing::Color::Black;
-			this->heapcheck->Location = System::Drawing::Point(846, 2);
-			this->heapcheck->Name = L"heapcheck";
-			this->heapcheck->Size = System::Drawing::Size(68, 24);
-			this->heapcheck->TabIndex = 10;
-			this->heapcheck->Text = L"Heap";
-			this->heapcheck->UseVisualStyleBackColor = true;
-			// 
-			// graphcheck
-			// 
-			this->graphcheck->AutoSize = true;
-			this->graphcheck->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->graphcheck->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->graphcheck->ForeColor = System::Drawing::Color::Black;
-			this->graphcheck->Location = System::Drawing::Point(766, 2);
-			this->graphcheck->Name = L"graphcheck";
-			this->graphcheck->Size = System::Drawing::Size(74, 24);
-			this->graphcheck->TabIndex = 9;
-			this->graphcheck->Text = L"Graph";
-			this->graphcheck->UseVisualStyleBackColor = true;
-			// 
-			// bstcheck
-			// 
-			this->bstcheck->AutoSize = true;
-			this->bstcheck->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->bstcheck->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->bstcheck->ForeColor = System::Drawing::Color::Black;
-			this->bstcheck->Location = System::Drawing::Point(685, 2);
-			this->bstcheck->Name = L"bstcheck";
-			this->bstcheck->Size = System::Drawing::Size(61, 24);
-			this->bstcheck->TabIndex = 8;
-			this->bstcheck->Text = L"BST";
-			this->bstcheck->UseVisualStyleBackColor = true;
-			// 
 			// stackcheck
 			// 
 			this->stackcheck->AutoSize = true;
@@ -170,7 +117,7 @@ namespace DataStructuresLearningSoftware {
 			this->stackcheck->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->stackcheck->ForeColor = System::Drawing::Color::Black;
-			this->stackcheck->Location = System::Drawing::Point(596, 2);
+			this->stackcheck->Location = System::Drawing::Point(627, 3);
 			this->stackcheck->Name = L"stackcheck";
 			this->stackcheck->Size = System::Drawing::Size(70, 24);
 			this->stackcheck->TabIndex = 7;
@@ -184,7 +131,7 @@ namespace DataStructuresLearningSoftware {
 			this->queuecheck->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->queuecheck->ForeColor = System::Drawing::Color::Black;
-			this->queuecheck->Location = System::Drawing::Point(489, 3);
+			this->queuecheck->Location = System::Drawing::Point(514, 3);
 			this->queuecheck->Name = L"queuecheck";
 			this->queuecheck->Size = System::Drawing::Size(77, 24);
 			this->queuecheck->TabIndex = 6;
@@ -199,7 +146,7 @@ namespace DataStructuresLearningSoftware {
 			this->sortcheck->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->sortcheck->ForeColor = System::Drawing::Color::Black;
-			this->sortcheck->Location = System::Drawing::Point(380, 3);
+			this->sortcheck->Location = System::Drawing::Point(396, 3);
 			this->sortcheck->Name = L"sortcheck";
 			this->sortcheck->Size = System::Drawing::Size(81, 24);
 			this->sortcheck->TabIndex = 5;
@@ -213,7 +160,7 @@ namespace DataStructuresLearningSoftware {
 			this->searchcheck->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->searchcheck->ForeColor = System::Drawing::Color::Black;
-			this->searchcheck->Location = System::Drawing::Point(252, 2);
+			this->searchcheck->Location = System::Drawing::Point(264, 2);
 			this->searchcheck->Name = L"searchcheck";
 			this->searchcheck->Size = System::Drawing::Size(103, 24);
 			this->searchcheck->TabIndex = 4;
@@ -227,7 +174,7 @@ namespace DataStructuresLearningSoftware {
 			this->llcheck->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->llcheck->ForeColor = System::Drawing::Color::Black;
-			this->llcheck->Location = System::Drawing::Point(122, 3);
+			this->llcheck->Location = System::Drawing::Point(123, 3);
 			this->llcheck->Name = L"llcheck";
 			this->llcheck->Size = System::Drawing::Size(110, 24);
 			this->llcheck->TabIndex = 3;
@@ -257,7 +204,7 @@ namespace DataStructuresLearningSoftware {
 			this->filterbtn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->filterbtn->ForeColor = System::Drawing::Color::White;
-			this->filterbtn->Location = System::Drawing::Point(941, -1);
+			this->filterbtn->Location = System::Drawing::Point(897, -1);
 			this->filterbtn->Name = L"filterbtn";
 			this->filterbtn->Size = System::Drawing::Size(114, 31);
 			this->filterbtn->TabIndex = 1;
@@ -265,23 +212,23 @@ namespace DataStructuresLearningSoftware {
 			this->filterbtn->UseVisualStyleBackColor = false;
 			this->filterbtn->Click += gcnew System::EventHandler(this, &DiscussionForum::filterbtn_Click);
 			// 
-			// message_detail
-			// 
-			this->message_detail->AutoScroll = true;
-			this->message_detail->BackColor = System::Drawing::Color::White;
-			this->message_detail->Location = System::Drawing::Point(-1, 2);
-			this->message_detail->Name = L"message_detail";
-			this->message_detail->Size = System::Drawing::Size(1105, 557);
-			this->message_detail->TabIndex = 2;
-			// 
 			// msgpanel
 			// 
 			this->msgpanel->AutoScroll = true;
 			this->msgpanel->BackColor = System::Drawing::Color::White;
-			this->msgpanel->Location = System::Drawing::Point(3, 37);
+			this->msgpanel->Location = System::Drawing::Point(0, 30);
 			this->msgpanel->Name = L"msgpanel";
 			this->msgpanel->Size = System::Drawing::Size(1105, 527);
 			this->msgpanel->TabIndex = 1;
+			// 
+			// message_detail
+			// 
+			this->message_detail->AutoScroll = true;
+			this->message_detail->BackColor = System::Drawing::Color::White;
+			this->message_detail->Location = System::Drawing::Point(0, 0);
+			this->message_detail->Name = L"message_detail";
+			this->message_detail->Size = System::Drawing::Size(1105, 557);
+			this->message_detail->TabIndex = 2;
 			// 
 			// replypanel
 			// 
@@ -300,8 +247,8 @@ namespace DataStructuresLearningSoftware {
 			this->tagcombo->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->tagcombo->ForeColor = System::Drawing::Color::Black;
 			this->tagcombo->FormattingEnabled = true;
-			this->tagcombo->Items->AddRange(gcnew cli::array< System::Object^  >(9) {L"Array", L"Linked List", L"Searching", L"Sorting", 
-				L"Stack", L"Queue", L"BST", L"Graph", L"Heap"});
+			this->tagcombo->Items->AddRange(gcnew cli::array< System::Object^  >(6) {L"Array", L"Linked List", L"Searching", L"Sorting", 
+				L"Stack", L"Queue"});
 			this->tagcombo->Location = System::Drawing::Point(882, 57);
 			this->tagcombo->Name = L"tagcombo";
 			this->tagcombo->Size = System::Drawing::Size(155, 24);
@@ -335,6 +282,7 @@ namespace DataStructuresLearningSoftware {
 			// DiscussionForum
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->Controls->Add(this->message_detail);
 			this->Controls->Add(this->replypanel);
 			this->Controls->Add(this->toppanel);
 			this->Controls->Add(this->msgpanel);
@@ -365,7 +313,6 @@ namespace DataStructuresLearningSoftware {
 		String ^ username;
 		String ^ designation;
 		bool approved ;
-		String ^ module;
 		System::Collections::Generic::List<System::String ^> filters;
 		// on load function
 
@@ -382,7 +329,7 @@ namespace DataStructuresLearningSoftware {
 				designation = reader->GetString(7);
 				approved = reader->GetBoolean(6);
 			}
-		
+
 			DB_Connection->Close();
 			msgpanel->Controls->Clear();
 			reply_message="message";
@@ -401,6 +348,8 @@ namespace DataStructuresLearningSoftware {
 			bool flag = false;
 
 			// to be done later select a field on load 
+			tagcombo->Text = "Array";
+			String ^ module_name = "Array";
 			try{
 				OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
 				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
@@ -458,7 +407,7 @@ namespace DataStructuresLearningSoftware {
 						background->BorderStyle=System::Windows::Forms::BorderStyle::FixedSingle;
 
 						Number_of_replies->Text=count.ToString()+" comments";
-						
+
 						username_text->Text = "By: " + reader->GetString(5);
 						type_text->Text = reader->GetString(6);
 						date_text->Text = "Posted " + System::DateTime::Now.Subtract(reader->GetDateTime(2)).Hours.ToString()+" Hours ago";
@@ -478,7 +427,7 @@ namespace DataStructuresLearningSoftware {
 						tag_text->ForeColor=Color::DimGray;
 						date_text->ForeColor=Color::DimGray;
 						type_text->ForeColor=Color::DimGray;
-						
+
 
 						message_text->AutoEllipsis=true;
 						message_text->MaximumSize=Drawing::Size(messagewidth-15,22);
@@ -490,17 +439,17 @@ namespace DataStructuresLearningSoftware {
 						message_text->Font=gcnew System::Drawing::Font("Times New Roman",12,FontStyle::Bold);
 						message_text->Location = Drawing::Point(startx+10,starty+30);
 						Number_of_replies->Font=gcnew System::Drawing::Font("Arial",8,FontStyle::Underline);
-						
-						
+
+
 						message_text->Tag = reader->GetValue(0);
 						Number_of_replies->Tag=reader->GetValue(0);
 						msgpanel->Controls->Add(message_text);
-						
+
 						Number_of_replies->Click += gcnew EventHandler(this,&DiscussionForum::message_text_click);
 						message_text->Click  += gcnew EventHandler(this, &DiscussionForum::message_text_click);
 						message_text->Cursor= System::Windows::Forms::Cursors::Hand;
 						Number_of_replies->Cursor= System::Windows::Forms::Cursors::Hand;
-						
+
 						if(reader->GetString(5)==username)
 						{
 							//MessageBox::Show(username);
@@ -528,43 +477,7 @@ namespace DataStructuresLearningSoftware {
 
 
 	private: System::Void DiscussionForum_Load(System::Object^  sender, System::EventArgs^  e) {
-				 tagcombo->Text=module;
-				 if(module=="Array")
-				 {
-					arrycheck->Checked=true;
-				 }
-				 if(module=="Linked List")
-				 {
-					 llcheck->Checked=true;
-				 }
-				 if(module=="Searching")
-				 {
-					 searchcheck->Checked=true;
-				 }
-				 if(module=="Sorting")
-				 {
-					 sortcheck->Checked=true;
-				 }
-				 if(module=="Queue")
-				 {
-					 queuecheck->Checked=true;
-				 }
-				 if(module=="Stack")
-				 {
-					 stackcheck->Checked=true;
-				 }
-				 if(module=="BST")
-				 {
-					 bstcheck->Checked=true;
-				 }
-				 if(module=="Graph")
-				 {
-					 graphcheck->Checked=true;
-				 }
-				 if(module=="Heap")
-				 {
-					 heapcheck->Checked=true;
-				 }
+				 arrycheck->Checked=true;
 				 filterbtn->PerformClick();		
 
 			 }
@@ -580,100 +493,98 @@ namespace DataStructuresLearningSoftware {
 
 
 
-			}			// function for posting messages and replies
+			}
+
+			// function for posting messages and replies
 	private: System::Void replybtn_Click(System::Object^  sender, System::EventArgs^  e) {
 				 if(username=="guest")
 				 {
 					 MessageBox::Show("Login or Sign-up to post this message!!");
 				 }
-				 else if(replytxt->Text=="")
-				 {
-					MessageBox::Show("Empty message");
-				 }
 				 else{
-				 // function for posting message and replies on clicking post button
-				 if(reply_message=="message")
-				 {
-					 DialogResult result = MessageBox::Show("You sure want to post ?", "Post", 
-						 MessageBoxButtons::YesNoCancel, MessageBoxIcon::Question);
-					 if(result==DialogResult::Yes)
+					 // function for posting message and replies on clicking post button
+					 if(reply_message=="message")
+					 {
+						 DialogResult result = MessageBox::Show("You sure want to post ?", "Post", 
+							 MessageBoxButtons::YesNoCancel, MessageBoxIcon::Question);
+						 if(result==DialogResult::Yes)
+						 {
+
+							 try{
+								 OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
+								 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+
+								 // username and designation and to be later on taken from main page
+								 String ^ messagetext = replytxt->Text;
+								 String ^  date = System::DateTime::Now.ToString();
+								 String ^ tag = tagcombo->Text;
+								 String ^ closed = "NO";
+								 String ^ reportedabuse = "NO";
+
+
+								 String ^ insertString = "insert into Messages([Message],[Date&Time],[FieldTag],[Closed],[Username],[Designation],[ReportedAbuse]) VALUES('" +messagetext+ "','" + date + "' , '" +tag+ "', '" +closed+ "', '" +username+ "', '" +designation+ "', '" +reportedabuse+ "' );";
+
+								 DB_Connection->Open();
+
+								 OleDbCommand ^ cmd = gcnew OleDbCommand(insertString, DB_Connection);
+								 cmd->ExecuteNonQuery();
+								 DB_Connection->Close();
+								 MessageBox::Show("Your message has been recorded.");
+								 replytxt->Text = "";
+							 }
+
+							 catch(Exception ^ ex)
+							 {
+								 MessageBox::Show(ex->Message);
+							 }
+							 DiscussionForum_Load(sender,e);
+						 }
+					 }
+					 else if(reply_message=="reply")
 					 {
 
-						 try{
-							 OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
-							 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
-
-							 // username and designation and to be later on taken from main page
-							 String ^ messagetext = replytxt->Text;
-							 String ^  date = System::DateTime::Now.ToString();
-							 String ^ tag = tagcombo->Text;
-							 String ^ closed = "NO";
-							 String ^ reportedabuse = "NO";
-
-
-							 String ^ insertString = "insert into Messages([Message],[Date&Time],[FieldTag],[Closed],[Username],[Designation],[ReportedAbuse]) VALUES('" +messagetext+ "','" + date + "' , '" +tag+ "', '" +closed+ "', '" +username+ "', '" +designation+ "', '" +reportedabuse+ "' );";
-
-							 DB_Connection->Open();
-
-							 OleDbCommand ^ cmd = gcnew OleDbCommand(insertString, DB_Connection);
-							 cmd->ExecuteNonQuery();
-							 DB_Connection->Close();
-							 MessageBox::Show("Your message has been recorded.");
-							 replytxt->Text = "";
-						 }
-
-						 catch(Exception ^ ex)
+						 DialogResult result = MessageBox::Show("You sure want to reply ?", "Post", 
+							 MessageBoxButtons::YesNoCancel, MessageBoxIcon::Question);
+						 if(result==DialogResult::Yes)
 						 {
-							 MessageBox::Show(ex->Message);
-						 }
-						 DiscussionForum_Load(sender,e);
-					 }
-				 }
-				 else if(reply_message=="reply")
-				 {
 
-					 DialogResult result = MessageBox::Show("You sure want to reply ?", "Post", 
-						 MessageBoxButtons::YesNoCancel, MessageBoxIcon::Question);
-					 if(result==DialogResult::Yes)
-					 {
+							 try{
+								 OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
+								 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 
-						 try{
-							 OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
-							 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+								 // username and designation and to be later on taken from main page
+								 String ^ replytext = replytxt->Text;
+								 String ^  date = System::DateTime::Now.ToString();
+								 int message_id_for_reply = message_id;
 
-							 // username and designation and to be later on taken from main page
-							 String ^ replytext = replytxt->Text;
-							 String ^  date = System::DateTime::Now.ToString();
-							 int message_id_for_reply = message_id;
-
-							 String ^ closed = "NO";
-							 String ^ designation = designation;
-							 String ^ reportedabuse = "NO";
+								 String ^ closed = "NO";
+								 String ^ designation = designation;
+								 String ^ reportedabuse = "NO";
 
 
 
-							 String ^ insertString = "insert into Replies([MessageID],[UserName],[Reply],[Date&Time],[Designation],[ReportedAbuse]) VALUES(" + message_id_for_reply + ",'" + username + "' , '" + replytext + "', '" + date + "', '" + designation + "', '" + reportedabuse + "' );";
+								 String ^ insertString = "insert into Replies([MessageID],[UserName],[Reply],[Date&Time],[Designation],[ReportedAbuse]) VALUES(" + message_id_for_reply + ",'" + username + "' , '" + replytext + "', '" + date + "', '" + designation + "', '" + reportedabuse + "' );";
 
-							 DB_Connection->Open();
+								 DB_Connection->Open();
 
-							 OleDbCommand ^ cmd = gcnew OleDbCommand(insertString, DB_Connection);
-							 cmd->ExecuteNonQuery();
-							 DB_Connection->Close();
-							 MessageBox::Show("Your reply has been recorded.");
-							 replytxt->Text = "";
+								 OleDbCommand ^ cmd = gcnew OleDbCommand(insertString, DB_Connection);
+								 cmd->ExecuteNonQuery();
+								 DB_Connection->Close();
+								 MessageBox::Show("Your reply has been recorded.");
+								 replytxt->Text = "";
+							 }
+
+							 catch(Exception ^ ex)
+							 {
+								 MessageBox::Show(ex->Message);
+							 }
+							 refresh_messagebody(message_id);
 						 }
 
-						 catch(Exception ^ ex)
-						 {
-							 MessageBox::Show(ex->Message);
-						 }
-						 refresh_messagebody(message_id);
 					 }
 
+
 				 }
-
-
-			 }
 			 }
 			 // function for refreshing message detail page after clicking on post
 	public: Void refresh_messagebody(int message_id)
@@ -767,8 +678,8 @@ namespace DataStructuresLearningSoftware {
 					deletethread->Location = Drawing::Point(startx+messagebodywidth*0.79,starty+messagetext->Height+5);
 					replylabel->Location = Drawing::Point(startx,starty+messagetext->Height+60);
 
-					
-					
+
+
 
 					replylabel->Font = gcnew System::Drawing::Font("Times New Roman", 15,FontStyle::Bold);
 					reportabuse->Cursor= System::Windows::Forms::Cursors::Hand;
@@ -784,7 +695,7 @@ namespace DataStructuresLearningSoftware {
 					deletethread->Click  += gcnew EventHandler(this, &DiscussionForum::deletethread_Click);
 
 
-					
+
 					message_detail->Controls->Add(messagetext);
 					message_detail->Controls->Add(usernametext);
 					message_detail->Controls->Add(datetext);
@@ -796,7 +707,7 @@ namespace DataStructuresLearningSoftware {
 					message_detail->Controls->Add(deletethread);
 					if(designation=="admin"||(designation=="prof"&&approved==true))
 					{
-						
+
 					}
 					else
 					{
@@ -1102,27 +1013,12 @@ namespace DataStructuresLearningSoftware {
 				 {
 					 filters.Add("Queue");
 				 }
-				 if(arrycheck->Checked==true)
+				 if(stackcheck->Checked==true)
 				 {
-					 filters.Add("Array");
-				 }
-				 if(bstcheck->Checked==true)
-				 {
-					 filters.Add("BST");
-				 }
-				 if(graphcheck->Checked==true)
-				 {
-					 filters.Add("Graph");
-				 }
-				 if(heapcheck->Checked==true)
-				 {
-					 filters.Add("Heap");
+					 filters.Add("Stack");
 				 }
 				 if(filters.Count==0)
 				 {
-					 filters.Add("BST");
-					 filters.Add("Graph");
-					 filters.Add("Heap");
 					 filters.Add("Array");
 					 filters.Add("Linked List");
 					 filters.Add("Sorting");
@@ -1138,5 +1034,5 @@ namespace DataStructuresLearningSoftware {
 			 }
 	private: System::Void queuecheck_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 			 }
-};
+	};
 }

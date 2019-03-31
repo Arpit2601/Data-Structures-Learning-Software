@@ -832,7 +832,7 @@ private: System::Void richTextBox1_TextChanged(System::Object^  sender, System::
 private: System::Void discussbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 			 outputpanel->Controls->Clear();
 			 DiscussionForum ^ discuss = gcnew DiscussionForum;
-			 discuss->module="Queue";
+			 //discuss->module="Queue";
 			 discuss->username=username;
 			 outputpanel->Controls->Add(discuss);
 		 }

@@ -605,10 +605,7 @@ namespace DataStructuresLearningSoftware {
 
 				 DB_Connection->Close();
 
-				 if(this->Owner != nullptr){
-					 this->Hide();
-					 this->Owner->Show();
-				 }
+				 this->Close();
 			}
 private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
 			 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();

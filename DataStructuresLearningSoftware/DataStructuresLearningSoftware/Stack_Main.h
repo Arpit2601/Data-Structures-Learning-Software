@@ -602,10 +602,7 @@ private: System::Void btnNext_Click_1(System::Object^  sender, System::EventArgs
 			 }
 		 }
 private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(this->Owner != nullptr){
-				 this->Hide();
-				 this->Owner->Show();
-			 }
+			 this->Close();
 		 }
 };
 }

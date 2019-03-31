@@ -474,15 +474,15 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderStatusPanelpictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->HeaderStatusPanelpictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->Homepanel = (gcnew System::Windows::Forms::Panel());
+			this->udpanel = (gcnew System::Windows::Forms::Panel());
+			this->udinfotextBox = (gcnew System::Windows::Forms::ListBox());
+			this->udDeletebutton = (gcnew System::Windows::Forms::Button());
+			this->udlistBox = (gcnew System::Windows::Forms::ListBox());
 			this->suggestionpanel = (gcnew System::Windows::Forms::Panel());
 			this->suggestioninfotextBox = (gcnew System::Windows::Forms::ListBox());
 			this->suggestionlistBox = (gcnew System::Windows::Forms::ListBox());
 			this->SuggestionRejectbutton = (gcnew System::Windows::Forms::Button());
 			this->suggestionapprovebutton = (gcnew System::Windows::Forms::Button());
-			this->udpanel = (gcnew System::Windows::Forms::Panel());
-			this->udinfotextBox = (gcnew System::Windows::Forms::ListBox());
-			this->udDeletebutton = (gcnew System::Windows::Forms::Button());
-			this->udlistBox = (gcnew System::Windows::Forms::ListBox());
 			this->lupanel = (gcnew System::Windows::Forms::Panel());
 			this->lulockbutton = (gcnew System::Windows::Forms::Button());
 			this->lulistBox = (gcnew System::Windows::Forms::ListBox());
@@ -564,8 +564,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox1))->BeginInit();
 			this->Homepanel->SuspendLayout();
-			this->suggestionpanel->SuspendLayout();
 			this->udpanel->SuspendLayout();
+			this->suggestionpanel->SuspendLayout();
 			this->lupanel->SuspendLayout();
 			this->ARpanel->SuspendLayout();
 			this->abrpanel->SuspendLayout();
@@ -746,8 +746,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// Homepanel
 			// 
 			this->Homepanel->BackColor = System::Drawing::Color::AliceBlue;
-			this->Homepanel->Controls->Add(this->udpanel);
 			this->Homepanel->Controls->Add(this->suggestionpanel);
+			this->Homepanel->Controls->Add(this->udpanel);
 			this->Homepanel->Controls->Add(this->lupanel);
 			this->Homepanel->Controls->Add(this->ARpanel);
 			this->Homepanel->Controls->Add(this->abrpanel);
@@ -761,6 +761,62 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Homepanel->Name = L"Homepanel";
 			this->Homepanel->Size = System::Drawing::Size(1280, 705);
 			this->Homepanel->TabIndex = 7;
+			// 
+			// udpanel
+			// 
+			this->udpanel->Controls->Add(this->udinfotextBox);
+			this->udpanel->Controls->Add(this->udDeletebutton);
+			this->udpanel->Controls->Add(this->udlistBox);
+			this->udpanel->Location = System::Drawing::Point(17, 91);
+			this->udpanel->Name = L"udpanel";
+			this->udpanel->Size = System::Drawing::Size(1248, 611);
+			this->udpanel->TabIndex = 22;
+			// 
+			// udinfotextBox
+			// 
+			this->udinfotextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->udinfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->udinfotextBox->FormattingEnabled = true;
+			this->udinfotextBox->HorizontalExtent = 15000;
+			this->udinfotextBox->HorizontalScrollbar = true;
+			this->udinfotextBox->ItemHeight = 31;
+			this->udinfotextBox->Location = System::Drawing::Point(10, 439);
+			this->udinfotextBox->Name = L"udinfotextBox";
+			this->udinfotextBox->ScrollAlwaysVisible = true;
+			this->udinfotextBox->SelectionMode = System::Windows::Forms::SelectionMode::None;
+			this->udinfotextBox->Size = System::Drawing::Size(1230, 97);
+			this->udinfotextBox->TabIndex = 7;
+			// 
+			// udDeletebutton
+			// 
+			this->udDeletebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->udDeletebutton->Location = System::Drawing::Point(1086, 550);
+			this->udDeletebutton->Name = L"udDeletebutton";
+			this->udDeletebutton->Size = System::Drawing::Size(154, 52);
+			this->udDeletebutton->TabIndex = 6;
+			this->udDeletebutton->Text = L"Delete";
+			this->udDeletebutton->UseVisualStyleBackColor = true;
+			this->udDeletebutton->Click += gcnew System::EventHandler(this, &AdminForm::udDeletebutton_Click);
+			// 
+			// udlistBox
+			// 
+			this->udlistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->udlistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->udlistBox->FormattingEnabled = true;
+			this->udlistBox->HorizontalExtent = 15000;
+			this->udlistBox->HorizontalScrollbar = true;
+			this->udlistBox->ItemHeight = 31;
+			this->udlistBox->Location = System::Drawing::Point(9, 16);
+			this->udlistBox->Name = L"udlistBox";
+			this->udlistBox->ScrollAlwaysVisible = true;
+			this->udlistBox->Size = System::Drawing::Size(1230, 407);
+			this->udlistBox->TabIndex = 2;
+			this->udlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::udlistBox_SelectedIndexChanged);
 			// 
 			// suggestionpanel
 			// 
@@ -830,62 +886,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->suggestionapprovebutton->Text = L"Approve";
 			this->suggestionapprovebutton->UseVisualStyleBackColor = true;
 			this->suggestionapprovebutton->Click += gcnew System::EventHandler(this, &AdminForm::suggestionapprovebutton_Click_1);
-			// 
-			// udpanel
-			// 
-			this->udpanel->Controls->Add(this->udinfotextBox);
-			this->udpanel->Controls->Add(this->udDeletebutton);
-			this->udpanel->Controls->Add(this->udlistBox);
-			this->udpanel->Location = System::Drawing::Point(17, 91);
-			this->udpanel->Name = L"udpanel";
-			this->udpanel->Size = System::Drawing::Size(1248, 611);
-			this->udpanel->TabIndex = 22;
-			// 
-			// udinfotextBox
-			// 
-			this->udinfotextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(224)));
-			this->udinfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->udinfotextBox->FormattingEnabled = true;
-			this->udinfotextBox->HorizontalExtent = 15000;
-			this->udinfotextBox->HorizontalScrollbar = true;
-			this->udinfotextBox->ItemHeight = 31;
-			this->udinfotextBox->Location = System::Drawing::Point(10, 439);
-			this->udinfotextBox->Name = L"udinfotextBox";
-			this->udinfotextBox->ScrollAlwaysVisible = true;
-			this->udinfotextBox->SelectionMode = System::Windows::Forms::SelectionMode::None;
-			this->udinfotextBox->Size = System::Drawing::Size(1230, 97);
-			this->udinfotextBox->TabIndex = 7;
-			// 
-			// udDeletebutton
-			// 
-			this->udDeletebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->udDeletebutton->Location = System::Drawing::Point(1086, 550);
-			this->udDeletebutton->Name = L"udDeletebutton";
-			this->udDeletebutton->Size = System::Drawing::Size(154, 52);
-			this->udDeletebutton->TabIndex = 6;
-			this->udDeletebutton->Text = L"Delete";
-			this->udDeletebutton->UseVisualStyleBackColor = true;
-			this->udDeletebutton->Click += gcnew System::EventHandler(this, &AdminForm::udDeletebutton_Click);
-			// 
-			// udlistBox
-			// 
-			this->udlistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(224)));
-			this->udlistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->udlistBox->FormattingEnabled = true;
-			this->udlistBox->HorizontalExtent = 15000;
-			this->udlistBox->HorizontalScrollbar = true;
-			this->udlistBox->ItemHeight = 31;
-			this->udlistBox->Location = System::Drawing::Point(9, 16);
-			this->udlistBox->Name = L"udlistBox";
-			this->udlistBox->ScrollAlwaysVisible = true;
-			this->udlistBox->Size = System::Drawing::Size(1230, 407);
-			this->udlistBox->TabIndex = 2;
-			this->udlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::udlistBox_SelectedIndexChanged);
 			// 
 			// lupanel
 			// 
@@ -1847,8 +1847,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox1))->EndInit();
 			this->Homepanel->ResumeLayout(false);
 			this->Homepanel->PerformLayout();
-			this->suggestionpanel->ResumeLayout(false);
 			this->udpanel->ResumeLayout(false);
+			this->suggestionpanel->ResumeLayout(false);
 			this->lupanel->ResumeLayout(false);
 			this->ARpanel->ResumeLayout(false);
 			this->abrpanel->ResumeLayout(false);
@@ -3400,7 +3400,25 @@ private: System::Void SuggestionRejectbutton_Click_1(System::Object^  sender, Sy
 			 }
 			 int ID=Convert::ToInt32(id);
 			 //Ask for reason
-			 String ^input=Microsoft::VisualBasic::Interaction::InputBox(L"Enter Reason:","Reject","",500,500);
+			 String ^input;
+			 input=Microsoft::VisualBasic::Interaction::InputBox(L"Enter Reason:","Reject","",500,500);
+			 //MessageBox::Show(input);
+			 int i=0;
+			 int len=input->Length;
+			 bool flag=false;
+			 for(int i=0;i<len;i++)
+			 {
+				 if(isalpha(input[i]))
+				 {
+					flag=true;
+					break;
+				 }
+			 }
+			 if(!flag)
+			 {
+				 MessageBox::Show("A valid reason should be specified for Reject","Reject");
+				 return;
+			 }
 			 if(input=="")
 			 {
 				 MessageBox::Show("A valid reason should be specified for Reject","Reject");

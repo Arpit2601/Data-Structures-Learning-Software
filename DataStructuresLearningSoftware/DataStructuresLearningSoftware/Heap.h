@@ -267,10 +267,7 @@ private: System::Void Heap_Load_1(System::Object^  sender, System::EventArgs^  e
 			 DB_Connection->Close();
 		 }
 private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(this->Owner != nullptr){
-				 this->Hide();
-				 this->Owner->Show();
-			 }
+			this->Close();
 		 }
 };
 }

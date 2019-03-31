@@ -1546,8 +1546,8 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// Registerpanel
 			// 
 			this->Registerpanel->BackColor = System::Drawing::Color::AliceBlue;
-			this->Registerpanel->Controls->Add(this->RegisterDetailspanel);
 			this->Registerpanel->Controls->Add(this->RegisterVerificationpanel);
+			this->Registerpanel->Controls->Add(this->RegisterDetailspanel);
 			this->Registerpanel->Controls->Add(this->RegisterHomebutton);
 			this->Registerpanel->Controls->Add(this->RegisterHomepictureBox);
 			this->Registerpanel->Controls->Add(this->ReigsterHeaderpictureBox);
@@ -2367,6 +2367,7 @@ private: System::Void RegisterHomebutton_Click(System::Object^  sender, System::
 			 RegisterSecuritycomboBox->Text="Security Question";
 			 RegisterSecurityAnswertextBox->Text="Answer";
 			 RegisterVerificationtextBox->Text = "Code";
+			 registerPasswordtextBox->Text="Password";
 			 RegisterStudentradioButton->Select();
 			 ForgotPasswordpanel->Hide();
 			 loginpanel->Show();
@@ -2739,6 +2740,7 @@ private: System::Void RegisterVerificationtextBox_Click(System::Object^  sender,
 }
 private: System::Void RegisterVerificationBackbutton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 RegisterVerificationtextBox->Text = "Code";
+			 RegisterVerificationStatuslabel->Hide();
 			 RegisterDetailspanel->Show();
 			 RegisterVerificationpanel->Hide();
 }
@@ -2806,6 +2808,13 @@ private: System::Void ForgotPasswordNextbutton_Click(System::Object^  sender, Sy
 			 String ^ans;
 			 String^ username = ForgotPasswordUsernametextBox->Text;
 			 int num=0;
+
+			 if(username=="guest")
+			 {
+				 ForgotPasswordUsernameErrorlabel->Text="Username not found";
+				 ForgotPasswordUsernameErrorlabel->Show();
+				 return; 
+			 }
 			 //Check for username in the DB
 			 try
 			 {
@@ -3248,6 +3257,41 @@ private: System::Void ForgotPasswordVerificationHomebutton_Click(System::Object^
 			 UsernameTextBox->SelectAll();
 		 }
 private: System::Void GuestLoginButton_Click(System::Object^  sender, System::EventArgs^  e) {
+			 String ^st;
+			 try
+			 {
+				connection->Open();
+				command->Connection=connection;
+				query="Select [LStatus] from [Users] where UserName='guest';";
+				command->CommandText=query;
+				st=command->ExecuteScalar()->ToString();
+				connection->Close();
+				if(st=="Locked")
+				{
+					MessageBox::Show("Guest Logins are currently Locked","Guest Login");
+					return;
+				}
+			 }
+			 catch (Exception ^ e)
+			 {
+			 	MessageBox::Show(e->Message,"Error while checking Lstatus of Guest");
+			 }
+			///Reset guest progress
+			 try
+			 {
+				 connection->Open();
+				 command->Connection=connection;
+				 query="Update Users Set [ArraysProgress]= 0, [LinkedListProgress]=0,[SearchingProgress]=0,[SortingProgress]=0,[StacksProgress]=0,[QueuesProgress]=0 where UserName= 'guest';";
+				 command->CommandText=query;
+				 command->ExecuteNonQuery();
+				 connection->Close();
+				
+			 }
+			 catch (Exception ^ e)
+			 {
+				 MessageBox::Show(e->Message,"Error while Resetting stats of Guest");
+			 }
+			 
 			 Homepage ^form= gcnew Homepage;
 			 form->vartextBox->Text="guest";
 			 //MessageBox::Show(form->username);
