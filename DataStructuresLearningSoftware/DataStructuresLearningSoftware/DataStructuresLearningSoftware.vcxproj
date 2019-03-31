@@ -89,6 +89,7 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AdminForm.cpp" />
     <ClCompile Include="Arrays.cpp" />
     <ClCompile Include="Array_Insertion.cpp" />
     <ClCompile Include="Array_Introduction.cpp" />
@@ -155,6 +156,9 @@
     <ClCompile Include="UI_Queue_Quiz.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdminForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Arrays.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -339,6 +343,9 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Arrays.resx">
       <DependentUpon>Arrays.h</DependentUpon>
     </EmbeddedResource>

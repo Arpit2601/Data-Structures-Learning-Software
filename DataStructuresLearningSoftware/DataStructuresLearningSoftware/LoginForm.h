@@ -5,6 +5,7 @@
 #include <iostream> 
 #include <ctime> 
 #include <cstdlib>
+#include "AdminForm.h"
 //#include "easendmailobj.tlh"
 //#include <tchar.h>
 //#include <msclr/marshal.h>
