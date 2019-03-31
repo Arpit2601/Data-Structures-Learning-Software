@@ -175,6 +175,7 @@ private: System::Windows::Forms::Button^  DSSuggestionsbutton;
 private: System::Windows::Forms::Button^  SuggestionDSbutton;
 private: System::Windows::Forms::Label^  HomeReasonlabel;
 private: System::Windows::Forms::Panel^  outputpanel;
+private: System::Windows::Forms::Button^  AdminPagebutton;
 
 
 
@@ -268,7 +269,7 @@ private: System::Windows::Forms::Panel^  outputpanel;
 
 				//Retrieving user info
 			HomeReasonlabel->Hide();
-			
+			AdminPagebutton->Hide();
 				
 
 		}
@@ -409,6 +410,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Homepage::typeid));
 			this->HeaderPanel = (gcnew System::Windows::Forms::Panel());
+			this->AdminPagebutton = (gcnew System::Windows::Forms::Button());
 			this->HeaderClosebutton = (gcnew System::Windows::Forms::Button());
 			this->HeaderLogoutbutton = (gcnew System::Windows::Forms::Button());
 			this->HeaderDSButton = (gcnew System::Windows::Forms::Button());
@@ -575,6 +577,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// HeaderPanel
 			// 
 			this->HeaderPanel->BackColor = System::Drawing::Color::Black;
+			this->HeaderPanel->Controls->Add(this->AdminPagebutton);
 			this->HeaderPanel->Controls->Add(this->HeaderClosebutton);
 			this->HeaderPanel->Controls->Add(this->HeaderLogoutbutton);
 			this->HeaderPanel->Controls->Add(this->HeaderDSButton);
@@ -588,6 +591,23 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderPanel->Name = L"HeaderPanel";
 			this->HeaderPanel->Size = System::Drawing::Size(1280, 50);
 			this->HeaderPanel->TabIndex = 0;
+			// 
+			// AdminPagebutton
+			// 
+			this->AdminPagebutton->BackColor = System::Drawing::Color::Black;
+			this->AdminPagebutton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->AdminPagebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->AdminPagebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->AdminPagebutton->ForeColor = System::Drawing::Color::White;
+			this->AdminPagebutton->Location = System::Drawing::Point(985, 0);
+			this->AdminPagebutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->AdminPagebutton->Name = L"AdminPagebutton";
+			this->AdminPagebutton->Size = System::Drawing::Size(205, 50);
+			this->AdminPagebutton->TabIndex = 19;
+			this->AdminPagebutton->Text = L"ADMIN PAGE";
+			this->AdminPagebutton->UseVisualStyleBackColor = false;
+			this->AdminPagebutton->Click += gcnew System::EventHandler(this, &Homepage::AdminPagebutton_Click);
 			// 
 			// HeaderClosebutton
 			// 
@@ -1599,8 +1619,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// DSpanel
 			// 
 			this->DSpanel->BackColor = System::Drawing::Color::AliceBlue;
-			this->DSpanel->Controls->Add(this->Suggestionpanel);
 			this->DSpanel->Controls->Add(this->DSLinkpanel);
+			this->DSpanel->Controls->Add(this->Suggestionpanel);
 			this->DSpanel->Location = System::Drawing::Point(0, 65);
 			this->DSpanel->Margin = System::Windows::Forms::Padding(0);
 			this->DSpanel->Name = L"DSpanel";
@@ -2278,9 +2298,9 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1280, 770);
+			this->Controls->Add(this->Homepanel);
 			this->Controls->Add(this->DSpanel);
 			this->Controls->Add(this->outputpanel);
-			this->Controls->Add(this->Homepanel);
 			this->Controls->Add(this->Profilepanel);
 			this->Controls->Add(this->Headerstatuspanel);
 			this->Controls->Add(this->HeaderPanel);
@@ -3115,6 +3135,12 @@ private: System::Void vartextBox_TextChanged(System::Object^  sender, System::Ev
 				 HomepanelStatuslabel->BackColor=Color::LightGreen;
 				 HomepanelStatuslabel->ForeColor=Color::Green;
 			 }
+			 if(designation=="admin")
+			 {
+				 HomepanelStatuslabel->Text="Logged in as ADMIN";
+				 HomepanelStatuslabel->BackColor=Color::LightPink;
+				 HomepanelStatuslabel->ForeColor=Color::Magenta;
+			 }
 
 
 
@@ -3190,6 +3216,11 @@ private: System::Void vartextBox_TextChanged(System::Object^  sender, System::Ev
 			 if(designation=="stud")
 			 {
 				 DSSuggestionsbutton->Hide();
+			 }
+
+			 if(designation=="admin")
+			 {
+				 AdminPagebutton->Show();
 			 }
 
 			 
@@ -3740,7 +3771,7 @@ private: System::Void SuggestionDeletebutton_Click(System::Object^  sender, Syst
 
 		 }
 private: System::Void DSSuggestionsbutton_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(isapproved=="False")
+			 if(isapproved=="False"&&designation=="prof")
 			 {
 				 MessageBox::Show("'Professor status not yet verified by Admin","Restricted");
 				 return;
@@ -3773,6 +3804,9 @@ private: System::Void HeaderForumbutton_Click(System::Object^  sender, System::E
 			 HeaderProfilebutton->BackColor=Color::Black;
 		 }
 private: System::Void Homepanel_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+		 }
+private: System::Void AdminPagebutton_Click(System::Object^  sender, System::EventArgs^  e) {
+			 this->Close();
 		 }
 };
 }
