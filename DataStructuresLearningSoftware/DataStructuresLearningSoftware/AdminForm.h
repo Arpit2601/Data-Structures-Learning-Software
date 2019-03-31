@@ -474,22 +474,23 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderStatusPanelpictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->HeaderStatusPanelpictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->Homepanel = (gcnew System::Windows::Forms::Panel());
-			this->ARpanel = (gcnew System::Windows::Forms::Panel());
-			this->arinfotextBox = (gcnew System::Windows::Forms::ListBox());
-			this->ARRejectbutton = (gcnew System::Windows::Forms::Button());
-			this->ARApprovebutton = (gcnew System::Windows::Forms::Button());
-			this->arlistBox = (gcnew System::Windows::Forms::ListBox());
 			this->suggestionpanel = (gcnew System::Windows::Forms::Panel());
 			this->suggestioninfotextBox = (gcnew System::Windows::Forms::ListBox());
 			this->suggestionlistBox = (gcnew System::Windows::Forms::ListBox());
 			this->SuggestionRejectbutton = (gcnew System::Windows::Forms::Button());
 			this->suggestionapprovebutton = (gcnew System::Windows::Forms::Button());
+			this->udpanel = (gcnew System::Windows::Forms::Panel());
+			this->udinfotextBox = (gcnew System::Windows::Forms::ListBox());
+			this->udDeletebutton = (gcnew System::Windows::Forms::Button());
+			this->udlistBox = (gcnew System::Windows::Forms::ListBox());
 			this->lupanel = (gcnew System::Windows::Forms::Panel());
 			this->lulockbutton = (gcnew System::Windows::Forms::Button());
 			this->lulistBox = (gcnew System::Windows::Forms::ListBox());
-			this->udpanel = (gcnew System::Windows::Forms::Panel());
-			this->udDeletebutton = (gcnew System::Windows::Forms::Button());
-			this->udlistBox = (gcnew System::Windows::Forms::ListBox());
+			this->ARpanel = (gcnew System::Windows::Forms::Panel());
+			this->arinfotextBox = (gcnew System::Windows::Forms::ListBox());
+			this->ARRejectbutton = (gcnew System::Windows::Forms::Button());
+			this->ARApprovebutton = (gcnew System::Windows::Forms::Button());
+			this->arlistBox = (gcnew System::Windows::Forms::ListBox());
 			this->abrpanel = (gcnew System::Windows::Forms::Panel());
 			this->abrlistBox = (gcnew System::Windows::Forms::ListBox());
 			this->uupanel = (gcnew System::Windows::Forms::Panel());
@@ -556,7 +557,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfilePictureChangebutton = (gcnew System::Windows::Forms::Button());
 			this->ProfileopenFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->outputpanel = (gcnew System::Windows::Forms::Panel());
-			this->udinfotextBox = (gcnew System::Windows::Forms::ListBox());
 			this->HeaderPanel->SuspendLayout();
 			this->Headerstatuspanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox4))->BeginInit();
@@ -564,10 +564,10 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox1))->BeginInit();
 			this->Homepanel->SuspendLayout();
-			this->ARpanel->SuspendLayout();
 			this->suggestionpanel->SuspendLayout();
-			this->lupanel->SuspendLayout();
 			this->udpanel->SuspendLayout();
+			this->lupanel->SuspendLayout();
+			this->ARpanel->SuspendLayout();
 			this->abrpanel->SuspendLayout();
 			this->uupanel->SuspendLayout();
 			this->AdminHeaderpanel->SuspendLayout();
@@ -746,10 +746,10 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// Homepanel
 			// 
 			this->Homepanel->BackColor = System::Drawing::Color::AliceBlue;
+			this->Homepanel->Controls->Add(this->suggestionpanel);
 			this->Homepanel->Controls->Add(this->udpanel);
 			this->Homepanel->Controls->Add(this->lupanel);
 			this->Homepanel->Controls->Add(this->ARpanel);
-			this->Homepanel->Controls->Add(this->suggestionpanel);
 			this->Homepanel->Controls->Add(this->abrpanel);
 			this->Homepanel->Controls->Add(this->uupanel);
 			this->Homepanel->Controls->Add(this->AdminHeaderpanel);
@@ -761,6 +761,168 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Homepanel->Name = L"Homepanel";
 			this->Homepanel->Size = System::Drawing::Size(1280, 705);
 			this->Homepanel->TabIndex = 7;
+			// 
+			// suggestionpanel
+			// 
+			this->suggestionpanel->Controls->Add(this->suggestioninfotextBox);
+			this->suggestionpanel->Controls->Add(this->suggestionlistBox);
+			this->suggestionpanel->Controls->Add(this->SuggestionRejectbutton);
+			this->suggestionpanel->Controls->Add(this->suggestionapprovebutton);
+			this->suggestionpanel->Location = System::Drawing::Point(17, 91);
+			this->suggestionpanel->Name = L"suggestionpanel";
+			this->suggestionpanel->Size = System::Drawing::Size(1248, 611);
+			this->suggestionpanel->TabIndex = 29;
+			// 
+			// suggestioninfotextBox
+			// 
+			this->suggestioninfotextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->suggestioninfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->suggestioninfotextBox->FormattingEnabled = true;
+			this->suggestioninfotextBox->HorizontalExtent = 15000;
+			this->suggestioninfotextBox->HorizontalScrollbar = true;
+			this->suggestioninfotextBox->ItemHeight = 31;
+			this->suggestioninfotextBox->Location = System::Drawing::Point(10, 437);
+			this->suggestioninfotextBox->Name = L"suggestioninfotextBox";
+			this->suggestioninfotextBox->ScrollAlwaysVisible = true;
+			this->suggestioninfotextBox->SelectionMode = System::Windows::Forms::SelectionMode::None;
+			this->suggestioninfotextBox->Size = System::Drawing::Size(1230, 97);
+			this->suggestioninfotextBox->TabIndex = 9;
+			// 
+			// suggestionlistBox
+			// 
+			this->suggestionlistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->suggestionlistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->suggestionlistBox->FormattingEnabled = true;
+			this->suggestionlistBox->HorizontalExtent = 15000;
+			this->suggestionlistBox->HorizontalScrollbar = true;
+			this->suggestionlistBox->ItemHeight = 31;
+			this->suggestionlistBox->Location = System::Drawing::Point(9, 16);
+			this->suggestionlistBox->Name = L"suggestionlistBox";
+			this->suggestionlistBox->ScrollAlwaysVisible = true;
+			this->suggestionlistBox->Size = System::Drawing::Size(1230, 407);
+			this->suggestionlistBox->TabIndex = 8;
+			this->suggestionlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::suggestionlistBox_SelectedIndexChanged_1);
+			// 
+			// SuggestionRejectbutton
+			// 
+			this->SuggestionRejectbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->SuggestionRejectbutton->Location = System::Drawing::Point(835, 540);
+			this->SuggestionRejectbutton->Name = L"SuggestionRejectbutton";
+			this->SuggestionRejectbutton->Size = System::Drawing::Size(198, 58);
+			this->SuggestionRejectbutton->TabIndex = 6;
+			this->SuggestionRejectbutton->Text = L"Reject";
+			this->SuggestionRejectbutton->UseVisualStyleBackColor = true;
+			this->SuggestionRejectbutton->Click += gcnew System::EventHandler(this, &AdminForm::SuggestionRejectbutton_Click_1);
+			// 
+			// suggestionapprovebutton
+			// 
+			this->suggestionapprovebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->suggestionapprovebutton->Location = System::Drawing::Point(1039, 540);
+			this->suggestionapprovebutton->Name = L"suggestionapprovebutton";
+			this->suggestionapprovebutton->Size = System::Drawing::Size(198, 58);
+			this->suggestionapprovebutton->TabIndex = 5;
+			this->suggestionapprovebutton->Text = L"Approve";
+			this->suggestionapprovebutton->UseVisualStyleBackColor = true;
+			this->suggestionapprovebutton->Click += gcnew System::EventHandler(this, &AdminForm::suggestionapprovebutton_Click_1);
+			// 
+			// udpanel
+			// 
+			this->udpanel->Controls->Add(this->udinfotextBox);
+			this->udpanel->Controls->Add(this->udDeletebutton);
+			this->udpanel->Controls->Add(this->udlistBox);
+			this->udpanel->Location = System::Drawing::Point(17, 91);
+			this->udpanel->Name = L"udpanel";
+			this->udpanel->Size = System::Drawing::Size(1248, 611);
+			this->udpanel->TabIndex = 22;
+			// 
+			// udinfotextBox
+			// 
+			this->udinfotextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->udinfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->udinfotextBox->FormattingEnabled = true;
+			this->udinfotextBox->HorizontalExtent = 15000;
+			this->udinfotextBox->HorizontalScrollbar = true;
+			this->udinfotextBox->ItemHeight = 31;
+			this->udinfotextBox->Location = System::Drawing::Point(10, 439);
+			this->udinfotextBox->Name = L"udinfotextBox";
+			this->udinfotextBox->ScrollAlwaysVisible = true;
+			this->udinfotextBox->SelectionMode = System::Windows::Forms::SelectionMode::None;
+			this->udinfotextBox->Size = System::Drawing::Size(1230, 97);
+			this->udinfotextBox->TabIndex = 7;
+			// 
+			// udDeletebutton
+			// 
+			this->udDeletebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->udDeletebutton->Location = System::Drawing::Point(1086, 550);
+			this->udDeletebutton->Name = L"udDeletebutton";
+			this->udDeletebutton->Size = System::Drawing::Size(154, 52);
+			this->udDeletebutton->TabIndex = 6;
+			this->udDeletebutton->Text = L"Delete";
+			this->udDeletebutton->UseVisualStyleBackColor = true;
+			this->udDeletebutton->Click += gcnew System::EventHandler(this, &AdminForm::udDeletebutton_Click);
+			// 
+			// udlistBox
+			// 
+			this->udlistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->udlistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->udlistBox->FormattingEnabled = true;
+			this->udlistBox->HorizontalExtent = 15000;
+			this->udlistBox->HorizontalScrollbar = true;
+			this->udlistBox->ItemHeight = 31;
+			this->udlistBox->Location = System::Drawing::Point(9, 16);
+			this->udlistBox->Name = L"udlistBox";
+			this->udlistBox->ScrollAlwaysVisible = true;
+			this->udlistBox->Size = System::Drawing::Size(1230, 407);
+			this->udlistBox->TabIndex = 2;
+			this->udlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::udlistBox_SelectedIndexChanged);
+			// 
+			// lupanel
+			// 
+			this->lupanel->Controls->Add(this->lulockbutton);
+			this->lupanel->Controls->Add(this->lulistBox);
+			this->lupanel->Location = System::Drawing::Point(17, 91);
+			this->lupanel->Name = L"lupanel";
+			this->lupanel->Size = System::Drawing::Size(1248, 611);
+			this->lupanel->TabIndex = 24;
+			// 
+			// lulockbutton
+			// 
+			this->lulockbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lulockbutton->Location = System::Drawing::Point(1075, 553);
+			this->lulockbutton->Name = L"lulockbutton";
+			this->lulockbutton->Size = System::Drawing::Size(161, 51);
+			this->lulockbutton->TabIndex = 3;
+			this->lulockbutton->Text = L"Lock";
+			this->lulockbutton->UseVisualStyleBackColor = true;
+			this->lulockbutton->Click += gcnew System::EventHandler(this, &AdminForm::lulockbutton_Click);
+			// 
+			// lulistBox
+			// 
+			this->lulistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->lulistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lulistBox->FormattingEnabled = true;
+			this->lulistBox->HorizontalExtent = 15000;
+			this->lulistBox->HorizontalScrollbar = true;
+			this->lulistBox->ItemHeight = 31;
+			this->lulistBox->Location = System::Drawing::Point(7, 16);
+			this->lulistBox->Name = L"lulistBox";
+			this->lulistBox->ScrollAlwaysVisible = true;
+			this->lulistBox->Size = System::Drawing::Size(1230, 531);
+			this->lulistBox->TabIndex = 2;
 			// 
 			// ARpanel
 			// 
@@ -830,149 +992,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->arlistBox->Size = System::Drawing::Size(1230, 438);
 			this->arlistBox->TabIndex = 0;
 			this->arlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::arlistBox_SelectedIndexChanged);
-			// 
-			// suggestionpanel
-			// 
-			this->suggestionpanel->Controls->Add(this->suggestioninfotextBox);
-			this->suggestionpanel->Controls->Add(this->suggestionlistBox);
-			this->suggestionpanel->Controls->Add(this->SuggestionRejectbutton);
-			this->suggestionpanel->Controls->Add(this->suggestionapprovebutton);
-			this->suggestionpanel->Location = System::Drawing::Point(17, 91);
-			this->suggestionpanel->Name = L"suggestionpanel";
-			this->suggestionpanel->Size = System::Drawing::Size(1248, 611);
-			this->suggestionpanel->TabIndex = 29;
-			// 
-			// suggestioninfotextBox
-			// 
-			this->suggestioninfotextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)));
-			this->suggestioninfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->suggestioninfotextBox->FormattingEnabled = true;
-			this->suggestioninfotextBox->HorizontalExtent = 15000;
-			this->suggestioninfotextBox->HorizontalScrollbar = true;
-			this->suggestioninfotextBox->ItemHeight = 31;
-			this->suggestioninfotextBox->Location = System::Drawing::Point(10, 437);
-			this->suggestioninfotextBox->Name = L"suggestioninfotextBox";
-			this->suggestioninfotextBox->ScrollAlwaysVisible = true;
-			this->suggestioninfotextBox->SelectionMode = System::Windows::Forms::SelectionMode::None;
-			this->suggestioninfotextBox->Size = System::Drawing::Size(1230, 97);
-			this->suggestioninfotextBox->TabIndex = 9;
-			// 
-			// suggestionlistBox
-			// 
-			this->suggestionlistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)));
-			this->suggestionlistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->suggestionlistBox->FormattingEnabled = true;
-			this->suggestionlistBox->HorizontalExtent = 15000;
-			this->suggestionlistBox->HorizontalScrollbar = true;
-			this->suggestionlistBox->ItemHeight = 31;
-			this->suggestionlistBox->Location = System::Drawing::Point(9, 16);
-			this->suggestionlistBox->Name = L"suggestionlistBox";
-			this->suggestionlistBox->ScrollAlwaysVisible = true;
-			this->suggestionlistBox->Size = System::Drawing::Size(1230, 407);
-			this->suggestionlistBox->TabIndex = 8;
-			this->suggestionlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::suggestionlistBox_SelectedIndexChanged_1);
-			// 
-			// SuggestionRejectbutton
-			// 
-			this->SuggestionRejectbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->SuggestionRejectbutton->Location = System::Drawing::Point(835, 540);
-			this->SuggestionRejectbutton->Name = L"SuggestionRejectbutton";
-			this->SuggestionRejectbutton->Size = System::Drawing::Size(198, 58);
-			this->SuggestionRejectbutton->TabIndex = 6;
-			this->SuggestionRejectbutton->Text = L"Reject";
-			this->SuggestionRejectbutton->UseVisualStyleBackColor = true;
-			// 
-			// suggestionapprovebutton
-			// 
-			this->suggestionapprovebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->suggestionapprovebutton->Location = System::Drawing::Point(1039, 540);
-			this->suggestionapprovebutton->Name = L"suggestionapprovebutton";
-			this->suggestionapprovebutton->Size = System::Drawing::Size(198, 58);
-			this->suggestionapprovebutton->TabIndex = 5;
-			this->suggestionapprovebutton->Text = L"Approve";
-			this->suggestionapprovebutton->UseVisualStyleBackColor = true;
-			// 
-			// lupanel
-			// 
-			this->lupanel->Controls->Add(this->lulockbutton);
-			this->lupanel->Controls->Add(this->lulistBox);
-			this->lupanel->Location = System::Drawing::Point(17, 91);
-			this->lupanel->Name = L"lupanel";
-			this->lupanel->Size = System::Drawing::Size(1248, 611);
-			this->lupanel->TabIndex = 24;
-			// 
-			// lulockbutton
-			// 
-			this->lulockbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->lulockbutton->Location = System::Drawing::Point(1075, 553);
-			this->lulockbutton->Name = L"lulockbutton";
-			this->lulockbutton->Size = System::Drawing::Size(161, 51);
-			this->lulockbutton->TabIndex = 3;
-			this->lulockbutton->Text = L"Lock";
-			this->lulockbutton->UseVisualStyleBackColor = true;
-			this->lulockbutton->Click += gcnew System::EventHandler(this, &AdminForm::lulockbutton_Click);
-			// 
-			// lulistBox
-			// 
-			this->lulistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(224)));
-			this->lulistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->lulistBox->FormattingEnabled = true;
-			this->lulistBox->HorizontalExtent = 15000;
-			this->lulistBox->HorizontalScrollbar = true;
-			this->lulistBox->ItemHeight = 31;
-			this->lulistBox->Location = System::Drawing::Point(7, 16);
-			this->lulistBox->Name = L"lulistBox";
-			this->lulistBox->ScrollAlwaysVisible = true;
-			this->lulistBox->Size = System::Drawing::Size(1230, 531);
-			this->lulistBox->TabIndex = 2;
-			// 
-			// udpanel
-			// 
-			this->udpanel->Controls->Add(this->udinfotextBox);
-			this->udpanel->Controls->Add(this->udDeletebutton);
-			this->udpanel->Controls->Add(this->udlistBox);
-			this->udpanel->Location = System::Drawing::Point(17, 91);
-			this->udpanel->Name = L"udpanel";
-			this->udpanel->Size = System::Drawing::Size(1248, 611);
-			this->udpanel->TabIndex = 22;
-			// 
-			// udDeletebutton
-			// 
-			this->udDeletebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->udDeletebutton->Location = System::Drawing::Point(1086, 550);
-			this->udDeletebutton->Name = L"udDeletebutton";
-			this->udDeletebutton->Size = System::Drawing::Size(154, 52);
-			this->udDeletebutton->TabIndex = 6;
-			this->udDeletebutton->Text = L"Delete";
-			this->udDeletebutton->UseVisualStyleBackColor = true;
-			this->udDeletebutton->Click += gcnew System::EventHandler(this, &AdminForm::udDeletebutton_Click);
-			// 
-			// udlistBox
-			// 
-			this->udlistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(224)));
-			this->udlistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->udlistBox->FormattingEnabled = true;
-			this->udlistBox->HorizontalExtent = 15000;
-			this->udlistBox->HorizontalScrollbar = true;
-			this->udlistBox->ItemHeight = 31;
-			this->udlistBox->Location = System::Drawing::Point(9, 16);
-			this->udlistBox->Name = L"udlistBox";
-			this->udlistBox->ScrollAlwaysVisible = true;
-			this->udlistBox->Size = System::Drawing::Size(1230, 407);
-			this->udlistBox->TabIndex = 2;
-			this->udlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::udlistBox_SelectedIndexChanged);
 			// 
 			// abrpanel
 			// 
@@ -1802,23 +1821,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->outputpanel->Size = System::Drawing::Size(1280, 705);
 			this->outputpanel->TabIndex = 51;
 			// 
-			// udinfotextBox
-			// 
-			this->udinfotextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(224)));
-			this->udinfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->udinfotextBox->FormattingEnabled = true;
-			this->udinfotextBox->HorizontalExtent = 15000;
-			this->udinfotextBox->HorizontalScrollbar = true;
-			this->udinfotextBox->ItemHeight = 31;
-			this->udinfotextBox->Location = System::Drawing::Point(10, 439);
-			this->udinfotextBox->Name = L"udinfotextBox";
-			this->udinfotextBox->ScrollAlwaysVisible = true;
-			this->udinfotextBox->SelectionMode = System::Windows::Forms::SelectionMode::None;
-			this->udinfotextBox->Size = System::Drawing::Size(1230, 97);
-			this->udinfotextBox->TabIndex = 7;
-			// 
 			// AdminForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1845,10 +1847,10 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox1))->EndInit();
 			this->Homepanel->ResumeLayout(false);
 			this->Homepanel->PerformLayout();
-			this->ARpanel->ResumeLayout(false);
 			this->suggestionpanel->ResumeLayout(false);
-			this->lupanel->ResumeLayout(false);
 			this->udpanel->ResumeLayout(false);
+			this->lupanel->ResumeLayout(false);
+			this->ARpanel->ResumeLayout(false);
 			this->abrpanel->ResumeLayout(false);
 			this->uupanel->ResumeLayout(false);
 			this->AdminHeaderpanel->ResumeLayout(false);
@@ -2890,193 +2892,8 @@ private: System::Void suggestionlistBox_SelectedIndexChanged(System::Object^  se
 				 MessageBox::Show(e->Message,"Error while connecting to DB from Suggestion Info retrieval");
 			 }
 		 }
-private: System::Void suggestionapprovebutton_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(suggestionlistBox->SelectedIndex==-1)
-				 return;
-			 //MessageBox::Show(""+suggestionlistBox->SelectedIndex);
-			 String ^id=suggestionlistBox->SelectedItem->ToString();
-			 if(id=="")
-			 {
-				 MessageBox::Show("Select an entry","Approve");
-				 return;
-			 }
-			 //approve
-			 int ID=Convert::ToInt32(id);
-			 //Get module and ds id and type
-			 int ds,module;
-			 String ^type;
-			 String ^op1;
-			 String ^op2;
-			 String ^op3;
-			 String ^op4;
-			 String ^ans1;
-			 String ^ans2;
-			 String ^ans3;
-			 String ^ans4;
-			 String ^ques;
-			 try
-			 {
-				 connection->Open();
-				 command->Connection=connection;
-				 query="Select * from [Suggestion] where [ID]="+ID+";";
-				 command->CommandText=query;
-				 OleDbDataReader ^reader=command->ExecuteReader();
-				 
-				 while(reader->Read())
-				 {
-					 ds=reader->GetInt32(13);
-					 ques=reader->GetString(2);
-					 module=reader->GetInt32(14);
-					 type=reader->GetString(1);
-					 op1=reader->GetString(3);
-					 op2=reader->GetString(4);
-					 op3=reader->GetString(5);
-					 op4=reader->GetString(6);
-
-				 }
-				 connection->Close();
-				 connection->Open();
-				 command->Connection=connection;
-
-				 query="Select Answer1 From Suggestion Where ID = "+ID+";";
-				 command->CommandText=query;
-				 ans1=command->ExecuteScalar()->ToString();
-
-				 query="Select Answer2 From Suggestion Where ID = "+ID+";";
-				 command->CommandText=query;
-				 ans2=command->ExecuteScalar()->ToString();
-
-				 query="Select Answer3 From Suggestion Where ID ="+ID+";";
-				 command->CommandText=query;
-				 ans3=command->ExecuteScalar()->ToString();
-
-				 query="Select Answer4 From Suggestion Where ID = "+ID+";";
-				 command->CommandText=query;
-				 ans4=command->ExecuteScalar()->ToString();
-
-				 connection->Close();
-
-			 }
-			 catch (Exception ^e)
-			 {
-				 MessageBox::Show(e->Message,"Error while reading ds and module id for Approve(Suggestion)");
-			 }
 
 
-			 //Update Suggestion table
-			 try
-			 {
-				 connection->Open();
-				 command->Connection=connection;
-				 query="Update Suggestion Set [Status]= 'Approved' where [ID]= "+ID+";";
-				 command->CommandText=query;
-				 command->ExecuteNonQuery();
-				 connection->Close();
-
-			 }
-			 catch (Exception ^e)
-			 {
-				 MessageBox::Show(e->Message,"Error while updating Approval(Suggestion)");
-			 }
-
-
-			 if(type=="ADD")		//add to quizzes table
-			 {
-				 try
-				 {
-					 connection->Open();
-					 command->Connection=connection;
-					 query = "INSERT INTO [Quizzes] ([Question], OptionA, OptionB, OptionC, OptionD, AnswerA , AnswerB, AnswerC, AnswerD,DataStructureID,ModuleID) VALUES ('"+ques+"', '"+op1+"', '"+op2+"', '"+op3+"', '"+op4+"', "+ans1+", "+ans2+", "+ans3+", "+ans4+", "+ds+","+module+"); ";
-					 command->CommandText=query;
-					 command->ExecuteNonQuery();
-					 connection->Close();
-
-					 MessageBox::Show("Successfully Approved and Added to DB");
-					 //Refresh
-					
-					 System::Object ^sender;
-					 System::EventArgs ^e;
-					 this->button2_Click(sender,e);
-					 
-
-				 }
-				 catch (Exception ^e)
-				 {
-					 MessageBox::Show(e->Message,"Error while updating Quizzes table Approval(Suggestion)");
-				 }
-
-			 }
-			 else		//DELETE
-			 {
-				 try
-				 {
-					 connection->Open();
-					 command->Connection=connection;
-					 query = "DELETE from Quizzes Where Question = '"+ques+"' and DataStructureID = "+ds+" and ModuleID ="+module+" ;";
-					 command->CommandText=query;
-					 command->ExecuteNonQuery();
-					 connection->Close();
-
-					 MessageBox::Show("Successfully Approved and Deleted from DB");
-					 //Refresh
-
-					 System::Object ^sender;
-					 System::EventArgs ^e;
-					 this->button2_Click(sender,e);
-
-
-				 }
-				 catch (Exception ^e)
-				 {
-					 MessageBox::Show(e->Message,"Error while updating Quizzes table Deletion(Suggestion)");
-				 }
-
-			 }
-
-
-			
-			 
-
-
-		 }
-private: System::Void SuggestionRejectbutton_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(suggestionlistBox->SelectedIndex==-1)
-				 return;
-			 String ^id=suggestionlistBox->SelectedItem->ToString();
-			 if(id=="")
-			 {
-				 MessageBox::Show("Select an entry","Reject");
-				 return;
-			 }
-			 int ID=Convert::ToInt32(id);
-			 //Ask for reason
-			 String ^input=Microsoft::VisualBasic::Interaction::InputBox(L"Enter Reason:","Reject","",500,500);
-			 if(input=="")
-			 {
-				 MessageBox::Show("A valid reason should be specified for Reject","Reject");
-				 return;
-			 }
-			 //Reject
-			 try
-			 {
-				 connection->Open();
-				 command->Connection=connection;
-				 query="Update Suggestion Set [Reason]= '"+input+"',[Status]= 'Rejected' where ID= "+ID+";";
-				 command->CommandText=query;
-				 command->ExecuteNonQuery();
-				 MessageBox::Show("Successfully Rejected");
-				 //Refresh
-				 connection->Close();
-				 System::Object ^sender;
-				 System::EventArgs ^e;
-				 this->button2_Click(sender,e);
-
-			 }
-			 catch (Exception ^e)
-			 {
-				 MessageBox::Show(e->Message,"Error while updating Rejection(Suggestion)");
-			 }
-		 }
 private: System::Void udinfotextBox_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 		 }
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -3570,6 +3387,189 @@ private: System::Void suggestionlistBox_SelectedIndexChanged_1(System::Object^  
 			 {
 				 MessageBox::Show(e->Message,"Error while connecting to DB from Suggestion Info retrieval");
 			 }
+		 }
+private: System::Void SuggestionRejectbutton_Click_1(System::Object^  sender, System::EventArgs^  e) {
+			 if(suggestionlistBox->SelectedIndex==-1)
+				 return;
+			 String ^id=suggestionlistBox->SelectedItem->ToString();
+			 if(id=="")
+			 {
+				 MessageBox::Show("Select an entry","Reject");
+				 return;
+			 }
+			 int ID=Convert::ToInt32(id);
+			 //Ask for reason
+			 String ^input=Microsoft::VisualBasic::Interaction::InputBox(L"Enter Reason:","Reject","",500,500);
+			 if(input=="")
+			 {
+				 MessageBox::Show("A valid reason should be specified for Reject","Reject");
+				 return;
+			 }
+			 //Reject
+			 try
+			 {
+				 connection->Open();
+				 command->Connection=connection;
+				 query="Update Suggestion Set [Reason]= '"+input+"',[Status]= 'Rejected' where ID= "+ID+";";
+				 command->CommandText=query;
+				 command->ExecuteNonQuery();
+				 MessageBox::Show("Successfully Rejected");
+				 //Refresh
+				 connection->Close();
+				 System::Object ^sender;
+				 System::EventArgs ^e;
+				 this->button2_Click(sender,e);
+
+			 }
+			 catch (Exception ^e)
+			 {
+				 MessageBox::Show(e->Message,"Error while updating Rejection(Suggestion)");
+			 }
+		 }
+private: System::Void suggestionapprovebutton_Click_1(System::Object^  sender, System::EventArgs^  e) {
+			 if(suggestionlistBox->SelectedIndex==-1)
+				 return;
+			 //MessageBox::Show(""+suggestionlistBox->SelectedIndex);
+			 String ^id=suggestionlistBox->SelectedItem->ToString();
+			 if(id=="")
+			 {
+				 MessageBox::Show("Select an entry","Approve");
+				 return;
+			 }
+			 //approve
+			 int ID=Convert::ToInt32(id);
+			 //Get module and ds id and type
+			 int ds,module;
+			 String ^type;
+			 String ^op1;
+			 String ^op2;
+			 String ^op3;
+			 String ^op4;
+			 String ^ans1;
+			 String ^ans2;
+			 String ^ans3;
+			 String ^ans4;
+			 String ^ques;
+			 try
+			 {
+				 connection->Open();
+				 command->Connection=connection;
+				 query="Select * from [Suggestion] where [ID]="+ID+";";
+				 command->CommandText=query;
+				 OleDbDataReader ^reader=command->ExecuteReader();
+
+				 while(reader->Read())
+				 {
+					 ds=reader->GetInt32(13);
+					 ques=reader->GetString(2);
+					 module=reader->GetInt32(14);
+					 type=reader->GetString(1);
+					 op1=reader->GetString(3);
+					 op2=reader->GetString(4);
+					 op3=reader->GetString(5);
+					 op4=reader->GetString(6);
+
+				 }
+				 connection->Close();
+				 connection->Open();
+				 command->Connection=connection;
+
+				 query="Select Answer1 From Suggestion Where ID = "+ID+";";
+				 command->CommandText=query;
+				 ans1=command->ExecuteScalar()->ToString();
+
+				 query="Select Answer2 From Suggestion Where ID = "+ID+";";
+				 command->CommandText=query;
+				 ans2=command->ExecuteScalar()->ToString();
+
+				 query="Select Answer3 From Suggestion Where ID ="+ID+";";
+				 command->CommandText=query;
+				 ans3=command->ExecuteScalar()->ToString();
+
+				 query="Select Answer4 From Suggestion Where ID = "+ID+";";
+				 command->CommandText=query;
+				 ans4=command->ExecuteScalar()->ToString();
+
+				 connection->Close();
+
+			 }
+			 catch (Exception ^e)
+			 {
+				 MessageBox::Show(e->Message,"Error while reading ds and module id for Approve(Suggestion)");
+			 }
+
+
+			 //Update Suggestion table
+			 try
+			 {
+				 connection->Open();
+				 command->Connection=connection;
+				 query="Update Suggestion Set [Status]= 'Approved' where [ID]= "+ID+";";
+				 command->CommandText=query;
+				 command->ExecuteNonQuery();
+				 connection->Close();
+
+			 }
+			 catch (Exception ^e)
+			 {
+				 MessageBox::Show(e->Message,"Error while updating Approval(Suggestion)");
+			 }
+
+
+			 if(type=="ADD")		//add to quizzes table
+			 {
+				 try
+				 {
+					 connection->Open();
+					 command->Connection=connection;
+					 query = "INSERT INTO [Quizzes] ([Question], OptionA, OptionB, OptionC, OptionD, AnswerA , AnswerB, AnswerC, AnswerD,DataStructureID,ModuleID) VALUES ('"+ques+"', '"+op1+"', '"+op2+"', '"+op3+"', '"+op4+"', "+ans1+", "+ans2+", "+ans3+", "+ans4+", "+ds+","+module+"); ";
+					 command->CommandText=query;
+					 command->ExecuteNonQuery();
+					 connection->Close();
+
+					 MessageBox::Show("Successfully Approved and Added to DB");
+					 //Refresh
+
+					 System::Object ^sender;
+					 System::EventArgs ^e;
+					 this->button2_Click(sender,e);
+
+
+				 }
+				 catch (Exception ^e)
+				 {
+					 MessageBox::Show(e->Message,"Error while updating Quizzes table Approval(Suggestion)");
+				 }
+
+			 }
+			 else		//DELETE
+			 {
+				 try
+				 {
+					 connection->Open();
+					 command->Connection=connection;
+					 query = "DELETE from Quizzes Where Question = '"+ques+"' and DataStructureID = "+ds+" and ModuleID ="+module+" ;";
+					 command->CommandText=query;
+					 command->ExecuteNonQuery();
+					 connection->Close();
+
+					 MessageBox::Show("Successfully Approved and Deleted from DB");
+					 //Refresh
+
+					 System::Object ^sender;
+					 System::EventArgs ^e;
+					 this->button2_Click(sender,e);
+
+
+				 }
+				 catch (Exception ^e)
+				 {
+					 MessageBox::Show(e->Message,"Error while updating Quizzes table Deletion(Suggestion)");
+				 }
+
+			 }
+
+
 		 }
 };
 }
