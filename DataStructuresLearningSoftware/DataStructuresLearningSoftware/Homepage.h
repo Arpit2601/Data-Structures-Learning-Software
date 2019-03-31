@@ -174,6 +174,7 @@ private: System::Windows::Forms::Button^  btnQueues;
 private: System::Windows::Forms::Button^  DSSuggestionsbutton;
 private: System::Windows::Forms::Button^  SuggestionDSbutton;
 private: System::Windows::Forms::Label^  HomeReasonlabel;
+private: System::Windows::Forms::Panel^  outputpanel;
 
 
 
@@ -537,6 +538,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->btnSearching = (gcnew System::Windows::Forms::Button());
 			this->btnLinkedList = (gcnew System::Windows::Forms::Button());
 			this->btnArrays = (gcnew System::Windows::Forms::Button());
+			this->outputpanel = (gcnew System::Windows::Forms::Panel());
 			this->HeaderPanel->SuspendLayout();
 			this->Headerstatuspanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox4))->BeginInit();
@@ -2264,13 +2266,21 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->btnArrays->UseVisualStyleBackColor = false;
 			this->btnArrays->Click += gcnew System::EventHandler(this, &Homepage::btnArrays_Click);
 			// 
+			// outputpanel
+			// 
+			this->outputpanel->Location = System::Drawing::Point(0, 65);
+			this->outputpanel->Name = L"outputpanel";
+			this->outputpanel->Size = System::Drawing::Size(1280, 705);
+			this->outputpanel->TabIndex = 51;
+			// 
 			// Homepage
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1280, 770);
-			this->Controls->Add(this->Profilepanel);
+			this->Controls->Add(this->outputpanel);
 			this->Controls->Add(this->Homepanel);
+			this->Controls->Add(this->Profilepanel);
 			this->Controls->Add(this->DSpanel);
 			this->Controls->Add(this->Headerstatuspanel);
 			this->Controls->Add(this->HeaderPanel);
@@ -2331,6 +2341,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 				 Homepanel->Hide();
 				 DSpanel->Hide();
 				 Profilepanel->Show();
+				 outputpanel->Hide();
 				 HeaderStatusPanelpictureBox3->BackColor=Color::Red;
 				 HeaderStatusPanelpictureBox1->BackColor=Color::Black;
 				 HeaderStatusPanelpictureBox2->BackColor=Color::Black;
@@ -2382,6 +2393,7 @@ private: System::Void HeaderHomebutton_Click(System::Object^  sender, System::Ev
 			 Homepanel->Show();
 			 DSpanel->Hide();
 			 Profilepanel->Hide();
+			 outputpanel->Hide();
 			 HeaderStatusPanelpictureBox3->BackColor=Color::Black;
 			 HeaderStatusPanelpictureBox1->BackColor=Color::Red;
 			 HeaderStatusPanelpictureBox2->BackColor=Color::Black;
@@ -2390,6 +2402,8 @@ private: System::Void HeaderHomebutton_Click(System::Object^  sender, System::Ev
 			 HeaderDSButton->BackColor=Color::Black;
 			 HeaderForumbutton->BackColor=Color::Black;
 			 HeaderProfilebutton->BackColor=Color::Black;
+			 HeaderForumbutton->BackColor=Color::Black;
+			
 
 
 			 if(username=="guest")
@@ -2472,12 +2486,15 @@ private: System::Void HeaderHomebutton_Click(System::Object^  sender, System::Ev
 			 sortingprogressBar->Value=Convert::ToInt32(sorting_progress);
 			 stackprogressBar->Value=Convert::ToInt32(stack_progress);
 			 queueprogressBar->Value=Convert::ToInt32(queue_progress);
+
+			 
 			 
 		 }
 private: System::Void HeaderDSButton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Homepanel->Hide();
 			 DSpanel->Show();
 			 Profilepanel->Hide();
+			 outputpanel->Hide();
 			 HeaderStatusPanelpictureBox3->BackColor=Color::Black;
 			 HeaderStatusPanelpictureBox1->BackColor=Color::Black;
 			 HeaderStatusPanelpictureBox2->BackColor=Color::Red;
@@ -3174,8 +3191,24 @@ private: System::Void vartextBox_TextChanged(System::Object^  sender, System::Ev
 				 DSSuggestionsbutton->Hide();
 			 }
 
+			 //forums
+			 outputpanel->Controls->Clear();
+			 DiscussionForum ^ discuss = gcnew DiscussionForum;
+			 discuss->username=username;
+			 outputpanel->Controls->Add(discuss);
+
+			 func();
+			
 
 
+		 }
+
+		 void func(void)
+		 {
+
+			 System::Object ^sender;
+			 System::EventArgs ^e;
+			 this->HeaderHomebutton_Click(sender,e);
 		 }
 private: System::Void PastSuggestionradioButton_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 			 SuggestionADDpanel->Hide();
@@ -3701,6 +3734,18 @@ private: System::Void SuggestionDSbutton_Click(System::Object^  sender, System::
 			 Suggestionpanel->Hide();
 		 }
 private: System::Void HeaderForumbutton_Click(System::Object^  sender, System::EventArgs^  e) {
+			 Homepanel->Hide();
+			 Profilepanel->Hide();
+			 DSpanel->Hide();
+			 outputpanel->Show();
+			 HeaderStatusPanelpictureBox3->BackColor=Color::Black;
+			 HeaderStatusPanelpictureBox1->BackColor=Color::Black;
+			 HeaderStatusPanelpictureBox2->BackColor=Color::Black;
+			 HeaderStatusPanelpictureBox4->BackColor=Color::Red;
+			 HeaderHomebutton->BackColor=Color::Black;
+			 HeaderDSButton->BackColor=Color::Black;
+			 HeaderForumbutton->BackColor=Color::Gray;
+			 HeaderProfilebutton->BackColor=Color::Black;
 		 }
 private: System::Void Homepanel_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 		 }
