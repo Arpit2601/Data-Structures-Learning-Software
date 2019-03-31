@@ -746,8 +746,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// Homepanel
 			// 
 			this->Homepanel->BackColor = System::Drawing::Color::AliceBlue;
-			this->Homepanel->Controls->Add(this->suggestionpanel);
 			this->Homepanel->Controls->Add(this->udpanel);
+			this->Homepanel->Controls->Add(this->suggestionpanel);
 			this->Homepanel->Controls->Add(this->lupanel);
 			this->Homepanel->Controls->Add(this->ARpanel);
 			this->Homepanel->Controls->Add(this->abrpanel);
@@ -2994,6 +2994,7 @@ private: System::Void udDeletebutton_Click(System::Object^  sender, System::Even
 					 connection->Close();
 					 return;
 				 }
+				 connection->Close();
 
 			 }
 			 catch (Exception ^e)
