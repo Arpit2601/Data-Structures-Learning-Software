@@ -438,6 +438,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(AdminForm::typeid));
 			this->HeaderPanel = (gcnew System::Windows::Forms::Panel());
 			this->HeaderForumbutton = (gcnew System::Windows::Forms::Button());
 			this->HeaderClosebutton = (gcnew System::Windows::Forms::Button());
@@ -451,13 +452,18 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderStatusPanelpictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->HeaderStatusPanelpictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->Homepanel = (gcnew System::Windows::Forms::Panel());
+			this->ARpanel = (gcnew System::Windows::Forms::Panel());
+			this->arinfotextBox = (gcnew System::Windows::Forms::TextBox());
+			this->ARRejectbutton = (gcnew System::Windows::Forms::Button());
+			this->ARApprovebutton = (gcnew System::Windows::Forms::Button());
+			this->arlistBox = (gcnew System::Windows::Forms::ListBox());
+			this->lupanel = (gcnew System::Windows::Forms::Panel());
+			this->lulockbutton = (gcnew System::Windows::Forms::Button());
+			this->lulistBox = (gcnew System::Windows::Forms::ListBox());
 			this->udpanel = (gcnew System::Windows::Forms::Panel());
 			this->udDeletebutton = (gcnew System::Windows::Forms::Button());
 			this->udinfotextBox = (gcnew System::Windows::Forms::TextBox());
 			this->udlistBox = (gcnew System::Windows::Forms::ListBox());
-			this->lupanel = (gcnew System::Windows::Forms::Panel());
-			this->lulockbutton = (gcnew System::Windows::Forms::Button());
-			this->lulistBox = (gcnew System::Windows::Forms::ListBox());
 			this->abrpanel = (gcnew System::Windows::Forms::Panel());
 			this->abrlistBox = (gcnew System::Windows::Forms::ListBox());
 			this->uupanel = (gcnew System::Windows::Forms::Panel());
@@ -468,11 +474,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->suggestionapprovebutton = (gcnew System::Windows::Forms::Button());
 			this->suggestioninfotextBox = (gcnew System::Windows::Forms::TextBox());
 			this->suggestionlistBox = (gcnew System::Windows::Forms::ListBox());
-			this->ARpanel = (gcnew System::Windows::Forms::Panel());
-			this->arinfotextBox = (gcnew System::Windows::Forms::TextBox());
-			this->ARRejectbutton = (gcnew System::Windows::Forms::Button());
-			this->ARApprovebutton = (gcnew System::Windows::Forms::Button());
-			this->arlistBox = (gcnew System::Windows::Forms::ListBox());
 			this->AdminHeaderpanel = (gcnew System::Windows::Forms::Panel());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -540,12 +541,12 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox1))->BeginInit();
 			this->Homepanel->SuspendLayout();
-			this->udpanel->SuspendLayout();
+			this->ARpanel->SuspendLayout();
 			this->lupanel->SuspendLayout();
+			this->udpanel->SuspendLayout();
 			this->abrpanel->SuspendLayout();
 			this->uupanel->SuspendLayout();
 			this->suggestionpanel->SuspendLayout();
-			this->ARpanel->SuspendLayout();
 			this->AdminHeaderpanel->SuspendLayout();
 			this->Profilepanel->SuspendLayout();
 			this->panel3->SuspendLayout();
@@ -594,6 +595,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// HeaderClosebutton
 			// 
 			this->HeaderClosebutton->BackColor = System::Drawing::Color::White;
+			this->HeaderClosebutton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"HeaderClosebutton.BackgroundImage")));
 			this->HeaderClosebutton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->HeaderClosebutton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->HeaderClosebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
@@ -720,12 +722,12 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// Homepanel
 			// 
 			this->Homepanel->BackColor = System::Drawing::Color::AliceBlue;
+			this->Homepanel->Controls->Add(this->suggestionpanel);
+			this->Homepanel->Controls->Add(this->ARpanel);
 			this->Homepanel->Controls->Add(this->lupanel);
 			this->Homepanel->Controls->Add(this->udpanel);
 			this->Homepanel->Controls->Add(this->abrpanel);
 			this->Homepanel->Controls->Add(this->uupanel);
-			this->Homepanel->Controls->Add(this->suggestionpanel);
-			this->Homepanel->Controls->Add(this->ARpanel);
 			this->Homepanel->Controls->Add(this->AdminHeaderpanel);
 			this->Homepanel->Controls->Add(this->HomepanelStatuslabel);
 			this->Homepanel->Controls->Add(this->vartextBox);
@@ -735,6 +737,105 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Homepanel->Name = L"Homepanel";
 			this->Homepanel->Size = System::Drawing::Size(1280, 705);
 			this->Homepanel->TabIndex = 7;
+			// 
+			// ARpanel
+			// 
+			this->ARpanel->Controls->Add(this->arinfotextBox);
+			this->ARpanel->Controls->Add(this->ARRejectbutton);
+			this->ARpanel->Controls->Add(this->ARApprovebutton);
+			this->ARpanel->Controls->Add(this->arlistBox);
+			this->ARpanel->Location = System::Drawing::Point(17, 91);
+			this->ARpanel->Name = L"ARpanel";
+			this->ARpanel->Size = System::Drawing::Size(1248, 611);
+			this->ARpanel->TabIndex = 18;
+			// 
+			// arinfotextBox
+			// 
+			this->arinfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->arinfotextBox->Location = System::Drawing::Point(14, 500);
+			this->arinfotextBox->Name = L"arinfotextBox";
+			this->arinfotextBox->ReadOnly = true;
+			this->arinfotextBox->Size = System::Drawing::Size(1226, 34);
+			this->arinfotextBox->TabIndex = 3;
+			// 
+			// ARRejectbutton
+			// 
+			this->ARRejectbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->ARRejectbutton->Location = System::Drawing::Point(904, 557);
+			this->ARRejectbutton->Name = L"ARRejectbutton";
+			this->ARRejectbutton->Size = System::Drawing::Size(165, 48);
+			this->ARRejectbutton->TabIndex = 2;
+			this->ARRejectbutton->Text = L"Reject";
+			this->ARRejectbutton->UseVisualStyleBackColor = true;
+			this->ARRejectbutton->Click += gcnew System::EventHandler(this, &AdminForm::ARRejectbutton_Click);
+			// 
+			// ARApprovebutton
+			// 
+			this->ARApprovebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->ARApprovebutton->Location = System::Drawing::Point(1075, 555);
+			this->ARApprovebutton->Name = L"ARApprovebutton";
+			this->ARApprovebutton->Size = System::Drawing::Size(165, 48);
+			this->ARApprovebutton->TabIndex = 1;
+			this->ARApprovebutton->Text = L"Approve";
+			this->ARApprovebutton->UseVisualStyleBackColor = true;
+			this->ARApprovebutton->Click += gcnew System::EventHandler(this, &AdminForm::ARApprovebutton_Click);
+			// 
+			// arlistBox
+			// 
+			this->arlistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->arlistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->arlistBox->FormattingEnabled = true;
+			this->arlistBox->HorizontalExtent = 15000;
+			this->arlistBox->HorizontalScrollbar = true;
+			this->arlistBox->ItemHeight = 31;
+			this->arlistBox->Location = System::Drawing::Point(10, 4);
+			this->arlistBox->Name = L"arlistBox";
+			this->arlistBox->ScrollAlwaysVisible = true;
+			this->arlistBox->Size = System::Drawing::Size(1230, 469);
+			this->arlistBox->TabIndex = 0;
+			this->arlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::arlistBox_SelectedIndexChanged);
+			// 
+			// lupanel
+			// 
+			this->lupanel->Controls->Add(this->lulockbutton);
+			this->lupanel->Controls->Add(this->lulistBox);
+			this->lupanel->Location = System::Drawing::Point(17, 91);
+			this->lupanel->Name = L"lupanel";
+			this->lupanel->Size = System::Drawing::Size(1248, 611);
+			this->lupanel->TabIndex = 24;
+			// 
+			// lulockbutton
+			// 
+			this->lulockbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lulockbutton->Location = System::Drawing::Point(1075, 553);
+			this->lulockbutton->Name = L"lulockbutton";
+			this->lulockbutton->Size = System::Drawing::Size(161, 51);
+			this->lulockbutton->TabIndex = 3;
+			this->lulockbutton->Text = L"Lock";
+			this->lulockbutton->UseVisualStyleBackColor = true;
+			this->lulockbutton->Click += gcnew System::EventHandler(this, &AdminForm::lulockbutton_Click);
+			// 
+			// lulistBox
+			// 
+			this->lulistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->lulistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lulistBox->FormattingEnabled = true;
+			this->lulistBox->HorizontalExtent = 15000;
+			this->lulistBox->HorizontalScrollbar = true;
+			this->lulistBox->ItemHeight = 31;
+			this->lulistBox->Location = System::Drawing::Point(7, 16);
+			this->lulistBox->Name = L"lulistBox";
+			this->lulistBox->ScrollAlwaysVisible = true;
+			this->lulistBox->Size = System::Drawing::Size(1230, 531);
+			this->lulistBox->TabIndex = 2;
 			// 
 			// udpanel
 			// 
@@ -786,43 +887,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->udlistBox->Size = System::Drawing::Size(1230, 469);
 			this->udlistBox->TabIndex = 2;
 			this->udlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::udlistBox_SelectedIndexChanged);
-			// 
-			// lupanel
-			// 
-			this->lupanel->Controls->Add(this->lulockbutton);
-			this->lupanel->Controls->Add(this->lulistBox);
-			this->lupanel->Location = System::Drawing::Point(17, 91);
-			this->lupanel->Name = L"lupanel";
-			this->lupanel->Size = System::Drawing::Size(1248, 611);
-			this->lupanel->TabIndex = 24;
-			// 
-			// lulockbutton
-			// 
-			this->lulockbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->lulockbutton->Location = System::Drawing::Point(1075, 553);
-			this->lulockbutton->Name = L"lulockbutton";
-			this->lulockbutton->Size = System::Drawing::Size(161, 51);
-			this->lulockbutton->TabIndex = 3;
-			this->lulockbutton->Text = L"Lock";
-			this->lulockbutton->UseVisualStyleBackColor = true;
-			this->lulockbutton->Click += gcnew System::EventHandler(this, &AdminForm::lulockbutton_Click);
-			// 
-			// lulistBox
-			// 
-			this->lulistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(224)));
-			this->lulistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->lulistBox->FormattingEnabled = true;
-			this->lulistBox->HorizontalExtent = 15000;
-			this->lulistBox->HorizontalScrollbar = true;
-			this->lulistBox->ItemHeight = 31;
-			this->lulistBox->Location = System::Drawing::Point(7, 16);
-			this->lulistBox->Name = L"lulistBox";
-			this->lulistBox->ScrollAlwaysVisible = true;
-			this->lulistBox->Size = System::Drawing::Size(1230, 531);
-			this->lulistBox->TabIndex = 2;
 			// 
 			// abrpanel
 			// 
@@ -950,68 +1014,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->suggestionlistBox->Size = System::Drawing::Size(1230, 469);
 			this->suggestionlistBox->TabIndex = 1;
 			this->suggestionlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::suggestionlistBox_SelectedIndexChanged);
-			// 
-			// ARpanel
-			// 
-			this->ARpanel->Controls->Add(this->arinfotextBox);
-			this->ARpanel->Controls->Add(this->ARRejectbutton);
-			this->ARpanel->Controls->Add(this->ARApprovebutton);
-			this->ARpanel->Controls->Add(this->arlistBox);
-			this->ARpanel->Location = System::Drawing::Point(17, 91);
-			this->ARpanel->Name = L"ARpanel";
-			this->ARpanel->Size = System::Drawing::Size(1248, 611);
-			this->ARpanel->TabIndex = 18;
-			// 
-			// arinfotextBox
-			// 
-			this->arinfotextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->arinfotextBox->Location = System::Drawing::Point(14, 500);
-			this->arinfotextBox->Name = L"arinfotextBox";
-			this->arinfotextBox->ReadOnly = true;
-			this->arinfotextBox->Size = System::Drawing::Size(1226, 34);
-			this->arinfotextBox->TabIndex = 3;
-			// 
-			// ARRejectbutton
-			// 
-			this->ARRejectbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->ARRejectbutton->Location = System::Drawing::Point(904, 557);
-			this->ARRejectbutton->Name = L"ARRejectbutton";
-			this->ARRejectbutton->Size = System::Drawing::Size(165, 48);
-			this->ARRejectbutton->TabIndex = 2;
-			this->ARRejectbutton->Text = L"Reject";
-			this->ARRejectbutton->UseVisualStyleBackColor = true;
-			this->ARRejectbutton->Click += gcnew System::EventHandler(this, &AdminForm::ARRejectbutton_Click);
-			// 
-			// ARApprovebutton
-			// 
-			this->ARApprovebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->ARApprovebutton->Location = System::Drawing::Point(1075, 555);
-			this->ARApprovebutton->Name = L"ARApprovebutton";
-			this->ARApprovebutton->Size = System::Drawing::Size(165, 48);
-			this->ARApprovebutton->TabIndex = 1;
-			this->ARApprovebutton->Text = L"Approve";
-			this->ARApprovebutton->UseVisualStyleBackColor = true;
-			this->ARApprovebutton->Click += gcnew System::EventHandler(this, &AdminForm::ARApprovebutton_Click);
-			// 
-			// arlistBox
-			// 
-			this->arlistBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)), 
-				static_cast<System::Int32>(static_cast<System::Byte>(224)));
-			this->arlistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->arlistBox->FormattingEnabled = true;
-			this->arlistBox->HorizontalExtent = 15000;
-			this->arlistBox->HorizontalScrollbar = true;
-			this->arlistBox->ItemHeight = 31;
-			this->arlistBox->Location = System::Drawing::Point(10, 4);
-			this->arlistBox->Name = L"arlistBox";
-			this->arlistBox->ScrollAlwaysVisible = true;
-			this->arlistBox->Size = System::Drawing::Size(1230, 469);
-			this->arlistBox->TabIndex = 0;
-			this->arlistBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::arlistBox_SelectedIndexChanged);
 			// 
 			// AdminHeaderpanel
 			// 
@@ -1194,6 +1196,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfilepictureBox
 			// 
+			this->ProfilepictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfilepictureBox.BackgroundImage")));
 			this->ProfilepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ProfilepictureBox->Location = System::Drawing::Point(9, 6);
 			this->ProfilepictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -1526,6 +1529,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileSecuritypictureBox2
 			// 
+			this->ProfileSecuritypictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfileSecuritypictureBox2.BackgroundImage")));
 			this->ProfileSecuritypictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ProfileSecuritypictureBox2->Location = System::Drawing::Point(780, 640);
 			this->ProfileSecuritypictureBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -1572,6 +1576,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileSecuritypictureBox1
 			// 
+			this->ProfileSecuritypictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfileSecuritypictureBox1.BackgroundImage")));
 			this->ProfileSecuritypictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ProfileSecuritypictureBox1->Location = System::Drawing::Point(33, 640);
 			this->ProfileSecuritypictureBox1->Margin = System::Windows::Forms::Padding(0);
@@ -1604,6 +1609,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileChangePasswordpictureBox3
 			// 
+			this->ProfileChangePasswordpictureBox3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfileChangePasswordpictureBox3.BackgroundImage")));
 			this->ProfileChangePasswordpictureBox3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ProfileChangePasswordpictureBox3->Location = System::Drawing::Point(780, 487);
 			this->ProfileChangePasswordpictureBox3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -1636,6 +1642,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileChangePasswordpictureBox2
 			// 
+			this->ProfileChangePasswordpictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfileChangePasswordpictureBox2.BackgroundImage")));
 			this->ProfileChangePasswordpictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ProfileChangePasswordpictureBox2->Location = System::Drawing::Point(408, 487);
 			this->ProfileChangePasswordpictureBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -1668,6 +1675,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			// ProfileChangePasswordpictureBox1
 			// 
+			this->ProfileChangePasswordpictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ProfileChangePasswordpictureBox1.BackgroundImage")));
 			this->ProfileChangePasswordpictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ProfileChangePasswordpictureBox1->Location = System::Drawing::Point(33, 487);
 			this->ProfileChangePasswordpictureBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -1771,8 +1779,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1280, 770);
-			this->Controls->Add(this->Homepanel);
 			this->Controls->Add(this->Profilepanel);
+			this->Controls->Add(this->Homepanel);
 			this->Controls->Add(this->Headerstatuspanel);
 			this->Controls->Add(this->HeaderPanel);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -1791,15 +1799,15 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox1))->EndInit();
 			this->Homepanel->ResumeLayout(false);
 			this->Homepanel->PerformLayout();
+			this->ARpanel->ResumeLayout(false);
+			this->ARpanel->PerformLayout();
+			this->lupanel->ResumeLayout(false);
 			this->udpanel->ResumeLayout(false);
 			this->udpanel->PerformLayout();
-			this->lupanel->ResumeLayout(false);
 			this->abrpanel->ResumeLayout(false);
 			this->uupanel->ResumeLayout(false);
 			this->suggestionpanel->ResumeLayout(false);
 			this->suggestionpanel->PerformLayout();
-			this->ARpanel->ResumeLayout(false);
-			this->ARpanel->PerformLayout();
 			this->AdminHeaderpanel->ResumeLayout(false);
 			this->Profilepanel->ResumeLayout(false);
 			this->Profilepanel->PerformLayout();
@@ -2589,9 +2597,17 @@ private: System::Void vartextBox_TextChanged(System::Object^  sender, System::Ev
 				 MessageBox::Show(ex->Message,"Error while reading data (Security Questions)");
 			 }
 			 
+				func();
 
 
 		 }
+
+			void func(void)
+			{
+				System::Object ^sender;
+				System::EventArgs ^e;
+				this->button1_Click(sender,e);
+			}
 
 
 private: System::Void HeaderForumbutton_Click(System::Object^  sender, System::EventArgs^  e) {

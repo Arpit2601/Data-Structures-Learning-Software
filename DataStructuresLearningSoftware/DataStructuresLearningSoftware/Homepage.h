@@ -63,6 +63,8 @@ namespace DataStructuresLearningSoftware {
 	String ^query;
 	String ^email_code;
 	String ^new_email;
+	String ^reason;
+	String ^status;
 	int ds_id;
 	int module_id;
 	
@@ -171,6 +173,7 @@ private: System::Windows::Forms::Button^  btnTrees;
 private: System::Windows::Forms::Button^  btnQueues;
 private: System::Windows::Forms::Button^  DSSuggestionsbutton;
 private: System::Windows::Forms::Button^  SuggestionDSbutton;
+private: System::Windows::Forms::Label^  HomeReasonlabel;
 
 
 
@@ -263,6 +266,7 @@ private: System::Windows::Forms::Button^  SuggestionDSbutton;
 			//username="sid";
 
 				//Retrieving user info
+			HomeReasonlabel->Hide();
 			
 				
 
@@ -417,6 +421,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->HeaderStatusPanelpictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->HeaderStatusPanelpictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->Homepanel = (gcnew System::Windows::Forms::Panel());
+			this->HomeReasonlabel = (gcnew System::Windows::Forms::Label());
 			this->HomepanelStatuslabel = (gcnew System::Windows::Forms::Label());
 			this->vartextBox = (gcnew System::Windows::Forms::TextBox());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
@@ -486,24 +491,10 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->ProfilePictureChangebutton = (gcnew System::Windows::Forms::Button());
 			this->ProfileopenFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->DSpanel = (gcnew System::Windows::Forms::Panel());
-			this->DSLinkpanel = (gcnew System::Windows::Forms::Panel());
-			this->DSSuggestionsbutton = (gcnew System::Windows::Forms::Button());
-			this->btnGraphs = (gcnew System::Windows::Forms::Button());
-			this->btnHeaps = (gcnew System::Windows::Forms::Button());
-			this->btnTrees = (gcnew System::Windows::Forms::Button());
-			this->btnQueues = (gcnew System::Windows::Forms::Button());
-			this->btnStacks = (gcnew System::Windows::Forms::Button());
-			this->btnSorting = (gcnew System::Windows::Forms::Button());
-			this->btnSearching = (gcnew System::Windows::Forms::Button());
-			this->btnLinkedList = (gcnew System::Windows::Forms::Button());
-			this->btnArrays = (gcnew System::Windows::Forms::Button());
 			this->Suggestionpanel = (gcnew System::Windows::Forms::Panel());
 			this->SuggestionDSbutton = (gcnew System::Windows::Forms::Button());
 			this->SuggestionPastpanel = (gcnew System::Windows::Forms::Panel());
 			this->SuggestionPastlistBox = (gcnew System::Windows::Forms::ListBox());
-			this->SuggestionDeletepanel = (gcnew System::Windows::Forms::Panel());
-			this->SuggestionDeletebutton = (gcnew System::Windows::Forms::Button());
-			this->SuggestionDeletelistBox = (gcnew System::Windows::Forms::ListBox());
 			this->SuggestionADDpanel = (gcnew System::Windows::Forms::Panel());
 			this->SuggestionAddCorrectlabel = (gcnew System::Windows::Forms::Label());
 			this->SuggestionAddSuggestionbutton = (gcnew System::Windows::Forms::Button());
@@ -526,12 +517,26 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->SuggestionAddQuestiontextBox = (gcnew System::Windows::Forms::TextBox());
 			this->SuggestionAddOption1checkBox = (gcnew System::Windows::Forms::CheckBox());
+			this->SuggestionDeletepanel = (gcnew System::Windows::Forms::Panel());
+			this->SuggestionDeletebutton = (gcnew System::Windows::Forms::Button());
+			this->SuggestionDeletelistBox = (gcnew System::Windows::Forms::ListBox());
 			this->PastSuggestionradioButton = (gcnew System::Windows::Forms::RadioButton());
 			this->deleteradioButton = (gcnew System::Windows::Forms::RadioButton());
 			this->addradioButton = (gcnew System::Windows::Forms::RadioButton());
 			this->DSSuggestionlabel = (gcnew System::Windows::Forms::Label());
 			this->ModulecomboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->DScomboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->DSLinkpanel = (gcnew System::Windows::Forms::Panel());
+			this->DSSuggestionsbutton = (gcnew System::Windows::Forms::Button());
+			this->btnGraphs = (gcnew System::Windows::Forms::Button());
+			this->btnHeaps = (gcnew System::Windows::Forms::Button());
+			this->btnTrees = (gcnew System::Windows::Forms::Button());
+			this->btnQueues = (gcnew System::Windows::Forms::Button());
+			this->btnStacks = (gcnew System::Windows::Forms::Button());
+			this->btnSorting = (gcnew System::Windows::Forms::Button());
+			this->btnSearching = (gcnew System::Windows::Forms::Button());
+			this->btnLinkedList = (gcnew System::Windows::Forms::Button());
+			this->btnArrays = (gcnew System::Windows::Forms::Button());
 			this->HeaderPanel->SuspendLayout();
 			this->Headerstatuspanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->HeaderStatusPanelpictureBox4))->BeginInit();
@@ -553,16 +558,16 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox1))->BeginInit();
 			this->DSpanel->SuspendLayout();
-			this->DSLinkpanel->SuspendLayout();
 			this->Suggestionpanel->SuspendLayout();
 			this->SuggestionPastpanel->SuspendLayout();
-			this->SuggestionDeletepanel->SuspendLayout();
 			this->SuggestionADDpanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox6))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
+			this->SuggestionDeletepanel->SuspendLayout();
+			this->DSLinkpanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// HeaderPanel
@@ -738,6 +743,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// Homepanel
 			// 
 			this->Homepanel->BackColor = System::Drawing::Color::AliceBlue;
+			this->Homepanel->Controls->Add(this->HomeReasonlabel);
 			this->Homepanel->Controls->Add(this->HomepanelStatuslabel);
 			this->Homepanel->Controls->Add(this->vartextBox);
 			this->Homepanel->Controls->Add(this->panel7);
@@ -748,6 +754,21 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->Homepanel->Name = L"Homepanel";
 			this->Homepanel->Size = System::Drawing::Size(1280, 705);
 			this->Homepanel->TabIndex = 7;
+			this->Homepanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Homepage::Homepanel_Paint);
+			// 
+			// HomeReasonlabel
+			// 
+			this->HomeReasonlabel->AutoSize = true;
+			this->HomeReasonlabel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->HomeReasonlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->HomeReasonlabel->ForeColor = System::Drawing::Color::Maroon;
+			this->HomeReasonlabel->Location = System::Drawing::Point(25, 93);
+			this->HomeReasonlabel->Name = L"HomeReasonlabel";
+			this->HomeReasonlabel->Size = System::Drawing::Size(66, 24);
+			this->HomeReasonlabel->TabIndex = 17;
+			this->HomeReasonlabel->Text = L"label3";
 			// 
 			// HomepanelStatuslabel
 			// 
@@ -758,7 +779,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->HomepanelStatuslabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), 
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->HomepanelStatuslabel->Location = System::Drawing::Point(28, 73);
+			this->HomepanelStatuslabel->Location = System::Drawing::Point(28, 60);
 			this->HomepanelStatuslabel->Name = L"HomepanelStatuslabel";
 			this->HomepanelStatuslabel->Size = System::Drawing::Size(85, 29);
 			this->HomepanelStatuslabel->TabIndex = 16;
@@ -778,7 +799,7 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// 
 			this->panel7->BackColor = System::Drawing::Color::Navy;
 			this->panel7->Controls->Add(this->panel6);
-			this->panel7->Location = System::Drawing::Point(69, 114);
+			this->panel7->Location = System::Drawing::Point(76, 119);
 			this->panel7->Margin = System::Windows::Forms::Padding(0);
 			this->panel7->Name = L"panel7";
 			this->panel7->Size = System::Drawing::Size(1120, 582);
@@ -1576,205 +1597,21 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			// DSpanel
 			// 
 			this->DSpanel->BackColor = System::Drawing::Color::AliceBlue;
-			this->DSpanel->Controls->Add(this->DSLinkpanel);
 			this->DSpanel->Controls->Add(this->Suggestionpanel);
+			this->DSpanel->Controls->Add(this->DSLinkpanel);
 			this->DSpanel->Location = System::Drawing::Point(0, 65);
 			this->DSpanel->Margin = System::Windows::Forms::Padding(0);
 			this->DSpanel->Name = L"DSpanel";
 			this->DSpanel->Size = System::Drawing::Size(1280, 705);
 			this->DSpanel->TabIndex = 13;
 			// 
-			// DSLinkpanel
-			// 
-			this->DSLinkpanel->BackColor = System::Drawing::Color::AliceBlue;
-			this->DSLinkpanel->Controls->Add(this->DSSuggestionsbutton);
-			this->DSLinkpanel->Controls->Add(this->btnGraphs);
-			this->DSLinkpanel->Controls->Add(this->btnHeaps);
-			this->DSLinkpanel->Controls->Add(this->btnTrees);
-			this->DSLinkpanel->Controls->Add(this->btnQueues);
-			this->DSLinkpanel->Controls->Add(this->btnStacks);
-			this->DSLinkpanel->Controls->Add(this->btnSorting);
-			this->DSLinkpanel->Controls->Add(this->btnSearching);
-			this->DSLinkpanel->Controls->Add(this->btnLinkedList);
-			this->DSLinkpanel->Controls->Add(this->btnArrays);
-			this->DSLinkpanel->Location = System::Drawing::Point(32, 37);
-			this->DSLinkpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->DSLinkpanel->Name = L"DSLinkpanel";
-			this->DSLinkpanel->Size = System::Drawing::Size(1216, 631);
-			this->DSLinkpanel->TabIndex = 1;
-			// 
-			// DSSuggestionsbutton
-			// 
-			this->DSSuggestionsbutton->BackColor = System::Drawing::Color::Black;
-			this->DSSuggestionsbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->DSSuggestionsbutton->ForeColor = System::Drawing::Color::White;
-			this->DSSuggestionsbutton->Location = System::Drawing::Point(1019, 538);
-			this->DSSuggestionsbutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->DSSuggestionsbutton->Name = L"DSSuggestionsbutton";
-			this->DSSuggestionsbutton->Size = System::Drawing::Size(181, 73);
-			this->DSSuggestionsbutton->TabIndex = 10;
-			this->DSSuggestionsbutton->Text = L"Suggestions";
-			this->DSSuggestionsbutton->UseVisualStyleBackColor = false;
-			this->DSSuggestionsbutton->Click += gcnew System::EventHandler(this, &Homepage::DSSuggestionsbutton_Click);
-			// 
-			// btnGraphs
-			// 
-			this->btnGraphs->BackColor = System::Drawing::Color::DarkSeaGreen;
-			this->btnGraphs->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnGraphs->FlatAppearance->BorderSize = 0;
-			this->btnGraphs->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnGraphs->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnGraphs->Location = System::Drawing::Point(728, 224);
-			this->btnGraphs->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->btnGraphs->Name = L"btnGraphs";
-			this->btnGraphs->Size = System::Drawing::Size(243, 224);
-			this->btnGraphs->TabIndex = 9;
-			this->btnGraphs->Text = L"Graphs";
-			this->btnGraphs->UseVisualStyleBackColor = false;
-			// 
-			// btnHeaps
-			// 
-			this->btnHeaps->BackColor = System::Drawing::Color::Bisque;
-			this->btnHeaps->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnHeaps->FlatAppearance->BorderSize = 0;
-			this->btnHeaps->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnHeaps->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnHeaps->Location = System::Drawing::Point(485, 224);
-			this->btnHeaps->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->btnHeaps->Name = L"btnHeaps";
-			this->btnHeaps->Size = System::Drawing::Size(243, 224);
-			this->btnHeaps->TabIndex = 8;
-			this->btnHeaps->Text = L"Heaps";
-			this->btnHeaps->UseVisualStyleBackColor = false;
-			// 
-			// btnTrees
-			// 
-			this->btnTrees->BackColor = System::Drawing::Color::LightCoral;
-			this->btnTrees->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnTrees->FlatAppearance->BorderSize = 0;
-			this->btnTrees->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnTrees->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnTrees->Location = System::Drawing::Point(243, 224);
-			this->btnTrees->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->btnTrees->Name = L"btnTrees";
-			this->btnTrees->Size = System::Drawing::Size(243, 224);
-			this->btnTrees->TabIndex = 7;
-			this->btnTrees->Text = L"Trees";
-			this->btnTrees->UseVisualStyleBackColor = false;
-			// 
-			// btnQueues
-			// 
-			this->btnQueues->BackColor = System::Drawing::Color::CornflowerBlue;
-			this->btnQueues->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnQueues->FlatAppearance->BorderSize = 0;
-			this->btnQueues->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnQueues->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnQueues->Location = System::Drawing::Point(0, 224);
-			this->btnQueues->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->btnQueues->Name = L"btnQueues";
-			this->btnQueues->Size = System::Drawing::Size(243, 224);
-			this->btnQueues->TabIndex = 6;
-			this->btnQueues->Text = L"Queues";
-			this->btnQueues->UseVisualStyleBackColor = false;
-			this->btnQueues->Click += gcnew System::EventHandler(this, &Homepage::button7_Click);
-			// 
-			// btnStacks
-			// 
-			this->btnStacks->BackColor = System::Drawing::Color::DarkSeaGreen;
-			this->btnStacks->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnStacks->FlatAppearance->BorderSize = 0;
-			this->btnStacks->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnStacks->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnStacks->Location = System::Drawing::Point(971, 0);
-			this->btnStacks->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->btnStacks->Name = L"btnStacks";
-			this->btnStacks->Size = System::Drawing::Size(243, 224);
-			this->btnStacks->TabIndex = 4;
-			this->btnStacks->Text = L"Stacks";
-			this->btnStacks->UseVisualStyleBackColor = false;
-			this->btnStacks->Click += gcnew System::EventHandler(this, &Homepage::btnStacks_Click);
-			// 
-			// btnSorting
-			// 
-			this->btnSorting->BackColor = System::Drawing::Color::Bisque;
-			this->btnSorting->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnSorting->FlatAppearance->BorderSize = 0;
-			this->btnSorting->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnSorting->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnSorting->Location = System::Drawing::Point(728, 0);
-			this->btnSorting->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->btnSorting->Name = L"btnSorting";
-			this->btnSorting->Size = System::Drawing::Size(243, 224);
-			this->btnSorting->TabIndex = 3;
-			this->btnSorting->Text = L"Sorting";
-			this->btnSorting->UseVisualStyleBackColor = false;
-			this->btnSorting->Click += gcnew System::EventHandler(this, &Homepage::button4_Click);
-			// 
-			// btnSearching
-			// 
-			this->btnSearching->BackColor = System::Drawing::Color::LightCoral;
-			this->btnSearching->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnSearching->FlatAppearance->BorderSize = 0;
-			this->btnSearching->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnSearching->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnSearching->Location = System::Drawing::Point(485, 0);
-			this->btnSearching->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->btnSearching->Name = L"btnSearching";
-			this->btnSearching->Size = System::Drawing::Size(243, 224);
-			this->btnSearching->TabIndex = 2;
-			this->btnSearching->Text = L"Searching";
-			this->btnSearching->UseVisualStyleBackColor = false;
-			this->btnSearching->Click += gcnew System::EventHandler(this, &Homepage::btnSearching_Click);
-			// 
-			// btnLinkedList
-			// 
-			this->btnLinkedList->BackColor = System::Drawing::Color::CornflowerBlue;
-			this->btnLinkedList->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnLinkedList->FlatAppearance->BorderSize = 0;
-			this->btnLinkedList->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnLinkedList->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnLinkedList->Location = System::Drawing::Point(243, 0);
-			this->btnLinkedList->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->btnLinkedList->Name = L"btnLinkedList";
-			this->btnLinkedList->Size = System::Drawing::Size(243, 224);
-			this->btnLinkedList->TabIndex = 1;
-			this->btnLinkedList->Text = L"Linked Lists";
-			this->btnLinkedList->UseVisualStyleBackColor = false;
-			this->btnLinkedList->Click += gcnew System::EventHandler(this, &Homepage::button2_Click);
-			// 
-			// btnArrays
-			// 
-			this->btnArrays->BackColor = System::Drawing::Color::DarkSeaGreen;
-			this->btnArrays->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnArrays->FlatAppearance->BorderSize = 0;
-			this->btnArrays->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnArrays->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->btnArrays->Location = System::Drawing::Point(0, 0);
-			this->btnArrays->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->btnArrays->Name = L"btnArrays";
-			this->btnArrays->Size = System::Drawing::Size(243, 224);
-			this->btnArrays->TabIndex = 0;
-			this->btnArrays->Text = L"Arrays";
-			this->btnArrays->UseVisualStyleBackColor = false;
-			this->btnArrays->Click += gcnew System::EventHandler(this, &Homepage::btnArrays_Click);
-			// 
 			// Suggestionpanel
 			// 
 			this->Suggestionpanel->BackColor = System::Drawing::Color::Silver;
 			this->Suggestionpanel->Controls->Add(this->SuggestionDSbutton);
 			this->Suggestionpanel->Controls->Add(this->SuggestionPastpanel);
-			this->Suggestionpanel->Controls->Add(this->SuggestionDeletepanel);
 			this->Suggestionpanel->Controls->Add(this->SuggestionADDpanel);
+			this->Suggestionpanel->Controls->Add(this->SuggestionDeletepanel);
 			this->Suggestionpanel->Controls->Add(this->PastSuggestionradioButton);
 			this->Suggestionpanel->Controls->Add(this->deleteradioButton);
 			this->Suggestionpanel->Controls->Add(this->addradioButton);
@@ -1829,49 +1666,6 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->SuggestionPastlistBox->SelectionMode = System::Windows::Forms::SelectionMode::None;
 			this->SuggestionPastlistBox->Size = System::Drawing::Size(1165, 354);
 			this->SuggestionPastlistBox->TabIndex = 1;
-			// 
-			// SuggestionDeletepanel
-			// 
-			this->SuggestionDeletepanel->Controls->Add(this->SuggestionDeletebutton);
-			this->SuggestionDeletepanel->Controls->Add(this->SuggestionDeletelistBox);
-			this->SuggestionDeletepanel->Location = System::Drawing::Point(19, 233);
-			this->SuggestionDeletepanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->SuggestionDeletepanel->Name = L"SuggestionDeletepanel";
-			this->SuggestionDeletepanel->Size = System::Drawing::Size(1185, 434);
-			this->SuggestionDeletepanel->TabIndex = 13;
-			// 
-			// SuggestionDeletebutton
-			// 
-			this->SuggestionDeletebutton->BackColor = System::Drawing::Color::Black;
-			this->SuggestionDeletebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->SuggestionDeletebutton->ForeColor = System::Drawing::Color::White;
-			this->SuggestionDeletebutton->Location = System::Drawing::Point(999, 382);
-			this->SuggestionDeletebutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->SuggestionDeletebutton->Name = L"SuggestionDeletebutton";
-			this->SuggestionDeletebutton->Size = System::Drawing::Size(177, 52);
-			this->SuggestionDeletebutton->TabIndex = 1;
-			this->SuggestionDeletebutton->Text = L"Suggest Delete";
-			this->SuggestionDeletebutton->UseVisualStyleBackColor = false;
-			this->SuggestionDeletebutton->Click += gcnew System::EventHandler(this, &Homepage::SuggestionDeletebutton_Click);
-			// 
-			// SuggestionDeletelistBox
-			// 
-			this->SuggestionDeletelistBox->BackColor = System::Drawing::Color::Gray;
-			this->SuggestionDeletelistBox->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->SuggestionDeletelistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->SuggestionDeletelistBox->FormattingEnabled = true;
-			this->SuggestionDeletelistBox->HorizontalExtent = 15000;
-			this->SuggestionDeletelistBox->HorizontalScrollbar = true;
-			this->SuggestionDeletelistBox->ItemHeight = 25;
-			this->SuggestionDeletelistBox->Location = System::Drawing::Point(11, 23);
-			this->SuggestionDeletelistBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->SuggestionDeletelistBox->Name = L"SuggestionDeletelistBox";
-			this->SuggestionDeletelistBox->ScrollAlwaysVisible = true;
-			this->SuggestionDeletelistBox->Size = System::Drawing::Size(1165, 329);
-			this->SuggestionDeletelistBox->Sorted = true;
-			this->SuggestionDeletelistBox->TabIndex = 0;
 			// 
 			// SuggestionADDpanel
 			// 
@@ -2151,6 +1945,49 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->SuggestionAddOption1checkBox->Text = L"Option 1";
 			this->SuggestionAddOption1checkBox->UseVisualStyleBackColor = true;
 			// 
+			// SuggestionDeletepanel
+			// 
+			this->SuggestionDeletepanel->Controls->Add(this->SuggestionDeletebutton);
+			this->SuggestionDeletepanel->Controls->Add(this->SuggestionDeletelistBox);
+			this->SuggestionDeletepanel->Location = System::Drawing::Point(19, 233);
+			this->SuggestionDeletepanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->SuggestionDeletepanel->Name = L"SuggestionDeletepanel";
+			this->SuggestionDeletepanel->Size = System::Drawing::Size(1185, 434);
+			this->SuggestionDeletepanel->TabIndex = 13;
+			// 
+			// SuggestionDeletebutton
+			// 
+			this->SuggestionDeletebutton->BackColor = System::Drawing::Color::Black;
+			this->SuggestionDeletebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->SuggestionDeletebutton->ForeColor = System::Drawing::Color::White;
+			this->SuggestionDeletebutton->Location = System::Drawing::Point(999, 382);
+			this->SuggestionDeletebutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->SuggestionDeletebutton->Name = L"SuggestionDeletebutton";
+			this->SuggestionDeletebutton->Size = System::Drawing::Size(177, 52);
+			this->SuggestionDeletebutton->TabIndex = 1;
+			this->SuggestionDeletebutton->Text = L"Suggest Delete";
+			this->SuggestionDeletebutton->UseVisualStyleBackColor = false;
+			this->SuggestionDeletebutton->Click += gcnew System::EventHandler(this, &Homepage::SuggestionDeletebutton_Click);
+			// 
+			// SuggestionDeletelistBox
+			// 
+			this->SuggestionDeletelistBox->BackColor = System::Drawing::Color::Gray;
+			this->SuggestionDeletelistBox->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->SuggestionDeletelistBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->SuggestionDeletelistBox->FormattingEnabled = true;
+			this->SuggestionDeletelistBox->HorizontalExtent = 15000;
+			this->SuggestionDeletelistBox->HorizontalScrollbar = true;
+			this->SuggestionDeletelistBox->ItemHeight = 25;
+			this->SuggestionDeletelistBox->Location = System::Drawing::Point(11, 23);
+			this->SuggestionDeletelistBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->SuggestionDeletelistBox->Name = L"SuggestionDeletelistBox";
+			this->SuggestionDeletelistBox->ScrollAlwaysVisible = true;
+			this->SuggestionDeletelistBox->Size = System::Drawing::Size(1165, 329);
+			this->SuggestionDeletelistBox->Sorted = true;
+			this->SuggestionDeletelistBox->TabIndex = 0;
+			// 
 			// PastSuggestionradioButton
 			// 
 			this->PastSuggestionradioButton->AutoSize = true;
@@ -2243,14 +2080,198 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			this->DScomboBox->TabIndex = 0;
 			this->DScomboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &Homepage::DScomboBox_SelectedIndexChanged);
 			// 
+			// DSLinkpanel
+			// 
+			this->DSLinkpanel->BackColor = System::Drawing::Color::AliceBlue;
+			this->DSLinkpanel->Controls->Add(this->DSSuggestionsbutton);
+			this->DSLinkpanel->Controls->Add(this->btnGraphs);
+			this->DSLinkpanel->Controls->Add(this->btnHeaps);
+			this->DSLinkpanel->Controls->Add(this->btnTrees);
+			this->DSLinkpanel->Controls->Add(this->btnQueues);
+			this->DSLinkpanel->Controls->Add(this->btnStacks);
+			this->DSLinkpanel->Controls->Add(this->btnSorting);
+			this->DSLinkpanel->Controls->Add(this->btnSearching);
+			this->DSLinkpanel->Controls->Add(this->btnLinkedList);
+			this->DSLinkpanel->Controls->Add(this->btnArrays);
+			this->DSLinkpanel->Location = System::Drawing::Point(32, 37);
+			this->DSLinkpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->DSLinkpanel->Name = L"DSLinkpanel";
+			this->DSLinkpanel->Size = System::Drawing::Size(1216, 631);
+			this->DSLinkpanel->TabIndex = 1;
+			// 
+			// DSSuggestionsbutton
+			// 
+			this->DSSuggestionsbutton->BackColor = System::Drawing::Color::Black;
+			this->DSSuggestionsbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->DSSuggestionsbutton->ForeColor = System::Drawing::Color::White;
+			this->DSSuggestionsbutton->Location = System::Drawing::Point(1019, 538);
+			this->DSSuggestionsbutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->DSSuggestionsbutton->Name = L"DSSuggestionsbutton";
+			this->DSSuggestionsbutton->Size = System::Drawing::Size(181, 73);
+			this->DSSuggestionsbutton->TabIndex = 10;
+			this->DSSuggestionsbutton->Text = L"Suggestions";
+			this->DSSuggestionsbutton->UseVisualStyleBackColor = false;
+			this->DSSuggestionsbutton->Click += gcnew System::EventHandler(this, &Homepage::DSSuggestionsbutton_Click);
+			// 
+			// btnGraphs
+			// 
+			this->btnGraphs->BackColor = System::Drawing::Color::DarkSeaGreen;
+			this->btnGraphs->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnGraphs->FlatAppearance->BorderSize = 0;
+			this->btnGraphs->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnGraphs->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnGraphs->Location = System::Drawing::Point(728, 224);
+			this->btnGraphs->Margin = System::Windows::Forms::Padding(4);
+			this->btnGraphs->Name = L"btnGraphs";
+			this->btnGraphs->Size = System::Drawing::Size(243, 224);
+			this->btnGraphs->TabIndex = 9;
+			this->btnGraphs->Text = L"Graphs";
+			this->btnGraphs->UseVisualStyleBackColor = false;
+			// 
+			// btnHeaps
+			// 
+			this->btnHeaps->BackColor = System::Drawing::Color::Bisque;
+			this->btnHeaps->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnHeaps->FlatAppearance->BorderSize = 0;
+			this->btnHeaps->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnHeaps->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnHeaps->Location = System::Drawing::Point(485, 224);
+			this->btnHeaps->Margin = System::Windows::Forms::Padding(4);
+			this->btnHeaps->Name = L"btnHeaps";
+			this->btnHeaps->Size = System::Drawing::Size(243, 224);
+			this->btnHeaps->TabIndex = 8;
+			this->btnHeaps->Text = L"Heaps";
+			this->btnHeaps->UseVisualStyleBackColor = false;
+			// 
+			// btnTrees
+			// 
+			this->btnTrees->BackColor = System::Drawing::Color::LightCoral;
+			this->btnTrees->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnTrees->FlatAppearance->BorderSize = 0;
+			this->btnTrees->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnTrees->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnTrees->Location = System::Drawing::Point(243, 224);
+			this->btnTrees->Margin = System::Windows::Forms::Padding(4);
+			this->btnTrees->Name = L"btnTrees";
+			this->btnTrees->Size = System::Drawing::Size(243, 224);
+			this->btnTrees->TabIndex = 7;
+			this->btnTrees->Text = L"Trees";
+			this->btnTrees->UseVisualStyleBackColor = false;
+			// 
+			// btnQueues
+			// 
+			this->btnQueues->BackColor = System::Drawing::Color::CornflowerBlue;
+			this->btnQueues->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnQueues->FlatAppearance->BorderSize = 0;
+			this->btnQueues->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnQueues->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnQueues->Location = System::Drawing::Point(0, 224);
+			this->btnQueues->Margin = System::Windows::Forms::Padding(4);
+			this->btnQueues->Name = L"btnQueues";
+			this->btnQueues->Size = System::Drawing::Size(243, 224);
+			this->btnQueues->TabIndex = 6;
+			this->btnQueues->Text = L"Queues";
+			this->btnQueues->UseVisualStyleBackColor = false;
+			this->btnQueues->Click += gcnew System::EventHandler(this, &Homepage::button7_Click);
+			// 
+			// btnStacks
+			// 
+			this->btnStacks->BackColor = System::Drawing::Color::DarkSeaGreen;
+			this->btnStacks->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnStacks->FlatAppearance->BorderSize = 0;
+			this->btnStacks->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnStacks->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnStacks->Location = System::Drawing::Point(971, 0);
+			this->btnStacks->Margin = System::Windows::Forms::Padding(4);
+			this->btnStacks->Name = L"btnStacks";
+			this->btnStacks->Size = System::Drawing::Size(243, 224);
+			this->btnStacks->TabIndex = 4;
+			this->btnStacks->Text = L"Stacks";
+			this->btnStacks->UseVisualStyleBackColor = false;
+			this->btnStacks->Click += gcnew System::EventHandler(this, &Homepage::btnStacks_Click);
+			// 
+			// btnSorting
+			// 
+			this->btnSorting->BackColor = System::Drawing::Color::Bisque;
+			this->btnSorting->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnSorting->FlatAppearance->BorderSize = 0;
+			this->btnSorting->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnSorting->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnSorting->Location = System::Drawing::Point(728, 0);
+			this->btnSorting->Margin = System::Windows::Forms::Padding(4);
+			this->btnSorting->Name = L"btnSorting";
+			this->btnSorting->Size = System::Drawing::Size(243, 224);
+			this->btnSorting->TabIndex = 3;
+			this->btnSorting->Text = L"Sorting";
+			this->btnSorting->UseVisualStyleBackColor = false;
+			this->btnSorting->Click += gcnew System::EventHandler(this, &Homepage::button4_Click);
+			// 
+			// btnSearching
+			// 
+			this->btnSearching->BackColor = System::Drawing::Color::LightCoral;
+			this->btnSearching->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnSearching->FlatAppearance->BorderSize = 0;
+			this->btnSearching->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnSearching->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnSearching->Location = System::Drawing::Point(485, 0);
+			this->btnSearching->Margin = System::Windows::Forms::Padding(4);
+			this->btnSearching->Name = L"btnSearching";
+			this->btnSearching->Size = System::Drawing::Size(243, 224);
+			this->btnSearching->TabIndex = 2;
+			this->btnSearching->Text = L"Searching";
+			this->btnSearching->UseVisualStyleBackColor = false;
+			this->btnSearching->Click += gcnew System::EventHandler(this, &Homepage::btnSearching_Click);
+			// 
+			// btnLinkedList
+			// 
+			this->btnLinkedList->BackColor = System::Drawing::Color::CornflowerBlue;
+			this->btnLinkedList->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnLinkedList->FlatAppearance->BorderSize = 0;
+			this->btnLinkedList->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnLinkedList->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnLinkedList->Location = System::Drawing::Point(243, 0);
+			this->btnLinkedList->Margin = System::Windows::Forms::Padding(4);
+			this->btnLinkedList->Name = L"btnLinkedList";
+			this->btnLinkedList->Size = System::Drawing::Size(243, 224);
+			this->btnLinkedList->TabIndex = 1;
+			this->btnLinkedList->Text = L"Linked Lists";
+			this->btnLinkedList->UseVisualStyleBackColor = false;
+			this->btnLinkedList->Click += gcnew System::EventHandler(this, &Homepage::button2_Click);
+			// 
+			// btnArrays
+			// 
+			this->btnArrays->BackColor = System::Drawing::Color::DarkSeaGreen;
+			this->btnArrays->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnArrays->FlatAppearance->BorderSize = 0;
+			this->btnArrays->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btnArrays->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btnArrays->Location = System::Drawing::Point(0, 0);
+			this->btnArrays->Margin = System::Windows::Forms::Padding(4);
+			this->btnArrays->Name = L"btnArrays";
+			this->btnArrays->Size = System::Drawing::Size(243, 224);
+			this->btnArrays->TabIndex = 0;
+			this->btnArrays->Text = L"Arrays";
+			this->btnArrays->UseVisualStyleBackColor = false;
+			this->btnArrays->Click += gcnew System::EventHandler(this, &Homepage::btnArrays_Click);
+			// 
 			// Homepage
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1280, 770);
-			this->Controls->Add(this->DSpanel);
-			this->Controls->Add(this->Homepanel);
 			this->Controls->Add(this->Profilepanel);
+			this->Controls->Add(this->Homepanel);
+			this->Controls->Add(this->DSpanel);
 			this->Controls->Add(this->Headerstatuspanel);
 			this->Controls->Add(this->HeaderPanel);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -2285,11 +2306,9 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ProfileChangePasswordpictureBox1))->EndInit();
 			this->DSpanel->ResumeLayout(false);
-			this->DSLinkpanel->ResumeLayout(false);
 			this->Suggestionpanel->ResumeLayout(false);
 			this->Suggestionpanel->PerformLayout();
 			this->SuggestionPastpanel->ResumeLayout(false);
-			this->SuggestionDeletepanel->ResumeLayout(false);
 			this->SuggestionADDpanel->ResumeLayout(false);
 			this->SuggestionADDpanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox6))->EndInit();
@@ -2297,6 +2316,8 @@ private: System::Windows::Forms::Button^  ProfileChangePasswordSavebutton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
+			this->SuggestionDeletepanel->ResumeLayout(false);
+			this->DSLinkpanel->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -2380,11 +2401,19 @@ private: System::Void HeaderHomebutton_Click(System::Object^  sender, System::Ev
 			 }
 			 if(designation=="prof")
 			 {
-				 if(isapproved=="False")
+				 if(isapproved=="False"&&status=="Pending")
 				 {
-					HomepanelStatuslabel->Text="Designation as 'Professor' not verified by admin (Limited Capabilities)";
-					HomepanelStatuslabel->BackColor=Color::LightPink;
-					HomepanelStatuslabel->ForeColor=Color::Red;
+					 HomepanelStatuslabel->Text="Designation as 'Professor' not verified by admin (Limited Capabilities)";
+					 HomepanelStatuslabel->BackColor=Color::LightGoldenrodYellow;
+					 HomepanelStatuslabel->ForeColor=Color::DarkMagenta;
+				 }
+				 else if(isapproved=="False"&&status=="Rejected")
+				 {
+					HomepanelStatuslabel->Text="Designation as 'Professor' Rejected by admin (Limited Capabilities)";
+					HomeReasonlabel->Text="Reason: "+reason;
+					HomeReasonlabel->Show();
+					 HomepanelStatuslabel->BackColor=Color::LightPink;
+					 HomepanelStatuslabel->ForeColor=Color::Red;
 				 }
 				 else
 				 {
@@ -3021,6 +3050,14 @@ private: System::Void vartextBox_TextChanged(System::Object^  sender, System::Ev
 				 command->CommandText=query;
 				 queue_progress=command->ExecuteScalar()->ToString();
 
+				 query="Select Reason From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 reason=command->ExecuteScalar()->ToString();
+
+				 query="Select Status From Users Where Username = '"+username+"';";
+				 command->CommandText=query;
+				 status=command->ExecuteScalar()->ToString();
+
 
 				 connection->Close();
 			 }
@@ -3033,9 +3070,17 @@ private: System::Void vartextBox_TextChanged(System::Object^  sender, System::Ev
 			 //MessageBox::Show(isapproved);
 			 if(designation=="prof")
 			 {
-				 if(isapproved=="False")
+				 if(isapproved=="False"&&status=="Pending")
 				 {
 					 HomepanelStatuslabel->Text="Designation as 'Professor' not verified by admin (Limited Capabilities)";
+					 HomepanelStatuslabel->BackColor=Color::LightGoldenrodYellow;
+					 HomepanelStatuslabel->ForeColor=Color::DarkMagenta;
+				 }
+				 else if(isapproved=="False"&&status=="Rejected")
+				 {
+					 HomepanelStatuslabel->Text="Designation as 'Professor' Rejected by admin (Limited Capabilities)";
+					 HomeReasonlabel->Text="Reason: "+reason;
+					 HomeReasonlabel->Show();
 					 HomepanelStatuslabel->BackColor=Color::LightPink;
 					 HomepanelStatuslabel->ForeColor=Color::Red;
 				 }
@@ -3150,7 +3195,8 @@ private: System::Void PastSuggestionradioButton_CheckedChanged(System::Object^  
 				{
 					String ^ques = reader->GetString(2);
 					String ^status=reader->GetString(11);
-					String ^res=status+": "+ques;
+					String ^reason=reader->GetString(15);
+					String ^res="STATUS: "+status+" |QUESTION: "+ques+" |REASON(IF REJECTED): "+reason;
 					SuggestionPastlistBox->Items->Add(res);
 				}
 				 connection->Close();
@@ -3372,7 +3418,7 @@ private: System::Void SuggestionAddSuggestionbutton_Click(System::Object^  sende
 			{
 				connection->Open();
 				command->Connection=connection;
-				query = "INSERT INTO [Suggestion] ([Type], Question, Option1, Option2, Option3, Option4 , Answer1, Answer2, Answer3,Answer4,Status,Username,DS,[Module]) VALUES ('ADD', '"+ques+"', '"+op1+"', '"+op2+"', '"+op3+"', '"+op4+"', "+a1+", "+a2+", "+a3+", "+a4+", 'Pending','"+username+"',"+ds_id+","+module_id+"); ";
+				query = "INSERT INTO [Suggestion] ([Type], Question, Option1, Option2, Option3, Option4 , Answer1, Answer2, Answer3,Answer4,Status,Username,DS,[Module],[Reason,[ReasonD]]) VALUES ('ADD', '"+ques+"', '"+op1+"', '"+op2+"', '"+op3+"', '"+op4+"', "+a1+", "+a2+", "+a3+", "+a4+", 'Pending','"+username+"',"+ds_id+","+module_id+",'-','-'); ";
 				command->CommandText=query;
 				command->ExecuteNonQuery();
 				connection->Close();
@@ -3611,13 +3657,18 @@ private: System::Void SuggestionDeletebutton_Click(System::Object^  sender, Syst
 				 MessageBox::Show(e->Message,"Error While reading Suggestions Table for DELETE Duplication Checking");
 
 			 }
-
+			 String ^input=Microsoft::VisualBasic::Interaction::InputBox(L"Enter Reason:","Suggestion","",500,500);
+			 if(input=="")
+			 {
+				MessageBox::Show("Reason is mandatory","Suggestion Delete");
+				return;
+			 }
 			 //Push Suggestion to DB
 			 try
 			 {
 				 connection->Open();
 				 command->Connection=connection;
-				 query = "INSERT INTO [Suggestion] ([Type], [Question],[Status],[Username],[DS],[Module]) VALUES ('DELETE','"+ques+"', 'Pending','"+username+"',"+ds_id+","+module_id+"); ";
+				 query = "INSERT INTO [Suggestion] ([Type], [Question],[Status],[Username],[DS],[Module],[Reason],[ReasonD]) VALUES ('DELETE','"+ques+"', 'Pending','"+username+"',"+ds_id+","+module_id+",'-','"+input+"'); ";
 				 command->CommandText=query;
 				 command->ExecuteNonQuery();
 				 connection->Close();
@@ -3650,6 +3701,8 @@ private: System::Void SuggestionDSbutton_Click(System::Object^  sender, System::
 			 Suggestionpanel->Hide();
 		 }
 private: System::Void HeaderForumbutton_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void Homepanel_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 		 }
 };
 }

@@ -442,6 +442,16 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ChangePasswordNewPasswordtextBox = (gcnew System::Windows::Forms::TextBox());
 			this->ForgotPasswordHeaderlabel = (gcnew System::Windows::Forms::Label());
 			this->Registerpanel = (gcnew System::Windows::Forms::Panel());
+			this->RegisterVerificationpanel = (gcnew System::Windows::Forms::Panel());
+			this->RegisterVerificationResendbutton = (gcnew System::Windows::Forms::Button());
+			this->RegisterVerificationVerifybutton = (gcnew System::Windows::Forms::Button());
+			this->RegisterVerificationStatuslabel = (gcnew System::Windows::Forms::Label());
+			this->RegisterVerificationBackbutton = (gcnew System::Windows::Forms::Button());
+			this->RegisterVerificationDesignpanel = (gcnew System::Windows::Forms::Panel());
+			this->RegisterVerificationpictureBox = (gcnew System::Windows::Forms::PictureBox());
+			this->RegisterVerificationtextBox = (gcnew System::Windows::Forms::TextBox());
+			this->RegitsterVerificationlabel2 = (gcnew System::Windows::Forms::Label());
+			this->RegitsterVerificationlabel1 = (gcnew System::Windows::Forms::Label());
 			this->RegisterDetailspanel = (gcnew System::Windows::Forms::Panel());
 			this->RegisterpasswordcheckBox = (gcnew System::Windows::Forms::CheckBox());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
@@ -470,16 +480,6 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterFirstNameDesignpanel = (gcnew System::Windows::Forms::Panel());
 			this->RegisterFirstNamepictureBox = (gcnew System::Windows::Forms::PictureBox());
 			this->RegisterUsernametextBox = (gcnew System::Windows::Forms::TextBox());
-			this->RegisterVerificationpanel = (gcnew System::Windows::Forms::Panel());
-			this->RegisterVerificationResendbutton = (gcnew System::Windows::Forms::Button());
-			this->RegisterVerificationVerifybutton = (gcnew System::Windows::Forms::Button());
-			this->RegisterVerificationStatuslabel = (gcnew System::Windows::Forms::Label());
-			this->RegisterVerificationBackbutton = (gcnew System::Windows::Forms::Button());
-			this->RegisterVerificationDesignpanel = (gcnew System::Windows::Forms::Panel());
-			this->RegisterVerificationpictureBox = (gcnew System::Windows::Forms::PictureBox());
-			this->RegisterVerificationtextBox = (gcnew System::Windows::Forms::TextBox());
-			this->RegitsterVerificationlabel2 = (gcnew System::Windows::Forms::Label());
-			this->RegitsterVerificationlabel1 = (gcnew System::Windows::Forms::Label());
 			this->RegisterHomebutton = (gcnew System::Windows::Forms::Button());
 			this->RegisterHomepictureBox = (gcnew System::Windows::Forms::PictureBox());
 			this->ReigsterHeaderpictureBox = (gcnew System::Windows::Forms::PictureBox());
@@ -514,6 +514,8 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ChangePasswordConfirmPasswordpictureBox))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ChangePasswordNewPasswordpictureBox))->BeginInit();
 			this->Registerpanel->SuspendLayout();
+			this->RegisterVerificationpanel->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterVerificationpictureBox))->BeginInit();
 			this->RegisterDetailspanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterPasswordpictureBox))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->registerSecuritypictureBox))->BeginInit();
@@ -523,8 +525,6 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterEmailpictureBox))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterLastNamepictureBox))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterFirstNamepictureBox))->BeginInit();
-			this->RegisterVerificationpanel->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterVerificationpictureBox))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterHomepictureBox))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ReigsterHeaderpictureBox))->BeginInit();
 			this->SuspendLayout();
@@ -1558,6 +1558,153 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->Registerpanel->Size = System::Drawing::Size(1048, 718);
 			this->Registerpanel->TabIndex = 19;
 			// 
+			// RegisterVerificationpanel
+			// 
+			this->RegisterVerificationpanel->Controls->Add(this->RegisterVerificationResendbutton);
+			this->RegisterVerificationpanel->Controls->Add(this->RegisterVerificationVerifybutton);
+			this->RegisterVerificationpanel->Controls->Add(this->RegisterVerificationStatuslabel);
+			this->RegisterVerificationpanel->Controls->Add(this->RegisterVerificationBackbutton);
+			this->RegisterVerificationpanel->Controls->Add(this->RegisterVerificationDesignpanel);
+			this->RegisterVerificationpanel->Controls->Add(this->RegisterVerificationpictureBox);
+			this->RegisterVerificationpanel->Controls->Add(this->RegisterVerificationtextBox);
+			this->RegisterVerificationpanel->Controls->Add(this->RegitsterVerificationlabel2);
+			this->RegisterVerificationpanel->Controls->Add(this->RegitsterVerificationlabel1);
+			this->RegisterVerificationpanel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->RegisterVerificationpanel->Location = System::Drawing::Point(27, 86);
+			this->RegisterVerificationpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterVerificationpanel->Name = L"RegisterVerificationpanel";
+			this->RegisterVerificationpanel->Size = System::Drawing::Size(993, 538);
+			this->RegisterVerificationpanel->TabIndex = 20;
+			// 
+			// RegisterVerificationResendbutton
+			// 
+			this->RegisterVerificationResendbutton->BackColor = System::Drawing::Color::CornflowerBlue;
+			this->RegisterVerificationResendbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->RegisterVerificationResendbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->RegisterVerificationResendbutton->Location = System::Drawing::Point(599, 382);
+			this->RegisterVerificationResendbutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterVerificationResendbutton->Name = L"RegisterVerificationResendbutton";
+			this->RegisterVerificationResendbutton->Size = System::Drawing::Size(148, 50);
+			this->RegisterVerificationResendbutton->TabIndex = 9;
+			this->RegisterVerificationResendbutton->Text = L"Resend";
+			this->RegisterVerificationResendbutton->UseVisualStyleBackColor = false;
+			this->RegisterVerificationResendbutton->Click += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationResendbutton_Click);
+			this->RegisterVerificationResendbutton->Enter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationResendbutton_Enter);
+			this->RegisterVerificationResendbutton->Leave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationResendbutton_Leave);
+			this->RegisterVerificationResendbutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationResendbutton_MouseEnter);
+			this->RegisterVerificationResendbutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationResendbutton_MouseLeave);
+			// 
+			// RegisterVerificationVerifybutton
+			// 
+			this->RegisterVerificationVerifybutton->BackColor = System::Drawing::Color::CornflowerBlue;
+			this->RegisterVerificationVerifybutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->RegisterVerificationVerifybutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->RegisterVerificationVerifybutton->Location = System::Drawing::Point(599, 313);
+			this->RegisterVerificationVerifybutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterVerificationVerifybutton->Name = L"RegisterVerificationVerifybutton";
+			this->RegisterVerificationVerifybutton->Size = System::Drawing::Size(148, 50);
+			this->RegisterVerificationVerifybutton->TabIndex = 8;
+			this->RegisterVerificationVerifybutton->Text = L"Verify";
+			this->RegisterVerificationVerifybutton->UseVisualStyleBackColor = false;
+			this->RegisterVerificationVerifybutton->Click += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationVerifybutton_Click);
+			this->RegisterVerificationVerifybutton->Enter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationVerifybutton_Enter);
+			this->RegisterVerificationVerifybutton->Leave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationVerifybutton_Leave);
+			this->RegisterVerificationVerifybutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationVerifybutton_MouseEnter);
+			this->RegisterVerificationVerifybutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationVerifybutton_MouseLeave);
+			// 
+			// RegisterVerificationStatuslabel
+			// 
+			this->RegisterVerificationStatuslabel->AutoSize = true;
+			this->RegisterVerificationStatuslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->RegisterVerificationStatuslabel->ForeColor = System::Drawing::Color::Red;
+			this->RegisterVerificationStatuslabel->Location = System::Drawing::Point(17, 103);
+			this->RegisterVerificationStatuslabel->Name = L"RegisterVerificationStatuslabel";
+			this->RegisterVerificationStatuslabel->Size = System::Drawing::Size(161, 29);
+			this->RegisterVerificationStatuslabel->TabIndex = 7;
+			this->RegisterVerificationStatuslabel->Text = L"Status display";
+			// 
+			// RegisterVerificationBackbutton
+			// 
+			this->RegisterVerificationBackbutton->BackColor = System::Drawing::Color::CornflowerBlue;
+			this->RegisterVerificationBackbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->RegisterVerificationBackbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->RegisterVerificationBackbutton->Location = System::Drawing::Point(247, 309);
+			this->RegisterVerificationBackbutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterVerificationBackbutton->Name = L"RegisterVerificationBackbutton";
+			this->RegisterVerificationBackbutton->Size = System::Drawing::Size(148, 50);
+			this->RegisterVerificationBackbutton->TabIndex = 6;
+			this->RegisterVerificationBackbutton->Text = L"Back";
+			this->RegisterVerificationBackbutton->UseVisualStyleBackColor = false;
+			this->RegisterVerificationBackbutton->Click += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationBackbutton_Click);
+			this->RegisterVerificationBackbutton->Enter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationBackbutton_Enter);
+			this->RegisterVerificationBackbutton->Leave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationBackbutton_Leave);
+			this->RegisterVerificationBackbutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationBackbutton_MouseEnter);
+			this->RegisterVerificationBackbutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationBackbutton_MouseLeave);
+			// 
+			// RegisterVerificationDesignpanel
+			// 
+			this->RegisterVerificationDesignpanel->BackColor = System::Drawing::Color::Black;
+			this->RegisterVerificationDesignpanel->Location = System::Drawing::Point(247, 261);
+			this->RegisterVerificationDesignpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterVerificationDesignpanel->Name = L"RegisterVerificationDesignpanel";
+			this->RegisterVerificationDesignpanel->Size = System::Drawing::Size(500, 1);
+			this->RegisterVerificationDesignpanel->TabIndex = 4;
+			// 
+			// RegisterVerificationpictureBox
+			// 
+			this->RegisterVerificationpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"RegisterVerificationpictureBox.BackgroundImage")));
+			this->RegisterVerificationpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->RegisterVerificationpictureBox->Location = System::Drawing::Point(247, 201);
+			this->RegisterVerificationpictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterVerificationpictureBox->Name = L"RegisterVerificationpictureBox";
+			this->RegisterVerificationpictureBox->Size = System::Drawing::Size(59, 54);
+			this->RegisterVerificationpictureBox->TabIndex = 3;
+			this->RegisterVerificationpictureBox->TabStop = false;
+			// 
+			// RegisterVerificationtextBox
+			// 
+			this->RegisterVerificationtextBox->BackColor = System::Drawing::Color::AliceBlue;
+			this->RegisterVerificationtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->RegisterVerificationtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->RegisterVerificationtextBox->ForeColor = System::Drawing::Color::Black;
+			this->RegisterVerificationtextBox->Location = System::Drawing::Point(307, 224);
+			this->RegisterVerificationtextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterVerificationtextBox->Name = L"RegisterVerificationtextBox";
+			this->RegisterVerificationtextBox->Size = System::Drawing::Size(440, 31);
+			this->RegisterVerificationtextBox->TabIndex = 2;
+			this->RegisterVerificationtextBox->Text = L"Code";
+			this->RegisterVerificationtextBox->Click += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationtextBox_Click);
+			// 
+			// RegitsterVerificationlabel2
+			// 
+			this->RegitsterVerificationlabel2->AutoSize = true;
+			this->RegitsterVerificationlabel2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->RegitsterVerificationlabel2->ForeColor = System::Drawing::Color::Blue;
+			this->RegitsterVerificationlabel2->Location = System::Drawing::Point(17, 66);
+			this->RegitsterVerificationlabel2->Name = L"RegitsterVerificationlabel2";
+			this->RegitsterVerificationlabel2->Size = System::Drawing::Size(542, 29);
+			this->RegitsterVerificationlabel2->TabIndex = 1;
+			this->RegitsterVerificationlabel2->Text = L"Type the security code sent to your email address";
+			// 
+			// RegitsterVerificationlabel1
+			// 
+			this->RegitsterVerificationlabel1->AutoSize = true;
+			this->RegitsterVerificationlabel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->RegitsterVerificationlabel1->ForeColor = System::Drawing::Color::Black;
+			this->RegitsterVerificationlabel1->Location = System::Drawing::Point(16, 21);
+			this->RegitsterVerificationlabel1->Name = L"RegitsterVerificationlabel1";
+			this->RegitsterVerificationlabel1->Size = System::Drawing::Size(236, 36);
+			this->RegitsterVerificationlabel1->TabIndex = 0;
+			this->RegitsterVerificationlabel1->Text = L"Verify your email";
+			// 
 			// RegisterDetailspanel
 			// 
 			this->RegisterDetailspanel->Controls->Add(this->RegisterpasswordcheckBox);
@@ -1824,7 +1971,7 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			// RegisterEmailDesignpanel
 			// 
-			this->RegisterEmailDesignpanel->BackColor = System::Drawing::Color::White;
+			this->RegisterEmailDesignpanel->BackColor = System::Drawing::Color::Black;
 			this->RegisterEmailDesignpanel->Location = System::Drawing::Point(21, 338);
 			this->RegisterEmailDesignpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->RegisterEmailDesignpanel->Name = L"RegisterEmailDesignpanel";
@@ -1928,153 +2075,6 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterUsernametextBox->Text = L"Username";
 			this->RegisterUsernametextBox->Click += gcnew System::EventHandler(this, &LoginForm::RegisterUsernametextBox_Click);
 			// 
-			// RegisterVerificationpanel
-			// 
-			this->RegisterVerificationpanel->Controls->Add(this->RegisterVerificationResendbutton);
-			this->RegisterVerificationpanel->Controls->Add(this->RegisterVerificationVerifybutton);
-			this->RegisterVerificationpanel->Controls->Add(this->RegisterVerificationStatuslabel);
-			this->RegisterVerificationpanel->Controls->Add(this->RegisterVerificationBackbutton);
-			this->RegisterVerificationpanel->Controls->Add(this->RegisterVerificationDesignpanel);
-			this->RegisterVerificationpanel->Controls->Add(this->RegisterVerificationpictureBox);
-			this->RegisterVerificationpanel->Controls->Add(this->RegisterVerificationtextBox);
-			this->RegisterVerificationpanel->Controls->Add(this->RegitsterVerificationlabel2);
-			this->RegisterVerificationpanel->Controls->Add(this->RegitsterVerificationlabel1);
-			this->RegisterVerificationpanel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterVerificationpanel->Location = System::Drawing::Point(27, 86);
-			this->RegisterVerificationpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->RegisterVerificationpanel->Name = L"RegisterVerificationpanel";
-			this->RegisterVerificationpanel->Size = System::Drawing::Size(993, 538);
-			this->RegisterVerificationpanel->TabIndex = 20;
-			// 
-			// RegisterVerificationResendbutton
-			// 
-			this->RegisterVerificationResendbutton->BackColor = System::Drawing::Color::CornflowerBlue;
-			this->RegisterVerificationResendbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->RegisterVerificationResendbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterVerificationResendbutton->Location = System::Drawing::Point(599, 382);
-			this->RegisterVerificationResendbutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->RegisterVerificationResendbutton->Name = L"RegisterVerificationResendbutton";
-			this->RegisterVerificationResendbutton->Size = System::Drawing::Size(148, 50);
-			this->RegisterVerificationResendbutton->TabIndex = 9;
-			this->RegisterVerificationResendbutton->Text = L"Resend";
-			this->RegisterVerificationResendbutton->UseVisualStyleBackColor = false;
-			this->RegisterVerificationResendbutton->Click += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationResendbutton_Click);
-			this->RegisterVerificationResendbutton->Enter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationResendbutton_Enter);
-			this->RegisterVerificationResendbutton->Leave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationResendbutton_Leave);
-			this->RegisterVerificationResendbutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationResendbutton_MouseEnter);
-			this->RegisterVerificationResendbutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationResendbutton_MouseLeave);
-			// 
-			// RegisterVerificationVerifybutton
-			// 
-			this->RegisterVerificationVerifybutton->BackColor = System::Drawing::Color::CornflowerBlue;
-			this->RegisterVerificationVerifybutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->RegisterVerificationVerifybutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterVerificationVerifybutton->Location = System::Drawing::Point(599, 313);
-			this->RegisterVerificationVerifybutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->RegisterVerificationVerifybutton->Name = L"RegisterVerificationVerifybutton";
-			this->RegisterVerificationVerifybutton->Size = System::Drawing::Size(148, 50);
-			this->RegisterVerificationVerifybutton->TabIndex = 8;
-			this->RegisterVerificationVerifybutton->Text = L"Verify";
-			this->RegisterVerificationVerifybutton->UseVisualStyleBackColor = false;
-			this->RegisterVerificationVerifybutton->Click += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationVerifybutton_Click);
-			this->RegisterVerificationVerifybutton->Enter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationVerifybutton_Enter);
-			this->RegisterVerificationVerifybutton->Leave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationVerifybutton_Leave);
-			this->RegisterVerificationVerifybutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationVerifybutton_MouseEnter);
-			this->RegisterVerificationVerifybutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationVerifybutton_MouseLeave);
-			// 
-			// RegisterVerificationStatuslabel
-			// 
-			this->RegisterVerificationStatuslabel->AutoSize = true;
-			this->RegisterVerificationStatuslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterVerificationStatuslabel->ForeColor = System::Drawing::Color::Red;
-			this->RegisterVerificationStatuslabel->Location = System::Drawing::Point(17, 103);
-			this->RegisterVerificationStatuslabel->Name = L"RegisterVerificationStatuslabel";
-			this->RegisterVerificationStatuslabel->Size = System::Drawing::Size(161, 29);
-			this->RegisterVerificationStatuslabel->TabIndex = 7;
-			this->RegisterVerificationStatuslabel->Text = L"Status display";
-			// 
-			// RegisterVerificationBackbutton
-			// 
-			this->RegisterVerificationBackbutton->BackColor = System::Drawing::Color::CornflowerBlue;
-			this->RegisterVerificationBackbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->RegisterVerificationBackbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterVerificationBackbutton->Location = System::Drawing::Point(247, 309);
-			this->RegisterVerificationBackbutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->RegisterVerificationBackbutton->Name = L"RegisterVerificationBackbutton";
-			this->RegisterVerificationBackbutton->Size = System::Drawing::Size(148, 50);
-			this->RegisterVerificationBackbutton->TabIndex = 6;
-			this->RegisterVerificationBackbutton->Text = L"Back";
-			this->RegisterVerificationBackbutton->UseVisualStyleBackColor = false;
-			this->RegisterVerificationBackbutton->Click += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationBackbutton_Click);
-			this->RegisterVerificationBackbutton->Enter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationBackbutton_Enter);
-			this->RegisterVerificationBackbutton->Leave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationBackbutton_Leave);
-			this->RegisterVerificationBackbutton->MouseEnter += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationBackbutton_MouseEnter);
-			this->RegisterVerificationBackbutton->MouseLeave += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationBackbutton_MouseLeave);
-			// 
-			// RegisterVerificationDesignpanel
-			// 
-			this->RegisterVerificationDesignpanel->BackColor = System::Drawing::Color::Black;
-			this->RegisterVerificationDesignpanel->Location = System::Drawing::Point(247, 261);
-			this->RegisterVerificationDesignpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->RegisterVerificationDesignpanel->Name = L"RegisterVerificationDesignpanel";
-			this->RegisterVerificationDesignpanel->Size = System::Drawing::Size(500, 1);
-			this->RegisterVerificationDesignpanel->TabIndex = 4;
-			// 
-			// RegisterVerificationpictureBox
-			// 
-			this->RegisterVerificationpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"RegisterVerificationpictureBox.BackgroundImage")));
-			this->RegisterVerificationpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->RegisterVerificationpictureBox->Location = System::Drawing::Point(247, 201);
-			this->RegisterVerificationpictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->RegisterVerificationpictureBox->Name = L"RegisterVerificationpictureBox";
-			this->RegisterVerificationpictureBox->Size = System::Drawing::Size(59, 54);
-			this->RegisterVerificationpictureBox->TabIndex = 3;
-			this->RegisterVerificationpictureBox->TabStop = false;
-			// 
-			// RegisterVerificationtextBox
-			// 
-			this->RegisterVerificationtextBox->BackColor = System::Drawing::Color::AliceBlue;
-			this->RegisterVerificationtextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->RegisterVerificationtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterVerificationtextBox->ForeColor = System::Drawing::Color::Black;
-			this->RegisterVerificationtextBox->Location = System::Drawing::Point(307, 224);
-			this->RegisterVerificationtextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->RegisterVerificationtextBox->Name = L"RegisterVerificationtextBox";
-			this->RegisterVerificationtextBox->Size = System::Drawing::Size(440, 31);
-			this->RegisterVerificationtextBox->TabIndex = 2;
-			this->RegisterVerificationtextBox->Text = L"Code";
-			this->RegisterVerificationtextBox->Click += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationtextBox_Click);
-			// 
-			// RegitsterVerificationlabel2
-			// 
-			this->RegitsterVerificationlabel2->AutoSize = true;
-			this->RegitsterVerificationlabel2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegitsterVerificationlabel2->ForeColor = System::Drawing::Color::Blue;
-			this->RegitsterVerificationlabel2->Location = System::Drawing::Point(17, 66);
-			this->RegitsterVerificationlabel2->Name = L"RegitsterVerificationlabel2";
-			this->RegitsterVerificationlabel2->Size = System::Drawing::Size(542, 29);
-			this->RegitsterVerificationlabel2->TabIndex = 1;
-			this->RegitsterVerificationlabel2->Text = L"Type the security code sent to your email address";
-			// 
-			// RegitsterVerificationlabel1
-			// 
-			this->RegitsterVerificationlabel1->AutoSize = true;
-			this->RegitsterVerificationlabel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegitsterVerificationlabel1->ForeColor = System::Drawing::Color::Black;
-			this->RegitsterVerificationlabel1->Location = System::Drawing::Point(16, 21);
-			this->RegitsterVerificationlabel1->Name = L"RegitsterVerificationlabel1";
-			this->RegitsterVerificationlabel1->Size = System::Drawing::Size(236, 36);
-			this->RegitsterVerificationlabel1->TabIndex = 0;
-			this->RegitsterVerificationlabel1->Text = L"Verify your email";
-			// 
 			// RegisterHomebutton
 			// 
 			this->RegisterHomebutton->BackColor = System::Drawing::Color::CornflowerBlue;
@@ -2133,8 +2133,8 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1048, 763);
-			this->Controls->Add(this->loginpanel);
 			this->Controls->Add(this->Registerpanel);
+			this->Controls->Add(this->loginpanel);
 			this->Controls->Add(this->ForgotPasswordpanel);
 			this->Controls->Add(this->headerpanel);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -2182,6 +2182,9 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ChangePasswordNewPasswordpictureBox))->EndInit();
 			this->Registerpanel->ResumeLayout(false);
 			this->Registerpanel->PerformLayout();
+			this->RegisterVerificationpanel->ResumeLayout(false);
+			this->RegisterVerificationpanel->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterVerificationpictureBox))->EndInit();
 			this->RegisterDetailspanel->ResumeLayout(false);
 			this->RegisterDetailspanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterPasswordpictureBox))->EndInit();
@@ -2192,9 +2195,6 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterEmailpictureBox))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterLastNamepictureBox))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterFirstNamepictureBox))->EndInit();
-			this->RegisterVerificationpanel->ResumeLayout(false);
-			this->RegisterVerificationpanel->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterVerificationpictureBox))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->RegisterHomepictureBox))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ReigsterHeaderpictureBox))->EndInit();
 			this->ResumeLayout(false);
@@ -2751,7 +2751,7 @@ private: System::Void RegisterVerificationVerifybutton_Click(System::Object^  se
 				 {
 					 connection->Open();
 					 command->Connection=connection;
-					 query = "INSERT INTO [Users] ([UserName], FirstName, [Password], [Email], IsApproved, [Designation] , SecurityQuestion, SecurityAnswer, LastName) VALUES ('"+username_r+"', '"+firstname_r+"', '"+password_r+"', '"+email_r+"', 0,'"+designation_r+"', '"+securityquestion_r+"', '"+securityanswer_r+"', '"+lastname_r+"'); ";
+					 query = "INSERT INTO [Users] ([UserName], FirstName, [Password], [Email], IsApproved, [Designation] , SecurityQuestion, SecurityAnswer, LastName,[Status],[Reason],[LStatus]) VALUES ('"+username_r+"', '"+firstname_r+"', '"+password_r+"', '"+email_r+"', 0,'"+designation_r+"', '"+securityquestion_r+"', '"+securityanswer_r+"', '"+lastname_r+"','Pending','-','Unlocked'); ";
 					command->CommandText=query;
 					 command->ExecuteNonQuery();
 					 connection->Close();
