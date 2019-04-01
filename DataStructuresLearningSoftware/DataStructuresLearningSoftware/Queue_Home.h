@@ -424,13 +424,6 @@ namespace DataStructuresLearningSoftware {
 			this->headerpanel->ResumeLayout(false);
 			this->ResumeLayout(false);
 
-			this->linarrbtn->Hide();
-			this->linllbtn->Hide();
-			this->linanimbtn->Hide();
-			this->cqarrbtn->Hide();
-			this->cqllbtn->Hide(); 
-			this->ciranimbtn->Hide();
-
 		}
 #pragma endregion
 		public:
@@ -540,13 +533,13 @@ namespace DataStructuresLearningSoftware {
 				 btnNext->Show();
 				 introbtn->BackColor = Color::PaleTurquoise;
 				 linbtn->BackColor = Color::LightSeaGreen;
-				 linarrbtn->BackColor = Color::LightSeaGreen;
-				 linllbtn->BackColor = Color::LightSeaGreen;
-				 linanimbtn->BackColor = Color::LightSeaGreen;
+				 linarrbtn->BackColor = Color::SpringGreen;
+				 linllbtn->BackColor = Color::SpringGreen;
+				 linanimbtn->BackColor = Color::SpringGreen;
 				 cqbtn->BackColor = Color::LightSeaGreen;
-				 cqarrbtn->BackColor = Color::LightSeaGreen;
-				 cqllbtn->BackColor = Color::LightSeaGreen;
-				 ciranimbtn->BackColor = Color::LightSeaGreen;
+				 cqarrbtn->BackColor = Color::SpringGreen;
+				 cqllbtn->BackColor = Color::SpringGreen;
+				 ciranimbtn->BackColor = Color::SpringGreen;
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::LightSeaGreen;
 				 outputpanel->Controls->Clear();
@@ -573,13 +566,13 @@ namespace DataStructuresLearningSoftware {
 				 }
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::PaleTurquoise;
-				 linarrbtn->BackColor = Color::LightSeaGreen;
-				 linllbtn->BackColor = Color::LightSeaGreen;
-				 linanimbtn->BackColor = Color::LightSeaGreen;
+				 linarrbtn->BackColor = Color::SpringGreen;
+				 linllbtn->BackColor = Color::SpringGreen;
+				 linanimbtn->BackColor = Color::SpringGreen;
 				 cqbtn->BackColor = Color::LightSeaGreen;
-				 cqarrbtn->BackColor = Color::LightSeaGreen;
-				 cqllbtn->BackColor = Color::LightSeaGreen;
-				 ciranimbtn->BackColor = Color::LightSeaGreen;
+				 cqarrbtn->BackColor = Color::SpringGreen;
+				 cqllbtn->BackColor = Color::SpringGreen;
+				 ciranimbtn->BackColor = Color::SpringGreen;
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::LightSeaGreen;
 				  outputpanel->Controls->Clear();
@@ -595,8 +588,8 @@ namespace DataStructuresLearningSoftware {
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::PaleTurquoise;
 				 linarrbtn->BackColor = Color::PaleTurquoise;
-				 linllbtn->BackColor = Color::LightSeaGreen;
-				 linanimbtn->BackColor = Color::LightSeaGreen;
+				 linllbtn->BackColor = Color::SpringGreen;
+				 linanimbtn->BackColor = Color::SpringGreen;
 				 cqbtn->BackColor = Color::LightSeaGreen;
 				 cqarrbtn->BackColor = Color::LightSeaGreen;
 				 cqllbtn->BackColor = Color::LightSeaGreen;
@@ -614,9 +607,9 @@ namespace DataStructuresLearningSoftware {
 				 btnNext->Show();
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::PaleTurquoise;
-				 linarrbtn->BackColor = Color::LightSeaGreen;
+				 linarrbtn->BackColor = Color::SpringGreen;
 				 linllbtn->BackColor = Color::PaleTurquoise;
-				 linanimbtn->BackColor = Color::LightSeaGreen;
+				 linanimbtn->BackColor = Color::SpringGreen;
 				 cqbtn->BackColor = Color::LightSeaGreen;
 				 cqarrbtn->BackColor = Color::LightSeaGreen;
 				 cqllbtn->BackColor = Color::LightSeaGreen;
@@ -666,9 +659,9 @@ namespace DataStructuresLearningSoftware {
 				 linllbtn->BackColor = Color::LightSeaGreen;
 				 linanimbtn->BackColor = Color::LightSeaGreen;
 				 cqbtn->BackColor = Color::PaleTurquoise;
-				 cqarrbtn->BackColor = Color::LightSeaGreen;
-				 cqllbtn->BackColor = Color::LightSeaGreen;
-				 ciranimbtn->BackColor = Color::LightSeaGreen;
+				 cqarrbtn->BackColor = Color::SpringGreen;
+				 cqllbtn->BackColor = Color::SpringGreen;
+				 ciranimbtn->BackColor = Color::SpringGreen;
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::LightSeaGreen;
 
@@ -696,8 +689,8 @@ namespace DataStructuresLearningSoftware {
 				 linanimbtn->BackColor = Color::LightSeaGreen;
 				 cqbtn->BackColor = Color::PaleTurquoise;
 				 cqarrbtn->BackColor = Color::PaleTurquoise;
-				 cqllbtn->BackColor = Color::LightSeaGreen;
-				 ciranimbtn->BackColor = Color::LightSeaGreen;
+				 cqllbtn->BackColor = Color::SpringGreen;
+				 ciranimbtn->BackColor = Color::SpringGreen;
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::LightSeaGreen;
 				  outputpanel->Controls->Clear();
@@ -719,9 +712,9 @@ namespace DataStructuresLearningSoftware {
 				 linllbtn->BackColor = Color::LightSeaGreen;
 				 linanimbtn->BackColor = Color::LightSeaGreen;
 				 cqbtn->BackColor = Color::PaleTurquoise;
-				 cqarrbtn->BackColor = Color::LightSeaGreen;
+				 cqarrbtn->BackColor = Color::SpringGreen;
 				 cqllbtn->BackColor = Color::PaleTurquoise;
-				 ciranimbtn->BackColor = Color::LightSeaGreen;
+				 ciranimbtn->BackColor = Color::SpringGreen;
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::LightSeaGreen;
 				  outputpanel->Controls->Clear();
@@ -739,13 +732,13 @@ namespace DataStructuresLearningSoftware {
 				 curid=9;
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::LightSeaGreen;
-				 linarrbtn->BackColor = Color::LightSeaGreen;
-				 linllbtn->BackColor = Color::LightSeaGreen;
-				 linanimbtn->BackColor = Color::LightSeaGreen;
+				 linarrbtn->BackColor = Color::SpringGreen;
+				 linllbtn->BackColor = Color::SpringGreen;
+				 linanimbtn->BackColor = Color::SpringGreen;
 				 cqbtn->BackColor = Color::PaleTurquoise;
-				 cqarrbtn->BackColor = Color::LightSeaGreen;
-				 cqllbtn->BackColor = Color::LightSeaGreen;
-				 ciranimbtn->BackColor = Color::LightSeaGreen;
+				 cqarrbtn->BackColor = Color::SpringGreen;
+				 cqllbtn->BackColor = Color::SpringGreen;
+				 ciranimbtn->BackColor = Color::SpringGreen;
 				 appbtn->BackColor = Color::PaleTurquoise;
 				 quizbtn->BackColor = Color::LightSeaGreen;
 				  outputpanel->Controls->Clear();
@@ -763,13 +756,13 @@ namespace DataStructuresLearningSoftware {
 				 curid=10;
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::LightSeaGreen;
-				 linarrbtn->BackColor = Color::LightSeaGreen;
-				 linllbtn->BackColor = Color::LightSeaGreen;
-				 linanimbtn->BackColor = Color::LightSeaGreen;
+				 linarrbtn->BackColor = Color::SpringGreen;
+				 linllbtn->BackColor = Color::SpringGreen;
+				 linanimbtn->BackColor = Color::SpringGreen;
 				 cqbtn->BackColor = Color::LightSeaGreen;
-				 cqarrbtn->BackColor = Color::LightSeaGreen;
-				 cqllbtn->BackColor = Color::LightSeaGreen;
-				 ciranimbtn->BackColor = Color::LightSeaGreen;
+				 cqarrbtn->BackColor = Color::SpringGreen;
+				 cqllbtn->BackColor = Color::SpringGreen;
+				 ciranimbtn->BackColor = Color::SpringGreen;
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::PaleTurquoise;
 				  outputpanel->Controls->Clear();
@@ -785,8 +778,8 @@ private: System::Void linanimbtn_Click(System::Object^  sender, System::EventArg
 			 curid=4;
 			 introbtn->BackColor = Color::LightSeaGreen;
 			 linbtn->BackColor = Color::PaleTurquoise;
-			 linarrbtn->BackColor = Color::LightSeaGreen;
-			 linllbtn->BackColor = Color::LightSeaGreen;
+			 linarrbtn->BackColor = Color::SpringGreen;
+			 linllbtn->BackColor = Color::SpringGreen;
 			 linanimbtn->BackColor = Color::PaleTurquoise;
 			 cqbtn->BackColor = Color::LightSeaGreen;
 			 cqarrbtn->BackColor = Color::LightSeaGreen;
@@ -813,8 +806,8 @@ private: System::Void ciranimbtn_Click(System::Object^  sender, System::EventArg
 			 linllbtn->BackColor = Color::LightSeaGreen;
 			 linanimbtn->BackColor = Color::LightSeaGreen;
 			 cqbtn->BackColor = Color::PaleTurquoise;
-			 cqarrbtn->BackColor = Color::LightSeaGreen;
-			 cqllbtn->BackColor = Color::LightSeaGreen;
+			 cqarrbtn->BackColor = Color::SpringGreen;
+			 cqllbtn->BackColor = Color::SpringGreen;
 			 ciranimbtn->BackColor = Color::PaleTurquoise;
 			 appbtn->BackColor = Color::LightSeaGreen;
 			 quizbtn->BackColor = Color::LightSeaGreen;
