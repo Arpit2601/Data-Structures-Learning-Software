@@ -31,7 +31,8 @@ int main(array<System::String ^> ^args)
 	// Create the main window and run it
 
 	Application::Run(gcnew MainPage());
-	Application::Run(gcnew LoginForm());
+	Application::Run(gcnew Queue_Home());
+
 
 	return 0;
 }

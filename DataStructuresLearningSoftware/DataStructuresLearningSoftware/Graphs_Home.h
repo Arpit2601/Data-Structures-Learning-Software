@@ -3,6 +3,8 @@
 #include "Graph.h"
 #include "GraphBFS.h"
 #include "DiscussionForum.h"
+#include "GraphMatrix.h"
+#include "GraphList.h"
 
 namespace DataStructuresLearningSoftware {
 
@@ -48,6 +50,8 @@ namespace DataStructuresLearningSoftware {
 
 
 	private: System::Windows::Forms::Button^  btnHome;
+	private: System::Windows::Forms::Button^  button4;
+	private: System::Windows::Forms::Button^  button3;
 	protected: 
 
 	private:
@@ -68,6 +72,8 @@ namespace DataStructuresLearningSoftware {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->mainPanel = (gcnew System::Windows::Forms::Panel());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->lblWelcome = (gcnew System::Windows::Forms::Label());
@@ -82,7 +88,7 @@ namespace DataStructuresLearningSoftware {
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->FlatAppearance->BorderSize = 0;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button1->Location = System::Drawing::Point(0, 74);
+			this->button1->Location = System::Drawing::Point(0, 60);
 			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(175, 30);
@@ -97,7 +103,7 @@ namespace DataStructuresLearningSoftware {
 			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button2->FlatAppearance->BorderSize = 0;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button2->Location = System::Drawing::Point(0, 154);
+			this->button2->Location = System::Drawing::Point(0, 90);
 			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(175, 30);
@@ -119,12 +125,38 @@ namespace DataStructuresLearningSoftware {
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::LightSeaGreen;
+			this->panel1->Controls->Add(this->button4);
+			this->panel1->Controls->Add(this->button3);
 			this->panel1->Controls->Add(this->button2);
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(175, 720);
 			this->panel1->TabIndex = 3;
+			// 
+			// button4
+			// 
+			this->button4->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button4->Location = System::Drawing::Point(0, 0);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(175, 30);
+			this->button4->TabIndex = 2;
+			this->button4->Text = L"Adjacency Matrix";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &Graphs_Home::button4_Click);
+			// 
+			// button3
+			// 
+			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button3->Location = System::Drawing::Point(0, 30);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(175, 30);
+			this->button3->TabIndex = 0;
+			this->button3->Text = L"Adjacency List";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &Graphs_Home::button3_Click);
 			// 
 			// panel2
 			// 
@@ -206,6 +238,8 @@ namespace DataStructuresLearningSoftware {
 				 mainPanel->Controls->Add(gcnew GraphBFS);
 				 button1->BackColor=Color::Aquamarine;
 				 button2->BackColor=Color::LightSeaGreen;
+				 button3->BackColor=Color::LightSeaGreen;
+				 button4->BackColor=Color::LightSeaGreen;
 			 }
 			 // DFS
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -213,6 +247,8 @@ namespace DataStructuresLearningSoftware {
 				 mainPanel->Controls->Add(gcnew Graph);
 				 button2->BackColor=Color::Aquamarine;
 				 button1->BackColor=Color::LightSeaGreen;
+				 button3->BackColor=Color::LightSeaGreen;
+				 button4->BackColor=Color::LightSeaGreen;
 			 }
 private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
 			 mainPanel->Controls->Clear();
@@ -226,6 +262,7 @@ private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^ 
 				 this->Hide();
 				 this->Owner->Show();
 			 }
+			 this->Close();
 		 }
 private: System::Void Graphs_Home_Load(System::Object^  sender, System::EventArgs^  e) {
 			 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
@@ -241,6 +278,24 @@ private: System::Void Graphs_Home_Load(System::Object^  sender, System::EventArg
 			 lblWelcome->Text = "Welcome, "+fullname;
 
 			 DB_Connection->Close();
+			 mainPanel->Controls->Clear();
+			 mainPanel->Controls->Add(gcnew GraphMatrix);
+		 }
+private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
+			 mainPanel->Controls->Clear();
+			 mainPanel->Controls->Add(gcnew GraphMatrix);
+			 button1->BackColor=Color::LightSeaGreen;
+			 button2->BackColor=Color::LightSeaGreen;
+			 button3->BackColor=Color::LightSeaGreen;
+			 button4->BackColor=Color::Aquamarine;
+		 }
+private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+			 mainPanel->Controls->Clear();
+			 mainPanel->Controls->Add(gcnew GraphList);
+			 button1->BackColor=Color::LightSeaGreen;
+			 button2->BackColor=Color::LightSeaGreen;
+			 button3->BackColor=Color::Aquamarine;
+			 button4->BackColor=Color::LightSeaGreen;
 		 }
 };
 }

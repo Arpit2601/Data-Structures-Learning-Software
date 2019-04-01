@@ -45,6 +45,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  label1;
 
 	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  button2;
 
 	protected: 
 
@@ -71,9 +72,11 @@ namespace DataStructuresLearningSoftware {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(BST_mainpage::typeid));
 			this->MainPanel = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// MainPanel
@@ -91,7 +94,7 @@ namespace DataStructuresLearningSoftware {
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(331, 8);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(317, 39);
+			this->label1->Size = System::Drawing::Size(391, 49);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"BINARY SEARCH TREES";
 			// 
@@ -110,12 +113,26 @@ namespace DataStructuresLearningSoftware {
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &BST_mainpage::button1_Click);
 			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::Bisque;
+			this->button2->FlatAppearance->BorderSize = 0;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button2->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"button2.Image")));
+			this->button2->Location = System::Drawing::Point(1218, 0);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(50, 50);
+			this->button2->TabIndex = 7;
+			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &BST_mainpage::button2_Click_1);
+			// 
 			// BST_mainpage
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->AutoScroll = true;
 			this->BackColor = System::Drawing::Color::Bisque;
 			this->ClientSize = System::Drawing::Size(1280, 720);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->MainPanel);
@@ -153,6 +170,9 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 			 DiscussionForum ^ discuss = gcnew DiscussionForum;
 			 discuss->username=username;
 			 MainPanel->Controls->Add(discuss);
+		 }
+private: System::Void button2_Click_1(System::Object^  sender, System::EventArgs^  e) {
+			 this->Close();
 		 }
 };
 }

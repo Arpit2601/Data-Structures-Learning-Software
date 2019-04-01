@@ -424,13 +424,6 @@ namespace DataStructuresLearningSoftware {
 			this->headerpanel->ResumeLayout(false);
 			this->ResumeLayout(false);
 
-			this->linarrbtn->Hide();
-			this->linllbtn->Hide();
-			this->linanimbtn->Hide();
-			this->cqarrbtn->Hide();
-			this->cqllbtn->Hide(); 
-			this->ciranimbtn->Hide();
-
 		}
 #pragma endregion
 	public:
@@ -542,13 +535,13 @@ namespace DataStructuresLearningSoftware {
 				 btnNext->Show();
 				 introbtn->BackColor = Color::PaleTurquoise;
 				 linbtn->BackColor = Color::LightSeaGreen;
-				 linarrbtn->BackColor = Color::LightSeaGreen;
-				 linllbtn->BackColor = Color::LightSeaGreen;
-				 linanimbtn->BackColor = Color::LightSeaGreen;
+				 linarrbtn->BackColor = Color::SpringGreen;
+				 linllbtn->BackColor = Color::SpringGreen;
+				 linanimbtn->BackColor = Color::SpringGreen;
 				 cqbtn->BackColor = Color::LightSeaGreen;
-				 cqarrbtn->BackColor = Color::LightSeaGreen;
-				 cqllbtn->BackColor = Color::LightSeaGreen;
-				 ciranimbtn->BackColor = Color::LightSeaGreen;
+				 cqarrbtn->BackColor = Color::SpringGreen;
+				 cqllbtn->BackColor = Color::SpringGreen;
+				 ciranimbtn->BackColor = Color::SpringGreen;
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::LightSeaGreen;
 				 outputpanel->Controls->Clear();
@@ -577,13 +570,13 @@ namespace DataStructuresLearningSoftware {
 				 }
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::PaleTurquoise;
-				 linarrbtn->BackColor = Color::LightSeaGreen;
-				 linllbtn->BackColor = Color::LightSeaGreen;
-				 linanimbtn->BackColor = Color::LightSeaGreen;
+				 linarrbtn->BackColor = Color::SpringGreen;
+				 linllbtn->BackColor = Color::SpringGreen;
+				 linanimbtn->BackColor = Color::SpringGreen;
 				 cqbtn->BackColor = Color::LightSeaGreen;
-				 cqarrbtn->BackColor = Color::LightSeaGreen;
-				 cqllbtn->BackColor = Color::LightSeaGreen;
-				 ciranimbtn->BackColor = Color::LightSeaGreen;
+				 cqarrbtn->BackColor = Color::SpringGreen;
+				 cqllbtn->BackColor = Color::SpringGreen;
+				 ciranimbtn->BackColor = Color::SpringGreen;
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::LightSeaGreen;
 				 outputpanel->Controls->Clear();
@@ -601,8 +594,8 @@ namespace DataStructuresLearningSoftware {
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::PaleTurquoise;
 				 linarrbtn->BackColor = Color::PaleTurquoise;
-				 linllbtn->BackColor = Color::LightSeaGreen;
-				 linanimbtn->BackColor = Color::LightSeaGreen;
+				 linllbtn->BackColor = Color::SpringGreen;
+				 linanimbtn->BackColor = Color::SpringGreen;
 				 cqbtn->BackColor = Color::LightSeaGreen;
 				 cqarrbtn->BackColor = Color::LightSeaGreen;
 				 cqllbtn->BackColor = Color::LightSeaGreen;
@@ -622,9 +615,9 @@ namespace DataStructuresLearningSoftware {
 				 btnNext->Show();
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::PaleTurquoise;
-				 linarrbtn->BackColor = Color::LightSeaGreen;
+				 linarrbtn->BackColor = Color::SpringGreen;
 				 linllbtn->BackColor = Color::PaleTurquoise;
-				 linanimbtn->BackColor = Color::LightSeaGreen;
+				 linanimbtn->BackColor = Color::SpringGreen;
 				 cqbtn->BackColor = Color::LightSeaGreen;
 				 cqarrbtn->BackColor = Color::LightSeaGreen;
 				 cqllbtn->BackColor = Color::LightSeaGreen;
@@ -643,44 +636,44 @@ namespace DataStructuresLearningSoftware {
 					 MessageBox::Show("Please Complete the Previous Module to access this.");
 				 }
 				 else{
-					 curid=5;
-					 btnBack->Show();
-					 btnNext->Show();
-					 iscqclk=true;
-					 this->ciranimbtn->Show();
-					 this->cqllbtn->Show();
-					 this->cqarrbtn->Show();
-					 if(islinclk==true)
-					 {
-						 this->linarrbtn->Hide();
-						 this->linllbtn->Hide();
-						 this->linanimbtn->Hide();
-						 this->cqbtn->Location = System::Drawing::Point(0, 60);
-						 this->cqarrbtn->Location = System::Drawing::Point(0, 90);
-						 this->cqllbtn->Location = System::Drawing::Point(0, 120);
-						 this->ciranimbtn->Location = System::Drawing::Point(0, 150);
-						 this->appbtn->Location = System::Drawing::Point(0, 180);
-						 this->quizbtn->Location = System::Drawing::Point(0, 210);
-					 }
-					 else 
-					 {
-						 this->cqarrbtn->Location = System::Drawing::Point(0, 90);
-						 this->cqllbtn->Location = System::Drawing::Point(0, 120);
-						 this->ciranimbtn->Location = System::Drawing::Point(0, 150);
-						 this->appbtn->Location = System::Drawing::Point(0, 180);
-						 this->quizbtn->Location = System::Drawing::Point(0, 210);
-					 }
-					 introbtn->BackColor = Color::LightSeaGreen;
-					 linbtn->BackColor = Color::LightSeaGreen;
-					 linarrbtn->BackColor = Color::LightSeaGreen;
-					 linllbtn->BackColor = Color::LightSeaGreen;
-					 linanimbtn->BackColor = Color::LightSeaGreen;
-					 cqbtn->BackColor = Color::PaleTurquoise;
-					 cqarrbtn->BackColor = Color::LightSeaGreen;
-					 cqllbtn->BackColor = Color::LightSeaGreen;
-					 ciranimbtn->BackColor = Color::LightSeaGreen;
-					 appbtn->BackColor = Color::LightSeaGreen;
-					 quizbtn->BackColor = Color::LightSeaGreen;
+				 curid=5;
+				 btnBack->Show();
+				 btnNext->Show();
+				  iscqclk=true;
+				  this->ciranimbtn->Show();
+				  this->cqllbtn->Show();
+				  this->cqarrbtn->Show();
+				  if(islinclk==true)
+				  {
+					  this->linarrbtn->Hide();
+					  this->linllbtn->Hide();
+					  this->linanimbtn->Hide();
+					  this->cqbtn->Location = System::Drawing::Point(0, 60);
+					  this->cqarrbtn->Location = System::Drawing::Point(0, 90);
+					  this->cqllbtn->Location = System::Drawing::Point(0, 120);
+					  this->ciranimbtn->Location = System::Drawing::Point(0, 150);
+					  this->appbtn->Location = System::Drawing::Point(0, 180);
+					  this->quizbtn->Location = System::Drawing::Point(0, 210);
+				  }
+				  else 
+				  {
+					  this->cqarrbtn->Location = System::Drawing::Point(0, 90);
+					  this->cqllbtn->Location = System::Drawing::Point(0, 120);
+					  this->ciranimbtn->Location = System::Drawing::Point(0, 150);
+					  this->appbtn->Location = System::Drawing::Point(0, 180);
+					  this->quizbtn->Location = System::Drawing::Point(0, 210);
+				  }
+				 introbtn->BackColor = Color::LightSeaGreen;
+				 linbtn->BackColor = Color::LightSeaGreen;
+				 linarrbtn->BackColor = Color::LightSeaGreen;
+				 linllbtn->BackColor = Color::LightSeaGreen;
+				 linanimbtn->BackColor = Color::LightSeaGreen;
+				 cqbtn->BackColor = Color::PaleTurquoise;
+				 cqarrbtn->BackColor = Color::SpringGreen;
+				 cqllbtn->BackColor = Color::SpringGreen;
+				 ciranimbtn->BackColor = Color::SpringGreen;
+				 appbtn->BackColor = Color::LightSeaGreen;
+				 quizbtn->BackColor = Color::LightSeaGreen;
 
 					 outputpanel->Controls->Clear();
 					 UI_Circular_Queue^ newpanel = gcnew UI_Circular_Queue;
@@ -698,25 +691,23 @@ namespace DataStructuresLearningSoftware {
 					 MessageBox::Show("Please Complete the Previous Module to access this.");
 				 }
 				 else{
-					 btnBack->Show();
-					 btnNext->Show();
-					 curid=6;
-					 introbtn->BackColor = Color::LightSeaGreen;
-					 linbtn->BackColor = Color::LightSeaGreen;
-					 linarrbtn->BackColor = Color::LightSeaGreen;
-					 linllbtn->BackColor = Color::LightSeaGreen;
-					 linanimbtn->BackColor = Color::LightSeaGreen;
-					 cqbtn->BackColor = Color::PaleTurquoise;
-					 cqarrbtn->BackColor = Color::PaleTurquoise;
-					 cqllbtn->BackColor = Color::LightSeaGreen;
-					 ciranimbtn->BackColor = Color::LightSeaGreen;
-					 appbtn->BackColor = Color::LightSeaGreen;
-					 quizbtn->BackColor = Color::LightSeaGreen;
-					 outputpanel->Controls->Clear();
-					 outputpanel->Controls->Add(gcnew UI_Circular_Queue_Array);}
-			 }
-	// loading the circular linked list module 
-
+				 btnBack->Show();
+				 btnNext->Show();
+				 curid=6;
+				 introbtn->BackColor = Color::LightSeaGreen;
+				 linbtn->BackColor = Color::LightSeaGreen;
+				 linarrbtn->BackColor = Color::LightSeaGreen;
+				 linllbtn->BackColor = Color::LightSeaGreen;
+				 linanimbtn->BackColor = Color::LightSeaGreen;
+				 cqbtn->BackColor = Color::PaleTurquoise;
+				 cqarrbtn->BackColor = Color::PaleTurquoise;
+				 cqllbtn->BackColor = Color::SpringGreen;
+				 ciranimbtn->BackColor = Color::SpringGreen;
+				 appbtn->BackColor = Color::LightSeaGreen;
+				 quizbtn->BackColor = Color::LightSeaGreen;
+				  outputpanel->Controls->Clear();
+				  outputpanel->Controls->Add(gcnew UI_Circular_Queue_Array);}
+		 }
 	private: System::Void cqllbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 				 modulescheck();
 				 if(modulesCompleted<=0)
@@ -724,22 +715,22 @@ namespace DataStructuresLearningSoftware {
 					 MessageBox::Show("Please Complete the Previous Module to access this.");
 				 }
 				 else{
-					 btnBack->Show();
-					 btnNext->Show();
-					 curid=7;
-					 introbtn->BackColor = Color::LightSeaGreen;
-					 linbtn->BackColor = Color::LightSeaGreen;
-					 linarrbtn->BackColor = Color::LightSeaGreen;
-					 linllbtn->BackColor = Color::LightSeaGreen;
-					 linanimbtn->BackColor = Color::LightSeaGreen;
-					 cqbtn->BackColor = Color::PaleTurquoise;
-					 cqarrbtn->BackColor = Color::LightSeaGreen;
-					 cqllbtn->BackColor = Color::PaleTurquoise;
-					 ciranimbtn->BackColor = Color::LightSeaGreen;
-					 appbtn->BackColor = Color::LightSeaGreen;
-					 quizbtn->BackColor = Color::LightSeaGreen;
-					 outputpanel->Controls->Clear();
-					 outputpanel->Controls->Add(gcnew UI_Circular_Queue_LL);}
+				 btnBack->Show();
+				 btnNext->Show();
+				 curid=7;
+				 introbtn->BackColor = Color::LightSeaGreen;
+				 linbtn->BackColor = Color::LightSeaGreen;
+				 linarrbtn->BackColor = Color::LightSeaGreen;
+				 linllbtn->BackColor = Color::LightSeaGreen;
+				 linanimbtn->BackColor = Color::LightSeaGreen;
+				 cqbtn->BackColor = Color::PaleTurquoise;
+				 cqarrbtn->BackColor = Color::SpringGreen;
+				 cqllbtn->BackColor = Color::PaleTurquoise;
+				 ciranimbtn->BackColor = Color::SpringGreen;
+				 appbtn->BackColor = Color::LightSeaGreen;
+				 quizbtn->BackColor = Color::LightSeaGreen;
+				  outputpanel->Controls->Clear();
+				  outputpanel->Controls->Add(gcnew UI_Circular_Queue_LL);}
 			 }
 	// loading the application module 
 
@@ -750,22 +741,22 @@ namespace DataStructuresLearningSoftware {
 					 MessageBox::Show("Please Complete the Previous Module to access this.");
 				 }
 				 else{
-					 btnBack->Show();
-					 btnNext->Show();
-					 curid=9;
-					 introbtn->BackColor = Color::LightSeaGreen;
-					 linbtn->BackColor = Color::LightSeaGreen;
-					 linarrbtn->BackColor = Color::LightSeaGreen;
-					 linllbtn->BackColor = Color::LightSeaGreen;
-					 linanimbtn->BackColor = Color::LightSeaGreen;
-					 cqbtn->BackColor = Color::PaleTurquoise;
-					 cqarrbtn->BackColor = Color::LightSeaGreen;
-					 cqllbtn->BackColor = Color::LightSeaGreen;
-					 ciranimbtn->BackColor = Color::LightSeaGreen;
-					 appbtn->BackColor = Color::PaleTurquoise;
-					 quizbtn->BackColor = Color::LightSeaGreen;
-					 outputpanel->Controls->Clear();
-					 outputpanel->Controls->Add(gcnew UI_Queue_App);}
+				 btnBack->Show();
+				 btnNext->Show();
+				 curid=9;
+				 introbtn->BackColor = Color::LightSeaGreen;
+				 linbtn->BackColor = Color::LightSeaGreen;
+				 linarrbtn->BackColor = Color::SpringGreen;
+				 linllbtn->BackColor = Color::SpringGreen;
+				 linanimbtn->BackColor = Color::SpringGreen;
+				 cqbtn->BackColor = Color::PaleTurquoise;
+				 cqarrbtn->BackColor = Color::SpringGreen;
+				 cqllbtn->BackColor = Color::SpringGreen;
+				 ciranimbtn->BackColor = Color::SpringGreen;
+				 appbtn->BackColor = Color::PaleTurquoise;
+				 quizbtn->BackColor = Color::LightSeaGreen;
+				  outputpanel->Controls->Clear();
+				  outputpanel->Controls->Add(gcnew UI_Queue_App);}
 			 }
 	// loading the Quiz module 
 
@@ -804,46 +795,63 @@ namespace DataStructuresLearningSoftware {
 				 btnNext->Show();
 				 curid=4;
 				 introbtn->BackColor = Color::LightSeaGreen;
-				 linbtn->BackColor = Color::PaleTurquoise;
-				 linarrbtn->BackColor = Color::LightSeaGreen;
-				 linllbtn->BackColor = Color::LightSeaGreen;
-				 linanimbtn->BackColor = Color::PaleTurquoise;
+				 linbtn->BackColor = Color::LightSeaGreen;
+				 linarrbtn->BackColor = Color::SpringGreen;
+				 linllbtn->BackColor = Color::SpringGreen;
+				 linanimbtn->BackColor = Color::SpringGreen;
 				 cqbtn->BackColor = Color::LightSeaGreen;
-				 cqarrbtn->BackColor = Color::LightSeaGreen;
-				 cqllbtn->BackColor = Color::LightSeaGreen;
-				 ciranimbtn->BackColor = Color::LightSeaGreen;
+				 cqarrbtn->BackColor = Color::SpringGreen;
+				 cqllbtn->BackColor = Color::SpringGreen;
+				 ciranimbtn->BackColor = Color::SpringGreen;
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::LightSeaGreen;
 				 outputpanel->Controls->Clear();
 				 outputpanel->Controls->Add(gcnew UI_Linear_Queue_Animation);
 			 }
-	// loading the circluar animation module 
-
-	private: System::Void ciranimbtn_Click(System::Object^  sender, System::EventArgs^  e) {
-				 modulescheck();
-				 if(modulesCompleted<=0)
-				 {
-					 MessageBox::Show("Please Complete the Previous Module to access this.");
-				 }
-				 else{
-					 btnBack->Show();
-					 btnNext->Show();
-					 curid=8;
-					 introbtn->BackColor = Color::LightSeaGreen;
-					 linbtn->BackColor = Color::LightSeaGreen;
-					 linarrbtn->BackColor = Color::LightSeaGreen;
-					 linllbtn->BackColor = Color::LightSeaGreen;
-					 linanimbtn->BackColor = Color::LightSeaGreen;
-					 cqbtn->BackColor = Color::PaleTurquoise;
-					 cqarrbtn->BackColor = Color::LightSeaGreen;
-					 cqllbtn->BackColor = Color::LightSeaGreen;
-					 ciranimbtn->BackColor = Color::PaleTurquoise;
-					 appbtn->BackColor = Color::LightSeaGreen;
-					 quizbtn->BackColor = Color::LightSeaGreen;
-					 outputpanel->Controls->Clear();
-					 outputpanel->Controls->Add(gcnew UI_Circular_Queue_Animation);}
+private: System::Void linanimbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+			 modulescheck();
+			 btnBack->Show();
+			 btnNext->Show();
+			 curid=4;
+			 introbtn->BackColor = Color::LightSeaGreen;
+			 linbtn->BackColor = Color::PaleTurquoise;
+			 linarrbtn->BackColor = Color::SpringGreen;
+			 linllbtn->BackColor = Color::SpringGreen;
+			 linanimbtn->BackColor = Color::PaleTurquoise;
+			 cqbtn->BackColor = Color::LightSeaGreen;
+			 cqarrbtn->BackColor = Color::LightSeaGreen;
+			 cqllbtn->BackColor = Color::LightSeaGreen;
+			 ciranimbtn->BackColor = Color::LightSeaGreen;
+			 appbtn->BackColor = Color::LightSeaGreen;
+			 quizbtn->BackColor = Color::LightSeaGreen;
+			  outputpanel->Controls->Clear();
+			 outputpanel->Controls->Add(gcnew UI_Linear_Queue_Animation);
+		 }
+private: System::Void ciranimbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+			 modulescheck();
+			 if(modulesCompleted<=0)
+			 {
+				 MessageBox::Show("Please Complete the Previous Module to access this.");
 			 }
-	private: System::Void outputpanel_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+			 else{
+			 btnBack->Show();
+			 btnNext->Show();
+			 curid=8;
+			 introbtn->BackColor = Color::LightSeaGreen;
+			 linbtn->BackColor = Color::LightSeaGreen;
+			 linarrbtn->BackColor = Color::LightSeaGreen;
+			 linllbtn->BackColor = Color::LightSeaGreen;
+			 linanimbtn->BackColor = Color::LightSeaGreen;
+			 cqbtn->BackColor = Color::PaleTurquoise;
+			 cqarrbtn->BackColor = Color::SpringGreen;
+			 cqllbtn->BackColor = Color::SpringGreen;
+			 ciranimbtn->BackColor = Color::PaleTurquoise;
+			 appbtn->BackColor = Color::LightSeaGreen;
+			 quizbtn->BackColor = Color::LightSeaGreen;
+			  outputpanel->Controls->Clear();
+			  outputpanel->Controls->Add(gcnew UI_Circular_Queue_Animation);}
+		 }
+private: System::Void outputpanel_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 
 			 }
 	private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
