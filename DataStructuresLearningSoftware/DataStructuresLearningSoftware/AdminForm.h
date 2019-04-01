@@ -2934,6 +2934,7 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 				 while(reader->Read())
 				 {
 					 String ^user=reader->GetString(1);
+					 if(user!="guest")
 					 udlistBox->Items->Add(user);
 
 				 }

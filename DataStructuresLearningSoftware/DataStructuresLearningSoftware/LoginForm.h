@@ -2133,8 +2133,8 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1048, 763);
-			this->Controls->Add(this->Registerpanel);
 			this->Controls->Add(this->loginpanel);
+			this->Controls->Add(this->Registerpanel);
 			this->Controls->Add(this->ForgotPasswordpanel);
 			this->Controls->Add(this->headerpanel);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -3111,6 +3111,11 @@ private: System::Void ChangePasswordHomebutton_Click(System::Object^  sender, Sy
 private: System::Void LoginButton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 String ^username=UsernameTextBox->Text;
 			 String ^password=PasswordTextBox->Text;
+			 if(username=="guest")
+			 {
+				 MessageBox::Show("Incorrect Username","Login");
+				 return;
+			 }
 
 			 try
 			 {
