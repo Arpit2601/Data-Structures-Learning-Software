@@ -416,14 +416,14 @@ namespace DataStructuresLearningSoftware {
 					 return ;
 				 }
 				 int len=this->BTinsert_value->Text->Length;int num=0;
-				 for(int i=0;i<len;i++){if(isalpha(this->BTinsert_value->Text[i]) || this->BTinsert_value->Text[i]=='.'){num=1;}}
+				 for(int i=0;i<len;i++){if(!isdigit(this->BTinsert_value->Text[i])){num=1;}}
 				 if(num==1){
 					 this->BTinsert_value->Text = "";
 					 MessageBox::Show("Please Enter only integers");
 				 }
-				 else if(int::Parse(this->BTinsert_value->Text)>99 || int::Parse(this->BTinsert_value->Text)<-99){
+				 else if(int::Parse(this->BTinsert_value->Text)>99 || int::Parse(this->BTinsert_value->Text)<0){
 					 this->BTinsert_value->Text = "";
-					 MessageBox::Show("Please Enter Value Between 99 and -99");
+					 MessageBox::Show("Please Enter Value Between 0 and 99");
 				 }
 				 else{
 					 this->BTinsert_value->Enabled = false;

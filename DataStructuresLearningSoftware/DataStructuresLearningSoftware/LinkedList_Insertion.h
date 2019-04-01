@@ -634,8 +634,8 @@ namespace DataStructuresLearningSoftware {
 				 }
 				 else{
 					 int len1=this->insert_ll_tf->Text->Length;int num1=0;
-					 for(int i=0;i<len1;i++){if(isalpha(this->insert_ll_tf->Text[i]) || this->insert_ll_tf->Text[i]=='.'){num1=1;}}
-					 if(num1==0 && int::Parse(this->insert_ll_tf->Text)< 100 && int::Parse(this->insert_ll_tf->Text)> -100){
+					 for(int i=0;i<len1;i++){if(!isdigit(this->insert_ll_tf->Text[i])){num1=1;}}
+					 if(num1==0 && int::Parse(this->insert_ll_tf->Text)< 100 && int::Parse(this->insert_ll_tf->Text)>= 0){
 						 this->insert_ll_label->Text = this->insert_ll_tf->Text;
 						 this->insert_ll_label->Visible = true;
 						 this->insert_ll_tf->Enabled = false;
@@ -644,7 +644,7 @@ namespace DataStructuresLearningSoftware {
 					 }
 					 else{
 						 this->insert_ll_tf->Text = "";
-						 MessageBox::Show("Please Enter Value Between -100 to 100");
+						 MessageBox::Show("Please Enter Value Between 0 to 100");
 					 }
 				 }
 			 }
