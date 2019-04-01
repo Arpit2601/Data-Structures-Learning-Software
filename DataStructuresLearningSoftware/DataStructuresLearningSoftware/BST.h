@@ -144,6 +144,7 @@ namespace DataStructuresLearningSoftware {
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 			 MainPanel->Controls->Clear();
 			 DiscussionForum ^ discuss = gcnew DiscussionForum;
+			 discuss->module="BST";
 			 discuss->username=username;
 			 MainPanel->Controls->Add(discuss);
 		 }

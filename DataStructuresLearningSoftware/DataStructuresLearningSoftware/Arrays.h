@@ -624,6 +624,7 @@ private: System::Void button8_Click(System::Object^  sender, System::EventArgs^ 
 			 MainPanel->Controls->Clear();
 			 DiscussionForum ^ discuss = gcnew DiscussionForum;
 			 discuss->username=username;
+			 discuss->module="Array";
 			 MainPanel->Controls->Add(discuss);
 		 }
 };

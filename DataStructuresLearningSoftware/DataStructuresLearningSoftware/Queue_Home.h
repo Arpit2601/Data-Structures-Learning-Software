@@ -433,81 +433,83 @@ namespace DataStructuresLearningSoftware {
 
 		}
 #pragma endregion
-		public:
-			bool islinclk;
-			bool iscqclk;
-			static int linclkctr=0;
-			int curid;
-			String ^ username;
-			String ^ fullname;
-			int modulesCompleted;
-		
+	public:
+		bool islinclk;
+		bool iscqclk;
+		static int linclkctr=0;
+		int curid;
+		String ^ username;
+		String ^ fullname;
+		int modulesCompleted;
 
 
-	void display()
-	{
-		if(curid==0)
+		//displyas the current module
+		void display()
 		{
-			introbtn->PerformClick();
-		}
-		else if(curid==1)
-		{
-			linbtn->PerformClick();
-		}
-		else if(curid==2)
-		{
-			linarrbtn->PerformClick();
-		}
-		else if(curid==3)
-		{
-			linllbtn->PerformClick();
-		}
-		else if(curid==4)
-		{
-			linanimbtn->PerformClick();
-		}
-		else if(curid==5)
-		{
-			cqbtn->PerformClick();
-		}
-		else if(curid==6)
-		{
-			cqarrbtn->PerformClick();
-		}
-		else if(curid==7)
-		{
-			cqllbtn->PerformClick();
-		}
-		else if(curid==8)
-		{
+			if(curid==0)
+			{
+				introbtn->PerformClick();
+			}
+			else if(curid==1)
+			{
+				linbtn->PerformClick();
+			}
+			else if(curid==2)
+			{
+				linarrbtn->PerformClick();
+			}
+			else if(curid==3)
+			{
+				linllbtn->PerformClick();
+			}
+			else if(curid==4)
+			{
+				linanimbtn->PerformClick();
+			}
+			else if(curid==5)
+			{
+				cqbtn->PerformClick();
+			}
+			else if(curid==6)
+			{
+				cqarrbtn->PerformClick();
+			}
+			else if(curid==7)
+			{
+				cqllbtn->PerformClick();
+			}
+			else if(curid==8)
+			{
 
-			ciranimbtn->PerformClick();
+				ciranimbtn->PerformClick();
+			}
+			else if(curid==9)
+			{
+
+				appbtn->PerformClick();
+			}
+			else if(curid==10)
+			{
+
+				quizbtn->PerformClick();
+			}
 		}
-		else if(curid==9)
+		//checks which modules are unlocked 
+		void modulescheck()
 		{
+			OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+			DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 
-			appbtn->PerformClick();
+			DB_Connection->Open();
+			String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+			OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+			OleDbDataReader ^ reader = cmd->ExecuteReader();
+			if(reader->Read()){
+				modulesCompleted = reader->GetInt32(14);
+			}
+			DB_Connection->Close();
 		}
-		else if(curid==10)
-		{
-
-			quizbtn->PerformClick();
-		}
-	}
-	void modulescheck()
-	{
-		OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
-		DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
-
-		DB_Connection->Open();
-		String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
-		OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
-		OleDbDataReader ^ reader = cmd->ExecuteReader();
-		if(reader->Read()){
-			modulesCompleted = reader->GetInt32(14);
-		}
-		DB_Connection->Close();
-	}
+		// loads base form and gets the user information
 	private: System::Void Queue_Home_Load(System::Object^  sender, System::EventArgs^  e) {
 				 islinclk=false;
 				 iscqclk=false;
@@ -516,7 +518,7 @@ namespace DataStructuresLearningSoftware {
 				 curid=0;
 				 display();
 
-				  modulesCompleted=0;
+				 modulesCompleted=0;
 				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
 				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 
@@ -532,7 +534,7 @@ namespace DataStructuresLearningSoftware {
 				 outputpanel->AutoScroll=true;
 				 DB_Connection->Close();
 			 }
-
+	// loading the intro module 
 	private: System::Void intro_Click(System::Object^  sender, System::EventArgs^  e) {
 				 modulescheck();
 				 curid=0;
@@ -551,7 +553,9 @@ namespace DataStructuresLearningSoftware {
 				 quizbtn->BackColor = Color::LightSeaGreen;
 				 outputpanel->Controls->Clear();
 				 outputpanel->Controls->Add(gcnew UI_Queue_Introduction);
-		 }
+			 }
+	// loading the linked list module 
+
 	private: System::Void linbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 				 modulescheck();
 				 curid=1;
@@ -569,7 +573,7 @@ namespace DataStructuresLearningSoftware {
 					 this->cqarrbtn->Hide();
 					 this->ciranimbtn->Hide();
 					 this->cqllbtn->Hide();
-					 
+
 				 }
 				 introbtn->BackColor = Color::LightSeaGreen;
 				 linbtn->BackColor = Color::PaleTurquoise;
@@ -582,11 +586,13 @@ namespace DataStructuresLearningSoftware {
 				 ciranimbtn->BackColor = Color::LightSeaGreen;
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::LightSeaGreen;
-				  outputpanel->Controls->Clear();
-				  UI_Linear_Queue^ newpanel = gcnew UI_Linear_Queue;
-				  newpanel->username=username; 
+				 outputpanel->Controls->Clear();
+				 UI_Linear_Queue^ newpanel = gcnew UI_Linear_Queue;
+				 newpanel->username=username; 
 				 outputpanel->Controls->Add(newpanel);
-		 }
+			 }
+	// loading the linear array module 
+
 	private: System::Void linarrbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 				 modulescheck();
 				 curid=2;
@@ -603,10 +609,12 @@ namespace DataStructuresLearningSoftware {
 				 ciranimbtn->BackColor = Color::LightSeaGreen;
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::LightSeaGreen;
-				 
-				  outputpanel->Controls->Clear();
-			 outputpanel->Controls->Add(gcnew UI_Linear_Queue_Array);
-		 }
+
+				 outputpanel->Controls->Clear();
+				 outputpanel->Controls->Add(gcnew UI_Linear_Queue_Array);
+			 }
+	// loading the linear linked list module 
+
 	private: System::Void linllbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 				 modulescheck();
 				 curid=3;
@@ -623,62 +631,66 @@ namespace DataStructuresLearningSoftware {
 				 ciranimbtn->BackColor = Color::LightSeaGreen;
 				 appbtn->BackColor = Color::LightSeaGreen;
 				 quizbtn->BackColor = Color::LightSeaGreen;
-				  outputpanel->Controls->Clear();
-			 outputpanel->Controls->Add(gcnew UI_Linear_Queue_LL);
-		 }
+				 outputpanel->Controls->Clear();
+				 outputpanel->Controls->Add(gcnew UI_Linear_Queue_LL);
+			 }
+	// loading the circular queue module 
+
 	private: System::Void cirbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 				 modulescheck();
 				 if(modulesCompleted<=0)
 				 {
-					MessageBox::Show("Please Complete the Previous Module to access this.");
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
 				 }
 				 else{
-				 curid=5;
-				 btnBack->Show();
-				 btnNext->Show();
-				  iscqclk=true;
-				  this->ciranimbtn->Show();
-				  this->cqllbtn->Show();
-				  this->cqarrbtn->Show();
-				  if(islinclk==true)
-				  {
-					  this->linarrbtn->Hide();
-					  this->linllbtn->Hide();
-					  this->linanimbtn->Hide();
-					  this->cqbtn->Location = System::Drawing::Point(0, 60);
-					  this->cqarrbtn->Location = System::Drawing::Point(0, 90);
-					  this->cqllbtn->Location = System::Drawing::Point(0, 120);
-					  this->ciranimbtn->Location = System::Drawing::Point(0, 150);
-					  this->appbtn->Location = System::Drawing::Point(0, 180);
-					  this->quizbtn->Location = System::Drawing::Point(0, 210);
-				  }
-				  else 
-				  {
-					  this->cqarrbtn->Location = System::Drawing::Point(0, 90);
-					  this->cqllbtn->Location = System::Drawing::Point(0, 120);
-					  this->ciranimbtn->Location = System::Drawing::Point(0, 150);
-					  this->appbtn->Location = System::Drawing::Point(0, 180);
-					  this->quizbtn->Location = System::Drawing::Point(0, 210);
-				  }
-				 introbtn->BackColor = Color::LightSeaGreen;
-				 linbtn->BackColor = Color::LightSeaGreen;
-				 linarrbtn->BackColor = Color::LightSeaGreen;
-				 linllbtn->BackColor = Color::LightSeaGreen;
-				 linanimbtn->BackColor = Color::LightSeaGreen;
-				 cqbtn->BackColor = Color::PaleTurquoise;
-				 cqarrbtn->BackColor = Color::LightSeaGreen;
-				 cqllbtn->BackColor = Color::LightSeaGreen;
-				 ciranimbtn->BackColor = Color::LightSeaGreen;
-				 appbtn->BackColor = Color::LightSeaGreen;
-				 quizbtn->BackColor = Color::LightSeaGreen;
+					 curid=5;
+					 btnBack->Show();
+					 btnNext->Show();
+					 iscqclk=true;
+					 this->ciranimbtn->Show();
+					 this->cqllbtn->Show();
+					 this->cqarrbtn->Show();
+					 if(islinclk==true)
+					 {
+						 this->linarrbtn->Hide();
+						 this->linllbtn->Hide();
+						 this->linanimbtn->Hide();
+						 this->cqbtn->Location = System::Drawing::Point(0, 60);
+						 this->cqarrbtn->Location = System::Drawing::Point(0, 90);
+						 this->cqllbtn->Location = System::Drawing::Point(0, 120);
+						 this->ciranimbtn->Location = System::Drawing::Point(0, 150);
+						 this->appbtn->Location = System::Drawing::Point(0, 180);
+						 this->quizbtn->Location = System::Drawing::Point(0, 210);
+					 }
+					 else 
+					 {
+						 this->cqarrbtn->Location = System::Drawing::Point(0, 90);
+						 this->cqllbtn->Location = System::Drawing::Point(0, 120);
+						 this->ciranimbtn->Location = System::Drawing::Point(0, 150);
+						 this->appbtn->Location = System::Drawing::Point(0, 180);
+						 this->quizbtn->Location = System::Drawing::Point(0, 210);
+					 }
+					 introbtn->BackColor = Color::LightSeaGreen;
+					 linbtn->BackColor = Color::LightSeaGreen;
+					 linarrbtn->BackColor = Color::LightSeaGreen;
+					 linllbtn->BackColor = Color::LightSeaGreen;
+					 linanimbtn->BackColor = Color::LightSeaGreen;
+					 cqbtn->BackColor = Color::PaleTurquoise;
+					 cqarrbtn->BackColor = Color::LightSeaGreen;
+					 cqllbtn->BackColor = Color::LightSeaGreen;
+					 ciranimbtn->BackColor = Color::LightSeaGreen;
+					 appbtn->BackColor = Color::LightSeaGreen;
+					 quizbtn->BackColor = Color::LightSeaGreen;
 
-				  outputpanel->Controls->Clear();
-				  UI_Circular_Queue^ newpanel = gcnew UI_Circular_Queue;
-				  newpanel->username=username; 
-				  outputpanel->Controls->Add(newpanel);
+					 outputpanel->Controls->Clear();
+					 UI_Circular_Queue^ newpanel = gcnew UI_Circular_Queue;
+					 newpanel->username=username; 
+					 outputpanel->Controls->Add(newpanel);
 				 }
 
 			 }
+	// loading the Circular array module 
+
 	private: System::Void cqarrbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 				 modulescheck();
 				 if(modulesCompleted<=0)
@@ -686,23 +698,25 @@ namespace DataStructuresLearningSoftware {
 					 MessageBox::Show("Please Complete the Previous Module to access this.");
 				 }
 				 else{
-				 btnBack->Show();
-				 btnNext->Show();
-				 curid=6;
-				 introbtn->BackColor = Color::LightSeaGreen;
-				 linbtn->BackColor = Color::LightSeaGreen;
-				 linarrbtn->BackColor = Color::LightSeaGreen;
-				 linllbtn->BackColor = Color::LightSeaGreen;
-				 linanimbtn->BackColor = Color::LightSeaGreen;
-				 cqbtn->BackColor = Color::PaleTurquoise;
-				 cqarrbtn->BackColor = Color::PaleTurquoise;
-				 cqllbtn->BackColor = Color::LightSeaGreen;
-				 ciranimbtn->BackColor = Color::LightSeaGreen;
-				 appbtn->BackColor = Color::LightSeaGreen;
-				 quizbtn->BackColor = Color::LightSeaGreen;
-				  outputpanel->Controls->Clear();
-				  outputpanel->Controls->Add(gcnew UI_Circular_Queue_Array);}
-		 }
+					 btnBack->Show();
+					 btnNext->Show();
+					 curid=6;
+					 introbtn->BackColor = Color::LightSeaGreen;
+					 linbtn->BackColor = Color::LightSeaGreen;
+					 linarrbtn->BackColor = Color::LightSeaGreen;
+					 linllbtn->BackColor = Color::LightSeaGreen;
+					 linanimbtn->BackColor = Color::LightSeaGreen;
+					 cqbtn->BackColor = Color::PaleTurquoise;
+					 cqarrbtn->BackColor = Color::PaleTurquoise;
+					 cqllbtn->BackColor = Color::LightSeaGreen;
+					 ciranimbtn->BackColor = Color::LightSeaGreen;
+					 appbtn->BackColor = Color::LightSeaGreen;
+					 quizbtn->BackColor = Color::LightSeaGreen;
+					 outputpanel->Controls->Clear();
+					 outputpanel->Controls->Add(gcnew UI_Circular_Queue_Array);}
+			 }
+	// loading the circular linked list module 
+
 	private: System::Void cqllbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 				 modulescheck();
 				 if(modulesCompleted<=0)
@@ -710,23 +724,25 @@ namespace DataStructuresLearningSoftware {
 					 MessageBox::Show("Please Complete the Previous Module to access this.");
 				 }
 				 else{
-				 btnBack->Show();
-				 btnNext->Show();
-				 curid=7;
-				 introbtn->BackColor = Color::LightSeaGreen;
-				 linbtn->BackColor = Color::LightSeaGreen;
-				 linarrbtn->BackColor = Color::LightSeaGreen;
-				 linllbtn->BackColor = Color::LightSeaGreen;
-				 linanimbtn->BackColor = Color::LightSeaGreen;
-				 cqbtn->BackColor = Color::PaleTurquoise;
-				 cqarrbtn->BackColor = Color::LightSeaGreen;
-				 cqllbtn->BackColor = Color::PaleTurquoise;
-				 ciranimbtn->BackColor = Color::LightSeaGreen;
-				 appbtn->BackColor = Color::LightSeaGreen;
-				 quizbtn->BackColor = Color::LightSeaGreen;
-				  outputpanel->Controls->Clear();
-				  outputpanel->Controls->Add(gcnew UI_Circular_Queue_LL);}
+					 btnBack->Show();
+					 btnNext->Show();
+					 curid=7;
+					 introbtn->BackColor = Color::LightSeaGreen;
+					 linbtn->BackColor = Color::LightSeaGreen;
+					 linarrbtn->BackColor = Color::LightSeaGreen;
+					 linllbtn->BackColor = Color::LightSeaGreen;
+					 linanimbtn->BackColor = Color::LightSeaGreen;
+					 cqbtn->BackColor = Color::PaleTurquoise;
+					 cqarrbtn->BackColor = Color::LightSeaGreen;
+					 cqllbtn->BackColor = Color::PaleTurquoise;
+					 ciranimbtn->BackColor = Color::LightSeaGreen;
+					 appbtn->BackColor = Color::LightSeaGreen;
+					 quizbtn->BackColor = Color::LightSeaGreen;
+					 outputpanel->Controls->Clear();
+					 outputpanel->Controls->Add(gcnew UI_Circular_Queue_LL);}
 			 }
+	// loading the application module 
+
 	private: System::Void appbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 				 modulescheck();
 				 if(modulesCompleted<=1)
@@ -734,23 +750,25 @@ namespace DataStructuresLearningSoftware {
 					 MessageBox::Show("Please Complete the Previous Module to access this.");
 				 }
 				 else{
-				 btnBack->Show();
-				 btnNext->Show();
-				 curid=9;
-				 introbtn->BackColor = Color::LightSeaGreen;
-				 linbtn->BackColor = Color::LightSeaGreen;
-				 linarrbtn->BackColor = Color::LightSeaGreen;
-				 linllbtn->BackColor = Color::LightSeaGreen;
-				 linanimbtn->BackColor = Color::LightSeaGreen;
-				 cqbtn->BackColor = Color::PaleTurquoise;
-				 cqarrbtn->BackColor = Color::LightSeaGreen;
-				 cqllbtn->BackColor = Color::LightSeaGreen;
-				 ciranimbtn->BackColor = Color::LightSeaGreen;
-				 appbtn->BackColor = Color::PaleTurquoise;
-				 quizbtn->BackColor = Color::LightSeaGreen;
-				  outputpanel->Controls->Clear();
-				  outputpanel->Controls->Add(gcnew UI_Queue_App);}
+					 btnBack->Show();
+					 btnNext->Show();
+					 curid=9;
+					 introbtn->BackColor = Color::LightSeaGreen;
+					 linbtn->BackColor = Color::LightSeaGreen;
+					 linarrbtn->BackColor = Color::LightSeaGreen;
+					 linllbtn->BackColor = Color::LightSeaGreen;
+					 linanimbtn->BackColor = Color::LightSeaGreen;
+					 cqbtn->BackColor = Color::PaleTurquoise;
+					 cqarrbtn->BackColor = Color::LightSeaGreen;
+					 cqllbtn->BackColor = Color::LightSeaGreen;
+					 ciranimbtn->BackColor = Color::LightSeaGreen;
+					 appbtn->BackColor = Color::PaleTurquoise;
+					 quizbtn->BackColor = Color::LightSeaGreen;
+					 outputpanel->Controls->Clear();
+					 outputpanel->Controls->Add(gcnew UI_Queue_App);}
 			 }
+	// loading the Quiz module 
+
 	private: System::Void quizbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 				 modulescheck();
 				 if(modulesCompleted<=1)
@@ -758,108 +776,113 @@ namespace DataStructuresLearningSoftware {
 					 MessageBox::Show("Please Complete the Previous Module to access this.");
 				 }
 				 else{
+					 btnBack->Show();
+					 btnNext->Hide();
+					 curid=10;
+					 introbtn->BackColor = Color::LightSeaGreen;
+					 linbtn->BackColor = Color::LightSeaGreen;
+					 linarrbtn->BackColor = Color::LightSeaGreen;
+					 linllbtn->BackColor = Color::LightSeaGreen;
+					 linanimbtn->BackColor = Color::LightSeaGreen;
+					 cqbtn->BackColor = Color::LightSeaGreen;
+					 cqarrbtn->BackColor = Color::LightSeaGreen;
+					 cqllbtn->BackColor = Color::LightSeaGreen;
+					 ciranimbtn->BackColor = Color::LightSeaGreen;
+					 appbtn->BackColor = Color::LightSeaGreen;
+					 quizbtn->BackColor = Color::PaleTurquoise;
+					 outputpanel->Controls->Clear();
+					 Quiz ^newUserControl = gcnew Quiz();
+					 newUserControl->username = username;
+					 newUserControl->ds_id = 6;
+					 outputpanel->Controls->Add(newUserControl);}
+			 }
+	// loading the linear animation module 
+
+	private: System::Void linanimbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
 				 btnBack->Show();
-				 btnNext->Hide();
-				 curid=10;
+				 btnNext->Show();
+				 curid=4;
 				 introbtn->BackColor = Color::LightSeaGreen;
-				 linbtn->BackColor = Color::LightSeaGreen;
+				 linbtn->BackColor = Color::PaleTurquoise;
 				 linarrbtn->BackColor = Color::LightSeaGreen;
 				 linllbtn->BackColor = Color::LightSeaGreen;
-				 linanimbtn->BackColor = Color::LightSeaGreen;
+				 linanimbtn->BackColor = Color::PaleTurquoise;
 				 cqbtn->BackColor = Color::LightSeaGreen;
 				 cqarrbtn->BackColor = Color::LightSeaGreen;
 				 cqllbtn->BackColor = Color::LightSeaGreen;
 				 ciranimbtn->BackColor = Color::LightSeaGreen;
 				 appbtn->BackColor = Color::LightSeaGreen;
-				 quizbtn->BackColor = Color::PaleTurquoise;
-				  outputpanel->Controls->Clear();
-				 Quiz ^newUserControl = gcnew Quiz();
-				 newUserControl->username = username;
-				 newUserControl->ds_id = 6;
-				 outputpanel->Controls->Add(newUserControl);}
+				 quizbtn->BackColor = Color::LightSeaGreen;
+				 outputpanel->Controls->Clear();
+				 outputpanel->Controls->Add(gcnew UI_Linear_Queue_Animation);
 			 }
-private: System::Void linanimbtn_Click(System::Object^  sender, System::EventArgs^  e) {
-			 modulescheck();
-			 btnBack->Show();
-			 btnNext->Show();
-			 curid=4;
-			 introbtn->BackColor = Color::LightSeaGreen;
-			 linbtn->BackColor = Color::PaleTurquoise;
-			 linarrbtn->BackColor = Color::LightSeaGreen;
-			 linllbtn->BackColor = Color::LightSeaGreen;
-			 linanimbtn->BackColor = Color::PaleTurquoise;
-			 cqbtn->BackColor = Color::LightSeaGreen;
-			 cqarrbtn->BackColor = Color::LightSeaGreen;
-			 cqllbtn->BackColor = Color::LightSeaGreen;
-			 ciranimbtn->BackColor = Color::LightSeaGreen;
-			 appbtn->BackColor = Color::LightSeaGreen;
-			 quizbtn->BackColor = Color::LightSeaGreen;
-			  outputpanel->Controls->Clear();
-			 outputpanel->Controls->Add(gcnew UI_Linear_Queue_Animation);
-		 }
-private: System::Void ciranimbtn_Click(System::Object^  sender, System::EventArgs^  e) {
-			 modulescheck();
-			 if(modulesCompleted<=0)
-			 {
-				 MessageBox::Show("Please Complete the Previous Module to access this.");
-			 }
-			 else{
-			 btnBack->Show();
-			 btnNext->Show();
-			 curid=8;
-			 introbtn->BackColor = Color::LightSeaGreen;
-			 linbtn->BackColor = Color::LightSeaGreen;
-			 linarrbtn->BackColor = Color::LightSeaGreen;
-			 linllbtn->BackColor = Color::LightSeaGreen;
-			 linanimbtn->BackColor = Color::LightSeaGreen;
-			 cqbtn->BackColor = Color::PaleTurquoise;
-			 cqarrbtn->BackColor = Color::LightSeaGreen;
-			 cqllbtn->BackColor = Color::LightSeaGreen;
-			 ciranimbtn->BackColor = Color::PaleTurquoise;
-			 appbtn->BackColor = Color::LightSeaGreen;
-			 quizbtn->BackColor = Color::LightSeaGreen;
-			  outputpanel->Controls->Clear();
-			  outputpanel->Controls->Add(gcnew UI_Circular_Queue_Animation);}
-		 }
-private: System::Void outputpanel_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+	// loading the circluar animation module 
 
-		 }
-private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
-		 }
-private: System::Void richTextBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
-		       
-		 }
-private: System::Void discussbtn_Click(System::Object^  sender, System::EventArgs^  e) {
-			 outputpanel->Controls->Clear();
-			 DiscussionForum ^ discuss = gcnew DiscussionForum;
-			 //discuss->module="Queue";
-			 discuss->username=username;
-			 outputpanel->Controls->Add(discuss);
-		 }
-private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
-			 curid--;
-			 display();
-		 }
-private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
-			 modulescheck();
-			 if(modulesCompleted<=0 && curid==4)
-			 {
-				 MessageBox::Show("Please Complete the Previous Module to access this.");
+	private: System::Void ciranimbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 if(modulesCompleted<=0)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else{
+					 btnBack->Show();
+					 btnNext->Show();
+					 curid=8;
+					 introbtn->BackColor = Color::LightSeaGreen;
+					 linbtn->BackColor = Color::LightSeaGreen;
+					 linarrbtn->BackColor = Color::LightSeaGreen;
+					 linllbtn->BackColor = Color::LightSeaGreen;
+					 linanimbtn->BackColor = Color::LightSeaGreen;
+					 cqbtn->BackColor = Color::PaleTurquoise;
+					 cqarrbtn->BackColor = Color::LightSeaGreen;
+					 cqllbtn->BackColor = Color::LightSeaGreen;
+					 ciranimbtn->BackColor = Color::PaleTurquoise;
+					 appbtn->BackColor = Color::LightSeaGreen;
+					 quizbtn->BackColor = Color::LightSeaGreen;
+					 outputpanel->Controls->Clear();
+					 outputpanel->Controls->Add(gcnew UI_Circular_Queue_Animation);}
 			 }
-			 else if(modulesCompleted<=1 && curid==8)
-			 {
-				 MessageBox::Show("Please Complete the Previous Module to access this.");
-			 }else{		 
-			 
-			 curid++;
-			 display();
+	private: System::Void outputpanel_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+
 			 }
-		 }
-private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(this->Owner != nullptr){
-				 this->Hide();
-				 this->Owner->Show();
+	private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 			 }
-		 }
-};
+	private: System::Void richTextBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+
+			 }
+	//opens the discussion form
+	private: System::Void discussbtn_Click(System::Object^  sender, System::EventArgs^  e) {
+				 outputpanel->Controls->Clear();
+				 DiscussionForum ^ discuss = gcnew DiscussionForum;
+				 discuss->module="Queue";
+				 discuss->username=username;
+				 outputpanel->Controls->Add(discuss);
+			 }
+	private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
+				 curid--;
+				 display();
+			 }
+
+	// increases the current module
+	private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 if(modulesCompleted<=0 && curid==4)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else if(modulesCompleted<=1 && curid==8)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }else{		 
+
+					 curid++;
+					 display();
+				 }
+			 }
+	// reduces the current module
+	private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
+				this->Close();
+			 }
+	};
 }

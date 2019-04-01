@@ -352,76 +352,76 @@ namespace DataStructuresLearningSoftware {
 
 		}
 #pragma endregion
-		public: 
-			int curid;
-			String ^ username;
-			String ^ fullname;
-			int modulesCompleted;
+	public: 
+		int curid;
+		String ^ username;
+		String ^ fullname;
+		int modulesCompleted;
 
-			void display()
+		void display()
+		{
+			if(curid==1)
 			{
-				if(curid==1)
-				{
-					button1->PerformClick();
-				}
-				else if(curid==2)
-				{
-					button2->PerformClick();
-				}
-				else if(curid==3)
-				{
-					button3->PerformClick();
-				}
-				else if(curid==4)
-				{
-					button4->PerformClick();
-				}
-				else if(curid==5)
-				{
-					button5->PerformClick();
-				}
-				else if(curid==6)
-				{
-					button6->PerformClick();
-				}
-				else if(curid==7)
-				{
-					button7->PerformClick();
-				}
+				button1->PerformClick();
 			}
-			void modulescheck()
+			else if(curid==2)
 			{
-				OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
-				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+				button2->PerformClick();
+			}
+			else if(curid==3)
+			{
+				button3->PerformClick();
+			}
+			else if(curid==4)
+			{
+				button4->PerformClick();
+			}
+			else if(curid==5)
+			{
+				button5->PerformClick();
+			}
+			else if(curid==6)
+			{
+				button6->PerformClick();
+			}
+			else if(curid==7)
+			{
+				button7->PerformClick();
+			}
+		}
+		void modulescheck()
+		{
+			OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+			DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 
-				DB_Connection->Open();
-				String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
-				OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
-				OleDbDataReader ^ reader = cmd->ExecuteReader();
-				if(reader->Read()){
-					modulesCompleted = reader->GetInt32(13);
-				}
-				DB_Connection->Close();
+			DB_Connection->Open();
+			String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+			OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+			OleDbDataReader ^ reader = cmd->ExecuteReader();
+			if(reader->Read()){
+				modulesCompleted = reader->GetInt32(13);
 			}
+			DB_Connection->Close();
+		}
 	private: System::Void Stack_Main_Load(System::Object^  sender, System::EventArgs^  e) {
-				panel3->AutoScroll=true;
+				 panel3->AutoScroll=true;
 				 curid=1;
-				display();
-				modulesCompleted=0;
-				OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
-				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
+				 display();
+				 modulesCompleted=0;
+				 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
+				 DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 
-				DB_Connection->Open();
-				String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
-				OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
-				OleDbDataReader ^ reader = cmd->ExecuteReader();
-				if(reader->Read()){
-					fullname = reader->GetString(2);
-					modulesCompleted = reader->GetInt32(13);
-				}
-				lblWelcome->Text = "Welcome, "+fullname;
-				panel3->AutoScroll=true;
-				DB_Connection->Close();
+				 DB_Connection->Open();
+				 String ^readString = "SELECT * FROM Users WHERE UserName='"+username+"'";
+				 OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
+				 OleDbDataReader ^ reader = cmd->ExecuteReader();
+				 if(reader->Read()){
+					 fullname = reader->GetString(2);
+					 modulesCompleted = reader->GetInt32(13);
+				 }
+				 lblWelcome->Text = "Welcome, "+fullname;
+				 panel3->AutoScroll=true;
+				 DB_Connection->Close();
 
 			 }
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -463,42 +463,42 @@ namespace DataStructuresLearningSoftware {
 					 MessageBox::Show("Please Complete the Previous Module to access this.");
 				 }
 				 else{
-				 curid=3;
-				 btnBack->Show();
-				 btnNext->Show();
-				 button1->BackColor = Color::LightSeaGreen;
-				 button2->BackColor = Color::LightSeaGreen;
-				 button3->BackColor = Color::PaleTurquoise;
-				 button4->BackColor = Color::LightSeaGreen;
-				 button5->BackColor = Color::LightSeaGreen;
-				 button6->BackColor = Color::LightSeaGreen;
-				 button7->BackColor = Color::LightSeaGreen;
-				 panel3->Controls->Clear();
-				 Stack_Implementation_LinkedList ^ newquiz = gcnew Stack_Implementation_LinkedList;
-				 newquiz->username= username;
-				 panel3->Controls->Add(newquiz);
+					 curid=3;
+					 btnBack->Show();
+					 btnNext->Show();
+					 button1->BackColor = Color::LightSeaGreen;
+					 button2->BackColor = Color::LightSeaGreen;
+					 button3->BackColor = Color::PaleTurquoise;
+					 button4->BackColor = Color::LightSeaGreen;
+					 button5->BackColor = Color::LightSeaGreen;
+					 button6->BackColor = Color::LightSeaGreen;
+					 button7->BackColor = Color::LightSeaGreen;
+					 panel3->Controls->Clear();
+					 Stack_Implementation_LinkedList ^ newquiz = gcnew Stack_Implementation_LinkedList;
+					 newquiz->username= username;
+					 panel3->Controls->Add(newquiz);
 				 }	 
 			 }
 	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
-				 				 modulescheck();
+				 modulescheck();
 				 if(modulesCompleted<=1)
 				 {
 					 MessageBox::Show("Please Complete the Previous Module to access this.");
 				 }
 				 else{
 
-				 curid=4;
-				 btnBack->Show();
-				 btnNext->Show();
-				 button1->BackColor = Color::LightSeaGreen;
-				 button2->BackColor = Color::LightSeaGreen;
-				 button3->BackColor = Color::LightSeaGreen;
-				 button4->BackColor = Color::PaleTurquoise;
-				 button5->BackColor = Color::LightSeaGreen;
-				 button6->BackColor = Color::LightSeaGreen;
-				 button7->BackColor = Color::LightSeaGreen;
-				 panel3->Controls->Clear();
-				 panel3->Controls->Add(gcnew Stack_Applications);}
+					 curid=4;
+					 btnBack->Show();
+					 btnNext->Show();
+					 button1->BackColor = Color::LightSeaGreen;
+					 button2->BackColor = Color::LightSeaGreen;
+					 button3->BackColor = Color::LightSeaGreen;
+					 button4->BackColor = Color::PaleTurquoise;
+					 button5->BackColor = Color::LightSeaGreen;
+					 button6->BackColor = Color::LightSeaGreen;
+					 button7->BackColor = Color::LightSeaGreen;
+					 panel3->Controls->Clear();
+					 panel3->Controls->Add(gcnew Stack_Applications);}
 			 }
 	private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
 				 modulescheck();
@@ -507,18 +507,18 @@ namespace DataStructuresLearningSoftware {
 					 MessageBox::Show("Please Complete the Previous Module to access this.");
 				 }
 				 else{
-				 curid=5;
-				 btnBack->Show();
-				 btnNext->Show();
-				 button1->BackColor = Color::LightSeaGreen;
-				 button2->BackColor = Color::LightSeaGreen;
-				 button3->BackColor = Color::LightSeaGreen;
-				 button4->BackColor = Color::LightSeaGreen;
-				 button5->BackColor = Color::PaleTurquoise;
-				 button6->BackColor = Color::LightSeaGreen;
-				 button7->BackColor = Color::LightSeaGreen;
-				 panel3->Controls->Clear();
-				 panel3->Controls->Add(gcnew Stack_Animations);}
+					 curid=5;
+					 btnBack->Show();
+					 btnNext->Show();
+					 button1->BackColor = Color::LightSeaGreen;
+					 button2->BackColor = Color::LightSeaGreen;
+					 button3->BackColor = Color::LightSeaGreen;
+					 button4->BackColor = Color::LightSeaGreen;
+					 button5->BackColor = Color::PaleTurquoise;
+					 button6->BackColor = Color::LightSeaGreen;
+					 button7->BackColor = Color::LightSeaGreen;
+					 panel3->Controls->Clear();
+					 panel3->Controls->Add(gcnew Stack_Animations);}
 			 }
 	private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
 				 modulescheck();
@@ -527,18 +527,18 @@ namespace DataStructuresLearningSoftware {
 					 MessageBox::Show("Please Complete the Previous Module to access this.");
 				 }
 				 else{
-				 curid=6;
-				 btnBack->Show();
-				 btnNext->Show();
-				 button1->BackColor = Color::LightSeaGreen;
-				 button2->BackColor = Color::LightSeaGreen;
-				 button3->BackColor = Color::LightSeaGreen;
-				 button4->BackColor = Color::LightSeaGreen;
-				 button5->BackColor = Color::LightSeaGreen;
-				 button6->BackColor = Color::PaleTurquoise;
-				 button7->BackColor = Color::LightSeaGreen;
-				 panel3->Controls->Clear();
-				 panel3->Controls->Add(gcnew Stack_Resources);}
+					 curid=6;
+					 btnBack->Show();
+					 btnNext->Show();
+					 button1->BackColor = Color::LightSeaGreen;
+					 button2->BackColor = Color::LightSeaGreen;
+					 button3->BackColor = Color::LightSeaGreen;
+					 button4->BackColor = Color::LightSeaGreen;
+					 button5->BackColor = Color::LightSeaGreen;
+					 button6->BackColor = Color::PaleTurquoise;
+					 button7->BackColor = Color::LightSeaGreen;
+					 panel3->Controls->Clear();
+					 panel3->Controls->Add(gcnew Stack_Resources);}
 			 }
 	private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
 				 modulescheck();
@@ -547,62 +547,63 @@ namespace DataStructuresLearningSoftware {
 					 MessageBox::Show("Please Complete the Previous Module to access this.");
 				 }
 				 else{
-				 curid=7;
-				 btnBack->Show();
-				 btnNext->Hide();
-				 button1->BackColor = Color::LightSeaGreen;
-				 button2->BackColor = Color::LightSeaGreen;
-				 button3->BackColor = Color::LightSeaGreen;
-				 button4->BackColor = Color::LightSeaGreen;
-				 button5->BackColor = Color::LightSeaGreen;
-				 button6->BackColor = Color::LightSeaGreen;
-				 button7->BackColor = Color::PaleTurquoise;
-				 panel3->Controls->Clear();
-				 Quiz ^newUserControl = gcnew Quiz();
-				 newUserControl->username = username;
-				 newUserControl->ds_id = 5;
-				 panel3->Controls->Add(newUserControl);
-				 
+					 curid=7;
+					 btnBack->Show();
+					 btnNext->Hide();
+					 button1->BackColor = Color::LightSeaGreen;
+					 button2->BackColor = Color::LightSeaGreen;
+					 button3->BackColor = Color::LightSeaGreen;
+					 button4->BackColor = Color::LightSeaGreen;
+					 button5->BackColor = Color::LightSeaGreen;
+					 button6->BackColor = Color::LightSeaGreen;
+					 button7->BackColor = Color::PaleTurquoise;
+					 panel3->Controls->Clear();
+					 Quiz ^newUserControl = gcnew Quiz();
+					 newUserControl->username = username;
+					 newUserControl->ds_id = 5;
+					 panel3->Controls->Add(newUserControl);
+
 				 }
 			 }
 	private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
 				 panel3->Controls->Clear();
 				 DiscussionForum ^ discuss = gcnew DiscussionForum;
 				 discuss->username=username;
+				 discuss->module="Stack";
 				 panel3->Controls->Add(discuss);
 			 }
-private: System::Void panel3_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
-		 }
-private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(this->Owner!=nullptr)
-			 {
-				 this->Owner->Visible=true;
+	private: System::Void panel3_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 			 }
-			 this->Close();
+	private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e) {
+				 if(this->Owner!=nullptr)
+				 {
+					 this->Owner->Visible=true;
+				 }
+				 this->Close();
 
-		 }
-private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
-			 curid--;
-			 display();
-		 }
-private: System::Void btnNext_Click_1(System::Object^  sender, System::EventArgs^  e) {
-			 modulescheck();
-			 if(modulesCompleted<=1&&curid==3)
-			 {
-				 MessageBox::Show("Please Complete the Previous Module to access this.");
 			 }
-			 else if(modulesCompleted<=0&&curid==2)
-			 {
-				 MessageBox::Show("Please Complete the Previous Module to access this.");
-			 }
-			 else
-			 {
-				 curid++;
+	private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
+				 curid--;
 				 display();
 			 }
-		 }
-private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
-			 this->Close();
-		 }
-};
+	private: System::Void btnNext_Click_1(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 if(modulesCompleted<=1&&curid==3)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else if(modulesCompleted<=0&&curid==2)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else
+				 {
+					 curid++;
+					 display();
+				 }
+			 }
+	private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
+				 this->Close();
+			 }
+	};
 }

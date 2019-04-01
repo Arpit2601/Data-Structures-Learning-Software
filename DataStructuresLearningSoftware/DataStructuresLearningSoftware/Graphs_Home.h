@@ -217,6 +217,7 @@ namespace DataStructuresLearningSoftware {
 private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
 			 mainPanel->Controls->Clear();
 			 DiscussionForum ^ discuss = gcnew DiscussionForum;
+			 discuss->module="Graph";
 			 discuss->username=username;
 			 mainPanel->Controls->Add(discuss);
 		 }
