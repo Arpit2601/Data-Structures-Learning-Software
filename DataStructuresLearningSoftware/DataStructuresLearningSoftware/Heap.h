@@ -241,6 +241,7 @@ private: System::Void button8_Click(System::Object^  sender, System::EventArgs^ 
 			 panel3->Controls->Clear();
 			 DiscussionForum ^ discuss = gcnew DiscussionForum;
 			 discuss->username=username;
+			 discuss->module="Heap";
 			 panel3->Controls->Add(discuss);
 		 }
 		 private: System::Void Heap_Load(System::Object^  sender, System::EventArgs^  e) {

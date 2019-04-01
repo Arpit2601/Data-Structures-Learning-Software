@@ -47,6 +47,10 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Button^  button1;
 
 
+
+
+
+
 	protected: 
 
 	protected: 
@@ -120,9 +124,12 @@ namespace DataStructuresLearningSoftware {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->MainPanel);
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->MaximumSize = System::Drawing::Size(1286, 749);
+			this->MinimumSize = System::Drawing::Size(1286, 749);
 			this->Name = L"BST_mainpage";
-			this->Text = L"uttb";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->Text = L"Binary Search Trees";
 			this->Load += gcnew System::EventHandler(this, &BST_mainpage::BST_mainpage_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -136,28 +143,25 @@ namespace DataStructuresLearningSoftware {
 				 MainPanel->Controls->Clear();
 				 MainPanel->Controls->Add(BST);
 			 }
-	private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
+	/*private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
 				 if(this->Owner != nullptr){
 					 this->Hide();
 					 this->Owner->Show();
 				 }
-			 }
+			 }*/
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-			 // MainPanel->Controls->Clear();
 			 DiscussionForum_Main ^ discuss = gcnew DiscussionForum_Main;
+			 discuss->module="BST";
 			 discuss->username=username;
 			 discuss->ShowDialog();
 			 // MainPanel->Controls->Add(discuss);
 		 }
-private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-			 MainPanel->Controls->Clear();
-			 DiscussionForum ^ discuss = gcnew DiscussionForum;
-			 discuss->username=username;
-			 MainPanel->Controls->Add(discuss);
-		 }
-private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
-
-		 }
+//private: System::Void btn_Click(System::Object^  sender, System::EventArgs^  e) {
+//			 
+//		 }
+//private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
+//			 this->Close();
+//		 }
 };
 }
 

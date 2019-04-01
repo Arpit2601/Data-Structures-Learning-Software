@@ -634,7 +634,7 @@ namespace DataStructuresLearningSoftware {
 
 
 	private: System::Void arraybtn_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-				  dqelemlbl->Text ="";
+				 dqelemlbl->Text ="";
 				 if(arraybtn->Checked ==true)
 				 {
 					 arrayAnimationPanel->Show();
@@ -657,7 +657,7 @@ namespace DataStructuresLearningSoftware {
 
 			 }
 	private: System::Void reset_Click(System::Object^  sender, System::EventArgs^  e) {
-				dqelemlbl->Text ="";
+				 dqelemlbl->Text ="";
 				 input.Clear();
 				 if(arraybtn->Checked ==true)
 				 {
@@ -677,5 +677,5 @@ namespace DataStructuresLearningSoftware {
 				 }
 
 			 }
-};
+	};
 }

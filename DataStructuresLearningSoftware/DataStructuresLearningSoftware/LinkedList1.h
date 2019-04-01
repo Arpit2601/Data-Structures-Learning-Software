@@ -591,6 +591,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 			 MainPanel->Controls->Clear();
 			 DiscussionForum ^ discuss = gcnew DiscussionForum;
 			 discuss->username=username;
+			 discuss->module="Linked List";
 			 MainPanel->Controls->Add(discuss);
 		 }
 };

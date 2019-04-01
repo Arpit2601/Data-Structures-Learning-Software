@@ -70,6 +70,7 @@ namespace DataStructuresLearningSoftware {
 			this->ClientSize = System::Drawing::Size(1121, 673);
 			this->Controls->Add(this->panel1);
 			this->Name = L"DiscussionForum_Main";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"DiscussionForum_Main";
 			this->Load += gcnew System::EventHandler(this, &DiscussionForum_Main::DiscussionForum_Main_Load);
 			this->ResumeLayout(false);
@@ -81,6 +82,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Void DiscussionForum_Main_Load(System::Object^  sender, System::EventArgs^  e) {
 				 DiscussionForum ^newPanel = gcnew DiscussionForum();
 				 newPanel->username = username;
+				 newPanel->module=module;
 				 panel1->Controls->Clear();
 				 panel1->Controls->Add(newPanel);
 			 }

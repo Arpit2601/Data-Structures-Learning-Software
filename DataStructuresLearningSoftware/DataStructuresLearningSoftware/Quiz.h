@@ -484,18 +484,25 @@ namespace DataStructuresLearningSoftware {
 				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+IO::Path::GetDirectoryName(Application::StartupPath)+"\\Database.accdb";
 
 				DB_Connection->Open();
+				// MessageBox::Show(username);
+				// MessageBox::Show(Convert::ToString(ds_id));
 				String ^readString = "SELECT * FROM UserProgress WHERE UserName='"+username+"' AND DataStructureID="+ds_id;
+				// MessageBox::Show("yes");
 				OleDbCommand ^ cmd = gcnew OleDbCommand(readString, DB_Connection);
-				MessageBox::Show("ayayyayya");
+				//MessageBox::Show("yes");
+				// MessageBox::Show("ayayyayya");
 				OleDbDataReader ^ reader = cmd->ExecuteReader();
+				// MessageBox::Show("yes");
 				if(reader->Read()){
 					isPresent = true;
 					present_score = reader->GetInt32(3);
 					new_score = score > present_score ? score : present_score;
 				}
 
+				// MessageBox::Show("yes");
+
 				if(isPresent){
-					MessageBox::Show("hdsasdsasadsaauh");
+					// MessageBox::Show("hdsasdsasadsaauh");
 					// Update database
 					String ^updateString = "UPDATE UserProgress SET Score=" + new_score + " WHERE UserName='" + username + "' AND DataStructureID="+ds_id;
 					OleDb::OleDbCommand ^command = gcnew OleDb::OleDbCommand(updateString, DB_Connection);
@@ -504,7 +511,7 @@ namespace DataStructuresLearningSoftware {
 				}
 				else{
 					// Insert into database
-					MessageBox::Show("hdsauh");
+					// MessageBox::Show("hdsauh");
 					String ^insertString = "INSERT INTO [UserProgress] ([UserName], [DataStructureID],[Score]) VALUES ('"+username+"',"+ds_id+", "+score+"); ";
 					OleDb::OleDbCommand ^command = gcnew OleDb::OleDbCommand(insertString, DB_Connection);
 					command->ExecuteNonQuery();

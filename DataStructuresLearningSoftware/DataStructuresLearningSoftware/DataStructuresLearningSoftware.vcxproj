@@ -109,7 +109,10 @@
     <ClCompile Include="DiscussionForum_Main.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="GraphBFS.cpp" />
+    <ClCompile Include="GraphList.cpp" />
+    <ClCompile Include="GraphMatrix.cpp" />
     <ClCompile Include="Graphs_Home.cpp" />
+    <ClCompile Include="Graph_Matrix.cpp" />
     <ClCompile Include="Heap.cpp" />
     <ClCompile Include="Heap_Deletion.cpp" />
     <ClCompile Include="Heap_Insertion.cpp" />
@@ -209,6 +212,12 @@
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="GraphBFS.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="GraphList.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="GraphMatrix.h">
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="Graphs_Home.h">
@@ -400,6 +409,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GraphBFS.resx">
       <DependentUpon>GraphBFS.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphList.resx">
+      <DependentUpon>GraphList.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphMatrix.resx">
+      <DependentUpon>GraphMatrix.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Graphs_Home.resx">
       <DependentUpon>Graphs_Home.h</DependentUpon>
