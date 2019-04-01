@@ -537,7 +537,7 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->headerpanel->Location = System::Drawing::Point(0, 0);
 			this->headerpanel->Margin = System::Windows::Forms::Padding(0);
 			this->headerpanel->Name = L"headerpanel";
-			this->headerpanel->Size = System::Drawing::Size(1048, 46);
+			this->headerpanel->Size = System::Drawing::Size(786, 37);
 			this->headerpanel->TabIndex = 0;
 			// 
 			// closebutton
@@ -546,10 +546,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->closebutton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"closebutton.BackgroundImage")));
 			this->closebutton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->closebutton->Location = System::Drawing::Point(995, 0);
+			this->closebutton->Location = System::Drawing::Point(746, 0);
 			this->closebutton->Margin = System::Windows::Forms::Padding(0);
 			this->closebutton->Name = L"closebutton";
-			this->closebutton->Size = System::Drawing::Size(53, 46);
+			this->closebutton->Size = System::Drawing::Size(40, 37);
 			this->closebutton->TabIndex = 0;
 			this->closebutton->UseVisualStyleBackColor = false;
 			this->closebutton->Click += gcnew System::EventHandler(this, &LoginForm::closebutton_Click);
@@ -574,10 +574,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->loginpanel->Controls->Add(this->UsernameTextBox);
 			this->loginpanel->Controls->Add(this->LogoPicturebox);
 			this->loginpanel->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->loginpanel->Location = System::Drawing::Point(0, 45);
+			this->loginpanel->Location = System::Drawing::Point(0, 37);
 			this->loginpanel->Margin = System::Windows::Forms::Padding(0);
 			this->loginpanel->Name = L"loginpanel";
-			this->loginpanel->Size = System::Drawing::Size(1048, 718);
+			this->loginpanel->Size = System::Drawing::Size(786, 583);
 			this->loginpanel->TabIndex = 1;
 			this->loginpanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &LoginForm::loginpanel_Paint);
 			// 
@@ -585,10 +585,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->pictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox2.BackgroundImage")));
 			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox2->Location = System::Drawing::Point(239, 656);
-			this->pictureBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox2->Location = System::Drawing::Point(179, 533);
+			this->pictureBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(60, 49);
+			this->pictureBox2->Size = System::Drawing::Size(45, 40);
 			this->pictureBox2->TabIndex = 15;
 			this->pictureBox2->TabStop = false;
 			// 
@@ -596,10 +596,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.BackgroundImage")));
 			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox1->Location = System::Drawing::Point(239, 587);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox1->Location = System::Drawing::Point(179, 477);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(61, 50);
+			this->pictureBox1->Size = System::Drawing::Size(46, 41);
 			this->pictureBox1->TabIndex = 14;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -609,10 +609,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->GuestLoginButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->GuestLoginButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->GuestLoginButton->Location = System::Drawing::Point(307, 656);
-			this->GuestLoginButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->GuestLoginButton->Location = System::Drawing::Point(230, 533);
+			this->GuestLoginButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->GuestLoginButton->Name = L"GuestLoginButton";
-			this->GuestLoginButton->Size = System::Drawing::Size(513, 49);
+			this->GuestLoginButton->Size = System::Drawing::Size(385, 40);
 			this->GuestLoginButton->TabIndex = 13;
 			this->GuestLoginButton->Text = L"Guest Login";
 			this->GuestLoginButton->UseVisualStyleBackColor = false;
@@ -628,10 +628,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->RegisterButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->RegisterButton->Location = System::Drawing::Point(307, 588);
-			this->RegisterButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterButton->Location = System::Drawing::Point(230, 478);
+			this->RegisterButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterButton->Name = L"RegisterButton";
-			this->RegisterButton->Size = System::Drawing::Size(513, 49);
+			this->RegisterButton->Size = System::Drawing::Size(385, 40);
 			this->RegisterButton->TabIndex = 12;
 			this->RegisterButton->Text = L"New User \? Sign Up";
 			this->RegisterButton->UseVisualStyleBackColor = false;
@@ -646,10 +646,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->LoginpictureBox->BackColor = System::Drawing::Color::AliceBlue;
 			this->LoginpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"LoginpictureBox.BackgroundImage")));
 			this->LoginpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->LoginpictureBox->Location = System::Drawing::Point(743, 498);
+			this->LoginpictureBox->Location = System::Drawing::Point(557, 405);
 			this->LoginpictureBox->Margin = System::Windows::Forms::Padding(0);
 			this->LoginpictureBox->Name = L"LoginpictureBox";
-			this->LoginpictureBox->Size = System::Drawing::Size(76, 71);
+			this->LoginpictureBox->Size = System::Drawing::Size(57, 58);
 			this->LoginpictureBox->TabIndex = 11;
 			this->LoginpictureBox->TabStop = false;
 			this->LoginpictureBox->Click += gcnew System::EventHandler(this, &LoginForm::pictureBox2_Click);
@@ -659,10 +659,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordPicturebox->BackColor = System::Drawing::Color::AliceBlue;
 			this->ForgotPasswordPicturebox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ForgotPasswordPicturebox.BackgroundImage")));
 			this->ForgotPasswordPicturebox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ForgotPasswordPicturebox->Location = System::Drawing::Point(239, 496);
+			this->ForgotPasswordPicturebox->Location = System::Drawing::Point(179, 403);
 			this->ForgotPasswordPicturebox->Margin = System::Windows::Forms::Padding(0);
 			this->ForgotPasswordPicturebox->Name = L"ForgotPasswordPicturebox";
-			this->ForgotPasswordPicturebox->Size = System::Drawing::Size(77, 71);
+			this->ForgotPasswordPicturebox->Size = System::Drawing::Size(58, 58);
 			this->ForgotPasswordPicturebox->TabIndex = 10;
 			this->ForgotPasswordPicturebox->TabStop = false;
 			// 
@@ -674,10 +674,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->LoginButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->LoginButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->LoginButton->Location = System::Drawing::Point(571, 498);
+			this->LoginButton->Location = System::Drawing::Point(428, 405);
 			this->LoginButton->Margin = System::Windows::Forms::Padding(0);
 			this->LoginButton->Name = L"LoginButton";
-			this->LoginButton->Size = System::Drawing::Size(173, 71);
+			this->LoginButton->Size = System::Drawing::Size(130, 58);
 			this->LoginButton->TabIndex = 9;
 			this->LoginButton->Text = L"Login";
 			this->LoginButton->UseVisualStyleBackColor = false;
@@ -694,10 +694,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->ForgotPasswordButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ForgotPasswordButton->Location = System::Drawing::Point(317, 498);
+			this->ForgotPasswordButton->Location = System::Drawing::Point(238, 405);
 			this->ForgotPasswordButton->Margin = System::Windows::Forms::Padding(0);
 			this->ForgotPasswordButton->Name = L"ForgotPasswordButton";
-			this->ForgotPasswordButton->Size = System::Drawing::Size(200, 71);
+			this->ForgotPasswordButton->Size = System::Drawing::Size(150, 58);
 			this->ForgotPasswordButton->TabIndex = 8;
 			this->ForgotPasswordButton->Text = L"Forgot Password";
 			this->ForgotPasswordButton->UseVisualStyleBackColor = false;
@@ -713,10 +713,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->LoginPagePasswordShowcheckBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->LoginPagePasswordShowcheckBox->ForeColor = System::Drawing::Color::Black;
-			this->LoginPagePasswordShowcheckBox->Location = System::Drawing::Point(655, 446);
-			this->LoginPagePasswordShowcheckBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->LoginPagePasswordShowcheckBox->Location = System::Drawing::Point(491, 362);
+			this->LoginPagePasswordShowcheckBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->LoginPagePasswordShowcheckBox->Name = L"LoginPagePasswordShowcheckBox";
-			this->LoginPagePasswordShowcheckBox->Size = System::Drawing::Size(164, 24);
+			this->LoginPagePasswordShowcheckBox->Size = System::Drawing::Size(139, 21);
 			this->LoginPagePasswordShowcheckBox->TabIndex = 7;
 			this->LoginPagePasswordShowcheckBox->Text = L"Show Password";
 			this->LoginPagePasswordShowcheckBox->UseVisualStyleBackColor = true;
@@ -725,10 +725,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// PasswordDesignPanel
 			// 
 			this->PasswordDesignPanel->BackColor = System::Drawing::Color::Black;
-			this->PasswordDesignPanel->Location = System::Drawing::Point(239, 423);
-			this->PasswordDesignPanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->PasswordDesignPanel->Location = System::Drawing::Point(179, 344);
+			this->PasswordDesignPanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->PasswordDesignPanel->Name = L"PasswordDesignPanel";
-			this->PasswordDesignPanel->Size = System::Drawing::Size(580, 1);
+			this->PasswordDesignPanel->Size = System::Drawing::Size(435, 1);
 			this->PasswordDesignPanel->TabIndex = 6;
 			this->PasswordDesignPanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &LoginForm::panel2_Paint);
 			// 
@@ -736,10 +736,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->PasswordPictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PasswordPictureBox.BackgroundImage")));
 			this->PasswordPictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->PasswordPictureBox->Location = System::Drawing::Point(239, 362);
-			this->PasswordPictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->PasswordPictureBox->Location = System::Drawing::Point(179, 294);
+			this->PasswordPictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->PasswordPictureBox->Name = L"PasswordPictureBox";
-			this->PasswordPictureBox->Size = System::Drawing::Size(67, 60);
+			this->PasswordPictureBox->Size = System::Drawing::Size(50, 49);
 			this->PasswordPictureBox->TabIndex = 5;
 			this->PasswordPictureBox->TabStop = false;
 			this->PasswordPictureBox->Click += gcnew System::EventHandler(this, &LoginForm::pictureBox3_Click);
@@ -751,10 +751,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->PasswordTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->PasswordTextBox->ForeColor = System::Drawing::Color::Black;
-			this->PasswordTextBox->Location = System::Drawing::Point(312, 395);
-			this->PasswordTextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->PasswordTextBox->Location = System::Drawing::Point(234, 321);
+			this->PasswordTextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->PasswordTextBox->Name = L"PasswordTextBox";
-			this->PasswordTextBox->Size = System::Drawing::Size(507, 31);
+			this->PasswordTextBox->Size = System::Drawing::Size(380, 25);
 			this->PasswordTextBox->TabIndex = 4;
 			this->PasswordTextBox->Text = L"Password";
 			this->PasswordTextBox->Click += gcnew System::EventHandler(this, &LoginForm::PasswordTextBox_Click);
@@ -765,20 +765,20 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// UsernameDesignpanel
 			// 
 			this->UsernameDesignpanel->BackColor = System::Drawing::Color::Black;
-			this->UsernameDesignpanel->Location = System::Drawing::Point(239, 336);
-			this->UsernameDesignpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->UsernameDesignpanel->Location = System::Drawing::Point(179, 273);
+			this->UsernameDesignpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->UsernameDesignpanel->Name = L"UsernameDesignpanel";
-			this->UsernameDesignpanel->Size = System::Drawing::Size(580, 1);
+			this->UsernameDesignpanel->Size = System::Drawing::Size(435, 1);
 			this->UsernameDesignpanel->TabIndex = 3;
 			// 
 			// Usernamepicturebox
 			// 
 			this->Usernamepicturebox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Usernamepicturebox.BackgroundImage")));
 			this->Usernamepicturebox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->Usernamepicturebox->Location = System::Drawing::Point(239, 274);
-			this->Usernamepicturebox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Usernamepicturebox->Location = System::Drawing::Point(179, 223);
+			this->Usernamepicturebox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Usernamepicturebox->Name = L"Usernamepicturebox";
-			this->Usernamepicturebox->Size = System::Drawing::Size(67, 60);
+			this->Usernamepicturebox->Size = System::Drawing::Size(50, 49);
 			this->Usernamepicturebox->TabIndex = 2;
 			this->Usernamepicturebox->TabStop = false;
 			// 
@@ -789,10 +789,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->UsernameTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->UsernameTextBox->ForeColor = System::Drawing::Color::Black;
-			this->UsernameTextBox->Location = System::Drawing::Point(312, 306);
-			this->UsernameTextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->UsernameTextBox->Location = System::Drawing::Point(234, 249);
+			this->UsernameTextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->UsernameTextBox->Name = L"UsernameTextBox";
-			this->UsernameTextBox->Size = System::Drawing::Size(507, 31);
+			this->UsernameTextBox->Size = System::Drawing::Size(380, 25);
 			this->UsernameTextBox->TabIndex = 1;
 			this->UsernameTextBox->Text = L"Username";
 			this->UsernameTextBox->Click += gcnew System::EventHandler(this, &LoginForm::UsernameTextBox_Click);
@@ -803,10 +803,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->LogoPicturebox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"LogoPicturebox.BackgroundImage")));
 			this->LogoPicturebox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->LogoPicturebox->Location = System::Drawing::Point(411, 14);
-			this->LogoPicturebox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->LogoPicturebox->Location = System::Drawing::Point(308, 11);
+			this->LogoPicturebox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->LogoPicturebox->Name = L"LogoPicturebox";
-			this->LogoPicturebox->Size = System::Drawing::Size(251, 238);
+			this->LogoPicturebox->Size = System::Drawing::Size(188, 193);
 			this->LogoPicturebox->TabIndex = 0;
 			this->LogoPicturebox->TabStop = false;
 			// 
@@ -818,10 +818,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordpanel->Controls->Add(this->ChangePasswordpanel);
 			this->ForgotPasswordpanel->Controls->Add(this->ForgotPasswordHeaderlabel);
 			this->ForgotPasswordpanel->Dock = System::Windows::Forms::DockStyle::Top;
-			this->ForgotPasswordpanel->Location = System::Drawing::Point(0, 46);
-			this->ForgotPasswordpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordpanel->Location = System::Drawing::Point(0, 37);
+			this->ForgotPasswordpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordpanel->Name = L"ForgotPasswordpanel";
-			this->ForgotPasswordpanel->Size = System::Drawing::Size(1048, 718);
+			this->ForgotPasswordpanel->Size = System::Drawing::Size(786, 583);
 			this->ForgotPasswordpanel->TabIndex = 18;
 			// 
 			// ForgotPasswordUsernamepanel
@@ -836,10 +836,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordUsernamepanel->Controls->Add(this->panel2);
 			this->ForgotPasswordUsernamepanel->Controls->Add(this->ForgotPasswordUsernamepictureBox);
 			this->ForgotPasswordUsernamepanel->Controls->Add(this->ForgotPasswordUsernametextBox);
-			this->ForgotPasswordUsernamepanel->Location = System::Drawing::Point(27, 113);
-			this->ForgotPasswordUsernamepanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordUsernamepanel->Location = System::Drawing::Point(20, 92);
+			this->ForgotPasswordUsernamepanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordUsernamepanel->Name = L"ForgotPasswordUsernamepanel";
-			this->ForgotPasswordUsernamepanel->Size = System::Drawing::Size(995, 570);
+			this->ForgotPasswordUsernamepanel->Size = System::Drawing::Size(746, 463);
 			this->ForgotPasswordUsernamepanel->TabIndex = 1;
 			// 
 			// ForgotPasswordUsernameErrorlabel
@@ -848,19 +848,20 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordUsernameErrorlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordUsernameErrorlabel->ForeColor = System::Drawing::Color::Red;
-			this->ForgotPasswordUsernameErrorlabel->Location = System::Drawing::Point(239, 113);
+			this->ForgotPasswordUsernameErrorlabel->Location = System::Drawing::Point(179, 92);
+			this->ForgotPasswordUsernameErrorlabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->ForgotPasswordUsernameErrorlabel->Name = L"ForgotPasswordUsernameErrorlabel";
-			this->ForgotPasswordUsernameErrorlabel->Size = System::Drawing::Size(136, 25);
+			this->ForgotPasswordUsernameErrorlabel->Size = System::Drawing::Size(112, 20);
 			this->ForgotPasswordUsernameErrorlabel->TabIndex = 9;
 			this->ForgotPasswordUsernameErrorlabel->Text = L"Error Display";
 			// 
 			// ForgotPasswordHomepictureBox
 			// 
 			this->ForgotPasswordHomepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ForgotPasswordHomepictureBox->Location = System::Drawing::Point(752, 495);
-			this->ForgotPasswordHomepictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordHomepictureBox->Location = System::Drawing::Point(564, 402);
+			this->ForgotPasswordHomepictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordHomepictureBox->Name = L"ForgotPasswordHomepictureBox";
-			this->ForgotPasswordHomepictureBox->Size = System::Drawing::Size(61, 49);
+			this->ForgotPasswordHomepictureBox->Size = System::Drawing::Size(46, 40);
 			this->ForgotPasswordHomepictureBox->TabIndex = 8;
 			this->ForgotPasswordHomepictureBox->TabStop = false;
 			// 
@@ -868,10 +869,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->ForgotPasswordNextpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ForgotPasswordNextpictureBox.BackgroundImage")));
 			this->ForgotPasswordNextpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ForgotPasswordNextpictureBox->Location = System::Drawing::Point(707, 309);
-			this->ForgotPasswordNextpictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordNextpictureBox->Location = System::Drawing::Point(530, 251);
+			this->ForgotPasswordNextpictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordNextpictureBox->Name = L"ForgotPasswordNextpictureBox";
-			this->ForgotPasswordNextpictureBox->Size = System::Drawing::Size(53, 48);
+			this->ForgotPasswordNextpictureBox->Size = System::Drawing::Size(40, 39);
 			this->ForgotPasswordNextpictureBox->TabIndex = 7;
 			this->ForgotPasswordNextpictureBox->TabStop = false;
 			// 
@@ -879,10 +880,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->ForgotPasswordBackpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ForgotPasswordBackpictureBox.BackgroundImage")));
 			this->ForgotPasswordBackpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ForgotPasswordBackpictureBox->Location = System::Drawing::Point(245, 309);
-			this->ForgotPasswordBackpictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordBackpictureBox->Location = System::Drawing::Point(184, 251);
+			this->ForgotPasswordBackpictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordBackpictureBox->Name = L"ForgotPasswordBackpictureBox";
-			this->ForgotPasswordBackpictureBox->Size = System::Drawing::Size(57, 48);
+			this->ForgotPasswordBackpictureBox->Size = System::Drawing::Size(43, 39);
 			this->ForgotPasswordBackpictureBox->TabIndex = 6;
 			this->ForgotPasswordBackpictureBox->TabStop = false;
 			// 
@@ -892,10 +893,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordHomebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->ForgotPasswordHomebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ForgotPasswordHomebutton->Location = System::Drawing::Point(820, 495);
-			this->ForgotPasswordHomebutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordHomebutton->Location = System::Drawing::Point(615, 402);
+			this->ForgotPasswordHomebutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordHomebutton->Name = L"ForgotPasswordHomebutton";
-			this->ForgotPasswordHomebutton->Size = System::Drawing::Size(153, 49);
+			this->ForgotPasswordHomebutton->Size = System::Drawing::Size(115, 40);
 			this->ForgotPasswordHomebutton->TabIndex = 5;
 			this->ForgotPasswordHomebutton->Text = L"Login Page";
 			this->ForgotPasswordHomebutton->UseVisualStyleBackColor = false;
@@ -911,10 +912,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordNextbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->ForgotPasswordNextbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ForgotPasswordNextbutton->Location = System::Drawing::Point(553, 309);
-			this->ForgotPasswordNextbutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordNextbutton->Location = System::Drawing::Point(415, 251);
+			this->ForgotPasswordNextbutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordNextbutton->Name = L"ForgotPasswordNextbutton";
-			this->ForgotPasswordNextbutton->Size = System::Drawing::Size(147, 47);
+			this->ForgotPasswordNextbutton->Size = System::Drawing::Size(110, 38);
 			this->ForgotPasswordNextbutton->TabIndex = 4;
 			this->ForgotPasswordNextbutton->Text = L"Next";
 			this->ForgotPasswordNextbutton->UseVisualStyleBackColor = false;
@@ -930,10 +931,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordBackbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->ForgotPasswordBackbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ForgotPasswordBackbutton->Location = System::Drawing::Point(308, 309);
-			this->ForgotPasswordBackbutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordBackbutton->Location = System::Drawing::Point(231, 251);
+			this->ForgotPasswordBackbutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordBackbutton->Name = L"ForgotPasswordBackbutton";
-			this->ForgotPasswordBackbutton->Size = System::Drawing::Size(156, 47);
+			this->ForgotPasswordBackbutton->Size = System::Drawing::Size(117, 38);
 			this->ForgotPasswordBackbutton->TabIndex = 3;
 			this->ForgotPasswordBackbutton->Text = L"Back";
 			this->ForgotPasswordBackbutton->UseVisualStyleBackColor = false;
@@ -946,20 +947,20 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// panel2
 			// 
 			this->panel2->BackColor = System::Drawing::Color::Black;
-			this->panel2->Location = System::Drawing::Point(245, 231);
-			this->panel2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->panel2->Location = System::Drawing::Point(184, 188);
+			this->panel2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(515, 1);
+			this->panel2->Size = System::Drawing::Size(386, 1);
 			this->panel2->TabIndex = 2;
 			// 
 			// ForgotPasswordUsernamepictureBox
 			// 
 			this->ForgotPasswordUsernamepictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ForgotPasswordUsernamepictureBox.BackgroundImage")));
 			this->ForgotPasswordUsernamepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ForgotPasswordUsernamepictureBox->Location = System::Drawing::Point(245, 182);
-			this->ForgotPasswordUsernamepictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordUsernamepictureBox->Location = System::Drawing::Point(184, 148);
+			this->ForgotPasswordUsernamepictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordUsernamepictureBox->Name = L"ForgotPasswordUsernamepictureBox";
-			this->ForgotPasswordUsernamepictureBox->Size = System::Drawing::Size(45, 43);
+			this->ForgotPasswordUsernamepictureBox->Size = System::Drawing::Size(34, 35);
 			this->ForgotPasswordUsernamepictureBox->TabIndex = 1;
 			this->ForgotPasswordUsernamepictureBox->TabStop = false;
 			// 
@@ -970,10 +971,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordUsernametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordUsernametextBox->ForeColor = System::Drawing::Color::Black;
-			this->ForgotPasswordUsernametextBox->Location = System::Drawing::Point(297, 193);
-			this->ForgotPasswordUsernametextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordUsernametextBox->Location = System::Drawing::Point(223, 157);
+			this->ForgotPasswordUsernametextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordUsernametextBox->Name = L"ForgotPasswordUsernametextBox";
-			this->ForgotPasswordUsernametextBox->Size = System::Drawing::Size(461, 31);
+			this->ForgotPasswordUsernametextBox->Size = System::Drawing::Size(346, 25);
 			this->ForgotPasswordUsernametextBox->TabIndex = 0;
 			this->ForgotPasswordUsernametextBox->Text = L"Enter Registered Username";
 			this->ForgotPasswordUsernametextBox->Click += gcnew System::EventHandler(this, &LoginForm::ForgotPasswordUsernametextBox_Click);
@@ -995,10 +996,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordVerificationpanel->Controls->Add(this->ForgotPasswordQuestionradiobutton);
 			this->ForgotPasswordVerificationpanel->Controls->Add(this->ForgotPasswordEmailradiobutton);
 			this->ForgotPasswordVerificationpanel->Controls->Add(this->ForgotPasswordVerificationlabel);
-			this->ForgotPasswordVerificationpanel->Location = System::Drawing::Point(27, 113);
-			this->ForgotPasswordVerificationpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordVerificationpanel->Location = System::Drawing::Point(20, 92);
+			this->ForgotPasswordVerificationpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordVerificationpanel->Name = L"ForgotPasswordVerificationpanel";
-			this->ForgotPasswordVerificationpanel->Size = System::Drawing::Size(995, 570);
+			this->ForgotPasswordVerificationpanel->Size = System::Drawing::Size(746, 463);
 			this->ForgotPasswordVerificationpanel->TabIndex = 11;
 			// 
 			// ForgotPasswordQuestionpanel
@@ -1009,10 +1010,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordQuestionpanel->Controls->Add(this->ForgotPasswordAnswerDesignpanel);
 			this->ForgotPasswordQuestionpanel->Controls->Add(this->ForgotPasswordAnswerpictureBox);
 			this->ForgotPasswordQuestionpanel->Controls->Add(this->ForgotPasswordAnswertextBox);
-			this->ForgotPasswordQuestionpanel->Location = System::Drawing::Point(23, 196);
-			this->ForgotPasswordQuestionpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordQuestionpanel->Location = System::Drawing::Point(17, 159);
+			this->ForgotPasswordQuestionpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordQuestionpanel->Name = L"ForgotPasswordQuestionpanel";
-			this->ForgotPasswordQuestionpanel->Size = System::Drawing::Size(949, 178);
+			this->ForgotPasswordQuestionpanel->Size = System::Drawing::Size(712, 145);
 			this->ForgotPasswordQuestionpanel->TabIndex = 11;
 			this->ForgotPasswordQuestionpanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &LoginForm::ForgotPasswordQuestionpanel_Paint);
 			// 
@@ -1022,9 +1023,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordQuestionErrorLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordQuestionErrorLabel->ForeColor = System::Drawing::Color::Red;
-			this->ForgotPasswordQuestionErrorLabel->Location = System::Drawing::Point(15, 53);
+			this->ForgotPasswordQuestionErrorLabel->Location = System::Drawing::Point(11, 43);
+			this->ForgotPasswordQuestionErrorLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->ForgotPasswordQuestionErrorLabel->Name = L"ForgotPasswordQuestionErrorLabel";
-			this->ForgotPasswordQuestionErrorLabel->Size = System::Drawing::Size(123, 25);
+			this->ForgotPasswordQuestionErrorLabel->Size = System::Drawing::Size(99, 20);
 			this->ForgotPasswordQuestionErrorLabel->TabIndex = 5;
 			this->ForgotPasswordQuestionErrorLabel->Text = L"Error Display";
 			// 
@@ -1034,9 +1036,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordSecurityQuestionlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordSecurityQuestionlabel->ForeColor = System::Drawing::Color::Navy;
-			this->ForgotPasswordSecurityQuestionlabel->Location = System::Drawing::Point(112, 14);
+			this->ForgotPasswordSecurityQuestionlabel->Location = System::Drawing::Point(84, 11);
+			this->ForgotPasswordSecurityQuestionlabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->ForgotPasswordSecurityQuestionlabel->Name = L"ForgotPasswordSecurityQuestionlabel";
-			this->ForgotPasswordSecurityQuestionlabel->Size = System::Drawing::Size(167, 25);
+			this->ForgotPasswordSecurityQuestionlabel->Size = System::Drawing::Size(134, 20);
 			this->ForgotPasswordSecurityQuestionlabel->TabIndex = 4;
 			this->ForgotPasswordSecurityQuestionlabel->Text = L"Security Question";
 			// 
@@ -1046,9 +1049,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordQuestionlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordQuestionlabel->ForeColor = System::Drawing::Color::Black;
-			this->ForgotPasswordQuestionlabel->Location = System::Drawing::Point(15, 14);
+			this->ForgotPasswordQuestionlabel->Location = System::Drawing::Point(11, 11);
+			this->ForgotPasswordQuestionlabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->ForgotPasswordQuestionlabel->Name = L"ForgotPasswordQuestionlabel";
-			this->ForgotPasswordQuestionlabel->Size = System::Drawing::Size(102, 25);
+			this->ForgotPasswordQuestionlabel->Size = System::Drawing::Size(81, 20);
 			this->ForgotPasswordQuestionlabel->TabIndex = 3;
 			this->ForgotPasswordQuestionlabel->Text = L"Question: ";
 			// 
@@ -1056,20 +1060,20 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->ForgotPasswordAnswerDesignpanel->BackColor = System::Drawing::Color::Black;
 			this->ForgotPasswordAnswerDesignpanel->ForeColor = System::Drawing::Color::Black;
-			this->ForgotPasswordAnswerDesignpanel->Location = System::Drawing::Point(160, 154);
-			this->ForgotPasswordAnswerDesignpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordAnswerDesignpanel->Location = System::Drawing::Point(120, 125);
+			this->ForgotPasswordAnswerDesignpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordAnswerDesignpanel->Name = L"ForgotPasswordAnswerDesignpanel";
-			this->ForgotPasswordAnswerDesignpanel->Size = System::Drawing::Size(631, 1);
+			this->ForgotPasswordAnswerDesignpanel->Size = System::Drawing::Size(473, 1);
 			this->ForgotPasswordAnswerDesignpanel->TabIndex = 2;
 			// 
 			// ForgotPasswordAnswerpictureBox
 			// 
 			this->ForgotPasswordAnswerpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ForgotPasswordAnswerpictureBox.BackgroundImage")));
 			this->ForgotPasswordAnswerpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ForgotPasswordAnswerpictureBox->Location = System::Drawing::Point(160, 98);
-			this->ForgotPasswordAnswerpictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordAnswerpictureBox->Location = System::Drawing::Point(120, 80);
+			this->ForgotPasswordAnswerpictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordAnswerpictureBox->Name = L"ForgotPasswordAnswerpictureBox";
-			this->ForgotPasswordAnswerpictureBox->Size = System::Drawing::Size(59, 49);
+			this->ForgotPasswordAnswerpictureBox->Size = System::Drawing::Size(44, 40);
 			this->ForgotPasswordAnswerpictureBox->TabIndex = 1;
 			this->ForgotPasswordAnswerpictureBox->TabStop = false;
 			// 
@@ -1080,10 +1084,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordAnswertextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordAnswertextBox->ForeColor = System::Drawing::Color::Black;
-			this->ForgotPasswordAnswertextBox->Location = System::Drawing::Point(225, 121);
-			this->ForgotPasswordAnswertextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordAnswertextBox->Location = System::Drawing::Point(169, 98);
+			this->ForgotPasswordAnswertextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordAnswertextBox->Name = L"ForgotPasswordAnswertextBox";
-			this->ForgotPasswordAnswertextBox->Size = System::Drawing::Size(565, 27);
+			this->ForgotPasswordAnswertextBox->Size = System::Drawing::Size(424, 21);
 			this->ForgotPasswordAnswertextBox->TabIndex = 0;
 			this->ForgotPasswordAnswertextBox->Text = L"Answer";
 			// 
@@ -1094,10 +1098,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordEmailpanel->Controls->Add(this->ForgotPasswordEmailDesignpanel);
 			this->ForgotPasswordEmailpanel->Controls->Add(this->ForgotPasswordEmailpictureBox);
 			this->ForgotPasswordEmailpanel->Controls->Add(this->ForgotPasswordEmailtextBox);
-			this->ForgotPasswordEmailpanel->Location = System::Drawing::Point(23, 194);
-			this->ForgotPasswordEmailpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordEmailpanel->Location = System::Drawing::Point(17, 158);
+			this->ForgotPasswordEmailpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordEmailpanel->Name = L"ForgotPasswordEmailpanel";
-			this->ForgotPasswordEmailpanel->Size = System::Drawing::Size(949, 178);
+			this->ForgotPasswordEmailpanel->Size = System::Drawing::Size(712, 145);
 			this->ForgotPasswordEmailpanel->TabIndex = 4;
 			// 
 			// ForgotPasswordEmailErrorLabel
@@ -1106,9 +1110,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordEmailErrorLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordEmailErrorLabel->ForeColor = System::Drawing::Color::Red;
-			this->ForgotPasswordEmailErrorLabel->Location = System::Drawing::Point(17, 55);
+			this->ForgotPasswordEmailErrorLabel->Location = System::Drawing::Point(13, 45);
+			this->ForgotPasswordEmailErrorLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->ForgotPasswordEmailErrorLabel->Name = L"ForgotPasswordEmailErrorLabel";
-			this->ForgotPasswordEmailErrorLabel->Size = System::Drawing::Size(123, 25);
+			this->ForgotPasswordEmailErrorLabel->Size = System::Drawing::Size(99, 20);
 			this->ForgotPasswordEmailErrorLabel->TabIndex = 4;
 			this->ForgotPasswordEmailErrorLabel->Text = L"Error Display";
 			// 
@@ -1119,29 +1124,30 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordEmailLabel1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), 
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->ForgotPasswordEmailLabel1->Location = System::Drawing::Point(15, 14);
+			this->ForgotPasswordEmailLabel1->Location = System::Drawing::Point(11, 11);
+			this->ForgotPasswordEmailLabel1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->ForgotPasswordEmailLabel1->Name = L"ForgotPasswordEmailLabel1";
-			this->ForgotPasswordEmailLabel1->Size = System::Drawing::Size(408, 25);
+			this->ForgotPasswordEmailLabel1->Size = System::Drawing::Size(330, 20);
 			this->ForgotPasswordEmailLabel1->TabIndex = 3;
 			this->ForgotPasswordEmailLabel1->Text = L"An email with security code will be sent to mail";
 			// 
 			// ForgotPasswordEmailDesignpanel
 			// 
 			this->ForgotPasswordEmailDesignpanel->BackColor = System::Drawing::Color::Black;
-			this->ForgotPasswordEmailDesignpanel->Location = System::Drawing::Point(160, 162);
-			this->ForgotPasswordEmailDesignpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordEmailDesignpanel->Location = System::Drawing::Point(120, 132);
+			this->ForgotPasswordEmailDesignpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordEmailDesignpanel->Name = L"ForgotPasswordEmailDesignpanel";
-			this->ForgotPasswordEmailDesignpanel->Size = System::Drawing::Size(631, 1);
+			this->ForgotPasswordEmailDesignpanel->Size = System::Drawing::Size(473, 1);
 			this->ForgotPasswordEmailDesignpanel->TabIndex = 2;
 			// 
 			// ForgotPasswordEmailpictureBox
 			// 
 			this->ForgotPasswordEmailpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ForgotPasswordEmailpictureBox.BackgroundImage")));
 			this->ForgotPasswordEmailpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ForgotPasswordEmailpictureBox->Location = System::Drawing::Point(160, 108);
-			this->ForgotPasswordEmailpictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordEmailpictureBox->Location = System::Drawing::Point(120, 88);
+			this->ForgotPasswordEmailpictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordEmailpictureBox->Name = L"ForgotPasswordEmailpictureBox";
-			this->ForgotPasswordEmailpictureBox->Size = System::Drawing::Size(59, 49);
+			this->ForgotPasswordEmailpictureBox->Size = System::Drawing::Size(44, 40);
 			this->ForgotPasswordEmailpictureBox->TabIndex = 1;
 			this->ForgotPasswordEmailpictureBox->TabStop = false;
 			// 
@@ -1152,10 +1158,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordEmailtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordEmailtextBox->ForeColor = System::Drawing::Color::Black;
-			this->ForgotPasswordEmailtextBox->Location = System::Drawing::Point(225, 130);
-			this->ForgotPasswordEmailtextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordEmailtextBox->Location = System::Drawing::Point(169, 106);
+			this->ForgotPasswordEmailtextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordEmailtextBox->Name = L"ForgotPasswordEmailtextBox";
-			this->ForgotPasswordEmailtextBox->Size = System::Drawing::Size(565, 29);
+			this->ForgotPasswordEmailtextBox->Size = System::Drawing::Size(424, 23);
 			this->ForgotPasswordEmailtextBox->TabIndex = 0;
 			this->ForgotPasswordEmailtextBox->Text = L"Enter registered email";
 			// 
@@ -1166,19 +1172,19 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordEmailCodepanel->Controls->Add(this->ForgotPasswordEmailCodetextBox);
 			this->ForgotPasswordEmailCodepanel->Controls->Add(this->ForgotPasswordEmailCodeErrorlabel);
 			this->ForgotPasswordEmailCodepanel->Controls->Add(this->ForgotPasswordEmailCodelabel);
-			this->ForgotPasswordEmailCodepanel->Location = System::Drawing::Point(23, 194);
-			this->ForgotPasswordEmailCodepanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordEmailCodepanel->Location = System::Drawing::Point(17, 158);
+			this->ForgotPasswordEmailCodepanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordEmailCodepanel->Name = L"ForgotPasswordEmailCodepanel";
-			this->ForgotPasswordEmailCodepanel->Size = System::Drawing::Size(949, 178);
+			this->ForgotPasswordEmailCodepanel->Size = System::Drawing::Size(712, 145);
 			this->ForgotPasswordEmailCodepanel->TabIndex = 12;
 			// 
 			// ForgotPasswordEmailCodeDesignpanel
 			// 
 			this->ForgotPasswordEmailCodeDesignpanel->BackColor = System::Drawing::Color::Black;
-			this->ForgotPasswordEmailCodeDesignpanel->Location = System::Drawing::Point(257, 156);
-			this->ForgotPasswordEmailCodeDesignpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordEmailCodeDesignpanel->Location = System::Drawing::Point(193, 127);
+			this->ForgotPasswordEmailCodeDesignpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordEmailCodeDesignpanel->Name = L"ForgotPasswordEmailCodeDesignpanel";
-			this->ForgotPasswordEmailCodeDesignpanel->Size = System::Drawing::Size(445, 1);
+			this->ForgotPasswordEmailCodeDesignpanel->Size = System::Drawing::Size(334, 1);
 			this->ForgotPasswordEmailCodeDesignpanel->TabIndex = 4;
 			this->ForgotPasswordEmailCodeDesignpanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &LoginForm::panel3_Paint);
 			// 
@@ -1186,10 +1192,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->ForgotPasswordEmailCodepictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ForgotPasswordEmailCodepictureBox.BackgroundImage")));
 			this->ForgotPasswordEmailCodepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ForgotPasswordEmailCodepictureBox->Location = System::Drawing::Point(257, 97);
-			this->ForgotPasswordEmailCodepictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordEmailCodepictureBox->Location = System::Drawing::Point(193, 79);
+			this->ForgotPasswordEmailCodepictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordEmailCodepictureBox->Name = L"ForgotPasswordEmailCodepictureBox";
-			this->ForgotPasswordEmailCodepictureBox->Size = System::Drawing::Size(60, 53);
+			this->ForgotPasswordEmailCodepictureBox->Size = System::Drawing::Size(45, 43);
 			this->ForgotPasswordEmailCodepictureBox->TabIndex = 3;
 			this->ForgotPasswordEmailCodepictureBox->TabStop = false;
 			this->ForgotPasswordEmailCodepictureBox->Click += gcnew System::EventHandler(this, &LoginForm::pictureBox3_Click_2);
@@ -1201,10 +1207,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordEmailCodetextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordEmailCodetextBox->ForeColor = System::Drawing::Color::Black;
-			this->ForgotPasswordEmailCodetextBox->Location = System::Drawing::Point(323, 127);
-			this->ForgotPasswordEmailCodetextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordEmailCodetextBox->Location = System::Drawing::Point(242, 103);
+			this->ForgotPasswordEmailCodetextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordEmailCodetextBox->Name = L"ForgotPasswordEmailCodetextBox";
-			this->ForgotPasswordEmailCodetextBox->Size = System::Drawing::Size(380, 27);
+			this->ForgotPasswordEmailCodetextBox->Size = System::Drawing::Size(285, 21);
 			this->ForgotPasswordEmailCodetextBox->TabIndex = 2;
 			this->ForgotPasswordEmailCodetextBox->Text = L"Code";
 			// 
@@ -1214,9 +1220,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordEmailCodeErrorlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordEmailCodeErrorlabel->ForeColor = System::Drawing::Color::Red;
-			this->ForgotPasswordEmailCodeErrorlabel->Location = System::Drawing::Point(16, 42);
+			this->ForgotPasswordEmailCodeErrorlabel->Location = System::Drawing::Point(12, 34);
+			this->ForgotPasswordEmailCodeErrorlabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->ForgotPasswordEmailCodeErrorlabel->Name = L"ForgotPasswordEmailCodeErrorlabel";
-			this->ForgotPasswordEmailCodeErrorlabel->Size = System::Drawing::Size(104, 20);
+			this->ForgotPasswordEmailCodeErrorlabel->Size = System::Drawing::Size(88, 17);
 			this->ForgotPasswordEmailCodeErrorlabel->TabIndex = 1;
 			this->ForgotPasswordEmailCodeErrorlabel->Text = L"Error display";
 			// 
@@ -1227,9 +1234,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordEmailCodelabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), 
 				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->ForgotPasswordEmailCodelabel->Location = System::Drawing::Point(15, 14);
+			this->ForgotPasswordEmailCodelabel->Location = System::Drawing::Point(11, 11);
+			this->ForgotPasswordEmailCodelabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->ForgotPasswordEmailCodelabel->Name = L"ForgotPasswordEmailCodelabel";
-			this->ForgotPasswordEmailCodelabel->Size = System::Drawing::Size(324, 25);
+			this->ForgotPasswordEmailCodelabel->Size = System::Drawing::Size(266, 20);
 			this->ForgotPasswordEmailCodelabel->TabIndex = 0;
 			this->ForgotPasswordEmailCodelabel->Text = L"Enter the security code sent to email";
 			// 
@@ -1237,10 +1245,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->ForgotPasswordVerificationHomepicturebox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ForgotPasswordVerificationHomepicturebox.BackgroundImage")));
 			this->ForgotPasswordVerificationHomepicturebox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ForgotPasswordVerificationHomepicturebox->Location = System::Drawing::Point(773, 495);
-			this->ForgotPasswordVerificationHomepicturebox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordVerificationHomepicturebox->Location = System::Drawing::Point(580, 402);
+			this->ForgotPasswordVerificationHomepicturebox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordVerificationHomepicturebox->Name = L"ForgotPasswordVerificationHomepicturebox";
-			this->ForgotPasswordVerificationHomepicturebox->Size = System::Drawing::Size(59, 57);
+			this->ForgotPasswordVerificationHomepicturebox->Size = System::Drawing::Size(44, 46);
 			this->ForgotPasswordVerificationHomepicturebox->TabIndex = 10;
 			this->ForgotPasswordVerificationHomepicturebox->TabStop = false;
 			// 
@@ -1248,10 +1256,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->ForgotPasswordVerificationNextpicturebox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ForgotPasswordVerificationNextpicturebox.BackgroundImage")));
 			this->ForgotPasswordVerificationNextpicturebox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ForgotPasswordVerificationNextpicturebox->Location = System::Drawing::Point(755, 383);
-			this->ForgotPasswordVerificationNextpicturebox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordVerificationNextpicturebox->Location = System::Drawing::Point(566, 311);
+			this->ForgotPasswordVerificationNextpicturebox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordVerificationNextpicturebox->Name = L"ForgotPasswordVerificationNextpicturebox";
-			this->ForgotPasswordVerificationNextpicturebox->Size = System::Drawing::Size(60, 57);
+			this->ForgotPasswordVerificationNextpicturebox->Size = System::Drawing::Size(45, 46);
 			this->ForgotPasswordVerificationNextpicturebox->TabIndex = 9;
 			this->ForgotPasswordVerificationNextpicturebox->TabStop = false;
 			// 
@@ -1259,10 +1267,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->ForgotPasswordVerificationBackpicturebox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ForgotPasswordVerificationBackpicturebox.BackgroundImage")));
 			this->ForgotPasswordVerificationBackpicturebox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ForgotPasswordVerificationBackpicturebox->Location = System::Drawing::Point(183, 385);
-			this->ForgotPasswordVerificationBackpicturebox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordVerificationBackpicturebox->Location = System::Drawing::Point(137, 313);
+			this->ForgotPasswordVerificationBackpicturebox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordVerificationBackpicturebox->Name = L"ForgotPasswordVerificationBackpicturebox";
-			this->ForgotPasswordVerificationBackpicturebox->Size = System::Drawing::Size(55, 54);
+			this->ForgotPasswordVerificationBackpicturebox->Size = System::Drawing::Size(41, 44);
 			this->ForgotPasswordVerificationBackpicturebox->TabIndex = 8;
 			this->ForgotPasswordVerificationBackpicturebox->TabStop = false;
 			// 
@@ -1272,10 +1280,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordVerificationHomebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->ForgotPasswordVerificationHomebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ForgotPasswordVerificationHomebutton->Location = System::Drawing::Point(837, 495);
-			this->ForgotPasswordVerificationHomebutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordVerificationHomebutton->Location = System::Drawing::Point(628, 402);
+			this->ForgotPasswordVerificationHomebutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordVerificationHomebutton->Name = L"ForgotPasswordVerificationHomebutton";
-			this->ForgotPasswordVerificationHomebutton->Size = System::Drawing::Size(144, 57);
+			this->ForgotPasswordVerificationHomebutton->Size = System::Drawing::Size(108, 46);
 			this->ForgotPasswordVerificationHomebutton->TabIndex = 7;
 			this->ForgotPasswordVerificationHomebutton->Text = L"Login Page";
 			this->ForgotPasswordVerificationHomebutton->UseVisualStyleBackColor = false;
@@ -1291,10 +1299,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordVerificationBackbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->ForgotPasswordVerificationBackbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ForgotPasswordVerificationBackbutton->Location = System::Drawing::Point(244, 385);
-			this->ForgotPasswordVerificationBackbutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordVerificationBackbutton->Location = System::Drawing::Point(183, 313);
+			this->ForgotPasswordVerificationBackbutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordVerificationBackbutton->Name = L"ForgotPasswordVerificationBackbutton";
-			this->ForgotPasswordVerificationBackbutton->Size = System::Drawing::Size(136, 57);
+			this->ForgotPasswordVerificationBackbutton->Size = System::Drawing::Size(102, 46);
 			this->ForgotPasswordVerificationBackbutton->TabIndex = 6;
 			this->ForgotPasswordVerificationBackbutton->Text = L"Back";
 			this->ForgotPasswordVerificationBackbutton->UseVisualStyleBackColor = false;
@@ -1310,10 +1318,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordVerificationNextbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->ForgotPasswordVerificationNextbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ForgotPasswordVerificationNextbutton->Location = System::Drawing::Point(609, 383);
-			this->ForgotPasswordVerificationNextbutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordVerificationNextbutton->Location = System::Drawing::Point(457, 311);
+			this->ForgotPasswordVerificationNextbutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordVerificationNextbutton->Name = L"ForgotPasswordVerificationNextbutton";
-			this->ForgotPasswordVerificationNextbutton->Size = System::Drawing::Size(139, 57);
+			this->ForgotPasswordVerificationNextbutton->Size = System::Drawing::Size(104, 46);
 			this->ForgotPasswordVerificationNextbutton->TabIndex = 5;
 			this->ForgotPasswordVerificationNextbutton->Text = L"Next";
 			this->ForgotPasswordVerificationNextbutton->UseVisualStyleBackColor = false;
@@ -1329,10 +1337,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordQuestionradiobutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordQuestionradiobutton->ForeColor = System::Drawing::Color::Black;
-			this->ForgotPasswordQuestionradiobutton->Location = System::Drawing::Point(23, 142);
-			this->ForgotPasswordQuestionradiobutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordQuestionradiobutton->Location = System::Drawing::Point(17, 115);
+			this->ForgotPasswordQuestionradiobutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordQuestionradiobutton->Name = L"ForgotPasswordQuestionradiobutton";
-			this->ForgotPasswordQuestionradiobutton->Size = System::Drawing::Size(188, 29);
+			this->ForgotPasswordQuestionradiobutton->Size = System::Drawing::Size(152, 24);
 			this->ForgotPasswordQuestionradiobutton->TabIndex = 3;
 			this->ForgotPasswordQuestionradiobutton->TabStop = true;
 			this->ForgotPasswordQuestionradiobutton->Text = L"Security Question";
@@ -1345,10 +1353,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordEmailradiobutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordEmailradiobutton->ForeColor = System::Drawing::Color::Black;
-			this->ForgotPasswordEmailradiobutton->Location = System::Drawing::Point(23, 97);
-			this->ForgotPasswordEmailradiobutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ForgotPasswordEmailradiobutton->Location = System::Drawing::Point(17, 79);
+			this->ForgotPasswordEmailradiobutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ForgotPasswordEmailradiobutton->Name = L"ForgotPasswordEmailradiobutton";
-			this->ForgotPasswordEmailradiobutton->Size = System::Drawing::Size(182, 29);
+			this->ForgotPasswordEmailradiobutton->Size = System::Drawing::Size(149, 24);
 			this->ForgotPasswordEmailradiobutton->TabIndex = 1;
 			this->ForgotPasswordEmailradiobutton->TabStop = true;
 			this->ForgotPasswordEmailradiobutton->Text = L"Email Verification";
@@ -1361,9 +1369,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordVerificationlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordVerificationlabel->ForeColor = System::Drawing::Color::Black;
-			this->ForgotPasswordVerificationlabel->Location = System::Drawing::Point(19, 46);
+			this->ForgotPasswordVerificationlabel->Location = System::Drawing::Point(14, 37);
+			this->ForgotPasswordVerificationlabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->ForgotPasswordVerificationlabel->Name = L"ForgotPasswordVerificationlabel";
-			this->ForgotPasswordVerificationlabel->Size = System::Drawing::Size(617, 29);
+			this->ForgotPasswordVerificationlabel->Size = System::Drawing::Size(481, 24);
 			this->ForgotPasswordVerificationlabel->TabIndex = 0;
 			this->ForgotPasswordVerificationlabel->Text = L"Select one of the following methods to verify your identity";
 			// 
@@ -1380,10 +1389,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ChangePasswordpanel->Controls->Add(this->ChangePasswordNewPasswordDesignpanel);
 			this->ChangePasswordpanel->Controls->Add(this->ChangePasswordNewPasswordpictureBox);
 			this->ChangePasswordpanel->Controls->Add(this->ChangePasswordNewPasswordtextBox);
-			this->ChangePasswordpanel->Location = System::Drawing::Point(27, 113);
-			this->ChangePasswordpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ChangePasswordpanel->Location = System::Drawing::Point(20, 92);
+			this->ChangePasswordpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ChangePasswordpanel->Name = L"ChangePasswordpanel";
-			this->ChangePasswordpanel->Size = System::Drawing::Size(995, 570);
+			this->ChangePasswordpanel->Size = System::Drawing::Size(746, 463);
 			this->ChangePasswordpanel->TabIndex = 13;
 			this->ChangePasswordpanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &LoginForm::ChangePasswordpanel_Paint);
 			// 
@@ -1391,10 +1400,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->ChangePasswordHomepictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ChangePasswordHomepictureBox.BackgroundImage")));
 			this->ChangePasswordHomepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ChangePasswordHomepictureBox->Location = System::Drawing::Point(751, 495);
-			this->ChangePasswordHomepictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ChangePasswordHomepictureBox->Location = System::Drawing::Point(563, 402);
+			this->ChangePasswordHomepictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ChangePasswordHomepictureBox->Name = L"ChangePasswordHomepictureBox";
-			this->ChangePasswordHomepictureBox->Size = System::Drawing::Size(63, 62);
+			this->ChangePasswordHomepictureBox->Size = System::Drawing::Size(47, 50);
 			this->ChangePasswordHomepictureBox->TabIndex = 11;
 			this->ChangePasswordHomepictureBox->TabStop = false;
 			// 
@@ -1404,10 +1413,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ChangePasswordHomebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->ChangePasswordHomebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->ChangePasswordHomebutton->Location = System::Drawing::Point(820, 495);
-			this->ChangePasswordHomebutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ChangePasswordHomebutton->Location = System::Drawing::Point(615, 402);
+			this->ChangePasswordHomebutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ChangePasswordHomebutton->Name = L"ChangePasswordHomebutton";
-			this->ChangePasswordHomebutton->Size = System::Drawing::Size(163, 62);
+			this->ChangePasswordHomebutton->Size = System::Drawing::Size(122, 50);
 			this->ChangePasswordHomebutton->TabIndex = 9;
 			this->ChangePasswordHomebutton->Text = L"Login Page";
 			this->ChangePasswordHomebutton->UseVisualStyleBackColor = false;
@@ -1423,10 +1432,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->PasswordChangeChangebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->PasswordChangeChangebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->PasswordChangeChangebutton->Location = System::Drawing::Point(621, 359);
-			this->PasswordChangeChangebutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->PasswordChangeChangebutton->Location = System::Drawing::Point(466, 292);
+			this->PasswordChangeChangebutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->PasswordChangeChangebutton->Name = L"PasswordChangeChangebutton";
-			this->PasswordChangeChangebutton->Size = System::Drawing::Size(160, 53);
+			this->PasswordChangeChangebutton->Size = System::Drawing::Size(120, 43);
 			this->PasswordChangeChangebutton->TabIndex = 8;
 			this->PasswordChangeChangebutton->Text = L"Change";
 			this->PasswordChangeChangebutton->UseVisualStyleBackColor = false;
@@ -1442,10 +1451,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ChangePasswordcheckBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ChangePasswordcheckBox->ForeColor = System::Drawing::Color::Black;
-			this->ChangePasswordcheckBox->Location = System::Drawing::Point(601, 309);
-			this->ChangePasswordcheckBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ChangePasswordcheckBox->Location = System::Drawing::Point(451, 251);
+			this->ChangePasswordcheckBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ChangePasswordcheckBox->Name = L"ChangePasswordcheckBox";
-			this->ChangePasswordcheckBox->Size = System::Drawing::Size(180, 28);
+			this->ChangePasswordcheckBox->Size = System::Drawing::Size(149, 22);
 			this->ChangePasswordcheckBox->TabIndex = 7;
 			this->ChangePasswordcheckBox->Text = L"Show Password";
 			this->ChangePasswordcheckBox->UseVisualStyleBackColor = true;
@@ -1457,29 +1466,30 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ChangePasswordErrorlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ChangePasswordErrorlabel->ForeColor = System::Drawing::Color::Red;
-			this->ChangePasswordErrorlabel->Location = System::Drawing::Point(216, 89);
+			this->ChangePasswordErrorlabel->Location = System::Drawing::Point(162, 72);
+			this->ChangePasswordErrorlabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->ChangePasswordErrorlabel->Name = L"ChangePasswordErrorlabel";
-			this->ChangePasswordErrorlabel->Size = System::Drawing::Size(120, 25);
+			this->ChangePasswordErrorlabel->Size = System::Drawing::Size(96, 20);
 			this->ChangePasswordErrorlabel->TabIndex = 6;
 			this->ChangePasswordErrorlabel->Text = L"Error display";
 			// 
 			// ChangePasswordConfirmPasswordDesignpanel
 			// 
 			this->ChangePasswordConfirmPasswordDesignpanel->BackColor = System::Drawing::Color::Black;
-			this->ChangePasswordConfirmPasswordDesignpanel->Location = System::Drawing::Point(221, 282);
-			this->ChangePasswordConfirmPasswordDesignpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ChangePasswordConfirmPasswordDesignpanel->Location = System::Drawing::Point(166, 229);
+			this->ChangePasswordConfirmPasswordDesignpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ChangePasswordConfirmPasswordDesignpanel->Name = L"ChangePasswordConfirmPasswordDesignpanel";
-			this->ChangePasswordConfirmPasswordDesignpanel->Size = System::Drawing::Size(560, 1);
+			this->ChangePasswordConfirmPasswordDesignpanel->Size = System::Drawing::Size(420, 1);
 			this->ChangePasswordConfirmPasswordDesignpanel->TabIndex = 5;
 			// 
 			// ChangePasswordConfirmPasswordpictureBox
 			// 
 			this->ChangePasswordConfirmPasswordpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ChangePasswordConfirmPasswordpictureBox.BackgroundImage")));
 			this->ChangePasswordConfirmPasswordpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ChangePasswordConfirmPasswordpictureBox->Location = System::Drawing::Point(221, 222);
-			this->ChangePasswordConfirmPasswordpictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ChangePasswordConfirmPasswordpictureBox->Location = System::Drawing::Point(166, 180);
+			this->ChangePasswordConfirmPasswordpictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ChangePasswordConfirmPasswordpictureBox->Name = L"ChangePasswordConfirmPasswordpictureBox";
-			this->ChangePasswordConfirmPasswordpictureBox->Size = System::Drawing::Size(61, 54);
+			this->ChangePasswordConfirmPasswordpictureBox->Size = System::Drawing::Size(46, 44);
 			this->ChangePasswordConfirmPasswordpictureBox->TabIndex = 4;
 			this->ChangePasswordConfirmPasswordpictureBox->TabStop = false;
 			// 
@@ -1490,30 +1500,30 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ChangePasswordConfirmPasswordtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ChangePasswordConfirmPasswordtextBox->ForeColor = System::Drawing::Color::Black;
-			this->ChangePasswordConfirmPasswordtextBox->Location = System::Drawing::Point(285, 251);
-			this->ChangePasswordConfirmPasswordtextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ChangePasswordConfirmPasswordtextBox->Location = System::Drawing::Point(214, 204);
+			this->ChangePasswordConfirmPasswordtextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ChangePasswordConfirmPasswordtextBox->Name = L"ChangePasswordConfirmPasswordtextBox";
-			this->ChangePasswordConfirmPasswordtextBox->Size = System::Drawing::Size(492, 27);
+			this->ChangePasswordConfirmPasswordtextBox->Size = System::Drawing::Size(369, 21);
 			this->ChangePasswordConfirmPasswordtextBox->TabIndex = 3;
 			this->ChangePasswordConfirmPasswordtextBox->Text = L"Confirm Password";
 			// 
 			// ChangePasswordNewPasswordDesignpanel
 			// 
 			this->ChangePasswordNewPasswordDesignpanel->BackColor = System::Drawing::Color::Black;
-			this->ChangePasswordNewPasswordDesignpanel->Location = System::Drawing::Point(221, 192);
-			this->ChangePasswordNewPasswordDesignpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ChangePasswordNewPasswordDesignpanel->Location = System::Drawing::Point(166, 156);
+			this->ChangePasswordNewPasswordDesignpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ChangePasswordNewPasswordDesignpanel->Name = L"ChangePasswordNewPasswordDesignpanel";
-			this->ChangePasswordNewPasswordDesignpanel->Size = System::Drawing::Size(560, 1);
+			this->ChangePasswordNewPasswordDesignpanel->Size = System::Drawing::Size(420, 1);
 			this->ChangePasswordNewPasswordDesignpanel->TabIndex = 2;
 			// 
 			// ChangePasswordNewPasswordpictureBox
 			// 
 			this->ChangePasswordNewPasswordpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ChangePasswordNewPasswordpictureBox.BackgroundImage")));
 			this->ChangePasswordNewPasswordpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ChangePasswordNewPasswordpictureBox->Location = System::Drawing::Point(221, 132);
-			this->ChangePasswordNewPasswordpictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ChangePasswordNewPasswordpictureBox->Location = System::Drawing::Point(166, 107);
+			this->ChangePasswordNewPasswordpictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ChangePasswordNewPasswordpictureBox->Name = L"ChangePasswordNewPasswordpictureBox";
-			this->ChangePasswordNewPasswordpictureBox->Size = System::Drawing::Size(61, 54);
+			this->ChangePasswordNewPasswordpictureBox->Size = System::Drawing::Size(46, 44);
 			this->ChangePasswordNewPasswordpictureBox->TabIndex = 1;
 			this->ChangePasswordNewPasswordpictureBox->TabStop = false;
 			// 
@@ -1524,10 +1534,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ChangePasswordNewPasswordtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ChangePasswordNewPasswordtextBox->ForeColor = System::Drawing::Color::Black;
-			this->ChangePasswordNewPasswordtextBox->Location = System::Drawing::Point(285, 161);
-			this->ChangePasswordNewPasswordtextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ChangePasswordNewPasswordtextBox->Location = System::Drawing::Point(214, 131);
+			this->ChangePasswordNewPasswordtextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ChangePasswordNewPasswordtextBox->Name = L"ChangePasswordNewPasswordtextBox";
-			this->ChangePasswordNewPasswordtextBox->Size = System::Drawing::Size(492, 27);
+			this->ChangePasswordNewPasswordtextBox->Size = System::Drawing::Size(369, 21);
 			this->ChangePasswordNewPasswordtextBox->TabIndex = 0;
 			this->ChangePasswordNewPasswordtextBox->Text = L"New Password";
 			// 
@@ -1537,25 +1547,26 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->ForgotPasswordHeaderlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ForgotPasswordHeaderlabel->ForeColor = System::Drawing::Color::Black;
-			this->ForgotPasswordHeaderlabel->Location = System::Drawing::Point(371, 37);
+			this->ForgotPasswordHeaderlabel->Location = System::Drawing::Point(278, 30);
+			this->ForgotPasswordHeaderlabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->ForgotPasswordHeaderlabel->Name = L"ForgotPasswordHeaderlabel";
-			this->ForgotPasswordHeaderlabel->Size = System::Drawing::Size(325, 46);
+			this->ForgotPasswordHeaderlabel->Size = System::Drawing::Size(262, 37);
 			this->ForgotPasswordHeaderlabel->TabIndex = 0;
 			this->ForgotPasswordHeaderlabel->Text = L"Password Reset";
 			// 
 			// Registerpanel
 			// 
 			this->Registerpanel->BackColor = System::Drawing::Color::AliceBlue;
-			this->Registerpanel->Controls->Add(this->RegisterVerificationpanel);
 			this->Registerpanel->Controls->Add(this->RegisterDetailspanel);
+			this->Registerpanel->Controls->Add(this->RegisterVerificationpanel);
 			this->Registerpanel->Controls->Add(this->RegisterHomebutton);
 			this->Registerpanel->Controls->Add(this->RegisterHomepictureBox);
 			this->Registerpanel->Controls->Add(this->ReigsterHeaderpictureBox);
 			this->Registerpanel->Controls->Add(this->RegisterHeaderlabel);
-			this->Registerpanel->Location = System::Drawing::Point(0, 46);
-			this->Registerpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Registerpanel->Location = System::Drawing::Point(0, 37);
+			this->Registerpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Registerpanel->Name = L"Registerpanel";
-			this->Registerpanel->Size = System::Drawing::Size(1048, 718);
+			this->Registerpanel->Size = System::Drawing::Size(786, 583);
 			this->Registerpanel->TabIndex = 19;
 			// 
 			// RegisterVerificationpanel
@@ -1571,10 +1582,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterVerificationpanel->Controls->Add(this->RegitsterVerificationlabel1);
 			this->RegisterVerificationpanel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterVerificationpanel->Location = System::Drawing::Point(27, 86);
-			this->RegisterVerificationpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterVerificationpanel->Location = System::Drawing::Point(20, 70);
+			this->RegisterVerificationpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterVerificationpanel->Name = L"RegisterVerificationpanel";
-			this->RegisterVerificationpanel->Size = System::Drawing::Size(993, 538);
+			this->RegisterVerificationpanel->Size = System::Drawing::Size(745, 437);
 			this->RegisterVerificationpanel->TabIndex = 20;
 			// 
 			// RegisterVerificationResendbutton
@@ -1583,10 +1594,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterVerificationResendbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->RegisterVerificationResendbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterVerificationResendbutton->Location = System::Drawing::Point(599, 382);
-			this->RegisterVerificationResendbutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterVerificationResendbutton->Location = System::Drawing::Point(449, 310);
+			this->RegisterVerificationResendbutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterVerificationResendbutton->Name = L"RegisterVerificationResendbutton";
-			this->RegisterVerificationResendbutton->Size = System::Drawing::Size(148, 50);
+			this->RegisterVerificationResendbutton->Size = System::Drawing::Size(111, 41);
 			this->RegisterVerificationResendbutton->TabIndex = 9;
 			this->RegisterVerificationResendbutton->Text = L"Resend";
 			this->RegisterVerificationResendbutton->UseVisualStyleBackColor = false;
@@ -1602,10 +1613,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterVerificationVerifybutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->RegisterVerificationVerifybutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterVerificationVerifybutton->Location = System::Drawing::Point(599, 313);
-			this->RegisterVerificationVerifybutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterVerificationVerifybutton->Location = System::Drawing::Point(449, 254);
+			this->RegisterVerificationVerifybutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterVerificationVerifybutton->Name = L"RegisterVerificationVerifybutton";
-			this->RegisterVerificationVerifybutton->Size = System::Drawing::Size(148, 50);
+			this->RegisterVerificationVerifybutton->Size = System::Drawing::Size(111, 41);
 			this->RegisterVerificationVerifybutton->TabIndex = 8;
 			this->RegisterVerificationVerifybutton->Text = L"Verify";
 			this->RegisterVerificationVerifybutton->UseVisualStyleBackColor = false;
@@ -1621,9 +1632,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterVerificationStatuslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->RegisterVerificationStatuslabel->ForeColor = System::Drawing::Color::Red;
-			this->RegisterVerificationStatuslabel->Location = System::Drawing::Point(17, 103);
+			this->RegisterVerificationStatuslabel->Location = System::Drawing::Point(13, 84);
+			this->RegisterVerificationStatuslabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->RegisterVerificationStatuslabel->Name = L"RegisterVerificationStatuslabel";
-			this->RegisterVerificationStatuslabel->Size = System::Drawing::Size(161, 29);
+			this->RegisterVerificationStatuslabel->Size = System::Drawing::Size(123, 24);
 			this->RegisterVerificationStatuslabel->TabIndex = 7;
 			this->RegisterVerificationStatuslabel->Text = L"Status display";
 			// 
@@ -1633,10 +1645,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterVerificationBackbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->RegisterVerificationBackbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterVerificationBackbutton->Location = System::Drawing::Point(247, 309);
-			this->RegisterVerificationBackbutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterVerificationBackbutton->Location = System::Drawing::Point(185, 251);
+			this->RegisterVerificationBackbutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterVerificationBackbutton->Name = L"RegisterVerificationBackbutton";
-			this->RegisterVerificationBackbutton->Size = System::Drawing::Size(148, 50);
+			this->RegisterVerificationBackbutton->Size = System::Drawing::Size(111, 41);
 			this->RegisterVerificationBackbutton->TabIndex = 6;
 			this->RegisterVerificationBackbutton->Text = L"Back";
 			this->RegisterVerificationBackbutton->UseVisualStyleBackColor = false;
@@ -1649,20 +1661,20 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// RegisterVerificationDesignpanel
 			// 
 			this->RegisterVerificationDesignpanel->BackColor = System::Drawing::Color::Black;
-			this->RegisterVerificationDesignpanel->Location = System::Drawing::Point(247, 261);
-			this->RegisterVerificationDesignpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterVerificationDesignpanel->Location = System::Drawing::Point(185, 212);
+			this->RegisterVerificationDesignpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterVerificationDesignpanel->Name = L"RegisterVerificationDesignpanel";
-			this->RegisterVerificationDesignpanel->Size = System::Drawing::Size(500, 1);
+			this->RegisterVerificationDesignpanel->Size = System::Drawing::Size(375, 1);
 			this->RegisterVerificationDesignpanel->TabIndex = 4;
 			// 
 			// RegisterVerificationpictureBox
 			// 
 			this->RegisterVerificationpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"RegisterVerificationpictureBox.BackgroundImage")));
 			this->RegisterVerificationpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->RegisterVerificationpictureBox->Location = System::Drawing::Point(247, 201);
-			this->RegisterVerificationpictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterVerificationpictureBox->Location = System::Drawing::Point(185, 163);
+			this->RegisterVerificationpictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterVerificationpictureBox->Name = L"RegisterVerificationpictureBox";
-			this->RegisterVerificationpictureBox->Size = System::Drawing::Size(59, 54);
+			this->RegisterVerificationpictureBox->Size = System::Drawing::Size(44, 44);
 			this->RegisterVerificationpictureBox->TabIndex = 3;
 			this->RegisterVerificationpictureBox->TabStop = false;
 			// 
@@ -1673,10 +1685,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterVerificationtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->RegisterVerificationtextBox->ForeColor = System::Drawing::Color::Black;
-			this->RegisterVerificationtextBox->Location = System::Drawing::Point(307, 224);
-			this->RegisterVerificationtextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterVerificationtextBox->Location = System::Drawing::Point(230, 182);
+			this->RegisterVerificationtextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterVerificationtextBox->Name = L"RegisterVerificationtextBox";
-			this->RegisterVerificationtextBox->Size = System::Drawing::Size(440, 31);
+			this->RegisterVerificationtextBox->Size = System::Drawing::Size(330, 25);
 			this->RegisterVerificationtextBox->TabIndex = 2;
 			this->RegisterVerificationtextBox->Text = L"Code";
 			this->RegisterVerificationtextBox->Click += gcnew System::EventHandler(this, &LoginForm::RegisterVerificationtextBox_Click);
@@ -1687,9 +1699,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegitsterVerificationlabel2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->RegitsterVerificationlabel2->ForeColor = System::Drawing::Color::Blue;
-			this->RegitsterVerificationlabel2->Location = System::Drawing::Point(17, 66);
+			this->RegitsterVerificationlabel2->Location = System::Drawing::Point(13, 54);
+			this->RegitsterVerificationlabel2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->RegitsterVerificationlabel2->Name = L"RegitsterVerificationlabel2";
-			this->RegitsterVerificationlabel2->Size = System::Drawing::Size(542, 29);
+			this->RegitsterVerificationlabel2->Size = System::Drawing::Size(425, 24);
 			this->RegitsterVerificationlabel2->TabIndex = 1;
 			this->RegitsterVerificationlabel2->Text = L"Type the security code sent to your email address";
 			// 
@@ -1699,9 +1712,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegitsterVerificationlabel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->RegitsterVerificationlabel1->ForeColor = System::Drawing::Color::Black;
-			this->RegitsterVerificationlabel1->Location = System::Drawing::Point(16, 21);
+			this->RegitsterVerificationlabel1->Location = System::Drawing::Point(12, 17);
+			this->RegitsterVerificationlabel1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->RegitsterVerificationlabel1->Name = L"RegitsterVerificationlabel1";
-			this->RegitsterVerificationlabel1->Size = System::Drawing::Size(236, 36);
+			this->RegitsterVerificationlabel1->Size = System::Drawing::Size(190, 29);
 			this->RegitsterVerificationlabel1->TabIndex = 0;
 			this->RegitsterVerificationlabel1->Text = L"Verify your email";
 			// 
@@ -1734,10 +1748,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterDetailspanel->Controls->Add(this->RegisterFirstNameDesignpanel);
 			this->RegisterDetailspanel->Controls->Add(this->RegisterFirstNamepictureBox);
 			this->RegisterDetailspanel->Controls->Add(this->RegisterUsernametextBox);
-			this->RegisterDetailspanel->Location = System::Drawing::Point(27, 78);
-			this->RegisterDetailspanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterDetailspanel->Location = System::Drawing::Point(20, 63);
+			this->RegisterDetailspanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterDetailspanel->Name = L"RegisterDetailspanel";
-			this->RegisterDetailspanel->Size = System::Drawing::Size(993, 559);
+			this->RegisterDetailspanel->Size = System::Drawing::Size(745, 454);
 			this->RegisterDetailspanel->TabIndex = 1;
 			this->RegisterDetailspanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &LoginForm::RegisterDetailspanel_Paint);
 			// 
@@ -1747,10 +1761,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterpasswordcheckBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->RegisterpasswordcheckBox->ForeColor = System::Drawing::Color::Black;
-			this->RegisterpasswordcheckBox->Location = System::Drawing::Point(825, 123);
-			this->RegisterpasswordcheckBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterpasswordcheckBox->Location = System::Drawing::Point(619, 100);
+			this->RegisterpasswordcheckBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterpasswordcheckBox->Name = L"RegisterpasswordcheckBox";
-			this->RegisterpasswordcheckBox->Size = System::Drawing::Size(151, 24);
+			this->RegisterpasswordcheckBox->Size = System::Drawing::Size(126, 21);
 			this->RegisterpasswordcheckBox->TabIndex = 27;
 			this->RegisterpasswordcheckBox->Text = L"Show Password";
 			this->RegisterpasswordcheckBox->UseVisualStyleBackColor = true;
@@ -1759,20 +1773,20 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::Black;
-			this->panel1->Location = System::Drawing::Point(583, 103);
-			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->panel1->Location = System::Drawing::Point(437, 84);
+			this->panel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(388, 1);
+			this->panel1->Size = System::Drawing::Size(291, 1);
 			this->panel1->TabIndex = 26;
 			// 
 			// RegisterPasswordpictureBox
 			// 
 			this->RegisterPasswordpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"RegisterPasswordpictureBox.BackgroundImage")));
 			this->RegisterPasswordpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->RegisterPasswordpictureBox->Location = System::Drawing::Point(583, 46);
-			this->RegisterPasswordpictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterPasswordpictureBox->Location = System::Drawing::Point(437, 37);
+			this->RegisterPasswordpictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterPasswordpictureBox->Name = L"RegisterPasswordpictureBox";
-			this->RegisterPasswordpictureBox->Size = System::Drawing::Size(57, 53);
+			this->RegisterPasswordpictureBox->Size = System::Drawing::Size(43, 43);
 			this->RegisterPasswordpictureBox->TabIndex = 25;
 			this->RegisterPasswordpictureBox->TabStop = false;
 			// 
@@ -1783,30 +1797,32 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->registerPasswordtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->registerPasswordtextBox->ForeColor = System::Drawing::Color::Black;
-			this->registerPasswordtextBox->Location = System::Drawing::Point(645, 66);
-			this->registerPasswordtextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->registerPasswordtextBox->Location = System::Drawing::Point(484, 54);
+			this->registerPasswordtextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->registerPasswordtextBox->Name = L"registerPasswordtextBox";
-			this->registerPasswordtextBox->Size = System::Drawing::Size(325, 31);
+			this->registerPasswordtextBox->Size = System::Drawing::Size(244, 25);
 			this->registerPasswordtextBox->TabIndex = 24;
 			this->registerPasswordtextBox->Text = L"Password";
+			this->registerPasswordtextBox->MouseEnter += gcnew System::EventHandler(this, &LoginForm::registerPasswordtextBox_MouseEnter);
+			this->registerPasswordtextBox->MouseLeave += gcnew System::EventHandler(this, &LoginForm::registerPasswordtextBox_MouseLeave);
 			// 
 			// RegisterSecuritypanel
 			// 
 			this->RegisterSecuritypanel->BackColor = System::Drawing::Color::Black;
-			this->RegisterSecuritypanel->Location = System::Drawing::Point(21, 453);
-			this->RegisterSecuritypanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterSecuritypanel->Location = System::Drawing::Point(16, 368);
+			this->RegisterSecuritypanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterSecuritypanel->Name = L"RegisterSecuritypanel";
-			this->RegisterSecuritypanel->Size = System::Drawing::Size(536, 1);
+			this->RegisterSecuritypanel->Size = System::Drawing::Size(402, 1);
 			this->RegisterSecuritypanel->TabIndex = 23;
 			// 
 			// registerSecuritypictureBox
 			// 
 			this->registerSecuritypictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"registerSecuritypictureBox.BackgroundImage")));
 			this->registerSecuritypictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->registerSecuritypictureBox->Location = System::Drawing::Point(21, 395);
-			this->registerSecuritypictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->registerSecuritypictureBox->Location = System::Drawing::Point(16, 321);
+			this->registerSecuritypictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->registerSecuritypictureBox->Name = L"registerSecuritypictureBox";
-			this->registerSecuritypictureBox->Size = System::Drawing::Size(57, 52);
+			this->registerSecuritypictureBox->Size = System::Drawing::Size(43, 42);
 			this->registerSecuritypictureBox->TabIndex = 22;
 			this->registerSecuritypictureBox->TabStop = false;
 			// 
@@ -1817,10 +1833,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterSecurityAnswertextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->RegisterSecurityAnswertextBox->ForeColor = System::Drawing::Color::Black;
-			this->RegisterSecurityAnswertextBox->Location = System::Drawing::Point(85, 416);
-			this->RegisterSecurityAnswertextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterSecurityAnswertextBox->Location = System::Drawing::Point(64, 338);
+			this->RegisterSecurityAnswertextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterSecurityAnswertextBox->Name = L"RegisterSecurityAnswertextBox";
-			this->RegisterSecurityAnswertextBox->Size = System::Drawing::Size(473, 31);
+			this->RegisterSecurityAnswertextBox->Size = System::Drawing::Size(355, 25);
 			this->RegisterSecurityAnswertextBox->TabIndex = 21;
 			this->RegisterSecurityAnswertextBox->Text = L"Answer";
 			// 
@@ -1831,10 +1847,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterSecuritycomboBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->RegisterSecuritycomboBox->ForeColor = System::Drawing::Color::White;
-			this->RegisterSecuritycomboBox->Location = System::Drawing::Point(85, 354);
-			this->RegisterSecuritycomboBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterSecuritycomboBox->Location = System::Drawing::Point(64, 288);
+			this->RegisterSecuritycomboBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterSecuritycomboBox->Name = L"RegisterSecuritycomboBox";
-			this->RegisterSecuritycomboBox->Size = System::Drawing::Size(821, 33);
+			this->RegisterSecuritycomboBox->Size = System::Drawing::Size(617, 28);
 			this->RegisterSecuritycomboBox->Sorted = true;
 			this->RegisterSecuritycomboBox->TabIndex = 20;
 			// 
@@ -1844,9 +1860,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterStatuslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->RegisterStatuslabel->ForeColor = System::Drawing::Color::Red;
-			this->RegisterStatuslabel->Location = System::Drawing::Point(17, 7);
+			this->RegisterStatuslabel->Location = System::Drawing::Point(13, 6);
+			this->RegisterStatuslabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->RegisterStatuslabel->Name = L"RegisterStatuslabel";
-			this->RegisterStatuslabel->Size = System::Drawing::Size(133, 25);
+			this->RegisterStatuslabel->Size = System::Drawing::Size(109, 20);
 			this->RegisterStatuslabel->TabIndex = 19;
 			this->RegisterStatuslabel->Text = L"Error display";
 			// 
@@ -1854,10 +1871,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->RegisterTeacherpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"RegisterTeacherpictureBox.BackgroundImage")));
 			this->RegisterTeacherpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->RegisterTeacherpictureBox->Location = System::Drawing::Point(500, 500);
-			this->RegisterTeacherpictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterTeacherpictureBox->Location = System::Drawing::Point(375, 406);
+			this->RegisterTeacherpictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterTeacherpictureBox->Name = L"RegisterTeacherpictureBox";
-			this->RegisterTeacherpictureBox->Size = System::Drawing::Size(59, 57);
+			this->RegisterTeacherpictureBox->Size = System::Drawing::Size(44, 46);
 			this->RegisterTeacherpictureBox->TabIndex = 18;
 			this->RegisterTeacherpictureBox->TabStop = false;
 			// 
@@ -1865,10 +1882,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->RegisterStudentpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"RegisterStudentpictureBox.BackgroundImage")));
 			this->RegisterStudentpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->RegisterStudentpictureBox->Location = System::Drawing::Point(147, 500);
-			this->RegisterStudentpictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterStudentpictureBox->Location = System::Drawing::Point(110, 406);
+			this->RegisterStudentpictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterStudentpictureBox->Name = L"RegisterStudentpictureBox";
-			this->RegisterStudentpictureBox->Size = System::Drawing::Size(59, 57);
+			this->RegisterStudentpictureBox->Size = System::Drawing::Size(44, 46);
 			this->RegisterStudentpictureBox->TabIndex = 17;
 			this->RegisterStudentpictureBox->TabStop = false;
 			// 
@@ -1878,10 +1895,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterTeacherradioButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->RegisterTeacherradioButton->ForeColor = System::Drawing::Color::Black;
-			this->RegisterTeacherradioButton->Location = System::Drawing::Point(351, 511);
-			this->RegisterTeacherradioButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterTeacherradioButton->Location = System::Drawing::Point(263, 415);
+			this->RegisterTeacherradioButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterTeacherradioButton->Name = L"RegisterTeacherradioButton";
-			this->RegisterTeacherradioButton->Size = System::Drawing::Size(138, 33);
+			this->RegisterTeacherradioButton->Size = System::Drawing::Size(107, 28);
 			this->RegisterTeacherradioButton->TabIndex = 16;
 			this->RegisterTeacherradioButton->TabStop = true;
 			this->RegisterTeacherradioButton->Text = L"Professor";
@@ -1893,10 +1910,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterRegisterbutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->RegisterRegisterbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->RegisterRegisterbutton->Location = System::Drawing::Point(843, 492);
-			this->RegisterRegisterbutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterRegisterbutton->Location = System::Drawing::Point(632, 400);
+			this->RegisterRegisterbutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterRegisterbutton->Name = L"RegisterRegisterbutton";
-			this->RegisterRegisterbutton->Size = System::Drawing::Size(133, 54);
+			this->RegisterRegisterbutton->Size = System::Drawing::Size(100, 44);
 			this->RegisterRegisterbutton->TabIndex = 15;
 			this->RegisterRegisterbutton->Text = L"Register";
 			this->RegisterRegisterbutton->UseVisualStyleBackColor = false;
@@ -1912,10 +1929,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterStudentradioButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->RegisterStudentradioButton->ForeColor = System::Drawing::Color::Black;
-			this->RegisterStudentradioButton->Location = System::Drawing::Point(21, 511);
-			this->RegisterStudentradioButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterStudentradioButton->Location = System::Drawing::Point(16, 415);
+			this->RegisterStudentradioButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterStudentradioButton->Name = L"RegisterStudentradioButton";
-			this->RegisterStudentradioButton->Size = System::Drawing::Size(116, 33);
+			this->RegisterStudentradioButton->Size = System::Drawing::Size(92, 28);
 			this->RegisterStudentradioButton->TabIndex = 13;
 			this->RegisterStudentradioButton->TabStop = true;
 			this->RegisterStudentradioButton->Text = L"Student";
@@ -1925,10 +1942,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->RegisterUsernameDesignpanel->BackColor = System::Drawing::Color::Black;
 			this->RegisterUsernameDesignpanel->ForeColor = System::Drawing::Color::Black;
-			this->RegisterUsernameDesignpanel->Location = System::Drawing::Point(21, 103);
-			this->RegisterUsernameDesignpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterUsernameDesignpanel->Location = System::Drawing::Point(16, 84);
+			this->RegisterUsernameDesignpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterUsernameDesignpanel->Name = L"RegisterUsernameDesignpanel";
-			this->RegisterUsernameDesignpanel->Size = System::Drawing::Size(388, 1);
+			this->RegisterUsernameDesignpanel->Size = System::Drawing::Size(291, 1);
 			this->RegisterUsernameDesignpanel->TabIndex = 11;
 			// 
 			// RegisterEmailtextBox
@@ -1938,10 +1955,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterEmailtextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->RegisterEmailtextBox->ForeColor = System::Drawing::Color::Black;
-			this->RegisterEmailtextBox->Location = System::Drawing::Point(85, 302);
-			this->RegisterEmailtextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterEmailtextBox->Location = System::Drawing::Point(64, 245);
+			this->RegisterEmailtextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterEmailtextBox->Name = L"RegisterEmailtextBox";
-			this->RegisterEmailtextBox->Size = System::Drawing::Size(473, 31);
+			this->RegisterEmailtextBox->Size = System::Drawing::Size(355, 25);
 			this->RegisterEmailtextBox->TabIndex = 9;
 			this->RegisterEmailtextBox->Text = L"Email";
 			this->RegisterEmailtextBox->Click += gcnew System::EventHandler(this, &LoginForm::RegisterEmailtextBox_Click);
@@ -1952,9 +1969,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->Registertypelabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->Registertypelabel->ForeColor = System::Drawing::Color::Black;
-			this->Registertypelabel->Location = System::Drawing::Point(16, 453);
+			this->Registertypelabel->Location = System::Drawing::Point(12, 368);
+			this->Registertypelabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->Registertypelabel->Name = L"Registertypelabel";
-			this->Registertypelabel->Size = System::Drawing::Size(179, 32);
+			this->Registertypelabel->Size = System::Drawing::Size(138, 26);
 			this->Registertypelabel->TabIndex = 12;
 			this->Registertypelabel->Text = L"Account type";
 			// 
@@ -1962,30 +1980,30 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->RegisterUsernamepictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"RegisterUsernamepictureBox.BackgroundImage")));
 			this->RegisterUsernamepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->RegisterUsernamepictureBox->Location = System::Drawing::Point(21, 46);
-			this->RegisterUsernamepictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterUsernamepictureBox->Location = System::Drawing::Point(16, 37);
+			this->RegisterUsernamepictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterUsernamepictureBox->Name = L"RegisterUsernamepictureBox";
-			this->RegisterUsernamepictureBox->Size = System::Drawing::Size(57, 53);
+			this->RegisterUsernamepictureBox->Size = System::Drawing::Size(43, 43);
 			this->RegisterUsernamepictureBox->TabIndex = 10;
 			this->RegisterUsernamepictureBox->TabStop = false;
 			// 
 			// RegisterEmailDesignpanel
 			// 
 			this->RegisterEmailDesignpanel->BackColor = System::Drawing::Color::Black;
-			this->RegisterEmailDesignpanel->Location = System::Drawing::Point(21, 338);
-			this->RegisterEmailDesignpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterEmailDesignpanel->Location = System::Drawing::Point(16, 275);
+			this->RegisterEmailDesignpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterEmailDesignpanel->Name = L"RegisterEmailDesignpanel";
-			this->RegisterEmailDesignpanel->Size = System::Drawing::Size(536, 1);
+			this->RegisterEmailDesignpanel->Size = System::Drawing::Size(402, 1);
 			this->RegisterEmailDesignpanel->TabIndex = 8;
 			// 
 			// RegisterEmailpictureBox
 			// 
 			this->RegisterEmailpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"RegisterEmailpictureBox.BackgroundImage")));
 			this->RegisterEmailpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->RegisterEmailpictureBox->Location = System::Drawing::Point(21, 279);
-			this->RegisterEmailpictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterEmailpictureBox->Location = System::Drawing::Point(16, 227);
+			this->RegisterEmailpictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterEmailpictureBox->Name = L"RegisterEmailpictureBox";
-			this->RegisterEmailpictureBox->Size = System::Drawing::Size(57, 53);
+			this->RegisterEmailpictureBox->Size = System::Drawing::Size(43, 43);
 			this->RegisterEmailpictureBox->TabIndex = 7;
 			this->RegisterEmailpictureBox->TabStop = false;
 			// 
@@ -1996,10 +2014,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterLastNametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->RegisterLastNametextBox->ForeColor = System::Drawing::Color::Black;
-			this->RegisterLastNametextBox->Location = System::Drawing::Point(85, 225);
-			this->RegisterLastNametextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterLastNametextBox->Location = System::Drawing::Point(64, 183);
+			this->RegisterLastNametextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterLastNametextBox->Name = L"RegisterLastNametextBox";
-			this->RegisterLastNametextBox->Size = System::Drawing::Size(473, 31);
+			this->RegisterLastNametextBox->Size = System::Drawing::Size(355, 25);
 			this->RegisterLastNametextBox->TabIndex = 6;
 			this->RegisterLastNametextBox->Text = L"Last Name (Optional)";
 			this->RegisterLastNametextBox->Click += gcnew System::EventHandler(this, &LoginForm::RegisterLastNametextBox_Click);
@@ -2007,20 +2025,20 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// RegisterLastNameDesignpanel
 			// 
 			this->RegisterLastNameDesignpanel->BackColor = System::Drawing::Color::Black;
-			this->RegisterLastNameDesignpanel->Location = System::Drawing::Point(21, 262);
-			this->RegisterLastNameDesignpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterLastNameDesignpanel->Location = System::Drawing::Point(16, 213);
+			this->RegisterLastNameDesignpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterLastNameDesignpanel->Name = L"RegisterLastNameDesignpanel";
-			this->RegisterLastNameDesignpanel->Size = System::Drawing::Size(536, 1);
+			this->RegisterLastNameDesignpanel->Size = System::Drawing::Size(402, 1);
 			this->RegisterLastNameDesignpanel->TabIndex = 5;
 			// 
 			// RegisterLastNamepictureBox
 			// 
 			this->RegisterLastNamepictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"RegisterLastNamepictureBox.BackgroundImage")));
 			this->RegisterLastNamepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->RegisterLastNamepictureBox->Location = System::Drawing::Point(21, 203);
-			this->RegisterLastNamepictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterLastNamepictureBox->Location = System::Drawing::Point(16, 165);
+			this->RegisterLastNamepictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterLastNamepictureBox->Name = L"RegisterLastNamepictureBox";
-			this->RegisterLastNamepictureBox->Size = System::Drawing::Size(57, 53);
+			this->RegisterLastNamepictureBox->Size = System::Drawing::Size(43, 43);
 			this->RegisterLastNamepictureBox->TabIndex = 4;
 			this->RegisterLastNamepictureBox->TabStop = false;
 			// 
@@ -2031,10 +2049,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterFirstNametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->RegisterFirstNametextBox->ForeColor = System::Drawing::Color::Black;
-			this->RegisterFirstNametextBox->Location = System::Drawing::Point(85, 148);
-			this->RegisterFirstNametextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterFirstNametextBox->Location = System::Drawing::Point(64, 120);
+			this->RegisterFirstNametextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterFirstNametextBox->Name = L"RegisterFirstNametextBox";
-			this->RegisterFirstNametextBox->Size = System::Drawing::Size(473, 31);
+			this->RegisterFirstNametextBox->Size = System::Drawing::Size(355, 25);
 			this->RegisterFirstNametextBox->TabIndex = 3;
 			this->RegisterFirstNametextBox->Text = L"First Name";
 			this->RegisterFirstNametextBox->Click += gcnew System::EventHandler(this, &LoginForm::RegisterFirstNametextBox_Click);
@@ -2042,20 +2060,20 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// RegisterFirstNameDesignpanel
 			// 
 			this->RegisterFirstNameDesignpanel->BackColor = System::Drawing::Color::Black;
-			this->RegisterFirstNameDesignpanel->Location = System::Drawing::Point(21, 185);
-			this->RegisterFirstNameDesignpanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterFirstNameDesignpanel->Location = System::Drawing::Point(16, 150);
+			this->RegisterFirstNameDesignpanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterFirstNameDesignpanel->Name = L"RegisterFirstNameDesignpanel";
-			this->RegisterFirstNameDesignpanel->Size = System::Drawing::Size(536, 1);
+			this->RegisterFirstNameDesignpanel->Size = System::Drawing::Size(402, 1);
 			this->RegisterFirstNameDesignpanel->TabIndex = 2;
 			// 
 			// RegisterFirstNamepictureBox
 			// 
 			this->RegisterFirstNamepictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"RegisterFirstNamepictureBox.BackgroundImage")));
 			this->RegisterFirstNamepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->RegisterFirstNamepictureBox->Location = System::Drawing::Point(21, 126);
-			this->RegisterFirstNamepictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterFirstNamepictureBox->Location = System::Drawing::Point(16, 102);
+			this->RegisterFirstNamepictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterFirstNamepictureBox->Name = L"RegisterFirstNamepictureBox";
-			this->RegisterFirstNamepictureBox->Size = System::Drawing::Size(57, 53);
+			this->RegisterFirstNamepictureBox->Size = System::Drawing::Size(43, 43);
 			this->RegisterFirstNamepictureBox->TabIndex = 1;
 			this->RegisterFirstNamepictureBox->TabStop = false;
 			this->RegisterFirstNamepictureBox->Click += gcnew System::EventHandler(this, &LoginForm::pictureBox3_Click_1);
@@ -2067,10 +2085,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterUsernametextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->RegisterUsernametextBox->ForeColor = System::Drawing::Color::Black;
-			this->RegisterUsernametextBox->Location = System::Drawing::Point(85, 66);
-			this->RegisterUsernametextBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterUsernametextBox->Location = System::Drawing::Point(64, 54);
+			this->RegisterUsernametextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterUsernametextBox->Name = L"RegisterUsernametextBox";
-			this->RegisterUsernametextBox->Size = System::Drawing::Size(325, 31);
+			this->RegisterUsernametextBox->Size = System::Drawing::Size(244, 25);
 			this->RegisterUsernametextBox->TabIndex = 0;
 			this->RegisterUsernametextBox->Text = L"Username";
 			this->RegisterUsernametextBox->Click += gcnew System::EventHandler(this, &LoginForm::RegisterUsernametextBox_Click);
@@ -2081,10 +2099,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterHomebutton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->RegisterHomebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->RegisterHomebutton->Location = System::Drawing::Point(855, 645);
-			this->RegisterHomebutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterHomebutton->Location = System::Drawing::Point(641, 524);
+			this->RegisterHomebutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterHomebutton->Name = L"RegisterHomebutton";
-			this->RegisterHomebutton->Size = System::Drawing::Size(148, 59);
+			this->RegisterHomebutton->Size = System::Drawing::Size(111, 48);
 			this->RegisterHomebutton->TabIndex = 16;
 			this->RegisterHomebutton->Text = L"Login Page";
 			this->RegisterHomebutton->UseVisualStyleBackColor = false;
@@ -2098,10 +2116,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->RegisterHomepictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"RegisterHomepictureBox.BackgroundImage")));
 			this->RegisterHomepictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->RegisterHomepictureBox->Location = System::Drawing::Point(785, 644);
-			this->RegisterHomepictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->RegisterHomepictureBox->Location = System::Drawing::Point(589, 523);
+			this->RegisterHomepictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->RegisterHomepictureBox->Name = L"RegisterHomepictureBox";
-			this->RegisterHomepictureBox->Size = System::Drawing::Size(64, 62);
+			this->RegisterHomepictureBox->Size = System::Drawing::Size(48, 50);
 			this->RegisterHomepictureBox->TabIndex = 4;
 			this->RegisterHomepictureBox->TabStop = false;
 			// 
@@ -2109,10 +2127,10 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			// 
 			this->ReigsterHeaderpictureBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"ReigsterHeaderpictureBox.BackgroundImage")));
 			this->ReigsterHeaderpictureBox->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ReigsterHeaderpictureBox->Location = System::Drawing::Point(49, 2);
-			this->ReigsterHeaderpictureBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->ReigsterHeaderpictureBox->Location = System::Drawing::Point(37, 2);
+			this->ReigsterHeaderpictureBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ReigsterHeaderpictureBox->Name = L"ReigsterHeaderpictureBox";
-			this->ReigsterHeaderpictureBox->Size = System::Drawing::Size(83, 69);
+			this->ReigsterHeaderpictureBox->Size = System::Drawing::Size(62, 56);
 			this->ReigsterHeaderpictureBox->TabIndex = 2;
 			this->ReigsterHeaderpictureBox->TabStop = false;
 			// 
@@ -2122,23 +2140,24 @@ private: System::Windows::Forms::PictureBox^  ForgotPasswordEmailCodepictureBox;
 			this->RegisterHeaderlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Bold, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->RegisterHeaderlabel->ForeColor = System::Drawing::Color::Black;
-			this->RegisterHeaderlabel->Location = System::Drawing::Point(137, 14);
+			this->RegisterHeaderlabel->Location = System::Drawing::Point(103, 11);
+			this->RegisterHeaderlabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->RegisterHeaderlabel->Name = L"RegisterHeaderlabel";
-			this->RegisterHeaderlabel->Size = System::Drawing::Size(161, 44);
+			this->RegisterHeaderlabel->Size = System::Drawing::Size(130, 36);
 			this->RegisterHeaderlabel->TabIndex = 0;
 			this->RegisterHeaderlabel->Text = L"Sign Up";
 			// 
 			// LoginForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1048, 763);
-			this->Controls->Add(this->loginpanel);
+			this->ClientSize = System::Drawing::Size(786, 620);
 			this->Controls->Add(this->Registerpanel);
+			this->Controls->Add(this->loginpanel);
 			this->Controls->Add(this->ForgotPasswordpanel);
 			this->Controls->Add(this->headerpanel);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->MaximizeBox = false;
 			this->Name = L"LoginForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -3554,6 +3573,18 @@ private: System::Void RegisterVerificationResendbutton_MouseLeave(System::Object
 			 RegisterVerificationResendbutton->BackColor=Color::CornflowerBlue;
 		 }
 private: System::Void ChangePasswordpanel_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+		 }
+private: System::Void registerPasswordtextBox_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+			 if(registerPasswordtextBox->Text=="Password")
+			 {
+				registerPasswordtextBox->Text="";
+				registerPasswordtextBox->Focus();
+				registerPasswordtextBox->Select();
+			 }
+		 }
+private: System::Void registerPasswordtextBox_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+			 if(registerPasswordtextBox->Text=="")
+				 registerPasswordtextBox->Text="Password";
 		 }
 };
 }

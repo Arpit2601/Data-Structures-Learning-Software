@@ -106,6 +106,7 @@
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="DataStructuresLearningSoftware.cpp" />
     <ClCompile Include="DiscussionForum.cpp" />
+    <ClCompile Include="DiscussionForum_Main.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="GraphBFS.cpp" />
     <ClCompile Include="Graphs_Home.cpp" />
@@ -200,6 +201,9 @@
     </ClInclude>
     <ClInclude Include="bubbleSort.h">
       <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="DiscussionForum_Main.h">
+      <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Graph.h">
       <FileType>CppControl</FileType>
@@ -387,6 +391,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="bubbleSort.resx">
       <DependentUpon>bubbleSort.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiscussionForum_Main.resx">
+      <DependentUpon>DiscussionForum_Main.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Graph.resx">
       <DependentUpon>Graph.h</DependentUpon>

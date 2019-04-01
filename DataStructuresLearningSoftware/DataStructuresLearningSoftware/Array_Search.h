@@ -347,7 +347,7 @@ namespace DataStructuresLearningSoftware {
 
 		static int posx = 0;
 		static int index = 0;
-	private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e) {
+	private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e) { // This function is called upon every tick of the clock
 				 int var = this->arrow->Location.X;
 				 if(var<=this->label_rec_7->Location.X + 73){
 					 if(var==this->label_rec_1->Location.X && this->label_rec_1->Text==this->input->Text)
@@ -412,7 +412,7 @@ namespace DataStructuresLearningSoftware {
 					 }
 				 }
 				 else
-				 {
+				 {                                                                       // If the input is not found, it will show an error message box
 					 timer1->Enabled = false;
 					 MessageBox::Show("Element Not Found !!");
 					 this->input->Enabled = true;
@@ -422,7 +422,7 @@ namespace DataStructuresLearningSoftware {
 				 }
 
 			 }
-	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {     // This function is called upon clicking the search button
 				 this->arrow->Location = System::Drawing::Point( 9, this->arrow->Location.Y);
 				 this->label_rec_1->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 				 this->label_rec_2->BackColor = System::Drawing::SystemColors::InactiveCaptionText;

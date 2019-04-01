@@ -558,8 +558,8 @@ namespace DataStructuresLearningSoftware {
 	public: String ^username;
 
 	
-	private: System::Void insertarray_Click(System::Object^  sender, System::EventArgs^  e) {
-				 if(this->insertvalue->Text=="" || this->insertindex->Text==""){
+	private: System::Void insertarray_Click(System::Object^  sender, System::EventArgs^  e) { // This function is called upon clicking the insert button 
+				 if(this->insertvalue->Text=="" || this->insertindex->Text==""){ // This checks if the textbox is empty or not
 					 this->insertindex->Text = "";
 					 this->insertvalue->Text = "";
 					 MessageBox::Show("Please Enter Values In The Text Boxes");
@@ -572,27 +572,33 @@ namespace DataStructuresLearningSoftware {
 					 if(num1==1 || num2==1){
 						 this->insertindex->Text = "";
 						 this->insertvalue->Text = "";
-						 MessageBox::Show("Please Enter Value Between -1000 to 1000 And Index Between 1 To 8");
+						 MessageBox::Show("Please Enter Value Between -100 to 100 And Index Between 1 To 8");
 					 }
-					 else if(int::Parse(this->insertvalue->Text)<= 1000 && int::Parse(this->insertvalue->Text)>= -1000 && int::Parse(this->insertindex->Text)>= 1 && int::Parse(this->insertindex->Text)<= 8){
+					 else if(int::Parse(this->insertvalue->Text)<= 100 && int::Parse(this->insertvalue->Text)>= -100 && int::Parse(this->insertindex->Text)>= 1 && int::Parse(this->insertindex->Text)<= 8){
+						 this->insertvalue->Enabled = false;
+						 this->insertindex->Enabled = false;
+						 this->insertarray->Enabled = false;
 						 this->label19->Text = this->insertvalue->Text;
-						 insertimer->Enabled = true;
+						 insertimer->Enabled = true; // If the input is valid then enable the timer
 					 }
 					 else{
 						 this->insertindex->Text = "";
 						 this->insertvalue->Text = "";
-						 MessageBox::Show("Please Enter Value Between -1000 to 1000 And Index Between 1 To 8");
+						 MessageBox::Show("Please Enter Value Between -100 to 100 And Index Between 1 To 8");
 					 }
 				 }
 			 }
 			 
-	private: System::Void insertimer_Tick(System::Object^  sender, System::EventArgs^  e) {
+	private: System::Void insertimer_Tick(System::Object^  sender, System::EventArgs^  e) { // This function is called upon every tick of the clock
 				 if(int::Parse(this->insertindex->Text)==1 && this->label19->Location.X == this->l1->Location.X){
 					 this->l1->Text = this->insertvalue->Text;
 					 this->label19->Location = System::Drawing::Point(9,120);
 					 this->label19->Text = "";
 					 this->insertindex->Text = "";
 					 this->insertvalue->Text = "";
+					 this->insertvalue->Enabled = true;
+					 this->insertindex->Enabled = true;
+					 this->insertarray->Enabled = true;
 					 insertimer->Enabled = false;
 				 }
 				 else if(int::Parse(this->insertindex->Text)==2 && this->label19->Location.X == this->l2->Location.X){
@@ -601,6 +607,9 @@ namespace DataStructuresLearningSoftware {
 					 this->label19->Text = "";
 					 this->insertindex->Text = "";
 					 this->insertvalue->Text = "";
+					 this->insertvalue->Enabled = true;
+					 this->insertindex->Enabled = true;
+					 this->insertarray->Enabled = true;
 					 insertimer->Enabled = false;
 				 }
 				 else if(int::Parse(this->insertindex->Text)==3 && this->label19->Location.X == this->l3->Location.X){
@@ -609,6 +618,9 @@ namespace DataStructuresLearningSoftware {
 					 this->label19->Text = "";
 					 this->insertindex->Text = "";
 					 this->insertvalue->Text = "";
+					 this->insertvalue->Enabled = true;
+					 this->insertindex->Enabled = true;
+					 this->insertarray->Enabled = true;
 					 insertimer->Enabled = false;
 				 }
 				 else if(int::Parse(this->insertindex->Text)==4 && this->label19->Location.X == this->l4->Location.X){
@@ -617,6 +629,9 @@ namespace DataStructuresLearningSoftware {
 					 this->label19->Text = "";
 					 this->insertindex->Text = "";
 					 this->insertvalue->Text = "";
+					 this->insertvalue->Enabled = true;
+					 this->insertindex->Enabled = true;
+					 this->insertarray->Enabled = true;
 					 insertimer->Enabled = false;
 				 }
 				 else if(int::Parse(this->insertindex->Text)==5 && this->label19->Location.X == this->l5->Location.X){
@@ -625,6 +640,9 @@ namespace DataStructuresLearningSoftware {
 					 this->label19->Text = "";
 					 this->insertindex->Text = "";
 					 this->insertvalue->Text = "";
+					 this->insertvalue->Enabled = true;
+					 this->insertindex->Enabled = true;
+					 this->insertarray->Enabled = true;
 					 insertimer->Enabled = false;
 				 }
 				 else if(int::Parse(this->insertindex->Text)==6 && this->label19->Location.X == this->l6->Location.X){
@@ -633,6 +651,9 @@ namespace DataStructuresLearningSoftware {
 					 this->label19->Text = "";
 					 this->insertindex->Text = "";
 					 this->insertvalue->Text = "";
+					 this->insertvalue->Enabled = true;
+					 this->insertindex->Enabled = true;
+					 this->insertarray->Enabled = true;
 					 insertimer->Enabled = false;
 				 }
 				 else if(int::Parse(this->insertindex->Text)==7 && this->label19->Location.X == this->l7->Location.X){
@@ -641,6 +662,9 @@ namespace DataStructuresLearningSoftware {
 					 this->label19->Text = "";
 					 this->insertindex->Text = "";
 					 this->insertvalue->Text = "";
+					 this->insertvalue->Enabled = true;
+					 this->insertindex->Enabled = true;
+					 this->insertarray->Enabled = true;
 					 insertimer->Enabled = false;
 				 }
 				 else if(int::Parse(this->insertindex->Text)==8 && this->label19->Location.X == this->l8->Location.X){
@@ -649,6 +673,9 @@ namespace DataStructuresLearningSoftware {
 					 this->label19->Text = "";
 					 this->insertindex->Text = "";
 					 this->insertvalue->Text = "";
+					 this->insertvalue->Enabled = true;
+					 this->insertindex->Enabled = true;
+					 this->insertarray->Enabled = true;
 					 insertimer->Enabled = false;
 				 }
 				 else{
@@ -656,12 +683,12 @@ namespace DataStructuresLearningSoftware {
 					 this->label19->Location = System::Drawing::Point(x,this->label19->Location.Y);
 				 }
 			 }
-	private: System::Void Array_Insertion_Load(System::Object^  sender, System::EventArgs^  e) {
+	private: System::Void Array_Insertion_Load(System::Object^  sender, System::EventArgs^  e) { // This loads the module quiz when the form is loaded
 				 // Quiz Panel
 				 moduleQuiz ^newPanel = gcnew moduleQuiz();
 				 newPanel->ds_id = 1;
 				 newPanel->module_id = 1;
-				 newPanel->username = username;
+				 newPanel->username = username;	
 				 newPanel->update_id = 9;
 				 newPanel->update_name = "ArraysProgress";
 				 quizPanel->Controls->Clear();

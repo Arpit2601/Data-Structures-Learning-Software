@@ -83,9 +83,9 @@ namespace DataStructuresLearningSoftware {
 			// panel1
 			// 
 			this->panel1->AutoScroll = true;
-			this->panel1->Location = System::Drawing::Point(0, 121);
+			this->panel1->Location = System::Drawing::Point(0, 57);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1277, 596);
+			this->panel1->Size = System::Drawing::Size(1277, 660);
 			this->panel1->TabIndex = 1;
 			// 
 			// BST_intro_btn
@@ -96,7 +96,7 @@ namespace DataStructuresLearningSoftware {
 			this->BST_intro_btn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->BST_intro_btn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->BST_intro_btn->Location = System::Drawing::Point(38, 69);
+			this->BST_intro_btn->Location = System::Drawing::Point(38, 11);
 			this->BST_intro_btn->Name = L"BST_intro_btn";
 			this->BST_intro_btn->Size = System::Drawing::Size(170, 40);
 			this->BST_intro_btn->TabIndex = 2;
@@ -112,7 +112,7 @@ namespace DataStructuresLearningSoftware {
 			this->BST_insert_btn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->BST_insert_btn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->BST_insert_btn->Location = System::Drawing::Point(289, 69);
+			this->BST_insert_btn->Location = System::Drawing::Point(289, 11);
 			this->BST_insert_btn->Name = L"BST_insert_btn";
 			this->BST_insert_btn->Size = System::Drawing::Size(170, 40);
 			this->BST_insert_btn->TabIndex = 3;
@@ -128,7 +128,7 @@ namespace DataStructuresLearningSoftware {
 			this->BST_deletion_btn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->BST_deletion_btn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->BST_deletion_btn->Location = System::Drawing::Point(537, 69);
+			this->BST_deletion_btn->Location = System::Drawing::Point(537, 11);
 			this->BST_deletion_btn->Name = L"BST_deletion_btn";
 			this->BST_deletion_btn->Size = System::Drawing::Size(170, 40);
 			this->BST_deletion_btn->TabIndex = 4;
@@ -144,7 +144,7 @@ namespace DataStructuresLearningSoftware {
 			this->BST_traversal_btn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->BST_traversal_btn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->BST_traversal_btn->Location = System::Drawing::Point(786, 69);
+			this->BST_traversal_btn->Location = System::Drawing::Point(786, 11);
 			this->BST_traversal_btn->Name = L"BST_traversal_btn";
 			this->BST_traversal_btn->Size = System::Drawing::Size(170, 40);
 			this->BST_traversal_btn->TabIndex = 5;
@@ -160,7 +160,7 @@ namespace DataStructuresLearningSoftware {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(1063, 69);
+			this->button1->Location = System::Drawing::Point(1063, 11);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(170, 40);
 			this->button1->TabIndex = 6;

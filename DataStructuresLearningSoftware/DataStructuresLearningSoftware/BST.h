@@ -5,7 +5,7 @@
 #include "BST_insertion.h"
 #include "BST_deletion.h"
 #include "BST_search.h"
-#include "DiscussionForum.h"
+#include "DiscussionForum_Main.h"
 
 namespace DataStructuresLearningSoftware {
 
@@ -45,6 +45,7 @@ namespace DataStructuresLearningSoftware {
 	private: System::Windows::Forms::Label^  label1;
 
 	private: System::Windows::Forms::Button^  button1;
+
 
 	protected: 
 
@@ -142,16 +143,20 @@ namespace DataStructuresLearningSoftware {
 				 }
 			 }
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-			 MainPanel->Controls->Clear();
-			 DiscussionForum ^ discuss = gcnew DiscussionForum;
+			 // MainPanel->Controls->Clear();
+			 DiscussionForum_Main ^ discuss = gcnew DiscussionForum_Main;
 			 discuss->username=username;
-			 MainPanel->Controls->Add(discuss);
+			 discuss->ShowDialog();
+			 // MainPanel->Controls->Add(discuss);
 		 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 			 MainPanel->Controls->Clear();
 			 DiscussionForum ^ discuss = gcnew DiscussionForum;
 			 discuss->username=username;
 			 MainPanel->Controls->Add(discuss);
+		 }
+private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+
 		 }
 };
 }

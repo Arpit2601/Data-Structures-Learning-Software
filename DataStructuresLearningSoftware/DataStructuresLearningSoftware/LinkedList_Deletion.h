@@ -1,6 +1,13 @@
 #pragma once
 
 #include "moduleQuiz.h"
+#include <string.h>
+#include <string>
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+#using <system.windows.forms.dll>
+#using <Microsoft.VisualBasic.dll>
 
 using namespace System;
 using namespace System::ComponentModel;
@@ -458,12 +465,16 @@ namespace DataStructuresLearningSoftware {
 				 if(this->deletevalue->Text==""){
 					 this->deletevalue->Text = "";
 					 MessageBox::Show("Please Enter Values In The Text Box!");
+					 return;
 				 }
 				 else if(this->f1->Visible==false && this->f2->Visible==false && this->f3->Visible==false && this->f4->Visible==false && this->f5->Visible==false && this->f6->Visible==false &&this->f7->Visible==false){
 					 this->deletevalue->Text = "";
 					 MessageBox::Show("Linked List Is Empty!");
+					 return;
 				 }
-				 else if(int::Parse(this->deletevalue->Text)<=999 && int::Parse(this->deletevalue->Text)>=-999){
+				 int len1=this->deletevalue->Text->Length;int num1=0;
+				 for(int i=0;i<len1;i++){if(isalpha(this->deletevalue->Text[i]) || this->deletevalue->Text[i]=='.'){num1=1;}}
+				 if(num1==0 && int::Parse(this->deletevalue->Text)<=999 && int::Parse(this->deletevalue->Text)>=-999){
 					 this->deletevalue->Enabled = false;
 					 this->delete_ll_but->Enabled = false;
 					 deletetimer->Enabled = true;

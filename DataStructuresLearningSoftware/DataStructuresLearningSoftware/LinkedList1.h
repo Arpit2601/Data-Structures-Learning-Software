@@ -405,7 +405,7 @@ namespace DataStructuresLearningSoftware {
 
 				 DB_Connection->Close();
 
-				 if(modulesCompleted < 4){	// 4 is module ID of Quiz
+				 if(modulesCompleted < 3){	// 4 is module ID of Quiz
 					 MessageBox::Show("Complete the previous module to unlock this module");
 				 }
 				 else{

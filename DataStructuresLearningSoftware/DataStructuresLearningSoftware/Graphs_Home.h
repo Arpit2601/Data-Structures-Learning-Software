@@ -225,6 +225,7 @@ private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^ 
 				 this->Hide();
 				 this->Owner->Show();
 			 }
+			 this->Close();
 		 }
 private: System::Void Graphs_Home_Load(System::Object^  sender, System::EventArgs^  e) {
 			 OleDb::OleDbConnection ^ DB_Connection = gcnew OleDb::OleDbConnection();
@@ -240,6 +241,7 @@ private: System::Void Graphs_Home_Load(System::Object^  sender, System::EventArg
 			 lblWelcome->Text = "Welcome, "+fullname;
 
 			 DB_Connection->Close();
+			 //this->Close();
 		 }
 };
 }

@@ -1,7 +1,13 @@
 #pragma once
 
 #include "moduleQuiz.h"
-
+#include<string.h>
+#include <string>
+#include <iostream> 
+#include <ctime> 
+#include <cstdlib>
+#using <system.windows.forms.dll>
+#using <Microsoft.VisualBasic.dll>
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -627,15 +633,18 @@ namespace DataStructuresLearningSoftware {
 					 MessageBox::Show("Linked List Is Full !");
 				 }
 				 else{
-					 if(int::Parse(this->insert_ll_tf->Text)< 1000 && int::Parse(this->insert_ll_tf->Text)> -1000){
+					 int len1=this->insert_ll_tf->Text->Length;int num1=0;
+					 for(int i=0;i<len1;i++){if(isalpha(this->insert_ll_tf->Text[i]) || this->insert_ll_tf->Text[i]=='.'){num1=1;}}
+					 if(num1==0 && int::Parse(this->insert_ll_tf->Text)< 100 && int::Parse(this->insert_ll_tf->Text)> -100){
 						 this->insert_ll_label->Text = this->insert_ll_tf->Text;
 						 this->insert_ll_label->Visible = true;
+						 this->insert_ll_tf->Enabled = false;
 						 this->insert_but_ll->Enabled = false;
 						 insertimerll->Enabled = true;
 					 }
 					 else{
 						 this->insert_ll_tf->Text = "";
-						 MessageBox::Show("Please Enter Value Between -1000 to 1000");
+						 MessageBox::Show("Please Enter Value Between -100 to 100");
 					 }
 				 }
 			 }
@@ -651,6 +660,7 @@ namespace DataStructuresLearningSoftware {
 						 this->insert_ll_label->Visible = false;
 						 this->insert_ll_label->Location = System::Drawing::Point(42,this->ll1->Location.Y);
 						 this->insert_but_ll->Enabled = true;
+						 this->insert_ll_tf->Enabled = true;
 						 insertimerll->Enabled = false;
 					 }
 					 int x = this->insert_ll_label->Location.X + 2;
@@ -751,6 +761,7 @@ namespace DataStructuresLearningSoftware {
 				 if(this->ll2->Visible == false){
 					 if(this->ll1->Location.X == this->tail_ll->Location.X){
 						 this->insert_but_ll->Enabled = true;
+						 this->insert_ll_tf->Enabled = true;
 						 tailtimer->Enabled = false;
 					 }
 					 else{
@@ -761,6 +772,7 @@ namespace DataStructuresLearningSoftware {
 				 else if(this->ll3->Visible == false){
 					 if(this->ll2->Location.X == this->tail_ll->Location.X){
 						 this->insert_but_ll->Enabled = true;
+						 this->insert_ll_tf->Enabled = true;
 						 tailtimer->Enabled = false;
 					 }
 					 else{
@@ -771,6 +783,7 @@ namespace DataStructuresLearningSoftware {
 				 else if(this->ll4->Visible == false){
 					 if(this->ll3->Location.X == this->tail_ll->Location.X){
 						 this->insert_but_ll->Enabled = true;
+						 this->insert_ll_tf->Enabled = true;
 						 tailtimer->Enabled = false;
 					 }
 					 else{
@@ -781,6 +794,7 @@ namespace DataStructuresLearningSoftware {
 				 else if(this->ll5->Visible == false){
 					 if(this->ll4->Location.X == this->tail_ll->Location.X){
 						 this->insert_but_ll->Enabled = true;
+						 this->insert_ll_tf->Enabled = true;
 						 tailtimer->Enabled = false;
 					 }
 					 else{
@@ -791,6 +805,7 @@ namespace DataStructuresLearningSoftware {
 				 else if(this->ll6->Visible == false){
 					 if(this->ll5->Location.X == this->tail_ll->Location.X){
 						 this->insert_but_ll->Enabled = true;
+						 this->insert_ll_tf->Enabled = true;
 						 tailtimer->Enabled = false;
 					 }
 					 else{
@@ -801,6 +816,7 @@ namespace DataStructuresLearningSoftware {
 				 else if(this->ll7->Visible == false){
 					 if(this->ll6->Location.X == this->tail_ll->Location.X){
 						 this->insert_but_ll->Enabled = true;
+						 this->insert_ll_tf->Enabled = true;
 						 tailtimer->Enabled = false;
 					 }
 					 else{
@@ -811,6 +827,7 @@ namespace DataStructuresLearningSoftware {
 				 else if(this->ll7->Visible == true){
 					 if(this->ll7->Location.X == this->tail_ll->Location.X){
 						 this->insert_but_ll->Enabled = true;
+						 this->insert_ll_tf->Enabled = true;
 						 tailtimer->Enabled = false;
 					 }
 					 else{
