@@ -2356,17 +2356,25 @@ private: System::Windows::Forms::Label^  label4;
 							 mn=8;
 						 }
 
-						 for(int i=1;i<=mn;i++){
-							 for(int j=1;j<=mn;j++){
-								 lvisible(10*i+j,1);
+						 if (mn <= 0) {
+							 MessageBox::Show("Number of Nodes should be positive");
+							 maddcounter--;
+						 }
+						 else {
+							 for (int i = 1; i <= mn; i++) {
+								 for (int j = 1; j <= mn; j++) {
+									 lvisible(10 * i + j, 1);
+								 }
 							 }
+
+							 for (int i = 1; i <= mn; i++) {
+								 labels(i, 1);
+							 }
+
+							 label1->Text = "Enter the Number of Edges";
 						 }
 
-						 for(int i=1;i<=mn;i++){
-							 labels(i,1);
-						 }
-
-						 label1->Text="Enter the Number of Edges";
+						 
 					 }catch(...){
 						 MessageBox::Show("Number of nodes should be Interger Only");
 						 maddcounter--;
@@ -2386,7 +2394,12 @@ private: System::Windows::Forms::Label^  label4;
 						 if(mm>mn*mn){
 							 MessageBox::Show("Number of edges should be less than square of number of Nodes");
 							 maddcounter--;
-						 }else{
+						 }
+						 else if (mn<=0) {
+							 MessageBox::Show("Number of edges should be Positive");
+							 maddcounter--;
+						 }
+						 else {
 							 label1->Text="Enter the Edges";
 							 txtFrom->Text="";
 							 txtTo->Visible=true;
@@ -2414,7 +2427,11 @@ private: System::Windows::Forms::Label^  label4;
 						 }
 					 }
 
-					 if(p==1 && (a>mn || b>mn)){
+					 if (p == 1 && (a <= 0 || b <= 0)) {
+						 MessageBox::Show("Node Id's should be between 1 to Number of Nodes");
+						 maddcounter--;
+					 }
+					 else if(p==1 && (a>mn || b>mn)){
 						 MessageBox::Show("Node Id's should be less than number of Nodes");
 						 maddcounter--;
 					 }else if(p==1){

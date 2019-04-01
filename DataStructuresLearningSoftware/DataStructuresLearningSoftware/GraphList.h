@@ -2449,11 +2449,17 @@ private: System::Windows::Forms::Label^  label5;
 							 MessageBox::Show("Maximum 8 nodes allowed::Displaying 8 nodes");
 							 ln=8;
 						 }
-						 for(int i=1;i<=ln;i++){
-							 labels(i,1);                 //labels of matrix 
+						 if (ln <= 0) {
+							 MessageBox::Show("Number of Nodes should be positive");
+							 laddcounter--;
 						 }
+						 else {
+							 for (int i = 1; i <= ln; i++) {
+								 labels(i, 1);                 //labels of matrix 
+							 }
 
-						 label1->Text="Enter the Number of Edges";
+							 label1->Text = "Enter the Number of Edges";
+						 }						 
 					 }catch(...){
 						 MessageBox::Show("Number of nodes should be Interger Only");
 						 laddcounter--;
@@ -2473,7 +2479,12 @@ private: System::Windows::Forms::Label^  label5;
 						 if(lm>(ln*(ln-1))/2){
 							 MessageBox::Show("Number of edges can't be more than that of Complete Graph");
 							 laddcounter--;
-						 }else{
+						 }
+						 else if (lm<=0) {
+							 MessageBox::Show("Number of edges should be positive");
+							 laddcounter--;
+						 }
+						 else{
 							 label1->Text="Enter the Edges";
 							 txtFrom->Text="";
 							 txtTo->Visible=true;
@@ -2501,8 +2512,12 @@ private: System::Windows::Forms::Label^  label5;
 						 }
 					 }
 
-					 if(p==1 && (a>ln || b>ln)){
-						 MessageBox::Show("Node Id's should be less than number of Nodes");
+					 if (p == 1 && (a <= 0 || b <= 0)) {
+						 MessageBox::Show("Node Id's should be between 1 to Number of Nodes");
+						 laddcounter--;
+					 }
+					 else if(p==1 && (a>ln || b>ln)){
+						 MessageBox::Show("Node Id's should be less than Number of Nodes");
 						 laddcounter--;
 					 }else if(p==1 && a==b){
 						 MessageBox::Show("No Self Loops Allowed");
