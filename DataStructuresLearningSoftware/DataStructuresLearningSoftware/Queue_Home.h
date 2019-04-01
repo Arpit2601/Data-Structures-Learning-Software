@@ -424,6 +424,12 @@ namespace DataStructuresLearningSoftware {
 			this->headerpanel->ResumeLayout(false);
 			this->ResumeLayout(false);
 
+			this->linarrbtn->Hide();
+			this->linllbtn->Hide();
+			this->linanimbtn->Hide();
+			this->cqarrbtn->Hide();
+			this->cqllbtn->Hide(); 
+			this->ciranimbtn->Hide();
 		}
 #pragma endregion
 	public:
@@ -808,25 +814,7 @@ namespace DataStructuresLearningSoftware {
 				 outputpanel->Controls->Clear();
 				 outputpanel->Controls->Add(gcnew UI_Linear_Queue_Animation);
 			 }
-private: System::Void linanimbtn_Click(System::Object^  sender, System::EventArgs^  e) {
-			 modulescheck();
-			 btnBack->Show();
-			 btnNext->Show();
-			 curid=4;
-			 introbtn->BackColor = Color::LightSeaGreen;
-			 linbtn->BackColor = Color::PaleTurquoise;
-			 linarrbtn->BackColor = Color::SpringGreen;
-			 linllbtn->BackColor = Color::SpringGreen;
-			 linanimbtn->BackColor = Color::PaleTurquoise;
-			 cqbtn->BackColor = Color::LightSeaGreen;
-			 cqarrbtn->BackColor = Color::LightSeaGreen;
-			 cqllbtn->BackColor = Color::LightSeaGreen;
-			 ciranimbtn->BackColor = Color::LightSeaGreen;
-			 appbtn->BackColor = Color::LightSeaGreen;
-			 quizbtn->BackColor = Color::LightSeaGreen;
-			  outputpanel->Controls->Clear();
-			 outputpanel->Controls->Add(gcnew UI_Linear_Queue_Animation);
-		 }
+
 private: System::Void ciranimbtn_Click(System::Object^  sender, System::EventArgs^  e) {
 			 modulescheck();
 			 if(modulesCompleted<=0)

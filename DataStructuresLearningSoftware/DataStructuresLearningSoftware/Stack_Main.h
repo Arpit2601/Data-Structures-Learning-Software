@@ -586,13 +586,24 @@ namespace DataStructuresLearningSoftware {
 				 curid--;
 				 display();
 			 }
-		 }
-private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(this->Owner != nullptr){
-				 this->Hide();
-				 this->Owner->Show();
+	private: System::Void btnNext_Click_1(System::Object^  sender, System::EventArgs^  e) {
+				 modulescheck();
+				 if(modulesCompleted<=1&&curid==3)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else if(modulesCompleted<=0&&curid==2)
+				 {
+					 MessageBox::Show("Please Complete the Previous Module to access this.");
+				 }
+				 else
+				 {
+					 curid++;
+					 display();
+				 }
 			 }
-			 this->Close();
-		 }
-};
+	private: System::Void btnHome_Click(System::Object^  sender, System::EventArgs^  e) {
+				 this->Close();
+			 }
+	};
 }
