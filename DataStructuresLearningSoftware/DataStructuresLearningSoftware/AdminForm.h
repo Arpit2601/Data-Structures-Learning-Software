@@ -3012,6 +3012,12 @@ private: System::Void udDeletebutton_Click(System::Object^  sender, System::Even
 					 connection->Close();
 					 return;
 				 }
+				 if(user=="guest")
+				 {
+					 MessageBox::Show("Can't delete guest","Delete User");
+					 connection->Close();
+					 return;
+				 }
 				 connection->Close();
 
 			 }
