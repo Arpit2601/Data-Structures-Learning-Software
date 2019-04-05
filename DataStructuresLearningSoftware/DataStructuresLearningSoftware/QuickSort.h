@@ -881,7 +881,8 @@ namespace DataStructuresLearningSoftware {
 		int number_size;
 		int sort_selected;
 
-		int timer2_set;
+		int timer1_set;
+		int timer3_set;
 		int* quicksort_stack;
 		int quicksort_top;
 
@@ -998,10 +999,13 @@ namespace DataStructuresLearningSoftware {
 
 	private: System::Void btnPause_Click(System::Object^  sender, System::EventArgs^  e) {
 				 //pause
-				 timer1->Enabled = false;
-				 if(timer2->Enabled == true){
-					 timer2_set=1;
-					 timer2->Enabled=false;
+				 if(timer1->Enabled == true){
+					 timer1_set=1;
+					 timer1->Enabled=false;
+				 }
+				 if(timer3->Enabled == true){
+					 timer3_set=1;
+					 timer3->Enabled=false;
 				 }
 			 }
 	private: System::Void button3_Click_1(System::Object^  sender, System::EventArgs^  e) {
@@ -1022,6 +1026,11 @@ namespace DataStructuresLearningSoftware {
 				 //reset
 				 timer1->Enabled = false;
 				 timer2->Enabled= false;
+
+				 button3->Enabled=true;
+				 buttonresume->Enabled=false;
+				 button5->Enabled=false;
+
 				 panel1->Controls->Clear();
 				 num_elements = 0;
 				 input_array.Clear();
@@ -1033,19 +1042,20 @@ namespace DataStructuresLearningSoftware {
 			 }
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 				 //quicksort
-				 if(input_array.Count==0){MessageBox::Show("The input array is null,add something");}
+				 if(input_array.Count==0){MessageBox::Show("The input array is null,add something");return;}
 				 quicksort_top=-1;
 				 quicksort_stack[++quicksort_top]=0;
 				 quicksort_stack[++quicksort_top]=input_array.Count-1;
 				 buttonresume->Enabled=true;
+				 button3->Enabled=false;
 				 button5->Enabled=true;
 				 timer1->Enabled=true;
 			 }
 
 	private: System::Void button6_Click_1(System::Object^  sender, System::EventArgs^  e) {
 				 //resume
-				 timer1->Enabled = true;
-				 if(timer2_set==1){timer2->Enabled=true;}
+				 if(timer1_set==1){timer1_set=0;timer1->Enabled=true;}
+				 if(timer3_set==1){timer3_set=0;timer3->Enabled=true;}
 			 }
 
 
@@ -1068,6 +1078,7 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 					 timer1->Enabled=false;
 					 timer3->Enabled=false;
 					 input_array.Clear();
+					 input_array_completed.Clear();
 					 buttonresume->Enabled=false;
 					 button5->Enabled=false;
 					 return;
@@ -1090,7 +1101,8 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 		 }
 private: System::Void timer3_Tick(System::Object^  sender, System::EventArgs^  e) {
 			 //quicksort Partition
-
+			 label10->Text="";
+			 label24->Text="";
 			 for(int i=0;i<input_array.Count-1;i++){if(input_array_completed[i]==-3)input_array_completed[i]=0;}
 
 			 int l=partition_l;

@@ -566,6 +566,9 @@ public:
 					 button6->Enabled=true;
 					 timer1->Enabled=true;
 					 start_y=100;
+
+					 button3->Enabled=false;
+
 					 ele_selected=0;
 
 				 }
@@ -575,6 +578,7 @@ public:
 				 bool check=inputValidate(s);
 				 richTextBox1->Text="";
 				 if(check){
+					 panel1->Controls->Remove(arrow_select);
 					 int input = int::Parse(s);
 					 input_array.Add(input);
 					 show_array(input_array.Count-1,input_array.Count-1);
@@ -606,8 +610,10 @@ public:
 				 panel1->Controls->Add(arrow_select);
 
 				 ele_selected+=1;
-				 if(input_array[ele_selected-1]==ele_search){timer1->Enabled=false;MessageBox::Show("Element Found");button5->Enabled=false;button6->Enabled=false;return;}
-				 if(ele_selected>=input_array.Count){timer1->Enabled=false;button5->Enabled=false;button6->Enabled=false;MessageBox::Show("Element Not Present in Linked List");return;}
+
+
+				 if(input_array[ele_selected-1]==ele_search){button3->Enabled=true;timer1->Enabled=false;MessageBox::Show("Element Found");button5->Enabled=false;button6->Enabled=false;return;}
+				 if(ele_selected>=input_array.Count){button3->Enabled=true;timer1->Enabled=false;button5->Enabled=false;button6->Enabled=false;MessageBox::Show("Element Not Present in Linked List");return;}
 
 			 }
 	};

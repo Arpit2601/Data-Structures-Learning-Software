@@ -566,15 +566,15 @@ namespace DataStructuresLearningSoftware {
 				 }
 				 else{
 					 int len1=this->insertvalue->Text->Length;int num1=0;
-					 for(int i=0;i<len1;i++){if(isalpha(this->insertvalue->Text[i]) || this->insertvalue->Text[i]=='.'){num1=1;}}
+					 for(int i=0;i<len1;i++){if(!isdigit(this->insertvalue->Text[i])){num1=1;}}
 					 int len2=this->insertindex->Text->Length;int num2=0;
-					 for(int i=0;i<len2;i++){if(isalpha(this->insertindex->Text[i]) || this->insertindex->Text[i]=='.'){num2=1;}}
+					 for(int i=0;i<len2;i++){if(!isdigit(this->insertindex->Text[i])){num2=1;}}
 					 if(num1==1 || num2==1){
 						 this->insertindex->Text = "";
 						 this->insertvalue->Text = "";
-						 MessageBox::Show("Please Enter Value Between -100 to 100 And Index Between 1 To 8");
+						 MessageBox::Show("Please Enter Value Between 0 to 100 And Index Between 1 To 8");
 					 }
-					 else if(int::Parse(this->insertvalue->Text)<= 100 && int::Parse(this->insertvalue->Text)>= -100 && int::Parse(this->insertindex->Text)>= 1 && int::Parse(this->insertindex->Text)<= 8){
+					 else if(int::Parse(this->insertvalue->Text)<= 100 && int::Parse(this->insertvalue->Text)>= 0 && int::Parse(this->insertindex->Text)>= 1 && int::Parse(this->insertindex->Text)<= 8){
 						 this->insertvalue->Enabled = false;
 						 this->insertindex->Enabled = false;
 						 this->insertarray->Enabled = false;
@@ -584,7 +584,7 @@ namespace DataStructuresLearningSoftware {
 					 else{
 						 this->insertindex->Text = "";
 						 this->insertvalue->Text = "";
-						 MessageBox::Show("Please Enter Value Between -100 to 100 And Index Between 1 To 8");
+						 MessageBox::Show("Please Enter Value Between 0 to 100 And Index Between 1 To 8");
 					 }
 				 }
 			 }

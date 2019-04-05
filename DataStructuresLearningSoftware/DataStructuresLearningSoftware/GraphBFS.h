@@ -1151,10 +1151,16 @@ namespace DataStructuresLearningSoftware {
 							 MessageBox::Show("Maximum 8 nodes allowed::Displaying 8 nodes");
 							 bn=8;
 						 }
-						 for(int i=1;i<=bn;i++){
-							 lvisible(i,1);
+						 if (bn <= 0) {
+							 MessageBox::Show("Number of Nodes should be positive");
+							 baddcounter--;
 						 }
-						 label1->Text="Enter the Number of Edges";
+						 else {
+							 for (int i = 1; i <= bn; i++) {
+								 lvisible(i, 1);
+							 }
+							 label1->Text = "Enter the Number of Edges";
+						 }
 					 }catch(...){
 						 MessageBox::Show("Number of nodes should be Interger Only");
 						 baddcounter--;
@@ -1174,7 +1180,12 @@ namespace DataStructuresLearningSoftware {
 						 if(bm>(bn*(bn-1))/2){
 							 MessageBox::Show("Number of Edges can't be more than Complete graph with same number of nodes");
 							 baddcounter--;
-						 }else{
+						 }
+						 else if (bm <= 0) {
+							 MessageBox::Show("Number of Edges should be positive");
+							 baddcounter--;
+						 }
+						 else{
 							 label1->Text="Enter the Edges";
 							 txtTo->Visible=true;
 							 label1->Visible=true;
@@ -1203,7 +1214,11 @@ namespace DataStructuresLearningSoftware {
 						 }
 					 }
 
-					 if(p==1 && (a>bn || b>bn)){
+					 if (p == 1 && (a <= 0 || b <= 0)) {
+						 MessageBox::Show("Node Id's should be between 1 to Number of Nodes");
+						 baddcounter--;
+					 }
+					 else if(p==1 && (a>bn || b>bn)){
 						 MessageBox::Show("Node Id's should be less than number of Nodes");
 						 baddcounter--;
 					 }else if(p==1 && a==b){

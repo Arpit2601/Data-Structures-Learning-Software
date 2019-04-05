@@ -472,17 +472,33 @@ namespace DataStructuresLearningSoftware {
 					 MessageBox::Show("Linked List Is Empty!");
 					 return;
 				 }
-				 int len1=this->deletevalue->Text->Length;int num1=0;
-				 for(int i=0;i<len1;i++){if(isalpha(this->deletevalue->Text[i]) || this->deletevalue->Text[i]=='.'){num1=1;}}
+				 else if((this->deletevalue->Text=="23" && this->f1->Visible==true )||(this->deletevalue->Text=="-2" && this->f2->Visible==true )|| (this->deletevalue->Text=="109" && this->f3->Visible==true) || (this->deletevalue->Text=="-90" && this->f4->Visible==true) ||(this->deletevalue->Text=="11" && this->f5->Visible==true) ||(this->deletevalue->Text=="37" && this->f6->Visible==true) ||(this->deletevalue->Text=="86" && this->f7->Visible==true)){
+					this->deletevalue->Enabled = false;
+					this->delete_ll_but->Enabled = false;
+					deletetimer->Enabled = true;
+				 }
+				 else{
+					this->deletevalue->Text = "";
+					MessageBox::Show("Value Not Present In The Linked List");
+				 }
+				 /*int len1=this->deletevalue->Text->Length;int num1=0;
+				 for(int i=0;i<len1;i++){if(isalpha(this->deletevalue->Text[i]) || this->deletevalue->Text[i]=='.'|| this->deletevalue->Text[i]==' '){num1=1;}}
 				 if(num1==0 && int::Parse(this->deletevalue->Text)<=999 && int::Parse(this->deletevalue->Text)>=-999){
 					 this->deletevalue->Enabled = false;
 					 this->delete_ll_but->Enabled = false;
 					 deletetimer->Enabled = true;
 				 }
 				 else{
+					 int len2=this->deletevalue->Text->Length;int num2=0;
+				     for(int i=0;i<len2;i++){if(this->deletevalue->Text[i]==' '){num2=1;}}
+					 if(num2==1){
+						this->deletevalue->Text = "";
+						MessageBox::Show("Please Enter Values In The Text Box!");
+						return;
+					 }
 					 this->deletevalue->Text = "";
 					 MessageBox::Show("Value Not Present In The Linked List");
-				 }
+				 }*/
 			 }
 	private: System::Void deletetimer_Tick(System::Object^  sender, System::EventArgs^  e) {
 				 if(this->del_tail->Location.X==this->del_pointer->Location.X && this->del_head->Location.X==this->del_pointer->Location.X && ((this->f1->Location.X==this->del_pointer->Location.X && this->f1->Text==this->deletevalue->Text && this->f1->Visible==true)||(this->f2->Location.X==this->del_pointer->Location.X && this->f2->Text==this->deletevalue->Text && this->f2->Visible==true)||(this->f3->Location.X==this->del_pointer->Location.X && this->f3->Text==this->deletevalue->Text && this->f3->Visible==true)||(this->f4->Location.X==this->del_pointer->Location.X && this->f4->Text==this->deletevalue->Text && this->f4->Visible==true)||(this->f5->Location.X==this->del_pointer->Location.X && this->f5->Text==this->deletevalue->Text && this->f5->Visible==true)||(this->f6->Location.X==this->del_pointer->Location.X && this->f6->Text==this->deletevalue->Text && this->f6->Visible==true)||(this->f7->Location.X==this->del_pointer->Location.X && this->f7->Text==this->deletevalue->Text && this->f7->Visible==true))){

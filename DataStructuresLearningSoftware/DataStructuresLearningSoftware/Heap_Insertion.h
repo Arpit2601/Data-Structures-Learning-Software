@@ -360,8 +360,8 @@ namespace DataStructuresLearningSoftware {
 					 button5->Enabled=true;
 					 button6->Enabled=true;
 					 button3->Enabled=false;
-					 heapsize++;	
-					 timer_variable = heapsize-1;
+					 heapsize=input_array.Count;
+					 timer_variable = heapsize;
 					 timer1->Enabled=true;
 					 id=0;
 				 }

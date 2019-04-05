@@ -513,6 +513,7 @@ namespace DataStructuresLearningSoftware {
 		int sort_selected;
 
 		int timer2_set;
+		int timer1_set;
 		int* quicksort_stack;
 		int quicksort_top;
 
@@ -567,11 +568,8 @@ namespace DataStructuresLearningSoftware {
 			//size of panel is : 1100,700
 			//For initialising input array
 			int i;
-			for(i=60;i>=35;i=i-5){
-				if(num_elements*i<700)break;
-			}
-
-			box_length=i;
+		
+			box_length=60;
 			box_width= 50;
 
 			start_x=50;
@@ -594,6 +592,9 @@ namespace DataStructuresLearningSoftware {
 		int min(int x, int y){return (x<y)? x : y;}
 
 		void DoMerge( int low, int high, int mid){
+
+			if(high>input_array.Count-1||mid>input_array.Count-1)return;
+
 			// We have low to mid and mid+1 to high already sorted.
 			int i, j, k, temp[100];
 			i = low;
@@ -675,13 +676,17 @@ namespace DataStructuresLearningSoftware {
 				 panel1->Controls->Clear();
 				 button5->Enabled=false;
 				 button6->Enabled=false;
+				 button3->Enabled=true;
 				 input_array_completed.Clear();
 				 num_elements = 0;
 				 input_array.Clear();
 			 }
 	private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
 				 //pause
-				 timer1->Enabled = false;
+				 if(timer1->Enabled == true){
+					 timer1_set=1;
+					 timer1->Enabled=false;
+				 }
 				 if(timer2->Enabled == true){
 					 timer2_set=1;
 					 timer2->Enabled=false;
@@ -689,8 +694,8 @@ namespace DataStructuresLearningSoftware {
 			 }
 	private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
 				 //resume
-				 timer1->Enabled = true;
-				 if(timer2_set==1){timer2->Enabled=true;}
+				 if(timer1_set==1){timer1_set=0;timer1->Enabled=true;}
+				 if(timer2_set==1){timer2_set=0;timer2->Enabled=true;}
 			 }
 	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 				 //sort
@@ -705,6 +710,7 @@ namespace DataStructuresLearningSoftware {
 					 if(input_array.Count==0){MessageBox::Show("The input array is null,add something");}
 					 curr_size=0.5;
 					 button5->Enabled=true;
+					 button3->Enabled=false;
 					 button6->Enabled=true;
 					 timer1->Enabled=true;
 				 } 
@@ -733,7 +739,7 @@ namespace DataStructuresLearningSoftware {
 
 					 timer1->Enabled=false;
 					 curr_size=curr_size*2;
-					 if(curr_size>n-1){timer1->Enabled=false;timer2->Enabled=false;input_array.Clear();button5->Enabled=false;button6->Enabled=false;input_array_completed.Clear();}
+					 if(curr_size>n-1){timer1->Enabled=false;timer2->Enabled=false;input_array.Clear();button3->Enabled=true;button5->Enabled=false;button6->Enabled=false;input_array_completed.Clear();}
 				 }
 				 else{
 					 //quicksort
@@ -763,7 +769,7 @@ namespace DataStructuresLearningSoftware {
 					 show_array(0,input_array.Count-1);
 					 left_start+= 2*curr_size;
 
-					 if(left_start>n-2){
+					 if(left_start>n-1){
 						 show_array(right_end,n-1);
 						 timer1->Enabled=true;
 						 timer2->Enabled=false;
